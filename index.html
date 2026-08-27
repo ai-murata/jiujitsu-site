@@ -6,18 +6,19 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <style>
   :root {
-    --ink: #0c0b09;        /* 墨黒 地 */
-    --panel: #16130e;      /* 焦げ黒 面 */
-    --line: #2a251b;       /* 罫 */
-    --gold: #c9a227;       /* 金 */
-    --gold-hi: #ecd98f;    /* 淡金 */
-    --champagne: #f3ecd8;  /* 強調文字 */
-    --body-c: #a89f8a;     /* 本文 生成りグレー */
+    --paper: #ffffff;      /* 白 地 */
+    --panel: #faf8f2;      /* 面 */
+    --line: #e7e1d1;       /* 罫 */
+    --gold: #a3801a;       /* 金（濃） */
+    --gold-hi: #c9a227;    /* 金（明） */
+    --ink: #17140d;        /* 墨黒 強調文字 */
+    --body-c: #5d5745;     /* 本文 */
+    --faint: #948c74;      /* 弱い文字 */
     --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
     --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
   }
   body {
-    background: var(--ink);
+    background: var(--paper);
     color: var(--body-c);
     font-family: var(--gothic);
     font-weight: 400;
@@ -28,39 +29,40 @@
   .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
 
   /* ---------- hero ---------- */
-  .hero { min-height: 88vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 96px 24px 72px; position: relative; overflow: hidden; }
-  .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 55% at 50% 38%, rgba(201,162,39,.10), transparent 70%); pointer-events: none; }
-  .eyebrow { font-size: 12px; letter-spacing: .34em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin: 0 0 28px; }
-  .wordmark { font-family: var(--mincho); font-weight: 600; font-size: clamp(64px, 13vw, 148px); line-height: 1; letter-spacing: .02em; margin: 0; background: linear-gradient(175deg, var(--gold-hi) 20%, var(--gold) 55%, #8a6d14 95%); -webkit-background-clip: text; background-clip: text; color: transparent; text-wrap: balance; }
-  .tagline { font-family: var(--mincho); font-weight: 600; font-size: clamp(22px, 4vw, 34px); color: var(--champagne); letter-spacing: .18em; margin: 40px 0 0; }
+  .hero { min-height: 88vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 96px 24px 72px; position: relative; overflow: hidden; background: var(--paper); }
+  .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 55% at 50% 38%, rgba(201,162,39,.09), transparent 70%); pointer-events: none; }
+  .eyebrow { font-size: 12px; letter-spacing: .34em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin: 0 0 28px; }
+  .wordmark { font-family: var(--mincho); font-weight: 600; font-size: clamp(64px, 13vw, 148px); line-height: 1; letter-spacing: .02em; margin: 0; background: linear-gradient(175deg, var(--gold-hi) 10%, var(--gold) 50%, #6f5610 95%); -webkit-background-clip: text; background-clip: text; color: transparent; text-wrap: balance; }
+  .tagline { font-family: var(--mincho); font-weight: 600; font-size: clamp(22px, 4vw, 34px); color: var(--ink); letter-spacing: .18em; margin: 40px 0 0; }
   .hero-sub { max-width: 34em; font-size: 15px; margin: 22px auto 0; }
-  .hero-domain { margin-top: 56px; font-size: 13px; letter-spacing: .22em; color: #6d6552; }
+  .hero-domain { margin-top: 56px; font-size: 13px; letter-spacing: .22em; color: var(--faint); }
 
   /* 黒帯 */
-  .belt { width: min(420px, 70vw); height: 22px; margin: 48px auto 0; position: relative; background: linear-gradient(180deg, #201d17, #0e0d0a 55%, #23201a); border: 1px solid #2e2a20; border-radius: 3px; }
-  .belt::before { content: ""; position: absolute; right: 12%; top: 0; bottom: 0; width: 17%; background: linear-gradient(180deg, #7a1d1d, #4c0f0f); }
-  .belt i { position: absolute; top: 0; bottom: 0; width: 5px; background: linear-gradient(180deg, var(--gold-hi), var(--gold)); }
+  .belt { width: min(420px, 70vw); height: 22px; margin: 48px auto 0; position: relative; background: linear-gradient(180deg, #2a2620, #0e0d0a 55%, #23201a); border: 1px solid #0a0908; border-radius: 3px; box-shadow: 0 6px 18px rgba(23,20,13,.18); }
+  .belt::before { content: ""; position: absolute; right: 12%; top: 0; bottom: 0; width: 17%; background: linear-gradient(180deg, #8a2121, #571212); }
+  .belt i { position: absolute; top: 0; bottom: 0; width: 5px; background: linear-gradient(180deg, #ecd98f, var(--gold-hi)); }
   .belt i:nth-child(1) { right: 14.5%; } .belt i:nth-child(2) { right: 18.5%; }
   .belt i:nth-child(3) { right: 22.5%; } .belt i:nth-child(4) { right: 26.5%; }
 
   /* ---------- 帯色ディバイダ ---------- */
   .rank { display: flex; height: 4px; }
   .rank span { flex: 1; }
-  .rank .w { background: #d8d3c4; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
-  .rank .br { background: #5a3c22; } .rank .k { background: #000; border-top: 1px solid #2a251b; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
 
   /* ---------- sections ---------- */
   section { padding: 96px 0; }
-  .sec-label { font-size: 12px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0 0 16px; }
-  h2 { font-family: var(--mincho); font-weight: 600; font-size: clamp(26px, 4.5vw, 38px); color: var(--champagne); letter-spacing: .06em; line-height: 1.5; margin: 0 0 24px; text-wrap: balance; }
+  .sec-label { font-size: 12px; letter-spacing: .3em; color: var(--gold); font-weight: 700; margin: 0 0 16px; }
+  h2 { font-family: var(--mincho); font-weight: 600; font-size: clamp(26px, 4.5vw, 38px); color: var(--ink); letter-spacing: .06em; line-height: 1.5; margin: 0 0 24px; text-wrap: balance; }
   .lede { max-width: 36em; font-size: 15px; margin: 0; }
-  .lede strong { color: var(--champagne); font-weight: 500; }
+  .lede strong { color: var(--ink); font-weight: 700; }
 
   /* ---------- features ---------- */
   .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 56px; }
   @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
   .cell { background: var(--panel); padding: 34px 30px 38px; }
-  .cell h3 { font-family: var(--mincho); font-weight: 600; font-size: 19px; color: var(--gold-hi); letter-spacing: .08em; margin: 0 0 14px; }
+  .cell h3 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 0 0 14px; }
+  .cell h3::before { content: ""; display: block; width: 26px; height: 3px; margin-bottom: 14px; background: linear-gradient(90deg, var(--gold-hi), var(--gold)); }
   .cell p { font-size: 13.5px; line-height: 1.95; margin: 0; }
 
   /* ---------- 思想 ---------- */
@@ -68,16 +70,16 @@
   .thesis h2 { margin-bottom: 20px; }
 
   /* ---------- CTA ---------- */
-  .cta { text-align: center; padding: 110px 24px 120px; background: linear-gradient(180deg, var(--ink), #11100b); }
-  .cta h2 { margin-bottom: 14px; }
-  .cta p { font-size: 14px; max-width: 30em; margin: 0 auto; }
-  .btn { display: inline-block; margin-top: 40px; padding: 17px 54px; font-family: var(--mincho); font-weight: 600; font-size: 16px; letter-spacing: .22em; color: var(--ink); background: linear-gradient(170deg, var(--gold-hi), var(--gold) 70%); text-decoration: none; border-radius: 2px; transition: filter .2s; }
-  .btn:hover { filter: brightness(1.08); }
-  .btn:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 4px; }
-  .cta-note { margin-top: 18px; font-size: 12px; letter-spacing: .1em; color: #6d6552; }
+  .cta { text-align: center; padding: 110px 24px 120px; background: #17140d; }
+  .cta h2 { color: #f3ecd8; margin-bottom: 14px; }
+  .cta p { font-size: 14px; max-width: 30em; margin: 0 auto; color: #b0a88f; }
+  .btn { display: inline-block; margin-top: 40px; padding: 17px 54px; font-family: var(--mincho); font-weight: 600; font-size: 16px; letter-spacing: .22em; color: #17140d; background: linear-gradient(170deg, #ecd98f, var(--gold-hi) 70%); text-decoration: none; border-radius: 2px; transition: filter .2s; }
+  .btn:hover { filter: brightness(1.06); }
+  .btn:focus-visible { outline: 2px solid #ecd98f; outline-offset: 4px; }
+  .cta-note { margin-top: 18px; font-size: 12px; letter-spacing: .1em; color: #857c63; }
 
-  footer { border-top: 1px solid var(--line); padding: 34px 24px 44px; text-align: center; font-size: 12px; letter-spacing: .14em; color: #6d6552; }
-  footer b { color: var(--body-c); font-weight: 500; }
+  footer { border-top: 1px solid var(--line); padding: 34px 24px 44px; text-align: center; font-size: 12px; letter-spacing: .14em; color: var(--faint); background: var(--paper); }
+  footer b { color: var(--body-c); font-weight: 700; }
 
   /* ---------- motion ---------- */
   .rise { opacity: 0; transform: translateY(14px); animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
