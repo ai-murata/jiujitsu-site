@@ -410,7 +410,7 @@
     <div class="eyebrow">Japan Brazilian Jiu-Jitsu</div>
     <h1>全国柔術道場ガイド</h1>
     <div class="hero-rule"></div>
-    <p class="hero-sub">JBJJF・SJJJF の <strong id="total">—</strong> 道場を都道府県から探せます</p>
+    <p class="hero-sub">SJJJF・JBJJF の <strong id="total">—</strong> 道場を都道府県から探せます</p>
   </div>
 </header>
 
@@ -458,7 +458,7 @@
 
 <footer>
   <div class="wrap">
-    出典：<a href="https://www.jbjjf.com/academylist_latest/" target="_blank" rel="noopener">JBJJF「加盟アカデミー一覧」</a> ／ <a href="https://sjjjf.org/" target="_blank" rel="noopener">SJJJF</a>・<a href="https://asjjf.org/" target="_blank" rel="noopener">ASJJF</a> 大会エントリー実績（2025-2026シーズン31大会）<br>SJJJFは加盟道場一覧を公開していないため、大会に出場した所属チーム名から収集しています。SNSと出稽古の情報は各道場の公式サイトに掲載されているリンク・記載から収集したものです。料金や受け入れ可否は変わることがあるため、必ず各道場にご確認ください。<br>掲載情報の修正・追加のご希望は各道場・連盟へお問い合わせください。
+    出典：<a href="https://sjjjf.org/" target="_blank" rel="noopener">SJJJF</a>・<a href="https://asjjf.org/" target="_blank" rel="noopener">ASJJF</a> 大会エントリー実績（2025-2026シーズン31大会） ／ <a href="https://www.jbjjf.com/academylist_latest/" target="_blank" rel="noopener">日本ブラジリアン柔術連盟「加盟アカデミー一覧」</a><br>SJJJFは加盟道場一覧を公開していないため、大会に出場した所属チーム名から収集しています。SNSと出稽古の情報は各道場の公式サイトに掲載されているリンク・記載から収集したものです。料金や受け入れ可否は変わることがあるため、必ず各道場にご確認ください。<br>掲載情報の修正・追加のご希望は各道場・連盟へお問い合わせください。
   </div>
 </footer>
 
@@ -467,8 +467,8 @@ const DATA = [{"no":"2652","name":"パラエストラ札幌","name_en":"PARAESTR
 const REGIONS = ["北海道","東北","関東","甲信越・北陸","東海","近畿","中国・四国","九州・沖縄"];
 const FEDS = [
   {label:"すべての連盟", v:""},
-  {label:"JBJJF", v:"JBJJF"},
   {label:"SJJJF", v:"SJJJF"},
+  {label:"JBJJF", v:"JBJJF"},
   {label:"両方に加盟", v:"BOTH"},
 ];
 let region = "", pref = "", q = "", fed = "";
@@ -674,7 +674,7 @@ function render(){
   drawPins(hit);
   $("grid").innerHTML = hit.map(a=>{
     const map = a.addr ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.addr)}` : "";
-    const feds = (a.fed||[]).map(f=>`<span class="fed ${f.toLowerCase()}">${f}</span>`).join("");
+    const feds = ["SJJJF","JBJJF"].filter(f=>(a.fed||[]).includes(f)).map(f=>`<span class="fed ${f.toLowerCase()}">${f}</span>`).join("");
     const guess = a.pref_guess ? '<span class="fed-note">道場名からの推定</span>' : "";
     return `<article class="card">
       <span class="badge${a.pref ? "" : " unknown"}">${a.pref ? esc(a.pref) : "調査中"}</span>
