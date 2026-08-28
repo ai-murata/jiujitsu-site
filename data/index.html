@@ -461,15 +461,15 @@
   <div class="wrap">
     <div class="eyebrow" style="text-align:center">Growth</div>
     <h2>柔術は、伸びている</h2>
-    <p class="growth-sub">連盟登録の道場数は8年で1.5倍。大会のエントリーは年間1万件を超えました</p>
+    <p class="growth-sub">全国の道場は548。連盟登録は8年で1.5倍に増え、大会エントリーは年間1万件を超えました</p>
     <div class="stat-row">
-      <div class="stat"><div class="v" id="st-dojo">—</div><div class="k">連盟登録の道場数（2026）</div></div>
+      <div class="stat"><div class="v">548</div><div class="k">全国の道場数（SJJJF系＋IBJJF系・当サイト調べ）</div></div>
       <div class="stat"><div class="v">+54%</div><div class="k">道場数の伸び（2018→2026）</div></div>
       <div class="stat"><div class="v">75</div><div class="k">SJJJF系 国内大会数（2026）</div></div>
       <div class="stat"><div class="v">11,401</div><div class="k">日本人エントリー数（ASJJF系全体・2026）</div></div>
     </div>
     <div class="chart-box">
-      <div class="chart-title">国内連盟に登録された道場数の推移（2018–2026）<span class="src">国内大会記録</span></div>
+      <div class="chart-title">連盟登録道場数の推移（2018–2026・単一連盟の登録数による傾向）<span class="src">国内大会記録</span></div>
       <svg id="gchart" viewBox="0 0 720 260" role="img" aria-label="JBJJF加盟道場数の推移。2018年253道場から2026年390道場へ増加"></svg>
       <div class="chart-note">
         出典：JBJJF「加盟アカデミー一覧」各年のインターネットアーカイブ（2018〜2025）および現行ページ（2026年8月）。
@@ -562,7 +562,6 @@
 const $ = id => document.getElementById(id);
 /* ================= 推移グラフ ================= */
 const GROWTH = [[2018,253],[2019,261],[2020,270],[2021,282],[2022,302],[2023,306],[2024,331],[2025,354],[2026,390]];
-document.getElementById("st-dojo").textContent = GROWTH[GROWTH.length-1][1];
 (function(){
   const svg = document.getElementById("gchart");
   const NS = "http://www.w3.org/2000/svg";
