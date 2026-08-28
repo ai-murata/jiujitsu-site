@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YAWARA / SWEEP 9月シフト</title>
+<style>
+:root{
+  --bg:#FAF9F5; --ink:#211E19; --muted:#8B8578; --line:#E7E2D6;
+  --card:#FFFFFF; --gold:#A8842E; --gold-soft:#F4ECDA;
+  --yawara:#7A5C10; --yawara-bg:#F6EDD4; --yawara-bar:#C29A3A;
+  --sweep:#4E555F; --sweep-bg:#ECEEF1; --sweep-bar:#A6ADB6;
+  --hol:#A8432F; --closed:#B4AC9C;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);
+  font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  margin:0;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:0 14px 60px}
+header.top{padding:26px 2px 12px;border-bottom:2px solid var(--ink);margin-bottom:4px}
+.brand{font-size:11px;letter-spacing:.22em;color:var(--gold);font-weight:700}
+h1{font-size:26px;margin:2px 0 2px;font-weight:800;letter-spacing:.02em;text-wrap:balance}
+.sub{font-size:12.5px;color:var(--muted)}
+.upd{font-size:13px;color:var(--gold);font-weight:800;margin-top:5px}
+.legend{display:flex;gap:14px;margin-top:10px;font-size:12px;color:var(--muted);align-items:center;flex-wrap:wrap}
+.dot{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.dot.y{background:var(--yawara-bar)} .dot.s{background:var(--sweep-bar)}
+.ctrl{position:sticky;top:0;background:var(--bg);padding:10px 0 8px;z-index:5;border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:8px}
+.tabs button{flex:1;padding:9px 0;font-size:14px;font-weight:700;border:1.5px solid var(--ink);
+  background:transparent;color:var(--ink);border-radius:4px;cursor:pointer;font-family:inherit}
+.tabs button.on{background:var(--ink);color:#fff}
+.tabs button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:9px 0 2px;-webkit-overflow-scrolling:touch}
+.chips button{flex:0 0 auto;padding:4px 11px;font-size:12.5px;border:1px solid var(--line);
+  background:var(--card);border-radius:999px;cursor:pointer;color:var(--ink);font-family:inherit;white-space:nowrap}
+.chips button.on{border:2px solid currentColor;font-weight:800;padding:3px 10px}
+.wk{margin:24px 2px 4px;font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.1em;display:flex;align-items:center;gap:10px}
+.wk::after{content:"";flex:1;height:1px;background:var(--line)}
+.day{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:9px 0;overflow:hidden}
+.day.today{border:2px solid var(--gold);box-shadow:0 2px 10px rgba(168,132,46,.15)}
+.dhead{display:flex;align-items:center;gap:10px;padding:9px 12px 8px}
+.dbox{width:42px;height:42px;border-radius:8px;background:#4A463E;color:#fff;flex:0 0 auto;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.05}
+.dbox .n{font-size:17px;font-weight:800;font-variant-numeric:tabular-nums}
+.dbox .w{font-size:10px;font-weight:700;opacity:.85}
+.dbox.sat{background:#3D5A80} .dbox.sun{background:var(--hol)}
+.dmeta{flex:1;min-width:0}
+.badges{display:flex;gap:5px;flex-wrap:wrap}
+.badge{font-size:11px;padding:2px 8px;border-radius:3px;font-weight:700}
+.badge.hol{background:#F7E8E4;color:var(--hol)}
+.badge.close{background:#EFECE4;color:#7a7466}
+.badge.event{background:var(--gold-soft);color:#6e5518}
+.badge.today-b{background:var(--gold);color:#fff}
+.badge.chgb{background:#C03127;color:#fff}
+.pbar.chg{box-shadow:0 0 0 2.5px #E23B2E}
+.cblk.chg{border:1.5px solid #E23B2E}
+.cblk.chg .cbn{color:#C03127}
+.offtxt{font-size:11.5px;color:var(--muted);margin-top:2px}
+.offtxt b{font-weight:600;color:#9a5f52}
+/* --- タイムライン --- */
+.tl{display:flex;border-top:1px solid var(--line)}
+.tlaxis{width:40px;flex:0 0 auto}
+.tlstore{flex:1;min-width:0;border-left:1px solid var(--line)}
+.tlhead{height:26px;display:flex;align-items:center;justify-content:center;
+  font-size:10.5px;font-weight:800;letter-spacing:.14em;border-bottom:1px solid var(--line)}
+.tlhead.y{color:var(--yawara);background:var(--yawara-bg)}
+.tlhead.s{color:var(--sweep);background:var(--sweep-bg)}
+.tlbody{position:relative}
+.hline{position:absolute;left:0;right:0;height:1px;background:#F0EDE4}
+.brk{position:absolute;left:0;right:0;display:flex;align-items:center;justify-content:center;
+  font-size:9px;color:var(--closed);letter-spacing:.2em;
+  background:repeating-linear-gradient(45deg,#FBFAF6 0,#FBFAF6 5px,#F2EFE6 5px,#F2EFE6 7px);
+  border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)}
+.tlhour{position:absolute;right:5px;transform:translateY(-55%);font-size:9px;
+  color:var(--closed);font-variant-numeric:tabular-nums}
+.tlhour.em{color:var(--muted);font-weight:700}
+.tlhour.st{transform:translateY(-2%)}
+.tlhour.en{transform:translateY(-100%)}
+.cblk{position:absolute;left:3px;border-radius:3px;padding:1px 4px;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;line-height:1.15}
+.cblk.y{background:var(--yawara-bg);border-left:3px solid var(--yawara-bar)}
+.cblk.s{background:var(--sweep-bg);border-left:3px solid var(--sweep-bar)}
+.cblk .cbt{font-size:8.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.cblk .cbn{font-size:10px;font-weight:700;color:#4c473d;white-space:nowrap}
+.cblk.sm{padding:0 3px;line-height:1}
+.cblk.sm .cbn{font-size:8.5px}
+.pbar{position:absolute;width:17px;border-radius:4px;color:#fff;display:flex;flex-direction:column;
+  align-items:center;overflow:hidden}
+.pbar .pt1,.pbar .pt2{font-size:8px;font-weight:700;line-height:1.5;opacity:.95;font-variant-numeric:tabular-nums}
+.pbar .pnm{flex:1;display:flex;align-items:center;justify-content:center;
+  writing-mode:vertical-rl;font-size:10px;font-weight:800;letter-spacing:.1em}
+.pbar.dim,.cblk.dim{opacity:.18}
+.closedbody{display:flex;align-items:center;justify-content:center;background:
+  repeating-linear-gradient(45deg,#F6F4ED 0,#F6F4ED 6px,#EEEBE1 6px,#EEEBE1 8px)}
+.closedbody span{font-size:12px;color:var(--closed);font-weight:700;letter-spacing:.2em}
+/* --- 人別 --- */
+.person{background:var(--card);border:1px solid var(--line);border-radius:8px;margin:12px 0;padding:12px 14px}
+.phead{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:8px}
+.pname{font-size:17px;font-weight:800}
+.pdays{font-size:12.5px;color:var(--gold);font-weight:700}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:4px 14px;font-size:13px}
+.prow{display:flex;gap:8px;align-items:center}
+.prow .pd{font-variant-numeric:tabular-nums;font-weight:700;min-width:52px}
+.prow .pd .pw{font-weight:500;color:var(--muted);font-size:11px}
+.prow .pt{font-variant-numeric:tabular-nums;color:var(--muted);font-size:12px}
+.stag{font-size:10px;font-weight:800;padding:1px 4px;border-radius:2px}
+.stag.y{background:var(--yawara-bg);color:var(--yawara)} .stag.s{background:var(--sweep-bg);color:var(--sweep)}
+footer{margin-top:28px;font-size:11px;color:var(--muted);text-align:center}
+@media(prefers-reduced-motion:no-preference){.day,.person{scroll-margin-top:120px}}
+</style>
+<div class="wrap">
+<header class="top">
+  <div class="brand">YAWARA ／ SWEEP</div>
+  <h1>2026年9月 シフト表</h1>
+  <div class="sub">9/1（火）– 9/30（水）・全30日</div>
+  <div class="upd">※ 展示用サンプル（スタッフ名は仮名）</div>
+  <div class="legend"><span><span class="dot y"></span>YAWARA</span><span><span class="dot s"></span>SWEEP</span><span>バー＝出勤（色は人）／枠＝クラス</span><span style="color:#C03127;font-weight:700">赤マーク＝最近変更された箇所</span></div>
+</header>
+<div class="ctrl">
+  <div class="tabs">
+    <button id="tabDay" class="on" onclick="setView('day')">日別</button>
+    <button id="tabPerson" onclick="setView('person')">人別</button>
+  </div>
+  <div class="chips" id="chips"></div>
+</div>
+<main id="viewDay"></main>
+<main id="viewPerson" hidden></main>
+<footer>※ポートフォリオ用サンプルです。スタッフ名はすべて仮名に置き換えています。</footer>
+</div>
+<script>
+const DATA = {"days":{"1":{"events":[],"off":["翔太"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"10:00–11:00","n":"ベーシック"},{"t":"11:00–12:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"ベーシックⅡ"},{"t":"21:00–22:00","n":"オープンマット"}],"shifts":[{"name":"高橋","start":9,"end":14},{"name":"小林","start":18,"end":23}]},"SWEEP":{"classes":[{"t":"7:30–8:30","n":"ベーシック"},{"t":"8:30–9:30","n":"オープンマット"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"オープンマット"}],"shifts":[{"name":"けん","start":6,"end":10},{"name":"田中","start":18,"end":22}]}},"holiday":null},"2":{"events":[],"off":["高橋"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"10:00–11:00","n":"ベーシック"},{"t":"11:00–12:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"},{"t":"19:00–20:00","n":"なでしこ"},{"t":"20:00–21:00","n":"ベーシックⅡ"},{"t":"21:00–22:00","n":"オープンマット"}],"shifts":[{"name":"翔太","start":9,"end":14},{"name":"はなこ","start":18,"end":20},{"name":"伊藤","start":20,"end":23}]},"SWEEP":{"classes":[{"t":"12:00–13:00","n":"ベーシックⅡ"},{"t":"13:00–14:00","n":"オープンマット"},{"t":"17:00–18:00","n":"キッズクラス"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"オープンマット"}],"shifts":[{"name":"田中","start":11,"end":15},{"name":"まさる","start":16,"end":19},{"name":"けん","start":18,"end":22}]}},"holiday":null},"3":{"events":["SJJJF世界大会"],"off":[],"wish":["高橋休み希望"],"stores":{"YAWARA":{"classes":[{"t":"8:00–9:40","n":"福利厚生クラス"},{"t":"11:00–12:30","n":"フリーマット"}],"shifts":[{"name":"小林","start":7,"end":15}]},"SWEEP":{"classes":[],"shifts":[]}},"holiday":null},"4":{"events":["SJJJF世界大会"],"off":[],"wish":["高橋、田中、小林休み希望"],"stores":{"YAWARA":{"classes":[{"t":"11:00–12:30","n":"フリーマット"}],"shifts":[]},"SWEEP":{"classes":[],"shifts":[]}},"holiday":null},"5":{"events":["SJJJF世界大会"],"off":[],"wish":["高橋休み希望"],"stores":{"YAWARA":{"classes":[{"t":"11:00–12:30","n":"フリーマット"}],"shifts":[]},"SWEEP":{"classes":[{"t":"10:00–11:00","n":"キッズクラス"}],"shifts":[{"name":"まさる","start":9,"end":12},{"name":"小林","start":9,"end":12}]}},"holiday":null},"6":{"events":["SJJJF世界大会"],"off":[],"wish":["高橋休み希望"],"stores":{"YAWARA":{"classes":[{"t":"11:00–12:30","n":"フリーマット"}],"shifts":[]},"SWEEP":{"classes":[],"shifts":[]}},"holiday":null},"7":{"events":["SWEEP休館"],"off":["高橋","けん","小林"],"wish":["高橋休み希望"],"stores":{"YAWARA":{"classes":[{"t":"7:00–8:00","n":"ベーシック"},{"t":"8:00–9:00","n":"オープンマット"},{"t":"16:00–18:00","n":"TOP TEAM"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"ベーシックⅡ"},{"t":"21:00–22:00","n":"オープンマット"}],"shifts":[{"name":"翔太","start":6,"end":10},{"name":"佐々木","start":15,"end":19},{"name":"パウロ","start":15,"end":19},{"name":"田中","start":19,"end":23}]},"SWEEP":{"classes":[],"shifts":[]}},"holiday":null},"8":{"events":["YAWARA休館","合同営業・YAWARAの人もSWEEPへ"],"off":["高橋","けん","田中","小林"],"wish":["けん遅番×"],"stores":{"YAWARA":{"classes":[],"shifts":[]},"SWEEP":{"classes":[{"t":"7:30–8:30","n":"ベーシック"},{"t":"8:30–9:30","n":"オープンマット"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"オープンマット"}],"shifts":[{"name":"けん","start":6,"end":10},{"name":"翔太","start":18,"end":22}]}},"holiday":null},"9":{"events":[],"off":["高橋","田中"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"10:00–11:00","n":"ベーシック"},{"t":"11:00–12:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"},{"t":"19:00–20:00","n":"なでしこ"},{"t":"20:00–21:00","n":"ベーシックⅡ"},{"t":"21:00–22:00","n":"オープンマット"}],"shifts":[{"name":"翔太","start":9,"end":14},{"name":"美咲","start":18,"end":20},{"name":"伊藤","start":20,"end":23}]},"SWEEP":{"classes":[{"t":"12:00–13:00","n":"ベーシックⅡ"},{"t":"13:00–14:00","n":"オープンマット"},{"t":"17:00–18:00","n":"キッズクラス"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"オープンマット"}],"shifts":[{"name":"小林","start":11,"end":18},{"name":"けん","start":19,"end":22}]}},"holiday":null},"10":{"events":[],"off":["翔太"],"wish":["翔太休み希望"],"stores":{"YAWARA":{"classes":[{"t":"8:00–9:40","n":"福利厚生クラス"},{"t":"10:00–11:00","n":"ベーシック"},{"t":"11:00–12:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"ベーシックⅡ"},{"t":"21:00–22:00","n":"オープンマット"}],"shifts":[{"name":"小林","start":7,"end":14},{"name":"高橋","start":18,"end":23}]},"SWEEP":{"classes":[{"t":"7:30–8:30","n":"ベーシック"},{"t":"8:30–9:30","n":"オープンマット"},{"t":"19:00–20:00","n":"ベーシックⅡ"},{"t":"20:00–21:00","n":"オープンマット"}],"shifts":[{"name":"田中","start":6,"end":10},{"name":"けん","start":18,"end":22}]}},"holiday":null},"11":{"events":[],"off":["けん","翔太","小林"],"wish":["翔太休み希望"],"stores":{"YAWARA":{"classes":[{"t":"7:00–8:00","n":"ベーシック"},{"t":"8:00–9:00","n":"オープンマット"},{"t":"19:00–20:00","n":"なでしこ"},{"t":"20:00–21:00","n":"ベーシック"},{"t":"21:00–22:00","n":"オープンマット"}],"shifts":[{"name":"田中","start":6,"end":10},{"name":"はなこ","start":18,"end":20},{"name":"伊藤","start":20,"end":23}]},"SWEEP":{"classes":[{"t":"12:00–13:00","n":"ベーシック"},{"t":"13:00–14:00","n":"オープンマット"},{"t":"17:00–19:00","n":"TOP TEAM"}],"shifts":[{"name":"高橋","start":11,"end":15},{"name":"佐々木","start":17,"end":19}]}},"holiday":null},"12":{"events":[],"off":["けん","田中","翔太"],"wish":["けん休み希望"],"stores":{"YAWARA":{"classes":[{"t":"10:00–11:00","n":"ベーシック"},{"t":"11:00–11:30","n":"オープンマット"},{"t":"11:30–12:30","n":"ベーシックⅡ"},{"t":"12:30–13:30","n":"オープンマット"}],"shifts":[{"name":"高橋","start":9,"end":15}]},"SWEEP":{"classes":[{"t":"10:00–11:00","n":"キッズクラス"},{"t":"12:00–13:00","n":"ベーシック"},{"t":"13:00–14:00","n":"オープンマット"}],"shifts":[{"name":"まさる","start":9,"end":12},{"name":"小林","start":9,"end":12},{"name":"小林","start":11,"end":15}]}},"holiday":null},"13":{"events":["SWEEP休館（千駄ヶ谷神輿イベント）"],"off":["高橋","けん","小林"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"10:00–11:00","n":"ベーシック"},{"t":"11:00–12:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"}],"shifts":[{"name":"翔太","start":9,"end":14}]},"SWEEP":{"classes":[{"t":"12:00–13:00","n":"ベーシックⅡ"},{"t":"13:00–14:00","n":"オープンマット"}],"shifts":[{"name":"田中","start":11,"end":15}]}},"holiday":null},"14":{"events":[],"off":["高橋"],"wish":["高橋休み希望"],"stores":{"YAWARA":{"classes":[{"t":"7:00–8:00","n":"ベーシック"},{"t":"8:00–9:00","n":"オープンマット"},{"t":"16:00–18:00","n":"TOP TEAM"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"ベーシックⅡ"},{"t":"21:00–22:00","n":"オープンマット"}],"shifts":[{"name":"翔太","start":6,"end":10},{"name":"佐々木","start":15,"end":19},{"name":"田中","start":19,"end":23}]},"SWEEP":{"classes":[{"t":"12:00–13:00","n":"ベーシック"},{"t":"13:00–14:00","n":"オープンマット"},{"t":"15:30–16:30","n":"ファンダメンタル"},{"t":"17:00–18:00","n":"キッズクラス"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"オープンマット"}],"shifts":[{"name":"けん","start":11,"end":15},{"name":"小林","start":16,"end":22}]}},"holiday":null},"15":{"events":[],"off":["高橋"],"wish":["高橋休み希望"],"stores":{"YAWARA":{"classes":[{"t":"10:00–11:00","n":"ベーシック"},{"t":"11:00–12:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"ベーシックⅡ"},{"t":"21:00–22:00","n":"オープンマット"}],"shifts":[{"name":"小林","start":9,"end":14},{"name":"翔太","start":9,"end":14},{"name":"翔太","start":18,"end":23},{"name":"小林","start":18,"end":23}]},"SWEEP":{"classes":[{"t":"7:30–8:30","n":"ベーシック"},{"t":"8:30–9:30","n":"オープンマット"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"オープンマット"}],"shifts":[{"name":"けん","start":6,"end":10},{"name":"田中","start":18,"end":22}]}},"holiday":null},"16":{"events":[],"off":["翔太","小林"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"10:00–11:00","n":"ベーシック"},{"t":"11:00–12:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"},{"t":"19:00–20:00","n":"なでしこ"},{"t":"20:00–21:00","n":"ベーシックⅡ"},{"t":"21:00–22:00","n":"オープンマット"}],"shifts":[{"name":"高橋","start":9,"end":14},{"name":"はなこ","start":18,"end":20},{"name":"伊藤","start":20,"end":23}]},"SWEEP":{"classes":[{"t":"12:00–13:00","n":"ベーシックⅡ"},{"t":"13:00–14:00","n":"オープンマット"},{"t":"18:00–19:00","n":"キッズクラス"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"オープンマット"}],"shifts":[{"name":"田中","start":13,"end":17},{"name":"まさる","start":17,"end":20},{"name":"けん","start":19,"end":23}]}},"holiday":null},"17":{"events":["SWEEP休館"],"off":["高橋","けん","田中"],"wish":["田中、小林遅番×"],"stores":{"YAWARA":{"classes":[{"t":"8:00–9:40","n":"福利厚生クラス"},{"t":"10:00–11:00","n":"ベーシック"},{"t":"11:00–12:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"ベーシックⅡ"},{"t":"21:00–22:00","n":"オープンマット"}],"shifts":[{"name":"小林","start":7,"end":14},{"name":"翔太","start":18,"end":23}]},"SWEEP":{"classes":[],"shifts":[]}},"holiday":null},"18":{"events":["YAWARA休館"],"off":["高橋","けん","翔太","小林"],"wish":[],"stores":{"YAWARA":{"classes":[],"shifts":[]},"SWEEP":{"classes":[{"t":"12:00–13:00","n":"ベーシック"},{"t":"13:00–14:00","n":"オープンマット"},{"t":"16:00–18:00","n":"TOP TEAM"}],"shifts":[{"name":"田中","start":11,"end":15},{"name":"佐々木","start":16,"end":18}]}},"holiday":null},"19":{"events":[],"off":["けん","翔太","田中"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"10:00–11:00","n":"ベーシック"},{"t":"11:00–11:30","n":"オープンマット"},{"t":"11:30–12:30","n":"ベーシックⅡ"},{"t":"12:30–13:30","n":"オープンマット"}],"shifts":[{"name":"高橋","start":9,"end":15}]},"SWEEP":{"classes":[{"t":"10:00–11:00","n":"キッズクラス"},{"t":"12:00–13:00","n":"ベーシック"},{"t":"13:00–14:00","n":"オープンマット"}],"shifts":[{"name":"まさる","start":9,"end":12},{"name":"小林","start":9,"end":12},{"name":"小林","start":11,"end":15}]}},"holiday":null},"20":{"events":[],"off":["高橋","けん","小林"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"10:00–11:00","n":"ベーシック"},{"t":"11:00–12:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"}],"shifts":[{"name":"翔太","start":9,"end":14}]},"SWEEP":{"classes":[{"t":"12:00–13:00","n":"ベーシックⅡ"},{"t":"13:00–14:00","n":"オープンマット"}],"shifts":[{"name":"田中","start":11,"end":15}]}},"holiday":null},"21":{"events":[],"off":["けん","翔太"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"10:00–11:00","n":"ベーシック"},{"t":"11:00–12:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"},{"t":"16:00–18:00","n":"TOP TEAM"}],"shifts":[{"name":"田中","start":9,"end":14},{"name":"高橋","start":15,"end":19}]},"SWEEP":{"classes":[{"t":"10:00–11:00","n":"キッズクラス"},{"t":"12:00–13:00","n":"ベーシックⅡ"},{"t":"13:00–14:00","n":"オープンマット"}],"shifts":[{"name":"小林","start":9,"end":16}]}},"holiday":"敬老の日"},"22":{"events":[],"off":["高橋","田中","小林"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"10:00–11:00","n":"ベーシック"},{"t":"11:00–12:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"}],"shifts":[{"name":"翔太","start":9,"end":14}]},"SWEEP":{"classes":[{"t":"12:00–13:00","n":"ベーシックⅡ"},{"t":"13:00–14:00","n":"オープンマット"}],"shifts":[{"name":"けん","start":11,"end":15}]}},"holiday":"国民の休日"},"23":{"events":[],"off":["高橋","けん","田中"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"10:00–11:00","n":"ベーシック"},{"t":"12:00–13:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"}],"shifts":[{"name":"小林","start":9,"end":14}]},"SWEEP":{"classes":[{"t":"10:00–11:00","n":"キッズクラス"},{"t":"12:00–13:00","n":"ベーシックⅡ"},{"t":"13:00–14:00","n":"オープンマット"}],"shifts":[{"name":"まさる","start":9,"end":12},{"name":"翔太","start":11,"end":15}]}},"holiday":"秋分の日"},"24":{"events":[],"off":["高橋"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"8:00–9:40","n":"福利厚生クラス"},{"t":"10:00–11:00","n":"ベーシック"},{"t":"12:00–13:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"ベーシックⅡ"},{"t":"21:00–22:00","n":"オープンマット"}],"shifts":[{"name":"小林","start":7,"end":14},{"name":"翔太","start":18,"end":23}]},"SWEEP":{"classes":[{"t":"7:30–8:30","n":"ベーシック"},{"t":"8:30–9:30","n":"オープンマット"},{"t":"19:00–20:00","n":"ベーシックⅡ"},{"t":"20:00–21:00","n":"オープンマット"}],"shifts":[{"name":"田中","start":6,"end":10},{"name":"けん","start":18,"end":22}]}},"holiday":null},"25":{"events":[],"off":["けん","翔太","小林"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"7:00–8:00","n":"ベーシック"},{"t":"8:00–9:00","n":"オープンマット"},{"t":"19:00–20:00","n":"なでしこ"},{"t":"20:00–21:00","n":"ベーシック"},{"t":"21:00–22:00","n":"オープンマット"}],"shifts":[{"name":"高橋","start":6,"end":10},{"name":"美咲","start":18,"end":20},{"name":"伊藤","start":20,"end":23}]},"SWEEP":{"classes":[{"t":"12:00–13:00","n":"ベーシック"},{"t":"13:00–14:00","n":"オープンマット"},{"t":"17:00–19:00","n":"TOP TEAM"}],"shifts":[{"name":"田中","start":11,"end":15},{"name":"佐々木","start":17,"end":19}]}},"holiday":null},"26":{"events":[],"off":["高橋","けん","田中"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"10:00–11:00","n":"ベーシック"},{"t":"11:00–11:30","n":"オープンマット"},{"t":"11:30–12:30","n":"ベーシックⅡ"},{"t":"12:30–13:30","n":"オープンマット"}],"shifts":[{"name":"翔太","start":9,"end":15}]},"SWEEP":{"classes":[{"t":"10:00–11:00","n":"キッズクラス"},{"t":"12:00–13:00","n":"ベーシック"},{"t":"13:00–14:00","n":"オープンマット"}],"shifts":[{"name":"まさる","start":9,"end":12},{"name":"小林","start":9,"end":12},{"name":"小林","start":11,"end":15}]}},"holiday":null},"27":{"events":["SWEEP休館"],"off":["高橋","けん","翔太","小林"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"10:00–11:00","n":"ベーシック"},{"t":"11:00–12:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"}],"shifts":[{"name":"田中","start":9,"end":14}]},"SWEEP":{"classes":[],"shifts":[]}},"holiday":null},"28":{"events":["YAWARA休館"],"off":["田中","小林"],"wish":["小林遅番×"],"stores":{"YAWARA":{"classes":[{"t":"16:00–18:00","n":"TOP TEAM"}],"shifts":[{"name":"高橋","start":15,"end":19}]},"SWEEP":{"classes":[{"t":"12:00–13:00","n":"ベーシック"},{"t":"13:00–14:00","n":"オープンマット"},{"t":"15:30–16:30","n":"ファンダメンタル"},{"t":"17:00–18:00","n":"キッズクラス"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"オープンマット"}],"shifts":[{"name":"けん","start":11,"end":15},{"name":"まさる","start":16,"end":19},{"name":"小林","start":16,"end":19},{"name":"翔太","start":19,"end":22}]}},"holiday":null},"29":{"events":[],"off":["高橋"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"8:00–9:40","n":"福利厚生クラス"},{"t":"10:00–11:00","n":"ベーシック"},{"t":"12:00–13:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"ベーシックⅡ"},{"t":"21:00–22:00","n":"オープンマット"}],"shifts":[{"name":"小林","start":9,"end":16},{"name":"翔太","start":18,"end":23}]},"SWEEP":{"classes":[{"t":"7:30–8:30","n":"ベーシック"},{"t":"8:30–9:30","n":"オープンマット"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"オープンマット"}],"shifts":[{"name":"けん","start":6,"end":10},{"name":"田中","start":18,"end":22}]}},"holiday":null},"30":{"events":[],"off":["高橋","翔太"],"wish":[],"stores":{"YAWARA":{"classes":[{"t":"10:00–11:00","n":"ベーシック"},{"t":"12:00–13:00","n":"ベーシックⅡ"},{"t":"12:00–13:00","n":"オープンマット"},{"t":"19:00–20:00","n":"なでしこ"},{"t":"20:00–21:00","n":"ベーシックⅡ"},{"t":"21:00–22:00","n":"オープンマット"}],"shifts":[{"name":"小林","start":9,"end":14},{"name":"はなこ","start":18,"end":20},{"name":"伊藤","start":20,"end":23}]},"SWEEP":{"classes":[{"t":"12:00–13:00","n":"ベーシックⅡ"},{"t":"13:00–14:00","n":"オープンマット"},{"t":"17:00–18:00","n":"キッズクラス"},{"t":"19:00–20:00","n":"ベーシック"},{"t":"20:00–21:00","n":"オープンマット"}],"shifts":[{"name":"田中","start":11,"end":15},{"name":"まさる","start":16,"end":19},{"name":"けん","start":18,"end":22}]}},"holiday":null}},"persons":{"高橋":[{"day":1,"store":"YAWARA","start":9,"end":14},{"day":10,"store":"YAWARA","start":18,"end":23},{"day":11,"store":"SWEEP","start":11,"end":15},{"day":12,"store":"YAWARA","start":9,"end":15},{"day":16,"store":"YAWARA","start":9,"end":14},{"day":19,"store":"YAWARA","start":9,"end":15},{"day":21,"store":"YAWARA","start":15,"end":19},{"day":25,"store":"YAWARA","start":6,"end":10},{"day":28,"store":"YAWARA","start":15,"end":19}],"小林":[{"day":1,"store":"YAWARA","start":18,"end":23},{"day":3,"store":"YAWARA","start":7,"end":15},{"day":5,"store":"SWEEP","start":9,"end":12},{"day":9,"store":"SWEEP","start":11,"end":18},{"day":10,"store":"YAWARA","start":7,"end":14},{"day":12,"store":"SWEEP","start":9,"end":12},{"day":12,"store":"SWEEP","start":11,"end":15},{"day":14,"store":"SWEEP","start":16,"end":22},{"day":15,"store":"YAWARA","start":9,"end":14},{"day":15,"store":"YAWARA","start":18,"end":23},{"day":17,"store":"YAWARA","start":7,"end":14},{"day":19,"store":"SWEEP","start":9,"end":12},{"day":19,"store":"SWEEP","start":11,"end":15},{"day":21,"store":"SWEEP","start":9,"end":16},{"day":23,"store":"YAWARA","start":9,"end":14},{"day":24,"store":"YAWARA","start":7,"end":14},{"day":26,"store":"SWEEP","start":9,"end":12},{"day":26,"store":"SWEEP","start":11,"end":15},{"day":28,"store":"SWEEP","start":16,"end":19},{"day":29,"store":"YAWARA","start":9,"end":16},{"day":30,"store":"YAWARA","start":9,"end":14}],"けん":[{"day":1,"store":"SWEEP","start":6,"end":10},{"day":2,"store":"SWEEP","start":18,"end":22},{"day":8,"store":"SWEEP","start":6,"end":10},{"day":9,"store":"SWEEP","start":19,"end":22},{"day":10,"store":"SWEEP","start":18,"end":22},{"day":14,"store":"SWEEP","start":11,"end":15},{"day":15,"store":"SWEEP","start":6,"end":10},{"day":16,"store":"SWEEP","start":19,"end":23},{"day":22,"store":"SWEEP","start":11,"end":15},{"day":24,"store":"SWEEP","start":18,"end":22},{"day":28,"store":"SWEEP","start":11,"end":15},{"day":29,"store":"SWEEP","start":6,"end":10},{"day":30,"store":"SWEEP","start":18,"end":22}],"田中":[{"day":1,"store":"SWEEP","start":18,"end":22},{"day":2,"store":"SWEEP","start":11,"end":15},{"day":7,"store":"YAWARA","start":19,"end":23},{"day":10,"store":"SWEEP","start":6,"end":10},{"day":11,"store":"YAWARA","start":6,"end":10},{"day":13,"store":"SWEEP","start":11,"end":15},{"day":14,"store":"YAWARA","start":19,"end":23},{"day":15,"store":"SWEEP","start":18,"end":22},{"day":16,"store":"SWEEP","start":13,"end":17},{"day":18,"store":"SWEEP","start":11,"end":15},{"day":20,"store":"SWEEP","start":11,"end":15},{"day":21,"store":"YAWARA","start":9,"end":14},{"day":24,"store":"SWEEP","start":6,"end":10},{"day":25,"store":"SWEEP","start":11,"end":15},{"day":27,"store":"YAWARA","start":9,"end":14},{"day":29,"store":"SWEEP","start":18,"end":22},{"day":30,"store":"SWEEP","start":11,"end":15}],"翔太":[{"day":2,"store":"YAWARA","start":9,"end":14},{"day":7,"store":"YAWARA","start":6,"end":10},{"day":8,"store":"SWEEP","start":18,"end":22},{"day":9,"store":"YAWARA","start":9,"end":14},{"day":13,"store":"YAWARA","start":9,"end":14},{"day":14,"store":"YAWARA","start":6,"end":10},{"day":15,"store":"YAWARA","start":9,"end":14},{"day":15,"store":"YAWARA","start":18,"end":23},{"day":17,"store":"YAWARA","start":18,"end":23},{"day":20,"store":"YAWARA","start":9,"end":14},{"day":22,"store":"YAWARA","start":9,"end":14},{"day":23,"store":"SWEEP","start":11,"end":15},{"day":24,"store":"YAWARA","start":18,"end":23},{"day":26,"store":"YAWARA","start":9,"end":15},{"day":28,"store":"SWEEP","start":19,"end":22},{"day":29,"store":"YAWARA","start":18,"end":23}],"はなこ":[{"day":2,"store":"YAWARA","start":18,"end":20},{"day":11,"store":"YAWARA","start":18,"end":20},{"day":16,"store":"YAWARA","start":18,"end":20},{"day":30,"store":"YAWARA","start":18,"end":20}],"伊藤":[{"day":2,"store":"YAWARA","start":20,"end":23},{"day":9,"store":"YAWARA","start":20,"end":23},{"day":11,"store":"YAWARA","start":20,"end":23},{"day":16,"store":"YAWARA","start":20,"end":23},{"day":25,"store":"YAWARA","start":20,"end":23},{"day":30,"store":"YAWARA","start":20,"end":23}],"まさる":[{"day":2,"store":"SWEEP","start":16,"end":19},{"day":5,"store":"SWEEP","start":9,"end":12},{"day":12,"store":"SWEEP","start":9,"end":12},{"day":16,"store":"SWEEP","start":17,"end":20},{"day":19,"store":"SWEEP","start":9,"end":12},{"day":23,"store":"SWEEP","start":9,"end":12},{"day":26,"store":"SWEEP","start":9,"end":12},{"day":28,"store":"SWEEP","start":16,"end":19},{"day":30,"store":"SWEEP","start":16,"end":19}],"佐々木":[{"day":7,"store":"YAWARA","start":15,"end":19},{"day":11,"store":"SWEEP","start":17,"end":19},{"day":14,"store":"YAWARA","start":15,"end":19},{"day":18,"store":"SWEEP","start":16,"end":18},{"day":25,"store":"SWEEP","start":17,"end":19}],"パウロ":[{"day":7,"store":"YAWARA","start":15,"end":19}],"美咲":[{"day":9,"store":"YAWARA","start":18,"end":20},{"day":25,"store":"YAWARA","start":18,"end":20}]}};
+const DOW = ['日','月','火','水','木','金','土'];
+const ORDER = ['高橋','けん','翔太','田中','小林','伊藤','はなこ','美咲','まさる','佐々木','パウロ'];
+const PCOLORS = {
+  '高橋':['#6C4BA6','#F0EBF8'], 'けん':['#211E19','#EAE8E4'], '翔太':['#1E8FBF','#E3F2F9'],
+  '田中':['#B26A00','#F9EFDA'], '小林':['#1E6B52','#E5F1EB'], '伊藤':['#0E7490','#E2F1F5'],
+  'はなこ':['#B0387A','#F8E9F1'], '美咲':['#5E7C1E','#EFF4E0'], 'まさる':['#8A5A2E','#F4ECE2'],
+  '佐々木':['#C03127','#F9E7E5'], 'パウロ':['#4E8098','#E8F0F4']
+};
+const pc = n => PCOLORS[n] || ['#4E555F','#ECEEF1'];
+const pstyle = n => { const c = pc(n); return 'color:'+c[0]+';background:'+c[1]; };
+const WEEKS = [[1,6,'第1週'],[7,13,'第2週'],[14,20,'第3週'],[21,27,'第4週'],[28,30,'第5週']];
+const HH = 24, BR = 18, GAPMIN = 2;
+let filter = null;
+const tm = (a,b) => a+':00–'+b+':00';
+const hm = t => { const [h,m] = t.split(':'); return (+h) + (+(m||0))/60; };
+function dowOf(d){ return new Date(2026,8,d).getDay(); }
+
+function daySegments(day){
+  // その日に何かがある時間帯だけを残す(2時間未満のすき間は繋げる)
+  const iv = [];
+  for(const sn of ['YAWARA','SWEEP']){
+    const st = day.stores[sn]; if(!st) continue;
+    st.shifts.forEach(s => iv.push([s.start, s.end]));
+    st.classes.forEach(c => { const [a,b] = c.t.split('–').map(hm); iv.push([Math.floor(a), Math.ceil(b)]); });
+  }
+  if(!iv.length) return [[9,12]];
+  iv.sort((x,y) => x[0]-y[0]);
+  const segs = [];
+  for(const [a,b] of iv){
+    if(segs.length && a - segs[segs.length-1][1] < GAPMIN){
+      segs[segs.length-1][1] = Math.max(segs[segs.length-1][1], b);
+    } else segs.push([a,b]);
+  }
+  return segs;
+}
+
+function makeY(segs){
+  const tops = []; const brks = []; let acc = 0;
+  segs.forEach(([a,b],i) => {
+    tops.push(acc); acc += (b-a)*HH;
+    if(i < segs.length-1){ brks.push({top:acc}); acc += BR; }
+  });
+  const y = t => {
+    for(let i=0;i<segs.length;i++){ const [a,b]=segs[i]; if(t>=a && t<=b) return tops[i]+(t-a)*HH; }
+    return 0;
+  };
+  return {H:acc, y, brks, segs};
+}
+
+function storeCol(day, sn, geo){
+  const st = day.stores[sn] || {shifts:[],classes:[]};
+  const cl = sn==='YAWARA' ? 'y' : 's';
+  const closed = day.events.some(e => e.includes(sn+'休館'));
+  let head = '<div class="tlhead '+cl+'">'+sn+'</div>';
+  if(closed){
+    return '<div class="tlstore">'+head+'<div class="tlbody closedbody" style="height:'+geo.H+'px"><span>休 館</span></div></div>';
+  }
+  let h = '';
+  geo.segs.forEach(([a,b]) => { for(let t=a+1; t<b; t++){ h += '<div class="hline" style="top:'+geo.y(t)+'px"></div>'; } });
+  geo.brks.forEach(k => { h += '<div class="brk" style="top:'+k.top+'px;height:'+BR+'px"></div>'; });
+  if(!st.shifts.length && !st.classes.length){
+    h += '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center"><span style="font-size:11px;color:var(--closed);font-weight:600">配置なし</span></div>';
+  }
+  // 出勤バーのレーン割り当て(重なったら横に並べる)
+  const lanes = [];
+  const laneOf = st.shifts.map(s => {
+    for(let i=0;i<lanes.length;i++){ if(s.start >= lanes[i]){ lanes[i]=s.end; return i; } }
+    lanes.push(s.end); return lanes.length-1;
+  });
+  const nl = Math.max(lanes.length,1);
+  st.classes.forEach(c => {
+    const [a,b] = c.t.split('–').map(hm);
+    const top = geo.y(a), hh = Math.max(geo.y(b)-top,12);
+    const dim = filter && !st.shifts.some(s => s.name===filter && Math.max(s.start,a)<Math.min(s.end,b)) ? ' dim' : '';
+    const sm = hh<20 ? ' sm' : '';
+    const inner = hh>=22 ? '<span class="cbt">'+c.t+'</span><span class="cbn">'+c.n+'</span>'
+                         : '<span class="cbn">'+c.n+'</span>';
+    const chg = c.chg ? ' chg' : '';
+    h += '<div class="cblk '+cl+dim+sm+chg+'" style="top:'+top+'px;height:'+hh+'px;right:'+(6+nl*20)+'px" title="'+c.t+' '+c.n+'">'+inner+'</div>';
+  });
+  st.shifts.forEach((s,i) => {
+    const top = geo.y(s.start), hh = geo.y(s.end)-top;
+    const dim = filter && s.name!==filter ? ' dim' : '';
+    const col = pc(s.name)[0];
+    const inner = hh>=60 ? '<span class="pt1">'+s.start+'</span><span class="pnm">'+s.name+'</span><span class="pt2">'+s.end+'</span>'
+                         : '<span class="pnm">'+s.name+'</span>';
+    const chg = s.chg ? ' chg' : '';
+    h += '<div class="pbar'+dim+chg+'" style="top:'+top+'px;height:'+hh+'px;right:'+(4+laneOf[i]*20)+'px;background:'+col+'" title="'+s.name+' '+tm(s.start,s.end)+'">'+inner+'</div>';
+  });
+  return '<div class="tlstore">'+head+'<div class="tlbody" style="height:'+geo.H+'px">'+h+'</div></div>';
+}
+
+function dayCard(d, today){
+  const day = DATA.days[d];
+  const dw = dowOf(d);
+  let badges = '';
+  if(today) badges += '<span class="badge today-b">今日</span>';
+  if(day.chg) badges += '<span class="badge chgb">'+day.chg+' 変更あり</span>';
+  if(day.holiday) badges += '<span class="badge hol">祝・'+day.holiday+'</span>';
+  day.events.forEach(e => { badges += '<span class="badge '+(e.includes('休館')?'close':'event')+'">'+e+'</span>'; });
+  day.wish.forEach(w => { badges += '<span class="badge event">'+w+'</span>'; });
+  const off = day.off.length ? '<div class="offtxt">休み：<b>'+day.off.join('・')+'</b></div>' : '';
+  const segs = daySegments(day), geo = makeY(segs);
+  let axis = '<div class="tlaxis"><div class="tlhead"></div><div class="tlbody" style="height:'+geo.H+'px">';
+  segs.forEach(([a,b]) => {
+    for(let t=a; t<=b; t++){
+      const pos = t===a ? ' st' : (t===b ? ' en' : '');
+      axis += '<span class="tlhour'+(t%6===0?' em':'')+pos+'" style="top:'+geo.y(t)+'px">'+t+':00</span>';
+    }
+  });
+  geo.brks.forEach(k => { axis += '<div class="brk" style="top:'+k.top+'px;height:'+BR+'px">〜</div>'; });
+  axis += '</div></div>';
+  const boxCls = (day.holiday||dw===0) ? ' sun' : (dw===6 ? ' sat' : '');
+  return '<section class="day'+(today?' today':'')+'" id="d'+d+'">'
+    + '<div class="dhead"><div class="dbox'+boxCls+'"><span class="n">'+d+'</span><span class="w">'+DOW[dw]+'</span></div>'
+    + '<div class="dmeta"><div class="badges">'+(badges||'')+'</div>'+off+'</div></div>'
+    + '<div class="tl">'+axis+storeCol(day,'YAWARA',geo)+storeCol(day,'SWEEP',geo)+'</div></section>';
+}
+
+function renderDay(){
+  const el = document.getElementById('viewDay');
+  const now = new Date();
+  const isSep = now.getFullYear()===2026 && now.getMonth()===8;
+  let h = '';
+  for(const [a,b,label] of WEEKS){
+    let cards = '';
+    for(let d=a; d<=b; d++){
+      if(filter){
+        const works = Object.values(DATA.days[d].stores).some(st => st.shifts.some(s => s.name===filter));
+        if(!works) continue;
+      }
+      cards += dayCard(d, isSep && now.getDate()===d);
+    }
+    if(cards) h += '<div class="wk">'+label+'　9/'+a+'–9/'+b+'</div>' + cards;
+  }
+  el.innerHTML = h || '<p style="color:var(--muted);padding:20px 4px">該当する日がありません。</p>';
+}
+
+function renderPerson(){
+  const el = document.getElementById('viewPerson');
+  let h = '';
+  const names = ORDER.filter(n => DATA.persons[n] && (!filter || n===filter));
+  for(const n of names){
+    const lst = DATA.persons[n];
+    const nd = new Set(lst.map(x=>x.day)).size;
+    let rows = '';
+    lst.forEach(x => {
+      const cl = x.store==='YAWARA' ? 'y' : 's';
+      rows += '<div class="prow"><span class="pd">9/'+x.day+' <span class="pw">'+DOW[dowOf(x.day)]+'</span></span>'
+        + '<span class="stag '+cl+'">'+(x.store==='YAWARA'?'Y':'S')+'</span>'
+        + '<span class="pt">'+tm(x.start,x.end)+'</span></div>';
+    });
+    h += '<section class="person"><div class="phead"><span class="pname" style="color:'+pc(n)[0]+'">'+n+'</span><span class="pdays">出勤 '+nd+'日</span></div><div class="pgrid">'+rows+'</div></section>';
+  }
+  el.innerHTML = h;
+}
+
+function renderChips(){
+  const el = document.getElementById('chips');
+  let h = '<button class="'+(filter?'':'on')+'" onclick="setFilter(null)">全員</button>';
+  for(const n of ORDER){
+    if(!DATA.persons[n]) continue;
+    h += '<button class="'+(filter===n?'on':'')+'" style="'+pstyle(n)+'" onclick="setFilter(\''+n+'\')">'+n+'</button>';
+  }
+  el.innerHTML = h;
+}
+function setFilter(n){ filter = n; renderChips(); renderDay(); renderPerson(); }
+function setView(v){
+  document.getElementById('viewDay').hidden = v!=='day';
+  document.getElementById('viewPerson').hidden = v!=='person';
+  document.getElementById('tabDay').classList.toggle('on', v==='day');
+  document.getElementById('tabPerson').classList.toggle('on', v==='person');
+}
+renderChips(); renderDay(); renderPerson();
+(function(){
+  const now = new Date();
+  if(now.getFullYear()===2026 && now.getMonth()===8){
+    const t = document.getElementById('d'+now.getDate());
+    if(t) setTimeout(()=>t.scrollIntoView({behavior:'auto',block:'start'}),100);
+  }
+})();
+</script>
+
+
+</html>

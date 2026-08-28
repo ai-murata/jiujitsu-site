@@ -2,138 +2,114 @@
 <html lang="ja">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>jiujitsu</title>
+<title>jiujitsu.co.jp</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <style>
   :root {
-    --paper: #ffffff;      /* 白 地 */
-    --panel: #faf8f2;      /* 面 */
-    --line: #e7e1d1;       /* 罫 */
-    --gold: #a3801a;       /* 金（濃） */
-    --gold-hi: #c9a227;    /* 金（明） */
-    --ink: #17140d;        /* 墨黒 強調文字 */
-    --body-c: #5d5745;     /* 本文 */
-    --faint: #948c74;      /* 弱い文字 */
+    --paper: #ffffff;
+    --panel: #faf8f2;
+    --line: #e7e1d1;
+    --gold: #a3801a;
+    --gold-hi: #c9a227;
+    --ink: #17140d;
+    --body-c: #5d5745;
+    --faint: #948c74;
     --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
     --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
   }
-  body {
-    background: var(--paper);
-    color: var(--body-c);
-    font-family: var(--gothic);
-    font-weight: 400;
-    line-height: 1.9;
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-  }
-  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
 
-  /* ---------- hero ---------- */
-  .hero { min-height: 88vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 96px 24px 72px; position: relative; overflow: hidden; background: var(--paper); }
-  .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 55% at 50% 38%, rgba(201,162,39,.09), transparent 70%); pointer-events: none; }
-  .eyebrow { font-size: 12px; letter-spacing: .34em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin: 0 0 28px; }
-  .wordmark { font-family: var(--mincho); font-weight: 600; font-size: clamp(64px, 13vw, 148px); line-height: 1; letter-spacing: .02em; margin: 0; background: linear-gradient(175deg, var(--gold-hi) 10%, var(--gold) 50%, #6f5610 95%); -webkit-background-clip: text; background-clip: text; color: transparent; text-wrap: balance; }
-  .tagline { font-family: var(--mincho); font-weight: 600; font-size: clamp(22px, 4vw, 34px); color: var(--ink); letter-spacing: .18em; margin: 40px 0 0; }
-  .hero-sub { max-width: 34em; font-size: 15px; margin: 22px auto 0; }
-  .hero-domain { margin-top: 56px; font-size: 13px; letter-spacing: .22em; color: var(--faint); }
+  header { text-align: center; padding: 88px 24px 56px; position: relative; }
+  header::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 30%, rgba(201,162,39,.08), transparent 70%); pointer-events: none; }
+  .wordmark { font-family: var(--mincho); font-weight: 600; font-size: clamp(44px, 9vw, 84px); line-height: 1; letter-spacing: .02em; margin: 0; background: linear-gradient(175deg, var(--gold-hi) 10%, var(--gold) 50%, #6f5610 95%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .domain { font-size: 12px; letter-spacing: .28em; color: var(--faint); margin: 14px 0 0; }
+  .tagline { font-family: var(--mincho); font-weight: 600; font-size: clamp(16px, 3vw, 21px); color: var(--ink); letter-spacing: .12em; margin: 34px 0 0; text-wrap: balance; }
 
-  /* 黒帯 */
-  .belt { width: min(420px, 70vw); height: 22px; margin: 48px auto 0; position: relative; background: linear-gradient(180deg, #2a2620, #0e0d0a 55%, #23201a); border: 1px solid #0a0908; border-radius: 3px; box-shadow: 0 6px 18px rgba(23,20,13,.18); }
-  .belt::before { content: ""; position: absolute; right: 12%; top: 0; bottom: 0; width: 17%; background: linear-gradient(180deg, #8a2121, #571212); }
-  .belt i { position: absolute; top: 0; bottom: 0; width: 5px; background: linear-gradient(180deg, #ecd98f, var(--gold-hi)); }
-  .belt i:nth-child(1) { right: 14.5%; } .belt i:nth-child(2) { right: 18.5%; }
-  .belt i:nth-child(3) { right: 22.5%; } .belt i:nth-child(4) { right: 26.5%; }
-
-  /* ---------- 帯色ディバイダ ---------- */
   .rank { display: flex; height: 4px; }
   .rank span { flex: 1; }
   .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
   .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
 
-  /* ---------- sections ---------- */
-  section { padding: 96px 0; }
-  .sec-label { font-size: 12px; letter-spacing: .3em; color: var(--gold); font-weight: 700; margin: 0 0 16px; }
-  h2 { font-family: var(--mincho); font-weight: 600; font-size: clamp(26px, 4.5vw, 38px); color: var(--ink); letter-spacing: .06em; line-height: 1.5; margin: 0 0 24px; text-wrap: balance; }
-  .lede { max-width: 36em; font-size: 15px; margin: 0; }
-  .lede strong { color: var(--ink); font-weight: 700; }
+  main { padding: 64px 0 80px; }
+  .works { display: grid; gap: 20px; }
+  a.card { display: grid; grid-template-columns: 88px 1fr; gap: 24px; align-items: center; background: var(--panel); border: 1px solid var(--line); padding: 28px 30px; text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+  a.card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  a.card:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .num { font-family: var(--mincho); font-size: 15px; letter-spacing: .1em; color: var(--gold); border: 1px solid var(--line); background: var(--paper); width: 88px; height: 88px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+  .num b { font-size: 30px; font-weight: 600; line-height: 1; }
+  .num small { font-size: 10px; letter-spacing: .2em; color: var(--faint); }
+  .card h2 { font-family: var(--mincho); font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: .06em; margin: 0 0 8px; }
+  .card h2 .arrow { color: var(--gold); margin-left: 8px; font-weight: 500; }
+  .card p { font-size: 13.5px; margin: 0; }
+  .card .note { display: inline-block; margin-top: 10px; font-size: 11px; letter-spacing: .08em; color: var(--gold); border: 1px solid rgba(163,128,26,.35); padding: 2px 10px; border-radius: 999px; }
+  @media (max-width: 620px) {
+    a.card { grid-template-columns: 1fr; gap: 14px; }
+    .num { width: 64px; height: 64px; } .num b { font-size: 22px; }
+  }
 
-  /* ---------- features ---------- */
-  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 56px; }
-  @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
-  .cell { background: var(--panel); padding: 34px 30px 38px; }
-  .cell h3 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 0 0 14px; }
-  .cell h3::before { content: ""; display: block; width: 26px; height: 3px; margin-bottom: 14px; background: linear-gradient(90deg, var(--gold-hi), var(--gold)); }
-  .cell p { font-size: 13.5px; line-height: 1.95; margin: 0; }
+  .coming { margin-top: 56px; border-left: 2px solid var(--gold); padding: 4px 0 4px 26px; }
+  .coming h3 { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .08em; margin: 0 0 8px; }
+  .coming p { font-size: 13.5px; margin: 0; max-width: 40em; }
+  .coming a { color: var(--gold); font-weight: 700; text-decoration: none; }
+  .coming a:hover { text-decoration: underline; }
 
-  /* ---------- 思想 ---------- */
-  .thesis { border-left: 2px solid var(--gold); padding-left: 32px; }
-  .thesis h2 { margin-bottom: 20px; }
-
-  /* ---------- CTA ---------- */
-  .cta { text-align: center; padding: 110px 24px 120px; background: #17140d; }
-  .cta h2 { color: #f3ecd8; margin-bottom: 14px; }
-  .cta p { font-size: 14px; max-width: 30em; margin: 0 auto; color: #b0a88f; }
-  .btn { display: inline-block; margin-top: 40px; padding: 17px 54px; font-family: var(--mincho); font-weight: 600; font-size: 16px; letter-spacing: .22em; color: #17140d; background: linear-gradient(170deg, #ecd98f, var(--gold-hi) 70%); text-decoration: none; border-radius: 2px; transition: filter .2s; }
-  .btn:hover { filter: brightness(1.06); }
-  .btn:focus-visible { outline: 2px solid #ecd98f; outline-offset: 4px; }
-  .cta-note { margin-top: 18px; font-size: 12px; letter-spacing: .1em; color: #857c63; }
-
-  footer { border-top: 1px solid var(--line); padding: 34px 24px 44px; text-align: center; font-size: 12px; letter-spacing: .14em; color: var(--faint); background: var(--paper); }
+  footer { border-top: 1px solid var(--line); padding: 34px 24px 46px; text-align: center; font-size: 12px; letter-spacing: .12em; color: var(--faint); }
   footer b { color: var(--body-c); font-weight: 700; }
+  footer a { color: var(--faint); }
 
-  /* ---------- motion ---------- */
-  .rise { opacity: 0; transform: translateY(14px); animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
-  .d1 { animation-delay: .1s; } .d2 { animation-delay: .25s; } .d3 { animation-delay: .4s; } .d4 { animation-delay: .6s; }
+  .rise { opacity: 0; transform: translateY(12px); animation: rise .8s cubic-bezier(.2,.7,.2,1) forwards; }
+  .d1 { animation-delay: .05s; } .d2 { animation-delay: .18s; } .d3 { animation-delay: .3s; }
   @keyframes rise { to { opacity: 1; transform: none; } }
   @media (prefers-reduced-motion: reduce) { .rise { animation: none; opacity: 1; transform: none; } }
 </style>
 
-<header class="hero">
-  <p class="eyebrow rise d1">柔術ジムのための運営システム</p>
-  <h1 class="wordmark rise d2">jiujitsu</h1>
-  <p class="tagline rise d3">ジム運営、一本。</p>
-  <p class="hero-sub rise d3">会員・月謝・予約・帯の昇格から、大会の収支まで。<br>道場のすべてを、ひとつの畳の上に。</p>
-  <div class="belt rise d4" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-  <p class="hero-domain rise d4">JIUJITSU.CO.JP</p>
+<header>
+  <h1 class="wordmark rise d1">jiujitsu</h1>
+  <p class="domain rise d1">JIUJITSU.CO.JP</p>
+  <p class="tagline rise d2">柔術の現場で、必要にせまられて作ったものたち。</p>
 </header>
 
 <div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
 
-<section>
+<main>
   <div class="wrap">
-    <p class="sec-label">機能</p>
-    <h2>道場の一日が、そのまま入っている。</h2>
-    <p class="lede">フィットネスクラブ用のシステムに、柔術を無理やり合わせるのはもう終わり。<strong>帯も、スパーも、大会も</strong>、最初から前提として作られています。</p>
-    <div class="grid">
-      <div class="cell"><h3>会員と月謝</h3><p>入会からプラン変更、月謝の自動請求まで。未納はその日のうちに気づける。</p></div>
-      <div class="cell"><h3>クラス予約</h3><p>スマホから10秒で予約。定員もキャンセル待ちも、自動でさばく。</p></div>
-      <div class="cell"><h3>帯とストライプ</h3><p>昇格の履歴と在籍期間がひと目でわかる。次に昇格させるべき会員が浮かび上がる。</p></div>
-      <div class="cell"><h3>大会・イベント</h3><p>エントリー受付から当日の売上、収支報告まで。散らばっていたお金の流れをひとつに。</p></div>
-      <div class="cell"><h3>パーソナル集計</h3><p>使用実績ベースで自動集計。講師への支払いも、請求月のズレも、手作業ゼロに。</p></div>
-      <div class="cell"><h3>マット時間</h3><p>出席が記録として積み上がる。会員には練習の証、ジムには稼働の実感。</p></div>
+    <div class="works rise d3">
+
+      <a class="card" href="https://dojo.jiujitsu.co.jp">
+        <span class="num"><b>01</b><small>DOJO</small></span>
+        <span>
+          <h2>全国柔術道場ガイド<span class="arrow">→</span></h2>
+          <p>日本全国548の柔術道場を、地図と検索で探せるデータベース。連盟の公開情報と大会エントリー実績から収集し、クラススケジュールや出稽古の可否までまとめました。</p>
+        </span>
+      </a>
+
+      <a class="card" href="/shift/">
+        <span class="num"><b>02</b><small>SHIFT</small></span>
+        <span>
+          <h2>月次シフト表<span class="arrow">→</span></h2>
+          <p>2店舗のジムのシフトを、スマホで見やすいタイムラインに。日別・人別の切り替え、スタッフごとの色分け、直前の変更箇所のハイライトつき。毎月Excelから自動生成しています。</p>
+          <span class="note">展示用サンプル・スタッフ名は仮名です</span>
+        </span>
+      </a>
+
+      <a class="card" href="/taikai/">
+        <span class="num"><b>03</b><small>TAIKAI</small></span>
+        <span>
+          <h2>大会出場スケジュール<span class="arrow">→</span></h2>
+          <p>所属ジムの選手が出場する大会の試合番号・マット・開始時刻・結果を1ページで共有。応援に行く仲間が「誰がいつどのマットか」を迷わないために作りました。</p>
+        </span>
+      </a>
+
+    </div>
+
+    <div class="coming">
+      <h3>開発中 — ジム運営システム</h3>
+      <p>会員・月謝・予約・帯の昇格から大会の収支まで、柔術ジムの運営をひとつにまとめるシステムを開発中です。先行案内をご希望の道場・ジムの方は <a href="mailto:ai@jiujitsu.co.jp">ai@jiujitsu.co.jp</a> までどうぞ。</p>
     </div>
   </div>
-</section>
+</main>
 
-<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
-
-<section>
-  <div class="wrap">
-    <div class="thesis">
-      <p class="sec-label">なぜ作るのか</p>
-      <h2>現場の畳の上から生まれた。</h2>
-      <p class="lede">jiujitsuは、柔術アカデミーYAWARAと大会「Jiu Fight」を実際に運営するチームが、自分たちの毎日の困りごとを潰すために作っているシステムです。机の上のアイデアではなく、<strong>月謝の集計に追われた夜と、大会前日の受付リスト</strong>から生まれています。</p>
-    </div>
-  </div>
-</section>
-
-<div class="cta">
-  <h2>先行導入ジム、募集予定。</h2>
-  <p>現在開発中です。いち早く案内を受け取りたい道場・ジムの方は、お気軽にご連絡ください。</p>
-  <a class="btn" href="mailto:ai@jiujitsu.co.jp?subject=jiujitsu%20先行案内希望">案内を受け取る</a>
-  <p class="cta-note">ai@jiujitsu.co.jp</p>
-</div>
-
-<footer>運営 <b>BUTTI ON LINE</b> ｜ YAWARA ACADEMY ／ Jiu Fight</footer>
-
+<footer>運営 <b>BUTTI ON LINE</b> ｜ YAWARA ACADEMY ／ SWEEP ／ Jiu Fight</footer>
 </html>
