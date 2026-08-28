@@ -48,6 +48,18 @@
     a.card { grid-template-columns: 1fr; gap: 16px; }
   }
 
+  .people { margin-top: 72px; }
+  .sec-label { font-family: var(--mincho); font-size: 13px; letter-spacing: .3em; color: var(--gold); font-weight: 700; margin: 0 0 20px; }
+  .pgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 660px) { .pgrid { grid-template-columns: 1fr; } }
+  .pcard { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 26px 28px 28px; }
+  .pname { font-family: var(--mincho); font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: .08em; margin: 0 0 2px; }
+  .pname small { display: block; font-family: var(--gothic); font-size: 10px; letter-spacing: .26em; color: var(--faint); font-weight: 500; margin-top: 4px; }
+  .prole { font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; margin: 10px 0 12px; }
+  .pbio { font-size: 13px; line-height: 2; margin: 0; }
+  .pbio a { color: var(--gold); text-decoration: none; }
+  .pbio a:hover { text-decoration: underline; }
+
   .coming { margin-top: 56px; border-left: 2px solid var(--gold); padding: 4px 0 4px 26px; }
   .coming h3 { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .08em; margin: 0 0 8px; }
   .coming p { font-size: 13.5px; margin: 0; max-width: 40em; }
@@ -107,6 +119,22 @@
       </a>
 
     </div>
+
+    <section class="people">
+      <p class="sec-label">つくっている人たち</p>
+      <div class="pgrid">
+        <div class="pcard">
+          <p class="pname">村田 良蔵<small>RYOZO MURATA</small></p>
+          <p class="prole">ブラジリアン柔術家</p>
+          <p class="pbio">北海道初のグレイシー直系黒帯。SJJIF世界選手権マスター2黒帯フェザー級を2018年に制し、翌年連覇。スポーツ柔術日本連盟（SJJJF）代表理事、<a href="https://overlimit-sapporo.com/" target="_blank" rel="noopener">オーバーリミット札幌</a>代表。YAWARA / SWEEPでも指導する。</p>
+        </div>
+        <div class="pcard">
+          <p class="pname">村田 亜衣<small>AI MURATA</small></p>
+          <p class="prole">株式会社BUTTI ON LINE</p>
+          <p class="pbio">柔術アカデミーYAWARA / SWEEPと大会「Jiu Fight」の運営を担う。経理も広報もグッズも、そしてこのサイトの作品づくりも。AIを相棒に、現場の困りごとを道具に変えていく。</p>
+        </div>
+      </div>
+    </section>
 
     <div class="coming">
       <h3>これから作るもの</h3>
