@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大会出場スケジュール — jiujitsu.co.jp</title>
+<meta name="description" content="YAWARA / SWEEP の選手が出場する大会の試合番号・マット・開始時刻・結果をまとめた一覧。">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff;
+    --panel: #faf8f2;
+    --line: #e7e1d1;
+    --gold: #a3801a;
+    --gold-hi: #c9a227;
+    --ink: #17140d;
+    --body-c: #5d5745;
+    --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  .home { position: absolute; top: 26px; left: 0; right: 0; text-align: center; font-size: 12px; letter-spacing: .16em; }
+  .home a { color: var(--faint); text-decoration: none; }
+  .home a:hover { color: var(--gold); }
+
+  header { text-align: center; padding: 78px 24px 50px; position: relative; }
+  header::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 30%, rgba(201,162,39,.08), transparent 70%); pointer-events: none; }
+  .eyebrow-top { font-family: var(--mincho); font-size: 12px; letter-spacing: .3em; color: var(--gold); margin: 0 0 14px; }
+  h1 { font-family: var(--mincho); font-weight: 600; font-size: clamp(28px, 6vw, 44px); line-height: 1.25; letter-spacing: .06em; color: var(--ink); margin: 0; }
+  .tagline { font-size: 13.5px; letter-spacing: .06em; margin: 20px 0 0; text-wrap: balance; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  main { padding: 56px 0 72px; }
+  section + section { margin-top: 56px; }
+  .sec-label { font-family: var(--mincho); font-size: 13px; letter-spacing: .3em; color: var(--gold); font-weight: 700; margin: 0 0 20px; }
+
+  .list { display: grid; gap: 18px; }
+  a.tcard { display: block; background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--line); padding: 24px 26px; text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+  a.tcard:hover { border-color: var(--gold); border-left-color: var(--gold); transform: translateY(-2px); }
+  a.tcard:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  a.tcard.live { border-left-color: var(--gold); }
+
+  .head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .badge { font-size: 11px; letter-spacing: .14em; padding: 2px 10px; border-radius: 999px; border: 1px solid rgba(163,128,26,.4); color: var(--gold); white-space: nowrap; }
+  .badge.done { color: var(--faint); border-color: var(--line); }
+  .date { font-size: 12px; letter-spacing: .1em; color: var(--faint); }
+  .tcard h2 { font-family: var(--mincho); font-weight: 700; font-size: 21px; color: var(--ink); letter-spacing: .05em; margin: 10px 0 0; }
+  .tcard h2 .arrow { color: var(--gold); margin-left: 8px; font-weight: 500; }
+  .venue { font-size: 13px; margin: 6px 0 0; color: var(--body-c); }
+  .meta { font-size: 12.5px; margin: 14px 0 0; padding-top: 14px; border-top: 1px solid var(--line); color: var(--faint); letter-spacing: .04em; }
+  .meta b { color: var(--ink); font-weight: 700; }
+  .win { display: grid; gap: 4px; margin: 12px 0 0; }
+  .win li { list-style: none; font-size: 13px; }
+  .win .medal { color: var(--gold); margin-right: 8px; }
+  .win b { font-family: var(--mincho); color: var(--ink); font-weight: 700; letter-spacing: .04em; }
+  .win span { color: var(--faint); font-size: 11.5px; margin-left: 8px; }
+
+  .note { margin-top: 48px; border-left: 2px solid var(--gold); padding: 4px 0 4px 22px; }
+  .note h3 { font-family: var(--mincho); font-weight: 700; font-size: 15px; color: var(--ink); letter-spacing: .08em; margin: 0 0 6px; }
+  .note p { font-size: 13px; margin: 0; max-width: 42em; }
+
+  footer { border-top: 1px solid var(--line); padding: 34px 24px 46px; text-align: center; font-size: 12px; letter-spacing: .12em; color: var(--faint); }
+  footer b { color: var(--body-c); font-weight: 700; }
+</style>
+
+<p class="home"><a href="/">← jiujitsu.co.jp</a></p>
+
+<header>
+  <p class="eyebrow-top">TOURNAMENT</p>
+  <h1>大会出場スケジュール</h1>
+  <p class="tagline">誰が、いつ、どのマットで戦うのか。<br>応援に行く人が迷わないための一覧です。</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <p class="sec-label">開催予定</p>
+      <div class="list">
+        <a class="tcard live" href="/tournament/sjjif-world-2026/">
+          <div class="head">
+            <span class="badge">まもなく開催</span>
+            <span class="date">2026年9月3日(木) — 6日(日)</span>
+          </div>
+          <h2>SJJIF 世界柔術選手権 2026<span class="arrow">→</span></h2>
+          <p class="venue">東京・代々木 ／ 2026 SJJIF World Cup</p>
+          <p class="meta">出場者リストは大会2日前ごろに公開されます。公開され次第、試合番号とマットを掲載します。</p>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <p class="sec-label">終了した大会</p>
+      <div class="list">
+        <a class="tcard" href="/tournament/kinnikuman-2026/">
+          <div class="head">
+            <span class="badge done">終了</span>
+            <span class="date">2026年8月15日(土)・16日(日)</span>
+          </div>
+          <h2>ASJJF キン肉マンカップ 2026<span class="arrow">→</span></h2>
+          <p class="venue">墨田区総合体育館</p>
+          <ul class="win">
+            <li><span class="medal">優勝</span><b>江頭 駿</b><span>白帯 アダルト ライト級</span></li>
+            <li><span class="medal">優勝</span><b>廣鰭 翔大</b><span>黒帯 マスター30 ルースター級</span></li>
+            <li><span class="medal">準優勝</span><b>五十嵐 政貴</b><span>青帯 マスター41 ヘビー級</span></li>
+          </ul>
+          <p class="meta">出場 <b>YAWARA 22名</b> ／ <b>SWEEP 3名</b>　全27エントリー</p>
+        </a>
+      </div>
+    </section>
+
+    <div class="note">
+      <h3>ページの見かた</h3>
+      <p>試合の開始時刻は進行によって前後します。会場では「マット番号」と「◯試合目」で追ってください。勝ち上がると緑の「通過」、敗退するとグレーになり、その先の予定は消えます。</p>
+    </div>
+
+  </div>
+</main>
+
+<footer>運営 <b>BUTTI ON LINE</b> ｜ YAWARA ACADEMY ／ SWEEP ／ Jiu Fight</footer>
+</html>
