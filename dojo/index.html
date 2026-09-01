@@ -2,9 +2,6 @@
 <html lang="ja">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="日本全国の柔術道場548件をJBJJF・SJJJFの両連盟から収集。都道府県・地図・出稽古情報で検索できる道場ガイド。">
-<meta property="og:title" content="全国柔術道場ガイド">
-<meta property="og:url" content="https://jiujitsu.co.jp/dojo/">
 <title>全国柔術道場ガイド</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Cinzel:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <style>
@@ -405,16 +402,12 @@
   }
 </style>
 
-<div style="background:rgba(201,162,39,.12);border-bottom:1px solid rgba(201,162,39,.4);padding:9px 16px;text-align:center;font-size:12.5px;letter-spacing:.08em;color:#c9a227;">
-  ⚠ このページは作成途中です（データ収集中）。掲載内容は不完全な場合があります。
-</div>
-
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">Japan Brazilian Jiu-Jitsu</div>
     <h1>全国柔術道場ガイド</h1>
     <div class="hero-rule"></div>
-    <p class="hero-sub">SJJJF・JBJJF の <strong id="total">—</strong> 道場を都道府県から探せます</p>
+    <p class="hero-sub">JBJJF・SJJJF の <strong id="total">—</strong> 道場を都道府県から探せます</p>
   </div>
 </header>
 
@@ -456,13 +449,13 @@
     <div class="eyebrow" style="margin-bottom:10px">Data Book</div>
     <div style="font-family:'Shippori Mincho B1',serif;font-weight:800;font-size:clamp(18px,3vw,24px);letter-spacing:.06em;margin-bottom:8px">柔術の歴史とデータは、こちらに</div>
     <div style="font-size:13px;color:var(--muted);margin-bottom:18px">道場数の推移・帯の分布・黒帯までの実測年数・柔術の年表</div>
-    <a href="/data/" style="display:inline-block;text-decoration:none;font-family:'Shippori Mincho B1',serif;font-weight:700;font-size:15px;letter-spacing:.1em;color:var(--gold-bright);border:1px solid var(--gold);border-radius:4px;padding:13px 34px">📊 柔術データブックを見る</a>
+    <a href="https://claude.ai/code/artifact/bc030a10-013e-40e8-8e8c-c4287fd0f514" style="display:inline-block;text-decoration:none;font-family:'Shippori Mincho B1',serif;font-weight:700;font-size:15px;letter-spacing:.1em;color:var(--gold-bright);border:1px solid var(--gold);border-radius:4px;padding:13px 34px">📊 柔術データブックを見る</a>
   </div>
 </div>
 
 <footer>
   <div class="wrap">
-    出典：<a href="https://sjjjf.org/" target="_blank" rel="noopener">SJJJF</a>・<a href="https://asjjf.org/" target="_blank" rel="noopener">ASJJF</a> 大会エントリー実績（2025-2026シーズン31大会） ／ <a href="https://www.jbjjf.com/academylist_latest/" target="_blank" rel="noopener">日本ブラジリアン柔術連盟「加盟アカデミー一覧」</a><br>SJJJFは加盟道場一覧を公開していないため、大会に出場した所属チーム名から収集しています。SNSと出稽古の情報は各道場の公式サイトに掲載されているリンク・記載から収集したものです。料金や受け入れ可否は変わることがあるため、必ず各道場にご確認ください。<br>掲載情報の修正・追加のご希望は各道場・連盟へお問い合わせください。
+    出典：<a href="https://www.jbjjf.com/academylist_latest/" target="_blank" rel="noopener">JBJJF「加盟アカデミー一覧」</a> ／ <a href="https://sjjjf.org/" target="_blank" rel="noopener">SJJJF</a>・<a href="https://asjjf.org/" target="_blank" rel="noopener">ASJJF</a> 大会エントリー実績（2025-2026シーズン31大会）<br>SJJJFは加盟道場一覧を公開していないため、大会に出場した所属チーム名から収集しています。SNSと出稽古の情報は各道場の公式サイトに掲載されているリンク・記載から収集したものです。料金や受け入れ可否は変わることがあるため、必ず各道場にご確認ください。<br>掲載情報の修正・追加のご希望は各道場・連盟へお問い合わせください。
   </div>
 </footer>
 
@@ -471,8 +464,8 @@ const DATA = [{"no":"2652","name":"パラエストラ札幌","name_en":"PARAESTR
 const REGIONS = ["北海道","東北","関東","甲信越・北陸","東海","近畿","中国・四国","九州・沖縄"];
 const FEDS = [
   {label:"すべての連盟", v:""},
-  {label:"SJJJF", v:"SJJJF"},
   {label:"JBJJF", v:"JBJJF"},
+  {label:"SJJJF", v:"SJJJF"},
   {label:"両方に加盟", v:"BOTH"},
 ];
 let region = "", pref = "", q = "", fed = "";
@@ -678,7 +671,7 @@ function render(){
   drawPins(hit);
   $("grid").innerHTML = hit.map(a=>{
     const map = a.addr ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.addr)}` : "";
-    const feds = ["SJJJF","JBJJF"].filter(f=>(a.fed||[]).includes(f)).map(f=>`<span class="fed ${f.toLowerCase()}">${f}</span>`).join("");
+    const feds = (a.fed||[]).map(f=>`<span class="fed ${f.toLowerCase()}">${f}</span>`).join("");
     const guess = a.pref_guess ? '<span class="fed-note">道場名からの推定</span>' : "";
     return `<article class="card">
       <span class="badge${a.pref ? "" : " unknown"}">${a.pref ? esc(a.pref) : "調査中"}</span>
@@ -704,3 +697,6 @@ function render(){
 render();
 
 </script>
+
+
+</html>
