@@ -150,6 +150,11 @@ h2{font-size:13px;font-weight:600;color:var(--ink-2);margin:26px 0 6px;
 .note b{display:block;color:var(--ink);font-size:13px;margin-bottom:6px;}
 .note ul{margin:0;padding-left:17px;} .note li{margin:3px 0;}
 .note.w{border-left-color:var(--sweep);background:var(--sweep-bg);}
+.matbar{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:2px 0 14px;}
+.matbar span{font-family:var(--mono);font-size:11.5px;border:1px solid var(--rule);
+  border-radius:6px;padding:3px 9px;background:var(--panel);color:var(--ink-2);}
+.matbar span b{color:var(--ink);font-size:13px;}
+.matbar .lb{border:none;background:none;padding:3px 0;color:var(--ink-3);font-size:11px;letter-spacing:.06em;}
 .offi{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 0;}
 .offi a{font-size:12.5px;font-weight:600;color:var(--yawara);text-decoration:none;
   border:1px solid var(--rule);border-radius:999px;padding:5px 12px;background:#fff;}
@@ -168,7 +173,7 @@ footer a{color:var(--yawara);}
   <p class="eyebrow">SJJIF WORLD · 代々木第一体育館</p>
   <h1>SJJIF 世界柔術選手権 2026<br>YAWARA / SWEEP 出場スケジュール</h1>
   <p class="meta"><span>2026年9月3日(木) — 6日(日)</span><span><b>YAWARA</b> 41名 51エントリー</span><span><b>SWEEP</b> 9名 10エントリー</span></p>
-  <p class="stamp" id="st">最終更新 9/1 17:06</p>
+  <p class="stamp" id="st">最終更新 9/1 17:12</p>
   <div class="offi">
     <a href="https://sjjif.com/public/eventInfo/1843" target="_blank" rel="noopener">大会公式ページ ↗</a>
     <a href="https://sjjif.com/public/brackets/1843" target="_blank" rel="noopener">公式トーナメント表 ↗</a>
@@ -268,9 +273,20 @@ function podium(){
   win.forEach(r=>h+=row(r,'🏆'));
   el.innerHTML=h+'</div>';
 }
+function matBar(){
+  const c={};
+  D.filter(r=>r.d===day&&!r.out).forEach(function(r){
+    const p=r.s[Math.min(r.adv,r.s.length-1)];
+    const m=p.tbd||!p.m?'未定':p.m;
+    (c[m]=c[m]||new Set()).add(r.n);});
+  const ks=Object.keys(c).sort((a,b)=>(a==='未定')-(b==='未定')||a-b);
+  if(!ks.length)return'';
+  return '<div class="matbar"><span class="lb">マット別人数（セコンド用・敗退除く）</span>'
+    +ks.map(k=>'<span>'+(k==='未定'?'未定':'MAT '+k)+' <b>'+c[k].size+'</b>人</span>').join('')+'</div>';
+}
 function render(){
   podium();
-  out.innerHTML='<h2>9月'+day+'日 '+(DOW[day]||'')+'</h2>'+
+  out.innerHTML='<h2>9月'+day+'日 '+(DOW[day]||'')+'</h2>'+matBar()+
     (view==='t'?timeView():personView());
   document.querySelectorAll('#days button').forEach(b=>b.setAttribute('aria-pressed', +b.dataset.day===day));
   vt.setAttribute('aria-pressed',view==='t');vp.setAttribute('aria-pressed',view==='p');
