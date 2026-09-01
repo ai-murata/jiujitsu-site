@@ -2,69 +2,240 @@
 <html lang="ja">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SJJIF 世界柔術選手権 2026 — 出場スケジュール</title>
-<meta name="description" content="2026 SJJIF World Cup（9月3日〜6日・東京代々木）に出場する YAWARA / SWEEP 選手のスケジュール。">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<title>SJJIF世界柔術選手権 2026 — YAWARA / SWEEP 出場スケジュール</title>
 <style>
-  :root {
-    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
-    --gold: #a3801a; --gold-hi: #c9a227; --ink: #17140d;
-    --body-c: #5d5745; --faint: #948c74;
-    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
-    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
-  }
-  * { box-sizing: border-box; }
-  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
-  .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
-  .back { border-bottom: 1px solid var(--line); background: var(--panel); padding: 10px 16px; text-align: center; font-size: 12px; letter-spacing: .12em; }
-  .back a { color: var(--gold); text-decoration: none; }
-  header { text-align: center; padding: 64px 24px 44px; position: relative; }
-  header::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 30%, rgba(201,162,39,.08), transparent 70%); pointer-events: none; }
-  .eyebrow-top { font-family: var(--mincho); font-size: 12px; letter-spacing: .3em; color: var(--gold); margin: 0 0 14px; }
-  h1 { font-family: var(--mincho); font-weight: 600; font-size: clamp(24px, 5.5vw, 38px); line-height: 1.3; letter-spacing: .05em; color: var(--ink); margin: 0; }
-  .when { font-size: 13.5px; letter-spacing: .08em; margin: 18px 0 0; color: var(--ink); }
-  .where { font-size: 13px; margin: 4px 0 0; }
-  .rank { display: flex; height: 4px; }
-  .rank span { flex: 1; }
-  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
-  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
-  main { padding: 52px 0 72px; }
-  .status { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold); padding: 26px 28px; }
-  .status h2 { font-family: var(--mincho); font-weight: 700; font-size: 18px; color: var(--ink); letter-spacing: .06em; margin: 0 0 12px; }
-  .status p { font-size: 13.5px; margin: 0 0 12px; }
-  .status p:last-child { margin-bottom: 0; }
-  .steps { margin: 22px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
-  .steps li { font-size: 13px; padding-left: 22px; position: relative; }
-  .steps li::before { content: "―"; position: absolute; left: 0; color: var(--gold); }
-  footer { border-top: 1px solid var(--line); padding: 34px 24px 46px; text-align: center; font-size: 12px; letter-spacing: .12em; color: var(--faint); }
-  footer b { color: var(--body-c); font-weight: 700; }
+:root{
+  --ink:#14161a; --ink-2:#4a4f57; --ink-3:#858b95;
+  --ground:#fbfbfa; --panel:#f2f3f1; --panel-2:#e9eae7; --rule:#dfe0dc;
+  --yawara:#1b4fa0; --yawara-bg:#e7eefa;
+  --sweep:#a8431c; --sweep-bg:#faece4;
+  --win:#1c6b45; --win-bg:#e4f2ea;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
+  font-size:15px;line-height:1.5;-webkit-text-size-adjust:100%;}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px 64px;}
+header{padding:28px 0 18px;}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0 0 8px;}
+h1{font-size:21px;line-height:1.3;font-weight:650;margin:0 0 10px;text-wrap:balance;letter-spacing:-.01em;}
+.meta{font-size:13px;color:var(--ink-2);margin:0;display:flex;flex-wrap:wrap;gap:4px 14px;}
+.meta b{font-weight:600;color:var(--ink);}
+.stamp{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin:10px 0 0;}
+.podium{margin:14px 0 0;border:1px solid var(--rule);border-radius:12px;overflow:hidden;}
+.podium h3{margin:0;padding:8px 12px;font-size:12px;font-weight:600;letter-spacing:.06em;
+  background:var(--ink);color:var(--ground);font-family:var(--mono);}
+.pod{display:flex;align-items:center;gap:9px;padding:8px 12px;border-top:1px solid var(--rule);}
+.pod:first-of-type{border-top:none;}
+.pod .medal{font-size:17px;width:22px;text-align:center;flex:none;}
+.pod .av{width:26px;height:33px;}
+.pod .who{font-weight:600;font-size:14px;}
+.pod .cat{font-size:11px;color:var(--ink-3);flex-basis:100%;margin-top:-3px;padding-left:31px;}
+.pod-in{display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px;min-width:0;flex:1;}
+.pod .day{font-family:var(--mono);font-size:10px;color:var(--ink-3);}
+nav{position:sticky;top:0;z-index:20;background:var(--ground);
+  border-bottom:1px solid var(--rule);margin:0 -16px;padding:10px 16px;
+  display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+button{font:inherit;font-size:13px;font-weight:550;cursor:pointer;
+  border:1px solid var(--rule);background:transparent;color:var(--ink-2);
+  border-radius:999px;padding:6px 13px;transition:background .12s,color .12s,border-color .12s;}
+button:hover{border-color:var(--ink-3);}
+button:focus-visible{outline:2px solid var(--yawara);outline-offset:2px;}
+button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--ground);}
+.spacer{flex:1;}
+.grp{display:flex;gap:6px;}
+.slot{display:grid;grid-template-columns:62px minmax(0,1fr);gap:12px;padding:9px 0;border-bottom:1px solid var(--rule);}
+.slot.past{opacity:.45;}
+.gut{display:flex;flex-direction:column;align-items:flex-start;gap:1px;padding-top:1px;}
+.mt{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.06em;
+  background:var(--ink);color:var(--ground);border-radius:3px;padding:1px 5px;}
+.fno{font-family:var(--mono);font-size:20px;font-weight:600;line-height:1.1;
+  font-variant-numeric:tabular-nums;letter-spacing:-.03em;color:var(--ink);}
+.fno i{font-style:normal;font-size:10px;font-weight:500;color:var(--ink-3);margin-left:1px;}
+.clk{font-family:var(--mono);font-size:11.5px;font-variant-numeric:tabular-nums;color:var(--ink-3);}
+.stack{display:flex;flex-direction:column;gap:7px;min-width:0;}
+.m{display:flex;align-items:stretch;gap:8px;min-width:0;}
+.txt{display:flex;flex-wrap:wrap;align-items:baseline;gap:3px 7px;min-width:0;flex:1;}
+.nm{font-weight:600;font-size:15px;letter-spacing:-.005em;overflow-wrap:anywhere;}
+.dv{font-size:12px;color:var(--ink-3);flex-basis:100%;margin-top:-2px;overflow-wrap:anywhere;}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;font-weight:600;
+  padding:2px 6px;border-radius:3px;white-space:nowrap;}
+.mat{background:var(--panel-2);color:var(--ink-2);}
+.fn{background:var(--yawara-bg);color:var(--yawara);}
+.rd{border:1px solid var(--rule);color:var(--ink-2);}
+.rd.f{background:var(--ink);border-color:var(--ink);color:var(--ground);}
+.rd.w{background:var(--win-bg);border-color:var(--win);color:var(--win);}
+.rd.l{background:var(--panel-2);border-color:var(--rule);color:var(--ink-3);}
+.slot.done .nm,.slot.done .fno{color:var(--ink-3);}
+.alt{font-family:var(--mono);font-size:10.5px;color:var(--sweep);white-space:nowrap;}
+.tm-s{background:var(--sweep-bg);color:var(--sweep);}
+.belt{width:9px;border-radius:3px;border:1px solid rgba(0,0,0,.32);flex:none;}
+.b-white{box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);}
+.av{width:30px;height:38px;border-radius:4px;flex:none;border:1px solid var(--rule);
+  background:var(--panel-2) no-repeat 50% 20%;background-size:cover;}
+.av.big{width:46px;height:58px;border-radius:6px;}
+
+.b-white{background:#fff;} .b-blue{background:#2563a8;} .b-purple{background:#6b4e9b;}
+.b-brown{background:#6b4a2f;} .b-black{background:#1a1a1a;}
+.gap{display:grid;grid-template-columns:62px minmax(0,1fr);gap:12px;padding:7px 0;border-bottom:1px solid var(--rule);}
+.gap span{font-size:12px;color:var(--ink-3);font-family:var(--mono);}
+.card{border:1px solid var(--rule);border-radius:10px;padding:13px 14px;background:#fff;
+  display:flex;flex-direction:column;gap:9px;}
+.card.out{opacity:.6;}
+.cards{display:flex;flex-direction:column;gap:9px;}
+.chain{display:flex;flex-wrap:wrap;gap:5px;}
+.step{display:flex;align-items:baseline;gap:5px;border:1px solid var(--rule);
+  border-radius:6px;padding:3px 7px;background:var(--panel);}
+.step b{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;font-weight:600;}
+.step span{font-size:10.5px;color:var(--ink-3);}
+.step.f{background:var(--ink);border-color:var(--ink);}
+.step.f b{color:var(--ground);} .step.f span{color:#b9bcc2;}
+.step.w{background:var(--win-bg);border-color:var(--win);}
+.step.w b{color:var(--win);} .step.w span{color:var(--win);}
+.step.l{background:var(--panel-2);} .step.l b,.step.l span{color:var(--ink-3);}
+.step.x{opacity:.35;text-decoration:line-through;}
+h2{font-size:13px;font-weight:600;color:var(--ink-2);margin:26px 0 6px;
+  font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;}
+.note{border-left:3px solid var(--yawara);background:var(--yawara-bg);
+  padding:12px 14px;margin-top:26px;font-size:13px;color:var(--ink-2);}
+.note b{display:block;color:var(--ink);font-size:13px;margin-bottom:6px;}
+.note ul{margin:0;padding-left:17px;} .note li{margin:3px 0;}
+.note.w{border-left-color:var(--sweep);background:var(--sweep-bg);}
+footer{margin-top:32px;font-size:12px;color:var(--ink-3);}
+footer a{color:var(--yawara);}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;}}
 </style>
-
-<div class="back"><a href="/tournament/">← 大会一覧</a></div>
-
+<div style="border-bottom:1px solid #e7e1d1;background:#faf8f2;padding:10px 16px;text-align:center;font:12px/1.6 'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN',sans-serif;letter-spacing:.12em;"><a href="/tournament/" style="color:#a3801a;text-decoration:none;">← 大会一覧</a></div>
+<div class="wrap">
 <header>
-  <p class="eyebrow-top">2026 SJJIF WORLD CUP</p>
-  <h1>SJJIF 世界柔術選手権 2026</h1>
-  <p class="when">2026年9月3日(木) — 6日(日)</p>
-  <p class="where">東京・代々木</p>
+  <p class="eyebrow">SJJIF WORLD · 代々木第一体育館</p>
+  <h1>SJJIF 世界柔術選手権 2026<br>YAWARA / SWEEP 出場スケジュール</h1>
+  <p class="meta"><span>2026年9月3日(木) — 6日(日)</span><span><b>YAWARA</b> 40名 50エントリー</span><span><b>SWEEP</b> 8名 9エントリー</span></p>
+  <p class="stamp" id="st">最終更新 9/1 10:10</p>
 </header>
+<nav>
+  <div class="grp" id="days"></div>
+  <div class="spacer"></div>
+  <div class="grp"><button id="vt" aria-pressed="true">時間順</button><button id="vp" aria-pressed="false">選手別</button></div>
+</nav>
+<div id="podium"></div>
+<main id="out"></main>
+<div class="note"><b>読み方と注意</b>
+<ul>
+<li><b style="display:inline">時刻は目安です。マット番号と試合番号で追ってください。</b>進行は最大30分前倒しになることがあります。</li>
+<li>緑は<b style="display:inline">勝ち上がり確定</b>、グレーの「敗退」以降の試合は表示されません。結果は公式ブラケットから自動で取り込みます。</li>
+<li>時刻は公式ブラケット上の各選手の試合時刻。部門の開始時刻とは違います（バイの選手がいるため）。</li>
+<li>試合は最大30分前倒しで始まる可能性あり。40分前には会場入りを。</li>
+<li>時刻が2つ並ぶ試合は、対戦相手の山が決まると片方に確定します。</li>
+</ul></div>
+<footer>出典: ASJJF 公式ブラケット（自動取得）。<a href="https://asjjf.org/public/brackets/1919">公式ブラケット</a></footer>
+</div>
+<script>
+let D=[{"d":4,"n":"小島　慶大","en":"Kojima Keita","team":"YAWARA","belt":"white","div":"青 M36 フェザー","s":[{"t":"8:30","v":510,"m":"11","r":"1回戦","date":"4 Sep","f":"1"},{"t":"8:48","v":528,"m":"11","r":"2回戦","date":"4 Sep","f":"4"},{"t":"9:18","v":558,"m":"11","r":"準々決勝","date":"4 Sep","f":"9"},{"t":"9:42","v":582,"m":"12","r":"準決勝","date":"4 Sep","f":"13","alt":"9:48"},{"t":"10:06","v":606,"m":"12","r":"決勝","date":"4 Sep","f":"17"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"岡島　悠裕","en":"Okajima Yusuke","team":"YAWARA","belt":"white","div":"青 M30 ライト","s":[{"t":"8:30","v":510,"m":"8","r":"1回戦","date":"4 Sep","f":"1"},{"t":"8:54","v":534,"m":"8","r":"2回戦","date":"4 Sep","f":"5"},{"t":"9:30","v":570,"m":"8","r":"準々決勝","date":"4 Sep","f":"11"},{"t":"9:48","v":588,"m":"7","r":"準決勝","date":"4 Sep","f":"14","alt":"9:54"},{"t":"10:12","v":612,"m":"7","r":"決勝","date":"4 Sep","f":"18"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"中山　詩文","en":"Nakayama Shimon","team":"SWEEP","belt":"white","div":"白 M30 ライト","s":[{"t":"8:36","v":516,"m":"15","r":"準々決勝","date":"4 Sep","f":"2"},{"t":"9:12","v":552,"m":"15","r":"準決勝","date":"4 Sep","f":"8"},{"t":"9:30","v":570,"m":"15","r":"決勝","date":"4 Sep","f":"11"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"後藤　芳輝","en":"Goto Yoshiki","team":"YAWARA","belt":"white","div":"青 M30 ライト","s":[{"t":"8:36","v":516,"m":"7","r":"1回戦","date":"4 Sep","f":"2"},{"t":"9:00","v":540,"m":"7","r":"2回戦","date":"4 Sep","f":"6"},{"t":"9:18","v":558,"m":"7","r":"準々決勝","date":"4 Sep","f":"9"},{"t":"9:48","v":588,"m":"7","r":"準決勝","date":"4 Sep","f":"14","alt":"9:54"},{"t":"10:12","v":612,"m":"7","r":"決勝","date":"4 Sep","f":"18"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"佐々木　彦太","en":"Sasaki Genta","team":"YAWARA","belt":"white","div":"青 M36 フェザー","s":[{"t":"8:42","v":522,"m":"12","r":"1回戦","date":"4 Sep","f":"3"},{"t":"9:18","v":558,"m":"12","r":"準々決勝","date":"4 Sep","f":"9"},{"t":"9:42","v":582,"m":"12","r":"準決勝","date":"4 Sep","f":"13","alt":"9:48"},{"t":"10:06","v":606,"m":"12","r":"決勝","date":"4 Sep","f":"17"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"梅津　哲豪","en":"Umezu Tetsugo","team":"YAWARA","belt":"white","div":"青 M30 ライト","s":[{"t":"8:42","v":522,"m":"7","r":"1回戦","date":"4 Sep","f":"3"},{"t":"9:12","v":552,"m":"7","r":"準々決勝","date":"4 Sep","f":"8"},{"t":"9:48","v":588,"m":"7","r":"準決勝","date":"4 Sep","f":"14","alt":"9:54"},{"t":"10:12","v":612,"m":"7","r":"決勝","date":"4 Sep","f":"18"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"濵田　優貴","en":"Hamada Yuki","team":"YAWARA","belt":"white","div":"青 M41 フェザー","s":[{"t":"8:42","v":522,"m":"4","r":"1回戦","date":"4 Sep","f":"3"},{"t":"9:06","v":546,"m":"4","r":"2回戦","date":"4 Sep","f":"7"},{"t":"9:42","v":582,"m":"4","r":"準々決勝","date":"4 Sep","f":"13"},{"t":"10:06","v":606,"m":"4","r":"準決勝","date":"4 Sep","f":"17","alt":"10:12"},{"t":"10:42","v":642,"m":"4","r":"決勝","date":"4 Sep","f":"23"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"田邊　大吾","en":"Tanabe Daigo","team":"YAWARA","belt":"white","div":"青 M36 ライト","s":[{"t":"8:48","v":528,"m":"9","r":"1回戦","date":"4 Sep","f":"4"},{"t":"9:24","v":564,"m":"9","r":"準々決勝","date":"4 Sep","f":"10"},{"t":"9:54","v":594,"m":"9","r":"準決勝","date":"4 Sep","f":"15"},{"t":"10:30","v":630,"m":"9","r":"決勝","date":"4 Sep","f":"21"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"真弓　明久","en":"Mayumi Haruhisa","team":"YAWARA","belt":"white","div":"白 M30 ヘビー","s":[{"t":"9:00","v":540,"m":"14","r":"準々決勝","date":"4 Sep","f":"6"},{"t":"9:24","v":564,"m":"14","r":"準決勝","date":"4 Sep","f":"10"},{"t":"9:48","v":588,"m":"14","r":"決勝","date":"4 Sep","f":"14"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"大橋　一樹","en":"Ohashi Kazuki","team":"YAWARA","belt":"white","div":"青 M36 ライト","s":[{"t":"9:00","v":540,"m":"9","r":"1回戦","date":"4 Sep","f":"6"},{"t":"9:30","v":570,"m":"9","r":"準々決勝","date":"4 Sep","f":"11"},{"t":"10:00","v":600,"m":"9","r":"準決勝","date":"4 Sep","f":"16"},{"t":"10:30","v":630,"m":"9","r":"決勝","date":"4 Sep","f":"21"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"西尾　健斗","en":"Nishio Kento","team":"YAWARA","belt":"white","div":"青 M36 L-フェザー","s":[{"t":"9:00","v":540,"m":"10","r":"1回戦","date":"4 Sep","f":"6"},{"t":"9:42","v":582,"m":"10","r":"準々決勝","date":"4 Sep","f":"13"},{"t":"10:00","v":600,"m":"10","r":"準決勝","date":"4 Sep","f":"16","alt":"9:54"},{"t":"10:30","v":630,"m":"10","r":"決勝","date":"4 Sep","f":"21"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"菅野　流飛","en":"Kanno Ryuhi","team":"YAWARA","belt":"white","div":"青 M41 ライト","s":[{"t":"9:00","v":540,"m":"2","r":"1回戦","date":"4 Sep","f":"6"},{"t":"9:30","v":570,"m":"2","r":"準々決勝","date":"4 Sep","f":"11"},{"t":"9:54","v":594,"m":"2","r":"準決勝","date":"4 Sep","f":"15"},{"t":"10:24","v":624,"m":"2","r":"決勝","date":"4 Sep","f":"20"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"粟田　健太郎","en":"Awata Kentaroh","team":"YAWARA","belt":"white","div":"青 M36 ライト","s":[{"t":"9:12","v":552,"m":"9","r":"1回戦","date":"4 Sep","f":"8"},{"t":"9:36","v":576,"m":"9","r":"準々決勝","date":"4 Sep","f":"12"},{"t":"10:00","v":600,"m":"9","r":"準決勝","date":"4 Sep","f":"16"},{"t":"10:30","v":630,"m":"9","r":"決勝","date":"4 Sep","f":"21"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"北尾　崇","en":"Kitao Takashi","team":"SWEEP","belt":"white","div":"白 M36 フェザー","s":[{"t":"9:36","v":576,"m":"15","r":"1回戦","date":"4 Sep","f":"12"},{"t":"10:06","v":606,"m":"15","r":"準々決勝","date":"4 Sep","f":"17"},{"t":"10:42","v":642,"m":"15","r":"準決勝","date":"4 Sep","f":"23"},{"t":"11:18","v":678,"m":"15","r":"決勝","date":"4 Sep","f":"29"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"江﨑　創太","en":"Ezaki Sota","team":"YAWARA","belt":"white","div":"白 M36 フェザー","s":[{"t":"9:54","v":594,"m":"15","r":"1回戦","date":"4 Sep","f":"15"},{"t":"10:24","v":624,"m":"15","r":"準々決勝","date":"4 Sep","f":"20"},{"t":"10:48","v":648,"m":"15","r":"準決勝","date":"4 Sep","f":"24"},{"t":"11:18","v":678,"m":"15","r":"決勝","date":"4 Sep","f":"29"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"松川　恩","en":"Matsukawa On","team":"YAWARA","belt":"white","div":"白 M41 L-フェザー","s":[{"t":"10:00","v":600,"m":"13","r":"1回戦","date":"4 Sep","f":"16"},{"t":"10:30","v":630,"m":"13","r":"準々決勝","date":"4 Sep","f":"21"},{"t":"10:54","v":654,"m":"13","r":"準決勝","date":"4 Sep","f":"25"},{"t":"11:18","v":678,"m":"13","r":"決勝","date":"4 Sep","f":"29"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"村岡　大樹","en":"Muraoka Daiki","team":"YAWARA","belt":"white","div":"白 M36 ライト","s":[{"t":"10:06","v":606,"m":"16","r":"1回戦","date":"4 Sep","f":"17"},{"t":"10:36","v":636,"m":"16","r":"準々決勝","date":"4 Sep","f":"22"},{"t":"11:06","v":666,"m":"16","r":"準決勝","date":"4 Sep","f":"27"},{"t":"11:36","v":696,"m":"16","r":"決勝","date":"4 Sep","f":"32"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"末廣　将志","en":"Suehiro Masashi","team":"SWEEP","belt":"white","div":"青 M41 ミドル","s":[{"t":"10:24","v":624,"m":"1","r":"準々決勝","date":"4 Sep","f":"20"},{"t":"11:12","v":672,"m":"1","r":"準決勝","date":"4 Sep","f":"28"},{"t":"11:42","v":702,"m":"1","r":"決勝","date":"4 Sep","f":"33"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"岩瀬　誠","en":"Iwase Makoto","team":"YAWARA","belt":"white","div":"青 M30 L-フェザー","s":[{"t":"10:36","v":636,"m":"6","r":"1回戦","date":"4 Sep","f":"22"},{"t":"11:06","v":666,"m":"6","r":"準々決勝","date":"4 Sep","f":"27"},{"t":"11:30","v":690,"m":"6","r":"準決勝","date":"4 Sep","f":"31"},{"t":"11:48","v":708,"m":"6","r":"決勝","date":"4 Sep","f":"34"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"合田　武広","en":"Gouda Takehiro","team":"SWEEP","belt":"white","div":"白 M36 ミドル","s":[{"t":"10:54","v":654,"m":"16","r":"準々決勝","date":"4 Sep","f":"25"},{"t":"11:18","v":678,"m":"16","r":"準決勝","date":"4 Sep","f":"29"},{"t":"11:42","v":702,"m":"16","r":"決勝","date":"4 Sep","f":"33"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"鈴木　智久","en":"Suzuki Tomohisa","team":"SWEEP","belt":"white","div":"青 M41 ヘビー","s":[{"t":"11:00","v":660,"m":"4","r":"準々決勝","date":"4 Sep","f":"26"},{"t":"11:24","v":684,"m":"4","r":"準決勝","date":"4 Sep","f":"30"},{"t":"11:54","v":714,"m":"4","r":"決勝","date":"4 Sep","f":"35"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"井柳　俊紀","en":"Iyanagi Toshinori","team":"YAWARA","belt":"white","div":"青 M30 ミドル","s":[{"t":"11:00","v":660,"m":"5","r":"準々決勝","date":"4 Sep","f":"26"},{"t":"11:30","v":690,"m":"5","r":"準決勝","date":"4 Sep","f":"31"},{"t":"11:54","v":714,"m":"5","r":"決勝","date":"4 Sep","f":"35"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"五十嵐　政貴","en":"Igarashi Masaki","team":"YAWARA","belt":"white","div":"青 M41 ヘビー","s":[{"t":"11:06","v":666,"m":"4","r":"準々決勝","date":"4 Sep","f":"27"},{"t":"11:30","v":690,"m":"4","r":"準決勝","date":"4 Sep","f":"31"},{"t":"11:54","v":714,"m":"4","r":"決勝","date":"4 Sep","f":"35"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"立花　千春","en":"Tachibana Chiharu","team":"YAWARA","belt":"white","div":"女子 紫 M30 L-フェザー","s":[{"t":"11:06","v":666,"m":"7","r":"準決勝","date":"4 Sep","f":"26"},{"t":"11:40","v":700,"m":"7","r":"決勝","date":"4 Sep","f":"31"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"三木　善靖","en":"Miki Yoshiyasu","team":"YAWARA","belt":"white","div":"紫 M36 ヘビー","s":[{"t":"11:18","v":678,"m":"4","r":"準決勝","date":"4 Sep","f":"29"},{"t":"11:48","v":708,"m":"4","r":"決勝","date":"4 Sep","f":"34"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"平塚　輝","en":"Hiratsuka Akira","team":"YAWARA","belt":"white","div":"白 M30 ルースター","s":[{"t":"11:24","v":684,"m":"16","r":"準決勝","date":"4 Sep","f":"30"},{"t":"11:48","v":708,"m":"16","r":"決勝","date":"4 Sep","f":"34"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"綿貫　知哉","en":"Watanuki Tomoya","team":"YAWARA","belt":"white","div":"青 M36 ルースター","s":[{"t":"11:38","v":698,"m":"12","r":"準決勝","date":"4 Sep","f":"32"},{"t":"12:03","v":723,"m":"12","r":"決勝","date":"4 Sep","f":"36"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"大寺　高義","en":"Odera Takayoshi","team":"SWEEP","belt":"white","div":"白 M46 フェザー","s":[{"t":"12:42","v":762,"m":"1","r":"準々決勝","date":"4 Sep","f":"43"},{"t":"13:18","v":798,"m":"1","r":"準決勝","date":"4 Sep","f":"49"},{"t":"13:48","v":828,"m":"1","r":"決勝","date":"4 Sep","f":"54"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"河野　裕也","en":"Kono Yuya","team":"YAWARA","belt":"white","div":"紫 M41 L-フェザー","s":[{"t":"12:42","v":762,"m":"10","r":"1回戦","date":"4 Sep","f":"42"},{"t":"13:06","v":786,"m":"10","r":"準々決勝","date":"4 Sep","f":"46"},{"t":"13:30","v":810,"m":"10","r":"準決勝","date":"4 Sep","f":"50"},{"t":"14:00","v":840,"m":"10","r":"決勝","date":"4 Sep","f":"55"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"武田　喜一","en":"Takeda Kiichi","team":"YAWARA","belt":"white","div":"紫 M30 L-フェザー","s":[{"t":"12:44","v":764,"m":"6","r":"1回戦","date":"4 Sep","f":"43"},{"t":"13:12","v":792,"m":"6","r":"準々決勝","date":"4 Sep","f":"47"},{"t":"13:47","v":827,"m":"6","r":"準決勝","date":"4 Sep","f":"52"},{"t":"14:22","v":862,"m":"6","r":"決勝","date":"4 Sep","f":"57"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"野島　繁昭","en":"Nojima Shigeaki","team":"YAWARA","belt":"white","div":"紫 M36 ルースター","s":[{"t":"12:48","v":768,"m":"4","r":"準決勝","date":"4 Sep","f":"44"},{"t":"13:30","v":810,"m":"4","r":"決勝","date":"4 Sep","f":"51"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"工藤　広樹","en":"Kudo Hiroki","team":"YAWARA","belt":"white","div":"紫 M30 L-フェザー","s":[{"t":"12:58","v":778,"m":"6","r":"準々決勝","date":"4 Sep","f":"45"},{"t":"13:40","v":820,"m":"6","r":"準決勝","date":"4 Sep","f":"51"},{"t":"14:22","v":862,"m":"6","r":"決勝","date":"4 Sep","f":"57"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"青山　亮介","en":"Aoyama Ryosuke","team":"SWEEP","belt":"white","div":"白 M41 フェザー","s":[{"t":"13:00","v":780,"m":"13","r":"準々決勝","date":"4 Sep","f":"45"},{"t":"13:24","v":804,"m":"13","r":"準決勝","date":"4 Sep","f":"49"},{"t":"13:54","v":834,"m":"13","r":"決勝","date":"4 Sep","f":"54"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"齊藤　心吾","en":"Saito Shingo","team":"YAWARA","belt":"white","div":"白 M46 フェザー","s":[{"t":"13:00","v":780,"m":"1","r":"準々決勝","date":"4 Sep","f":"46"},{"t":"13:24","v":804,"m":"1","r":"準決勝","date":"4 Sep","f":"50"},{"t":"13:48","v":828,"m":"1","r":"決勝","date":"4 Sep","f":"54"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"岡部　穂孝","en":"Okabe Hotaka","team":"YAWARA","belt":"white","div":"白 M41 ライト","s":[{"t":"13:36","v":816,"m":"13","r":"準々決勝","date":"4 Sep","f":"51"},{"t":"14:06","v":846,"m":"13","r":"準決勝","date":"4 Sep","f":"56"},{"t":"14:30","v":870,"m":"13","r":"決勝","date":"4 Sep","f":"60"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"坂本　知大","en":"Sakamoto Tomohiro","team":"SWEEP","belt":"white","div":"白 M46 ミドル","s":[{"t":"13:36","v":816,"m":"1","r":"準決勝","date":"4 Sep","f":"52"},{"t":"13:54","v":834,"m":"1","r":"決勝","date":"4 Sep","f":"55"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"甲田　拓也","en":"Koda Takuya","team":"YAWARA","belt":"white","div":"白 M41 ライト","s":[{"t":"13:48","v":828,"m":"13","r":"準々決勝","date":"4 Sep","f":"53"},{"t":"14:12","v":852,"m":"13","r":"準決勝","date":"4 Sep","f":"57"},{"t":"14:30","v":870,"m":"13","r":"決勝","date":"4 Sep","f":"60"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"左近司　賢尚","en":"Sakonji Masataka","team":"YAWARA","belt":"white","div":"紫 M41 ミドル","s":[{"t":"14:24","v":864,"m":"10","r":"準々決勝","date":"4 Sep","f":"59"},{"t":"15:06","v":906,"m":"10","r":"準決勝","date":"4 Sep","f":"66"},{"t":"15:42","v":942,"m":"10","r":"決勝","date":"4 Sep","f":"72"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"宮本　博之","en":"Miyamoto Hiroyuki","team":"YAWARA","belt":"white","div":"青 M56 ヘビー","s":[{"t":"14:36","v":876,"m":"11","r":"準決勝","date":"4 Sep","f":"61"},{"t":"15:06","v":906,"m":"11","r":"決勝","date":"4 Sep","f":"66"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"濵田　優貴","en":"Hamada Yuki","team":"YAWARA","belt":"white","div":"青 M41 オープン","s":[{"t":"14:54","v":894,"m":"2","r":"1回戦","date":"4 Sep","f":"65"},{"t":"15:18","v":918,"m":"2","r":"2回戦","date":"4 Sep","f":"69"},{"t":"16:00","v":960,"m":"2","r":"準々決勝","date":"4 Sep","f":"76"},{"t":"16:54","v":1014,"m":"2","r":"準決勝","date":"4 Sep","f":"85","alt":"17:00"},{"t":"17:18","v":1038,"m":"2","r":"決勝","date":"4 Sep","f":"89"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"堤　達生","en":"Tsutsumi Tatsuo","team":"YAWARA","belt":"white","div":"紫 M51 L-フェザー","s":[{"t":"15:24","v":924,"m":"9","r":"準々決勝","date":"4 Sep","f":"69"},{"t":"15:54","v":954,"m":"9","r":"準決勝","date":"4 Sep","f":"74"},{"t":"16:24","v":984,"m":"9","r":"決勝","date":"4 Sep","f":"79"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"山下　昌宏","en":"Yamashita Masahiro","team":"YAWARA","belt":"white","div":"白 M51 ミドル","s":[{"t":"15:39","v":939,"m":"15","r":"準決勝","date":"4 Sep","f":"71"},{"t":"16:15","v":975,"m":"15","r":"決勝","date":"4 Sep","f":"77"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"宮本　博之","en":"Miyamoto Hiroyuki","team":"YAWARA","belt":"white","div":"青 M56 オープン","s":[{"t":"15:48","v":948,"m":"11","r":"1回戦","date":"4 Sep","f":"73"},{"t":"16:24","v":984,"m":"11","r":"準々決勝","date":"4 Sep","f":"79"},{"t":"16:48","v":1008,"m":"11","r":"準決勝","date":"4 Sep","f":"83"},{"t":"17:12","v":1032,"m":"11","r":"決勝","date":"4 Sep","f":"87"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"三木　善靖","en":"Miki Yoshiyasu","team":"YAWARA","belt":"white","div":"紫 M36 オープン","s":[{"t":"16:12","v":972,"m":"4","r":"1回戦","date":"4 Sep","f":"78"},{"t":"16:48","v":1008,"m":"4","r":"準々決勝","date":"4 Sep","f":"84"},{"t":"16:36","v":996,"m":"3","r":"準決勝","date":"4 Sep","f":"80","alt":"16:42"},{"t":"17:24","v":1044,"m":"3","r":"決勝","date":"4 Sep","f":"86"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"田邊　大吾","en":"Tanabe Daigo","team":"YAWARA","belt":"white","div":"青 M36 オープン","s":[{"t":"16:24","v":984,"m":"10","r":"1回戦","date":"4 Sep","f":"79"},{"t":"16:48","v":1008,"m":"10","r":"2回戦","date":"4 Sep","f":"83"},{"t":"17:18","v":1038,"m":"10","r":"準々決勝","date":"4 Sep","f":"88"},{"t":"18:36","v":1116,"m":"9","r":"準決勝","date":"4 Sep","f":"101","alt":"18:42"},{"t":"19:18","v":1158,"m":"9","r":"決勝","date":"4 Sep","f":"108"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"鈴木　智久","en":"Suzuki Tomohisa","team":"SWEEP","belt":"white","div":"青 M41 オープン","s":[{"t":"16:24","v":984,"m":"1","r":"1回戦","date":"4 Sep","f":"80"},{"t":"16:48","v":1008,"m":"1","r":"2回戦","date":"4 Sep","f":"84"},{"t":"17:36","v":1056,"m":"1","r":"準々決勝","date":"4 Sep","f":"92"},{"t":"16:54","v":1014,"m":"2","r":"準決勝","date":"4 Sep","f":"85","alt":"17:00"},{"t":"17:18","v":1038,"m":"2","r":"決勝","date":"4 Sep","f":"89"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"井柳　俊紀","en":"Iyanagi Toshinori","team":"YAWARA","belt":"white","div":"青 M30 オープン","s":[{"t":"16:26","v":986,"m":"6","r":"1回戦","date":"4 Sep","f":"76"},{"t":"16:44","v":1004,"m":"6","r":"2回戦","date":"4 Sep","f":"79"},{"t":"17:15","v":1035,"m":"6","r":"準々決勝","date":"4 Sep","f":"84"},{"t":"17:41","v":1061,"m":"6","r":"準決勝","date":"4 Sep","f":"88","alt":"17:47"},{"t":"18:06","v":1086,"m":"6","r":"決勝","date":"4 Sep","f":"92"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"立花　千春","en":"Tachibana Chiharu","team":"YAWARA","belt":"white","div":"女子 紫 M30 オープン","s":[{"t":"16:48","v":1008,"m":"7","r":"準決勝","date":"4 Sep","f":"82"},{"t":"17:14","v":1034,"m":"7","r":"決勝","date":"4 Sep","f":"86"}],"adv":0,"champ":false,"out":false},{"d":4,"n":"後藤　芳輝","en":"Goto Yoshiki","team":"YAWARA","belt":"white","div":"青 M30 オープン","s":[{"t":"16:50","v":1010,"m":"6","r":"1回戦","date":"4 Sep","f":"80"},{"t":"17:15","v":1035,"m":"6","r":"準々決勝","date":"4 Sep","f":"84"},{"t":"17:41","v":1061,"m":"6","r":"準決勝","date":"4 Sep","f":"88","alt":"17:47"},{"t":"18:06","v":1086,"m":"6","r":"決勝","date":"4 Sep","f":"92"}],"adv":0,"champ":false,"out":false},{"d":5,"n":"横手　謙太朗","en":"Yokote Kentaro","team":"YAWARA","belt":"white","div":"白 アダルト ライト","s":[{"t":"9:30","v":570,"m":"9","r":"1回戦","date":"5 Sep","f":"1"},{"t":"10:00","v":600,"m":"9","r":"2回戦","date":"5 Sep","f":"6"},{"t":"10:36","v":636,"m":"9","r":"準々決勝","date":"5 Sep","f":"12"},{"t":"11:00","v":660,"m":"9","r":"準決勝","date":"5 Sep","f":"16","alt":"11:06"},{"t":"11:25","v":685,"m":"9","r":"決勝","date":"5 Sep","f":"20"}],"adv":0,"champ":false,"out":false},{"d":5,"n":"磯﨑　鈴矢","en":"Isozaki Reiya","team":"YAWARA","belt":"white","div":"白 アダルト L-フェザー","s":[{"t":"9:48","v":588,"m":"11","r":"1回戦","date":"5 Sep","f":"4"},{"t":"10:36","v":636,"m":"11","r":"2回戦","date":"5 Sep","f":"12"},{"t":"10:42","v":642,"m":"11","r":"準々決勝","date":"5 Sep","f":"13"},{"t":"11:00","v":660,"m":"11","r":"準決勝","date":"5 Sep","f":"16","alt":"11:06"},{"t":"11:30","v":690,"m":"11","r":"決勝","date":"5 Sep","f":"21"}],"adv":0,"champ":false,"out":false},{"d":5,"n":"江頭　駿","en":"Egashira Shun","team":"YAWARA","belt":"white","div":"白 アダルト ライト","s":[{"t":"9:54","v":594,"m":"9","r":"1回戦","date":"5 Sep","f":"5"},{"t":"10:18","v":618,"m":"9","r":"2回戦","date":"5 Sep","f":"9"},{"t":"10:42","v":642,"m":"9","r":"準々決勝","date":"5 Sep","f":"13"},{"t":"11:00","v":660,"m":"9","r":"準決勝","date":"5 Sep","f":"16","alt":"11:06"},{"t":"11:25","v":685,"m":"9","r":"決勝","date":"5 Sep","f":"20"}],"adv":0,"champ":false,"out":false},{"d":5,"n":"立石　修也","en":"Tateishi Shuya","team":"YAWARA","belt":"white","div":"紫 アダルト フェザー","s":[{"t":"10:02","v":602,"m":"13","r":"準々決勝","date":"5 Sep","f":"5"},{"t":"10:18","v":618,"m":"13","r":"準決勝","date":"5 Sep","f":"7"},{"t":"10:58","v":658,"m":"13","r":"決勝","date":"5 Sep","f":"12"}],"adv":0,"champ":false,"out":false},{"d":5,"n":"今田　黎玖","en":"Konta Riku","team":"YAWARA","belt":"white","div":"白 アダルト ライト","s":[{"t":"10:12","v":612,"m":"10","r":"1回戦","date":"5 Sep","f":"8"},{"t":"10:42","v":642,"m":"10","r":"準々決勝","date":"5 Sep","f":"13"},{"t":"11:00","v":660,"m":"9","r":"準決勝","date":"5 Sep","f":"16","alt":"11:06"},{"t":"11:25","v":685,"m":"9","r":"決勝","date":"5 Sep","f":"20"}],"adv":0,"champ":false,"out":false},{"d":5,"n":"濱田　しいな","en":"Hamada Shiina","team":"YAWARA","belt":"white","div":"女子 青 アダルト ルースター","s":[{"t":"11:18","v":678,"m":"9","r":"準々決勝","date":"5 Sep","f":"19"},{"t":"12:09","v":729,"m":"9","r":"準決勝","date":"5 Sep","f":"29"},{"t":"12:47","v":767,"m":"9","r":"決勝","date":"5 Sep","f":"37"}],"adv":0,"champ":false,"out":false},{"d":5,"n":"立石　修也","en":"Tateishi Shuya","team":"YAWARA","belt":"white","div":"紫 アダルト オープン","s":[{"t":"14:26","v":866,"m":"14","r":"1回戦","date":"5 Sep","f":"49"},{"t":"15:06","v":906,"m":"14","r":"2回戦","date":"5 Sep","f":"54"},{"t":"15:36","v":936,"m":"14","r":"準々決勝","date":"5 Sep","f":"58"},{"t":"16:10","v":970,"m":"13","r":"準決勝","date":"5 Sep","f":"67","alt":"16:18"},{"t":"16:47","v":1007,"m":"13","r":"決勝","date":"5 Sep","f":"72"}],"adv":0,"champ":false,"out":false},{"d":5,"n":"今田　黎玖","en":"Konta Riku","team":"YAWARA","belt":"white","div":"白 アダルト オープン","s":[{"t":"14:36","v":876,"m":"9","r":"1回戦","date":"5 Sep","f":"57"},{"t":"15:18","v":918,"m":"9","r":"2回戦","date":"5 Sep","f":"64"},{"t":"15:56","v":956,"m":"9","r":"準々決勝","date":"5 Sep","f":"70"},{"t":"16:29","v":989,"m":"10","r":"準決勝","date":"5 Sep","f":"73","alt":"16:35"},{"t":"17:04","v":1024,"m":"10","r":"決勝","date":"5 Sep","f":"78"}],"adv":0,"champ":false,"out":false},{"d":5,"n":"横手　謙太朗","en":"Yokote Kentaro","team":"YAWARA","belt":"white","div":"白 アダルト オープン","s":[{"t":"14:53","v":893,"m":"10","r":"1回戦","date":"5 Sep","f":"58"},{"t":"15:29","v":929,"m":"10","r":"2回戦","date":"5 Sep","f":"64"},{"t":"15:56","v":956,"m":"10","r":"準々決勝","date":"5 Sep","f":"68"},{"t":"16:29","v":989,"m":"10","r":"準決勝","date":"5 Sep","f":"73","alt":"16:35"},{"t":"17:04","v":1024,"m":"10","r":"決勝","date":"5 Sep","f":"78"}],"adv":0,"champ":false,"out":false},{"d":5,"n":"栗並　琴子","en":"Kurinami Kotoko","team":"YAWARA","belt":"white","div":"女子 白 アダルト ルースター","s":[{"t":"14:59","v":899,"m":"2","r":"決勝","date":"5 Sep","f":"61"}],"adv":0,"champ":false,"out":false}];
+const DAYS=[...new Set(D.map(r=>r.d))].sort((a,b)=>a-b);
+const DOW={3:'木',4:'金',5:'土',6:'日'};
+let day=DAYS[0], view='t';
+document.getElementById('days').innerHTML=DAYS.map(d=>
+  '<button data-day="'+d+'">9/'+d+' '+(DOW[d]||'')+'</button>').join('');
+document.querySelectorAll('#days button').forEach(b=>b.onclick=()=>{day=+b.dataset.day;render();});
+const out=document.getElementById('out');
+const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+function nowFor(d){const n=new Date();
+  if(n.getFullYear()!==2026||n.getMonth()!==8||n.getDate()!==d)return null;
+  return n.getHours()*60+n.getMinutes();}
+function tag(m,r,last,alt,won,f){
+  return '<span class="tag mat">MAT '+m+'</span>'
+    +(f?'<span class="tag fn">'+f+'試合目</span>':'')
+    +'<span class="tag rd'+(won?' w':(last?' f':''))+'">'+r+(won?' 通過':'')+'</span>'
+    +(alt?'<span class="alt">or '+alt+'</span>':'');}
+function timeView(){
+  const ev=[];
+  D.filter(r=>r.d===day).forEach(function(r){r.s.forEach(function(p,i){
+    if(r.out&&i>r.adv)return;
+    ev.push({v:p.v,t:p.t,alt:p.alt,r:p.r,m:p.m,f:p.f,n:r.n,dv:r.div,belt:r.belt,team:r.team,ph:r.ph,
+             last:i===r.s.length-1,won:i<r.adv,lost:r.out&&i===r.adv,wd:r.wd});});});
+  ev.sort((a,b)=>a.v-b.v||a.m.localeCompare(b.m));
+  let h='',prev=null;
+  ev.forEach(function(e){
+    if(prev!==null&&e.v-prev>=45)h+='<div class="gap"><span></span><span>空き '+(e.v-prev)+'分</span></div>';
+    prev=e.v;
+    const done=e.won||e.lost;
+    h+='<div class="slot'+(done?' past':'')+'">'
+      +'<div class="gut"><span class="mt">MAT '+e.m+'</span>'
+      +(e.f?'<span class="fno">'+e.f+'<i>試合目</i></span>':'')+'</div>'
+      +'<div class="stack"><div class="m"><span class="belt b-'+e.belt+'"></span>'
+      +(e.ph!==undefined?'<span class="av ph'+e.ph+'"></span>':'')
+      +'<span class="txt"><span class="nm">'+esc(e.n)+'</span>'
+      +(e.team==='SWEEP'?'<span class="tag tm-s">SWEEP</span>':'')
+      +'<span class="tag rd'+(e.lost?' l':(e.won?' w':(e.last?' f':'')))+'">'+e.r+(e.won?' 通過':'')+(e.lost?(e.wd?' 棄権':' 敗退'):'')+'</span>'
+      +'<span class="clk">'+e.t+'頃'+(e.alt?' / '+e.alt+'頃':'')+'</span>'
+      +'<span class="dv">'+esc(e.dv)+'</span></span></div></div></div>';
+  });
+  return h;
+}
+function personView(){
+  let h='<div class="cards">';
+  D.filter(r=>r.d===day).forEach(r=>{
+    h+='<div class="card'+(r.out?' out':'')+'"><div class="m"><span class="belt b-'+r.belt+'"></span>'+
+      (r.ph!==undefined?'<span class="av big ph'+r.ph+'"></span>':'')+
+      '<span class="txt"><span class="nm">'+esc(r.n)+'</span>'+
+      (r.team==='SWEEP'?'<span class="tag tm-s">SWEEP</span>':'')+
+      (r.champ?'<span class="tag rd w">優勝</span>':'')+(r.out?'<span class="tag rd l">'+(r.wd?'棄権':'敗退')+'</span>':'')+
+      '<span class="tag mat">MAT '+r.s[0].m+'</span><span class="dv">'+esc(r.div)+'</span></span></div><div class="chain">';
+    r.s.forEach((p,i)=>{const won=i<r.adv, lost=r.out&&i===r.adv, gone=r.out&&i>r.adv;
+      h+='<div class="step'+(lost?' l':(won?' w':(gone?' x':(i===r.s.length-1?' f':''))))+'"><b>'+(p.f?p.f+'試合目':p.t)+'</b><span>'+p.r+' · M'+p.m+' · '+p.t+'頃'+(won?' 通過':'')+(lost?(r.wd?' 棄権':' 敗退'):'')+'</span></div>';});
+    h+='</div></div>';});
+  return h+'</div>';
+}
+function podium(){
+  const win=D.filter(r=>r.champ);
+  const el=document.getElementById('podium');
+  if(!win.length){el.innerHTML='';return;}
+  let h='<div class="podium"><h3>優勝</h3>';
+  const row=(r,m)=>'<div class="pod"><span class="medal">'+m+'</span>'
+    +(r.ph!==undefined?'<span class="av ph'+r.ph+'"></span>':'')
+    +'<span class="pod-in"><span class="who">'+esc(r.n)+'</span>'
+    +(r.team==='SWEEP'?'<span class="tag tm-s">SWEEP</span>':'')
+    +'<span class="day">'+(r.d===15?'8/15':'8/16')+'</span>'
+    +'<span class="cat">'+esc(r.div)+'</span></span></div>';
+  win.forEach(r=>h+=row(r,'🏆'));
+  el.innerHTML=h+'</div>';
+}
+function render(){
+  podium();
+  out.innerHTML='<h2>9月'+day+'日 '+(DOW[day]||'')+'</h2>'+
+    (view==='t'?timeView():personView());
+  document.querySelectorAll('#days button').forEach(b=>b.setAttribute('aria-pressed', +b.dataset.day===day));
+  vt.setAttribute('aria-pressed',view==='t');vp.setAttribute('aria-pressed',view==='p');
+}
+vt.onclick=()=>{view='t';render();};
+vp.onclick=()=>{view='p';render();};
+const nd=new Date();
+if(nd.getFullYear()===2026&&nd.getMonth()===8&&DAYS.includes(nd.getDate()))day=nd.getDate();
+render();
+let pulling=false;
+async function pull(){
+  if(pulling)return; pulling=true;
+  try{
+    const res=await fetch(location.href,{cache:'no-store'});
+    if(res.ok){
+      const txt=await res.text();
+      const dm=txt.match(/let D=(\[[\s\S]*?\]);/);
+      const sm=txt.match(/最終更新 ([\d\/: ]+)/);
+      if(dm){
+        const nd2=JSON.parse(dm[1]);
+        if(JSON.stringify(nd2)!==JSON.stringify(D)){D=nd2;render();}
+      }
+      if(sm){const el=document.getElementById('st');
+        if(el)el.textContent='最終更新 '+sm[1].trim()+'（自動取得）';}
+    }
+  }catch(e){}
+  pulling=false;
+}
+setInterval(pull,180000);
+document.addEventListener('visibilitychange',function(){if(!document.hidden)pull();});
 
-<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+</script>
 
-<main>
-  <div class="wrap">
-    <div class="status">
-      <h2>ただいま準備中です</h2>
-      <p>主催者からの出場者リストとトーナメント表が、まだ公開されていません。前回大会では<b>開催の2日前</b>に公開されました。</p>
-      <p>公開され次第、選手ごとの<b>マット番号・試合番号・開始時刻</b>を掲載します。大会中は勝敗も自動で反映されます。</p>
-      <ul class="steps">
-        <li>出場者リストとトーナメント表の公開を待っています</li>
-        <li>公開されたら、このページに全選手の予定が並びます</li>
-        <li>大会中は勝ち上がりが緑、敗退がグレーで表示されます</li>
-      </ul>
-    </div>
-  </div>
-</main>
-
-<footer>運営 <b>BUTTI ON LINE</b> ｜ YAWARA ACADEMY ／ SWEEP ／ Jiu Fight</footer>
 </html>
