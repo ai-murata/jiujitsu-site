@@ -58,6 +58,8 @@ button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:
 .m{display:flex;align-items:stretch;gap:8px;min-width:0;}
 .txt{display:flex;flex-wrap:wrap;align-items:baseline;gap:3px 7px;min-width:0;flex:1;}
 .nm{font-weight:600;font-size:15px;letter-spacing:-.005em;overflow-wrap:anywhere;}
+.rm{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);letter-spacing:.02em;
+  flex-basis:100%;margin-top:-3px;overflow-wrap:anywhere;}
 .dv{font-size:12px;color:var(--ink-3);flex-basis:100%;margin-top:-2px;overflow-wrap:anywhere;}
 .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;font-weight:600;
   padding:2px 6px;border-radius:3px;white-space:nowrap;}
@@ -113,7 +115,7 @@ footer a{color:var(--yawara);}
   <p class="eyebrow">SJJIF WORLD · 代々木第一体育館</p>
   <h1>SJJIF 世界柔術選手権 2026<br>YAWARA / SWEEP 出場スケジュール</h1>
   <p class="meta"><span>2026年9月3日(木) — 6日(日)</span><span><b>YAWARA</b> 39名 49エントリー</span><span><b>SWEEP</b> 9名 10エントリー</span></p>
-  <p class="stamp" id="st">最終更新 9/1 10:28</p>
+  <p class="stamp" id="st">最終更新 9/1 11:16</p>
 </header>
 <nav>
   <div class="grp" id="days"></div>
@@ -154,7 +156,7 @@ function timeView(){
   const ev=[];
   D.filter(r=>r.d===day).forEach(function(r){r.s.forEach(function(p,i){
     if(r.out&&i>r.adv)return;
-    ev.push({v:p.v,t:p.t,alt:p.alt,r:p.r,m:p.m,f:p.f,n:r.n,dv:r.div,belt:r.belt,team:r.team,ph:r.ph,
+    ev.push({v:p.v,t:p.t,alt:p.alt,r:p.r,m:p.m,f:p.f,n:r.n,en:r.en,dv:r.div,belt:r.belt,team:r.team,ph:r.ph,
              last:i===r.s.length-1,won:i<r.adv,lost:r.out&&i===r.adv,wd:r.wd});});});
   ev.sort((a,b)=>a.v-b.v||a.m.localeCompare(b.m));
   let h='',prev=null;
@@ -171,6 +173,7 @@ function timeView(){
       +(e.team==='SWEEP'?'<span class="tag tm-s">SWEEP</span>':'')
       +'<span class="tag rd'+(e.lost?' l':(e.won?' w':(e.last?' f':'')))+'">'+e.r+(e.won?' 通過':'')+(e.lost?(e.wd?' 棄権':' 敗退'):'')+'</span>'
       +'<span class="clk">'+e.t+'頃'+(e.alt?' / '+e.alt+'頃':'')+'</span>'
+      +(e.en?'<span class="rm">'+esc(e.en)+'</span>':'')
       +'<span class="dv">'+esc(e.dv)+'</span></span></div></div></div>';
   });
   return h;
@@ -183,7 +186,9 @@ function personView(){
       '<span class="txt"><span class="nm">'+esc(r.n)+'</span>'+
       (r.team==='SWEEP'?'<span class="tag tm-s">SWEEP</span>':'')+
       (r.champ?'<span class="tag rd w">優勝</span>':'')+(r.out?'<span class="tag rd l">'+(r.wd?'棄権':'敗退')+'</span>':'')+
-      '<span class="tag mat">MAT '+r.s[0].m+'</span><span class="dv">'+esc(r.div)+'</span></span></div><div class="chain">';
+      '<span class="tag mat">MAT '+r.s[0].m+'</span>'
+      +(r.en?'<span class="rm">'+esc(r.en)+'</span>':'')
+      +'<span class="dv">'+esc(r.div)+'</span></span></div><div class="chain">';
     r.s.forEach((p,i)=>{const won=i<r.adv, lost=r.out&&i===r.adv, gone=r.out&&i>r.adv;
       h+='<div class="step'+(lost?' l':(won?' w':(gone?' x':(i===r.s.length-1?' f':''))))+'"><b>'+(p.f?p.f+'試合目':p.t)+'</b><span>'+p.r+' · M'+p.m+' · '+p.t+'頃'+(won?' 通過':'')+(lost?(r.wd?' 棄権':' 敗退'):'')+'</span></div>';});
     h+='</div></div>';});
@@ -199,7 +204,7 @@ function podium(){
     +'<span class="pod-in"><span class="who">'+esc(r.n)+'</span>'
     +(r.team==='SWEEP'?'<span class="tag tm-s">SWEEP</span>':'')
     +'<span class="day">'+(r.d===15?'8/15':'8/16')+'</span>'
-    +'<span class="cat">'+esc(r.div)+'</span></span></div>';
+    +'<span class="cat">'+(r.en?esc(r.en)+'　':'')+esc(r.div)+'</span></span></div>';
   win.forEach(r=>h+=row(r,'🏆'));
   el.innerHTML=h+'</div>';
 }
