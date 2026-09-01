@@ -35,6 +35,9 @@
 
   main { padding: 64px 0 80px; }
   .works { display: grid; gap: 20px; }
+  .cat-label { font-family: var(--mincho); font-size: 15px; letter-spacing: .34em; color: var(--gold); font-weight: 700; margin: 28px 0 0; display: flex; align-items: center; gap: 16px; }
+  .cat-label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .cat-label:first-child { margin-top: 0; }
   a.card { display: grid; grid-template-columns: 250px 1fr; gap: 28px; align-items: center; background: var(--panel); border: 1px solid var(--line); padding: 24px; text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
   a.card:hover { border-color: var(--gold); transform: translateY(-2px); }
   a.card:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
@@ -95,20 +98,12 @@
   <div class="wrap">
     <div class="works rise d3">
 
-      <a class="card" href="/shift/">
-        <img class="thumb" src="/img/shift.jpg" alt="月次シフト表の画面。タイムラインにスタッフの出勤バーとクラス枠が並ぶ">
-        <span>
-          <p class="eyebrow">01 ・ SHIFT</p>
-          <h2>月次シフト表<span class="arrow">→</span></h2>
-          <p>2店舗のジムのシフトを、スマホで見やすいタイムラインに。日別・人別の切り替え、スタッフごとの色分け、直前の変更箇所のハイライトつき。毎月Excelから自動生成しています。</p>
-          <span class="note">展示用サンプル・スタッフ名は仮名です</span>
-        </span>
-      </a>
+      <p class="cat-label">柔術</p>
 
       <a class="card" href="/tournament/">
         <img class="thumb" src="/img/taikai.jpg" alt="大会出場スケジュールの画面。選手ごとの試合番号・マット・結果の一覧">
         <span>
-          <p class="eyebrow">02 ・ TOURNAMENT</p>
+          <p class="eyebrow">01 ・ TOURNAMENT</p>
           <h2>大会出場スケジュール<span class="arrow">→</span></h2>
           <p>所属ジムの選手が出場する大会の試合番号・マット・開始時刻・結果を1ページで共有。応援に行く仲間が「誰がいつどのマットか」を迷わないために作りました。過去の大会も一覧から辿れます。</p>
         </span>
@@ -117,7 +112,7 @@
       <a class="card" href="/hajimete/">
         <img class="thumb" src="/img/hajimete.jpg" alt="はじめての柔術大会ガイドの画面。大会の流れのタイムライン">
         <span>
-          <p class="eyebrow">03 ・ HAJIMETE</p>
+          <p class="eyebrow">02 ・ HAJIMETE</p>
           <h2>はじめての大会ガイド<span class="arrow">→</span></h2>
           <p>初出場のメンバーに毎回伝えてきたノウハウを1ページに。エントリーから前日の過ごし方、当日の計量、試合のマナーまで。「体重は着"込み"」みたいな、経験者しか知らない話が詰まっています。</p>
         </span>
@@ -126,10 +121,22 @@
       <a class="card" href="/dojo/">
         <img class="thumb" src="/img/dojo.jpg" alt="全国柔術道場ガイドの画面。日本地図と道場の検索フィルター">
         <span>
-          <p class="eyebrow">04 ・ DOJO</p>
+          <p class="eyebrow">03 ・ DOJO</p>
           <h2>全国柔術道場ガイド<span class="arrow">→</span></h2>
           <p>日本全国548の柔術道場を、地図と検索で探せるデータベース。連盟の公開情報と大会エントリー実績から収集し、クラススケジュールや出稽古の可否までまとめました。</p>
           <span class="note">作成途中（データ収集中）</span>
+        </span>
+      </a>
+
+      <p class="cat-label">道場のしごと</p>
+
+      <a class="card" href="/shift/">
+        <img class="thumb" src="/img/shift.jpg" alt="月次シフト表の画面。タイムラインにスタッフの出勤バーとクラス枠が並ぶ">
+        <span>
+          <p class="eyebrow">04 ・ SHIFT</p>
+          <h2>月次シフト表<span class="arrow">→</span></h2>
+          <p>2店舗のジムのシフトを、スマホで見やすいタイムラインに。日別・人別の切り替え、スタッフごとの色分け、直前の変更箇所のハイライトつき。毎月Excelから自動生成しています。</p>
+          <span class="note">展示用サンプル・スタッフ名は仮名です</span>
         </span>
       </a>
 
