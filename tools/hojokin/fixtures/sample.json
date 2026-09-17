@@ -1,0 +1,119 @@
+{
+  "metadata": {"type": "fixture", "note": "jGrants APIの応答を模した固定データ。ネットワークなしでの検証用。"},
+  "result": [
+    {
+      "id": "fx-jizokuka-001",
+      "title": "小規模事業者持続化補助金（一般型）",
+      "name": "全国商工会連合会",
+      "subsidy_catch_phrase": "販路開拓の取組を支援します",
+      "subsidy_max_limit": "500000",
+      "acceptance_start_datetime": "2099-01-06T00:00:00+09:00",
+      "acceptance_end_datetime": "2099-12-26T17:00:00+09:00",
+      "target_area_search": "全国",
+      "target_number_of_employees": "5名以下 / 20名以下",
+      "use_purpose": "販路拡大・海外展開をしたい / 新たな事業を行いたい",
+      "industry": "生活関連サービス業、娯楽業 / 教育、学習支援業"
+    },
+    {
+      "id": "fx-tokyo-002",
+      "title": "東京都 中小企業デジタルツール導入促進支援事業",
+      "name": "東京都中小企業振興公社",
+      "subsidy_catch_phrase": "IT導入による生産性向上を後押し",
+      "subsidy_max_limit": "1000000",
+      "acceptance_end_datetime": "2099-11-30T17:00:00+09:00",
+      "target_area_search": "東京都",
+      "target_number_of_employees": "300名以下",
+      "use_purpose": "設備整備・IT導入をしたい",
+      "industry": "サービス業（他に分類されないもの）"
+    },
+    {
+      "id": "fx-osaka-003",
+      "title": "大阪府 空き店舗活用にぎわい創出補助金",
+      "name": "大阪府",
+      "subsidy_catch_phrase": "商店街の空き店舗への出店を支援",
+      "subsidy_max_limit": "3000000",
+      "acceptance_end_datetime": "2099-10-31T17:00:00+09:00",
+      "target_area_search": "大阪府",
+      "target_number_of_employees": "20名以下",
+      "use_purpose": "まちづくり・地域振興支援がほしい / 新たな事業を行いたい",
+      "industry": "サービス業（他に分類されないもの）"
+    },
+    {
+      "id": "fx-kansai-004",
+      "title": "近畿地方 スポーツ施設省エネ設備更新支援",
+      "name": "近畿経済産業局",
+      "subsidy_max_limit": "8000000",
+      "acceptance_end_datetime": "2099-09-30T17:00:00+09:00",
+      "target_area_search": "近畿地方",
+      "target_number_of_employees": "100名以下",
+      "use_purpose": "エコ・SDGs活動支援がほしい / 設備整備・IT導入をしたい",
+      "industry": "生活関連サービス業、娯楽業"
+    },
+    {
+      "id": "fx-sports-005",
+      "title": "地域スポーツ活動推進助成（子ども向け教室）",
+      "name": "公益財団法人 東京都スポーツ文化事業団",
+      "subsidy_catch_phrase": "地域の健康づくり・運動教室を支援",
+      "subsidy_max_limit": "2000000",
+      "acceptance_end_datetime": "2099-07-31T17:00:00+09:00",
+      "target_area_search": "東京都 / 関東・甲信越地方",
+      "target_number_of_employees": "20名以下",
+      "use_purpose": "スポーツ・文化支援がほしい / まちづくり・地域振興支援がほしい",
+      "industry": "生活関連サービス業、娯楽業"
+    },
+    {
+      "id": "fx-hokkaido-006",
+      "title": "北海道 人材確保・職場環境改善支援事業",
+      "name": "北海道",
+      "subsidy_max_limit": "1500000",
+      "acceptance_end_datetime": "2099-08-20T17:00:00+09:00",
+      "target_area_search": "北海道",
+      "target_number_of_employees": "50名以下",
+      "use_purpose": "雇用・職場環境を改善したい / 人材育成を行いたい",
+      "industry": "サービス業（他に分類されないもの）"
+    },
+    {
+      "id": "fx-nogyo-007",
+      "title": "強い農業づくり総合支援交付金",
+      "name": "農林水産省",
+      "subsidy_max_limit": "50000000",
+      "acceptance_end_datetime": "2099-09-30T17:00:00+09:00",
+      "target_area_search": "全国",
+      "target_number_of_employees": "従業員数の制約なし",
+      "use_purpose": "設備整備・IT導入をしたい",
+      "industry": "農業、林業"
+    },
+    {
+      "id": "fx-large-008",
+      "title": "大規模事業者向け脱炭素投資促進事業",
+      "name": "経済産業省",
+      "subsidy_max_limit": "1500000000",
+      "acceptance_end_datetime": "2099-08-31T17:00:00+09:00",
+      "target_area_search": "全国",
+      "target_number_of_employees": "901名以上",
+      "use_purpose": "エコ・SDGs活動支援がほしい",
+      "industry": "製造業"
+    },
+    {
+      "id": "fx-closed-009",
+      "title": "令和5年度 終了済み補助金",
+      "name": "某省庁",
+      "subsidy_max_limit": "1000000",
+      "acceptance_end_datetime": "2020-03-31T17:00:00+09:00",
+      "target_area_search": "全国",
+      "target_number_of_employees": "従業員数の制約なし",
+      "use_purpose": "新たな事業を行いたい",
+      "industry": "サービス業（他に分類されないもの）"
+    },
+    {
+      "id": "fx-noarea-010",
+      "title": "事業承継・引継ぎ補助金",
+      "name": "中小企業庁",
+      "subsidy_max_limit": "6000000",
+      "acceptance_end_datetime": "2099-06-30T17:00:00+09:00",
+      "target_number_of_employees": "従業員数の制約なし",
+      "use_purpose": "事業を引き継ぎたい",
+      "industry": "サービス業（他に分類されないもの）"
+    }
+  ]
+}
