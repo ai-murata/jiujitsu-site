@@ -67,6 +67,57 @@ def fetch_keyword(keyword, timeout=30, retries=3):
     raise RuntimeError(f"jGrants API 取得失敗 (keyword={keyword}): {last_error}")
 
 
+def fetch_detail(subsidy_id, timeout=30, retries=2):
+    """詳細API。一覧APIは利用目的・業種・申請URLを返さないので、ここで補う。
+
+    仕様: GET /subsidies/id/{id}
+    https://developers.digital.go.jp/documents/jgrants/api/
+    """
+    url = f"{API_BASE}/subsidies/id/{urllib.parse.quote(subsidy_id)}"
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                payload = json.loads(resp.read().decode("utf-8"))
+        except (urllib.error.URLError, urllib.error.HTTPError, ValueError, TimeoutError):
+            if attempt < retries - 1:
+                time.sleep(1)
+            continue
+        result = payload.get("result", payload)
+        if isinstance(result, list):
+            return result[0] if result else None
+        return result if isinstance(result, dict) else None
+    return None
+
+
+# 詳細APIから引き継ぐ項目。欠けていても止めない（一覧側の値を残す）。
+DETAIL_FIELDS = (
+    "use_purpose", "industry", "target_number_of_employees", "target_area_search",
+    "subsidy_catch_phrase", "subsidy_max_limit", "institution_name",
+    "front_subsidy_detail_page_url",
+)
+
+
+def enrich(items, config, fetcher=fetch_detail):
+    """一覧の各件に詳細APIの内容をかぶせる。取れなかった件はそのまま通す。"""
+    interval = config.get("detail_interval_seconds", 0.25)
+    enriched = 0
+    for i, item in enumerate(items):
+        if not item.get("id"):
+            continue
+        if i:
+            time.sleep(interval)
+        detail = fetcher(item["id"])
+        if not detail:
+            continue
+        enriched += 1
+        for key in DETAIL_FIELDS:
+            value = detail.get(key)
+            if value not in (None, "", []):
+                item[key] = value
+    return enriched
+
+
 def collect(config, fetcher=fetch_keyword):
     """全キーワードを引いて id で名寄せする。1語こけても全体は止めない。"""
     merged, errors = {}, []
@@ -99,6 +150,15 @@ def parse_dt(value):
             continue
         return dt if dt.tzinfo else dt.replace(tzinfo=JST)
     return None
+
+
+def industry_values(item):
+    """業種。一覧APIは返さないので、詳細APIで補ってから読む。
+
+    多くの補助金が20業種すべてを並べてくるため、一致しても「誰でも対象」以上の
+    意味はない。除外には使わず、加点と「使いどころ」の必要条件としてだけ使う。
+    """
+    return values(item, "industry")
 
 
 def values(item, key):
@@ -152,12 +212,70 @@ def score_item(item, config):
     """道場・ジムにとっての近さ。ページの「おすすめ順」に使う。"""
     score = 0
     score += 12 * len(set(values(item, "use_purpose")) & set(config["preferred_use_purposes"]))
-    score += 15 * len(set(values(item, "industry")) & set(config["preferred_industries"]))
+    score += 15 * len(set(industry_values(item)) & set(config["preferred_industries"]))
     haystack = f"{item.get('title') or ''} {item.get('subsidy_catch_phrase') or ''}"
     score += 6 * len([w for w in config["title_bonus_keywords"] if w in haystack])
     if any(v in ("5名以下", "20名以下") for v in values(item, "target_number_of_employees")):
         score += 10
     return score
+
+
+ORG_CODE = re.compile(r"^[A-Z]-?\d+$")
+
+
+def program_alias(item):
+    """制度の通称。
+
+    このAPIは実施機関名を返さない。`name` は内部コード（S-00007152）で、
+    `institution_name` は機関名ではなく制度名（「ものづくり補助金」など）だった。
+    タイトルに含まれていれば情報が増えないので出さない。
+    """
+    alias = (item.get("institution_name") or "").strip()
+    title = item.get("title") or ""
+    if not alias or ORG_CODE.match(alias) or alias in title:
+        return ""
+    if len(alias) >= len(title):
+        return ""  # 通称が本題より長いのは、別制度の名前が紛れ込んでいる（実データにあり）
+    return alias
+
+
+def portal_url(item, config):
+    """詳細ページURL。詳細APIが返す正のURLを使い、無いときだけ組み立てる。"""
+    url = (item.get("front_subsidy_detail_page_url") or "").strip()
+    return url if url.startswith("http") else config["portal_url_template"].format(id=item.get("id"))
+
+
+def use_hints(item, config, purposes):
+    """道場から見た「使いどころ」。書けないときは黙る。
+
+    jGrants の利用目的は「設備整備・IT導入をしたい」が全体の7割に付くような粗い区分で、
+    これを頼りに書くと石油精製の補助金に「2店舗目の出店に」と添えてしまう（実データで確認）。
+    そこで次の2つを満たしたときだけ書く:
+
+    1. 道場の業種が対象業種に入っていること
+    2. タイトルかキャッチに具体的な語（持続化・空き店舗・創業など）が出ていること
+
+    「設備」「省エネ」のような汎用語は、天然ガス設備やZEBの補助金にも当たるため使わない。
+    利用目的は、1と2を満たした案件の補足としてのみ添える。
+    """
+    if not set(industry_values(item)) & set(config["preferred_industries"]):
+        return []
+    haystack = f"{item.get('title') or ''} {item.get('subsidy_catch_phrase') or ''}"
+    hints = []
+    for word, hint in config.get("title_hints", []):
+        if word in haystack and hint not in hints:
+            hints.append(hint)
+    if not hints:
+        return []
+    for purpose in purposes:
+        hint = config.get("purpose_hints", {}).get(purpose)
+        if hint and hint not in hints:
+            hints.append(hint)
+    small = config.get("small_business_hint")
+    if small and small not in hints and any(
+            v in ("5名以下", "20名以下") for v in values(item, "target_number_of_employees")):
+        hints.append(small)
+    return hints[:3]
 
 
 def to_records(items, config, now):
@@ -176,10 +294,11 @@ def to_records(items, config, now):
             continue
         areas = values(item, "target_area_search")
         prefs, nationwide = expand_areas(areas)
+        purposes = values(item, "use_purpose")
         records.append({
             "id": item.get("id") or "",
             "title": item.get("title") or "（名称不明）",
-            "org": item.get("name") or "",
+            "alias": program_alias(item),
             "catch": item.get("subsidy_catch_phrase") or "",
             "max": item.get("subsidy_max_limit"),
             "start": (parse_dt(item.get("acceptance_start_datetime")) or now).astimezone(JST).strftime("%Y-%m-%d")
@@ -190,10 +309,11 @@ def to_records(items, config, now):
             "prefs": prefs,
             "nationwide": nationwide,
             "emp": values(item, "target_number_of_employees"),
-            "purpose": values(item, "use_purpose"),
-            "industry": values(item, "industry"),
+            "purpose": purposes,
+            "industry": industry_values(item),
             "score": score_item(item, config),
-            "url": config["portal_url_template"].format(id=item.get("id")),
+            "hints": use_hints(item, config, purposes),
+            "url": portal_url(item, config),
         })
     records.sort(key=lambda r: (r["days"] if r["days"] is not None else 10**6, -r["score"]))
     return records, dropped
@@ -297,6 +417,10 @@ TEMPLATE = """<!DOCTYPE html>
   .facts {{ display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 12.5px; margin: 0 0 10px; padding: 0; list-style: none; }}
   .facts b {{ font-family: var(--mincho); color: var(--ink); font-weight: 700; margin-right: 6px; letter-spacing: .04em; }}
   .deadline.urgent {{ color: var(--urgent); font-weight: 700; }}
+  .hints {{ background: rgba(201,162,39,.07); border-left: 2px solid var(--gold-hi); margin: 0 0 12px; padding: 10px 14px; list-style: none; }}
+  .hints li {{ font-size: 12.5px; line-height: 1.75; color: var(--ink); }}
+  .hints li + li {{ margin-top: 2px; }}
+  .hints-label {{ display: block; font-family: var(--mincho); font-size: 10.5px; letter-spacing: .18em; color: var(--gold); margin-bottom: 3px; }}
   .tags {{ display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; }}
   .tag {{ font-size: 10.5px; letter-spacing: .06em; color: var(--gold); border: 1px solid rgba(163,128,26,.35); border-radius: 999px; padding: 2px 10px; }}
   .empty {{ background: var(--panel); border: 1px solid var(--line); padding: 40px 24px; text-align: center; font-size: 13.5px; }}
@@ -343,6 +467,7 @@ TEMPLATE = """<!DOCTYPE html>
       </select>
     </div>
     <label class="check"><input type="checkbox" id="urgentOnly">締切間近のみ</label>
+    <label class="check"><input type="checkbox" id="dojoOnly">道場向きのみ</label>
   </div>
 
   <p class="count" id="count"></p>
@@ -365,6 +490,7 @@ const prefEl = document.getElementById('pref');
 const qEl = document.getElementById('q');
 const sortEl = document.getElementById('sort');
 const urgentEl = document.getElementById('urgentOnly');
+const dojoEl = document.getElementById('dojoOnly');
 
 function yen(v) {{
   const n = Number(v);
@@ -384,9 +510,10 @@ function matches(r) {{
   const pref = prefEl.value;
   if (pref && !r.prefs.includes(pref)) return false;
   if (urgentEl.checked && !(r.days !== null && r.days <= URGENT_DAYS)) return false;
+  if (dojoEl.checked && !r.hints.length) return false;
   const q = qEl.value.trim();
   if (q) {{
-    const hay = [r.title, r.org, r.catch, r.purpose.join(' '), r.industry.join(' ')].join(' ');
+    const hay = [r.title, r.alias, r.catch, r.purpose.join(' '), r.industry.join(' ')].join(' ');
     if (!hay.toLowerCase().includes(q.toLowerCase())) return false;
   }}
   return true;
@@ -413,8 +540,12 @@ function row(r) {{
   return [
     '<article class="item' + (urgent ? ' is-urgent' : (r.nationwide ? ' is-wide' : '')) + '">',
     '<h2><a href="' + esc(r.url) + '" rel="noopener" target="_blank">' + esc(r.title) + '</a></h2>',
-    r.org ? '<p class="org">' + esc(r.org) + '</p>' : '',
+    r.alias ? '<p class="org">通称: ' + esc(r.alias) + '</p>' : '',
     r.catch ? '<p class="catch">' + esc(r.catch) + '</p>' : '',
+    r.hints.length
+      ? '<ul class="hints"><span class="hints-label">使いどころ</span>'
+        + r.hints.map(h => '<li>' + esc(h) + '</li>').join('') + '</ul>'
+      : '',
     '<ul class="facts">',
     '<li><b>上限</b>' + yen(r.max) + '</li>',
     '<li class="deadline' + (urgent ? ' urgent' : '') + '"><b>締切</b>' + deadline + '</li>',
@@ -433,7 +564,7 @@ function render() {{
     : '<p class="empty">条件に合う補助金が見つかりませんでした。都道府県を「すべて」に戻すか、キーワードを短くしてみてください。</p>';
 }}
 
-[prefEl, qEl, sortEl, urgentEl].forEach(el => {{
+[prefEl, qEl, sortEl, urgentEl, dojoEl].forEach(el => {{
   el.addEventListener('input', render);
   el.addEventListener('change', render);
 }});
@@ -461,11 +592,17 @@ def main(argv=None):
     if args.fixture:
         raw = json.loads(pathlib.Path(args.fixture).read_text(encoding="utf-8"))
         items = raw.get("result", raw) if isinstance(raw, dict) else raw
+        details = raw.get("details") if isinstance(raw, dict) else None
+        if details:
+            enrich(items, dict(config, detail_interval_seconds=0),
+                   fetcher=details.get)
     else:
         items, errors = collect(config)
         if errors and not items:
             print("\n".join(errors), file=sys.stderr)
             return 1
+        enriched = enrich(items, config)
+        print(f"詳細API: {enriched}/{len(items)}件を補完", file=sys.stderr)
 
     records, dropped = to_records(items, config, now)
     page = render_page(records, config, now, errors)
