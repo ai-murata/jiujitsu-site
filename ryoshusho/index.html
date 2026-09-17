@@ -73,16 +73,13 @@
   .steps p + p { margin-top: 6px; color: var(--faint); font-size: 12.5px; }
 
   /* before / after */
-  .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; justify-items: center; background: var(--panel); border: 1px solid var(--line); padding: 26px; }
-  .ba figure { margin: 0; max-width: 300px; width: 100%; }
+  .ba { display: grid; grid-template-columns: 145px 1fr; gap: 28px; align-items: start; background: var(--panel); border: 1px solid var(--line); padding: 26px; }
+  .ba figure { margin: 0; width: 100%; }
   .ba img { width: 100%; height: auto; display: block; border: 1px solid var(--line); background: #fff; }
   .ba figcaption { font-size: 11px; letter-spacing: .14em; color: var(--gold); margin-bottom: 8px; font-weight: 700; }
   .ba figcaption span { display: block; color: var(--faint); font-weight: 400; letter-spacing: .04em; margin-top: 4px; }
   @media (max-width: 660px) { .ba { grid-template-columns: 1fr; } }
   .ba-note { font-size: 12.5px; color: var(--faint); margin: 12px 0 0; }
-  .band { margin-top: 18px; border: 1px solid var(--line); background: var(--paper); padding: 18px 20px 20px; }
-  .band p { font-size: 11px; letter-spacing: .14em; color: var(--gold); font-weight: 700; margin: 0 0 12px; }
-  .band img { width: 100%; height: auto; display: block; }
 
   /* 箇条書き */
   ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
@@ -190,24 +187,20 @@
   <h2>実際の1枚<small>BEFORE / AFTER</small></h2>
   <div class="ba">
     <figure>
-      <figcaption>BEFORE<span>スキャンしただけ</span></figcaption>
-      <img src="/assets/ryoshusho/before.jpg" alt="スキャンしたままの領収書。日付と金額と宛名はあるが、何のための支払いかは書かれていない">
+      <figcaption>BEFORE<span>横倒し・用途が不明</span></figcaption>
+      <img src="/assets/ryoshusho/before.jpg" alt="スキャンしたままの領収証。横倒しのうえ、何のための支払いかは書かれていない">
     </figure>
     <figure>
-      <figcaption>AFTER<span>用途まで1枚で分かる</span></figcaption>
-      <img src="/assets/ryoshusho/after.jpg" alt="下部の白帯に日付・店名・金額・宛名・用途を書き込んだ領収書">
+      <figcaption>AFTER<span>向きが直り、用途まで入る</span></figcaption>
+      <img src="/assets/ryoshusho/after.jpg" alt="向きを直し、下部の白帯に日付・店名・金額・宛名・用途を書き込んだ領収証">
     </figure>
   </div>
-  <div class="band">
-    <p>白帯に書き込んでいる内容<span></span></p>
-    <img src="/assets/ryoshusho/band.jpg" alt="領収書の下に足した白帯の拡大。2026/9/6 株式会社イサミ（富ヶ谷） 11,000円 宛名SJJJF、用途は商品購入（衣類）と書かれている">
-  </div>
-  <p class="ba-note">※ 会食の領収書には、予定表から特定した同席者の氏名もこの白帯に入ります。この公開ページでは、氏名の入らない物品購入の1枚を例にしています。</p>
+  <p class="ba-note">※ この日は予定表に「8/22 練習会」が入っていたので、パンの用途まで書けました。会食の領収書には、予定表から特定した同席者の氏名もこの白帯に入りますが、この公開ページでは氏名の入らない1枚を例にしています。</p>
 
   <h2>ファイル名が、そのまま台帳<small>FILE NAME</small></h2>
   <p class="lead-copy">電子帳簿保存法で求められる検索条件は「取引年月日・取引金額・取引先」の3つ。この3つをファイル名に入れておけば、専用のシステムがなくても、フォルダの検索窓だけで探せます。</p>
   <div class="fname">
-    <b><i>20260906</i><u>取引年月日</u></b><span>_</span><b><i>イサミ</i><u>取引先</u></b><span>_</span><b><i>11000</i><u>取引金額</u></b><span>.jpg</span>
+    <b><i>20260822</i><u>取引年月日</u></b><span>_</span><b><i>パン屋</i><u>取引先</u></b><span>_</span><b><i>2369</i><u>取引金額</u></b><span>.jpg</span>
   </div>
   <ul class="plain" style="margin-top: 26px;">
     <li><b>1枚の領収書＝1つのファイル。</b>まとめて1つのPDFにすると、検索の条件を満たせなくなります。</li>
