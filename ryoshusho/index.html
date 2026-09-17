@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>領収書のデジタル化</title>
+<meta name="description" content="紙の領収書をスキャンして読み取り、カレンダーの予定と突き合わせて「誰と・何のために」まで画像に焼き込む。柔術連盟の経費精算で実際にやっている手順。">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 22px 80px; }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(28px, 6vw, 42px); color: var(--ink); letter-spacing: .14em; line-height: 1.4; margin: 10px 0 14px; }
+  .lede { font-size: 13.5px; color: var(--body-c); margin: 0 auto; max-width: 34em; letter-spacing: .04em; text-wrap: balance; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: .2em; margin: 68px 0 20px; display: flex; align-items: center; gap: 16px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h2 small { font-size: 10.5px; letter-spacing: .22em; color: var(--gold); font-family: var(--gothic); font-weight: 700; }
+  p { margin: 0 0 16px; font-size: 14px; }
+  .lead-copy { max-width: 42em; }
+
+  /* 数字 */
+  .nums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 34px; }
+  .nums div { background: var(--panel); padding: 22px 10px; text-align: center; }
+  .nums b { display: block; font-family: var(--mincho); font-weight: 700; font-size: clamp(26px, 6vw, 38px); color: var(--gold); line-height: 1.2; letter-spacing: .02em; }
+  .nums b i { font-style: normal; font-size: 14px; color: var(--ink); margin-left: 3px; letter-spacing: .06em; }
+  .nums span { display: block; font-size: 11.5px; color: var(--faint); letter-spacing: .08em; margin-top: 6px; line-height: 1.7; }
+
+  /* 手順 */
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; counter-reset: st; }
+  .steps li { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold); padding: 18px 22px; }
+  .steps h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .08em; margin: 0 0 6px; counter-increment: st; }
+  .steps h3::before { content: "0" counter(st); font-family: var(--gothic); font-size: 11px; letter-spacing: .18em; color: var(--gold); margin-right: 14px; vertical-align: 2px; }
+  .steps p { font-size: 13.5px; margin: 0; }
+  .steps p + p { margin-top: 6px; color: var(--faint); font-size: 12.5px; }
+
+  /* before / after */
+  .ba { display: grid; grid-template-columns: 150px 1fr; gap: 28px; align-items: start; background: var(--panel); border: 1px solid var(--line); padding: 26px; }
+  .ba figure { margin: 0; }
+  .ba img { width: 100%; height: auto; display: block; border: 1px solid var(--line); background: #fff; }
+  .ba figcaption { font-size: 11px; letter-spacing: .14em; color: var(--gold); margin-bottom: 8px; font-weight: 700; }
+  .ba figcaption span { display: block; color: var(--faint); font-weight: 400; letter-spacing: .04em; margin-top: 4px; }
+  @media (max-width: 660px) { .ba { grid-template-columns: 1fr; } }
+  .ba-note { font-size: 12.5px; color: var(--faint); margin: 12px 0 0; }
+
+  /* 箇条書き */
+  ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  ul.plain li { font-size: 13.5px; padding-left: 20px; position: relative; }
+  ul.plain li::before { content: ""; position: absolute; left: 0; top: .78em; width: 7px; height: 7px; background: var(--gold); border-radius: 50%; }
+  ul.plain b { color: var(--ink); font-weight: 700; }
+
+  /* ファイル名 */
+  .fname { background: var(--ink); padding: 18px 16px 14px; display: flex; justify-content: center; align-items: flex-end; gap: 2px; flex-wrap: nowrap; overflow-x: auto; }
+  .fname span { font-family: ui-monospace, Menlo, monospace; font-size: clamp(12px, 3.1vw, 17px); color: #e9e2cc; white-space: nowrap; padding-bottom: 19px; }
+  .fname b { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .fname b i { font-style: normal; font-family: ui-monospace, Menlo, monospace; font-weight: 400; font-size: clamp(12px, 3.1vw, 17px); color: var(--gold-hi); white-space: nowrap; }
+  .fname b u { text-decoration: none; font-size: 10px; font-weight: 500; letter-spacing: .1em; color: #9b8f6e; white-space: nowrap; }
+
+  /* 法律との対応 */
+  .rules { border: 1px solid var(--line); border-bottom: none; }
+  .rules div { display: grid; grid-template-columns: 250px 1fr; gap: 24px; padding: 16px 20px; border-bottom: 1px solid var(--line); background: var(--paper); }
+  .rules div:nth-child(odd) { background: var(--panel); }
+  .rules dt { font-size: 13px; color: var(--ink); font-weight: 700; margin: 0; }
+  .rules dt small { display: block; font-size: 11px; color: var(--faint); font-weight: 400; letter-spacing: .04em; margin-top: 2px; }
+  .rules dd { margin: 0; font-size: 13.5px; }
+  @media (max-width: 660px) { .rules div { grid-template-columns: 1fr; gap: 6px; } }
+  .caution { border-left: 3px solid var(--gold); background: var(--panel); padding: 18px 22px; margin-top: 22px; }
+  .caution p { font-size: 13px; margin: 0; }
+  .caution p + p { margin-top: 10px; color: var(--faint); font-size: 12.5px; }
+
+  /* 道具 */
+  .tools { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .tools div { background: var(--panel); padding: 18px 20px; }
+  .tools dt { font-size: 11px; letter-spacing: .16em; color: var(--gold); font-weight: 700; margin: 0 0 4px; }
+  .tools dd { margin: 0; font-size: 13px; color: var(--ink); }
+  .tools dd small { display: block; color: var(--faint); font-size: 12px; font-weight: 400; }
+  @media (max-width: 660px) { .tools { grid-template-columns: 1fr; } }
+
+  .closing { margin-top: 76px; text-align: center; }
+  .closing p.t { font-family: var(--mincho); font-weight: 600; font-size: clamp(17px, 4vw, 21px); color: var(--ink); letter-spacing: .08em; margin: 0; text-wrap: balance; }
+  .closing p.by { font-size: 12px; color: var(--gold); letter-spacing: .14em; margin: 12px 0 0; }
+
+  footer { margin-top: 64px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+
+<header>
+  <p class="brand">RECEIPTS</p>
+  <h1>領収書のデジタル化</h1>
+  <p class="lede">紙の領収書を、「日付・金額・相手・用途」が画像1枚で分かる形にする。<br>柔術連盟（SJJJF）の経費精算で、実際にやっている手順です。</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <h2>困っていたこと<small>PROBLEM</small></h2>
+  <div class="lead-copy">
+    <p>領収書の箱が、ずっと机の横にありました。スキャナに通せば画像にはなります。でもそれだけだと、あとから見返しても「日付」と「金額」しか分かりません。</p>
+    <p>経理で本当に要るのは、その先です。<b>誰と行ったのか。何のための支払いか。</b>半年前の会食の相手を、レシートを見て思い出せる人はいません。</p>
+    <p>その答えは、実は自分のカレンダーに残っています。予定表に「◯◯様 会食」と入っている。<b>領収書とカレンダーを日付で突き合わせれば、相手が分かる。</b>それを手作業ではなく、まとめてやるようにしました。</p>
+  </div>
+
+  <div class="nums">
+    <div><b>122<i>枚</i></b><span>2026年4〜9月分を<br>まとめて処理</span></div>
+    <div><b>2<i>分</i></b><span>1枚あたりの<br>おおよその手間</span></div>
+    <div><b>0<i>件</i></b><span>台帳への<br>手入力</span></div>
+  </div>
+
+  <h2>やっていること<small>FLOW</small></h2>
+  <ol class="steps">
+    <li>
+      <h3>スキャンする</h3>
+      <p>スキャナに束ごと通します。両面・300dpi。裏返しに入っていても、あとから直します。</p>
+      <p>裏面も必ず読みます。用途の手書きメモは、裏に書かれていることが多いからです。</p>
+    </li>
+    <li>
+      <h3>画像を読み取る</h3>
+      <p>1枚ずつ画像を見て、日付・店名・金額・宛名・但し書きを拾います。手書きの走り書きも、レシートの薄い印字も対象です。</p>
+      <p>読み取りはAI（Claude Code）に任せていますが、金額は人の目で必ず確認します。</p>
+    </li>
+    <li>
+      <h3>カレンダーと突き合わせる</h3>
+      <p>領収書の日付で予定表（TimeTree）を引き、その日の予定から同席者と用件を特定します。「会食」で検索して出てこない日は、予定自体が入っていない日と判断します。</p>
+      <p>海外出張中の分は、出張名と人数もここで付けます。</p>
+    </li>
+    <li>
+      <h3>画像に書き込む</h3>
+      <p>領収書の画像の下に白い帯を足して、日付・店名・金額・宛名・同席者・用途を焼き込みます。向きが横倒しのものは、ここで正しい向きに直します。</p>
+      <p>元の画像には手を入れません。別ファイルとして書き出します。</p>
+    </li>
+    <li>
+      <h3>一覧を出す</h3>
+      <p>全枚数を1行ずつCSVにします。日付・取引先・金額・用途・ファイル名。月別フォルダに分けて、そのまま税理士さんに渡せる形にします。</p>
+    </li>
+  </ol>
+
+  <h2>実際の1枚<small>BEFORE / AFTER</small></h2>
+  <div class="ba">
+    <figure>
+      <figcaption>BEFORE<span>横倒し・用途が不明</span></figcaption>
+      <img src="/assets/ryoshusho/before.jpg" alt="スキャンしたままの領収証。横倒しで、何のための支払いか分からない">
+    </figure>
+    <figure>
+      <figcaption>AFTER<span>向きが直り、用途まで入る</span></figcaption>
+      <img src="/assets/ryoshusho/after.jpg" alt="向きを直し、下部の白帯に日付・店名・金額・宛名・用途を書き込んだ領収証">
+    </figure>
+  </div>
+  <p class="ba-note">※ この日は予定表に「8/22 練習会」が入っていたので、おにぎりの用途まで書けました。会食の領収書には同席者の氏名も入りますが、この公開ページでは伏せた例を載せています。</p>
+
+  <h2>ファイル名が、そのまま台帳<small>FILE NAME</small></h2>
+  <p class="lead-copy">電子帳簿保存法で求められる検索条件は「取引年月日・取引金額・取引先」の3つ。この3つをファイル名に入れておけば、専用のシステムがなくても、フォルダの検索窓だけで探せます。</p>
+  <div class="fname">
+    <b><i>20260822</i><u>取引年月日</u></b><span>_</span><b><i>むすび権米衛</i><u>取引先</u></b><span>_</span><b><i>4315</i><u>取引金額</u></b><span>.jpg</span>
+  </div>
+  <ul class="plain" style="margin-top: 26px;">
+    <li><b>1枚の領収書＝1つのファイル。</b>まとめて1つのPDFにすると、検索の条件を満たせなくなります。</li>
+    <li><b>渡すときは月別フォルダ。</b>税理士さんの作業単位（月次）と合うので、そのまま使ってもらえます。</li>
+    <li><b>宛名が空欄でも、あとから書き足さない。</b>気になるところは、下の白帯に注記として書きます。</li>
+  </ul>
+
+  <h2>法律に合わせて決めたこと<small>RULES</small></h2>
+  <p class="lead-copy">紙の領収書をスキャンしてデータで残すときのルールは、電子帳簿保存法（スキャナ保存）で決まっています。左が法律の求めていること、右がそれに合わせて決めた、うちのやり方です。</p>
+  <dl class="rules">
+    <div>
+      <dt>読み取りの品質<small>解像度200dpi以上・カラー</small></dt>
+      <dd>スキャナは300dpi・カラー・両面で固定。設定を毎回いじらないように、この1つだけを使います。</dd>
+    </div>
+    <div>
+      <dt>読み取るまでの期間<small>受け取ってから決めた期限内に</small></dt>
+      <dd>月に1回、処理する日を決めてまとめて通します。ためこむほど、あとで用途を思い出せなくなります。</dd>
+    </div>
+    <div>
+      <dt>検索できること<small>取引年月日・取引金額・取引先の3つ</small></dt>
+      <dd>この3つをファイル名に入れます。専用のシステムがなくても、フォルダの検索窓だけで探せる状態になります。</dd>
+    </div>
+    <div>
+      <dt>あとから書き換えられないこと<small>訂正・削除の履歴が残る形で</small></dt>
+      <dd>スキャンした元の画像には手を入れません。メモを書き込んだものは別ファイルとして書き出し、保存先は上書きの履歴が残るクラウドにしています。</dd>
+    </div>
+    <div>
+      <dt>すぐ見られること<small>画面とプリンタで出せる状態</small></dt>
+      <dd>月別のフォルダに分け、全件のCSV一覧を付けます。「◯月の◯◯の領収書」を聞かれて、その場で出せる状態にしています。</dd>
+    </div>
+    <div>
+      <dt>帳簿とひもづくこと<small>仕訳と証憑が結びつく</small></dt>
+      <dd>CSVの各行にファイル名を持たせて、会計の仕訳から元の1枚にたどり着けるようにしています。</dd>
+    </div>
+  </dl>
+  <div class="caution">
+    <p>紙の原本を処分してデータだけにする場合は、ここに書いた以外の要件（タイムスタンプの付与など）も必要になります。うちはまず紙の原本を残したうえでデータ化を進め、処分してよいかは税理士事務所と確認しながら判断しています。</p>
+    <p>※ 法律の要件は改正で変わります。実際の運用は、必ず顧問の税理士さんに確認してください。</p>
+  </div>
+
+  <h2>やってみて分かったこと<small>PITFALLS</small></h2>
+  <ul class="plain">
+    <li><b>束は、日本の分と海外の分が混ざっている。</b>「◯枚目からは海外」と機械的に線を引くと取りこぼします。実際に14枚見落としました。全部を1枚ずつ見るしかありません。</li>
+    <li><b>カードの利用控えと、レシート本体が別々に入っている。</b>そのまま数えると二重計上になります。本体を優先し、控えしかないものは別扱いにします。</li>
+    <li><b>宛名が別の会社のものが紛れている。</b>連盟の束に会社名義のものが混ざっていました。先に抜いておきます。</li>
+    <li><b>手作業で直した分は、やり直しのときに漏れる。</b>最後に全件をまとめて機械的に検査して、書き込み漏れがないか確かめます。</li>
+  </ul>
+
+  <h2>使っている道具<small>TOOLS</small></h2>
+  <dl class="tools">
+    <div><dt>SCANNER</dt><dd>Epson DS-571W<small>両面・300dpi・白紙は自動で除去</small></dd></div>
+    <div><dt>CALENDAR</dt><dd>TimeTree<small>日付で予定を引き、同席者を特定</small></dd></div>
+    <div><dt>AI</dt><dd>Claude Code<small>読み取り・突き合わせ・書き込み・一覧化</small></dd></div>
+    <div><dt>OUTPUT</dt><dd>JPEG ＋ CSV<small>1証憑1ファイル・月別フォルダ</small></dd></div>
+  </dl>
+
+  <div class="closing">
+    <p class="t">紙のまま置いておく理由が、なくなりました。</p>
+    <p class="by">── 経理担当・村田亜衣</p>
+  </div>
+
+  <footer>
+    柔術の現場で、必要にせまられて作ったものたち。<br>
+    <a href="/">← jiujitsu.co.jp トップへ</a>
+  <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+
+<a href="/" style="position:fixed;right:14px;bottom:14px;z-index:99;background:#17140d;color:#e8c95e;font-size:11px;letter-spacing:.1em;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);font-family:sans-serif;">TOPへ</a>
+</html>
