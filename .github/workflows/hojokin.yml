@@ -1,0 +1,56 @@
+name: 補助金ページ更新
+
+# 毎朝 06:30 JST に Jグランツから募集中の補助金を取り直し、/hojokin/ を更新する。
+on:
+  schedule:
+    - cron: "30 21 * * *" # 21:30 UTC = 06:30 JST
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "tools/hojokin/**"
+      - ".github/workflows/hojokin.yml"
+
+permissions:
+  contents: write
+
+concurrency: hojokin
+
+jobs:
+  test:
+    name: テスト（ネットワーク不要）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/hojokin/test_build.py
+
+  update:
+    name: ページを更新
+    needs: test
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Jグランツから取得してページを生成
+        run: python3 tools/hojokin/build.py --out hojokin/index.html
+
+      - name: 変更があればコミット
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hojokin/index.html
+          if git diff --staged --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "chore(hojokin): 補助金一覧を更新 ($(TZ=Asia/Tokyo date +%Y-%m-%d))"
+            git push
+          fi
+
+      - name: サマリ
+        run: |
+          count=$(grep -o '"id":"' hojokin/index.html | wc -l)
+          echo "### 補助金ページ" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- 掲載件数: ${count} 件" >> "$GITHUB_STEP_SUMMARY"
+          echo "- https://jiujitsu.co.jp/hojokin/" >> "$GITHUB_STEP_SUMMARY"
