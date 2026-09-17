@@ -12,7 +12,7 @@
 </script>
 
 <title>領収書のデジタル化</title>
-<meta name="description" content="紙の領収書をスキャンして読み取り、カレンダーの予定と突き合わせて「誰と・何のために」まで画像に焼き込む。柔術連盟の経費精算で実際にやっている手順。">
+<meta name="description" content="紙の領収書をスキャンして読み取り、カレンダーの予定と突き合わせて「誰と・何のために」まで画像に焼き込む。柔術連盟と会社の経費精算で実際にやっている手順。">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <style>
   :root {
@@ -58,13 +58,16 @@
   .steps p + p { margin-top: 6px; color: var(--faint); font-size: 12.5px; }
 
   /* before / after */
-  .ba { display: grid; grid-template-columns: 150px 1fr; gap: 28px; align-items: start; background: var(--panel); border: 1px solid var(--line); padding: 26px; }
-  .ba figure { margin: 0; }
+  .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; justify-items: center; background: var(--panel); border: 1px solid var(--line); padding: 26px; }
+  .ba figure { margin: 0; max-width: 300px; width: 100%; }
   .ba img { width: 100%; height: auto; display: block; border: 1px solid var(--line); background: #fff; }
   .ba figcaption { font-size: 11px; letter-spacing: .14em; color: var(--gold); margin-bottom: 8px; font-weight: 700; }
   .ba figcaption span { display: block; color: var(--faint); font-weight: 400; letter-spacing: .04em; margin-top: 4px; }
   @media (max-width: 660px) { .ba { grid-template-columns: 1fr; } }
   .ba-note { font-size: 12.5px; color: var(--faint); margin: 12px 0 0; }
+  .band { margin-top: 18px; border: 1px solid var(--line); background: var(--paper); padding: 18px 20px 20px; }
+  .band p { font-size: 11px; letter-spacing: .14em; color: var(--gold); font-weight: 700; margin: 0 0 12px; }
+  .band img { width: 100%; height: auto; display: block; }
 
   /* 箇条書き */
   ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
@@ -110,7 +113,7 @@
 <header>
   <p class="brand">RECEIPTS</p>
   <h1>領収書のデジタル化</h1>
-  <p class="lede">紙の領収書を、「日付・金額・相手・用途」が画像1枚で分かる形にする。<br>柔術連盟（SJJJF）の経費精算で、実際にやっている手順です。</p>
+  <p class="lede">紙の領収書を、「日付・金額・相手・用途」が画像1枚で分かる形にする。<br>柔術連盟と会社の経費精算で、実際にやっている手順です。</p>
 </header>
 
 <div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
@@ -125,9 +128,9 @@
   </div>
 
   <div class="nums">
-    <div><b>122<i>枚</i></b><span>2026年4〜9月分を<br>まとめて処理</span></div>
-    <div><b>2<i>分</i></b><span>1枚あたりの<br>おおよその手間</span></div>
-    <div><b>0<i>件</i></b><span>台帳への<br>手入力</span></div>
+    <div><b>432<i>枚</i></b><span>スキャンした画像<br>連盟122・会社310</span></div>
+    <div><b>72<i>件</i></b><span>読み取りの終わった<br>領収書（連盟分）</span></div>
+    <div><b>3<i>項目</i></b><span>ファイル名だけで<br>満たす検索条件</span></div>
   </div>
 
   <h2>やっていること<small>FLOW</small></h2>
@@ -161,20 +164,24 @@
   <h2>実際の1枚<small>BEFORE / AFTER</small></h2>
   <div class="ba">
     <figure>
-      <figcaption>BEFORE<span>横倒し・用途が不明</span></figcaption>
-      <img src="/assets/ryoshusho/before.jpg" alt="スキャンしたままの領収証。横倒しで、何のための支払いか分からない">
+      <figcaption>BEFORE<span>スキャンしただけ</span></figcaption>
+      <img src="/assets/ryoshusho/before.jpg" alt="スキャンしたままの領収書。日付と金額と宛名はあるが、何のための支払いかは書かれていない">
     </figure>
     <figure>
-      <figcaption>AFTER<span>向きが直り、用途まで入る</span></figcaption>
-      <img src="/assets/ryoshusho/after.jpg" alt="向きを直し、下部の白帯に日付・店名・金額・宛名・用途を書き込んだ領収証">
+      <figcaption>AFTER<span>用途まで1枚で分かる</span></figcaption>
+      <img src="/assets/ryoshusho/after.jpg" alt="下部の白帯に日付・店名・金額・宛名・用途を書き込んだ領収書">
     </figure>
   </div>
-  <p class="ba-note">※ この日は予定表に「8/22 練習会」が入っていたので、おにぎりの用途まで書けました。会食の領収書には同席者の氏名も入りますが、この公開ページでは伏せた例を載せています。</p>
+  <div class="band">
+    <p>白帯に書き込んでいる内容<span></span></p>
+    <img src="/assets/ryoshusho/band.jpg" alt="領収書の下に足した白帯の拡大。2026/9/6 株式会社イサミ（富ヶ谷） 11,000円 宛名SJJJF、用途は商品購入（衣類）と書かれている">
+  </div>
+  <p class="ba-note">※ 会食の領収書には、予定表から特定した同席者の氏名もこの白帯に入ります。この公開ページでは、氏名の入らない物品購入の1枚を例にしています。</p>
 
   <h2>ファイル名が、そのまま台帳<small>FILE NAME</small></h2>
   <p class="lead-copy">電子帳簿保存法で求められる検索条件は「取引年月日・取引金額・取引先」の3つ。この3つをファイル名に入れておけば、専用のシステムがなくても、フォルダの検索窓だけで探せます。</p>
   <div class="fname">
-    <b><i>20260822</i><u>取引年月日</u></b><span>_</span><b><i>むすび権米衛</i><u>取引先</u></b><span>_</span><b><i>4315</i><u>取引金額</u></b><span>.jpg</span>
+    <b><i>20260906</i><u>取引年月日</u></b><span>_</span><b><i>イサミ</i><u>取引先</u></b><span>_</span><b><i>11000</i><u>取引金額</u></b><span>.jpg</span>
   </div>
   <ul class="plain" style="margin-top: 26px;">
     <li><b>1枚の領収書＝1つのファイル。</b>まとめて1つのPDFにすると、検索の条件を満たせなくなります。</li>
