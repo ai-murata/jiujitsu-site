@@ -72,13 +72,18 @@
   .steps p { font-size: 13.5px; margin: 0; }
   .steps p + p { margin-top: 6px; color: var(--faint); font-size: 12.5px; }
 
-  /* before / after */
-  .ba { display: grid; grid-template-columns: 145px 1fr; gap: 28px; align-items: start; background: var(--panel); border: 1px solid var(--line); padding: 26px; }
-  .ba figure { margin: 0; width: 100%; }
-  .ba img { width: 100%; height: auto; display: block; border: 1px solid var(--line); background: #fff; }
-  .ba figcaption { font-size: 11px; letter-spacing: .14em; color: var(--gold); margin-bottom: 8px; font-weight: 700; }
-  .ba figcaption span { display: block; color: var(--faint); font-weight: 400; letter-spacing: .04em; margin-top: 4px; }
-  @media (max-width: 660px) { .ba { grid-template-columns: 1fr; } }
+  /* 実際の1枚 */
+  .sample { display: grid; grid-template-columns: 260px 1fr; gap: 34px; align-items: center; background: var(--panel); border: 1px solid var(--line); padding: 30px; }
+  .sample figure { margin: 0; }
+  .sample img { width: 100%; height: auto; display: block; border: 1px solid var(--line); background: #fff; }
+  .sample figcaption { font-size: 11px; letter-spacing: .1em; color: var(--faint); margin-top: 10px; text-align: center; }
+  .sample dl { margin: 0; display: grid; gap: 16px; }
+  .sample .written { background: var(--paper); border: 1px solid var(--line); padding: 14px 16px 15px; margin-bottom: 4px; }
+  .sample .written p { margin: 0; font-size: 10px; letter-spacing: .14em; color: var(--gold); font-weight: 700; }
+  .sample .written span { display: block; font-size: 13px; color: var(--ink); line-height: 1.8; margin-top: 8px; }
+  .sample dt { font-family: var(--mincho); font-weight: 700; font-size: 14.5px; color: var(--ink); letter-spacing: .06em; margin-bottom: 4px; }
+  .sample dd { margin: 0; font-size: 13px; }
+  @media (max-width: 660px) { .sample { grid-template-columns: 1fr; gap: 24px; } }
   .ba-note { font-size: 12.5px; color: var(--faint); margin: 12px 0 0; }
 
   /* 箇条書き */
@@ -175,7 +180,7 @@
     </li>
     <li>
       <h3>画像に書き込む</h3>
-      <p>領収書の画像の下に白い帯を足して、日付・店名・金額・宛名・同席者・用途を焼き込みます。向きが横倒しのものは、ここで正しい向きに直します。</p>
+      <p>領収書の画像の下に白い帯を足して、日付・店名・金額・宛名・同席者・用途を焼き込みます。横倒しでスキャンされたものは、ここで正しい向きに直します。</p>
       <p>元の画像には手を入れません。別ファイルとして書き出します。</p>
     </li>
     <li>
@@ -184,23 +189,37 @@
     </li>
   </ol>
 
-  <h2>実際の1枚<small>BEFORE / AFTER</small></h2>
-  <div class="ba">
+  <h2>実際の1枚<small>SAMPLE</small></h2>
+  <div class="sample">
     <figure>
-      <figcaption>BEFORE<span>横倒し・用途が不明</span></figcaption>
-      <img src="/assets/ryoshusho/before.jpg" alt="スキャンしたままの領収証。横倒しのうえ、何のための支払いかは書かれていない">
+      <img src="/assets/ryoshusho/sample.jpg" alt="スキャンした領収書の下に白い帯を足して、日付・店名・金額・宛名・用途を書き込んだもの">
+      <figcaption>下の白い帯が、あとから足した部分</figcaption>
     </figure>
-    <figure>
-      <figcaption>AFTER<span>向きが直り、用途まで入る</span></figcaption>
-      <img src="/assets/ryoshusho/after.jpg" alt="向きを直し、下部の白帯に日付・店名・金額・宛名・用途を書き込んだ領収証">
-    </figure>
+    <dl>
+      <div class="written">
+        <p>白帯に書き込んでいる内容</p>
+        <span>2026/9/6　株式会社イサミ（富ヶ谷）　¥11,000　宛名:SJJJF<br>用途: 商品購入（衣類）</span>
+      </div>
+      <div>
+        <dt>日付・取引先・金額</dt>
+        <dd>領収書から読み取ったもの。この3つは、ファイル名にもそのまま使います。</dd>
+      </div>
+      <div>
+        <dt>宛名</dt>
+        <dd>誰あてに出してもらったか。別の会社あてのものが束に紛れていることがあるので、ここで気づけます。</dd>
+      </div>
+      <div>
+        <dt>用途</dt>
+        <dd>領収書には書かれていない情報。予定表と突き合わせて入れます。会食なら、同席者の氏名もここに入ります。</dd>
+      </div>
+    </dl>
   </div>
-  <p class="ba-note">※ この日は予定表に「8/22 練習会」が入っていたので、パンの用途まで書けました。会食の領収書には、予定表から特定した同席者の氏名もこの白帯に入りますが、この公開ページでは氏名の入らない1枚を例にしています。</p>
+  <p class="ba-note">※ 公開ページのため、氏名の入らない1枚（物品の購入）を例にしています。</p>
 
   <h2>ファイル名が、そのまま台帳<small>FILE NAME</small></h2>
   <p class="lead-copy">電子帳簿保存法で求められる検索条件は「取引年月日・取引金額・取引先」の3つ。この3つをファイル名に入れておけば、専用のシステムがなくても、フォルダの検索窓だけで探せます。</p>
   <div class="fname">
-    <b><i>20260822</i><u>取引年月日</u></b><span>_</span><b><i>パン屋</i><u>取引先</u></b><span>_</span><b><i>2369</i><u>取引金額</u></b><span>.jpg</span>
+    <b><i>20260906</i><u>取引年月日</u></b><span>_</span><b><i>イサミ</i><u>取引先</u></b><span>_</span><b><i>11000</i><u>取引金額</u></b><span>.jpg</span>
   </div>
   <ul class="plain" style="margin-top: 26px;">
     <li><b>1枚の領収書＝1つのファイル。</b>まとめて1つのPDFにすると、検索の条件を満たせなくなります。</li>
