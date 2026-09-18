@@ -42,10 +42,20 @@ jobs:
           git add hojokin/index.html
           if git diff --staged --quiet; then
             echo "変更なし"
-          else
-            git commit -m "chore(hojokin): 補助金一覧を更新 ($(TZ=Asia/Tokyo date +%Y-%m-%d))"
-            git push
+            exit 0
           fi
+          git commit -m "chore(hojokin): 補助金一覧を更新 ($(TZ=Asia/Tokyo date +%Y-%m-%d))"
+          # 全件の取得に5分ほどかかるため、その間に別の更新が入って push が弾かれることがある。
+          # このジョブが触るのは hojokin/index.html だけなので、取り込んで積み直せばよい。
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "push が弾かれました。リモートを取り込んで再試行します ($attempt/3)"
+            git pull --rebase origin "$GITHUB_REF_NAME"
+          done
+          echo "3回試しても push できませんでした" >&2
+          exit 1
 
       - name: サマリ
         run: |
