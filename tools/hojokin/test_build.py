@@ -100,9 +100,16 @@ class RecordTest(unittest.TestCase):
         rows = by_id(self.rows)
         self.assertEqual(rows["fx-sports-005"]["days"], 60)  # 6/1 -> 7/31
 
-    def test_sorted_by_deadline_by_default(self):
-        days = [r["days"] for r in self.rows]
-        self.assertEqual(days, sorted(days))
+    def test_hinted_items_come_first(self):
+        hinted = [bool(r["hints"]) for r in self.rows]
+        self.assertEqual(hinted, sorted(hinted, reverse=True))
+        self.assertIn(True, hinted)
+        self.assertIn(False, hinted)
+
+    def test_deadline_order_is_kept_within_each_group(self):
+        for group in (True, False):
+            days = [r["days"] for r in self.rows if bool(r["hints"]) is group]
+            self.assertEqual(days, sorted(days))
 
     def test_dojo_relevant_entry_scores_above_generic_one(self):
         rows = by_id(self.rows)
