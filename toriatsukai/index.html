@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>良蔵取扱説明書</title>
+<meta name="description" content="村田良蔵という製品を、長く快適にお使いいただくための取扱説明書。ご使用の前に必ずお読みください。">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 22px 80px; }
+
+  header { text-align: center; padding: 64px 20px 36px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(30px, 6vw, 44px); color: var(--ink); letter-spacing: .16em; line-height: 1.4; margin: 10px 0 12px; }
+  .model { font-size: 12px; letter-spacing: .22em; color: var(--faint); margin: 0; }
+  .lede { font-size: 13px; color: var(--faint); margin: 14px 0 0; letter-spacing: .06em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  .notice { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 22px 26px; margin: 40px 0 0; }
+  .notice p { margin: 0; font-size: 13.5px; }
+  .notice p + p { margin-top: 10px; }
+  .notice b { color: var(--ink); font-family: var(--mincho); letter-spacing: .06em; }
+
+  .toc { margin: 36px 0 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 18px 0; }
+  .toc ol { list-style: none; margin: 0; padding: 0; columns: 2 260px; column-gap: 36px; }
+  .toc li { font-size: 13px; margin: 0 0 6px; break-inside: avoid; }
+  .toc a { color: var(--body-c); text-decoration: none; }
+  .toc a:hover { color: var(--gold); }
+  .toc .no { font-family: var(--mincho); color: var(--gold); letter-spacing: .1em; margin-right: 10px; }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: .2em; margin: 76px 0 6px; display: flex; align-items: baseline; gap: 16px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); align-self: center; }
+  h2 .no { font-size: 12px; letter-spacing: .18em; color: var(--gold); font-family: var(--gothic); font-weight: 700; flex: none; }
+  .sub { font-size: 12px; color: var(--faint); letter-spacing: .12em; margin: 0 0 22px; }
+
+  p.body { font-size: 14px; margin: 0 0 16px; max-width: 42em; }
+  .em { color: var(--ink); font-weight: 700; }
+
+  table.spec { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 13.5px; }
+  table.spec th, table.spec td { border-bottom: 1px solid var(--line); padding: 11px 6px; text-align: left; vertical-align: top; }
+  table.spec th { width: 34%; font-weight: 500; color: var(--faint); letter-spacing: .08em; white-space: nowrap; }
+  table.spec td { color: var(--ink); }
+  table.spec td small { display: block; color: var(--faint); font-size: 12px; letter-spacing: 0; }
+
+  .steps { list-style: none; margin: 8px 0 0; padding: 0; counter-reset: st; }
+  .steps li { position: relative; padding: 0 0 0 46px; margin: 0 0 24px; font-size: 14px; }
+  .steps li::before { counter-increment: st; content: counter(st, decimal-leading-zero); position: absolute; left: 0; top: 2px; font-family: var(--mincho); font-size: 13px; color: var(--gold); letter-spacing: .08em; border: 1px solid var(--line); padding: 2px 7px; }
+  .steps b { display: block; font-family: var(--mincho); font-weight: 700; font-size: 15.5px; color: var(--ink); letter-spacing: .06em; margin-bottom: 4px; }
+
+  .ng { margin: 22px 0 0; display: grid; gap: 14px; }
+  .ng div { border-left: 2px solid var(--line); padding: 2px 0 2px 18px; font-size: 13.5px; }
+  .ng .x { color: var(--faint); }
+  .ng .o { color: var(--ink); font-weight: 500; }
+  .ng .x::before { content: "×　"; color: #b34a4a; font-weight: 700; }
+  .ng .o::before { content: "○　"; color: var(--gold); font-weight: 700; }
+
+  .warn { background: var(--panel); border: 1px solid var(--line); padding: 20px 24px; margin: 26px 0 0; }
+  .warn p.h { font-family: var(--mincho); font-weight: 700; font-size: 14px; color: var(--ink); letter-spacing: .16em; margin: 0 0 8px; }
+  .warn p { font-size: 13.5px; margin: 0; }
+
+  table.tr { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13.5px; }
+  table.tr th { text-align: left; font-size: 11px; letter-spacing: .18em; color: var(--gold); font-weight: 700; border-bottom: 1px solid var(--line); padding: 0 8px 8px 0; }
+  table.tr td { border-bottom: 1px solid var(--line); padding: 14px 8px 14px 0; vertical-align: top; }
+  table.tr td:first-child { color: var(--ink); font-weight: 500; width: 32%; }
+  table.tr td:last-child { padding-right: 0; }
+  @media (max-width: 620px) {
+    table.tr, table.tr tbody, table.tr tr, table.tr td { display: block; width: 100%; }
+    table.tr thead { display: none; }
+    table.tr tr { border-bottom: 1px solid var(--line); padding: 14px 0; }
+    table.tr td { border: 0; padding: 0; }
+    table.tr td:first-child { width: auto; margin-bottom: 4px; }
+    table.spec th, table.spec td { display: block; width: 100%; }
+    table.spec th { border: 0; padding-bottom: 0; }
+  }
+
+  .closing { margin-top: 84px; text-align: center; }
+  .closing p.t { font-family: var(--mincho); font-weight: 600; font-size: 18px; color: var(--ink); letter-spacing: .08em; margin: 0; line-height: 2; }
+  .closing p.by { font-size: 12px; color: var(--gold); letter-spacing: .14em; margin: 14px 0 0; }
+
+  footer { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+
+<header>
+  <p class="brand">INSTRUCTION MANUAL</p>
+  <h1>良蔵取扱説明書</h1>
+  <p class="model">型番 RYOZO-1980 ／ 村田良蔵</p>
+  <p class="lede">ご使用の前に、この説明書をよくお読みください。<br>お読みになったあとは、畳のそばの取り出しやすい場所に保管してください。</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <div class="notice">
+    <p><b>はじめに</b></p>
+    <p>本製品は、柔術の指導・試合・会社経営を主な用途とする一点ものです。同じ型番の在庫はありません。交換・返品には応じられませんので、あらかじめご了承ください。</p>
+    <p>本書の内容は、長年そばで運用してきた管理者（妻・村田亜衣）の実測値に基づきます。ご本人の自己申告も一部含みます。</p>
+  </div>
+
+  <nav class="toc">
+    <ol>
+      <li><a href="#s1"><span class="no">01</span>製品仕様</a></li>
+      <li><a href="#s2"><span class="no">02</span>電源を入れる</a></li>
+      <li><a href="#s3"><span class="no">03</span>本領を発揮させる</a></li>
+      <li><a href="#s4"><span class="no">04</span>相談ごとの入力方法</a></li>
+      <li><a href="#s5"><span class="no">05</span>取扱上のご注意</a></li>
+      <li><a href="#s6"><span class="no">06</span>故障かな？と思ったら</a></li>
+      <li><a href="#s7"><span class="no">07</span>給電・お手入れ</a></li>
+      <li><a href="#s8"><span class="no">08</span>休止モード</a></li>
+      <li><a href="#s9"><span class="no">09</span>保証について</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="s1"><span class="no">01</span>製品仕様</h2>
+  <p class="sub">SPECIFICATIONS</p>
+  <table class="spec">
+    <tr><th>製品名</th><td>村田良蔵（むらた りょうぞう）</td></tr>
+    <tr><th>型番</th><td>RYOZO-1980</td></tr>
+    <tr><th>製造年月日</th><td>1980年4月24日</td></tr>
+    <tr><th>製造地</th><td>北海道網走市</td></tr>
+    <tr><th>外形寸法</th><td>177cm<small>質量 74kg（試合時は68kgまで絞り込まれます）</small></td></tr>
+    <tr><th>主な用途</th><td>ブラジリアン柔術の指導・試合・普及<small>株式会社BUTTI ON LINE 代表取締役／スポーツ柔術日本連盟（SJJJF）代表理事</small></td></tr>
+    <tr><th>稼働開始</th><td>2006年（26歳で柔術を開始）</td></tr>
+    <tr><th>認定</th><td>黒帯（2011年10月・クリスチアーノ カリオカより授与）<small>北海道初のグレイシー直系黒帯。SJJIF世界選手権では日本人初の優勝。</small></td></tr>
+    <tr><th>推奨動作環境</th><td>プレッシャーのかかった場所</td></tr>
+    <tr><th>必要な燃料</th><td>コーヒー、おいしいご飯</td></tr>
+  </table>
+
+  <h2 id="s2"><span class="no">02</span>電源を入れる</h2>
+  <p class="sub">POWER ON</p>
+  <p class="body">本製品の起動は、ゆっくりです。朝は時間に余裕をもってお待ちください。急かしても起動が早まることはありません。</p>
+  <p class="body">起動には<span class="em">コーヒーが必要</span>です。目が覚めたら、まずこれを入れてください。近年のモデルは<span class="em">牛乳を加えた仕様</span>を好んで使用します。</p>
+  <div class="warn">
+    <p class="h">電源が切れるとき</p>
+    <p>眠くなったときです。予告はありません。停止したら、それ以上の操作はせず、翌朝までお待ちください。</p>
+  </div>
+
+  <h2 id="s3"><span class="no">03</span>本領を発揮させる</h2>
+  <p class="sub">MAXIMUM OUTPUT</p>
+  <p class="body">本製品が最大出力に達するのは、<span class="em">プレッシャーがかかっているとき</span>です。追い込まれるほど、出力は上がります。</p>
+  <p class="body">やさしく扱えば長持ちする、という考え方は本製品には当てはまりません。ぬるい環境に置いたままにすると、性能を出しきらないままになります。大きな舞台、大事な場面、逃げ場のない状況——そういう場所にこそ、遠慮なく置いてください。</p>
+
+  <h2 id="s4"><span class="no">04</span>相談ごとの入力方法</h2>
+  <p class="sub">HOW TO ASK</p>
+  <p class="body">本製品は<span class="em">人肌で動きます</span>。「誰でもいい用件」として入力された相談には、反応が鈍くなります。次の形式でお渡しください。</p>
+  <ol class="steps">
+    <li><b>「あなたにしか解決できない」を添える</b>「良蔵先生にしか解決できないと思うんですけど、これどうしたらいいですか」。この一言があるかないかで、動きがまるで違います。</li>
+    <li><b>日常的な相談は、答えを持ってから</b>丸投げは受け付けません。「A・B・C、どれがいいですか」と、選択肢の形まで整えてから入力してください。</li>
+    <li><b>できなかったときは、必ず代案とセットで</b>止まった報告だけを返さないでください。次の手まで持っていくのが、正しい使い方です。</li>
+  </ol>
+  <div class="ng">
+    <div><p class="x">予約、取れませんでした。</p><p class="o">取れなかったので、こちらはどうですか？</p></div>
+    <div><p class="x">セロハンテープ、ありませんでした。</p><p class="o">セロハンテープは無かったのでガムテープならあります。隣の店まで行ってきますか？</p></div>
+  </div>
+  <div class="warn">
+    <p class="h">ご注意・まれに「F」が返ります</p>
+    <p>A・B・Cを提示しても、そこにない答えが返ってくることがあります。故障ではありません。選択肢の外から解決してしまうのが、本製品の性能です。</p>
+  </div>
+
+  <h2 id="s5"><span class="no">05</span>取扱上のご注意</h2>
+  <p class="sub">CAUTION</p>
+  <div class="warn">
+    <p class="h">筋の通らないことを入力しないでください</p>
+    <p>本製品が確実に停止する、唯一の操作です。損得だけの話、辻褄の合わない話、思考停止したまま渡される話。これらを入力すると動作を停止します。</p>
+  </div>
+  <div class="warn">
+    <p class="h">一度決めた設定を、外から書き換えないでください</p>
+    <p>自分で決めたことを人に変えられるのを嫌います。変更が必要なときは、理由から先にお伝えください。筋さえ通っていれば、本製品は自分で書き換えます。</p>
+  </div>
+
+  <h2 id="s6"><span class="no">06</span>故障かな？と思ったら</h2>
+  <p class="sub">TROUBLESHOOTING</p>
+  <table class="tr">
+    <thead><tr><th>症状</th><th>原因と対処</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>怒っているように見える</td>
+        <td>故障ではありません。<span class="em">わざとやっています。</span>伝えるべき相手に、伝わる形で出しているだけなので、そのまま受け取ってください。</td>
+      </tr>
+      <tr>
+        <td>機嫌が悪いように見える</td>
+        <td>本製品は機嫌の振れ幅がほとんどありません。ご本人いわく「機嫌はなくてもいい」。周囲が心配するほどのことは、たいてい起きていません。</td>
+      </tr>
+      <tr>
+        <td>急に無言になる／返事が遅い</td>
+        <td>ほとんど発生しない症状です。もし続く場合は、眠いか、お腹が空いています。02と07をご確認ください。</td>
+      </tr>
+      <tr>
+        <td>相談したのに動いてくれない</td>
+        <td>入力形式をご確認ください（04）。丸投げ、代案なし、誰でもいい用件のいずれかに当てはまっているはずです。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="s7"><span class="no">07</span>給電・お手入れ</h2>
+  <p class="sub">MAINTENANCE</p>
+  <p class="body">おいしいご飯を入れてください。ただし<span class="em">クオリティによります</span>。量では回復しません。</p>
+  <p class="body">最も効率のよい燃料は、<span class="em">妻の手料理</span>であることが長年の運用で確認されています。</p>
+
+  <h2 id="s8"><span class="no">08</span>休止モード</h2>
+  <p class="sub">DAY OFF</p>
+  <p class="body">休みの日は、妻と洗車に行き、そのままランチを食べて帰ってきます。特別なメンテナンスは要りません。車がきれいになって、ごはんがおいしければ、それで回復します。</p>
+
+  <h2 id="s9"><span class="no">09</span>保証について</h2>
+  <p class="sub">WARRANTY</p>
+  <p class="body">本製品に交換部品はありません。丁寧に、長くお使いください。</p>
+  <p class="body">なお、本製品の考え方そのものについては、別冊の<a href="/goroku/" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)">良蔵語録</a>に収録しています。あわせてご覧ください。</p>
+
+  <div class="warn" style="margin-top:34px">
+    <p class="h">あなたの取扱説明書もつくれます</p>
+    <p>10の質問に答えると、この体裁のまま、あなたの1枚ができます。画像で保存できます。　<a href="/toriatsukai/tsukuru/" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)">つくってみる</a></p>
+  </div>
+
+  <div class="closing">
+    <p class="t">筋さえ通っていれば、だいたい動きます。</p>
+    <p class="by">発行：村田亜衣</p>
+  </div>
+
+  <footer>
+    <a href="/">jiujitsu.co.jp</a> ／ <a href="/goroku/">良蔵語録</a> ／ <a href="/toriatsukai/tsukuru/">あなたの取扱説明書をつくる</a><br>
+    本書の記載内容は予告なく変更されることがあります。
+  </footer>
+
+</div>

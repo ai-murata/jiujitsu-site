@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>あなたの取扱説明書をつくる</title>
+<meta name="description" content="10の質問に答えると、自分の取扱説明書が1枚できます。画像で保存して、そのまま貼れます。">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 22px 80px; }
+
+  header { text-align: center; padding: 56px 20px 32px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(26px, 5.6vw, 38px); color: var(--ink); letter-spacing: .14em; line-height: 1.5; margin: 10px 0 12px; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; letter-spacing: .06em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  .intro { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 20px 24px; margin: 36px 0 0; font-size: 13.5px; }
+  .intro p { margin: 0; }
+  .intro p + p { margin-top: 8px; }
+  .intro a { color: var(--gold); }
+
+  .q { margin: 34px 0 0; }
+  .q label { display: block; font-family: var(--mincho); font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: .06em; margin-bottom: 4px; }
+  .q .no { font-family: var(--gothic); font-size: 11px; font-weight: 700; letter-spacing: .18em; color: var(--gold); margin-right: 12px; }
+  .q .hint { font-size: 12.5px; color: var(--faint); margin: 0 0 10px; }
+  .q input[type=text], .q textarea, .q select {
+    width: 100%; font-family: var(--gothic); font-size: 15px; color: var(--ink); line-height: 1.8;
+    background: var(--paper); border: 1px solid var(--line); border-radius: 0; padding: 12px 14px; -webkit-appearance: none; appearance: none;
+  }
+  .q select { background-image: linear-gradient(45deg, transparent 50%, var(--gold) 50%), linear-gradient(135deg, var(--gold) 50%, transparent 50%); background-position: calc(100% - 20px) 21px, calc(100% - 14px) 21px; background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; }
+  .q textarea { min-height: 84px; resize: vertical; }
+  .q input:focus, .q textarea:focus, .q select:focus { outline: 2px solid var(--gold); outline-offset: 1px; border-color: var(--gold); }
+
+  .actions { margin: 44px 0 0; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  button { font-family: var(--gothic); font-size: 14px; font-weight: 700; letter-spacing: .12em; cursor: pointer; border-radius: 0; padding: 15px 34px; border: 1px solid var(--gold); }
+  button.primary { background: var(--gold); color: #fff; }
+  button.primary:hover { background: #8d6d14; }
+  button.ghost { background: transparent; color: var(--gold); }
+  button.ghost:hover { background: var(--panel); }
+  button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+  #result { margin: 56px 0 0; display: none; }
+  #result h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .2em; margin: 0 0 6px; }
+  #result .sub { font-size: 12.5px; color: var(--faint); margin: 0 0 20px; }
+  #sheet { width: 100%; height: auto; display: block; border: 1px solid var(--line); }
+  .saveline { font-size: 12.5px; color: var(--faint); margin: 14px 0 0; }
+
+  footer { margin-top: 64px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+
+<header>
+  <p class="brand">MAKE YOUR OWN MANUAL</p>
+  <h1>あなたの取扱説明書を<br>つくる</h1>
+  <p class="lede">10の質問に答えると、1枚できます。</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <div class="intro">
+    <p>見本は<a href="/toriatsukai/">良蔵取扱説明書</a>です。同じ体裁で、あなたの1枚をつくります。</p>
+    <p>答えにくい質問は、空けたまま進んでかまいません。空けた項目は載りません。入力した内容はこの端末の中だけで処理され、どこにも送られません。</p>
+  </div>
+
+  <form id="f" autocomplete="off">
+
+    <div class="q">
+      <label for="name"><span class="no">01</span>お名前（呼ばれ方）</label>
+      <p class="hint">下の名前でも、あだ名でもかまいません。</p>
+      <input type="text" id="name" maxlength="14" placeholder="良蔵">
+    </div>
+
+    <div class="q">
+      <label for="year"><span class="no">02</span>製造年（生まれた年）</label>
+      <p class="hint">型番になります。入れなくても大丈夫です。</p>
+      <input type="text" id="year" maxlength="4" inputmode="numeric" placeholder="1980">
+    </div>
+
+    <div class="q">
+      <label for="boot"><span class="no">03</span>朝の起動</label>
+      <select id="boot">
+        <option value="">選んでください</option>
+        <option>電源を入れるとすぐ起動します。</option>
+        <option>起動はゆっくりです。急かしても早まりません。</option>
+        <option>起動までに数回の再起動が必要です。</option>
+        <option>目が覚めた瞬間から全力で稼働します。</option>
+      </select>
+    </div>
+
+    <div class="q">
+      <label for="fuel"><span class="no">04</span>起動に必要な燃料</label>
+      <p class="hint">これが無いと1日が始まらない、というもの。</p>
+      <input type="text" id="fuel" maxlength="40" placeholder="コーヒー（牛乳入り）">
+    </div>
+
+    <div class="q">
+      <label for="env"><span class="no">05</span>推奨動作環境</label>
+      <p class="hint">いちばん力が出る場所・状況。</p>
+      <input type="text" id="env" maxlength="40" placeholder="プレッシャーのかかった場所">
+    </div>
+
+    <div class="q">
+      <label for="off"><span class="no">06</span>電源が切れるとき</label>
+      <input type="text" id="off" maxlength="40" placeholder="眠くなったとき">
+    </div>
+
+    <div class="q">
+      <label for="use"><span class="no">07</span>正しい使い方</label>
+      <p class="hint">こう頼まれると、よく動きます。</p>
+      <textarea id="use" maxlength="120" placeholder="先に結論から言ってください。理由はそのあとで大丈夫です。"></textarea>
+    </div>
+
+    <div class="q">
+      <label for="caution"><span class="no">08</span>取扱上のご注意</label>
+      <p class="hint">これをやられると止まります。</p>
+      <textarea id="caution" maxlength="120" placeholder="急に予定を変えないでください。動作が停止します。"></textarea>
+    </div>
+
+    <div class="q">
+      <label for="trouble"><span class="no">09</span>故障かな？と思ったら</label>
+      <p class="hint">誤解されがちな挙動と、その本当の理由。</p>
+      <textarea id="trouble" maxlength="120" placeholder="黙っているときは、怒っていません。考えごとをしています。"></textarea>
+    </div>
+
+    <div class="q">
+      <label for="care"><span class="no">10</span>給電・お手入れ</label>
+      <p class="hint">これを出しておけば回復するもの。</p>
+      <input type="text" id="care" maxlength="40" placeholder="おいしいご飯と、少しの昼寝">
+    </div>
+
+    <div class="q">
+      <label for="dayoff"><span class="no">11</span>休止モード</label>
+      <p class="hint">休みの日の過ごし方。</p>
+      <input type="text" id="dayoff" maxlength="40" placeholder="洗車に行って、そのままランチ">
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="primary">取扱説明書をつくる</button>
+      <button type="button" class="ghost" id="clear">入力を消す</button>
+    </div>
+  </form>
+
+  <section id="result">
+    <h2>できあがりました</h2>
+    <p class="sub">下のボタンで画像を保存できます。スマホは画像を長押ししても保存できます。</p>
+    <canvas id="sheet"></canvas>
+    <div class="actions">
+      <button type="button" class="primary" id="save">画像を保存する</button>
+      <button type="button" class="ghost" id="again">書き直す</button>
+    </div>
+    <p class="saveline">保存した画像は自由に使ってかまいません。ハッシュタグ #取扱説明書 で見せてもらえるとうれしいです。</p>
+  </section>
+
+  <footer>
+    <a href="/">jiujitsu.co.jp</a> ／ <a href="/toriatsukai/">良蔵取扱説明書</a> ／ <a href="/goroku/">良蔵語録</a>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var W = 1080, PAD = 92;
+  var C = { paper:'#ffffff', panel:'#faf8f2', line:'#e7e1d1', gold:'#a3801a', ink:'#17140d', body:'#4d4737', faint:'#948c74' };
+  var MIN = '"Shippori Mincho","Hiragino Mincho ProN",serif';
+  var GOT = '"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",sans-serif';
+
+  function val(id) { return (document.getElementById(id).value || '').trim(); }
+
+  function wrap(ctx, text, maxW) {
+    var lines = [], cur = '';
+    var src = String(text).replace(/\r/g, '');
+    for (var i = 0; i < src.length; i++) {
+      var ch = src[i];
+      if (ch === '\n') { lines.push(cur); cur = ''; continue; }
+      if (ctx.measureText(cur + ch).width > maxW && cur !== '') { lines.push(cur); cur = ch; }
+      else { cur += ch; }
+    }
+    if (cur !== '') lines.push(cur);
+    return lines;
+  }
+
+  function setLS(ctx, px) { try { ctx.letterSpacing = px + 'px'; } catch (e) {} }
+
+  function layout(ctx, data, drawing) {
+    var innerW = W - PAD * 2, y = 0;
+
+    if (drawing) {
+      ctx.fillStyle = C.paper; ctx.fillRect(0, 0, W, 4000);
+      var bars = [['#eceadf',0],['#274a7a',1],['#4d3070',2],['#5a3c22',3],['#17140d',4]];
+      for (var b = 0; b < bars.length; b++) { ctx.fillStyle = bars[b][0]; ctx.fillRect(W / 5 * bars[b][1], 0, W / 5 + 1, 12); }
+    }
+    y = 122;
+
+    if (drawing) {
+      ctx.textAlign = 'center';
+      setLS(ctx, 7);
+      ctx.font = '700 19px ' + GOT; ctx.fillStyle = C.gold;
+      ctx.fillText('INSTRUCTION MANUAL', W / 2, y);
+      setLS(ctx, 0);
+    }
+    y += 72;
+
+    var title = (data.name || 'わたし') + '取扱説明書';
+    var size = 66;
+    if (drawing) {
+      setLS(ctx, 6);
+      do { ctx.font = '700 ' + size + 'px ' + MIN; size -= 2; } while (ctx.measureText(title).width > innerW && size > 28);
+      ctx.fillStyle = C.ink; ctx.fillText(title, W / 2, y);
+      setLS(ctx, 0);
+    }
+    y += 52;
+
+    if (drawing) {
+      setLS(ctx, 4);
+      ctx.font = '500 21px ' + GOT; ctx.fillStyle = C.faint;
+      ctx.fillText(data.model, W / 2, y);
+      setLS(ctx, 0);
+      ctx.textAlign = 'left';
+    }
+    y += 62;
+
+    if (drawing) { ctx.fillStyle = C.line; ctx.fillRect(PAD, y, innerW, 1); }
+    y += 56;
+
+    for (var i = 0; i < data.items.length; i++) {
+      var it = data.items[i];
+      if (drawing) {
+        setLS(ctx, 4);
+        ctx.font = '700 19px ' + GOT; ctx.fillStyle = C.gold;
+        ctx.fillText(it[0], PAD, y);
+        setLS(ctx, 0);
+      }
+      y += 42;
+      ctx.font = '600 31px ' + MIN;
+      var lines = wrap(ctx, it[1], innerW);
+      for (var j = 0; j < lines.length; j++) {
+        if (drawing) { ctx.fillStyle = C.ink; ctx.fillText(lines[j], PAD, y + 24); }
+        y += 52;
+      }
+      y += 34;
+      if (i < data.items.length - 1) {
+        if (drawing) { ctx.fillStyle = C.line; ctx.fillRect(PAD, y, innerW, 1); }
+        y += 46;
+      }
+    }
+
+    y += 34;
+    if (drawing) {
+      ctx.textAlign = 'center';
+      setLS(ctx, 4);
+      ctx.font = '500 19px ' + GOT; ctx.fillStyle = C.faint;
+      ctx.fillText('jiujitsu.co.jp / toriatsukai', W / 2, y);
+      setLS(ctx, 0);
+      ctx.textAlign = 'left';
+    }
+    y += 76;
+    return y;
+  }
+
+  function collect() {
+    var name = val('name') || 'わたし';
+    var year = val('year').replace(/[^0-9]/g, '');
+    var items = [];
+    function add(label, v) { if (v) items.push([label, v]); }
+    add('起動', val('boot'));
+    add('必要な燃料', val('fuel'));
+    add('推奨動作環境', val('env'));
+    add('電源が切れるとき', val('off'));
+    add('正しい使い方', val('use'));
+    add('取扱上のご注意', val('caution'));
+    add('故障かな？と思ったら', val('trouble'));
+    add('給電・お手入れ', val('care'));
+    add('休止モード', val('dayoff'));
+    if (!items.length) items.push(['ご注意', 'この製品の仕様は、まだ本人にも分かっていません。']);
+    var model = year ? ('型番 ' + name.toUpperCase() + '-' + year) : ('型番 ' + name.toUpperCase());
+    return { name: name, model: model, items: items };
+  }
+
+  function render() {
+    var data = collect();
+    var cv = document.getElementById('sheet');
+    var ctx = cv.getContext('2d');
+    var h = Math.max(1350, Math.ceil(layout(ctx, data, false)));
+    var dpr = 2;
+    cv.width = W * dpr; cv.height = h * dpr;
+    cv.style.width = '100%';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.fillStyle = C.paper; ctx.fillRect(0, 0, W, h);
+    ctx.textBaseline = 'alphabetic';
+    layout(ctx, data, true);
+    return data;
+  }
+
+  var current = null;
+
+  document.getElementById('f').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var go = function () {
+      current = render();
+      var r = document.getElementById('result');
+      r.style.display = 'block';
+      r.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    if (document.fonts && document.fonts.load) {
+      Promise.all([
+        document.fonts.load('700 66px "Shippori Mincho"'),
+        document.fonts.load('600 31px "Shippori Mincho"'),
+        document.fonts.load('700 19px "Zen Kaku Gothic New"')
+      ]).then(go, go);
+    } else { go(); }
+  });
+
+  document.getElementById('again').addEventListener('click', function () {
+    document.getElementById('result').style.display = 'none';
+    document.getElementById('f').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  document.getElementById('clear').addEventListener('click', function () {
+    document.getElementById('f').reset();
+    document.getElementById('result').style.display = 'none';
+  });
+
+  document.getElementById('save').addEventListener('click', function () {
+    var cv = document.getElementById('sheet');
+    var name = (current && current.name) ? current.name : 'manual';
+    var url = cv.toDataURL('image/png');
+    var a = document.createElement('a');
+    a.href = url; a.download = name + '取扱説明書.png';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  });
+})();
+</script>

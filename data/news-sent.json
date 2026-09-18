@@ -1,0 +1,13 @@
+{
+  "_説明": "LINEへ配信済みのお知らせid。ここに載っているものは二度と配信されません。公開前からあった8件は、あとから一斉送信されないよう最初から入れてあります。",
+  "sent": [
+    "ryoshusho",
+    "hojokin",
+    "muratake",
+    "goroku",
+    "tournament",
+    "hajimete",
+    "dojo",
+    "shift"
+  ]
+}

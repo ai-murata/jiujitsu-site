@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>jiu labo</title>
+  <subtitle>柔術の現場で、必要にせまられて作ったものたち。</subtitle>
+  <link href="https://jiujitsu.co.jp/"/>
+  <link rel="self" type="application/atom+xml" href="https://jiujitsu.co.jp/feed.xml"/>
+  <id>https://jiujitsu.co.jp/</id>
+  <updated>2026-09-17T18:39:15+09:00</updated>
+  <author><name>BUTTI ON LINE</name></author>
+  <entry>
+    <title>領収書のデジタル化</title>
+    <link href="https://jiujitsu.co.jp/ryoshusho/"/>
+    <id>tag:jiujitsu.co.jp,2026-09-17:ryoshusho</id>
+    <updated>2026-09-17T09:00:00+09:00</updated>
+    <summary>紙の領収書をスキャンして、カレンダーの予定と突き合わせて「誰と・何のために」まで画像に焼き込む手順をまとめました。</summary>
+  </entry>
+  <entry>
+    <title>道場が使える補助金</title>
+    <link href="https://jiujitsu.co.jp/hojokin/"/>
+    <id>tag:jiujitsu.co.jp,2026-09-17:hojokin</id>
+    <updated>2026-09-17T09:00:00+09:00</updated>
+    <summary>マットの入れ替えや予約システムの導入に使える補助金の一覧です。国の公開データから毎朝自動で集めて、都道府県別に絞り込めます。</summary>
+  </entry>
+  <entry>
+    <title>村田家のAmazon履歴</title>
+    <link href="https://jiujitsu.co.jp/muratake/"/>
+    <id>tag:jiujitsu.co.jp,2026-09-02:muratake</id>
+    <updated>2026-09-02T09:00:00+09:00</updated>
+    <summary>よく聞かれる「それどこの？」に答えるための、実際に使っている調味料と洗剤の一覧です。</summary>
+  </entry>
+  <entry>
+    <title>良蔵語録</title>
+    <link href="https://jiujitsu.co.jp/goroku/"/>
+    <id>tag:jiujitsu.co.jp,2026-09-02:goroku</id>
+    <updated>2026-09-02T09:00:00+09:00</updated>
+    <summary>村田良蔵が道場で言い続けてきた言葉を集めました。</summary>
+  </entry>
+  <entry>
+    <title>大会出場スケジュール</title>
+    <link href="https://jiujitsu.co.jp/tournament/"/>
+    <id>tag:jiujitsu.co.jp,2026-08-31:tournament</id>
+    <updated>2026-08-31T09:00:00+09:00</updated>
+    <summary>選手ごとの試合番号・マット・結果を、大会当日そのまま追える一覧です。</summary>
+  </entry>
+  <entry>
+    <title>はじめての大会ガイド</title>
+    <link href="https://jiujitsu.co.jp/hajimete/"/>
+    <id>tag:jiujitsu.co.jp,2026-08-28:hajimete</id>
+    <updated>2026-08-28T09:00:00+09:00</updated>
+    <summary>エントリーから前日の過ごし方、当日の計量、試合のマナーまで。初出場のメンバーに毎回伝えてきたノウハウを1ページに。</summary>
+  </entry>
+  <entry>
+    <title>全国柔術道場ガイド</title>
+    <link href="https://jiujitsu.co.jp/dojo/"/>
+    <id>tag:jiujitsu.co.jp,2026-08-28:dojo</id>
+    <updated>2026-08-28T09:00:00+09:00</updated>
+    <summary>日本全国の柔術道場を、地図と検索で探せるデータベースです。</summary>
+  </entry>
+  <entry>
+    <title>月次シフト表</title>
+    <link href="https://jiujitsu.co.jp/shift/"/>
+    <id>tag:jiujitsu.co.jp,2026-08-28:shift</id>
+    <updated>2026-08-28T09:00:00+09:00</updated>
+    <summary>2店舗のジムのシフトを、スマホで見やすいタイムラインにしました。</summary>
+  </entry>
+</feed>

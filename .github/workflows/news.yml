@@ -1,0 +1,67 @@
+name: 新着のお知らせ
+
+# data/news.json にお知らせを1件足してpushすると、
+# トップページの新着欄と feed.xml を作り直し、LINE公式アカウントへ1通配信する。
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/news.json"
+      - "tools/news/**"
+      - ".github/workflows/news.yml"
+  pull_request:
+    paths:
+      - "data/news.json"
+      - "tools/news/**"
+      - ".github/workflows/news.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: news
+
+jobs:
+  news:
+    name: 新着欄とLINE配信
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: テスト（ネットワーク不要）
+        run: python3 tools/news/test_build.py
+
+      - name: 新着欄と feed.xml を作り直す
+        if: github.event_name != 'pull_request'
+        run: python3 tools/news/build.py
+
+      - name: LINEへ配信
+        if: github.event_name != 'pull_request'
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+        run: python3 tools/news/notify_line.py --send
+
+      - name: 変更があればコミット
+        if: github.event_name != 'pull_request'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add feed.xml index.html data/news-sent.json
+          if git diff --staged --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "chore(news): 新着欄と配信記録を更新"
+            git push
+          fi
+
+      - name: サマリ
+        if: always()
+        run: |
+          {
+            echo "### 新着のお知らせ"
+            echo ""
+            echo "- 掲載件数: $(python3 -c "import json;print(len(json.load(open('data/news.json'))['entries']))") 件"
+            echo "- https://jiujitsu.co.jp/"
+            echo "- https://jiujitsu.co.jp/feed.xml"
+          } >> "$GITHUB_STEP_SUMMARY"
