@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+
+<title>組織図 — BUTTI ON LINE</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --ol: #274a7a; --yawara: #4d3070; --sweep: #5a3c22; --tamago: #c9a227;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 22px 80px; }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(28px, 6vw, 40px); color: var(--ink); letter-spacing: .2em; line-height: 1.4; margin: 10px 0 0; }
+  .lede { font-size: 13px; color: var(--faint); margin: 14px 0 0; letter-spacing: .04em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: var(--ol); } .rank .p { background: var(--yawara); }
+  .rank .br { background: var(--sweep); } .rank .k { background: var(--ink); }
+
+  /* ── 代表 ───────────────────────── */
+  .chart { margin-top: 56px; }
+  .head-box { max-width: 380px; margin: 0 auto; border: 1px solid var(--line); border-top: 3px solid var(--ink); background: var(--panel); padding: 22px 24px; text-align: center; }
+  .head-box .role { font-size: 11px; letter-spacing: .18em; color: var(--gold); }
+  .head-box .name { font-family: var(--mincho); font-weight: 700; font-size: 22px; color: var(--ink); letter-spacing: .12em; margin: 6px 0 2px; }
+  .head-box .kana { font-size: 11px; color: var(--faint); letter-spacing: .1em; }
+  .head-box .duty { font-size: 12.5px; line-height: 1.85; margin: 12px 0 0; text-align: left; }
+
+  .stem { width: 1px; height: 36px; background: var(--line); margin: 0 auto; }
+
+  /* ── 2部門 ──────────────────────── */
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; position: relative; padding-top: 28px; }
+  .cols::before { content: ""; position: absolute; top: 0; left: 25%; right: 25%; height: 1px; background: var(--line); }
+  .col { position: relative; }
+  .col::before { content: ""; position: absolute; top: -28px; left: 50%; width: 1px; height: 28px; background: var(--line); }
+
+  .dept { border: 1px solid var(--line); background: var(--panel); padding: 18px 20px; text-align: center; }
+  .dept.dojo { border-top: 3px solid var(--ol); }
+  .dept.office { border-top: 3px solid var(--gold-hi); }
+  .dept .label { font-size: 11px; letter-spacing: .2em; color: var(--gold); }
+  .dept .ja { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: .14em; margin: 4px 0 12px; }
+  .dept .name { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .1em; }
+  .dept .kana { font-size: 11px; color: var(--faint); letter-spacing: .1em; }
+  .dept .duty { font-size: 12.5px; line-height: 1.85; margin: 12px 0 0; text-align: left; }
+
+  /* ── 拠点リスト（ツリー）───────────── */
+  .units { list-style: none; margin: 0; padding: 0 0 0 20px; position: relative; }
+  .units::before { content: ""; position: absolute; left: 0; top: -18px; bottom: 28px; width: 1px; background: var(--line); }
+  .units > li { position: relative; margin-top: 18px; }
+  .units > li::before { content: ""; position: absolute; left: -20px; top: 26px; width: 20px; height: 1px; background: var(--line); }
+
+  .unit { border: 1px solid var(--line); border-left: 3px solid var(--faint); background: var(--paper); padding: 14px 16px; }
+  .unit.ol { border-left-color: var(--ol); }
+  .unit.yawara { border-left-color: var(--yawara); }
+  .unit.sweep { border-left-color: var(--sweep); }
+  .unit.tamago { border-left-color: var(--tamago); }
+  .unit .site { font-size: 11px; letter-spacing: .16em; color: var(--gold); font-weight: 500; }
+  .unit .place { font-size: 11px; color: var(--faint); letter-spacing: .08em; margin-left: .5em; }
+  .unit .person { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .08em; margin: 5px 0 0; }
+  .unit .person .kana { font-family: var(--gothic); font-weight: 400; font-size: 11px; color: var(--faint); letter-spacing: .08em; margin-left: .6em; }
+  .unit ul { list-style: none; margin: 9px 0 0; padding: 0; font-size: 12.5px; line-height: 1.8; }
+  .unit ul li { padding-left: 1em; position: relative; }
+  .unit ul li::before { content: "・"; position: absolute; left: -.1em; color: var(--gold); }
+
+  .tbd { display: inline-block; font-family: var(--gothic); font-weight: 500; font-size: 10px; letter-spacing: .1em; color: #9a6b1f; background: #fdf5e0; border: 1px solid #ecdcae; border-radius: 2px; padding: 1px 6px; margin-left: .6em; vertical-align: 2px; }
+  .blank { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--faint); letter-spacing: .08em; margin: 5px 0 0; }
+
+  .note { margin-top: 56px; border: 1px solid var(--line); background: var(--panel); padding: 20px 22px; font-size: 12.5px; line-height: 1.95; }
+  .note h2 { font-family: var(--mincho); font-size: 14px; color: var(--ink); letter-spacing: .12em; margin: 0 0 10px; }
+  .note ul { list-style: none; margin: 0; padding: 0; }
+  .note li { padding-left: 1.1em; position: relative; }
+  .note li::before { content: "・"; position: absolute; left: 0; color: var(--gold); }
+
+  footer { margin-top: 64px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 720px) {
+    .cols { grid-template-columns: 1fr; gap: 0; }
+    .cols::before { display: none; }
+    .col + .col { margin-top: 36px; }
+    .col::before { display: none; }
+    .col + .col::after { content: ""; position: absolute; top: -36px; left: 50%; width: 1px; height: 36px; background: var(--line); }
+  }
+</style>
+
+<header>
+  <p class="brand">ORGANIZATION</p>
+  <h1>組織図</h1>
+  <p class="lede">株式会社BUTTI ON LINE ／ 2026年9月時点</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <div class="chart">
+
+    <div class="head-box">
+      <p class="role">代表取締役</p>
+      <p class="name">村田 良蔵</p>
+      <p class="kana">むらた りょうぞう</p>
+      <p class="duty">全体統括／指導方針の決定。SJJJF（スポーツ柔術日本連盟）代表理事として大会・連盟対応。対外的な顔として、メディア・協賛・提携の窓口。</p>
+    </div>
+
+    <div class="stem" aria-hidden="true"></div>
+
+    <div class="cols">
+
+      <!-- 道場部門 -->
+      <div class="col">
+        <div class="dept dojo">
+          <p class="label">DOJO</p>
+          <p class="ja">道場部門</p>
+          <p class="name">濱田 真亮</p>
+          <p class="kana">はまだ しんすけ</p>
+          <p class="duty">道場部門の統括。各拠点のクラス編成・指導内容の品質管理、インストラクターの育成。自身もYAWARAで柔術パーソナルを担当。</p>
+        </div>
+
+        <ul class="units">
+          <li>
+            <div class="unit ol">
+              <p><span class="site">OVER LIMIT</span><span class="place">札幌</span></p>
+              <p class="person">春<span class="tbd">フルネーム要確認</span></p>
+              <ul>
+                <li>札幌店の指導・現場運営</li>
+                <li>入会・退会・休会の会員対応</li>
+                <li>店頭決済（Airペイ／PayPay）と日次売上の管理</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="unit yawara">
+              <p><span class="site">YAWARA</span><span class="place">原宿</span></p>
+              <p class="person">野島 繁昭<span class="kana">のじま しげあき</span></p>
+              <ul>
+                <li>原宿店の店舗運営全般</li>
+                <li>内装・設備トラブルの窓口（不動産・施工会社との調整）</li>
+                <li>法人契約の利用実績とりまとめ・請求内訳の確認</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="unit sweep">
+              <p><span class="site">SWEEP</span><span class="place">北参道</span></p>
+              <p class="person">廣鰭 翔大<span class="kana">ひろはた やすひろ</span><span class="tbd">要確認</span></p>
+              <ul>
+                <li>北参道店のクラス運営・指導</li>
+                <li>パーソナルトレーニングの担当（SWEEP・YAWARA 両店）</li>
+                <li>体験・見学からの入会導線</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="unit tamago">
+              <p><span class="site">TAMAGO</span><span class="place">スタジオ</span></p>
+              <p class="person">河野 裕也<span class="kana">こうの ゆうや</span></p>
+              <ul>
+                <li>新拠点TAMAGOの立ち上げ・運営</li>
+                <li>クラス設計とパーソナル指導</li>
+                <li>スペース貸し・物販まわりの現場運用</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 運営事務 -->
+      <div class="col">
+        <div class="dept office">
+          <p class="label">BACK OFFICE</p>
+          <p class="ja">運営事務</p>
+          <p class="name">村田 亜衣</p>
+          <p class="kana">むらた あい</p>
+          <p class="duty">バックオフィスの統括。経理・請求（請求書発行、法人分の集計）、契約・法務まわりの窓口、備品の仕入れ、社内ツールとWebサイトの運用。</p>
+        </div>
+
+        <ul class="units">
+          <li>
+            <div class="unit ol">
+              <p><span class="site">OVER LIMIT</span><span class="place">札幌</span></p>
+              <p class="blank">担当<span class="tbd">未定</span></p>
+              <ul>
+                <li>会員管理（hacomono）・月会費の請求</li>
+                <li>札幌店の収支表のとりまとめ</li>
+                <li>シフト・備品発注</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="unit yawara">
+              <p><span class="site">YAWARA</span><span class="place">原宿</span></p>
+              <p class="blank">担当<span class="tbd">未定</span></p>
+              <ul>
+                <li>会員管理・月会費の請求</li>
+                <li>法人契約分の集計と請求書の送付</li>
+                <li>シフト・備品発注・領収書のデジタル化</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="unit sweep">
+              <p><span class="site">SWEEP</span><span class="place">北参道</span></p>
+              <p class="blank">担当<span class="tbd">未定</span></p>
+              <ul>
+                <li>会員管理・月会費の請求</li>
+                <li>決済（Square／PayPay）の消込</li>
+                <li>シフト・備品発注</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="unit tamago">
+              <p><span class="site">TAMAGO</span><span class="place">スタジオ</span></p>
+              <p class="blank">担当<span class="tbd">未定</span></p>
+              <ul>
+                <li>会員管理・サブスクの請求</li>
+                <li>グッズ／スペース貸しの売上管理</li>
+                <li>シフト・備品発注</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="note">
+    <h2>この図について</h2>
+    <ul>
+      <li>役割は、これまでのやりとり（請求・設備・パーソナル担当・拠点別の収支など）から拾って書き起こした<strong>暫定版</strong>です。実態と違うところは直してください。</li>
+      <li>「要確認」は名前の確証が取れていないところ、「未定」はこれから決めるところです。</li>
+      <li>道場部門と運営事務は、拠点ごとに1対1で対応する形にしています。</li>
+    </ul>
+  </div>
+
+  <footer>
+    <a href="/">← jiujitsu.co.jp トップへ</a><br>
+    © 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+
+<a href="/" style="position:fixed;right:14px;bottom:14px;z-index:99;background:#17140d;color:#e8c95e;font-size:11px;letter-spacing:.1em;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);font-family:sans-serif;">TOPへ</a>
+</html>
