@@ -315,7 +315,10 @@ def to_records(items, config, now):
             "hints": use_hints(item, config, purposes),
             "url": portal_url(item, config),
         })
-    records.sort(key=lambda r: (r["days"] if r["days"] is not None else 10**6, -r["score"]))
+    # 「使いどころ」を書けた案件を先に出す。並び順を変えてもこれは変わらない。
+    records.sort(key=lambda r: (not r["hints"],
+                                r["days"] if r["days"] is not None else 10**6,
+                                -r["score"]))
     return records, dropped
 
 
@@ -519,12 +522,17 @@ function matches(r) {{
   return true;
 }}
 
+// 「使いどころ」を書けた案件を先に出す。どの並び順でも先頭に来る。
+function hintedFirst(a, b) {{
+  return (b.hints.length ? 1 : 0) - (a.hints.length ? 1 : 0);
+}}
+
 function sortRows(rows) {{
   const mode = sortEl.value;
   const copy = rows.slice();
-  if (mode === 'score') copy.sort((a, b) => b.score - a.score || (a.days ?? 1e6) - (b.days ?? 1e6));
-  else if (mode === 'amount') copy.sort((a, b) => (Number(b.max) || 0) - (Number(a.max) || 0));
-  else copy.sort((a, b) => (a.days ?? 1e6) - (b.days ?? 1e6) || b.score - a.score);
+  if (mode === 'score') copy.sort((a, b) => hintedFirst(a, b) || b.score - a.score || (a.days ?? 1e6) - (b.days ?? 1e6));
+  else if (mode === 'amount') copy.sort((a, b) => hintedFirst(a, b) || (Number(b.max) || 0) - (Number(a.max) || 0));
+  else copy.sort((a, b) => hintedFirst(a, b) || (a.days ?? 1e6) - (b.days ?? 1e6) || b.score - a.score);
   return copy;
 }}
 
