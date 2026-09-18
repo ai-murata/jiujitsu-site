@@ -1,119 +1,166 @@
 {
-  "metadata": {"type": "fixture", "note": "jGrants APIの応答を模した固定データ。ネットワークなしでの検証用。"},
+  "metadata": {
+    "type": "fixture",
+    "note": "jGrants APIの応答を模した固定データ。ネットワークなしでの検証用。",
+    "shape": "result = 一覧API（GET /subsidies）の返り。実APIは id/title/name/institution_name/subsidy_max_limit/acceptance_*/target_area_search/target_number_of_employees だけを返し、利用目的・業種・キャッチコピーは返さない。name は S-00007152 のような内部コード。institution_name は実施機関名ではなく制度の通称。details = 詳細API（GET /subsidies/id/{id}）の返りを id 引きにしたもの。"
+  },
   "result": [
     {
       "id": "fx-jizokuka-001",
       "title": "小規模事業者持続化補助金（一般型）",
-      "name": "全国商工会連合会",
-      "subsidy_catch_phrase": "販路開拓の取組を支援します",
+      "name": "S-00001000",
       "subsidy_max_limit": "500000",
       "acceptance_start_datetime": "2099-01-06T00:00:00+09:00",
       "acceptance_end_datetime": "2099-12-26T17:00:00+09:00",
       "target_area_search": "全国",
       "target_number_of_employees": "5名以下 / 20名以下",
-      "use_purpose": "販路拡大・海外展開をしたい / 新たな事業を行いたい",
-      "industry": "生活関連サービス業、娯楽業 / 教育、学習支援業"
+      "institution_name": "持続化補助金"
     },
     {
       "id": "fx-tokyo-002",
       "title": "東京都 中小企業デジタルツール導入促進支援事業",
-      "name": "東京都中小企業振興公社",
-      "subsidy_catch_phrase": "IT導入による生産性向上を後押し",
+      "name": "S-00001001",
       "subsidy_max_limit": "1000000",
       "acceptance_end_datetime": "2099-11-30T17:00:00+09:00",
       "target_area_search": "東京都",
       "target_number_of_employees": "300名以下",
-      "use_purpose": "設備整備・IT導入をしたい",
-      "industry": "サービス業（他に分類されないもの）"
+      "institution_name": "中小企業デジタルツール導入促進支援事業"
     },
     {
       "id": "fx-osaka-003",
       "title": "大阪府 空き店舗活用にぎわい創出補助金",
-      "name": "大阪府",
-      "subsidy_catch_phrase": "商店街の空き店舗への出店を支援",
+      "name": "S-00001002",
       "subsidy_max_limit": "3000000",
       "acceptance_end_datetime": "2099-10-31T17:00:00+09:00",
       "target_area_search": "大阪府",
       "target_number_of_employees": "20名以下",
-      "use_purpose": "まちづくり・地域振興支援がほしい / 新たな事業を行いたい",
-      "industry": "サービス業（他に分類されないもの）"
+      "institution_name": "空き店舗活用にぎわい創出補助金"
     },
     {
       "id": "fx-kansai-004",
       "title": "近畿地方 スポーツ施設省エネ設備更新支援",
-      "name": "近畿経済産業局",
+      "name": "S-00001003",
       "subsidy_max_limit": "8000000",
       "acceptance_end_datetime": "2099-09-30T17:00:00+09:00",
       "target_area_search": "近畿地方",
       "target_number_of_employees": "100名以下",
-      "use_purpose": "エコ・SDGs活動支援がほしい / 設備整備・IT導入をしたい",
-      "industry": "生活関連サービス業、娯楽業"
+      "institution_name": "スポーツ施設省エネ設備更新支援"
     },
     {
       "id": "fx-sports-005",
       "title": "地域スポーツ活動推進助成（子ども向け教室）",
-      "name": "公益財団法人 東京都スポーツ文化事業団",
-      "subsidy_catch_phrase": "地域の健康づくり・運動教室を支援",
+      "name": "S-00001004",
       "subsidy_max_limit": "2000000",
       "acceptance_end_datetime": "2099-07-31T17:00:00+09:00",
       "target_area_search": "東京都 / 関東・甲信越地方",
       "target_number_of_employees": "20名以下",
-      "use_purpose": "スポーツ・文化支援がほしい / まちづくり・地域振興支援がほしい",
-      "industry": "生活関連サービス業、娯楽業"
+      "institution_name": "地域スポーツ活動推進助成"
     },
     {
       "id": "fx-hokkaido-006",
       "title": "北海道 人材確保・職場環境改善支援事業",
-      "name": "北海道",
+      "name": "S-00001005",
       "subsidy_max_limit": "1500000",
       "acceptance_end_datetime": "2099-08-20T17:00:00+09:00",
       "target_area_search": "北海道",
       "target_number_of_employees": "50名以下",
-      "use_purpose": "雇用・職場環境を改善したい / 人材育成を行いたい",
-      "industry": "サービス業（他に分類されないもの）"
+      "institution_name": "人材確保・職場環境改善支援事業"
     },
     {
       "id": "fx-nogyo-007",
       "title": "強い農業づくり総合支援交付金",
-      "name": "農林水産省",
+      "name": "S-00001006",
       "subsidy_max_limit": "50000000",
       "acceptance_end_datetime": "2099-09-30T17:00:00+09:00",
       "target_area_search": "全国",
       "target_number_of_employees": "従業員数の制約なし",
-      "use_purpose": "設備整備・IT導入をしたい",
-      "industry": "農業、林業"
+      "institution_name": "強い農業づくり交付金"
     },
     {
       "id": "fx-large-008",
       "title": "大規模事業者向け脱炭素投資促進事業",
-      "name": "経済産業省",
+      "name": "S-00001007",
       "subsidy_max_limit": "1500000000",
       "acceptance_end_datetime": "2099-08-31T17:00:00+09:00",
       "target_area_search": "全国",
       "target_number_of_employees": "901名以上",
-      "use_purpose": "エコ・SDGs活動支援がほしい",
-      "industry": "製造業"
+      "institution_name": "脱炭素投資促進事業"
     },
     {
       "id": "fx-closed-009",
       "title": "令和5年度 終了済み補助金",
-      "name": "某省庁",
+      "name": "S-00001008",
       "subsidy_max_limit": "1000000",
       "acceptance_end_datetime": "2020-03-31T17:00:00+09:00",
       "target_area_search": "全国",
       "target_number_of_employees": "従業員数の制約なし",
-      "use_purpose": "新たな事業を行いたい",
-      "industry": "サービス業（他に分類されないもの）"
+      "institution_name": "終了済み補助金"
     },
     {
       "id": "fx-noarea-010",
       "title": "事業承継・引継ぎ補助金",
-      "name": "中小企業庁",
+      "name": "S-00001009",
       "subsidy_max_limit": "6000000",
       "acceptance_end_datetime": "2099-06-30T17:00:00+09:00",
       "target_number_of_employees": "従業員数の制約なし",
-      "use_purpose": "事業を引き継ぎたい",
-      "industry": "サービス業（他に分類されないもの）"
+      "institution_name": "事業承継補助金"
     }
-  ]
+  ],
+  "details": {
+    "fx-jizokuka-001": {
+      "subsidy_catch_phrase": "販路開拓の取組を支援します",
+      "use_purpose": "販路拡大・海外展開をしたい / 新たな事業を行いたい",
+      "front_subsidy_detail_page_url": "https://www.jgrants-portal.go.jp/subsidy/fx-jizokuka-001",
+      "industry": "生活関連サービス業、娯楽業 / 教育、学習支援業"
+    },
+    "fx-tokyo-002": {
+      "subsidy_catch_phrase": "IT導入による生産性向上を後押し",
+      "use_purpose": "設備整備・IT導入をしたい",
+      "industry": "農業、林業 / 漁業 / 鉱業、採石業、砂利採取業 / 建設業 / 製造業 / 電気・ガス・熱供給・水道業 / 情報通信業 / 運輸業、郵便業 / 卸売業、小売業 / 金融業、保険業 / 不動産業、物品賃貸業 / 学術研究、専門・技術サービス業 / 宿泊業、飲食サービス業 / 生活関連サービス業、娯楽業 / 教育、学習支援業 / 医療、福祉 / 複合サービス事業 / サービス業（他に分類されないもの） / 公務（他に分類されるものを除く） / 分類不能の産業",
+      "front_subsidy_detail_page_url": "https://www.jgrants-portal.go.jp/subsidy/fx-tokyo-002"
+    },
+    "fx-osaka-003": {
+      "subsidy_catch_phrase": "商店街の空き店舗への出店を支援",
+      "use_purpose": "まちづくり・地域振興支援がほしい / 新たな事業を行いたい",
+      "industry": "サービス業（他に分類されないもの）",
+      "front_subsidy_detail_page_url": "https://www.jgrants-portal.go.jp/subsidy/fx-osaka-003"
+    },
+    "fx-kansai-004": {
+      "use_purpose": "エコ・SDGs活動支援がほしい / 設備整備・IT導入をしたい",
+      "industry": "生活関連サービス業、娯楽業",
+      "front_subsidy_detail_page_url": "https://www.jgrants-portal.go.jp/subsidy/fx-kansai-004"
+    },
+    "fx-sports-005": {
+      "subsidy_catch_phrase": "地域の健康づくり・運動教室を支援",
+      "use_purpose": "スポーツ・文化支援がほしい / まちづくり・地域振興支援がほしい",
+      "industry": "生活関連サービス業、娯楽業",
+      "front_subsidy_detail_page_url": "https://www.jgrants-portal.go.jp/subsidy/fx-sports-005"
+    },
+    "fx-hokkaido-006": {
+      "use_purpose": "雇用・職場環境を改善したい / 人材育成を行いたい",
+      "industry": "サービス業（他に分類されないもの）",
+      "front_subsidy_detail_page_url": "https://www.jgrants-portal.go.jp/subsidy/fx-hokkaido-006"
+    },
+    "fx-nogyo-007": {
+      "use_purpose": "設備整備・IT導入をしたい",
+      "industry": "農業、林業",
+      "front_subsidy_detail_page_url": "https://www.jgrants-portal.go.jp/subsidy/fx-nogyo-007"
+    },
+    "fx-large-008": {
+      "use_purpose": "エコ・SDGs活動支援がほしい",
+      "industry": "製造業",
+      "front_subsidy_detail_page_url": "https://www.jgrants-portal.go.jp/subsidy/fx-large-008",
+      "institution_name": "脱炭素投資促進事業"
+    },
+    "fx-closed-009": {
+      "use_purpose": "新たな事業を行いたい",
+      "industry": "サービス業（他に分類されないもの）",
+      "front_subsidy_detail_page_url": "https://www.jgrants-portal.go.jp/subsidy/fx-closed-009"
+    },
+    "fx-noarea-010": {
+      "use_purpose": "事業を引き継ぎたい",
+      "industry": "サービス業（他に分類されないもの）",
+      "front_subsidy_detail_page_url": "https://www.jgrants-portal.go.jp/subsidy/fx-noarea-010"
+    }
+  }
 }
