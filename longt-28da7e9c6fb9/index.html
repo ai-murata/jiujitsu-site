@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>ロンT デザイン指示書</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --bg: #0e0e0f; --panel: #17171a; --line: #2a2a2f;
+    --ink: #f4f2ec; --body-c: #c9c6bd; --faint: #8a877e;
+    --accent: #3d6fd8; --warn: #e0b341;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--body-c); font-family: var(--gothic); line-height: 1.85; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px 80px; }
+
+  header { text-align: center; padding: 56px 0 32px; }
+  .brand { font-family: Oswald, sans-serif; font-size: 12px; letter-spacing: .3em; color: var(--faint); }
+  h1 { font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: clamp(30px, 7vw, 52px); color: var(--ink); letter-spacing: .04em; line-height: 1.15; margin: 10px 0 8px; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; }
+
+  h2 { font-size: 18px; color: var(--ink); letter-spacing: .12em; margin: 56px 0 14px; display: flex; align-items: center; gap: 14px; }
+  h2 .no { font-family: Anton, sans-serif; font-weight: 400; color: var(--accent); font-size: 22px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  .mock { display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; }
+  .mock figure { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .mock figcaption { font-size: 12px; color: var(--faint); text-align: center; margin-top: 8px; }
+  .mock svg, .mock img { display: block; width: 100%; height: auto; }
+  @media (max-width: 640px) { .mock { grid-template-columns: 1fr; } }
+
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  th { width: 9em; color: var(--faint); font-weight: 500; white-space: nowrap; }
+  td { color: var(--ink); }
+  .copy { font-family: Oswald, sans-serif; letter-spacing: .04em; white-space: pre-line; }
+  .jp { font-weight: 700; }
+  .note { font-size: 12px; color: var(--faint); display: block; margin-top: 4px; }
+
+  .files { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+  .files a { display: block; padding: 14px 16px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; color: var(--ink); text-decoration: none; }
+  .files a:hover { border-color: var(--accent); }
+  .files b { display: block; font-size: 14px; }
+  .files span { font-size: 12px; color: var(--faint); }
+
+  .checks { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .checks li { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--warn); border-radius: 8px; padding: 12px 14px; font-size: 14px; }
+  .checks b { color: var(--ink); }
+
+  pre { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; font-size: 13px; line-height: 1.8; white-space: pre-wrap; color: var(--ink); font-family: var(--gothic); margin: 0; }
+  button { margin-top: 10px; font: inherit; font-size: 13px; padding: 8px 16px; border-radius: 8px; border: 1px solid var(--accent); background: transparent; color: var(--ink); cursor: pointer; }
+  button:hover { background: var(--accent); }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="brand">DESIGN SPEC · LONG SLEEVE TEE</div>
+    <h1>THE SHITSUKOI<br>SWITCH HANDLER</h1>
+    <p class="lede">業者入稿用のデザイン指示書兼レイアウト設計図です。</p>
+  </header>
+
+  <div class="mock">
+    <figure>
+      <svg viewBox="0 0 1000 900" role="img" aria-label="ブラックのロンTにフロントと右袖のプリントを配置したモックアップ">
+        <!-- 1unit ≒ 1mm（M サイズ想定：身幅 520mm） -->
+        <path d="M420 40 Q500 100 580 40 L760 70 L920 760 L815 795 L760 310 L760 865 L240 865 L240 310 L185 795 L80 760 L240 70 Z"
+              fill="#101012" stroke="#3a3a40" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M420 40 Q500 100 580 40" fill="none" stroke="#2a2a2e" stroke-width="16"/>
+        <path d="M80 760 L185 795 M815 795 L920 760" stroke="#2a2a2e" stroke-width="30"/>
+        <!-- フロント 280×350mm：襟下 80mm -->
+        <image href="front_layout_300dpi.png" x="360" y="140" width="280" height="350"/>
+        <!-- 右袖（着用者の右腕＝正面から見て左の袖）80×420mm -->
+        <image href="sleeve_300dpi.png" x="-40" y="-210" width="80" height="420" transform="translate(188 480) rotate(10)"/>
+      </svg>
+      <figcaption>正面モック（右袖は着用者の右腕＝正面から見て左）</figcaption>
+    </figure>
+    <figure>
+      <img src="front_layout_300dpi.png" alt="フロントのレイアウト。点線枠がイラストエリア" style="background:#000;border-radius:6px">
+      <figcaption>フロント版面 280×350mm（点線はガイドで印刷しない）</figcaption>
+    </figure>
+  </div>
+
+  <h2><span class="no">01</span>ベースウェア</h2>
+  <table>
+    <tr><th>アイテム</th><td>ロングスリーブTシャツ（袖口リブあり推奨）</td></tr>
+    <tr><th>ボディカラー</th><td>ブラック</td></tr>
+    <tr><th>プリント箇所</th><td>フロント（胸中央）＋右袖の2か所</td></tr>
+    <tr><th>加工方法</th><td>イラスト部がフルカラーのため、<b>フルカラー加工（DTF／インクジェット、白下地あり）</b>
+      <span class="note">イラストを白1色にする場合は、シルクスクリーン白1色でも可。</span></td></tr>
+  </table>
+
+  <h2><span class="no">02</span>フロント（胸中央）</h2>
+  <table>
+    <tr><th>版面サイズ</th><td>横 280 × 縦 350mm、身頃の左右中央に配置。襟リブ下 約80mm から開始。</td></tr>
+    <tr><th>① イラスト</th><td>横 240 × 縦 185mm（版面上部）。青道着の小西さん（左側・右向き）と黒道着の相手選手（右側・左向き）が対峙して構え合うイラスト。
+      <span class="note">小西さんのポーズは参考写真を使います：左足を前に出し、腰を落として両手を顔の前に構えた姿勢。写真は別送です。</span></td></tr>
+    <tr><th>② ネーム・所属</th><td><span class="copy">MASAHIRO KONISHI
+      OVER LIMIT BJJ</span>
+      ＋ 白帯アイコン（イラスト下部中央に重ねる）
+      <span class="note">書体：Anton（名前）／Oswald SemiBold（所属）。色は白。</span></td></tr>
+    <tr><th>③ タイトル</th><td><span class="copy">THE SHITSUKOI ［電源OFFアイコン］
+      SWITCH HANDLER</span>
+      <span class="note">書体：Anton。色は白。📴の絵文字は印刷できないため、電源OFFの携帯アイコンとしてベクター化済みです。</span></td></tr>
+    <tr><th>④ メッセージ</th><td><span class="copy">HE IS AN OUTSTANDING LAWYER
+      BECAUSE HE COMMITS TO RESULTS
+      MORE PERSISTENTLY THAN ANY OTHER.</span>
+      <span class="note">書体：Oswald SemiBold（Futura Bold／Helvetica Bold の代替、Impact 系）。色は白。中央揃え。</span></td></tr>
+  </table>
+
+  <h2><span class="no">03</span>右袖</h2>
+  <table>
+    <tr><th>位置</th><td>着用者の<b>右腕</b>の外側、前腕〜上腕。正面から見ると向かって左の袖です。</td></tr>
+    <tr><th>版面サイズ</th><td>横 80 × 縦 420mm（袖に沿って縦長に配置）
+      <span class="note">袖にプリントできる範囲は業者とボディによって違います。縮小が必要なら縦横比を保って縮小してください。</span></td></tr>
+    <tr><th>向き</th><td>手首側から肩に向かって読める向き（文字列を反時計回りに90°回転）。2行並び。</td></tr>
+    <tr><th>テキスト</th><td><span class="copy">SILENCE SWITCH: GRAB HERE STRONGLY</span><br>
+      <span class="jp">ここを強く掴むと黙ります</span>
+      <span class="note">書体：Anton（英字）／Noto Sans JP Black（和文）。白1色。</span></td></tr>
+  </table>
+
+  <h2><span class="no">04</span>入稿データ</h2>
+  <div class="files">
+    <a href="front_print_300dpi.png" download><b>front_print_300dpi.png</b><span>フロント入稿用・透過PNG 3307×4134px（ガイドなし・文字とアイコン）</span></a>
+    <a href="front_layout_300dpi.png" download><b>front_layout_300dpi.png</b><span>フロント配置確認用（イラスト枠ガイド付き）</span></a>
+    <a href="sleeve_300dpi.png" download><b>sleeve_300dpi.png</b><span>右袖入稿用・透過PNG 945×4961px</span></a>
+    <a href="front.svg" download><b>front.svg</b><span>フロント編集用ベクター（Illustrator／Canva）</span></a>
+    <a href="sleeve.svg" download><b>sleeve.svg</b><span>右袖編集用ベクター</span></a>
+  </div>
+  <p class="note">PNG はすべて原寸・300dpi・背景透過です。SVG を編集する場合は Anton、Oswald、Noto Sans JP（いずれも Google Fonts、商用可）を入れてから開き、入稿前にアウトライン化してください。イラストが完成したら、front_print_300dpi.png の上部 240×185mm の枠内に重ねて1枚にまとめます。</p>
+
+  <h2><span class="no">05</span>発注前の確認事項</h2>
+  <ul class="checks">
+    <li><b>帯の色：</b>参考写真では黄×緑の帯ですが、指示では「白帯」になっています。イラストと帯アイコンをどちらの色にするか決めてください。</li>
+    <li><b>イラストの制作者：</b>対峙イラストはまだありません。業者のイラスト作成オプションを使うか、イラストレーターに依頼する必要があります。</li>
+    <li><b>ご本人の了承：</b>氏名・所属・似顔イラストを使うため、小西さんと OVER LIMIT BJJ に事前に確認してください。</li>
+    <li><b>袖のプリント範囲：</b>業者によっては袖に 80×420mm が入らないことがあります。発注画面で上限を確認してください。</li>
+  </ul>
+
+  <h2><span class="no">06</span>発注メモ（コピーして業者へ）</h2>
+  <pre id="memo">【ロンT プリント発注内容】
+■ボディ：ロングスリーブTシャツ（袖口リブあり）／ブラック
+■プリント①：フロント胸中央　280×350mm　フルカラー（白下地あり）
+　データ：front_print_300dpi.png（原寸・300dpi・透過）
+　※上部 240×185mm にイラストを配置（イラストは別途入稿／作成依頼）
+■プリント②：右袖（着用者の右腕・外側）　80×420mm　白1色
+　データ：sleeve_300dpi.png（原寸・300dpi・透過）
+　向き：手首側から肩に向かって読める向き
+■備考：袖のプリント範囲の上限が 80×420mm 未満の場合は、縦横比を保ったまま縮小してください。</pre>
+  <button type="button" id="copy">発注メモをコピー</button>
+</div>
+
+<script>
+  document.getElementById('copy').addEventListener('click', async (e) => {
+    try { await navigator.clipboard.writeText(document.getElementById('memo').textContent); e.target.textContent = 'コピーしました'; }
+    catch { e.target.textContent = 'コピーできませんでした（手動で選択してください）'; }
+  });
+</script>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80mm" height="420mm" viewBox="0 0 800 4200">
+  <!-- ロンT 右袖 80×420mm / 1unit = 0.1mm / インク：白1色
+       下＝手首側、上＝肩側。文字は手首→肩へ読める向き（-90°回転） -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&amp;family=Noto+Sans+JP:wght@900&amp;display=block');
+  </style>
+  <g transform="translate(0 4200) rotate(-90)">
+    <text x="2100" y="350" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="260" fill="#fff" letter-spacing="8">SILENCE SWITCH: GRAB HERE STRONGLY</text>
+    <text x="2100" y="680" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-weight="900" font-size="230" fill="#fff" letter-spacing="20">ここを強く掴むと黙ります</text>
+  </g>
+</svg>
