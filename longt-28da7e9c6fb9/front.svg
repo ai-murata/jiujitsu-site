@@ -23,8 +23,7 @@
     <!-- 白帯アイコン -->
     <g transform="translate(1400 1760)">
       <rect x="-360" y="-34" width="720" height="68" rx="8" fill="#fff"/>
-      <rect x="170" y="-34" width="130" height="68" fill="#000"/>
-      <rect x="182" y="-22" width="106" height="44" fill="#000"/>
+      <rect x="176" y="-28" width="118" height="56" fill="#000" stroke="#fff" stroke-width="12"/>
       <rect x="-54" y="-50" width="108" height="100" rx="12" fill="#fff" stroke="#000" stroke-width="8"/>
       <path d="M-34 44 L-96 150 L-40 158 L2 50 Z" fill="#fff" stroke="#000" stroke-width="8" stroke-linejoin="round"/>
       <path d="M34 44 L96 150 L40 158 L-2 50 Z" fill="#fff" stroke="#000" stroke-width="8" stroke-linejoin="round"/>
