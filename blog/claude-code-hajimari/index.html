@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>エンジニアじゃない私が、Claude Codeと「しつこく」付き合って1か月</title>
+<meta name="description" content="インストールでつまずいた私が、濱田さんの「AIはできないって言うけど、絶対できるから」の一言で変わった話。マネージャー目線のブログ、1本目です。">
+<meta property="og:title" content="エンジニアじゃない私が、Claude Codeと「しつこく」付き合って1か月">
+<meta property="og:description" content="「AIはできないって言うけど、絶対できるから」。その一言から始まった1か月ちょっとの話。">
+<meta property="og:url" content="https://jiujitsu.co.jp/blog/claude-code-hajimari/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+  blockquote cite { display: block; margin-top: 8px; font-family: var(--gothic); font-style: normal; font-size: 12px; font-weight: 500; color: var(--faint); letter-spacing: .08em; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+</style>
+
+<header>
+  <p class="brand"><a href="/blog/">JIU LABO BLOG</a></p>
+  <h1>エンジニアじゃない私が、Claude Codeと「しつこく」付き合って1か月</h1>
+  <p class="meta"><time datetime="2026-09-27">2026.09.27</time>　村田亜衣（マネージャー）</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>こんにちは。株式会社BUTTI ON LINEでマネージャーをしている村田亜衣です。</p>
+    <p>このブログでは、柔術の道場運営のことや良蔵さんのまわりのことを、マネージャーの目線でゆるく書いていきます。1本目は、ここ1か月ちょっとで私の仕事のやり方をガラッと変えた「Claude Code（クロードコード）」の話です。</p>
+
+    <h2>インストールでつまずいて、チャットだけ使っていた</h2>
+    <p>Claude Codeと聞くと「難しそう」「エンジニアの道具でしょ」と感じる人が多いみたいです。私も最初はまったく同じでした。</p>
+    <p>正直、インストールの時点でつまずきました。なので最初のうちは、普通のClaudeのチャットで質問するくらいしか使っていませんでした。</p>
+
+    <h2>「絶対できるから、しつこくやらせて」</h2>
+    <p>変わったきっかけは、濱田さんに5時間くらい教えてもらったことです。そのとき、いちばん心に残ったのがこのアドバイスでした。</p>
+    <blockquote>
+      <p>AIは「できません」ってよく言ってくるけど、絶対できるから。しつこく「やって、やって」って戦うのがいいよ。</p>
+      <cite>― 濱田さん</cite>
+    </blockquote>
+    <p>その言葉を信じて、最初の案件に5時間くらいかけてAIと格闘しました。「できません」と返されても、言い方を変えたり、別のやり方を頼んだりして、とにかく粘りました。</p>
+    <p>そうしたら、本当にできたんです。しかも終わるころには、<b>「あ、こういうふうに言えばいいんだ」</b>というコツがなんとなくつかめていました。</p>
+
+    <h2>コツをつかんだら、やりたいことが止まらない</h2>
+    <p>一度コツがつかめると、「じゃあこれもできる？」「あれもお願いしたい」と、やりたいことが次々に出てきました。</p>
+    <p>今では、毎月の請求書や振込リストのような事務作業、大会のライブ速報、動画やデザインづくりまで、マネージャー業務のかなりの部分をClaude Codeと一緒にやっています。このサイトのページも、ぜんぶClaude Codeで作りました。ひとつひとつの話は、これからこのブログで紹介していきますね。</p>
+
+    <h2>濱田さんとの「近況報告会」</h2>
+    <p>最近は濱田さんと会うたびに、お互いの近況を報告し合っています。</p>
+    <ul class="talk">
+      <li>「今回こんなの作ったよ」</li>
+      <li>「営業の仕事をしている知り合いが、Claudeにデータを分析させて企画書まで作ったら、新しいお客さんが取れたらしいよ」</li>
+    </ul>
+    <p>こういう話を聞くと、「じゃあ私の仕事ならこう使えるかも」とまたアイデアが湧いてきて、作ったものをもう一段よくしていけます。</p>
+    <p>もちろん悩みもあります。最近いちばん困っているのは、私が自分でパソコンを触っている最中に、Claudeに頼んでおいた作業が動き出して画面が切り替わってしまうこと。「ああっ」となって、どちらの作業も止まってしまいます。ほかにも、GitHub（作ったものを保存・公開する場所）のことや、MCP（AIとほかのサービスをつなぐ仕組み）のことなど、ちょこちょこ濱田さんに相談しながら進めています。</p>
+
+    <h2>Claude Codeは、全然難しくない</h2>
+    <p>この1か月ちょっとで実感したのは、<b>Claude Codeは難しい道具ではない</b>ということです。専門知識がなくても、「こういうことがしたい」というアイデアさえあれば、どんどん形になっていきます。そして使えば使うほど、できることが増えていきます。</p>
+    <p>最近はClaude Codeの講座もたくさん見かけるようになりました。でも私がここで書きたいのは、「教える」ためのものではありません。</p>
+    <p>柔術道場を運営している方にも、普段の仕事や暮らしをちょっと楽にしたい方にも、<b>「エンジニアじゃない人が、実際にこう使っているよ」という身近な一例</b>を、同じ目線でお届けできたらと思っています。読んでくれた方の役に少しでも立てたら、それがいちばんうれしいです。</p>
+    <p>これからも週2回くらいのペースで、ゆるく語りに来ます。よろしくお願いします。</p>
+
+    <div class="next">
+      <p>道場の裏方仕事をClaude Codeにどう任せているかは、こちらにまとめています。</p>
+      <p><a href="/claudecode/">柔術道場のClaude Code →</a></p>
+    </div>
+  </article>
+
+  <footer>
+    <a href="/blog/">ブログの一覧へ</a>　／　<a href="/">jiujitsu.co.jp トップへ</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>

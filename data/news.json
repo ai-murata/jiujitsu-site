@@ -3,6 +3,13 @@
   "line_url": "",
   "entries": [
     {
+      "id": "blog-claude-code-hajimari",
+      "date": "2026-09-27",
+      "title": "ブログ：エンジニアじゃない私が、Claude Codeと「しつこく」付き合って1か月",
+      "url": "/blog/claude-code-hajimari/",
+      "summary": "インストールでつまずいた私が、「AIはできないって言うけど、絶対できるから」の一言で変わった話。マネージャー目線のブログ、1本目です。"
+    },
+    {
       "id": "claudecode",
       "date": "2026-09-27",
       "title": "柔術道場のClaude Code",
