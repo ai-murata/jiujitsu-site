@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>良蔵の献立</title>
+<meta name="description" content="朝は食べない。夜は外食。だから昼の一食がすべて。本人が食べると言ったものだけで組んだ一週間の昼ごはんと、PFCの計算。">
+<meta property="og:title" content="良蔵の献立">
+<meta property="og:description" content="朝は食べない。夜は外食。昼の一食で組んだ一週間の献立と、PFCの計算。">
+<meta property="og:url" content="https://jiujitsu.co.jp/kondate/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 22px 80px; }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(30px, 6vw, 44px); color: var(--ink); letter-spacing: .16em; line-height: 1.4; margin: 10px 0 12px; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; letter-spacing: .06em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 21px; color: var(--ink); letter-spacing: .28em; margin: 72px 0 8px; display: flex; align-items: center; gap: 16px; }
+  h2 small { font-family: var(--gothic); font-size: 10px; letter-spacing: .26em; color: var(--faint); font-weight: 500; flex: none; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .lead { font-size: 13.5px; margin: 0 0 28px; max-width: 42em; }
+
+  /* 前提 */
+  .rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 34px; }
+  .rule { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 20px 20px 22px; }
+  .rule b { display: block; font-family: var(--mincho); font-size: 15px; color: var(--ink); letter-spacing: .1em; margin-bottom: 6px; }
+  .rule span { font-size: 12.5px; line-height: 1.8; }
+  @media (max-width: 660px) { .rules { grid-template-columns: 1fr; } }
+
+  /* 食べる・食べない */
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 660px) { .two { grid-template-columns: 1fr; } }
+  .box { border: 1px solid var(--line); padding: 22px 24px 26px; background: var(--panel); }
+  .box.no { background: var(--paper); }
+  .box p.h { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: .12em; margin: 0 0 4px; }
+  .box p.s { font-size: 11.5px; color: var(--faint); letter-spacing: .06em; margin: 0 0 16px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .chips li { font-size: 13px; letter-spacing: .04em; border: 1px solid rgba(163,128,26,.3); color: var(--ink); border-radius: 999px; padding: 3px 13px; background: var(--paper); }
+  .chips li.big { border-color: var(--gold); background: var(--gold); color: #fff; font-weight: 700; }
+  .box.no .chips li { border-color: var(--line); color: var(--faint); text-decoration: line-through; text-decoration-color: rgba(148,140,116,.6); background: var(--panel); }
+
+  /* 献立 */
+  .days { display: grid; gap: 16px; margin-top: 8px; }
+  .day { background: var(--panel); border: 1px solid var(--line); padding: 22px 24px 24px; display: grid; grid-template-columns: 76px 1fr; gap: 24px; }
+  @media (max-width: 660px) { .day { grid-template-columns: 1fr; gap: 12px; } }
+  .dcol { border-right: 1px solid var(--line); padding-right: 16px; }
+  @media (max-width: 660px) { .dcol { border-right: none; border-bottom: 1px solid var(--line); padding: 0 0 10px; display: flex; align-items: baseline; gap: 12px; } }
+  .dnum { font-family: var(--mincho); font-size: 26px; font-weight: 700; color: var(--gold); letter-spacing: .06em; line-height: 1.2; }
+  .dyobi { font-size: 10.5px; letter-spacing: .24em; color: var(--faint); margin-top: 2px; }
+  .dtitle { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 0 0 12px; }
+  .menu { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
+  .menu li { font-size: 13.5px; padding-left: 16px; position: relative; }
+  .menu li::before { content: ""; position: absolute; left: 0; top: .78em; width: 6px; height: 1px; background: var(--gold); }
+  .menu li b { font-weight: 700; color: var(--ink); }
+  .dnote { font-size: 12px; color: var(--faint); margin: 12px 0 0; padding-top: 10px; border-top: 1px dashed var(--line); }
+
+  /* 栄養のメモ */
+  .nut { width: 100%; border-collapse: collapse; font-size: 13px; margin: 8px 0 0; }
+  .nut th, .nut td { padding: 9px 6px; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  .nut th { font-family: var(--mincho); font-weight: 700; font-size: 11px; letter-spacing: .14em; color: var(--gold); border-bottom: 1px solid var(--gold); }
+  .nut td:first-child, .nut th:first-child { text-align: left; white-space: normal; }
+  .nut .yb { font-family: var(--mincho); font-weight: 700; color: var(--ink); margin-right: 8px; }
+  .nut tr.avg td { background: var(--panel); font-weight: 700; color: var(--ink); border-bottom: none; }
+  @media (max-width: 560px) { .nut .dish { display: none; } .nut { font-size: 12.5px; } .nut th, .nut td { padding: 8px 3px; } }
+
+  .pfc { display: flex; height: 30px; margin: 30px 0 8px; border: 1px solid var(--line); overflow: hidden; }
+  .pfc span { display: flex; align-items: center; justify-content: center; font-size: 11px; letter-spacing: .08em; font-weight: 700; }
+  .pfc .bp { background: var(--gold); color: #fff; }
+  .pfc .bf { background: #6f5610; color: #fff; }
+  .pfc .bc { background: #e3d9b4; color: var(--ink); }
+  .pfckey { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 12px; color: var(--faint); margin: 0; }
+  .pfckey b { color: var(--body-c); font-weight: 500; }
+
+  .note-box { margin-top: 30px; border-left: 2px solid var(--gold); padding: 6px 0 6px 24px; }
+  .note-box p { font-size: 13px; margin: 0 0 8px; max-width: 42em; }
+  .note-box p:last-child { margin-bottom: 0; }
+  .note-box b { font-family: var(--mincho); color: var(--ink); letter-spacing: .06em; }
+
+  footer { margin-top: 84px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+</style>
+
+<header>
+  <p class="brand">JIUJITSU.CO.JP</p>
+  <h1>良蔵の献立</h1>
+  <p class="lede">朝は食べない。夜は外食。だから、昼の一食がすべて。</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <div class="rules">
+    <div class="rule"><b>朝</b><span>食べない。コーヒーだけ。</span></div>
+    <div class="rule"><b>昼</b><span>ここが本番。一日一食ぶんを、この一食でまかなう。</span></div>
+    <div class="rule"><b>夜</b><span>外食。だから献立は組まない。</span></div>
+  </div>
+
+  <h2>食べるもの、食べないもの<small>WHAT HE EATS</small></h2>
+  <p class="lead">本人の言葉そのまま。食べないものが先にはっきりしているので、そこを外して組み立てています。食べるものは「マジでおじさん、おじいちゃん」。日本ならでは、が並びます。</p>
+  <div class="two">
+    <div class="box">
+      <p class="h">食べる</p>
+      <p class="s">好物は、きのこ</p>
+      <ul class="chips">
+        <li class="big">卵</li>
+        <li class="big">きのこ</li>
+        <li>納豆</li>
+        <li>魚</li>
+        <li>肉</li>
+        <li>発芽酵素玄米</li>
+        <li>漬物</li>
+        <li>きゅうり</li>
+        <li>トマト</li>
+        <li>野菜ぜんぶ</li>
+        <li>白米（試合前）</li>
+      </ul>
+    </div>
+    <div class="box no">
+      <p class="h">食べない</p>
+      <p class="s">カゴに入れないもの</p>
+      <ul class="chips">
+        <li>グミ</li>
+        <li>枝豆</li>
+        <li>ハム</li>
+        <li>ソーセージ</li>
+        <li>パン</li>
+        <li>ラーメン</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>一週間の昼ごはん<small>7 LUNCHES</small></h2>
+  <p class="lead">主食は発芽酵素玄米（茶碗大盛り・250g）で固定。主菜を魚・肉・卵で回して、そこに納豆か豆腐をもう一品。卵は7日とも、形を変えて毎日入れています。汁物・漬物・野菜を添えて、野菜は生・茹で・蒸しを週のなかで散らしました。きのこはどの日にも入っています。</p>
+
+  <div class="days">
+
+    <div class="day">
+      <div class="dcol"><div class="dnum">月</div><div class="dyobi">MON</div></div>
+      <div>
+        <p class="dtitle">鮭の塩焼き定食</p>
+        <ul class="menu">
+          <li><b>発芽酵素玄米</b>（茶碗大盛り）</li>
+          <li><b>銀鮭の塩焼き</b>（1切・100g）</li>
+          <li>なめこと豆腐の味噌汁</li>
+          <li>納豆に卵黄を落として</li>
+          <li>ブロッコリーとにんじんの蒸し野菜</li>
+          <li>きゅうりの浅漬け・トマト</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="dcol"><div class="dnum">火</div><div class="dyobi">TUE</div></div>
+      <div>
+        <p class="dtitle">豚の生姜焼き定食</p>
+        <ul class="menu">
+          <li><b>発芽酵素玄米</b>（茶碗大盛り）</li>
+          <li><b>豚ももの生姜焼き</b>（120g・玉ねぎ・しめじ）</li>
+          <li>温泉卵</li>
+          <li>キャベツの千切りとトマト</li>
+          <li>えのきの味噌汁</li>
+          <li>ぬか漬け</li>
+        </ul>
+        <p class="dnote">ロースではなく、ももを使います。脂質が半分以下になって、たんぱく質はほぼ同じです。</p>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="dcol"><div class="dnum">水</div><div class="dyobi">WED</div></div>
+      <div>
+        <p class="dtitle">きのこと卵の玄米丼</p>
+        <ul class="menu">
+          <li><b>発芽酵素玄米</b>（大盛り）に、しめじ・まいたけ・エリンギのバター醤油炒めと、半熟卵2個、しらすをのせて</li>
+          <li>豆腐とわかめの味噌汁</li>
+          <li>納豆</li>
+          <li>きゅうりとトマトの塩もみ</li>
+          <li>沢庵</li>
+        </ul>
+        <p class="dnote">好物のきのこを主役にした日。しらすはカルシウム用です。苦手なら、かつお節でも。</p>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="dcol"><div class="dnum">木</div><div class="dyobi">THU</div></div>
+      <div>
+        <p class="dtitle">ほっけの開き定食</p>
+        <ul class="menu">
+          <li><b>発芽酵素玄米</b>（茶碗大盛り）</li>
+          <li><b>ほっけの開き</b>（半身・大根おろし・レモン）</li>
+          <li>小松菜としめじの卵とじ</li>
+          <li>冷奴</li>
+          <li>キャベツとにんじんの温野菜（ポン酢）</li>
+        </ul>
+        <p class="dnote">干物は塩気が強いので、この日だけ味噌汁と漬物を外しました。代わりに冷奴でたんぱく質を足しています。</p>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="dcol"><div class="dnum">金</div><div class="dyobi">FRI</div></div>
+      <div>
+        <p class="dtitle">鯖の塩焼き定食</p>
+        <ul class="menu">
+          <li><b>発芽酵素玄米</b>（茶碗大盛り）</li>
+          <li><b>鯖の塩焼き</b>（1切）</li>
+          <li>ほうれん草のおひたし</li>
+          <li>豆腐の味噌汁</li>
+          <li>だし巻き卵（卵2個）・トマト</li>
+        </ul>
+        <p class="dnote">鯖は焼くだけ、卵は巻くだけ。いちばん手のかからない日です。</p>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="dcol"><div class="dnum">土</div><div class="dyobi">SAT</div></div>
+      <div>
+        <p class="dtitle">ホタテのバター醤油焼き定食</p>
+        <ul class="menu">
+          <li><b>発芽酵素玄米</b>（茶碗大盛り）</li>
+          <li><b>ホタテのバター醤油焼き</b>（8個・まいたけを一緒に焼いて）</li>
+          <li>目玉焼き</li>
+          <li>なめこと豆腐の味噌汁</li>
+          <li>納豆</li>
+          <li>めかぶ</li>
+          <li>きゅうりとわかめの酢の物</li>
+        </ul>
+        <p class="dnote">ホタテは脂がほとんどないので、週でいちばん軽い日。バターはこの日のごほうびです。</p>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="dcol"><div class="dnum">日</div><div class="dyobi">SUN</div></div>
+      <div>
+        <p class="dtitle">参鶏湯</p>
+        <ul class="menu">
+          <li><b>参鶏湯</b>（鶏手羽元4本・もち米・にんにく・長ねぎ・しいたけ）</li>
+          <li><b>発芽酵素玄米</b></li>
+          <li>煮卵</li>
+          <li>白菜の浅漬け</li>
+          <li>大根とにんじんの蒸し野菜</li>
+          <li>トマトのサラダ</li>
+        </ul>
+        <p class="dnote">時間のある日曜に、大きい鍋でことこと。汁物はこれ一本で、味噌汁はなしです。</p>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>栄養のメモ<small>PFC</small></h2>
+  <p class="lead">上の7食を食材から計算した、ざっくりの数字です。専門家の計算ではないので、実際の量で前後します。P＝たんぱく質、F＝脂質、C＝炭水化物。</p>
+
+  <table class="nut">
+    <thead>
+      <tr><th>昼ごはん</th><th>kcal</th><th>P（g）</th><th>F（g）</th><th>C（g）</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="yb">月</span><span class="dish">鮭の塩焼き定食</span></td><td>880</td><td>50</td><td>27</td><td>109</td></tr>
+      <tr><td><span class="yb">火</span><span class="dish">豚の生姜焼き定食</span></td><td>810</td><td>45</td><td>22</td><td>109</td></tr>
+      <tr><td><span class="yb">水</span><span class="dish">きのこと卵の玄米丼</span></td><td>860</td><td>45</td><td>26</td><td>112</td></tr>
+      <tr><td><span class="yb">木</span><span class="dish">ほっけの開き定食</span></td><td>840</td><td>53</td><td>26</td><td>98</td></tr>
+      <tr><td><span class="yb">金</span><span class="dish">鯖の塩焼き定食</span></td><td>850</td><td>47</td><td>30</td><td>97</td></tr>
+      <tr><td><span class="yb">土</span><span class="dish">ホタテのバター醤油焼き定食</span></td><td>880</td><td>52</td><td>25</td><td>111</td></tr>
+      <tr><td><span class="yb">日</span><span class="dish">参鶏湯</span></td><td>870</td><td>47</td><td>26</td><td>112</td></tr>
+      <tr class="avg"><td>平均</td><td>850</td><td>48</td><td>26</td><td>107</td></tr>
+    </tbody>
+  </table>
+
+  <div class="pfc" aria-label="PFCバランス たんぱく質23パーセント 脂質27パーセント 炭水化物50パーセント">
+    <span class="bp" style="width:23%">P 23%</span>
+    <span class="bf" style="width:27%">F 27%</span>
+    <span class="bc" style="width:50%">C 50%</span>
+  </div>
+  <p class="pfckey">
+    <b>P たんぱく質 48g</b><b>F 脂質 26g</b><b>C 炭水化物 107g</b>
+  </p>
+
+  <div class="note-box">
+    <p><b>ねらった比率に入りました</b>　たんぱく質23％・脂質27％・炭水化物50％。競技をする人の目安（P20〜25／F20〜30／C50〜60）の真ん中あたりです。どの曜日も、この比率から大きく外れないように組んであります。</p>
+    <p><b>卵は7日とも</b>　月は納豆に卵黄、火は温泉卵、水は半熟卵、木は卵とじ、金はだし巻き卵、土は目玉焼き、日は煮卵。週で9個です。卵は脂質も一緒に増えるので、入れた日は主菜のほうを軽くして釣り合いを取っています。</p>
+    <p><b>1食850kcal・たんぱく質48g</b>　74kgで毎日稽古する人の目安は1日2,600〜3,000kcal、たんぱく質110〜150gです。朝を抜いているので、残りは夜の外食ぶんになります。</p>
+    <p><b>塩分は木曜で調整</b>　干物のほっけは塩気が強いので、木曜だけ味噌汁と漬物を外しました。1食あたり平均2.8g、いちばん多い日でも3.2gです（1日の目標は7.5g未満）。</p>
+    <p><b>金曜がいちばん脂質が高い</b>　鯖は1切で脂質16gあるので、この日だけ32％まで上がります。ただし青魚の脂なので、減らす必要はありません。</p>
+    <p><b>カルシウム</b>　水曜の丼にしらすを足し、豆腐を使う日を増やしました。1食350〜450mgです（1日の目安は750mg）。</p>
+  </div>
+
+  <footer>
+    本人が話したものだけで組んだ献立です。増えたり減ったりします。<br>
+    <a href="/">← jiujitsu.co.jp トップへ</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+
+</div>
+
+<a class="totop" href="/" style="position:fixed;right:14px;bottom:14px;z-index:99;background:#17140d;color:#e8c95e;font-size:11px;letter-spacing:.1em;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);font-family:sans-serif;">TOPへ</a>
+
+</html>
