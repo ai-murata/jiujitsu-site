@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>柔術道場のClaude Code</title>
+<meta name="description" content="会費の集計、請求書、シフト表、大会の速報。柔術道場の裏方仕事をClaude Codeに任せてきた記録を、白帯から黒帯までの段階に並べました。">
+<meta property="og:title" content="柔術道場のClaude Code">
+<meta property="og:description" content="道場の裏方仕事をAIに任せてきた記録を、白帯から黒帯までの段階で。">
+<meta property="og:url" content="https://jiujitsu.co.jp/claudecode/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(28px, 6vw, 42px); color: var(--ink); letter-spacing: .12em; line-height: 1.4; margin: 10px 0 12px; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; letter-spacing: .06em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  .intro { font-size: 14px; max-width: 40em; margin: 48px auto 0; }
+  .intro b { color: var(--ink); }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 21px; color: var(--ink); letter-spacing: .2em; margin: 72px 0 8px; display: flex; align-items: center; gap: 16px; }
+  h2 small { font-family: var(--gothic); font-size: 10px; letter-spacing: .26em; color: var(--faint); font-weight: 500; flex: none; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .lead { font-size: 13.5px; margin: 0 0 28px; max-width: 42em; }
+
+  /* できること */
+  .rules { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .rule { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 20px 20px 22px; }
+  .rule b { display: block; font-family: var(--mincho); font-size: 15px; color: var(--ink); letter-spacing: .1em; margin-bottom: 6px; }
+  .rule span { font-size: 13px; line-height: 1.8; }
+  @media (max-width: 660px) { .rules { grid-template-columns: 1fr; } }
+
+  /* 帯 */
+  .belts { display: grid; gap: 16px; }
+  .belt { border: 1px solid var(--line); background: var(--panel); display: grid; grid-template-columns: 140px 1fr; }
+  .bside { background: var(--bc); color: var(--bi); padding: 20px 18px; position: relative; display: flex; flex-direction: column; justify-content: center; }
+  .bside::after { content: ""; position: absolute; right: 14px; top: 0; bottom: 0; width: 30px; background: var(--bar);
+    background-image: repeating-linear-gradient(90deg, transparent 0 6px, rgba(255,255,255,.9) 6px 8px); }
+  .bside .en { font-size: 10px; letter-spacing: .26em; opacity: .8; position: relative; z-index: 1; }
+  .bside .jp { font-family: var(--mincho); font-weight: 700; font-size: 22px; letter-spacing: .14em; position: relative; z-index: 1; }
+  .bbody { padding: 20px 24px 22px; }
+  .bbody h3 { font-family: var(--mincho); font-weight: 700; font-size: 18px; color: var(--ink); letter-spacing: .08em; margin: 0 0 2px; }
+  .bbody > p { font-size: 13px; color: var(--faint); margin: 0 0 12px; }
+  .menu { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .menu li { font-size: 13.5px; padding-left: 16px; position: relative; line-height: 1.8; }
+  .menu li::before { content: ""; position: absolute; left: 0; top: .9em; width: 6px; height: 1px; background: var(--gold); }
+  .menu li b { font-weight: 700; color: var(--ink); }
+  .menu li a { font-size: 12px; margin-left: 4px; }
+  .x-w  { --bc: var(--w);  --bi: var(--ink); --bar: var(--k); }
+  .x-b  { --bc: var(--b);  --bi: #fff;       --bar: var(--k); }
+  .x-p  { --bc: var(--p);  --bi: #fff;       --bar: var(--k); }
+  .x-br { --bc: var(--br); --bi: #fff;       --bar: var(--k); }
+  .x-k  { --bc: var(--k);  --bi: #f3ecd8;    --bar: #a8322a; }
+  @media (max-width: 660px) {
+    .belt { grid-template-columns: 1fr; }
+    .bside { flex-direction: row; align-items: baseline; gap: 12px; padding: 14px 18px; }
+    .bbody { padding: 18px 18px 20px; }
+  }
+
+  /* 1か月 */
+  .days { display: grid; gap: 0; border-top: 1px solid var(--line); }
+  .day { display: grid; grid-template-columns: 90px 1fr; gap: 20px; padding: 16px 4px; border-bottom: 1px solid var(--line); }
+  .dnum { font-family: var(--mincho); font-size: 26px; font-weight: 700; color: var(--gold); line-height: 1.2; font-variant-numeric: tabular-nums; }
+  .dnum small { display: block; font-family: var(--gothic); font-size: 10.5px; letter-spacing: .2em; color: var(--faint); font-weight: 500; margin-top: 2px; }
+  .day b { font-family: var(--mincho); font-weight: 700; color: var(--ink); font-size: 15.5px; letter-spacing: .06em; display: block; }
+  .day span { font-size: 13px; }
+  @media (max-width: 560px) { .day { grid-template-columns: 64px 1fr; gap: 12px; } .dnum { font-size: 22px; } }
+
+  /* 数字 */
+  .nums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .num { border-top: 1px solid var(--gold); padding-top: 12px; }
+  .num b { font-family: var(--mincho); font-weight: 700; font-size: 40px; color: var(--ink); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .num b small { font-size: 14px; margin-left: 4px; color: var(--body-c); }
+  .num p { font-size: 12.5px; margin: 6px 0 0; }
+  @media (max-width: 660px) { .nums { grid-template-columns: 1fr; } }
+
+  /* 頼み方 */
+  .asks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .ask { border: 1px solid var(--line); padding: 18px 20px 14px; display: grid; grid-template-rows: auto 1fr auto; gap: 8px; }
+  .ask .t { font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .ask q { quotes: "「" "」"; font-size: 14px; color: var(--ink); line-height: 1.85; }
+  .copy { justify-self: start; font: inherit; font-size: 11.5px; letter-spacing: .08em; color: var(--gold); background: var(--paper); border: 1px solid var(--line); padding: 2px 12px; cursor: pointer; }
+  .copy:hover { border-color: var(--gold); }
+  @media (max-width: 660px) { .asks { grid-template-columns: 1fr; } }
+
+  /* 約束 */
+  .dark { background: var(--k); padding: 26px 28px 28px; }
+  .dark .rlabel { font-size: 10.5px; letter-spacing: .3em; color: var(--gold-hi); font-weight: 700; margin: 0 0 14px; }
+  .dark .ri { margin: 0 0 16px; }
+  .dark .ri:last-child { margin-bottom: 0; }
+  .dark b { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: #f3ecd8; letter-spacing: .06em; display: block; margin-bottom: 2px; }
+  .dark p { margin: 0; font-size: 13px; color: #b0a88f; line-height: 1.9; }
+
+  /* はじめ方 */
+  .steps { counter-reset: s; list-style: none; margin: 0; padding: 0; }
+  .steps li { counter-increment: s; position: relative; padding: 0 0 20px 46px; }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: 2px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-family: var(--mincho); font-weight: 700; font-size: 15px; color: var(--gold); border: 1.5px solid var(--gold); border-radius: 50%; }
+  .steps b { font-family: var(--mincho); font-weight: 700; color: var(--ink); font-size: 15.5px; }
+  .steps p { margin: 2px 0 0; font-size: 13.5px; line-height: 1.9; }
+
+  footer { margin-top: 84px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+
+<header>
+  <p class="brand">JIUJITSU.CO.JP</p>
+  <h1>柔術道場のClaude Code</h1>
+  <p class="lede">道場の裏方仕事を、AIに任せてきた記録。</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <p class="intro">
+    会費の集計、請求書、シフト表、大会の速報、動画の字幕。道場の運営には、マットの外の仕事がたくさんあります。
+    Claude Code は、<b>話しかけるだけでパソコンの中の作業をやってくれるAI</b>です。
+    私たちが実際に使ってきた内容を、白帯から黒帯までの段階に並べました。このサイトのページも、すべて Claude Code で作っています。
+  </p>
+
+  <h2>できること<small>WHAT IT DOES</small></h2>
+  <p class="lead">チャットで答えるだけのAIとの違いは、手を動かすところまでやってくれることです。</p>
+  <div class="rules">
+    <div class="rule"><b>ファイルを読んで、作る</b><span>Excel・PDF・写真・動画を開いて中身を読み、集計表や書類を新しく作ってフォルダに置きます。</span></div>
+    <div class="rule"><b>ウェブを見に行く</b><span>予約システムや大会の結果ページを読み取って、必要な数字だけを抜き出します。</span></div>
+    <div class="rule"><b>手順を覚えておく</b><span>毎月の作業の手順を「スキル」として保存すると、次の月は「今月もお願い」の一言で同じ手順を回せます。</span></div>
+    <div class="rule"><b>最後は人が押す</b><span>送信・支払い・削除の手前で止まって確認してくれます。任せきりにならない作りです。</span></div>
+  </div>
+
+  <h2>帯ごとの使い方<small>BELTS</small></h2>
+  <p class="lead">いきなり黒帯の技はかかりません。白帯から順に、できることを増やしていくのがおすすめです。</p>
+  <div class="belts">
+    <article class="belt x-w">
+      <div class="bside"><span class="en">WHITE</span><span class="jp">白帯</span></div>
+      <div class="bbody">
+        <h3>聞く・書かせる</h3>
+        <p>文章の相談相手として。入れた初日からできます。</p>
+        <ul class="menu">
+          <li><b>お知らせ文の下書き</b>　休館日、月謝の改定、大会エントリーの締切案内</li>
+          <li><b>体験希望者への返信</b>　持ち物、道着のレンタル、初回の流れを丁寧な文面に</li>
+          <li><b>海外の先生とのやりとり</b>　ポルトガル語・英語のメッセージを訳して、返事も作る</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="belt x-b">
+      <div class="bside"><span class="en">BLUE</span><span class="jp">青帯</span></div>
+      <div class="bbody">
+        <h3>Excelと紙を片付ける</h3>
+        <p>手元のファイルを渡して、集計と清書を任せます。</p>
+        <ul class="menu">
+          <li><b>パーソナルレッスンの集計</b>　担当コーチ別の回数・単価・歩合を月ごとにまとめる</li>
+          <li><b>領収書の読み取り</b>　紙の束を写真に撮って渡すと、日付・金額・用途の一覧になる<a href="/ryoshusho/">実例 →</a></li>
+          <li><b>大会・イベントの収支表</b>　チケットの販売明細と経費を突き合わせて、A4一枚の報告書に</li>
+          <li><b>契約書のひな形</b>　業務委託や協賛の契約書を、前回の条件から作り直す</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="belt x-p">
+      <div class="bside"><span class="en">PURPLE</span><span class="jp">紫帯</span></div>
+      <div class="bbody">
+        <h3>予約システムとつなぐ</h3>
+        <p>会員管理の画面を読みに行かせて、人がやると半日かかる抽出を任せます。</p>
+        <ul class="menu">
+          <li><b>月会費の未払いチェック</b>　引き落としに失敗した人だけを拾い、入会したばかりの人は除いて一覧に</li>
+          <li><b>勤怠と歩合の集計</b>　打刻データとクラスの担当実績から、給与計算用の表を作る</li>
+          <li><b>請求書・領収書の下書き</b>　請求書サービスに下書きまで入れて、発行ボタンは人が押す</li>
+          <li><b>予定との突き合わせ</b>　共有カレンダーと経費を照らして、どの遠征の支出かを特定する</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="belt x-br">
+      <div class="bside"><span class="en">BROWN</span><span class="jp">茶帯</span></div>
+      <div class="bbody">
+        <h3>毎月の型にする</h3>
+        <p>うまくいった手順を「スキル」として残し、決まった日に自動で走らせます。</p>
+        <ul class="menu">
+          <li><b>月次の定型作業をスキルに</b>　請求書・振込リスト・勤怠を「今月の分お願い」の一言で回す</li>
+          <li><b>決まった日に自動で</b>　毎月25日に未払いチェックを走らせ、結果をフォルダに置いておく</li>
+          <li><b>シフト表をスマホで</b>　Excelのシフトを、スタッフがスマホで見られるページに<a href="/shift/">実例 →</a></li>
+          <li><b>補助金を毎日チェック</b>　道場が使える補助金の一覧を、毎朝自動で更新<a href="/hojokin/">実例 →</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="belt x-k">
+      <div class="bside"><span class="en">BLACK</span><span class="jp">黒帯</span></div>
+      <div class="bbody">
+        <h3>道場の道具を自分で作る</h3>
+        <p>市販のサービスにない、柔術ならではの道具を作ってしまう段階です。</p>
+        <ul class="menu">
+          <li><b>大会のライブ速報</b>　トーナメント表から自分の道場の選手だけを追い、試合順と結果を自動で更新<a href="/tournament/">実例 →</a></li>
+          <li><b>全国の道場ガイド</b>　2つの連盟の加盟道場を集めて、地域で探せる検索サイトに<a href="/dojo/">実例 →</a></li>
+          <li><b>はじめての大会ガイド</b>　初出場の会員さんに渡す、当日の流れとマナーのページ<a href="/hajimete/">実例 →</a></li>
+          <li><b>減量の記録帳</b>　計量日から逆算して、1日500gまでの落とし方を選手ごとに管理</li>
+          <li><b>動画の字幕と写真選び</b>　試合動画の文字起こしから字幕を作り、大会写真を時間帯ごとに満遍なく選ぶ</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+
+  <h2>道場の1か月<small>MONTHLY</small></h2>
+  <p class="lead">実際に回している月次の作業です。どれも「◯◯やって」の一言で始まります。</p>
+  <div class="days">
+    <div class="day"><div class="dnum">1<small>月初</small></div><div><b>取引先への請求書</b><span>前月のパーソナル回数と所属人数から金額を出し、請求書サービスに下書き</span></div></div>
+    <div class="day"><div class="dnum">10<small>振込日</small></div><div><b>10日払いの振込リスト</b><span>コーチへの業務委託費と連盟への支払いをまとめる</span></div></div>
+    <div class="day"><div class="dnum">15<small>締め日</small></div><div><b>勤怠と歩合の集計</b><span>打刻データとクラス実績から集計し、会計事務所へ送る下書きまで</span></div></div>
+    <div class="day"><div class="dnum">25<small>自動</small></div><div><b>月会費の未払いチェック</b><span>決まった日に自動で走って一覧を保存。スタッフが見て会員さんに声をかける</span></div></div>
+    <div class="day"><div class="dnum">25<small>振込日</small></div><div><b>給与の振込リスト</b><span>給与明細と勤務表から支給額を転記</span></div></div>
+    <div class="day"><div class="dnum">大会<small>週末</small></div><div><b>速報の更新と収支</b><span>当日は選手の試合を追い、終わったらチケット売上と経費で収支を締める</span></div></div>
+  </div>
+
+  <h2>ここまでの量<small>NUMBERS</small></h2>
+  <p class="lead">ひとつの道場で、Claude Code に任せて片付いた量です。</p>
+  <div class="nums">
+    <div class="num"><b>122<small>枚</small></b><p>紙の領収書を読み取り、予定表と突き合わせて整理</p></div>
+    <div class="num"><b>560<small>道場</small></b><p>2つの連盟の加盟道場を集めた検索サイト</p></div>
+    <div class="num"><b>6<small>本</small></b><p>毎月の定型作業をスキルにして、一言で回せる状態に</p></div>
+  </div>
+
+  <h2>こう頼めば動く<small>HOW TO ASK</small></h2>
+  <p class="lead">専門用語はいりません。道場のスタッフに頼むのと同じ言い方で大丈夫です。</p>
+  <div class="asks">
+    <div class="ask"><span class="t">会費</span><q>今月の月会費、引き落としに失敗した人を一覧にして。入会したばかりの人は除いて。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">大会</span><q>この大会のトーナメント表から、うちの道場の選手の試合だけ時間順に並べて。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">経費</span><q>このレシートの写真、日付と金額と何の支払いかを表にして。カード控えと二重になってるものは外して。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">動画</span><q>この試合動画に日本語字幕をつけて。選手の名前は大会の登録名に合わせて。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">減量</span><q>計量まであと3週間で4kg落としたい。水抜きなしで、1日500gを超えない計画を作って。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">定型化</span><q>今やった未払いチェックの手順、スキルにして毎月25日に自動で回るようにして。</q><button class="copy" type="button">コピー</button></div>
+  </div>
+
+  <h2>道場で使うときの約束<small>RULES</small></h2>
+  <p class="lead">会員さんのお金と個人情報を扱うので、ここだけは最初に決めておきます。</p>
+  <div class="dark">
+    <p class="rlabel">4 RULES</p>
+    <div class="ri"><b>送信・支払い・削除は人が押す</b><p>請求書の発行、振込、メッセージの送信は、Claude が直前まで準備して止まる。最後のボタンはスタッフが押す。</p></div>
+    <div class="ri"><b>会員の名前は外に出さない</b><p>シフト表や速報ページを公開するときは、スタッフや会員の名前を仮名にする。公開前に中身を目で確認する。</p></div>
+    <div class="ri"><b>パスワードは渡さない</b><p>ログインはスタッフ本人がしておく。Claude はログイン済みの画面を読むだけ。</p></div>
+    <div class="ri"><b>置き場所を1つに決める</b><p>作ったファイルは共有フォルダの「年月＋案件名」に置く。デスクトップに散らからないようにする。</p></div>
+  </div>
+
+  <h2>はじめ方<small>START</small></h2>
+  <p class="lead">パソコンが得意な人がいなくても始められます。</p>
+  <ol class="steps">
+    <li><b>道場のパソコンに Claude のアプリを入れる</b><p>Mac か Windows のデスクトップアプリに Claude Code が入っています。スタッフみんなで使うなら、チーム用のプランにまとめると管理が楽です。</p></li>
+    <li><b>手元のExcelを1つ渡してみる</b><p>「このファイルを見て、今月の合計を出して」から。答えが合っているか、最初の一回は自分でも確かめます。</p></li>
+    <li><b>毎月やる作業を1つ選んで型にする</b><p>うまくいったら「今の手順をスキルにして」と頼む。翌月からは一言で同じ作業が回ります。</p></li>
+    <li><b>慣れたら予約システムや大会ページへ</b><p>紫帯から先は、ログイン済みの画面を読ませる使い方に進みます。</p></li>
+  </ol>
+
+  <footer>
+    料金やプランの内容は変わることがあります。契約前に公式サイトで確認してください。<br>
+    <a href="/">← jiujitsu.co.jp トップへ</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+
+<script>
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var q = btn.parentElement.querySelector('q');
+      var text = q.textContent.trim();
+      function done() { btn.textContent = 'コピーしました'; setTimeout(function () { btn.textContent = 'コピー'; }, 1600); }
+      function fallback() {
+        var r = document.createRange(); r.selectNodeContents(q);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      }
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+    });
+  });
+</script>
