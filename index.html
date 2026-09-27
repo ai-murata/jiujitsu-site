@@ -53,6 +53,7 @@
   a.card { display: grid; grid-template-columns: 250px 1fr; gap: 28px; align-items: center; background: var(--panel); border: 1px solid var(--line); padding: 24px; text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
   a.card:hover { border-color: var(--gold); transform: translateY(-2px); }
   a.card:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  a.card.solo { grid-template-columns: 1fr; }
   .thumb { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; border: 1px solid var(--line); background: var(--paper); display: block; }
   .eyebrow { font-family: var(--mincho); font-size: 12px; letter-spacing: .24em; color: var(--gold); margin: 0 0 8px; }
   .card h2 { font-family: var(--mincho); font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: .06em; margin: 0 0 8px; }
@@ -150,6 +151,16 @@
 <main>
   <div class="wrap">
     <div class="works rise d3">
+
+      <p class="cat-label">ブログ</p>
+
+      <a class="card solo" href="/blog/">
+        <span>
+          <p class="eyebrow">BLOG ・ 週2回更新</p>
+          <h2>マネージャーのブログ<span class="arrow">→</span></h2>
+          <p>柔術の道場運営のこと、良蔵さんのまわりのこと、Claude Codeのこと。マネージャー村田亜衣の目線で、ゆるく書いています。</p>
+        </span>
+      </a>
 
       <p class="cat-label">柔術</p>
 
