@@ -73,6 +73,11 @@
   .unit ul li { padding-left: 1em; position: relative; }
   .unit ul li::before { content: "・"; position: absolute; left: -.1em; color: var(--gold); }
 
+  .tasks { margin: 10px 0 0; font-size: 12.5px; line-height: 1.8; }
+  .tasks dt { font-family: var(--gothic); font-weight: 700; font-size: 10.5px; letter-spacing: .12em; color: var(--gold); margin-top: 9px; }
+  .tasks dt:first-child { margin-top: 0; }
+  .tasks dd { margin: 1px 0 0; }
+
   .subunits { list-style: none; margin: 12px 0 0; padding: 0 0 0 18px; position: relative; }
   .subunits::before { content: ""; position: absolute; left: 0; top: -6px; bottom: 16px; width: 1px; background: var(--line); }
   .subunits > li { position: relative; margin-top: 10px; }
@@ -110,7 +115,7 @@
 <header>
   <p class="brand">ORGANIZATION</p>
   <h1>組織図</h1>
-  <p class="lede">株式会社BUTTI ON LINE ／ 2026年9月時点</p>
+  <p class="lede">株式会社BUTTI ON LINE ／ 2026年9月時点<br>拠点ごとの担当と、その人が持っている仕事を1枚にまとめたもの</p>
 </header>
 
 <div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
@@ -144,15 +149,16 @@
             <div class="unit ol">
               <p><span class="site">OVER LIMIT</span><span class="place">札幌</span></p>
               <p class="person">諸澤 陽斗<span class="kana">もろさわ はると</span><span class="chip">代表</span></p>
-              <ul>
-                <li>札幌店の店舗運営全般</li>
-                <li>クラスの指導とスケジュール運用</li>
-                <li>公式LINEの返信・問い合わせ対応</li>
-                <li>体験・見学の受け入れと入会手続き</li>
-                <li>会員対応（入会・退会・休会）</li>
-                <li>店頭決済（Airペイ／PayPay）と日次売上の管理</li>
-                <li>副担当・スタッフのシフト調整</li>
-              </ul>
+              <dl class="tasks">
+                <dt>拠点固有</dt><dd>札幌店の代表として現場全体を統括。キッズクラスの運営。Airペイ／PayPay の店頭決済と月次収支表のとりまとめ。副担当・スタッフのシフト調整。</dd>
+                <dt>クラス</dt><dd>常設クラス（ベーシック／ベーシックⅡ／フリーマット／オープンマット）の指導。タイムテーブルの管理と代行の手配。出稽古の受け入れ。</dd>
+                <dt>会員対応</dt><dd>体験・見学の受け入れから入会手続きまで。名前カードの作成と名簿処理。休会・退会・区分変更の処理。来ていない会員へのLINEでの声かけ。</dd>
+                <dt>問い合わせ</dt><dd>公式LINEの返信。InstagramのDM対応。電話・メールの一次対応。</dd>
+                <dt>物販・レンタル</dt><dd>道着・帯・ラッシュガードのレンタル対応。水やグッズの販売と在庫管理。</dd>
+                <dt>お金</dt><dd>店頭決済の受付。日次の締めと売上の報告。月会費の未払いの声かけ。</dd>
+                <dt>店舗管理</dt><dd>開店・閉店と清掃。マットの清掃・消毒、ダスキンマットの交換。消耗品の発注依頼。設備の不具合の一次対応。</dd>
+                <dt>大会・イベント</dt><dd>大会エントリーの取りまとめと当日の引率。Jiu Fight や Super Yawara Cup などのイベント運営。</dd>
+              </dl>
               <ul class="subunits">
                 <li>
                   <div class="subunit">
@@ -167,15 +173,16 @@
             <div class="unit yawara">
               <p><span class="site">YAWARA</span><span class="place">原宿</span></p>
               <p class="person">野島 繁昭<span class="kana">のじま しげあき</span><span class="chip">主担当</span></p>
-              <ul>
-                <li>原宿店の店舗運営全般</li>
-                <li>クラスの指導とスケジュール運用</li>
-                <li>公式LINEの返信・問い合わせ対応</li>
-                <li>体験・見学の受け入れと入会手続き</li>
-                <li>会員対応（入会・退会・休会）</li>
-                <li>内装・設備トラブルの窓口（不動産・施工会社との調整）</li>
-                <li>法人契約の利用実績とりまとめ・請求内訳の確認</li>
-              </ul>
+              <dl class="tasks">
+                <dt>拠点固有</dt><dd>法人契約（福利厚生クラス）の利用実績とりまとめと請求内訳の確認。内装・設備トラブルの窓口（不動産・施工会社との調整）。なでしこクラスの運営。カイロなど外部施術者の枠の管理。</dd>
+                <dt>クラス</dt><dd>常設クラス（ベーシック／ベーシックⅡ／フリーマット／オープンマット）の指導。タイムテーブルの管理と代行の手配。出稽古の受け入れ。</dd>
+                <dt>会員対応</dt><dd>体験・見学の受け入れから入会手続きまで。名前カードの作成と名簿処理。休会・退会・区分変更の処理。来ていない会員へのLINEでの声かけ。</dd>
+                <dt>問い合わせ</dt><dd>公式LINEの返信。InstagramのDM対応。電話・メールの一次対応。</dd>
+                <dt>物販・レンタル</dt><dd>道着・帯・ラッシュガードのレンタル対応。水やグッズの販売と在庫管理。</dd>
+                <dt>お金</dt><dd>店頭決済の受付。日次の締めと売上の報告。月会費の未払いの声かけ。</dd>
+                <dt>店舗管理</dt><dd>開店・閉店と清掃。マットの清掃・消毒、ダスキンマットの交換。消耗品の発注依頼。設備の不具合の一次対応。</dd>
+                <dt>大会・イベント</dt><dd>大会エントリーの取りまとめと当日の引率。Jiu Fight や Super Yawara Cup などのイベント運営。</dd>
+              </dl>
               <ul class="subunits">
                 <li>
                   <div class="subunit">
@@ -190,14 +197,16 @@
             <div class="unit sweep">
               <p><span class="site">SWEEP</span><span class="place">北参道</span></p>
               <p class="person">廣鰭 翔大<span class="kana">ひろはた やすひろ</span><span class="chip">主担当</span></p>
-              <ul>
-                <li>北参道店の店舗運営全般</li>
-                <li>クラスの指導とスケジュール運用</li>
-                <li>公式LINEの返信・問い合わせ対応</li>
-                <li>体験・見学の受け入れと入会手続き</li>
-                <li>会員対応（入会・退会・休会）</li>
-                <li>YAWARAとの合同クラスの調整</li>
-              </ul>
+              <dl class="tasks">
+                <dt>拠点固有</dt><dd>YAWARAとの合同クラスの調整。Square／PayPay の店頭決済。ファンダメンタルクラスの運営。</dd>
+                <dt>クラス</dt><dd>常設クラス（ベーシック／ベーシックⅡ／フリーマット／オープンマット）の指導。タイムテーブルの管理と代行の手配。出稽古の受け入れ。</dd>
+                <dt>会員対応</dt><dd>体験・見学の受け入れから入会手続きまで。名前カードの作成と名簿処理。休会・退会・区分変更の処理。来ていない会員へのLINEでの声かけ。</dd>
+                <dt>問い合わせ</dt><dd>公式LINEの返信。InstagramのDM対応。電話・メールの一次対応。</dd>
+                <dt>物販・レンタル</dt><dd>道着・帯・ラッシュガードのレンタル対応。水やグッズの販売と在庫管理。</dd>
+                <dt>お金</dt><dd>店頭決済の受付。日次の締めと売上の報告。月会費の未払いの声かけ。</dd>
+                <dt>店舗管理</dt><dd>開店・閉店と清掃。マットの清掃・消毒、ダスキンマットの交換。消耗品の発注依頼。設備の不具合の一次対応。</dd>
+                <dt>大会・イベント</dt><dd>大会エントリーの取りまとめと当日の引率。Jiu Fight や Super Yawara Cup などのイベント運営。</dd>
+              </dl>
               <ul class="subunits">
                 <li>
                   <div class="subunit">
@@ -212,14 +221,16 @@
             <div class="unit tamago">
               <p><span class="site">TAMAGO</span><span class="place">新拠点</span></p>
               <p class="person">河野 裕也<span class="kana">こうの ゆうや</span><span class="chip">主担当</span></p>
-              <ul>
-                <li>TAMAGOの店舗運営全般（立ち上げから）</li>
-                <li>クラス設計とスケジュール管理</li>
-                <li>公式LINEの返信・問い合わせ対応</li>
-                <li>体験・見学の受け入れと入会手続き</li>
-                <li>脱毛・整体メニューの運用</li>
-                <li>スペース貸し・物販まわりの現場運用</li>
-              </ul>
+              <dl class="tasks">
+                <dt>拠点固有</dt><dd>立ち上げからの店舗づくりとクラス設計。脱毛・整体メニューの運用と予約枠の管理。スペース貸しの受付と運用。</dd>
+                <dt>クラス</dt><dd>常設クラス（ベーシック／ベーシックⅡ／フリーマット／オープンマット）の指導。タイムテーブルの管理と代行の手配。出稽古の受け入れ。</dd>
+                <dt>会員対応</dt><dd>体験・見学の受け入れから入会手続きまで。名前カードの作成と名簿処理。休会・退会・区分変更の処理。来ていない会員へのLINEでの声かけ。</dd>
+                <dt>問い合わせ</dt><dd>公式LINEの返信。InstagramのDM対応。電話・メールの一次対応。</dd>
+                <dt>物販・レンタル</dt><dd>道着・帯・ラッシュガードのレンタル対応。水やグッズの販売と在庫管理。</dd>
+                <dt>お金</dt><dd>店頭決済の受付。日次の締めと売上の報告。月会費の未払いの声かけ。</dd>
+                <dt>店舗管理</dt><dd>開店・閉店と清掃。マットの清掃・消毒、ダスキンマットの交換。消耗品の発注依頼。設備の不具合の一次対応。</dd>
+                <dt>大会・イベント</dt><dd>大会エントリーの取りまとめと当日の引率。Jiu Fight や Super Yawara Cup などのイベント運営。</dd>
+              </dl>
               <ul class="subunits">
                 <li>
                   <div class="subunit">
@@ -248,52 +259,60 @@
             <div class="unit ol">
               <p><span class="site">OVER LIMIT</span><span class="place">札幌</span></p>
               <p class="person">諸澤 陽斗<span class="kana">もろさわ はると</span><span class="chip">道場と兼任</span></p>
-              <ul>
-                <li>会員管理（hacomono）の登録・変更・退会処理</li>
-                <li>月会費の決済管理と未払いのフォロー</li>
-                <li>日次売上の集計と月次収支表の作成</li>
-                <li>シフト表の作成</li>
-                <li>備品の発注と経費精算</li>
-              </ul>
+              <dl class="tasks">
+                <dt>拠点固有</dt><dd>月次の「OL収支」の作成。Airペイ／PayPay の振込確認。</dd>
+                <dt>会員管理</dt><dd>hacomono の登録・変更・退会処理。名簿の整合確認。会費操作（請求書の発行・停止）。</dd>
+                <dt>請求・入金</dt><dd>月会費の決済管理と未払いのフォロー。入金の消込。2ヶ月分の会費徴収など個別対応。</dd>
+                <dt>集計</dt><dd>日次売上の集計。月次の収支表の作成。</dd>
+                <dt>シフト</dt><dd>シフト表の作成と、直前の変更の反映。</dd>
+                <dt>経費</dt><dd>備品の発注。領収書のデジタル化と経費精算。</dd>
+                <dt>発信・分析</dt><dd>公式LINEの一斉配信。来店が途絶えた会員の抽出（hacomono／Lステップ）。</dd>
+              </dl>
             </div>
           </li>
           <li>
             <div class="unit yawara">
               <p><span class="site">YAWARA</span><span class="place">原宿</span></p>
               <p class="person">野島 繁昭<span class="kana">のじま しげあき</span><span class="chip">道場と兼任</span></p>
-              <ul>
-                <li>会員管理（hacomono）の登録・変更・退会処理</li>
-                <li>月会費の決済管理と未払いのフォロー</li>
-                <li>法人契約分の集計と請求書の送付</li>
-                <li>シフト表の作成</li>
-                <li>備品の発注と領収書のデジタル化</li>
-              </ul>
+              <dl class="tasks">
+                <dt>拠点固有</dt><dd>法人契約分の集計と請求書の送付（会計事務所とのやり取り）。柔術パーソナル集計表の作成。</dd>
+                <dt>会員管理</dt><dd>hacomono の登録・変更・退会処理。名簿の整合確認。会費操作（請求書の発行・停止）。</dd>
+                <dt>請求・入金</dt><dd>月会費の決済管理と未払いのフォロー。入金の消込。2ヶ月分の会費徴収など個別対応。</dd>
+                <dt>集計</dt><dd>日次売上の集計。月次の収支表の作成。</dd>
+                <dt>シフト</dt><dd>シフト表の作成と、直前の変更の反映。</dd>
+                <dt>経費</dt><dd>備品の発注。領収書のデジタル化と経費精算。</dd>
+                <dt>発信・分析</dt><dd>公式LINEの一斉配信。来店が途絶えた会員の抽出（hacomono／Lステップ）。</dd>
+              </dl>
             </div>
           </li>
           <li>
             <div class="unit sweep">
               <p><span class="site">SWEEP</span><span class="place">北参道</span></p>
               <p class="person">廣鰭 翔大<span class="kana">ひろはた やすひろ</span><span class="chip">道場と兼任</span></p>
-              <ul>
-                <li>会員管理（hacomono）の登録・変更・退会処理</li>
-                <li>月会費の決済管理と未払いのフォロー</li>
-                <li>Square／PayPay の入金消込</li>
-                <li>シフト表の作成</li>
-                <li>備品の発注と経費精算</li>
-              </ul>
+              <dl class="tasks">
+                <dt>拠点固有</dt><dd>Square／PayPay の入金消込。道着・帯レンタルの売上管理。</dd>
+                <dt>会員管理</dt><dd>hacomono の登録・変更・退会処理。名簿の整合確認。会費操作（請求書の発行・停止）。</dd>
+                <dt>請求・入金</dt><dd>月会費の決済管理と未払いのフォロー。入金の消込。2ヶ月分の会費徴収など個別対応。</dd>
+                <dt>集計</dt><dd>日次売上の集計。月次の収支表の作成。</dd>
+                <dt>シフト</dt><dd>シフト表の作成と、直前の変更の反映。</dd>
+                <dt>経費</dt><dd>備品の発注。領収書のデジタル化と経費精算。</dd>
+                <dt>発信・分析</dt><dd>公式LINEの一斉配信。来店が途絶えた会員の抽出（hacomono／Lステップ）。</dd>
+              </dl>
             </div>
           </li>
           <li>
             <div class="unit tamago">
               <p><span class="site">TAMAGO</span><span class="place">新拠点</span></p>
               <p class="person">河野 裕也<span class="kana">こうの ゆうや</span><span class="chip">道場と兼任</span></p>
-              <ul>
-                <li>会員管理とサブスクの請求</li>
-                <li>脱毛・整体の予約枠と売上の管理</li>
-                <li>グッズ・スペース貸しの売上管理</li>
-                <li>シフト表の作成</li>
-                <li>備品の発注と経費精算</li>
-              </ul>
+              <dl class="tasks">
+                <dt>拠点固有</dt><dd>サブスク・プレミアム会費の請求。グッズとスペース貸しの売上管理。</dd>
+                <dt>会員管理</dt><dd>hacomono の登録・変更・退会処理。名簿の整合確認。会費操作（請求書の発行・停止）。</dd>
+                <dt>請求・入金</dt><dd>月会費の決済管理と未払いのフォロー。入金の消込。2ヶ月分の会費徴収など個別対応。</dd>
+                <dt>集計</dt><dd>日次売上の集計。月次の収支表の作成。</dd>
+                <dt>シフト</dt><dd>シフト表の作成と、直前の変更の反映。</dd>
+                <dt>経費</dt><dd>備品の発注。領収書のデジタル化と経費精算。</dd>
+                <dt>発信・分析</dt><dd>公式LINEの一斉配信。来店が途絶えた会員の抽出（hacomono／Lステップ）。</dd>
+              </dl>
             </div>
           </li>
         </ul>
@@ -305,9 +324,11 @@
   <div class="note">
     <h2>この図について</h2>
     <ul>
-      <li>役割は、これまでのやりとり（請求・設備・パーソナル担当・拠点別の収支など）から拾って書き起こした<strong>暫定版</strong>です。実態と違うところは直してください。</li>
+      <li>仕事の中身は、メール・Drive・サイト内のデータから拾って書き起こした<strong>暫定版</strong>です。実態と違うところ、抜けているところは言ってください。</li>
+      <li>LINEのやり取りはこちらから読めないので、LINE上でしか出てこない仕事は拾えていません。</li>
       <li>各拠点は「主担当（札幌は代表）＋副担当」の2枚看板。副担当は「未定」なので、決まったら差し替えてください。</li>
-      <li>運営事務は拠点ごとに道場側と同じ人が兼任する形にしています。副担当は各拠点で決まりしだい入れてください。</li>
+      <li>運営事務は、拠点ごとに道場側と同じ人が兼任する形にしています。</li>
+      <li>「拠点固有」以外の項目は、4拠点で同じ書き方にそろえてあります。</li>
     </ul>
   </div>
 
