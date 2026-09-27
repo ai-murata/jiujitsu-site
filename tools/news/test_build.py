@@ -99,7 +99,11 @@ print("配信済みの記録")
 state = notify_line.read_sent()
 ids = {e["id"] for e in es}
 check("記録は既存のidだけ", set(state["sent"]) <= ids)
-check("いまは未配信ゼロ", [e for e in es if e["id"] not in set(state["sent"])] == [])
+pending = [e["id"] for e in es if e["id"] not in set(state["sent"])]
+# LINE配信を保留しているあいだは未配信があって正常。安全装置（6件以上で自動送信しない）に届くかだけ見る
+check("未配信は5件以内", len(pending) <= 5)
+if pending:
+    print("  （LINE未配信: " + ", ".join(pending) + "）")
 
 print(f"\n{ok} 件OK / {fail} 件NG")
 sys.exit(1 if fail else 0)
