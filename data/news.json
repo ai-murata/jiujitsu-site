@@ -3,6 +3,20 @@
   "line_url": "",
   "entries": [
     {
+      "id": "claudecode",
+      "date": "2026-09-27",
+      "title": "柔術道場のClaude Code",
+      "url": "/claudecode/",
+      "summary": "道場の裏方仕事をAIに毎日どう任せているか。白帯から黒帯までの段階と、そのまま使える頼み方12個です。"
+    },
+    {
+      "id": "kondate",
+      "date": "2026-09-27",
+      "title": "良蔵の献立",
+      "url": "/kondate/",
+      "summary": "朝は食べない、夜は外食。昼の一食で組んだ一週間ぶんの献立と、PFCの計算です。"
+    },
+    {
       "id": "toriatsukai",
       "date": "2026-09-18",
       "title": "良蔵取扱説明書",
