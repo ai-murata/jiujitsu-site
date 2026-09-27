@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>ワープロ好きだった私が、Claude Codeにハマった理由</title>
+<meta name="description" content="ワープロ、Excel、Word、PowerPoint。道具が変わるたびに必死で覚えてきた私が、次はAIだと思ってClaude Codeにのめり込んだ話。マネージャー目線のブログ、3本目です。">
+<meta property="og:title" content="ワープロ好きだった私が、Claude Codeにハマった理由">
+<meta property="og:description" content="ワープロ→Excel・PowerPoint→AI。道具が変わるたびに覚えてきた私が、今AIにハマっている理由。">
+<meta property="og:url" content="https://jiujitsu.co.jp/blog/waapuro-kara-ai/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+</style>
+
+<header>
+  <p class="brand"><a href="/blog/">JIU LABO BLOG</a></p>
+  <h1>ワープロ好きだった私が、Claude Codeにハマった理由</h1>
+  <p class="meta"><time datetime="2026-09-27">2026.09.27</time>　村田亜衣（マネージャー）</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>こんにちは、村田亜衣です。3本目は、少し昔話をさせてください。</p>
+    <p>柔術道場のマネージャーをしている私が、なぜこんなにClaude Codeにハマっているのか。よく考えてみたら、今に始まったことではありませんでした。私は昔から、<b>そのときどきの「新しい道具」を覚えるのが好きだった</b>んです。</p>
+
+    <h2>はじまりは、小学生のワープロ</h2>
+    <p>ワープロを触りはじめたのは、小学生のころです。打ったものは<b>フロッピーディスク</b>に保存していました。</p>
+    <p>書いていたのは、お友達へのお手紙や、自分が思っていることをつらつらと。とにかく打つのが楽しくて、思いつくままにどんどん書いていました。<b>一太郎</b>も使っていましたね。</p>
+    <p>じいちゃんとメールのやりとりもしていました。今思うと、小学生なりに<b>その時代の最先端</b>を行っていた気がします。</p>
+    <p>今はあの頃ほど夢中になることはなくなりましたが、「機械に向かって何かを作るのが好き」という気持ちは、ずっと根っこに残っていたんだと思います。</p>
+
+    <h2>大学で、Excelとパワポに追いこまれる</h2>
+    <p>そのあとは、人並みにパソコンを使ってきた、くらいのものでした。転機は大学です。経済学部に入ったら、<b>ExcelやPowerPointをどうしても使わなきゃいけない</b>場面がどんどん出てきました。</p>
+    <p>使えないと課題が終わらない。だから、とにかく調べました。わからないことがあるたびに調べて、試して、また調べて。好きで始めたというより、必要にせまられて覚えた、というのが正直なところです。</p>
+
+    <h2>大学職員で、「熟練」した</h2>
+    <p>卒業して大学職員になると、今度は仕事として毎日Excel・Word・PowerPointを使うようになりました。表を作り、文書を作り、資料を作る。毎日くり返しているうちに、気づけばすっかり手になじんでいました。</p>
+    <p>「熟練した」と言っていいくらいには、使いこなせるようになったと思います。</p>
+
+    <ol class="timeline">
+      <li><span class="when">小学生</span><b>ワープロ・一太郎</b><span class="d">お手紙を書いて、フロッピーに保存。じいちゃんとメールも</span></li>
+      <li><span class="when">大学（経済学部）</span><b>Excel・PowerPoint</b><span class="d">使わないと課題が終わらない。調べまくって覚えた</span></li>
+      <li><span class="when">大学職員</span><b>Excel・Word・PowerPoint</b><span class="d">毎日の仕事で使いこんで、熟練した</span></li>
+      <li><span class="when">いま</span><b>AI（Claude Code）</b><span class="d">次の「新しい道具」はこれだと思った</span></li>
+    </ol>
+
+    <h2>その時代が終わって、次はAI</h2>
+    <p>でも、ここ最近で空気が変わったと感じています。ExcelやWordを上手に使えることが強みだった時代は、ひと区切りついたのかもしれません。</p>
+
+    <blockquote><p>ワープロの次がExcelだったように、<br>Excelの次は、AIなんだと思う。</p></blockquote>
+
+    <p>そう感じたとき、「あ、またあの感じだ」と思いました。大学でExcelに追いこまれて、調べて覚えた、あのときと同じです。ただ今回は、追いこまれたというより、<b>自分から飛びこんだ</b>感覚に近いです。</p>
+
+    <h2>ハマった理由は、たぶん「昔と同じ」だから</h2>
+    <p>振り返ってみると、ワープロもExcelもAIも、私にとってやっていることは同じでした。</p>
+    <ul class="tips">
+      <li>新しい道具が出てくる</li>
+      <li>わからないところを調べて、試して、覚える</li>
+      <li>使えるようになると、仕事がぐっと楽になって、作れるものが増える</li>
+    </ul>
+    <p>ちがうのは、AIは<b>こちらの言葉で頼めば、道具のほうが歩み寄ってくれる</b>ところです。Excelの関数を覚えなくても、「こういう表がほしい」と話せば作ってくれる。昔、何時間もかけて調べていたことが、会話ひとつで済んでしまいます。</p>
+    <p>それでも、昔の経験がむだになったとは思いません。ExcelやWordで「こういう資料があると助かる」「ここは手作業だと大変」とわかっているからこそ、AIに何を頼めばいいかがすぐに浮かびます。<b>道具を覚えてきた時間が、今は「頼み方」に生きている</b>と感じています。</p>
+
+    <h2>新しい道具を、また覚えていく</h2>
+    <p>ワープロでお手紙を書いていた小学生が、Excelで追いこまれた大学生になり、Word・Excel・PowerPointの大学職員になって、今は柔術道場のマネージャーとしてAIと仕事をしています。</p>
+    <p>道具は変わっても、「新しいものを覚えて、仕事をちょっと楽にする」のが好きなのは変わりません。次にどんな道具が出てきても、たぶん私はまた調べて、試して、ハマるんだと思います。</p>
+    <p>「パソコンは好きだけど、AIはまだちょっと……」という方がいたら、ぜひ一度さわってみてください。ExcelやWordを覚えてきたその経験、きっとAIでも生きますよ。</p>
+
+    <div class="next">
+      <p>前回の記事はこちら。</p>
+      <p><a href="/blog/onsei-tsukaiwake/">打つのをやめて、しゃべり始めた。Chat・Cowork・Codeの使い分け →</a></p>
+    </div>
+  </article>
+
+  <footer>
+    <a href="/blog/">ブログの一覧へ</a>　／　<a href="/">jiujitsu.co.jp トップへ</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>

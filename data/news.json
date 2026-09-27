@@ -3,6 +3,13 @@
   "line_url": "",
   "entries": [
     {
+        "id": "blog-waapuro-kara-ai",
+        "date": "2026-09-27",
+        "title": "ブログ：ワープロ好きだった私が、Claude Codeにハマった理由",
+        "url": "/blog/waapuro-kara-ai/",
+        "summary": "ワープロ→Excel・PowerPoint→AI。道具が変わるたびに覚えてきた私が、今AIにハマっている理由。マネージャー目線のブログ、3本目です。"
+    },
+    {
       "id": "blog-onsei-tsukaiwake",
       "date": "2026-09-27",
       "title": "ブログ：打つのをやめて、しゃべり始めた。Chat・Cowork・Codeの使い分け",
