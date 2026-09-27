@@ -93,15 +93,35 @@
   @media (max-width: 560px) { .day { grid-template-columns: 64px 1fr; gap: 12px; } .dnum { font-size: 22px; } }
 
   /* 1日 */
+  .daybox { background: var(--k); color: #b0a88f; padding: 34px 36px 38px; position: relative; overflow: hidden; }
+  .daybox::before { content: ""; position: absolute; inset: 0; background: radial-gradient(120% 60% at 100% 0%, rgba(201,162,39,.16), transparent 60%); pointer-events: none; }
+  .dayhead { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-bottom: 1px solid rgba(201,162,39,.35); padding-bottom: 14px; margin-bottom: 26px; position: relative; }
+  .dayhead .dl { font-size: 10.5px; letter-spacing: .32em; color: var(--gold-hi); font-weight: 700; }
+  .dayhead .dr { font-family: var(--mincho); font-weight: 700; font-size: 13px; letter-spacing: .14em; color: #f3ecd8; font-variant-numeric: tabular-nums; }
   .today { list-style: none; margin: 0; padding: 0; position: relative; }
-  .today::before { content: ""; position: absolute; left: 60px; top: 12px; bottom: 12px; width: 1px; background: var(--line); }
-  .today li { display: grid; grid-template-columns: 52px 1fr; gap: 28px; padding: 0 0 22px; position: relative; }
+  .today::before { content: ""; position: absolute; left: 121px; top: 14px; bottom: 14px; width: 2px; background: linear-gradient(#c9a227, #7a6118 70%, #2e2a20); }
+  .today li { display: grid; grid-template-columns: 98px 1fr; gap: 46px; padding: 0 0 26px; position: relative; }
   .today li:last-child { padding-bottom: 0; }
-  .today li::before { content: ""; position: absolute; left: 55px; top: 9px; width: 11px; height: 11px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
-  .today .tm { font-family: var(--mincho); font-weight: 700; font-size: 15px; color: var(--gold); text-align: right; line-height: 1.6; font-variant-numeric: tabular-nums; }
-  .today b { font-family: var(--mincho); font-weight: 700; color: var(--ink); font-size: 15.5px; letter-spacing: .06em; display: block; }
-  .today span { font-size: 13px; }
-  .today .ex { display: block; font-size: 12.5px; color: var(--faint); margin-top: 2px; }
+  .today li::before { content: ""; position: absolute; left: 116px; top: 11px; width: 12px; height: 12px; border-radius: 50%; background: var(--k); border: 2px solid var(--gold-hi); box-shadow: 0 0 0 4px rgba(201,162,39,.14); }
+  .today time { font-family: var(--mincho); font-weight: 700; font-size: 28px; line-height: 1.1; color: var(--gold-hi); white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+  .today .tt { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .today b { font-family: var(--mincho); font-weight: 700; color: #f3ecd8; font-size: 17px; letter-spacing: .08em; }
+  .today em { font-style: normal; font-size: 10px; letter-spacing: .2em; font-weight: 700; color: var(--k); background: var(--gold-hi); padding: 1px 8px 0; }
+  .today q { quotes: "「" "」"; display: block; margin: 10px 0 8px; padding: 9px 14px; font-size: 13.5px; color: #f3ecd8; background: rgba(255,255,255,.05); border-left: 2px solid var(--gold-hi); line-height: 1.7; }
+  .today p { margin: 6px 0 0; font-size: 13px; line-height: 1.85; color: #b0a88f; }
+  .today li.night time { color: #8d8570; }
+  .today li.night::before { border-color: #8d8570; box-shadow: none; }
+  .js .today li { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .js .today li.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .js .today li { opacity: 1; transform: none; transition: none; } }
+  @media (max-width: 560px) {
+    .daybox { margin: 0 -22px; padding: 26px 20px 30px; }
+    .today::before { left: 73px; }
+    .today li { grid-template-columns: 58px 1fr; gap: 32px; }
+    .today li::before { left: 68px; top: 8px; }
+    .today time { font-size: 21px; }
+    .today b { font-size: 15.5px; }
+  }
 
   /* 数字 */
   .nums { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
@@ -241,15 +261,21 @@
 
   <h2>毎日の使い方<small>EVERY DAY</small></h2>
   <p class="lead">月に一度の大仕事より、毎日の細かい用事で使うことのほうが多いです。ある一日の流れです。</p>
-  <ol class="today">
-    <li><span class="tm">9:00</span><span><b>今日やることが届いている</b><span>カレンダー・メール・作業中のフォルダを自動で見て、今日の「やること一覧」を朝のうちに作っておいてくれる。</span></span></li>
-    <li><span class="tm">午前</span><span><b>メールと問い合わせ</b><span>体験の申込み、大会エントリーの質問、協賛の相談。中身を読んで返信の下書きまで作り、送るのは自分。</span></span></li>
-    <li><span class="tm">午前</span><span><b>会員さんの確認</b><span>「◯◯さんの回数券、あと何回？」「今月入会した人は？」を予約システムから調べて答える。</span></span></li>
-    <li><span class="tm">昼</span><span><b>インストラクターからの相談</b><span>シフトの入れ替え、パーソナルの空き枠、代行の手配。表を見て、空いている人と時間を出す。</span></span></li>
-    <li><span class="tm">午後</span><span><b>SNSと制作物</b><span>大会写真から投稿用を選ぶ、リール動画に字幕を付ける、チラシやTシャツを印刷会社の仕様で書き出す。</span></span></li>
-    <li><span class="tm">夕方</span><span><b>お金まわり</b><span>その日のレシートを渡して整理、頼まれた領収書を発行の手前まで準備、経費の科目を確認。</span></span></li>
-    <li><span class="tm">夜</span><span><b>席を外している間に</b><span>画面を使う作業は昼にやらず、留守の間にまとめて片付けてもらう。大会の週末は、試合の結果が出るたびに速報ページを更新。</span></span></li>
-  </ol>
+  <div class="daybox">
+    <div class="dayhead"><span class="dl">A DAY AT THE DOJO</span><span class="dr">9:00 — 23:00</span></div>
+    <ol class="today">
+      <li><time>9:00</time><div><div class="tt"><b>今日やることを聞く</b><em>準備</em></div><q>今日やること出して。締切が近い順で。</q><p>カレンダー・メール・作業中のフォルダから、今日の「やること一覧」が朝のうちにできている。そこから今日の段取りを決める。</p></div></li>
+      <li><time>9:30</time><div><div class="tt"><b>作業途中のものを走らせる</b></div><q>昨日の続き、進めておいて。</q><p>やりかけの集計や資料を一度流しておく。ここから先は、Claudeが裏で進めてくれる。</p></div></li>
+      <li><time>10:00</time><div><div class="tt"><b>良蔵さんのご飯と家事</b></div><p>その間に、昼ごはんを作って、家の掃除。家事はこの午前中に全部終わらせる。手が離せない時間も、仕事は止まらない。</p></div></li>
+      <li><time>11:30</time><div><div class="tt"><b>良蔵さんの予定を確認</b></div><q>良蔵さんの今日の予定と、起こす時間を教えて。</q><p>予定表から今日の動きを確認して、起こす時間を決める。ここまでが、一日動くための準備時間。</p></div></li>
+      <li><time>13:00</time><div><div class="tt"><b>ジムへ行く</b><em>体づくり</em></div><p>格闘家の妻たるもの、たるんだ体ではいられない。ジムには毎日行く。柔術と同じで、トレーニング中は携帯から1時間以上離れる。画面を見ない時間が、そのまま頭の中を整理する時間になる。今日やらなきゃいけないことを考えて、このあとの実作業の段取りをつける。その間もClaudeは、朝の続きを裏で進めている。</p></div></li>
+      <li><time>14:30</time><div><div class="tt"><b>インストラクターからの相談</b></div><q>火曜の夜クラス、代わりに入れる人いる？</q><p>シフトの入れ替え、パーソナルの空き枠、代行の手配。表を見て、空いている人と時間を出す。</p></div></li>
+      <li><time>15:30</time><div><div class="tt"><b>会員さんの確認</b></div><q>◯◯さんの回数券、あと何回？</q><p>回数券の残り、今月の入会者。予約システムから調べて、そのまま答えてくれる。</p></div></li>
+      <li><time>16:30</time><div><div class="tt"><b>SNSと制作物</b></div><q>この大会の写真から、インスタ用に10枚選んで。</q><p>投稿用の写真選び、リール動画の字幕、チラシやTシャツを印刷会社の仕様で書き出す。</p></div></li>
+      <li><time>18:00</time><div><div class="tt"><b>お金まわり</b></div><q>今日のレシート、日付と金額で表にして。</q><p>レシートの整理、頼まれた領収書を発行の手前まで準備、経費の科目の確認。</p></div></li>
+      <li class="night"><time>23:00</time><div><div class="tt"><b>寝ている間に</b><em>留守中</em></div><p>画面を使う作業は昼にやらず、席を外している間にまとめて片付けてもらう。大会の週末は、試合の結果が出るたびに速報ページを更新。</p></div></li>
+    </ol>
+  </div>
 
   <h2>道場の1か月<small>MONTHLY</small></h2>
   <p class="lead">実際に回している月次の作業です。どれも「◯◯やって」の一言で始まります。</p>
@@ -327,4 +353,10 @@
       try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
     });
   });
+</script>
+<script>
+(function(){ if(!('IntersectionObserver' in window)) return; document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -10% 0px'});
+  document.querySelectorAll('.today li').forEach(function(li,i){li.style.transitionDelay=(i%3)*80+'ms';io.observe(li);});
+})();
 </script>
