@@ -73,8 +73,21 @@
   .unit ul li { padding-left: 1em; position: relative; }
   .unit ul li::before { content: "・"; position: absolute; left: -.1em; color: var(--gold); }
 
+  .subunits { list-style: none; margin: 12px 0 0; padding: 0 0 0 18px; position: relative; }
+  .subunits::before { content: ""; position: absolute; left: 0; top: -6px; bottom: 16px; width: 1px; background: var(--line); }
+  .subunits > li { position: relative; margin-top: 10px; }
+  .subunits > li::before { content: ""; position: absolute; left: -18px; top: 17px; width: 18px; height: 1px; background: var(--line); }
+  .subunit { border: 1px solid var(--line); background: var(--panel); padding: 10px 13px; }
+  .subunit .t { font-size: 10.5px; letter-spacing: .14em; color: var(--gold); }
+  .subunit .n { font-family: var(--mincho); font-weight: 700; font-size: 14.5px; color: var(--ink); letter-spacing: .06em; margin: 3px 0 0; }
+  .subunit .n .kana { font-family: var(--gothic); font-weight: 400; font-size: 10.5px; color: var(--faint); letter-spacing: .08em; margin-left: .5em; }
+  .chip { display: inline-block; font-family: var(--gothic); font-weight: 500; font-size: 10px; letter-spacing: .12em; color: #fff; background: var(--faint); border-radius: 2px; padding: 1px 7px; margin-left: .6em; vertical-align: 2px; }
+  .unit.ol .chip { background: var(--ol); } .unit.yawara .chip { background: var(--yawara); }
+  .unit.sweep .chip { background: var(--sweep); } .unit.tamago .chip { background: #8a6a12; }
+  .subunit .t { display: flex; justify-content: space-between; align-items: baseline; }
+
   .tbd { display: inline-block; font-family: var(--gothic); font-weight: 500; font-size: 10px; letter-spacing: .1em; color: #9a6b1f; background: #fdf5e0; border: 1px solid #ecdcae; border-radius: 2px; padding: 1px 6px; margin-left: .6em; vertical-align: 2px; }
-  .blank { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--faint); letter-spacing: .08em; margin: 5px 0 0; }
+  .blankname { color: var(--faint); }
 
   .note { margin-top: 56px; border: 1px solid var(--line); background: var(--panel); padding: 20px 22px; font-size: 12.5px; line-height: 1.95; }
   .note h2 { font-family: var(--mincho); font-size: 14px; color: var(--ink); letter-spacing: .12em; margin: 0 0 10px; }
@@ -109,7 +122,7 @@
       <p class="role">代表取締役</p>
       <p class="name">村田 良蔵</p>
       <p class="kana">むらた りょうぞう</p>
-      <p class="duty">全体統括／指導方針の決定。SJJJF（スポーツ柔術日本連盟）代表理事として大会・連盟対応。対外的な顔として、メディア・協賛・提携の窓口。</p>
+      <p class="duty">全体統括と意思決定。指導方針・帯の昇格判断。SJJJF代表理事として大会運営と連盟対応。メディア・協賛・提携の窓口。新拠点の出店判断と資金繰り。選手としても現役。</p>
     </div>
 
     <div class="stem" aria-hidden="true"></div>
@@ -123,51 +136,97 @@
           <p class="ja">道場部門</p>
           <p class="name">濱田 真亮</p>
           <p class="kana">はまだ しんすけ</p>
-          <p class="duty">道場部門の統括。各拠点のクラス編成・指導内容の品質管理、インストラクターの育成。自身もYAWARAで柔術パーソナルを担当。</p>
+          <p class="duty">道場部門の統括。4拠点のクラス編成と指導内容の品質管理、インストラクターの育成と配置。各店の主担当のとりまとめ、合同クラス・出稽古の調整、大会に向けた選手の強化。</p>
         </div>
 
         <ul class="units">
           <li>
             <div class="unit ol">
               <p><span class="site">OVER LIMIT</span><span class="place">札幌</span></p>
-              <p class="person">諸澤 陽斗<span class="kana">もろさわ はると</span></p>
+              <p class="person">諸澤 陽斗<span class="kana">もろさわ はると</span><span class="chip">代表</span></p>
               <ul>
-                <li>札幌店の指導・現場運営</li>
-                <li>入会・退会・休会の会員対応</li>
+                <li>札幌店の店舗運営全般</li>
+                <li>クラスの指導とスケジュール運用</li>
+                <li>公式LINEの返信・問い合わせ対応</li>
+                <li>体験・見学の受け入れと入会手続き</li>
+                <li>会員対応（入会・退会・休会）</li>
                 <li>店頭決済（Airペイ／PayPay）と日次売上の管理</li>
+                <li>副担当・スタッフのシフト調整</li>
+              </ul>
+              <ul class="subunits">
+                <li>
+                  <div class="subunit">
+                    <p class="t">副担当</p>
+                    <p class="n blankname">未定</p>
+                  </div>
+                </li>
               </ul>
             </div>
           </li>
           <li>
             <div class="unit yawara">
               <p><span class="site">YAWARA</span><span class="place">原宿</span></p>
-              <p class="person">野島 繁昭<span class="kana">のじま しげあき</span></p>
+              <p class="person">野島 繁昭<span class="kana">のじま しげあき</span><span class="chip">主担当</span></p>
               <ul>
                 <li>原宿店の店舗運営全般</li>
+                <li>クラスの指導とスケジュール運用</li>
+                <li>公式LINEの返信・問い合わせ対応</li>
+                <li>体験・見学の受け入れと入会手続き</li>
+                <li>会員対応（入会・退会・休会）</li>
                 <li>内装・設備トラブルの窓口（不動産・施工会社との調整）</li>
                 <li>法人契約の利用実績とりまとめ・請求内訳の確認</li>
+              </ul>
+              <ul class="subunits">
+                <li>
+                  <div class="subunit">
+                    <p class="t">副担当</p>
+                    <p class="n blankname">未定</p>
+                  </div>
+                </li>
               </ul>
             </div>
           </li>
           <li>
             <div class="unit sweep">
               <p><span class="site">SWEEP</span><span class="place">北参道</span></p>
-              <p class="person">廣鰭 翔大<span class="kana">ひろはた やすひろ</span><span class="tbd">要確認</span></p>
+              <p class="person">廣鰭 翔大<span class="kana">ひろはた やすひろ</span><span class="chip">主担当</span></p>
               <ul>
-                <li>北参道店のクラス運営・指導</li>
-                <li>パーソナルトレーニングの担当（SWEEP・YAWARA 両店）</li>
-                <li>体験・見学からの入会導線</li>
+                <li>北参道店の店舗運営全般</li>
+                <li>クラスの指導とスケジュール運用</li>
+                <li>公式LINEの返信・問い合わせ対応</li>
+                <li>体験・見学の受け入れと入会手続き</li>
+                <li>会員対応（入会・退会・休会）</li>
+                <li>YAWARAとの合同クラスの調整</li>
+              </ul>
+              <ul class="subunits">
+                <li>
+                  <div class="subunit">
+                    <p class="t">副担当</p>
+                    <p class="n blankname">未定</p>
+                  </div>
+                </li>
               </ul>
             </div>
           </li>
           <li>
             <div class="unit tamago">
-              <p><span class="site">TAMAGO</span><span class="place">スタジオ</span></p>
-              <p class="person">河野 裕也<span class="kana">こうの ゆうや</span></p>
+              <p><span class="site">TAMAGO</span><span class="place">新拠点</span></p>
+              <p class="person">河野 裕也<span class="kana">こうの ゆうや</span><span class="chip">主担当</span></p>
               <ul>
-                <li>新拠点TAMAGOの立ち上げ・運営</li>
-                <li>クラス設計とパーソナル指導</li>
+                <li>TAMAGOの店舗運営全般（立ち上げから）</li>
+                <li>クラス設計とスケジュール管理</li>
+                <li>公式LINEの返信・問い合わせ対応</li>
+                <li>体験・見学の受け入れと入会手続き</li>
+                <li>脱毛・整体メニューの運用</li>
                 <li>スペース貸し・物販まわりの現場運用</li>
+              </ul>
+              <ul class="subunits">
+                <li>
+                  <div class="subunit">
+                    <p class="t">副担当</p>
+                    <p class="n blankname">未定</p>
+                  </div>
+                </li>
               </ul>
             </div>
           </li>
@@ -181,51 +240,59 @@
           <p class="ja">運営事務</p>
           <p class="name">村田 亜衣</p>
           <p class="kana">むらた あい</p>
-          <p class="duty">バックオフィスの統括。経理・請求（請求書発行、法人分の集計）、契約・法務まわりの窓口、備品の仕入れ、社内ツールとWebサイトの運用。</p>
+          <p class="duty">バックオフィスの統括。経理・請求（請求書発行、法人分の集計、入金消込）、契約・法務の窓口、金融機関と税理士への対応、仕入れと在庫、公式LINEの一斉配信、社内ツールとWebサイト（Jiu Labo）の運用。</p>
         </div>
 
         <ul class="units">
           <li>
             <div class="unit ol">
               <p><span class="site">OVER LIMIT</span><span class="place">札幌</span></p>
-              <p class="blank">担当<span class="tbd">未定</span></p>
+              <p class="person blankname">担当<span class="tbd">未定</span></p>
               <ul>
-                <li>会員管理（hacomono）・月会費の請求</li>
-                <li>札幌店の収支表のとりまとめ</li>
-                <li>シフト・備品発注</li>
+                <li>会員管理（hacomono）の登録・変更・退会処理</li>
+                <li>月会費の決済管理と未払いのフォロー</li>
+                <li>日次売上の集計と月次収支表の作成</li>
+                <li>シフト表の作成</li>
+                <li>備品の発注と経費精算</li>
               </ul>
             </div>
           </li>
           <li>
             <div class="unit yawara">
               <p><span class="site">YAWARA</span><span class="place">原宿</span></p>
-              <p class="blank">担当<span class="tbd">未定</span></p>
+              <p class="person blankname">担当<span class="tbd">未定</span></p>
               <ul>
-                <li>会員管理・月会費の請求</li>
+                <li>会員管理（hacomono）の登録・変更・退会処理</li>
+                <li>月会費の決済管理と未払いのフォロー</li>
                 <li>法人契約分の集計と請求書の送付</li>
-                <li>シフト・備品発注・領収書のデジタル化</li>
+                <li>シフト表の作成</li>
+                <li>備品の発注と領収書のデジタル化</li>
               </ul>
             </div>
           </li>
           <li>
             <div class="unit sweep">
               <p><span class="site">SWEEP</span><span class="place">北参道</span></p>
-              <p class="blank">担当<span class="tbd">未定</span></p>
+              <p class="person blankname">担当<span class="tbd">未定</span></p>
               <ul>
-                <li>会員管理・月会費の請求</li>
-                <li>決済（Square／PayPay）の消込</li>
-                <li>シフト・備品発注</li>
+                <li>会員管理（hacomono）の登録・変更・退会処理</li>
+                <li>月会費の決済管理と未払いのフォロー</li>
+                <li>Square／PayPay の入金消込</li>
+                <li>シフト表の作成</li>
+                <li>備品の発注と経費精算</li>
               </ul>
             </div>
           </li>
           <li>
             <div class="unit tamago">
-              <p><span class="site">TAMAGO</span><span class="place">スタジオ</span></p>
-              <p class="blank">担当<span class="tbd">未定</span></p>
+              <p><span class="site">TAMAGO</span><span class="place">新拠点</span></p>
+              <p class="person blankname">担当<span class="tbd">未定</span></p>
               <ul>
-                <li>会員管理・サブスクの請求</li>
-                <li>グッズ／スペース貸しの売上管理</li>
-                <li>シフト・備品発注</li>
+                <li>会員管理とサブスクの請求</li>
+                <li>脱毛・整体の予約枠と売上の管理</li>
+                <li>グッズ・スペース貸しの売上管理</li>
+                <li>シフト表の作成</li>
+                <li>備品の発注と経費精算</li>
               </ul>
             </div>
           </li>
@@ -239,7 +306,7 @@
     <h2>この図について</h2>
     <ul>
       <li>役割は、これまでのやりとり（請求・設備・パーソナル担当・拠点別の収支など）から拾って書き起こした<strong>暫定版</strong>です。実態と違うところは直してください。</li>
-      <li>「要確認」は名前の確証が取れていないところ、「未定」はこれから決めるところです。</li>
+      <li>各拠点は「主担当（札幌は代表）＋副担当」の2枚看板。副担当と運営事務の担当は「未定」なので、決まったら差し替えてください。</li>
       <li>道場部門と運営事務は、拠点ごとに1対1で対応する形にしています。</li>
     </ul>
   </div>
