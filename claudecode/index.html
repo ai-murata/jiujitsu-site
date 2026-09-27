@@ -92,8 +92,19 @@
   .day span { font-size: 13px; }
   @media (max-width: 560px) { .day { grid-template-columns: 64px 1fr; gap: 12px; } .dnum { font-size: 22px; } }
 
+  /* 1日 */
+  .today { list-style: none; margin: 0; padding: 0; position: relative; }
+  .today::before { content: ""; position: absolute; left: 60px; top: 12px; bottom: 12px; width: 1px; background: var(--line); }
+  .today li { display: grid; grid-template-columns: 52px 1fr; gap: 28px; padding: 0 0 22px; position: relative; }
+  .today li:last-child { padding-bottom: 0; }
+  .today li::before { content: ""; position: absolute; left: 55px; top: 9px; width: 11px; height: 11px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .today .tm { font-family: var(--mincho); font-weight: 700; font-size: 15px; color: var(--gold); text-align: right; line-height: 1.6; font-variant-numeric: tabular-nums; }
+  .today b { font-family: var(--mincho); font-weight: 700; color: var(--ink); font-size: 15.5px; letter-spacing: .06em; display: block; }
+  .today span { font-size: 13px; }
+  .today .ex { display: block; font-size: 12.5px; color: var(--faint); margin-top: 2px; }
+
   /* 数字 */
-  .nums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .nums { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .num { border-top: 1px solid var(--gold); padding-top: 12px; }
   .num b { font-family: var(--mincho); font-weight: 700; font-size: 40px; color: var(--ink); line-height: 1.1; font-variant-numeric: tabular-nums; }
   .num b small { font-size: 14px; margin-left: 4px; color: var(--body-c); }
@@ -176,8 +187,8 @@
         <h3>Excelと紙を片付ける</h3>
         <p>手元のファイルを渡して、集計と清書を任せます。</p>
         <ul class="menu">
-          <li><b>パーソナルレッスンの集計</b>　担当コーチ別の回数・単価・歩合を月ごとにまとめる</li>
-          <li><b>領収書の読み取り</b>　紙の束を写真に撮って渡すと、日付・金額・用途の一覧になる<a href="/ryoshusho/">実例 →</a></li>
+          <li><b>パーソナルレッスンの集計</b>　担当インストラクター別の回数・単価・歩合を月ごとにまとめる</li>
+          <li><b>領収書の読み取り</b>　紙の束をスキャンして渡すと、日付・金額・用途の一覧になる<a href="/ryoshusho/">実例 →</a></li>
           <li><b>大会・イベントの収支表</b>　チケットの販売明細と経費を突き合わせて、A4一枚の報告書に</li>
           <li><b>契約書のひな形</b>　業務委託や協賛の契約書を、前回の条件から作り直す</li>
         </ul>
@@ -228,11 +239,23 @@
     </article>
   </div>
 
+  <h2>毎日の使い方<small>EVERY DAY</small></h2>
+  <p class="lead">月に一度の大仕事より、毎日の細かい用事で使うことのほうが多いです。ある一日の流れです。</p>
+  <ol class="today">
+    <li><span class="tm">9:00</span><span><b>今日やることが届いている</b><span>カレンダー・メール・作業中のフォルダを自動で見て、今日の「やること一覧」を朝のうちに作っておいてくれる。</span></span></li>
+    <li><span class="tm">午前</span><span><b>メールと問い合わせ</b><span>体験の申込み、大会エントリーの質問、協賛の相談。中身を読んで返信の下書きまで作り、送るのは自分。</span></span></li>
+    <li><span class="tm">午前</span><span><b>会員さんの確認</b><span>「◯◯さんの回数券、あと何回？」「今月入会した人は？」を予約システムから調べて答える。</span></span></li>
+    <li><span class="tm">昼</span><span><b>インストラクターからの相談</b><span>シフトの入れ替え、パーソナルの空き枠、代行の手配。表を見て、空いている人と時間を出す。</span></span></li>
+    <li><span class="tm">午後</span><span><b>SNSと制作物</b><span>大会写真から投稿用を選ぶ、リール動画に字幕を付ける、チラシやTシャツを印刷会社の仕様で書き出す。</span></span></li>
+    <li><span class="tm">夕方</span><span><b>お金まわり</b><span>その日のレシートを渡して整理、頼まれた領収書を発行の手前まで準備、経費の科目を確認。</span></span></li>
+    <li><span class="tm">夜</span><span><b>席を外している間に</b><span>画面を使う作業は昼にやらず、留守の間にまとめて片付けてもらう。大会の週末は、試合の結果が出るたびに速報ページを更新。</span></span></li>
+  </ol>
+
   <h2>道場の1か月<small>MONTHLY</small></h2>
   <p class="lead">実際に回している月次の作業です。どれも「◯◯やって」の一言で始まります。</p>
   <div class="days">
     <div class="day"><div class="dnum">1<small>月初</small></div><div><b>取引先への請求書</b><span>前月のパーソナル回数と所属人数から金額を出し、請求書サービスに下書き</span></div></div>
-    <div class="day"><div class="dnum">10<small>振込日</small></div><div><b>10日払いの振込リスト</b><span>コーチへの業務委託費と連盟への支払いをまとめる</span></div></div>
+    <div class="day"><div class="dnum">10<small>振込日</small></div><div><b>10日払いの振込リスト</b><span>インストラクターへの業務委託費と連盟への支払いをまとめる</span></div></div>
     <div class="day"><div class="dnum">15<small>締め日</small></div><div><b>勤怠と歩合の集計</b><span>打刻データとクラス実績から集計し、会計事務所へ送る下書きまで</span></div></div>
     <div class="day"><div class="dnum">25<small>自動</small></div><div><b>月会費の未払いチェック</b><span>決まった日に自動で走って一覧を保存。スタッフが見て会員さんに声をかける</span></div></div>
     <div class="day"><div class="dnum">25<small>振込日</small></div><div><b>給与の振込リスト</b><span>給与明細と勤務表から支給額を転記</span></div></div>
@@ -242,20 +265,27 @@
   <h2>ここまでの量<small>NUMBERS</small></h2>
   <p class="lead">ひとつの道場で、Claude Code に任せて片付いた量です。</p>
   <div class="nums">
-    <div class="num"><b>122<small>枚</small></b><p>紙の領収書を読み取り、予定表と突き合わせて整理</p></div>
+    <div class="num"><b>432<small>枚</small></b><p>2団体分の紙の領収書をスキャンして読み取り、予定表と突き合わせて311件に整理</p></div>
     <div class="num"><b>560<small>道場</small></b><p>2つの連盟の加盟道場を集めた検索サイト</p></div>
-    <div class="num"><b>6<small>本</small></b><p>毎月の定型作業をスキルにして、一言で回せる状態に</p></div>
+    <div class="num"><b>6<small>本</small></b><p>請求書・振込・勤怠など、毎月の作業をスキルにして一言で回せる状態に</p></div>
+    <div class="num"><b>毎朝<small>9時</small></b><p>カレンダーとメールから、その日のやること一覧が自動で届く</p></div>
   </div>
 
   <h2>こう頼めば動く<small>HOW TO ASK</small></h2>
   <p class="lead">専門用語はいりません。道場のスタッフに頼むのと同じ言い方で大丈夫です。</p>
   <div class="asks">
+    <div class="ask"><span class="t">朝</span><q>今日やること出して。締切が近いものから並べて。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">問い合わせ</span><q>この体験の問い合わせに返信の下書きを作って。持ち物と、道着を貸せることも書いて。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">会員</span><q>◯◯さんの回数券、あと何回残ってる？期限もあわせて教えて。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">シフト</span><q>来週火曜の夜クラス、代わりに入れるインストラクターは誰？</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">写真</span><q>この大会の写真から、インスタ用に10枚選んで。いろんな選手が入るように。</q><button class="copy" type="button">コピー</button></div>
     <div class="ask"><span class="t">会費</span><q>今月の月会費、引き落としに失敗した人を一覧にして。入会したばかりの人は除いて。</q><button class="copy" type="button">コピー</button></div>
     <div class="ask"><span class="t">大会</span><q>この大会のトーナメント表から、うちの道場の選手の試合だけ時間順に並べて。</q><button class="copy" type="button">コピー</button></div>
     <div class="ask"><span class="t">経費</span><q>このレシートの写真、日付と金額と何の支払いかを表にして。カード控えと二重になってるものは外して。</q><button class="copy" type="button">コピー</button></div>
     <div class="ask"><span class="t">動画</span><q>この試合動画に日本語字幕をつけて。選手の名前は大会の登録名に合わせて。</q><button class="copy" type="button">コピー</button></div>
     <div class="ask"><span class="t">減量</span><q>計量まであと3週間で4kg落としたい。水抜きなしで、1日500gを超えない計画を作って。</q><button class="copy" type="button">コピー</button></div>
     <div class="ask"><span class="t">定型化</span><q>今やった未払いチェックの手順、スキルにして毎月25日に自動で回るようにして。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">契約書</span><q>この協賛契約書、去年のものと条件が変わったところだけ教えて。</q><button class="copy" type="button">コピー</button></div>
   </div>
 
   <h2>道場で使うときの約束<small>RULES</small></h2>
