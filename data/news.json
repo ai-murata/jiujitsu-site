@@ -3,6 +3,13 @@
   "line_url": "",
   "entries": [
     {
+      "id": "blog-onsei-tsukaiwake",
+      "date": "2026-09-27",
+      "title": "ブログ：打つのをやめて、しゃべり始めた。Chat・Cowork・Codeの使い分け",
+      "url": "/blog/onsei-tsukaiwake/",
+      "summary": "音声入力で5倍速く。そして「答え・ファイル・仕組み」で選ぶ、Claudeの3つの使い分け。"
+    },
+    {
       "id": "blog-claude-code-hajimari",
       "date": "2026-09-27",
       "title": "ブログ：エンジニアじゃない私が、Claude Codeと「しつこく」付き合って1か月",

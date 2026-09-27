@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>打つのをやめて、しゃべり始めた。Chat・Cowork・Codeの使い分け</title>
+<meta name="description" content="Claudeへの指示を音声入力に変えたら5倍速くなった話と、Chat・Cowork・Claude Codeの3つをどう使い分けているか。マネージャー目線のブログ、2本目です。">
+<meta property="og:title" content="打つのをやめて、しゃべり始めた。Chat・Cowork・Codeの使い分け">
+<meta property="og:description" content="音声入力で5倍速く。そして「答え・ファイル・仕組み」で選ぶClaudeの3つの使い分け。">
+<meta property="og:url" content="https://jiujitsu.co.jp/blog/onsei-tsukaiwake/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+</style>
+
+<header>
+  <p class="brand"><a href="/blog/">JIU LABO BLOG</a></p>
+  <h1>打つのをやめて、しゃべり始めた。Chat・Cowork・Codeの使い分け</h1>
+  <p class="meta"><time datetime="2026-09-27">2026.09.27</time>　村田亜衣（マネージャー）</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>こんにちは、村田亜衣です。ブログ2本目は、最近の私のClaudeの使い方の話を2つします。ひとつは<b>音声入力</b>、もうひとつは<b>Claudeの3つの使い分け</b>です。</p>
+
+    <h2>打つのをやめて、しゃべるようになった</h2>
+    <p>これまでは、Claude Codeへのお願いをキーボードで打っていました。でも最近は、すっかり音声入力にハマっています。</p>
+    <p>体感だと、<b>打つより5倍くらい速い</b>です。思いついたことをそのまましゃべるだけなので、「どう書けば伝わるかな」と手が止まることもありません。</p>
+
+    <h3>言い間違えても、ちゃんと伝わる</h3>
+    <p>音声入力だと、変換ミスや言い間違いがけっこう出ます。でも、AIが前後の流れから意味をくみ取ってくれるので、ほとんど困りません。実際にこのブログを作っているときも、こんなことがありました。</p>
+    <ul class="talk">
+      <li>「紹介してください」<small>→ 本当は「公開してください」。ちゃんと公開してくれました</small></li>
+      <li>「日本でのアイディアが思い浮かんで」<small>→ 本当は「2本目のアイディア」。ちゃんとこの2本目の記事になりました</small></li>
+    </ul>
+    <p>「えーと」「まあ」が入っていても大丈夫です。むしろ、きれいな文章にしようとしないほうがうまくいきます。</p>
+
+    <h3>しゃべると、伝わる情報が増える</h3>
+    <p>もうひとつ気づいたのは、しゃべると<b>「なぜそうしたいのか」まで自然に話している</b>ということ。打つときは「〇〇して」と短く済ませがちですが、しゃべると背景や気持ちまで口から出てきます。そのぶんAIもこちらの意図をつかみやすくなって、一発で思った通りのものが出てくることが増えました。</p>
+
+    <h2>Claudeの3つの使い分け</h2>
+    <p>もうひとつ最近おもしろかったのが、Claudeの使い分けです。Claudeには大きく分けて、<b>Chat（Chat）</b>・<b>Cowork（コワーク）</b>・<b>Claude Code</b>の3つの使い方があります。どれも同じClaudeなのですが、得意なことが少しずつ違います。</p>
+    <p>違いを整理すると、こう覚えるのがいちばんわかりやすいと思います。</p>
+
+    <blockquote><p>答えがほしいならChat。<br>ファイルがほしいならCowork。<br>仕組みがほしいならCode。</p></blockquote>
+
+    <div class="three">
+      <div class="tool"><span class="want">答えがほしい</span><b>Chat</b><span>相談・質問・文章の下書き</span></div>
+      <div class="tool"><span class="want">ファイルがほしい</span><b>Cowork</b><span>パソコンの中の書類づくり・整理</span></div>
+      <div class="tool code"><span class="want">仕組みがほしい</span><b>Code</b><span>毎回動く道具・サイト・自動化</span></div>
+    </div>
+
+    <h3>Chat：その場で答えがほしいとき</h3>
+    <p>いちばん身近な、話しかけて答えてもらう使い方です。スマホからでもすぐ使えます。相談相手や壁打ち相手として、考えを整理したいときにぴったりです。</p>
+    <div class="ex">
+      <p>たとえば</p>
+      <ul>
+        <li>LINEの返信、この言い方で失礼じゃないかな？</li>
+        <li>大会の告知文、もう少しわかりやすくして</li>
+        <li>この契約書の言葉、どういう意味？</li>
+      </ul>
+    </div>
+    <p>ただし、Chatは基本的に「その場で答えて終わり」です。作ってもらったファイルは、自分でダウンロードして、自分でフォルダにしまう必要があります。</p>
+
+    <h3>Cowork：ファイルとして仕上げてほしいとき</h3>
+    <p>正直に言うと、私はCoworkはまだあまり使っていません。なのでここは「こういうときに向いているらしい」という紹介です。</p>
+    <p>Coworkは、<b>パソコンの中のフォルダを渡して、仕事をまるごとお願いする</b>使い方です。Claudeがフォルダの中身を読んで、できあがった書類をそのフォルダに保存してくれます。お願いしたら、しばらく別のことをしていても大丈夫です。</p>
+    <div class="ex">
+      <p>たとえば</p>
+      <ul>
+        <li>このフォルダの領収書の写真から、日付と金額の一覧表を作って</li>
+        <li>散らかったフォルダを、中身ごとに仕分けして</li>
+        <li>この資料を全部読んで、会議用に1枚にまとめて</li>
+      </ul>
+    </div>
+    <p>「作業としては1回きりだけど、ちゃんとファイルで欲しい」ものは、Coworkが向いています。</p>
+
+    <h3>Claude Code：毎回使える「仕組み」を作りたいとき</h3>
+    <p>Claude Codeは、<b>道具そのものを作る</b>使い方です。一度作れば、次からは同じことが自動で、または一言で回るようになります。名前に「コード」とつくので難しそうに見えますが、やっていることは「こういうのが欲しい」と話すだけです。</p>
+    <div class="ex">
+      <p>たとえば</p>
+      <ul>
+        <li>毎月の請求書づくりの手順を覚えて、来月からは「今月もお願い」で済むようにして</li>
+        <li>大会の結果を自動で集めて、速報ページに出して</li>
+        <li>このブログやサイトのページを作って、公開して</li>
+      </ul>
+    </div>
+    <p>「毎月やっている」「何度も同じことをしている」と気づいたら、Claude Codeの出番です。</p>
+
+    <h2>迷ったら、どれでも大丈夫</h2>
+    <p>とはいえ、きっちり分けなくても大丈夫です。Chatで相談しているうちに「これ毎月やるな」と気づいたらClaude Codeに持っていけばいいし、Coworkで作った書類がよかったら「これを毎月作る仕組みにして」と頼めばいい。</p>
+    <p>私の場合は、仕組みを作るのが楽しくなってしまって、結局Claude Codeを開いている時間がいちばん長いです。そして最近は、そこに向かってひたすらしゃべっています。</p>
+    <p>まずは音声入力で、思いついたことをそのままClaudeに話しかけてみてください。打つより気軽に始められると思います。</p>
+
+    <div class="next">
+      <p>前回の記事はこちら。</p>
+      <p><a href="/blog/claude-code-hajimari/">エンジニアじゃない私が、Claude Codeと「しつこく」付き合って1か月 →</a></p>
+    </div>
+  </article>
+
+  <footer>
+    <a href="/blog/">ブログの一覧へ</a>　／　<a href="/">jiujitsu.co.jp トップへ</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
