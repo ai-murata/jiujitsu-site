@@ -52,12 +52,24 @@
   .posts h2 { font-family: var(--mincho); font-weight: 700; font-size: 18px; color: var(--ink); letter-spacing: .06em; line-height: 1.6; margin: 4px 0 6px; }
   .posts p { font-size: 13.5px; margin: 0; }
   .posts h2 { word-break: auto-phrase; text-wrap: pretty; }
+  /* 一番新しい記事を大きく */
+  .posts li.is-latest a { background: var(--panel); border-top: 3px solid var(--gold); padding: 28px 24px; }
+  .posts li.is-latest h2 { font-size: 22px; }
+  .posts li.is-latest p { font-size: 14px; }
+  .new-badge { display: inline-block; margin-left: 10px; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: var(--paper); background: var(--gold); border-radius: 3px; padding: 0 7px; line-height: 1.7; vertical-align: 1px; }
+  .posts li.is-hidden { display: none; }
+  .more-btn { display: block; margin: 28px auto 0; background: none; border: 1px solid var(--gold); color: var(--gold); border-radius: 999px; padding: 10px 32px; font: inherit; font-size: 13px; letter-spacing: .1em; cursor: pointer; transition: background .15s, color .15s; }
+  .more-btn:hover { background: var(--gold); color: var(--paper); }
+  .more-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
   @media (max-width: 560px) {
     header { padding: 36px 18px 26px; }
     .posts { margin-top: 20px; }
     .posts a { padding: 16px 2px; }
     .posts h2 { font-size: 16px; letter-spacing: .02em; line-height: 1.55; margin: 2px 0 4px; }
     .posts p { font-size: 12.5px; line-height: 1.75; }
+    .posts li.is-latest a { padding: 22px 16px; }
+    .posts li.is-latest h2 { font-size: 18px; }
+    .posts li.is-latest p { font-size: 13px; }
   }
 
   footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
@@ -111,6 +123,45 @@
       </a>
     </li>
   </ul>
+
+<script>
+// 記事の並べ替え・最新を大きく・NEWバッジ・「もっと見る」
+// 記事は <li> を足すだけでOK（日付は <time datetime="YYYY-MM-DD"> から読む）
+(function () {
+  var NEW_DAYS = 3;  // 何日間NEWを出すか
+  var SHOW_MAX = 5;  // 最初に見せる件数（それ以上は「もっと見る」）
+  var list = document.querySelector('.posts');
+  if (!list) return;
+  var items = Array.prototype.slice.call(list.children);
+  function toDate(li) {
+    var t = li.querySelector('time');
+    var p = new Date((t ? t.getAttribute('datetime') : '') + 'T00:00:00');
+    return isNaN(p) ? new Date(0) : p;
+  }
+  items.sort(function (a, b) { return toDate(b) - toDate(a); });
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  items.forEach(function (li, i) {
+    list.appendChild(li);
+    if (i === 0) li.classList.add('is-latest');
+    var days = (today - toDate(li)) / 86400000;
+    if (days >= 0 && days < NEW_DAYS) {
+      var b = document.createElement('span');
+      b.className = 'new-badge'; b.textContent = 'NEW';
+      li.querySelector('time').after(b);
+    }
+    if (i >= SHOW_MAX) li.classList.add('is-hidden');
+  });
+  if (items.length > SHOW_MAX) {
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'more-btn'; btn.textContent = 'もっと見る';
+    btn.onclick = function () {
+      items.forEach(function (li) { li.classList.remove('is-hidden'); });
+      btn.remove();
+    };
+    list.after(btn);
+  }
+})();
+</script>
 
   <footer>
     <a href="/feed.xml">RSSで受け取る</a>　／　<a href="/">jiujitsu.co.jp トップへ</a>

@@ -41,6 +41,8 @@
   .domain { margin-top: 2px; }
   .domain { font-size: 12px; letter-spacing: .28em; color: var(--faint); margin: 14px 0 0; }
   .tagline { font-family: var(--mincho); font-weight: 600; font-size: clamp(16px, 3vw, 21px); color: var(--ink); letter-spacing: .12em; margin: 34px 0 0; text-wrap: balance; }
+  .tagline ruby { ruby-align: center; }
+  .tagline rt { font-size: .5em; font-weight: 500; letter-spacing: .04em; color: var(--ink); opacity: .75; }
   .subline { font-size: clamp(13px, 2.4vw, 14.5px); color: var(--body-c); letter-spacing: .08em; margin: 10px 0 0; }
 
   .rank { display: flex; height: 4px; }
@@ -113,6 +115,16 @@
 
   .newslist .tag { flex: none; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: var(--gold); border: 1px solid rgba(163,128,26,.4); border-radius: 3px; padding: 0 6px; line-height: 1.7; }
   .newslist b { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  /* 一番新しいお知らせを大きく */
+  .newslist li.is-latest a { flex-wrap: wrap; gap: 4px 12px; align-items: center; background: var(--panel); border-top: 3px solid var(--gold); padding: 20px 20px 22px; }
+  .newslist li.is-latest b { flex-basis: 100%; font-size: 19px; line-height: 1.6; white-space: normal; }
+  .newslist li.is-latest .arrow { display: none; }
+  .newslist .sum { flex-basis: 100%; font-size: 13px; line-height: 1.8; color: var(--body-c); }
+  .newslist .new-badge { flex: none; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: var(--paper); background: var(--gold); border-radius: 3px; padding: 0 7px; line-height: 1.7; }
+  .newslist li.is-hidden { display: none; }
+  .more-btn { background: none; border: 1px solid var(--gold); color: var(--gold); border-radius: 999px; padding: 6px 22px; font: inherit; font-size: 12px; letter-spacing: .1em; cursor: pointer; transition: background .15s, color .15s; }
+  .more-btn:hover { background: var(--gold); color: var(--paper); }
+  .more-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
   /* もくじ：スクロールしなくてもサイト全体が見わたせる */
   .map { padding: 36px 0 0; }
@@ -125,6 +137,13 @@
   .mapgrp li a:hover { color: var(--gold); }
   .mapgrp li a:focus-visible, .mapgrp h2 a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
   .cat-label, .people, .coming { scroll-margin-top: 20px; }
+  .map .ic { display: inline-block; width: 1.4em; margin-right: 4px; text-align: center; font-style: normal; letter-spacing: 0; }
+  .mapgrp h2 .ic { margin-right: 2px; }
+  .mapgrp li a { border-radius: 999px; padding-left: 4px; margin-left: -4px; transition: background .15s, color .15s; }
+  .mapgrp li a:hover { background: rgba(201,162,39,.12); }
+  .mapgrp li a:hover .ic { display: inline-block; animation: bob .5s ease; }
+  @keyframes bob { 40% { transform: translateY(-3px) rotate(-8deg); } }
+  @media (prefers-reduced-motion: reduce) { .mapgrp li a:hover .ic { animation: none; } }
 
   @media (max-width: 660px) {
     header { padding: 30px 16px 22px; }
@@ -144,6 +163,9 @@
     .newslist time { font-size: 11px; }
     .newslist b { flex-basis: 100%; font-size: 14px; letter-spacing: .02em; line-height: 1.6; }
     .newslist .arrow { display: none; }
+    .newslist li.is-latest a { gap: 2px 8px; padding: 14px 14px 16px; }
+    .newslist li.is-latest b { font-size: 16.5px; }
+    .newslist .sum { font-size: 12.5px; line-height: 1.75; }
     main { padding-top: 40px; }
   }
 
@@ -160,7 +182,7 @@
 <header>
   <h1 class="wordmark rise d1">Jiu Labo</h1>
   <p class="domain rise d1">JIUJITSU.CO.JP</p>
-  <p class="tagline rise d2">AI（あい）が運用する、AI（えーあい）研究所。</p>
+  <p class="tagline rise d2"><ruby>AI<rt>亜衣</rt></ruby>が運用する、<ruby>AI<rt>えーあい</rt></ruby>研究所。</p>
   <p class="subline rise d2">現場の「あったらいいな」を、カタチに。</p>
 </header>
 
@@ -168,41 +190,47 @@
 
 <div class="wrap">
   <nav class="map rise d2" aria-label="もくじ">
-    <p class="sec-label">もくじ</p>
+    <p class="sec-label"><span class="ic" aria-hidden="true">📖</span>もくじ</p>
     <div class="mapgrid">
       <section class="mapgrp">
-        <h2><a href="#cat-jiujitsu">柔術</a></h2>
+        <h2><a href="#cat-jiujitsu"><span class="ic" aria-hidden="true">🥋</span>柔術</a></h2>
         <ul>
-          <li><a href="/tournament/">大会出場スケジュール</a></li>
-          <li><a href="/hajimete/">はじめての大会ガイド</a></li>
-          <li><a href="/dojo/">全国柔術道場ガイド</a></li>
+          <li><a href="/tournament/"><span class="ic" aria-hidden="true">🏆</span>大会出場スケジュール</a></li>
+          <li><a href="/hajimete/"><span class="ic" aria-hidden="true">🔰</span>はじめての大会ガイド</a></li>
+          <li><a href="/dojo/"><span class="ic" aria-hidden="true">🗾</span>全国柔術道場ガイド</a></li>
         </ul>
       </section>
       <section class="mapgrp">
-        <h2><a href="#cat-shigoto">道場のしごと</a></h2>
+        <h2><a href="#cat-shigoto"><span class="ic" aria-hidden="true">🗂️</span>道場のしごと</a></h2>
         <ul>
-          <li><a href="/shift/">月次シフト表</a></li>
-          <li><a href="/hojokin/">道場が使える補助金</a></li>
-          <li><a href="/ryoshusho/">領収書のデジタル化</a></li>
-          <li><a href="/claudecode/">道場のClaude Code</a></li>
+          <li><a href="/shift/"><span class="ic" aria-hidden="true">📅</span>月次シフト表</a></li>
+          <li><a href="/hojokin/"><span class="ic" aria-hidden="true">💰</span>道場が使える補助金</a></li>
+          <li><a href="/ryoshusho/"><span class="ic" aria-hidden="true">🧾</span>領収書のデジタル化</a></li>
+          <li><a href="/claudecode/"><span class="ic" aria-hidden="true">🤖</span>道場のClaude Code</a></li>
         </ul>
       </section>
       <section class="mapgrp">
-        <h2><a href="#cat-muratake">村田家</a></h2>
+        <h2><a href="#cat-irai"><span class="ic" aria-hidden="true">🤝</span>頼まれて作ったもの</a></h2>
         <ul>
-          <li><a href="/goroku/">良蔵語録</a></li>
-          <li><a href="/toriatsukai/">良蔵取扱説明書</a></li>
-          <li><a href="/muratake/">Amazon履歴</a></li>
-          <li><a href="/kondate/">良蔵の献立</a></li>
+          <li><a href="/salon/"><span class="ic" aria-hidden="true">💆</span>サロンの顧客管理</a></li>
         </ul>
       </section>
       <section class="mapgrp">
-        <h2><a href="/blog/">ブログ</a></h2>
+        <h2><a href="#cat-muratake"><span class="ic" aria-hidden="true">🏠</span>村田家</a></h2>
         <ul>
-          <li><a href="/blog/">記事の一覧</a></li>
-          <li><a href="#people">つくっている人</a></li>
-          <li><a href="#coming">これから作るもの</a></li>
-          <li><a href="/company/">会社概要</a></li>
+          <li><a href="/goroku/"><span class="ic" aria-hidden="true">💬</span>良蔵語録</a></li>
+          <li><a href="/toriatsukai/"><span class="ic" aria-hidden="true">📘</span>良蔵取扱説明書</a></li>
+          <li><a href="/muratake/"><span class="ic" aria-hidden="true">📦</span>Amazon履歴</a></li>
+          <li><a href="/kondate/"><span class="ic" aria-hidden="true">🍙</span>良蔵の献立</a></li>
+        </ul>
+      </section>
+      <section class="mapgrp">
+        <h2><a href="/blog/"><span class="ic" aria-hidden="true">✏️</span>ブログ</a></h2>
+        <ul>
+          <li><a href="/blog/"><span class="ic" aria-hidden="true">📝</span>記事の一覧</a></li>
+          <li><a href="#people"><span class="ic" aria-hidden="true">👋</span>つくっている人</a></li>
+          <li><a href="#coming"><span class="ic" aria-hidden="true">🌱</span>これから作るもの</a></li>
+          <li><a href="/company/"><span class="ic" aria-hidden="true">🏢</span>会社概要</a></li>
         </ul>
       </section>
     </div>
@@ -213,11 +241,24 @@
   <div class="wrap">
     <section class="news rise d2">
       <p class="sec-label">新着</p>
-      <ul class="newslist">
-        <li><a href="/blog/shigoto-igai-de/"><time>2026.09.28</time><span class="tag">ブログ</span><b>仕事で使えないなら、暮らしで使ってみよう</b><span class="arrow">→</span></a></li>
-        <li><a href="/blog/seikyusho-claude/"><time>2026.09.28</time><span class="tag">ブログ</span><b>請求書の1年分を、Claudeに見直してもらった話</b><span class="arrow">→</span></a></li>
-        <li><a href="/blog/waapuro-kara-ai/"><time>2026.09.27</time><span class="tag">ブログ</span><b>ワープロ好きだった私が、Claude Codeにハマった理由</b><span class="arrow">→</span></a></li>
-        <li><a href="/blog/onsei-tsukaiwake/"><time>2026.09.27</time><span class="tag">ブログ</span><b>打つのをやめて、しゃべり始めた。Chat・Cowork・Codeの使い分け</b><span class="arrow">→</span></a></li>
+      <ul class="newslist" data-show="5">
+        <li class="is-latest"><a href="/salon/"><time datetime="2026-09-29">2026.09.29</time><b>サロンの顧客管理</b><span class="arrow">→</span><span class="sum">「誰に、いくら」をスマホで打つだけで、月の売上とお客さまのカルテが育っていく。エステサロンに頼まれて作った、スマホの外に情報を出さない顧客管理です。</span></a></li>
+        <li><a href="/blog/shigoto-igai-de/"><time datetime="2026-09-28">2026.09.28</time><span class="tag">ブログ</span><b>仕事で使えないなら、暮らしで使ってみよう</b><span class="arrow">→</span></a></li>
+        <li><a href="/blog/seikyusho-claude/"><time datetime="2026-09-28">2026.09.28</time><span class="tag">ブログ</span><b>請求書の1年分を、Claudeに見直してもらった話</b><span class="arrow">→</span></a></li>
+        <li><a href="/blog/waapuro-kara-ai/"><time datetime="2026-09-27">2026.09.27</time><span class="tag">ブログ</span><b>ワープロ好きだった私が、Claude Codeにハマった理由</b><span class="arrow">→</span></a></li>
+        <li><a href="/blog/onsei-tsukaiwake/"><time datetime="2026-09-27">2026.09.27</time><span class="tag">ブログ</span><b>打つのをやめて、しゃべり始めた。Chat・Cowork・Codeの使い分け</b><span class="arrow">→</span></a></li>
+        <li><a href="/blog/claude-code-hajimari/"><time datetime="2026-09-27">2026.09.27</time><span class="tag">ブログ</span><b>エンジニアじゃない私が、Claude Codeと「しつこく」付き合って1か月</b><span class="arrow">→</span></a></li>
+        <li><a href="/claudecode/"><time datetime="2026-09-27">2026.09.27</time><b>柔術道場のClaude Code</b><span class="arrow">→</span></a></li>
+        <li><a href="/kondate/"><time datetime="2026-09-27">2026.09.27</time><b>良蔵の献立</b><span class="arrow">→</span></a></li>
+        <li><a href="/toriatsukai/"><time datetime="2026-09-18">2026.09.18</time><b>良蔵取扱説明書</b><span class="arrow">→</span></a></li>
+        <li><a href="/ryoshusho/"><time datetime="2026-09-17">2026.09.17</time><b>領収書のデジタル化</b><span class="arrow">→</span></a></li>
+        <li><a href="/hojokin/"><time datetime="2026-09-17">2026.09.17</time><b>道場が使える補助金</b><span class="arrow">→</span></a></li>
+        <li><a href="/muratake/"><time datetime="2026-09-02">2026.09.02</time><b>村田家のAmazon履歴</b><span class="arrow">→</span></a></li>
+        <li><a href="/goroku/"><time datetime="2026-09-02">2026.09.02</time><b>良蔵語録</b><span class="arrow">→</span></a></li>
+        <li><a href="/tournament/"><time datetime="2026-08-31">2026.08.31</time><b>大会出場スケジュール</b><span class="arrow">→</span></a></li>
+        <li><a href="/hajimete/"><time datetime="2026-08-28">2026.08.28</time><b>はじめての大会ガイド</b><span class="arrow">→</span></a></li>
+        <li><a href="/dojo/"><time datetime="2026-08-28">2026.08.28</time><b>全国柔術道場ガイド</b><span class="arrow">→</span></a></li>
+        <li><a href="/shift/"><time datetime="2026-08-28">2026.08.28</time><b>月次シフト表</b><span class="arrow">→</span></a></li>
       </ul>
       <p class="newsfoot">
         <a class="feedlink" href="/feed.xml">RSSで受け取る</a>
@@ -225,6 +266,38 @@
     </section>
   </div>
 <!-- news:end -->
+<script>
+// 新着欄：3日以内にNEW、最初は data-show 件だけ見せて残りは「もっと見る」
+(function () {
+  var NEW_DAYS = 3;
+  var list = document.querySelector('.newslist');
+  if (!list) return;
+  var show = +list.getAttribute('data-show') || 5;
+  var items = Array.prototype.slice.call(list.children);
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  items.forEach(function (li, i) {
+    var t = li.querySelector('time');
+    var d = new Date((t ? t.getAttribute('datetime') : '') + 'T00:00:00');
+    var days = (today - d) / 86400000;
+    if (days >= 0 && days < NEW_DAYS) {
+      var b = document.createElement('span');
+      b.className = 'new-badge'; b.textContent = 'NEW';
+      (li.querySelector('.tag') || t).after(b);
+    }
+    if (i >= show) li.classList.add('is-hidden');
+  });
+  if (items.length > show) {
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'more-btn'; btn.textContent = 'もっと見る';
+    btn.onclick = function () {
+      items.forEach(function (li) { li.classList.remove('is-hidden'); });
+      btn.remove();
+    };
+    var foot = document.querySelector('.newsfoot');
+    foot ? foot.prepend(btn) : list.after(btn);
+  }
+})();
+</script>
 
 <main>
   <div class="wrap">
@@ -309,12 +382,24 @@
         </span>
       </a>
 
+      <p class="cat-label" id="cat-irai">頼まれて作ったもの</p>
+
+      <a class="card" href="/salon/">
+        <img class="thumb" src="/assets/salon.jpg" alt="サロンの顧客管理の画面。お客さまのカルテに累計・来店回数・誕生日・肌のメモが並ぶ">
+        <span>
+          <p class="eyebrow">08 ・ SALON</p>
+          <h2>サロンの顧客管理<span class="arrow">→</span></h2>
+          <p>「誰に、いくら」をスマホで打つだけで、月の売上とお客さまのカルテが育っていく。知り合いのエステサロンに頼まれて作りました。記録は暗証番号で暗号化して、スマホの外には一切出しません。</p>
+          <span class="note">画面はサンプルデータ・お名前は仮名です</span>
+        </span>
+      </a>
+
       <p class="cat-label" id="cat-muratake">村田家</p>
 
       <a class="card" href="/goroku/">
         <img class="thumb" src="/assets/goroku.jpg" alt="良蔵語録のページ。金の線に続く明朝体の言葉が並ぶ">
         <span>
-          <p class="eyebrow">08 ・ GOROKU</p>
+          <p class="eyebrow">09 ・ GOROKU</p>
           <h2>良蔵語録<span class="arrow">→</span></h2>
           <p>畳の上や日々の会話で、ぽろっとこぼれた言葉たちを、そばで聞き集めた語録。「必死とは、必ず死ぬということ」「なければ、つくればいい」——少しずつ増えていきます。</p>
         </span>
@@ -323,7 +408,7 @@
       <a class="card" href="/toriatsukai/">
         <img class="thumb" src="/assets/toriatsukai.jpg" alt="良蔵取扱説明書のページ。家電の取説のような目次と製品仕様が並ぶ">
         <span>
-          <p class="eyebrow">09 ・ TORIATSUKAI</p>
+          <p class="eyebrow">10 ・ TORIATSUKAI</p>
           <h2>良蔵取扱説明書<span class="arrow">→</span></h2>
           <p>26歳で柔術を始めて、38歳で世界一。そんな人と毎日を過ごすための手引きを、取扱説明書の体裁でまとめました。朝はコーヒーを飲み終わるまでそっとしておくのがいちばんです。同じ体裁で、自分の取扱説明書もつくれます。</p>
         </span>
@@ -332,7 +417,7 @@
       <a class="card" href="/muratake/">
         <img class="thumb" src="/assets/muratake.jpg" alt="村田家のAmazon履歴。無添加の調味料や洗剤が並ぶリスト">
         <span>
-          <p class="eyebrow">10 ・ MURATAKE</p>
+          <p class="eyebrow">11 ・ MURATAKE</p>
           <h2>村田家のAmazon履歴<span class="arrow">→</span></h2>
           <p>調味料も洗剤も、村田家が実際に使っているものをAmazonの購入履歴からそのまま並べたカタログ。全部リアルな愛用品。ちなみにほぼ無添加です。</p>
         </span>
@@ -341,7 +426,7 @@
       <a class="card" href="/kondate/">
         <img class="thumb" src="/assets/kondate.jpg" alt="良蔵の献立のページ。曜日ごとの昼ごはんの一覧">
         <span>
-          <p class="eyebrow">11 ・ KONDATE</p>
+          <p class="eyebrow">12 ・ KONDATE</p>
           <h2>良蔵の献立<span class="arrow">→</span></h2>
           <p>朝は食べない、夜は外食。だから昼の一食がすべてです。本人が「食べる」と言ったものだけで一週間ぶんの昼ごはんを組んで、PFCの計算まで付けました。卵は7日とも、形を変えて入っています。グミも枝豆もハムも入っていません。</p>
         </span>
