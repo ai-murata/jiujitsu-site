@@ -70,14 +70,24 @@ def build_feed(entries):
     return "\n".join(parts) + "\n"
 
 
+def split_tag(title):
+    """「ブログ：〇〇」→ ("ブログ", "〇〇")。短い頭書きが無ければ ("", title)。"""
+    head, sep, rest = title.partition("：")
+    if sep and rest and len(head) <= 6:
+        return head, rest
+    return "", title
+
+
 def build_block(entries, line_url=""):
     rows = []
     for e in entries[:TOP_N]:
         y, m, d = e["date"].split("-")
+        tag, title = split_tag(e["title"])
+        tag_html = f'<span class="tag">{html.escape(tag)}</span>' if tag else ""
         rows.append(
             f'        <li><a href="{e["url"]}">'
-            f"<time>{y}.{m}.{d}</time>"
-            f'<b>{html.escape(e["title"])}</b>'
+            f"<time>{y}.{m}.{d}</time>{tag_html}"
+            f'<b>{html.escape(title)}</b>'
             f'<span class="arrow">→</span></a></li>'
         )
     follow = ""
