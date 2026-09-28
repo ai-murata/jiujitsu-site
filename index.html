@@ -122,6 +122,13 @@
   .mapgrp li a:hover { color: var(--gold); }
   .mapgrp li a:focus-visible, .mapgrp h2 a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
   .cat-label, .people, .coming { scroll-margin-top: 20px; }
+  .map .ic { display: inline-block; width: 1.4em; margin-right: 4px; text-align: center; font-style: normal; letter-spacing: 0; }
+  .mapgrp h2 .ic { margin-right: 2px; }
+  .mapgrp li a { border-radius: 999px; padding-left: 4px; margin-left: -4px; transition: background .15s, color .15s; }
+  .mapgrp li a:hover { background: rgba(201,162,39,.12); }
+  .mapgrp li a:hover .ic { display: inline-block; animation: bob .5s ease; }
+  @keyframes bob { 40% { transform: translateY(-3px) rotate(-8deg); } }
+  @media (prefers-reduced-motion: reduce) { .mapgrp li a:hover .ic { animation: none; } }
 
   @media (max-width: 660px) {
     header { padding: 30px 16px 22px; }
@@ -165,41 +172,41 @@
 
 <div class="wrap">
   <nav class="map rise d2" aria-label="もくじ">
-    <p class="sec-label">もくじ</p>
+    <p class="sec-label"><span class="ic" aria-hidden="true">📖</span>もくじ</p>
     <div class="mapgrid">
       <section class="mapgrp">
-        <h2><a href="#cat-jiujitsu">柔術</a></h2>
+        <h2><a href="#cat-jiujitsu"><span class="ic" aria-hidden="true">🥋</span>柔術</a></h2>
         <ul>
-          <li><a href="/tournament/">大会出場スケジュール</a></li>
-          <li><a href="/hajimete/">はじめての大会ガイド</a></li>
-          <li><a href="/dojo/">全国柔術道場ガイド</a></li>
+          <li><a href="/tournament/"><span class="ic" aria-hidden="true">🏆</span>大会出場スケジュール</a></li>
+          <li><a href="/hajimete/"><span class="ic" aria-hidden="true">🔰</span>はじめての大会ガイド</a></li>
+          <li><a href="/dojo/"><span class="ic" aria-hidden="true">🗾</span>全国柔術道場ガイド</a></li>
         </ul>
       </section>
       <section class="mapgrp">
-        <h2><a href="#cat-shigoto">道場のしごと</a></h2>
+        <h2><a href="#cat-shigoto"><span class="ic" aria-hidden="true">🗂️</span>道場のしごと</a></h2>
         <ul>
-          <li><a href="/shift/">月次シフト表</a></li>
-          <li><a href="/hojokin/">道場が使える補助金</a></li>
-          <li><a href="/ryoshusho/">領収書のデジタル化</a></li>
-          <li><a href="/claudecode/">道場のClaude Code</a></li>
+          <li><a href="/shift/"><span class="ic" aria-hidden="true">📅</span>月次シフト表</a></li>
+          <li><a href="/hojokin/"><span class="ic" aria-hidden="true">💰</span>道場が使える補助金</a></li>
+          <li><a href="/ryoshusho/"><span class="ic" aria-hidden="true">🧾</span>領収書のデジタル化</a></li>
+          <li><a href="/claudecode/"><span class="ic" aria-hidden="true">🤖</span>道場のClaude Code</a></li>
         </ul>
       </section>
       <section class="mapgrp">
-        <h2><a href="#cat-muratake">村田家</a></h2>
+        <h2><a href="#cat-muratake"><span class="ic" aria-hidden="true">🏠</span>村田家</a></h2>
         <ul>
-          <li><a href="/goroku/">良蔵語録</a></li>
-          <li><a href="/toriatsukai/">良蔵取扱説明書</a></li>
-          <li><a href="/muratake/">Amazon履歴</a></li>
-          <li><a href="/kondate/">良蔵の献立</a></li>
+          <li><a href="/goroku/"><span class="ic" aria-hidden="true">💬</span>良蔵語録</a></li>
+          <li><a href="/toriatsukai/"><span class="ic" aria-hidden="true">📘</span>良蔵取扱説明書</a></li>
+          <li><a href="/muratake/"><span class="ic" aria-hidden="true">📦</span>Amazon履歴</a></li>
+          <li><a href="/kondate/"><span class="ic" aria-hidden="true">🍙</span>良蔵の献立</a></li>
         </ul>
       </section>
       <section class="mapgrp">
-        <h2><a href="/blog/">ブログ</a></h2>
+        <h2><a href="/blog/"><span class="ic" aria-hidden="true">✏️</span>ブログ</a></h2>
         <ul>
-          <li><a href="/blog/">記事の一覧</a></li>
-          <li><a href="#people">つくっている人</a></li>
-          <li><a href="#coming">これから作るもの</a></li>
-          <li><a href="/company/">会社概要</a></li>
+          <li><a href="/blog/"><span class="ic" aria-hidden="true">📝</span>記事の一覧</a></li>
+          <li><a href="#people"><span class="ic" aria-hidden="true">👋</span>つくっている人</a></li>
+          <li><a href="#coming"><span class="ic" aria-hidden="true">🌱</span>これから作るもの</a></li>
+          <li><a href="/company/"><span class="ic" aria-hidden="true">🏢</span>会社概要</a></li>
         </ul>
       </section>
     </div>
