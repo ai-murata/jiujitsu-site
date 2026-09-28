@@ -101,7 +101,9 @@ ids = {e["id"] for e in es}
 check("記録は既存のidだけ", set(state["sent"]) <= ids)
 pending = [e["id"] for e in es if e["id"] not in set(state["sent"])]
 # LINE配信を保留しているあいだは未配信があって正常。安全装置（6件以上で自動送信しない）に届くかだけ見る
-check("未配信は5件以内", len(pending) <= 5)
+# LINE公式アカウントをまだ作っていない（line_url が空）あいだは、件数は見ない
+if json.loads((build.ROOT / "data" / "news.json").read_text(encoding="utf-8")).get("line_url"):
+    check("未配信は5件以内", len(pending) <= 5)
 if pending:
     print("  （LINE未配信: " + ", ".join(pending) + "）")
 
