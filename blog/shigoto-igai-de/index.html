@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>仕事で使えないなら、暮らしで使ってみよう</title>
+<meta name="description" content="会社の規定でClaudeを仕事に使えない人へ。だったら、仕事以外の暮らしで試してみませんか。私は4年分たまった料理教室の紙のレシピを、サイトにしようと思っています。マネージャー目線のブログ、5本目です。">
+<meta property="og:title" content="仕事で使えないなら、暮らしで使ってみよう">
+<meta property="og:description" content="仕事でAIを使えないなら、暮らしの中で試してみる。4年分の料理教室のレシピをサイトにする話。">
+<meta property="og:url" content="https://jiujitsu.co.jp/blog/shigoto-igai-de/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+</style>
+
+<header>
+  <p class="brand"><a href="/blog/">JIU LABO BLOG</a></p>
+  <h1>仕事で使えないなら、暮らしで使ってみよう</h1>
+  <p class="meta"><time datetime="2026-09-28">2026.09.28</time>　村田亜衣（マネージャー）</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>こんにちは、村田亜衣です。5本目の今日は、<b>Claude Codeを使っていない人たちへ</b>向けた話です。</p>
+
+    <h2>「会社の決まりで、使えないんです」</h2>
+    <p>大手の企業にお勤めの方から、ちらほらこんな話を聞きます。</p>
+    <blockquote><p>Claudeを使いたいけど、<br>社内の規定がまだ整っていないから使えない。</p></blockquote>
+    <p>この気持ち、私はすごくよくわかります。私も以前は大学職員として働いていたので、組織の中にいる人の事情は身にしみています。</p>
+    <p>やっぱり、<b>セキュリティの問題</b>は大きいです。会社の情報や、お客さまの情報を扱う以上、一社員が「便利そうだから」と勝手に使うわけにはいきません。<b>「できない」という制限の中にいる</b>のは、本当に十分にわかります。</p>
+
+    <h2>だったら、仕事以外で試してみる</h2>
+    <p>ただ、仕事で使えないからといって、まったく触らないのはもったいないと思うんです。</p>
+    <p>仕事で使えないなら、<b>仕事以外のところで何かをやってみる</b>。自分の生活の中に、「これ、ちょっと便利にならないかな」ということは、探せばきっとあります。</p>
+
+    <h2>私の場合：4年分の、紙のレシピ</h2>
+    <p>たとえば私が今日思いついたのは、<b>料理教室のレシピ</b>のことです。</p>
+    <p>料理教室に通い始めて、もう4年ほどになります。毎回もらうレシピは紙なので、気づけば<b>たぶん何百枚</b>とたまっていました。</p>
+    <p>今でも「あれ、また作りたいな」と思い返して作る料理があるんですが、その紙を探して見返すのが、とにかく大変なんです。</p>
+    <p>そこで、これからこんなことをやってみようと思っています。</p>
+
+    <ul class="timeline">
+      <li><span class="when">STEP 1</span><b>紙のレシピをスキャンする</b><span class="d">何百枚あっても、まずはデータにするところから。</span></li>
+      <li><span class="when">STEP 2</span><b>ひとつのサイトにまとめる</b><span class="d">料理名で探せて、すぐ見返せる形に。</span></li>
+      <li><span class="when">STEP 3</span><b>先生に相談する</b><span class="d">レシピを先生が販売できて、先生に収益が出る形にできないか。</span></li>
+    </ul>
+
+    <p>もちろん、レシピは先生のものなので、<b>まずは先生にきちんと相談してから</b>です。</p>
+
+    <h2>「先生の味」が見たい</h2>
+    <p>今はクックパッドをはじめ、レシピサイトはいくらでもあります。でも、私が見たいのは「どこかのレシピ」ではないんです。</p>
+    <ul class="tips">
+      <li><b>その先生の味が好き</b>だから、その先生のレシピが見たい</li>
+      <li>教室に通っている人が、<b>「あの料理、なんだっけ」と復習</b>できる</li>
+      <li>レシピが売れれば、<b>先生にもちゃんと収益</b>が入る</li>
+    </ul>
+    <p>そんな場所になったらいいなと思って、今から作ります。できあがったら、またここでご報告しますね。</p>
+
+    <h2>ぼーっとしている時間に、思いつく</h2>
+    <p>何が言いたいかというと、<b>仕事で使えないなら、自分の暮らしが便利になることを探してみるのがいい</b>ということです。</p>
+    <p>ちなみに私は、こういうことを、ジムにいるときなど<b>携帯をいじらない時間</b>に、ぼーっと考えています。手元に画面がないときのほうが、「あれ、面倒だな」「これ、なんとかならないかな」が浮かんでくるんです。</p>
+
+    <blockquote><p>仕事で使えない今は、<br>暮らしで練習しておくチャンス。</p></blockquote>
+
+    <p>会社の規定が整ったときに、すでに手に馴染んでいたら、きっと強いはずです。まずは身の回りの「ちょっと面倒」をひとつ、探してみてください。</p>
+
+    <div class="next">
+      <p>前回の記事はこちら。</p>
+      <p><a href="/blog/seikyusho-claude/">請求書の1年分を、Claudeに見直してもらった話 →</a></p>
+    </div>
+  </article>
+
+  <footer>
+    <a href="/blog/">ブログの一覧へ</a>　／　<a href="/">jiujitsu.co.jp トップへ</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
