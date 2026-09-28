@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>Claudeの始め方</title>
+<meta name="description" content="エンジニアじゃない柔術道場のマネージャーが、インストールでつまずいたところから1か月でやってきたこと。Claudeを始めるときの順番と、つまずいたところ、最初の一言をまとめました。">
+<meta property="og:title" content="Claudeの始め方">
+<meta property="og:description" content="インストールでつまずいた私が、1か月でやってきたこと。始める順番と、つまずいたところ。">
+<meta property="og:url" content="https://jiujitsu.co.jp/hajimekata/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(28px, 6vw, 42px); color: var(--ink); letter-spacing: .12em; line-height: 1.4; margin: 10px 0 12px; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; letter-spacing: .06em; }
+  .by { font-size: 12px; color: var(--faint); margin: 6px 0 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  .intro { font-size: 14.5px; max-width: 40em; margin: 48px auto 0; }
+  .intro p { margin: 0 0 1.2em; }
+  .intro b { color: var(--ink); }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 21px; color: var(--ink); letter-spacing: .2em; margin: 72px 0 8px; display: flex; align-items: center; gap: 16px; }
+  h2 small { font-family: var(--gothic); font-size: 10px; letter-spacing: .26em; color: var(--faint); font-weight: 500; flex: none; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .lead { font-size: 13.5px; margin: 0 0 28px; max-width: 42em; }
+  .lead b { color: var(--ink); }
+
+  /* 3つの使い分け */
+  .motto { margin: 0 0 20px; padding: 20px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; text-align: center; }
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 18px 18px; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 2px 0 4px; }
+  .tool p { margin: 0; font-size: 13px; line-height: 1.8; }
+  .tool .eg { margin-top: 8px; font-size: 12.5px; color: var(--faint); }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code p { color: #b0a88f; }
+  .tool.code .eg { color: #8d8570; }
+  .aside { font-size: 13px; margin: 14px 0 0; color: var(--faint); }
+  @media (max-width: 660px) { .three { grid-template-columns: 1fr; } }
+
+  /* 順番 */
+  .steps { counter-reset: s; list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .steps > li { counter-increment: s; position: relative; padding: 24px 4px 24px 62px; border-bottom: 1px solid var(--line); }
+  .steps > li::before { content: counter(s); position: absolute; left: 4px; top: 24px; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; font-family: var(--mincho); font-weight: 700; font-size: 18px; color: var(--gold); border: 1.5px solid var(--gold); border-radius: 50%; }
+  .steps h3 { font-family: var(--mincho); font-weight: 700; color: var(--ink); font-size: 17px; letter-spacing: .06em; margin: 4px 0 6px; line-height: 1.6; }
+  .steps p { margin: 0 0 8px; font-size: 14px; }
+  .steps p b { color: var(--ink); }
+  .mine { margin: 12px 0 0; padding: 12px 16px 12px 18px; background: var(--panel); border-left: 2px solid var(--gold); font-size: 13.5px; line-height: 1.85; }
+  .mine::before { content: "私の場合"; display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; margin-bottom: 2px; }
+  .mine a { font-size: 12.5px; }
+  .quote { margin: 10px 0 8px; padding: 14px 18px; border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-weight: 600; font-size: 15.5px; color: var(--ink); line-height: 1.85; }
+  .quote small { display: block; font-family: var(--gothic); font-weight: 400; font-size: 12px; color: var(--faint); margin-top: 4px; }
+  .mini { list-style: none; margin: 6px 0 8px; padding: 0; display: grid; gap: 4px; }
+  .mini li { font-size: 13.5px; padding-left: 16px; position: relative; }
+  .mini li::before { content: ""; position: absolute; left: 0; top: .95em; width: 6px; height: 1px; background: var(--gold); }
+  @media (max-width: 560px) {
+    .steps > li { padding-left: 50px; }
+    .steps > li::before { width: 32px; height: 32px; font-size: 15px; }
+  }
+
+  /* つまずいたこと */
+  .qa { display: grid; gap: 12px; }
+  .qa details { border: 1px solid var(--line); background: var(--paper); }
+  .qa summary { cursor: pointer; list-style: none; padding: 16px 44px 16px 20px; position: relative; font-family: var(--mincho); font-weight: 700; font-size: 15.5px; color: var(--ink); letter-spacing: .04em; line-height: 1.6; }
+  .qa summary::-webkit-details-marker { display: none; }
+  .qa summary::after { content: "＋"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); color: var(--gold); font-family: var(--gothic); font-weight: 400; }
+  .qa details[open] summary::after { content: "－"; }
+  .qa summary span { display: block; font-family: var(--gothic); font-size: 10.5px; letter-spacing: .22em; color: var(--gold); font-weight: 700; }
+  .qa .ans { padding: 0 20px 18px; font-size: 13.5px; }
+  .qa .ans p { margin: 0 0 8px; }
+  .qa .ans p:last-child { margin-bottom: 0; }
+  .qa .ans b { color: var(--ink); }
+
+  /* 最初の一言 */
+  .asks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .ask { border: 1px solid var(--line); padding: 18px 20px 14px; display: grid; grid-template-rows: auto 1fr auto; gap: 8px; }
+  .ask .t { font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .ask q { quotes: "「" "」"; font-size: 14px; color: var(--ink); line-height: 1.85; }
+  .copy { justify-self: start; font: inherit; font-size: 11.5px; letter-spacing: .08em; color: var(--gold); background: var(--paper); border: 1px solid var(--line); padding: 2px 12px; cursor: pointer; }
+  .copy:hover { border-color: var(--gold); }
+  @media (max-width: 660px) { .asks { grid-template-columns: 1fr; } }
+
+  /* 約束 */
+  .dark { background: var(--k); padding: 26px 28px 28px; }
+  .dark .rlabel { font-size: 10.5px; letter-spacing: .3em; color: var(--gold-hi); font-weight: 700; margin: 0 0 14px; }
+  .dark .ri { margin: 0 0 16px; }
+  .dark .ri:last-child { margin-bottom: 0; }
+  .dark b { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: #f3ecd8; letter-spacing: .06em; display: block; margin-bottom: 2px; }
+  .dark p { margin: 0; font-size: 13px; color: #b0a88f; line-height: 1.9; }
+  @media (max-width: 560px) { .dark { margin: 0 -22px; padding: 24px 22px 26px; } }
+
+  /* ネタの見つけ方 */
+  .hints { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .hint { border-top: 1px solid var(--gold); padding-top: 12px; }
+  .hint b { display: block; font-family: var(--mincho); font-weight: 700; font-size: 15.5px; color: var(--ink); letter-spacing: .06em; margin-bottom: 4px; line-height: 1.6; }
+  .hint p { margin: 0; font-size: 13px; }
+  @media (max-width: 660px) { .hints { grid-template-columns: 1fr; } }
+
+  /* 昔の道具 */
+  .road { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0 0 18px; font-size: 13px; }
+  .road span { border: 1px solid var(--line); background: var(--panel); padding: 2px 12px; color: var(--ink); }
+  .road span.now { background: var(--k); border-color: var(--k); color: #f3ecd8; }
+  .road i { font-style: normal; color: var(--gold); }
+  .closing { font-size: 14.5px; max-width: 42em; }
+  .closing p { margin: 0 0 1.2em; }
+  .closing b { color: var(--ink); }
+
+  /* もっと読む */
+  .more { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .more li { border-bottom: 1px solid var(--line); }
+  .more a { display: block; padding: 14px 4px; text-decoration: none; color: var(--ink); font-size: 14px; }
+  .more a:hover { background: var(--panel); }
+  .more a small { display: block; font-size: 12px; color: var(--faint); }
+  .more a .arrow { color: var(--gold); margin-left: 6px; }
+
+  footer { margin-top: 84px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+
+<header>
+  <p class="brand"><a href="/">JIUJITSU.CO.JP</a></p>
+  <h1>Claudeの始め方</h1>
+  <p class="lede">インストールでつまずいた私が、1か月でやってきたこと。</p>
+  <p class="by">村田亜衣（マネージャー）</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <div class="intro">
+    <p>私はエンジニアではありません。柔術道場のマネージャーで、その前は大学職員でした。Claude Code を入れようとしたときは、<b>インストールの時点でつまずいて</b>、しばらくは普通のチャットで質問するだけでした。</p>
+    <p>それが1か月ちょっとたった今では、請求書や振込リストの事務作業、大会のライブ速報、動画やデザインづくり、そしてこのサイトのページまで、Claude と一緒にやっています。</p>
+    <p>このページは、講座のような「正しい教え方」ではありません。<b>私が実際に通ってきた順番と、つまずいたところ</b>をそのまま並べました。これから始める方の、ひとつの道しるべになればうれしいです。</p>
+  </div>
+
+  <h2>まず知っておくこと<small>CHAT・COWORK・CODE</small></h2>
+  <p class="lead">Claude には大きく3つの使い方があります。どれも同じ Claude ですが、得意なことが少しずつ違います。私はこう覚えています。</p>
+  <p class="motto">答えがほしいなら Chat。ファイルがほしいなら Cowork。<br>仕組みがほしいなら Code。</p>
+  <div class="three">
+    <div class="tool">
+      <span class="want">答えがほしい</span><b>Chat</b>
+      <p>話しかけて答えてもらう。スマホからでもすぐ使える、いちばん身近な入り口です。</p>
+      <p class="eg">LINEの返信、この言い方で失礼じゃないかな？</p>
+    </div>
+    <div class="tool">
+      <span class="want">ファイルがほしい</span><b>Cowork</b>
+      <p>パソコンのフォルダを渡して、書類づくりや整理をまるごとお願いする。</p>
+      <p class="eg">このフォルダの領収書から、日付と金額の一覧表を作って</p>
+    </div>
+    <div class="tool code">
+      <span class="want">仕組みがほしい</span><b>Code</b>
+      <p>道具そのものを作る。一度作れば、次からは一言で、または自動で回ります。</p>
+      <p class="eg">毎月の請求書の手順を覚えて、来月は「今月もお願い」で済むようにして</p>
+    </div>
+  </div>
+  <p class="aside">きっちり分けなくても大丈夫です。Chat で相談しているうちに「これ毎月やるな」と気づいたら、Code に持っていけばいい。私は結局、Code を開いている時間がいちばん長いです。</p>
+
+  <h2>始める順番<small>7 STEPS</small></h2>
+  <p class="lead">いきなり全部やろうとしなくて大丈夫です。私はだいたいこの順番で、できることが増えていきました。</p>
+  <ol class="steps">
+    <li>
+      <h3>まずは Chat で、何か1つ聞いてみる</h3>
+      <p>いちばん気軽なのはスマホのアプリです。仕事の相談でも、LINE の文面の確認でも、言葉の意味でも。<b>相談相手・壁打ち相手</b>として使うところから始めます。</p>
+      <div class="mine">Claude Code のインストールでつまずいたあと、しばらくはずっとここにいました。遠回りのようで、「AIに話しかける」ことに慣れる時間になっていたと思います。</div>
+    </li>
+    <li>
+      <h3>Claude Code を入れる。つまずいたら、詳しい人に一度だけ付き合ってもらう</h3>
+      <p>パソコン（Mac か Windows）に Claude のデスクトップアプリを入れると、その中で Claude Code が使えます。最初の設定でよくわからない画面が出てきたら、ひとりで悩み続けないこと。</p>
+      <div class="mine">私はここで止まっていました。動き出したのは、知り合いの濱田さんに<b>5時間くらい</b>つきっきりで教えてもらってから。最初の一歩だけは、人に手を引いてもらうのがいちばんの近道でした。</div>
+    </li>
+    <li>
+      <h3>最初の1つは「しつこく」やりきる</h3>
+      <p>AIはけっこう「できません」と言ってきます。でも、たいていは<b>言い方を変えればできます</b>。</p>
+      <p class="quote">AIは「できません」ってよく言ってくるけど、絶対できるから。しつこく「やって、やって」って戦うのがいいよ。<small>― 濱田さん</small></p>
+      <ul class="mini">
+        <li>別の言い方で、もう一度頼む</li>
+        <li>「じゃあ、別のやり方でできない？」と聞く</li>
+        <li>なぜそれがしたいのか、理由まで話す</li>
+      </ul>
+      <div class="mine">この言葉を信じて、最初の案件に5時間くらいかけて格闘しました。そうしたら本当にできて、終わるころには「あ、こういうふうに言えばいいんだ」というコツがつかめていました。<b>1つやりきると、そこから先が一気に楽になります。</b> <a href="/blog/claude-code-hajimari/">この話をブログで読む →</a></div>
+    </li>
+    <li>
+      <h3>打たずに、しゃべる</h3>
+      <p>パソコンやスマホの音声入力で、思いついたことをそのまま話しかけます。「えーと」「まあ」が入っていても、言い間違えても大丈夫。AIが前後の流れからくみ取ってくれます。<b>きれいな文章にしようとしないほうが、うまくいきます。</b></p>
+      <div class="mine">体感で<b>打つより5倍くらい速い</b>です。しかもしゃべると「なぜそうしたいのか」まで自然に口から出るので、一発で思った通りのものが出てくることが増えました。「公開してください」を「紹介してください」と言い間違えても、ちゃんと公開してくれました。 <a href="/blog/onsei-tsukaiwake/">この話をブログで読む →</a></div>
+    </li>
+    <li>
+      <h3>手元のファイルを1つ渡してみる</h3>
+      <p>毎月使っている Excel や、たまったレシートの写真など、手元にあるものを1つ渡して「これを見て、〇〇して」と頼みます。<b>最初の一回は、答えが合っているか自分でも確かめます。</b></p>
+      <div class="mine">パーソナルレッスンの集計や、紙の領収書の読み取りから始めました。領収書は2団体分で432枚。スキャンして渡したら、日付・金額・用途の一覧になりました。 <a href="/ryoshusho/">領収書のデジタル化 →</a></div>
+    </li>
+    <li>
+      <h3>毎月やっている作業を1つ、「型」にする</h3>
+      <p>うまくいったら「今の手順を覚えておいて（スキルにして）」と頼みます。翌月からは「今月もお願い」の一言で、同じ手順が回るようになります。「毎月やっている」「何度も同じことをしている」と気づいたら、それが型にする合図です。</p>
+      <div class="mine">請求書・振込リスト・勤怠の集計など、今は毎月の作業を6本、一言で回せる状態にしています。 <a href="/claudecode/">道場での使い方をまとめたページ →</a></div>
+    </li>
+    <li>
+      <h3>過去の分を、一度見直してもらう</h3>
+      <p>Claude は、たまった過去のデータを一気にさかのぼって見るのが得意です。ひとりで抱えてきた作業ほど、一度見てもらう価値があります。</p>
+      <div class="mine">毎月ひとりで作ってきた業務委託の請求書を、1年分さかのぼって見てもらったら、<b>自分では一生気づけなかった間違い</b>が見つかりました。ぞっとすると同時に、「この相棒は本当に大事だ」と思った一日でした。 <a href="/blog/seikyusho-claude/">この話をブログで読む →</a></div>
+    </li>
+  </ol>
+
+  <h2>私がつまずいたこと<small>TROUBLES</small></h2>
+  <p class="lead">始めてみると、だいたいどこかで止まります。私が実際に止まったところと、どうしたかです。</p>
+  <div class="qa">
+    <details>
+      <summary><span>インストール</span>アプリを入れるところから、よくわからない</summary>
+      <div class="ans">
+        <p>私もまさにここで止まりました。ひとりで検索し続けるより、<b>詳しい人に一度だけ横についてもらう</b>ほうが早いです。そのあいだは、スマホの Chat で「AIに話しかける」ことに慣れておけば、時間はむだになりません。</p>
+      </div>
+    </details>
+    <details>
+      <summary><span>「できません」</span>頼んだのに、できないと言われる</summary>
+      <div class="ans">
+        <p>ここであきらめないのが、いちばん大事なところです。言い方を変える、別のやり方を聞く、目的を話す。<b>「しつこく」が正解</b>でした。何度かやりとりするうちに、通る頼み方がわかってきます。</p>
+      </div>
+    </details>
+    <details>
+      <summary><span>画面</span>自分が作業している最中に、画面が勝手に切り替わる</summary>
+      <div class="ans">
+        <p>今いちばん困っているのがこれです。Claude に頼んでおいた作業が動き出して画面を使い始めると、私の作業とぶつかって、どちらも止まってしまいます。</p>
+        <p>今は、<b>画面を使う作業は、ジムに行っているあいだや夜など、席を外すときにまとめてお願いする</b>ようにしています。</p>
+      </div>
+    </details>
+    <details>
+      <summary><span>ことば</span>GitHub や MCP など、知らない言葉が出てくる</summary>
+      <div class="ans">
+        <p>GitHub（作ったものを保存・公開する場所）や MCP（AIとほかのサービスをつなぐ仕組み）は、私も今でもちょこちょこ人に相談しながら進めています。<b>わからない言葉は、そのまま Claude に「これ何？ やさしく教えて」と聞けば大丈夫</b>です。全部わかってから始める必要はありません。</p>
+      </div>
+    </details>
+    <details>
+      <summary><span>会社</span>会社の決まりで、仕事には使えない</summary>
+      <div class="ans">
+        <p>大学職員だったので、この事情はよくわかります。会社やお客さまの情報を扱う以上、勝手には使えません。</p>
+        <p>だったら、<b>暮らしのほうで試してみる</b>のがおすすめです。私は4年分たまった料理教室の紙のレシピを、ひとつのサイトにまとめようとしています。規定が整ったときにすでに手に馴染んでいたら、きっと強いはずです。 <a href="/blog/shigoto-igai-de/">この話をブログで読む →</a></p>
+      </div>
+    </details>
+  </div>
+
+  <h2>最初の一言<small>FIRST WORDS</small></h2>
+  <p class="lead">専門用語はいりません。職場の人に頼むのと同じ言い方で大丈夫です。そのままコピーして使えます。</p>
+  <div class="asks">
+    <div class="ask"><span class="t">相談</span><q>この返信、失礼じゃないか見て。もう少しやわらかい言い方の案も3つ出して。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">ことば</span><q>GitHubって何？ パソコンが得意じゃない人にもわかるように、たとえ話で教えて。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">EXCEL</span><q>このファイルを見て、今月の合計を出して。どう計算したかも書いて。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">レシート</span><q>このレシートの写真、日付と金額と何の支払いかを表にして。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">やること</span><q>今日やること出して。締切が近いものから並べて。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">型にする</span><q>今やった手順、スキルにして。来月からは「今月もお願い」で同じことができるようにして。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">見直し</span><q>このフォルダの請求書、1年分さかのぼって見て。計算が合わないところや、ほかの月と違うところを教えて。</q><button class="copy" type="button">コピー</button></div>
+    <div class="ask"><span class="t">「できません」</span><q>できない理由を教えて。そのうえで、別のやり方で同じゴールにたどり着く方法を3つ出して。</q><button class="copy" type="button">コピー</button></div>
+  </div>
+
+  <h2>私が決めている約束<small>RULES</small></h2>
+  <p class="lead">お金や人の情報を扱うようになったら、ここだけは最初に決めておくと安心です。</p>
+  <div class="dark">
+    <p class="rlabel">4 RULES</p>
+    <div class="ri"><b>最後は、自分の目で全部見る</b><p>集計や突き合わせは Claude に任せる。できあがったものは、必ず自分で最後まで確認する。お金が動くところは特に慎重に。</p></div>
+    <div class="ri"><b>送信・支払い・削除は、自分で押す</b><p>請求書の発行、振込、メッセージの送信は、Claude に直前まで準備してもらって止める。最後のボタンは人が押す。</p></div>
+    <div class="ri"><b>パスワードは渡さない</b><p>ログインは自分でしておく。Claude にはログイン済みの画面を読んでもらうだけ。</p></div>
+    <div class="ri"><b>人の名前は外に出さない</b><p>作ったものを公開するときは、会員さんやスタッフの名前を仮名にする。公開前に中身を目で確認する。</p></div>
+  </div>
+
+  <h2>やりたいことの見つけ方<small>IDEAS</small></h2>
+  <p class="lead">一度コツがつかめると、「じゃあこれもできる？」が次々に出てきます。私はこんなところから見つけています。</p>
+  <div class="hints">
+    <div class="hint"><b>画面を見ない時間に考える</b><p>ジムにいるときなど、携帯を触らない1時間に、「あれ面倒だな」「これなんとかならないかな」が浮かんできます。</p></div>
+    <div class="hint"><b>「毎月やってる」に気づく</b><p>同じことを何度もしている、と気づいたら型にするチャンス。請求書、振込、シフト表はここから生まれました。</p></div>
+    <div class="hint"><b>人の使い方を聞く</b><p>濱田さんとは会うたびに「今回こんなの作ったよ」と近況報告会。人の話を聞くと、「私の仕事ならこう使える」とまた湧いてきます。</p></div>
+  </div>
+
+  <h2>昔の経験は、むだにならない<small>FROM WORD PROCESSOR TO AI</small></h2>
+  <div class="road" aria-label="使ってきた道具の移り変わり">
+    <span>ワープロ</span><i>→</i><span>HTML</span><i>→</i><span>Excel・PowerPoint</span><i>→</i><span>Word・Excel・PowerPoint</span><i>→</i><span class="now">Claude</span>
+  </div>
+  <div class="closing">
+    <p>小学生でワープロ、中学生でホームページ、大学で Excel に追いこまれ、大学職員で Office に熟練して、今は AI。振り返ると、道具が変わっても「新しいものを覚えて、仕事をちょっと楽にする」のが好きなのは同じでした。</p>
+    <p>ちがうのは、AI は<b>こちらの言葉で頼めば、道具のほうが歩み寄ってくれる</b>ところです。そして、Excel や Word で「ここは手作業だと大変」と知っているからこそ、何を頼めばいいかがすぐに浮かびます。<b>道具を覚えてきた時間は、今「頼み方」に生きています。</b></p>
+    <p>Claude は、難しい道具ではありません。「こういうことがしたい」があれば、どんどん形になります。まずはスマホで、ひとこと話しかけてみてください。</p>
+  </div>
+
+  <h2>もっと読む<small>READ MORE</small></h2>
+  <ul class="more">
+    <li><a href="/blog/claude-code-hajimari/">エンジニアじゃない私が、Claude Codeと「しつこく」付き合って1か月<span class="arrow">→</span><small>ブログ1本目・始めたきっかけ</small></a></li>
+    <li><a href="/blog/onsei-tsukaiwake/">打つのをやめて、しゃべり始めた。Chat・Cowork・Codeの使い分け<span class="arrow">→</span><small>ブログ2本目・音声入力と3つの使い分け</small></a></li>
+    <li><a href="/blog/waapuro-kara-ai/">ワープロ好きだった私が、Claude Codeにハマった理由<span class="arrow">→</span><small>ブログ3本目・道具を覚えてきた話</small></a></li>
+    <li><a href="/blog/seikyusho-claude/">請求書の1年分を、Claudeに見直してもらった話<span class="arrow">→</span><small>ブログ4本目・過去を見直す力</small></a></li>
+    <li><a href="/blog/shigoto-igai-de/">仕事で使えないなら、暮らしで使ってみよう<span class="arrow">→</span><small>ブログ5本目・暮らしで練習する</small></a></li>
+    <li><a href="/claudecode/">柔術道場のClaude Code<span class="arrow">→</span><small>白帯から黒帯まで・道場の裏方仕事での使い方</small></a></li>
+  </ul>
+
+  <footer>
+    アプリの画面や料金・プランの内容は変わることがあります。最新の情報は公式サイトで確認してください。<br>
+    <a href="/">← jiujitsu.co.jp トップへ</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+
+<script>
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var q = btn.parentElement.querySelector('q');
+      var text = q.textContent.trim();
+      function done() { btn.textContent = 'コピーしました'; setTimeout(function () { btn.textContent = 'コピー'; }, 1600); }
+      function fallback() {
+        var r = document.createRange(); r.selectNodeContents(q);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      }
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+    });
+  });
+</script>
