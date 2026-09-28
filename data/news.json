@@ -3,6 +3,13 @@
   "line_url": "",
   "entries": [
     {
+        "id": "blog-seikyusho-claude",
+        "date": "2026-09-28",
+        "title": "ブログ：請求書の1年分を、Claudeに見直してもらった話",
+        "url": "/blog/seikyusho-claude/",
+        "summary": "毎月ひとりで作ってきた業務委託の請求書。Claudeに1年分さかのぼってもらったら、自分では気づけなかった間違いが見つかりました。マネージャー目線のブログ、4本目です。"
+    },
+    {
         "id": "blog-waapuro-kara-ai",
         "date": "2026-09-27",
         "title": "ブログ：ワープロ好きだった私が、Claude Codeにハマった理由",
