@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>サロンの顧客管理</title>
+<meta name="description" content="個人のエステサロン向けに作った、スマホだけで使える売上とお客さまカルテのノート。記録は暗証番号で暗号化して端末の中だけに保存し、外部には一切送りません。">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 22px 80px; }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(28px, 6vw, 42px); color: var(--ink); letter-spacing: .14em; line-height: 1.4; margin: 10px 0 14px; }
+  .lede { font-size: 13.5px; color: var(--body-c); margin: 0 auto; max-width: 34em; letter-spacing: .04em; text-wrap: balance; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: .2em; margin: 68px 0 20px; display: flex; align-items: center; gap: 16px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h2 small { font-size: 10.5px; letter-spacing: .22em; color: var(--gold); font-family: var(--gothic); font-weight: 700; }
+  p { margin: 0 0 16px; font-size: 14px; }
+  b { color: var(--ink); }
+  .lead-copy { max-width: 42em; }
+
+  /* 画面 */
+  .phones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 8px; }
+  .phones figure { margin: 0; }
+  .phones img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 6px 22px rgba(23,20,13,.08); }
+  .phones figcaption { font-size: 12px; color: var(--ink); text-align: center; margin-top: 12px; line-height: 1.7; }
+  .phones figcaption small { display: block; color: var(--faint); font-size: 11.5px; }
+  @media (max-width: 660px) {
+    .phones { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 72%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; margin: 8px -22px 0; padding-left: 22px; padding-right: 22px; }
+    .phones figure { scroll-snap-align: center; }
+  }
+  .ba-note { font-size: 12.5px; color: var(--faint); margin: 12px 0 0; }
+
+  /* 手順 */
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; counter-reset: st; }
+  .steps li { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold); padding: 18px 22px; }
+  .steps h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .08em; margin: 0 0 6px; counter-increment: st; }
+  .steps h3::before { content: "0" counter(st); font-family: var(--gothic); font-size: 11px; letter-spacing: .18em; color: var(--gold); margin-right: 14px; vertical-align: 2px; }
+  .steps p { font-size: 13.5px; margin: 0; }
+  .steps p + p { margin-top: 6px; color: var(--faint); font-size: 12.5px; }
+
+  /* セキュリティ */
+  .rules { border: 1px solid var(--line); border-bottom: none; margin: 0; }
+  .rules div { display: grid; grid-template-columns: 250px 1fr; gap: 24px; padding: 16px 20px; border-bottom: 1px solid var(--line); background: var(--paper); }
+  .rules div:nth-child(odd) { background: var(--panel); }
+  .rules dt { font-size: 13px; color: var(--ink); font-weight: 700; margin: 0; }
+  .rules dt small { display: block; font-size: 11px; color: var(--faint); font-weight: 400; letter-spacing: .04em; margin-top: 2px; }
+  .rules dd { margin: 0; font-size: 13.5px; }
+  @media (max-width: 660px) { .rules div { grid-template-columns: 1fr; gap: 6px; } }
+  .lockrow { display: grid; grid-template-columns: 200px 1fr; gap: 30px; align-items: center; margin-bottom: 26px; }
+  .lockrow img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 6px 22px rgba(23,20,13,.08); }
+  @media (max-width: 660px) { .lockrow { grid-template-columns: 1fr; } .lockrow img { max-width: 220px; margin: 0 auto; } }
+  .caution { border-left: 3px solid var(--gold); background: var(--panel); padding: 18px 22px; margin-top: 22px; }
+  .caution p { font-size: 13px; margin: 0; }
+  .caution p + p { margin-top: 10px; color: var(--faint); font-size: 12.5px; }
+
+  ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  ul.plain li { font-size: 13.5px; padding-left: 20px; position: relative; }
+  ul.plain li::before { content: ""; position: absolute; left: 0; top: .78em; width: 7px; height: 7px; background: var(--gold); border-radius: 50%; }
+
+  .tools { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 0; }
+  .tools div { background: var(--panel); padding: 18px 20px; }
+  .tools dt { font-size: 11px; letter-spacing: .16em; color: var(--gold); font-weight: 700; margin: 0 0 4px; }
+  .tools dd { margin: 0; font-size: 13px; color: var(--ink); }
+  .tools dd small { display: block; color: var(--faint); font-size: 12px; font-weight: 400; }
+  @media (max-width: 660px) { .tools { grid-template-columns: 1fr; } }
+
+  .closing { margin-top: 76px; text-align: center; }
+  .closing p.t { font-family: var(--mincho); font-weight: 600; font-size: clamp(17px, 4vw, 21px); color: var(--ink); letter-spacing: .08em; margin: 0; text-wrap: balance; }
+  .closing p.by { font-size: 12px; color: var(--gold); letter-spacing: .14em; margin: 12px 0 0; }
+
+  footer { margin-top: 64px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+
+<header>
+  <p class="brand">SALON</p>
+  <h1>サロンの顧客管理</h1>
+  <p class="lede">今日、どのお客さまに、いくら。<br>スマホで打つだけで、月の売上とお客さまのカルテが育っていく。<br>個人のエステサロン向けに作った、小さな顧客管理です。</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <h2>頼まれたこと<small>REQUEST</small></h2>
+  <div class="lead-copy">
+    <p>「毎日、誰にいくら売ったかを付けていて、月ごとに集計している。それをスマホに入力するだけでできるようにしたい。前の月も、ちゃんと見返せるように」。知り合いのサロンから、そんな相談を受けました。</p>
+    <p>大きな予約システムや、月額のかかる顧客管理サービスまでは要らない。<b>施術のあいだの数十秒で、片手で打てること。</b>そして扱うのは、お客さまのお名前や肌の悩みといった、人に見られてはいけない情報です。<b>使いやすさと同じくらい、守りの固さ</b>を大事にして作りました。</p>
+  </div>
+
+  <h2>画面<small>SCREENS</small></h2>
+  <div class="phones">
+    <figure>
+      <img src="/assets/salon/input.jpg" alt="売上の入力画面。日付・お客さま・金額・メモの欄と、今月の売上合計が表示されている" loading="lazy">
+      <figcaption>入力<small>名前を入れると、前回の来店と累計が出る</small></figcaption>
+    </figure>
+    <figure>
+      <img src="/assets/salon/book.jpg" alt="お客さま名簿の画面。お客さまごとに最終来店日、回数、累計金額が並ぶ" loading="lazy">
+      <figcaption>お客さま名簿<small>入力するだけで、自動でできあがる</small></figcaption>
+    </figure>
+    <figure>
+      <img src="/assets/salon/karte.jpg" alt="お客さまカルテの画面。累計・回数・平均・初回・最終来店、誕生日、メモ、これまでの売上" loading="lazy">
+      <figcaption>カルテ<small>誕生日や肌のメモ、これまでの売上</small></figcaption>
+    </figure>
+  </div>
+  <p class="ba-note">※ 画面はすべてサンプルデータです。お名前は仮名で、実際のお店の記録は載せていません。</p>
+
+  <h2>できること<small>FEATURES</small></h2>
+  <ol class="steps">
+    <li>
+      <h3>打つのは、名前と金額だけ</h3>
+      <p>日付は今日が最初から入っています。よく来るお客さまはボタンで選べて、金額は「+5,000」のような足し算ボタンでも入れられます。</p>
+      <p>名前を入れた時点で「前回 9/13（15日前）・累計 34,980円・5回」と出るので、会話のきっかけにもなります。</p>
+    </li>
+    <li>
+      <h3>その月の売上が、いつでも出る</h3>
+      <p>画面のいちばん上に、今月のいまの時点の合計・件数・人数。日ごとの一覧と、お客さま別のランキングにも切り替えられます。</p>
+    </li>
+    <li>
+      <h3>お客さま名簿が、勝手に育つ</h3>
+      <p>一度入力したお客さまは、そのまま名簿に入ります。「最近来た順」「売上が多い順」「ご無沙汰順」に並べ替えられるので、しばらく来ていない方へのご連絡にも使えます。</p>
+    </li>
+    <li>
+      <h3>カルテに、覚えておきたいことを</h3>
+      <p>お客さまごとに、誕生日と自由なメモ。「乾燥肌」「香料が苦手」「次回は毛穴ケア希望」といったことを残しておけば、次に来られたときに見返せます。</p>
+    </li>
+    <li>
+      <h3>過去の月も、年の合計も</h3>
+      <p>月ごとの売上を棒グラフで並べ、年ごとの合計も出します。タップすればその月の明細に飛べます。Excelで開ける形での書き出しもできます。</p>
+    </li>
+  </ol>
+
+  <h2>セキュリティ<small>SECURITY</small></h2>
+  <div class="lockrow">
+    <img src="/assets/salon/lock.jpg" alt="6桁の暗証番号を入れるロック画面" loading="lazy">
+    <div class="lead-copy">
+      <p>お客さまのお名前、来店の記録、肌の悩み。顧客管理が扱うのは、どれも<b>外に出てはいけない情報</b>です。</p>
+      <p>そこで、いちばん大事なことを決めました。<b>記録は、そのスマホの外に一切出さない。</b>サーバーに預けなければ、サーバーから漏れることもありません。そのうえで、スマホを誰かに触られたとき、中身を抜き出されたときにも読まれないよう、何重かに鍵をかけています。</p>
+    </div>
+  </div>
+
+  <dl class="rules">
+    <div>
+      <dt>サーバーから漏れる<small>よくある情報漏えいの原因</small></dt>
+      <dd>記録はすべてスマホの中だけに保存し、どこにも送りません。さらにページ自体に「外部と通信してはいけない」という設定（CSP）を入れているので、仮にプログラムに不具合があっても、データが外へ出ていく道がありません。アクセス解析のタグも入れていません。</dd>
+    </div>
+    <div>
+      <dt>スマホを人に見られる<small>置きっぱなし・のぞき見</small></dt>
+      <dd>開くたびに6桁の暗証番号が必要です。ほかのアプリに切り替えて1分たつと自動でロックがかかり、右上のボタンでいつでもすぐにロックできます。</dd>
+    </div>
+    <div>
+      <dt>中身を抜き出される<small>保存データを直接読まれる</small></dt>
+      <dd>記録は暗証番号から作った鍵で暗号化してから保存しています（PBKDF2 31万回＋AES-256-GCM）。保存されているのは読めない文字の並びだけで、お名前も金額もそのままの形では残りません。</dd>
+    </div>
+    <div>
+      <dt>暗証番号を当てられる<small>総当たりで試される</small></dt>
+      <dd>5回まちがえると待ち時間が入り、まちがえるたびに倍に延びていきます。鍵を作る計算もわざと重くしてあるので、1回試すごとに時間がかかります。</dd>
+    </div>
+    <div>
+      <dt>バックアップが流出する<small>ファイルの置き場所から漏れる</small></dt>
+      <dd>機種変更に備えたバックアップのファイルも、同じ鍵で暗号化されています。LINEの自分宛てトークやクラウドに置いても、暗証番号がなければ中身は読めません。</dd>
+    </div>
+    <div>
+      <dt>Excel用の書き出し<small>鍵のかからない唯一の出口</small></dt>
+      <dd>Excelで開くファイルだけは暗号化できないため、書き出す前に「人に送ったり、置きっぱなしにしないでください」と確認を出します。</dd>
+    </div>
+  </dl>
+
+  <div class="caution">
+    <p>この仕組みでは、<b>暗証番号を忘れると、作った私たちにも記録は開けません。</b>誰にも開けられないように鍵をかけている以上、それが正しい姿だと考えています。暗証番号は紙などに控えておいてもらうようにしています。</p>
+    <p>※ いちばんの守りは、スマホ本体のロック（顔認証・指紋認証）です。本体のロックがかかっていることを前提に、その内側でもう一段守る作りにしています。</p>
+  </div>
+
+  <h2>割り切ったこと<small>TRADE-OFFS</small></h2>
+  <ul class="plain">
+    <li><b>1台のスマホで使う前提。</b>サーバーを持たないので、パソコンや別のスタッフと同時に見ることはできません。そのかわり、情報を預ける先がどこにもありません。</li>
+    <li><b>バックアップは、自分で保存する。</b>月に1回ボタンを押してもらう運用にしました。自動で外に送る仕組みを作らないことを優先しています。</li>
+    <li><b>アプリストアを通さない。</b>ブラウザで開いて「ホーム画面に追加」するだけで、アプリのように使えます。インストールも月額料金もありません。</li>
+  </ul>
+
+  <h2>使っている道具<small>TOOLS</small></h2>
+  <dl class="tools">
+    <div><dt>DEVICE</dt><dd>手持ちのスマホ<small>ブラウザで開いてホーム画面に追加</small></dd></div>
+    <div><dt>STORAGE</dt><dd>端末の中だけ<small>サーバーなし・外部通信なし</small></dd></div>
+    <div><dt>CRYPTO</dt><dd>Web Crypto API<small>PBKDF2 ＋ AES-256-GCM</small></dd></div>
+    <div><dt>AI</dt><dd>Claude Code<small>相談を聞いてから、その日のうちに形に</small></dd></div>
+  </dl>
+
+  <div class="closing">
+    <p class="t">お客さまの情報は、お店の外に出さない。</p>
+    <p class="by">── BUTTI ON LINE</p>
+  </div>
+
+  <footer>
+    柔術の現場で、必要にせまられて作ったものたち。<br>
+    <a href="/">← jiujitsu.co.jp トップへ</a>
+  <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<a href="/" style="position:fixed;right:14px;bottom:14px;z-index:99;background:#17140d;color:#e8c95e;font-size:11px;letter-spacing:.1em;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);font-family:sans-serif;">TOPへ</a>
+</html>
