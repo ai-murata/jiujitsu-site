@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="まみ売上">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FBF6F4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%B4%3C/text%3E%3C/svg%3E">
+<title>まみちゃん売上ノート</title>
+<style>
+:root{
+  --bg:#FBF6F4; --card:#FFFFFF; --ink:#2A2024; --muted:#8C7D82; --line:#EEE3E1;
+  --rose:#C2587A; --rose-soft:#F8E6EC; --gold:#A8842E; --gold-soft:#F4ECDA;
+  --danger:#B3402F;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1B1618; --card:#262023; --ink:#F3ECEE; --muted:#A8989E; --line:#3A3035;
+    --rose:#E58AA8; --rose-soft:#3A2830; --gold:#D8B460; --gold-soft:#3A3222;
+    --danger:#E88570;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1B1618; --card:#262023; --ink:#F3ECEE; --muted:#A8989E; --line:#3A3035;
+  --rose:#E58AA8; --rose-soft:#3A2830; --gold:#D8B460; --gold-soft:#3A3222;
+  --danger:#E88570;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  line-height:1.5;-webkit-font-smoothing:antialiased;
+  padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+.wrap{max-width:560px;margin:0 auto;padding:0 16px}
+button,input,select{font-family:inherit;font-size:16px;color:inherit}
+.num{font-variant-numeric:tabular-nums}
+
+header.top{padding:calc(18px + env(safe-area-inset-top)) 0 6px}
+.brand{font-size:11px;letter-spacing:.2em;color:var(--rose);font-weight:700}
+h1{font-size:22px;margin:0;font-weight:800}
+
+/* month switcher */
+.month{display:flex;align-items:center;justify-content:space-between;margin:14px 0 10px}
+.month button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:var(--card);font-size:18px;cursor:pointer}
+.month button:disabled{opacity:.3}
+.month .label{font-size:18px;font-weight:800;text-align:center}
+.month .label small{display:block;font-size:11px;font-weight:600;color:var(--muted)}
+
+/* total card */
+.total{background:linear-gradient(135deg,var(--rose-soft),var(--gold-soft));
+  border-radius:18px;padding:18px 18px 16px;margin-bottom:14px}
+.total .k{font-size:12px;color:var(--muted);font-weight:700}
+.total .v{font-size:38px;font-weight:800;letter-spacing:-.01em;line-height:1.15}
+.total .v span{font-size:18px;margin-left:2px}
+.total .row{display:flex;gap:18px;margin-top:8px;font-size:13px;color:var(--muted)}
+.total .row b{color:var(--ink);font-size:15px}
+
+/* cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:14px}
+.card h2{font-size:14px;margin:0 0 10px;font-weight:800}
+label.f{display:block;font-size:12px;color:var(--muted);font-weight:700;margin:10px 0 4px}
+.in{width:100%;height:48px;border:1px solid var(--line);border-radius:12px;padding:0 12px;
+  background:var(--bg);outline:none}
+.in:focus{border-color:var(--rose)}
+.amount{position:relative}
+.amount .in{font-size:24px;font-weight:800;padding-left:32px}
+.amount::before{content:"¥";position:absolute;left:13px;top:50%;transform:translateY(-50%);
+  font-size:20px;font-weight:800;color:var(--muted)}
+.quick{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.quick button{border:1px solid var(--line);background:var(--bg);border-radius:999px;
+  padding:6px 11px;font-size:13px;cursor:pointer}
+.names{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.names button{border:none;background:var(--rose-soft);color:var(--ink);border-radius:999px;
+  padding:6px 12px;font-size:13px;cursor:pointer}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.primary{width:100%;height:54px;margin-top:16px;border:none;border-radius:14px;
+  background:var(--rose);color:#fff;font-size:17px;font-weight:800;cursor:pointer}
+.primary:active{transform:scale(.99)}
+.ghost{background:none;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:14px;cursor:pointer}
+
+/* list */
+.day{margin-top:4px}
+.dayhead{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);
+  font-weight:700;padding:12px 2px 6px;border-bottom:1px solid var(--line)}
+.item{display:flex;align-items:center;gap:10px;padding:11px 2px;border-bottom:1px solid var(--line);cursor:pointer}
+.item .who{flex:1;min-width:0}
+.item .who b{display:block;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.item .who small{color:var(--muted);font-size:12px}
+.item .amt{font-weight:800;font-size:16px}
+.empty{color:var(--muted);text-align:center;padding:22px 0;font-size:14px}
+
+/* ranking */
+.rank{display:flex;align-items:center;gap:10px;padding:8px 0}
+.rank .n{width:22px;font-weight:800;color:var(--gold);text-align:center}
+.rank .nm{width:30%;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rank .bar{flex:1;height:10px;background:var(--line);border-radius:5px;overflow:hidden}
+.rank .bar i{display:block;height:100%;background:var(--rose);border-radius:5px}
+.rank .v{font-size:13px;font-weight:700;min-width:84px;text-align:right}
+
+/* history */
+.hist{display:flex;align-items:center;gap:10px;padding:12px 2px;border-bottom:1px solid var(--line);cursor:pointer}
+.hist .m{width:78px;font-weight:700}
+.hist .bar{flex:1;height:10px;background:var(--line);border-radius:5px;overflow:hidden}
+.hist .bar i{display:block;height:100%;background:var(--gold);border-radius:5px}
+.hist .v{min-width:96px;text-align:right;font-weight:800}
+.hist small{color:var(--muted);font-weight:400;font-size:11px;display:block;text-align:right}
+.yearsum{display:flex;justify-content:space-between;font-weight:800;padding:14px 2px 4px;font-size:15px}
+
+/* tabs */
+nav.tabs{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);
+  display:flex;padding-bottom:env(safe-area-inset-bottom);z-index:10}
+nav.tabs button{flex:1;height:62px;border:none;background:none;font-size:11px;font-weight:700;color:var(--muted);cursor:pointer}
+nav.tabs button span{display:block;font-size:20px;line-height:1.2}
+nav.tabs button.on{color:var(--rose)}
+section[hidden]{display:none}
+
+.note{font-size:12.5px;color:var(--muted);line-height:1.7}
+.btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+
+/* sheet */
+.sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:20;display:flex;align-items:flex-end;justify-content:center}
+.sheet-bg[hidden]{display:none}
+.sheet{background:var(--card);width:100%;max-width:560px;border-radius:20px 20px 0 0;padding:18px 16px calc(18px + env(safe-area-inset-bottom))}
+.sheet .acts{display:flex;gap:8px;margin-top:16px}
+.sheet .acts button{flex:1;height:48px;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer}
+.del{background:none;border:1px solid var(--danger);color:var(--danger)}
+.save{background:var(--rose);border:none;color:#fff}
+
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translateX(-50%);
+  background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;font-size:14px;font-weight:700;
+  opacity:0;transition:opacity .2s;pointer-events:none;z-index:30;white-space:nowrap}
+.toast.show{opacity:1}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">MAMI'S SALES NOTE</div>
+    <h1>まみちゃん売上ノート</h1>
+  </header>
+
+  <div class="month">
+    <button id="prev" aria-label="前の月">‹</button>
+    <div class="label"><span id="mlabel"></span><small id="msub"></small></div>
+    <button id="next" aria-label="次の月">›</button>
+  </div>
+
+  <div class="total">
+    <div class="k" id="tk">今月の売上</div>
+    <div class="v num" id="tv">0<span>円</span></div>
+    <div class="row">
+      <div>件数 <b class="num" id="tc">0</b></div>
+      <div>お客さま <b class="num" id="tp">0</b>人</div>
+      <div>今日 <b class="num" id="tt">0</b>円</div>
+    </div>
+  </div>
+
+  <!-- 入力 -->
+  <section id="s-add">
+    <div class="card">
+      <h2>売上を記録する</h2>
+      <form id="addf" autocomplete="off">
+        <div class="two">
+          <div>
+            <label class="f" for="d">日付</label>
+            <input class="in" type="date" id="d" required>
+          </div>
+          <div>
+            <label class="f" for="memo">メモ（なくてOK）</label>
+            <input class="in" id="memo" placeholder="シャンパン など">
+          </div>
+        </div>
+        <label class="f" for="who">お客さま</label>
+        <input class="in" id="who" list="wholist" placeholder="名前を入れる" required>
+        <datalist id="wholist"></datalist>
+        <div class="names" id="recent"></div>
+        <label class="f" for="amt">金額</label>
+        <div class="amount"><input class="in num" id="amt" inputmode="numeric" placeholder="0" required></div>
+        <div class="quick" id="quick"></div>
+        <button class="primary" type="submit">記録する</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 一覧 -->
+  <section id="s-list" hidden>
+    <div class="card"><h2>この月の記録</h2><div id="list"></div></div>
+  </section>
+
+  <!-- お客さま -->
+  <section id="s-rank" hidden>
+    <div class="card"><h2>お客さま別（この月）</h2><div id="rank"></div></div>
+  </section>
+
+  <!-- 過去 -->
+  <section id="s-hist" hidden>
+    <div class="card"><h2>月ごとの売上</h2><div id="hist"></div></div>
+    <div class="card">
+      <h2>バックアップ</h2>
+      <p class="note">記録はこのスマホの中だけに保存されています。機種変更やブラウザのデータ削除で消えないよう、月に1回くらい「バックアップを保存」してください。ファイルは「ファイル」アプリやLINEの自分宛てトークに置いておけば安心です。</p>
+      <div class="btnrow">
+        <button class="ghost" id="bk">バックアップを保存</button>
+        <button class="ghost" id="rs">バックアップから戻す</button>
+        <button class="ghost" id="csv">Excel用（CSV）</button>
+        <input type="file" id="rsf" accept=".json,application/json" hidden>
+      </div>
+    </div>
+  </section>
+</div>
+
+<nav class="tabs">
+  <button data-t="add" class="on"><span>✏️</span>入力</button>
+  <button data-t="list"><span>📋</span>一覧</button>
+  <button data-t="rank"><span>👑</span>お客さま</button>
+  <button data-t="hist"><span>📅</span>過去</button>
+</nav>
+
+<div class="sheet-bg" id="sheet" hidden>
+  <div class="sheet">
+    <h2 style="margin:0 0 4px;font-size:16px">記録を直す</h2>
+    <label class="f" for="ed">日付</label><input class="in" type="date" id="ed">
+    <label class="f" for="ew">お客さま</label><input class="in" id="ew" list="wholist">
+    <label class="f" for="ea">金額</label><div class="amount"><input class="in num" id="ea" inputmode="numeric"></div>
+    <label class="f" for="em">メモ</label><input class="in" id="em">
+    <div class="acts">
+      <button class="del" id="edel">削除</button>
+      <button class="ghost" id="ecancel" style="flex:1">やめる</button>
+      <button class="save" id="esave">保存</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(() => {
+  const KEY = 'mami-sales-v1';
+  const $ = id => document.getElementById(id);
+  const yen = n => n.toLocaleString('ja-JP');
+  const pad = n => String(n).padStart(2, '0');
+  const ymd = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+  const today = () => ymd(new Date());
+  const WD = ['日','月','火','水','木','金','土'];
+
+  let data = [];
+  try { data = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { data = []; }
+  if (!Array.isArray(data)) data = [];
+  const save = () => {
+    try { localStorage.setItem(KEY, JSON.stringify(data)); }
+    catch (e) { alert('保存できませんでした。プライベートブラウズになっていないか確認してください。'); }
+  };
+  // ブラウザに「消さないで」とお願いしておく（対応している端末のみ）
+  if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+
+  const now = new Date();
+  let cur = { y: now.getFullYear(), m: now.getMonth() + 1 };
+  const mkey = (y, m) => `${y}-${pad(m)}`;
+  const inMonth = r => r.date.slice(0, 7) === mkey(cur.y, cur.m);
+  const parseAmt = s => {
+    const n = parseInt(String(s).replace(/[^\d]/g, ''), 10);
+    return isNaN(n) ? 0 : n;
+  };
+
+  function toast(msg) {
+    const t = $('toast'); t.textContent = msg; t.classList.add('show');
+    clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('show'), 1600);
+  }
+
+  function customers() {
+    // よく来る順（回数→最近）
+    const m = new Map();
+    for (const r of data) {
+      const c = m.get(r.who) || { n: 0, last: '' };
+      c.n++; if (r.date > c.last) c.last = r.date;
+      m.set(r.who, c);
+    }
+    return [...m.entries()].sort((a, b) => b[1].last.localeCompare(a[1].last) || b[1].n - a[1].n).map(e => e[0]);
+  }
+
+  function render() {
+    const rows = data.filter(inMonth);
+    const total = rows.reduce((s, r) => s + r.amount, 0);
+    const isThis = cur.y === now.getFullYear() && cur.m === now.getMonth() + 1;
+    $('mlabel').textContent = `${cur.y}年${cur.m}月`;
+    $('msub').textContent = isThis ? '今月' : '';
+    $('tk').textContent = isThis ? '今月の売上（いまの時点）' : `${cur.m}月の売上`;
+    $('tv').innerHTML = `${yen(total)}<span>円</span>`;
+    $('tc').textContent = rows.length;
+    $('tp').textContent = new Set(rows.map(r => r.who)).size;
+    $('tt').textContent = yen(data.filter(r => r.date === today()).reduce((s, r) => s + r.amount, 0));
+    $('next').disabled = isThis;
+
+    // 名前候補
+    const cs = customers();
+    $('wholist').innerHTML = cs.map(n => `<option value="${esc(n)}">`).join('');
+    $('recent').innerHTML = cs.slice(0, 8).map(n => `<button type="button" data-n="${esc(n)}">${esc(n)}</button>`).join('');
+
+    // 一覧（日付ごと）
+    const byDay = new Map();
+    [...rows].sort((a, b) => b.date.localeCompare(a.date) || b.t - a.t).forEach(r => {
+      if (!byDay.has(r.date)) byDay.set(r.date, []);
+      byDay.get(r.date).push(r);
+    });
+    $('list').innerHTML = byDay.size ? [...byDay.entries()].map(([d, rs]) => {
+      const dt = new Date(d + 'T00:00:00');
+      const sum = rs.reduce((s, r) => s + r.amount, 0);
+      return `<div class="day"><div class="dayhead"><span>${dt.getMonth()+1}/${dt.getDate()}（${WD[dt.getDay()]}）</span><span class="num">${yen(sum)}円</span></div>` +
+        rs.map(r => `<div class="item" data-id="${r.id}"><div class="who"><b>${esc(r.who)}</b>${r.memo ? `<small>${esc(r.memo)}</small>` : ''}</div><div class="amt num">${yen(r.amount)}円</div></div>`).join('') + '</div>';
+    }).join('') : '<div class="empty">この月の記録はまだありません</div>';
+
+    // お客さま別
+    const per = new Map();
+    rows.forEach(r => { const p = per.get(r.who) || { s: 0, n: 0 }; p.s += r.amount; p.n++; per.set(r.who, p); });
+    const pr = [...per.entries()].sort((a, b) => b[1].s - a[1].s);
+    const max = pr.length ? pr[0][1].s : 1;
+    $('rank').innerHTML = pr.length ? pr.map(([n, p], i) =>
+      `<div class="rank"><div class="n">${i+1}</div><div class="nm">${esc(n)}</div><div class="bar"><i style="width:${Math.max(3, p.s / max * 100)}%"></i></div><div class="v num">${yen(p.s)}円<br><small style="color:var(--muted);font-weight:400">${p.n}回</small></div></div>`
+    ).join('') : '<div class="empty">この月の記録はまだありません</div>';
+
+    // 過去（月ごと）
+    const months = new Map();
+    data.forEach(r => { const k = r.date.slice(0, 7); const v = months.get(k) || { s: 0, n: 0 }; v.s += r.amount; v.n++; months.set(k, v); });
+    const ks = [...months.keys()].sort().reverse();
+    const hmax = Math.max(1, ...[...months.values()].map(v => v.s));
+    let html = '', year = null, ysum = 0;
+    const flush = () => { if (year) html += `<div class="yearsum"><span>${year}年 合計</span><span class="num">${yen(ysum)}円</span></div>`; };
+    ks.forEach(k => {
+      const [y, m] = k.split('-');
+      if (y !== year) { flush(); year = y; ysum = 0; }
+      const v = months.get(k); ysum += v.s;
+      html += `<div class="hist" data-k="${k}"><div class="m">${y}/${+m}月</div><div class="bar"><i style="width:${Math.max(2, v.s / hmax * 100)}%"></i></div><div class="v num">${yen(v.s)}円<small>${v.n}件</small></div></div>`;
+    });
+    flush();
+    $('hist').innerHTML = html || '<div class="empty">まだ記録がありません</div>';
+  }
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c])); }
+
+  // 金額入力：3桁区切りで表示
+  function fmtInput(el) {
+    el.addEventListener('input', () => { const n = parseAmt(el.value); el.value = n ? yen(n) : ''; });
+  }
+  fmtInput($('amt')); fmtInput($('ea'));
+
+  // 金額のクイック追加
+  [1000, 5000, 10000, 50000].forEach(v => {
+    const b = document.createElement('button'); b.type = 'button'; b.textContent = `+${yen(v)}`;
+    b.onclick = () => { $('amt').value = yen(parseAmt($('amt').value) + v); };
+    $('quick').appendChild(b);
+  });
+  const clr = document.createElement('button'); clr.type = 'button'; clr.textContent = 'クリア';
+  clr.onclick = () => { $('amt').value = ''; }; $('quick').appendChild(clr);
+
+  $('recent').addEventListener('click', e => { const b = e.target.closest('button'); if (b) $('who').value = b.dataset.n; });
+
+  $('d').value = today();
+  $('addf').addEventListener('submit', e => {
+    e.preventDefault();
+    const who = $('who').value.trim(), amount = parseAmt($('amt').value), date = $('d').value;
+    if (!who) return toast('お客さまの名前を入れてね');
+    if (!amount) return toast('金額を入れてね');
+    data.push({ id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), date, who, amount, memo: $('memo').value.trim(), t: Date.now() });
+    save();
+    const [y, m] = date.split('-'); cur = { y: +y, m: +m };
+    $('who').value = ''; $('amt').value = ''; $('memo').value = '';
+    render(); toast(`${who}さん ${yen(amount)}円 記録しました`);
+  });
+
+  $('prev').onclick = () => { cur.m--; if (cur.m < 1) { cur.m = 12; cur.y--; } render(); };
+  $('next').onclick = () => { cur.m++; if (cur.m > 12) { cur.m = 1; cur.y++; } render(); };
+
+  // タブ
+  const show = t => {
+    document.querySelectorAll('nav.tabs button').forEach(b => b.classList.toggle('on', b.dataset.t === t));
+    ['add', 'list', 'rank', 'hist'].forEach(s => $('s-' + s).hidden = s !== t);
+    window.scrollTo(0, 0);
+  };
+  document.querySelectorAll('nav.tabs button').forEach(b => b.onclick = () => show(b.dataset.t));
+  $('hist').addEventListener('click', e => {
+    const h = e.target.closest('.hist'); if (!h) return;
+    const [y, m] = h.dataset.k.split('-'); cur = { y: +y, m: +m }; render(); show('list');
+  });
+
+  // 編集シート
+  let editing = null;
+  $('list').addEventListener('click', e => {
+    const it = e.target.closest('.item'); if (!it) return;
+    editing = data.find(r => r.id === it.dataset.id); if (!editing) return;
+    $('ed').value = editing.date; $('ew').value = editing.who; $('ea').value = yen(editing.amount); $('em').value = editing.memo || '';
+    $('sheet').hidden = false;
+  });
+  const close = () => { $('sheet').hidden = true; editing = null; };
+  $('ecancel').onclick = close;
+  $('sheet').addEventListener('click', e => { if (e.target.id === 'sheet') close(); });
+  $('esave').onclick = () => {
+    const who = $('ew').value.trim(), amount = parseAmt($('ea').value);
+    if (!who || !amount || !$('ed').value) return toast('日付・名前・金額を入れてね');
+    Object.assign(editing, { date: $('ed').value, who, amount, memo: $('em').value.trim() });
+    save(); close(); render(); toast('直しました');
+  };
+  $('edel').onclick = () => {
+    if (!confirm(`${editing.who}さん ${yen(editing.amount)}円 を削除しますか？`)) return;
+    data = data.filter(r => r !== editing); save(); close(); render(); toast('削除しました');
+  };
+
+  // バックアップ
+  const download = (name, text, type) => {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([text], { type }));
+    a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  };
+  $('bk').onclick = () => download(`まみ売上_${today()}.json`, JSON.stringify({ app: 'mami-sales', v: 1, data }, null, 1), 'application/json');
+  $('csv').onclick = () => {
+    const q = s => `"${String(s).replace(/"/g, '""')}"`;
+    const lines = ['日付,お客さま,金額,メモ', ...[...data].sort((a, b) => a.date.localeCompare(b.date) || a.t - b.t).map(r => [r.date, q(r.who), r.amount, q(r.memo || '')].join(','))];
+    download(`まみ売上_${today()}.csv`, '﻿' + lines.join('\r\n'), 'text/csv');
+  };
+  $('rs').onclick = () => $('rsf').click();
+  $('rsf').onchange = async e => {
+    const f = e.target.files[0]; if (!f) return;
+    try {
+      const j = JSON.parse(await f.text());
+      const rows = Array.isArray(j) ? j : j.data;
+      if (!Array.isArray(rows) || rows.some(r => !r.id || !r.date || !r.who || typeof r.amount !== 'number')) throw 0;
+      const ids = new Set(data.map(r => r.id));
+      const add = rows.filter(r => !ids.has(r.id));
+      if (!confirm(`${rows.length}件のうち、まだ入っていない${add.length}件を追加します。よろしいですか？`)) return;
+      data = data.concat(add); save(); render(); toast(`${add.length}件を戻しました`);
+    } catch (err) { alert('このファイルは読み込めませんでした'); }
+    e.target.value = '';
+  };
+
+  render();
+})();
+</script>
+</html>
