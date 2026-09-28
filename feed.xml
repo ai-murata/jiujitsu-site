@@ -5,8 +5,15 @@
   <link href="https://jiujitsu.co.jp/"/>
   <link rel="self" type="application/atom+xml" href="https://jiujitsu.co.jp/feed.xml"/>
   <id>https://jiujitsu.co.jp/</id>
-  <updated>2026-09-28T19:06:29+09:00</updated>
+  <updated>2026-09-28T19:19:04+09:00</updated>
   <author><name>BUTTI ON LINE</name></author>
+  <entry>
+    <title>ブログ：仕事で使えないなら、暮らしで使ってみよう</title>
+    <link href="https://jiujitsu.co.jp/blog/shigoto-igai-de/"/>
+    <id>tag:jiujitsu.co.jp,2026-09-28:blog-shigoto-igai-de</id>
+    <updated>2026-09-28T09:00:00+09:00</updated>
+    <summary>会社の規定でClaudeを仕事に使えない人へ。だったら暮らしの中で試してみませんか。4年分たまった料理教室のレシピをサイトにする話です。マネージャー目線のブログ、5本目です。</summary>
+  </entry>
   <entry>
     <title>ブログ：請求書の1年分を、Claudeに見直してもらった話</title>
     <link href="https://jiujitsu.co.jp/blog/seikyusho-claude/"/>
