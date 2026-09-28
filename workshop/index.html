@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ワークショップ参加申込み</title>
+<meta name="description" content="第2回JCSAアートフェス ワークショップの参加申込みページ。空き状況を見ながら日時を選べて、申し込み後のキャンセルもこのページからできます。">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="palette" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="wrap">
+  <header>
+    <p class="kicker">WORKSHOP</p>
+    <h1 id="title">第2回JCSAアートフェス<br>ワークショップ参加申込み</h1>
+    <p class="lede">空き状況を見ながら、ご希望の日時と制作物をお選びください。お申し込み後のキャンセルもこのページからできます。</p>
+  </header>
+
+  <p class="demo" id="demo" hidden>いまはデモ表示です。受付係（Googleスプレッドシート）とつなぐまで、お申し込みは届きません。</p>
+
+  <div id="loading" class="loading">空き状況を読み込んでいます…</div>
+  <p class="formerr" id="loadErr"></p>
+
+  <form id="form" novalidate hidden>
+    <section class="card">
+      <h2><span class="n">1</span>日時と制作物</h2>
+      <div class="field" data-f="slot">
+        <label class="lb">ご希望の日時<span class="req">必須</span></label>
+        <p class="hint">おひとつお選びください。2つ以上をご希望の方は、お申し込みのあとに「続けて申し込む」からどうぞ。</p>
+        <div class="choices" id="slots"></div>
+        <p class="err">日時をお選びください。</p>
+      </div>
+      <div class="field" data-f="product">
+        <label class="lb">ご希望の制作物<span class="req">必須</span></label>
+        <div class="choices two" id="products"></div>
+        <p class="err">制作物をお選びください。</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="n">2</span>参加される方</h2>
+      <div class="field" data-f="name">
+        <label class="lb" for="name">お名前<span class="req">必須</span></label>
+        <input type="text" id="name" name="name" autocomplete="name" maxlength="60">
+        <p class="err">お名前をご入力ください。</p>
+      </div>
+      <div class="field" data-f="kana">
+        <label class="lb" for="kana">お名前（ふりがな）<span class="req">必須</span></label>
+        <input type="text" id="kana" name="kana" maxlength="60">
+        <p class="err">ふりがなをご入力ください。</p>
+      </div>
+      <div class="field" data-f="age">
+        <label class="lb" for="age">年齢<span class="req">必須</span></label>
+        <select id="age" name="age"><option value="">お選びください</option></select>
+        <p class="err">年齢をお選びください。</p>
+      </div>
+      <div class="field" data-f="email">
+        <label class="lb" for="email">メールアドレス<span class="req">必須</span></label>
+        <p class="hint">予約完了のメールと、キャンセル用のリンクをお送りします。</p>
+        <input type="email" id="email" name="email" autocomplete="email" inputmode="email" maxlength="120">
+        <p class="err">メールアドレスをご確認ください。</p>
+      </div>
+      <div class="field" data-f="tel">
+        <label class="lb" for="tel">電話番号<span class="req">必須</span></label>
+        <input type="tel" id="tel" name="tel" autocomplete="tel" inputmode="tel" maxlength="30">
+        <p class="err">電話番号をご入力ください。</p>
+      </div>
+      <div class="field" data-f="address">
+        <label class="lb" for="address">住所<span class="req">必須</span></label>
+        <input type="text" id="address" name="address" autocomplete="street-address" maxlength="200">
+        <p class="err">住所をご入力ください。</p>
+      </div>
+      <div class="field" data-f="source">
+        <label class="lb" for="source">このイベントをどこで知りましたか？<span class="req">必須</span></label>
+        <select id="source" name="source"><option value="">お選びください</option></select>
+        <p class="err">お選びください。</p>
+      </div>
+      <div class="hp" aria-hidden="true"><label>website<input type="text" name="website" id="website" tabindex="-1" autocomplete="off"></label></div>
+    </section>
+
+    <section class="card">
+      <h2><span class="n">3</span>お支払い・同意事項</h2>
+      <div class="terms" tabindex="0">
+        <h3>■ お支払いにつきまして</h3>
+        <p>・お支払いは当日現金のみとさせていただいております。お願いいたします。<br>・恐れ入りますが、お釣りのないようご準備にご協力いただけますと幸いです。</p>
+        <h3>■ 個人情報の取扱いについて</h3>
+        <p>ご入力いただいた個人情報（氏名・メールアドレス・電話番号等）は、以下の目的の範囲内で適切に利用いたします。<br>・本ワークショップの予約管理および運営のため<br>・当日のご連絡および緊急時対応のため<br>・今後のイベント・講座等のご案内（希望者のみ）<br>取得した個人情報は、法令に基づく場合を除き、第三者へ提供することはございません。また、適切な安全管理措置を講じ、漏洩・紛失・不正アクセスの防止に努めます。</p>
+        <h3>■ 免責事項</h3>
+        <p>・ワークショップ参加中の事故・怪我・盗難等については、主催者は故意または重過失がある場合を除き、一切の責任を負いかねます。<br>・体験内容の特性上、インク等による衣服・持ち物の汚れが生じる可能性がございます。あらかじめご了承ください。<br>・未成年の方は、保護者の同意のもとでご参加ください。<br>・天災や主催者の都合により、内容の変更または中止となる場合がございます。</p>
+        <h3>■ キャンセル・遅刻について</h3>
+        <p>・無断キャンセルはご遠慮ください。<br>・やむを得ずキャンセルされる場合は、<span id="deadline">予約完了メールのリンク、または<a href="cancel.html">キャンセルページ</a>からお手続きください</span>。<br>・開始時間を過ぎてのご参加は、体験時間が短くなる場合がございます。</p>
+        <h3>■ 写真・記録について</h3>
+        <p>当日の様子を撮影し、今後の広報（SNS・Webサイト等）に使用させていただく場合がございます。掲載に支障がある場合は、事前にお申し出ください。</p>
+        <h3>■ 同意</h3>
+        <p>上記内容をご確認いただき、同意の上でお申込みをお願いいたします。</p>
+      </div>
+      <div class="field" data-f="agree">
+        <label class="check"><input type="checkbox" id="agree"> 上記の内容に同意する</label>
+        <p class="err">同意事項へのご同意が必要です。</p>
+      </div>
+    </section>
+
+    <p class="formerr" id="sendErr"></p>
+    <button class="btn" type="submit" id="send">この内容で申し込む</button>
+  </form>
+
+  <section class="card done" id="done" hidden>
+    <div class="mark">✓</div>
+    <h2>ご予約を承りました</h2>
+    <p class="small">確認のメールをお送りしました。届かない場合は迷惑メールフォルダもご確認ください。</p>
+    <div class="ticket"><dl>
+      <dt>予約番号</dt><dd class="id" id="dId"></dd>
+      <dt>日時</dt><dd id="dSlot"></dd>
+      <dt>制作物</dt><dd id="dProduct"></dd>
+      <dt>お名前</dt><dd id="dName"></dd>
+    </dl></div>
+    <p class="small">予約番号はキャンセルのときに使います。この画面を保存しておくと安心です。</p>
+    <button class="btn" type="button" id="again">続けて別の日時も申し込む</button>
+    <a class="btn ghost" id="cancelLink" href="cancel.html">この予約をキャンセルする</a>
+  </section>
+
+  <p class="links"><a href="cancel.html">予約のキャンセルはこちら</a></p>
+  <footer>© JCSA アートフェス事務局</footer>
+</div>
+
+<script src="config.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var form = $('form'), cfg = null;
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+
+  function renderSlots(slots) {
+    $('slots').innerHTML = slots.map(function (s, i) {
+      var full = s.remaining <= 0, closed = !s.open;
+      var tag = closed ? '受付終了' : full ? '満席' : '残り ' + s.remaining + ' 席';
+      var cls = !closed && !full && s.remaining <= 2 ? ' class="few"' : '';
+      return '<label class="opt"><input type="radio" name="slot" value="' + esc(s.label) + '"' + (full || closed ? ' disabled' : '') + '>' +
+        '<span>' + esc(s.label) + '<small' + cls + '>' + tag + '</small></span></label>';
+    }).join('') || '<p class="small">現在受付中の日時はありません。</p>';
+  }
+
+  function fill(c) {
+    cfg = c;
+    if (c.title) { document.title = c.title + ' 参加申込み'; }
+    renderSlots(c.slots);
+    $('products').innerHTML = c.products.map(function (p) {
+      return '<label class="opt"><input type="radio" name="product" value="' + esc(p) + '"><span>' + esc(p) + '</span></label>';
+    }).join('');
+    $('age').insertAdjacentHTML('beforeend', c.ages.map(function (a) { return '<option>' + esc(a) + '</option>'; }).join(''));
+    $('source').insertAdjacentHTML('beforeend', c.sources.map(function (a) { return '<option>' + esc(a) + '</option>'; }).join(''));
+    if (c.cancelDeadlineHours > 0) {
+      $('deadline').insertAdjacentHTML('afterbegin', '開始の' + c.cancelDeadlineHours + '時間前までに、');
+    }
+    $('loading').hidden = true;
+    form.hidden = false;
+  }
+
+  function load() {
+    return workshopApi.get().then(function (c) {
+      if (!c.ok) throw new Error(c.error);
+      return c;
+    });
+  }
+
+  if (!window.WORKSHOP_API) $('demo').hidden = false;
+  load().then(fill).catch(function () {
+    $('loading').hidden = true;
+    $('loadErr').textContent = '空き状況を読み込めませんでした。時間をおいて、もう一度ページを開いてください。';
+    $('loadErr').classList.add('show');
+  });
+
+  function val(name) {
+    if (name === 'slot' || name === 'product') {
+      var c = form.querySelector('input[name="' + name + '"]:checked');
+      return c ? c.value : '';
+    }
+    return form.elements[name].value.trim();
+  }
+
+  function check() {
+    var d = {
+      slot: val('slot'), product: val('product'), name: val('name'), kana: val('kana'), age: val('age'),
+      email: val('email'), tel: val('tel'), address: val('address'), source: val('source'),
+      agree: $('agree').checked, website: $('website').value,
+    };
+    var bad = [];
+    ['slot', 'product', 'name', 'kana', 'age', 'tel', 'address', 'source'].forEach(function (k) { if (!d[k]) bad.push(k); });
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) bad.push('email');
+    if (!d.agree) bad.push('agree');
+    form.querySelectorAll('.field').forEach(function (f) { f.classList.toggle('bad', bad.indexOf(f.dataset.f) >= 0); });
+    if (bad.length) {
+      var first = form.querySelector('.field.bad');
+      first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return null;
+    }
+    return d;
+  }
+
+  form.addEventListener('change', function (e) {
+    var f = e.target.closest('.field');
+    if (f && f.classList.contains('bad')) f.classList.remove('bad');
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    $('sendErr').classList.remove('show');
+    var d = check();
+    if (!d) return;
+    d.action = 'reserve';
+    var btn = $('send');
+    btn.disabled = true; btn.textContent = '送信しています…';
+    workshopApi.post(d).then(function (r) {
+      if (!r.ok) throw new Error(r.error || '送信できませんでした。');
+      $('dId').textContent = r.id;
+      $('dSlot').textContent = r.slot;
+      $('dProduct').textContent = r.product;
+      $('dName').textContent = r.name;
+      $('cancelLink').href = 'cancel.html?id=' + encodeURIComponent(r.id) + '&key=' + encodeURIComponent(r.key);
+      form.hidden = true;
+      $('done').hidden = false;
+      window.scrollTo(0, 0);
+    }).catch(function (err) {
+      $('sendErr').textContent = err.message || '送信できませんでした。通信状況をご確認のうえ、もう一度お試しください。';
+      $('sendErr').classList.add('show');
+      // 満席などで弾かれたときは最新の空き状況に描き直す（選んでいた日時は外れる）
+      load().then(function (c) { cfg = c; renderSlots(c.slots); }).catch(function () {});
+    }).then(function () {
+      btn.disabled = false; btn.textContent = 'この内容で申し込む';
+    });
+  });
+
+  // 2件目：参加者の情報は残して、日時と制作物だけ選び直す
+  $('again').addEventListener('click', function () {
+    form.querySelectorAll('input[name="slot"], input[name="product"]').forEach(function (i) { i.checked = false; });
+    $('done').hidden = true;
+    form.hidden = false;
+    load().then(function (c) { cfg = c; renderSlots(c.slots); }).catch(function () {});
+    window.scrollTo(0, 0);
+  });
+})();
+</script>
+</body>
+</html>
