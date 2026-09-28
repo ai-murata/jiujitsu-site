@@ -75,7 +75,10 @@ print("トップページへの差し込み")
 block = build.build_block(es, "")
 check("LINEのURLが空ならボタンを出さない", "linebtn" not in block)
 check("URLがあればボタンを出す", "linebtn" in build.build_block(es, "https://lin.ee/x"))
-check("トップの件数を守る", block.count("<li>") == min(build.TOP_N, len(es)))
+check("お知らせを全部並べる", block.count("<li") == len(es))
+check("一番新しいものだけ大きく", block.count('class="is-latest"') == 1
+      and block.index('class="is-latest"') < block.index("<li>" if len(es) > 1 else "</ul>"))
+check("最初に見せる件数を渡す", f'data-show="{build.SHOW_N}"' in block)
 src = "A\n" + build.START + "ふるい\n" + build.END + "\nB"
 once = build.inject(src, block)
 check("目印の間だけ入れ替える", once.startswith("A\n") and once.endswith("\nB"))

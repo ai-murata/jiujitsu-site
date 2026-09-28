@@ -112,6 +112,16 @@
 
   .newslist .tag { flex: none; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: var(--gold); border: 1px solid rgba(163,128,26,.4); border-radius: 3px; padding: 0 6px; line-height: 1.7; }
   .newslist b { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  /* 一番新しいお知らせを大きく */
+  .newslist li.is-latest a { flex-wrap: wrap; gap: 4px 12px; align-items: center; background: var(--panel); border-top: 3px solid var(--gold); padding: 20px 20px 22px; }
+  .newslist li.is-latest b { flex-basis: 100%; font-size: 19px; line-height: 1.6; white-space: normal; }
+  .newslist li.is-latest .arrow { display: none; }
+  .newslist .sum { flex-basis: 100%; font-size: 13px; line-height: 1.8; color: var(--body-c); }
+  .newslist .new-badge { flex: none; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: var(--paper); background: var(--gold); border-radius: 3px; padding: 0 7px; line-height: 1.7; }
+  .newslist li.is-hidden { display: none; }
+  .more-btn { background: none; border: 1px solid var(--gold); color: var(--gold); border-radius: 999px; padding: 6px 22px; font: inherit; font-size: 12px; letter-spacing: .1em; cursor: pointer; transition: background .15s, color .15s; }
+  .more-btn:hover { background: var(--gold); color: var(--paper); }
+  .more-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
   /* もくじ：スクロールしなくてもサイト全体が見わたせる */
   .map { padding: 36px 0 0; }
@@ -150,6 +160,9 @@
     .newslist time { font-size: 11px; }
     .newslist b { flex-basis: 100%; font-size: 14px; letter-spacing: .02em; line-height: 1.6; }
     .newslist .arrow { display: none; }
+    .newslist li.is-latest a { gap: 2px 8px; padding: 14px 14px 16px; }
+    .newslist li.is-latest b { font-size: 16.5px; }
+    .newslist .sum { font-size: 12.5px; line-height: 1.75; }
     main { padding-top: 40px; }
   }
 
@@ -219,11 +232,23 @@
   <div class="wrap">
     <section class="news rise d2">
       <p class="sec-label">新着</p>
-      <ul class="newslist">
-        <li><a href="/blog/shigoto-igai-de/"><time>2026.09.28</time><span class="tag">ブログ</span><b>仕事で使えないなら、暮らしで使ってみよう</b><span class="arrow">→</span></a></li>
-        <li><a href="/blog/seikyusho-claude/"><time>2026.09.28</time><span class="tag">ブログ</span><b>請求書の1年分を、Claudeに見直してもらった話</b><span class="arrow">→</span></a></li>
-        <li><a href="/blog/waapuro-kara-ai/"><time>2026.09.27</time><span class="tag">ブログ</span><b>ワープロ好きだった私が、Claude Codeにハマった理由</b><span class="arrow">→</span></a></li>
-        <li><a href="/blog/onsei-tsukaiwake/"><time>2026.09.27</time><span class="tag">ブログ</span><b>打つのをやめて、しゃべり始めた。Chat・Cowork・Codeの使い分け</b><span class="arrow">→</span></a></li>
+      <ul class="newslist" data-show="5">
+        <li class="is-latest"><a href="/blog/shigoto-igai-de/"><time datetime="2026-09-28">2026.09.28</time><span class="tag">ブログ</span><b>仕事で使えないなら、暮らしで使ってみよう</b><span class="arrow">→</span><span class="sum">会社の規定でClaudeを仕事に使えない人へ。だったら暮らしの中で試してみませんか。4年分たまった料理教室のレシピをサイトにする話です。マネージャー目線のブログ、5本目です。</span></a></li>
+        <li><a href="/blog/seikyusho-claude/"><time datetime="2026-09-28">2026.09.28</time><span class="tag">ブログ</span><b>請求書の1年分を、Claudeに見直してもらった話</b><span class="arrow">→</span></a></li>
+        <li><a href="/blog/waapuro-kara-ai/"><time datetime="2026-09-27">2026.09.27</time><span class="tag">ブログ</span><b>ワープロ好きだった私が、Claude Codeにハマった理由</b><span class="arrow">→</span></a></li>
+        <li><a href="/blog/onsei-tsukaiwake/"><time datetime="2026-09-27">2026.09.27</time><span class="tag">ブログ</span><b>打つのをやめて、しゃべり始めた。Chat・Cowork・Codeの使い分け</b><span class="arrow">→</span></a></li>
+        <li><a href="/blog/claude-code-hajimari/"><time datetime="2026-09-27">2026.09.27</time><span class="tag">ブログ</span><b>エンジニアじゃない私が、Claude Codeと「しつこく」付き合って1か月</b><span class="arrow">→</span></a></li>
+        <li><a href="/claudecode/"><time datetime="2026-09-27">2026.09.27</time><b>柔術道場のClaude Code</b><span class="arrow">→</span></a></li>
+        <li><a href="/kondate/"><time datetime="2026-09-27">2026.09.27</time><b>良蔵の献立</b><span class="arrow">→</span></a></li>
+        <li><a href="/toriatsukai/"><time datetime="2026-09-18">2026.09.18</time><b>良蔵取扱説明書</b><span class="arrow">→</span></a></li>
+        <li><a href="/ryoshusho/"><time datetime="2026-09-17">2026.09.17</time><b>領収書のデジタル化</b><span class="arrow">→</span></a></li>
+        <li><a href="/hojokin/"><time datetime="2026-09-17">2026.09.17</time><b>道場が使える補助金</b><span class="arrow">→</span></a></li>
+        <li><a href="/muratake/"><time datetime="2026-09-02">2026.09.02</time><b>村田家のAmazon履歴</b><span class="arrow">→</span></a></li>
+        <li><a href="/goroku/"><time datetime="2026-09-02">2026.09.02</time><b>良蔵語録</b><span class="arrow">→</span></a></li>
+        <li><a href="/tournament/"><time datetime="2026-08-31">2026.08.31</time><b>大会出場スケジュール</b><span class="arrow">→</span></a></li>
+        <li><a href="/hajimete/"><time datetime="2026-08-28">2026.08.28</time><b>はじめての大会ガイド</b><span class="arrow">→</span></a></li>
+        <li><a href="/dojo/"><time datetime="2026-08-28">2026.08.28</time><b>全国柔術道場ガイド</b><span class="arrow">→</span></a></li>
+        <li><a href="/shift/"><time datetime="2026-08-28">2026.08.28</time><b>月次シフト表</b><span class="arrow">→</span></a></li>
       </ul>
       <p class="newsfoot">
         <a class="feedlink" href="/feed.xml">RSSで受け取る</a>
@@ -231,6 +256,38 @@
     </section>
   </div>
 <!-- news:end -->
+<script>
+// 新着欄：3日以内にNEW、最初は data-show 件だけ見せて残りは「もっと見る」
+(function () {
+  var NEW_DAYS = 3;
+  var list = document.querySelector('.newslist');
+  if (!list) return;
+  var show = +list.getAttribute('data-show') || 5;
+  var items = Array.prototype.slice.call(list.children);
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  items.forEach(function (li, i) {
+    var t = li.querySelector('time');
+    var d = new Date((t ? t.getAttribute('datetime') : '') + 'T00:00:00');
+    var days = (today - d) / 86400000;
+    if (days >= 0 && days < NEW_DAYS) {
+      var b = document.createElement('span');
+      b.className = 'new-badge'; b.textContent = 'NEW';
+      (li.querySelector('.tag') || t).after(b);
+    }
+    if (i >= show) li.classList.add('is-hidden');
+  });
+  if (items.length > show) {
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'more-btn'; btn.textContent = 'もっと見る';
+    btn.onclick = function () {
+      items.forEach(function (li) { li.classList.remove('is-hidden'); });
+      btn.remove();
+    };
+    var foot = document.querySelector('.newsfoot');
+    foot ? foot.prepend(btn) : list.after(btn);
+  }
+})();
+</script>
 
 <main>
   <div class="wrap">
