@@ -3,6 +3,13 @@
   "line_url": "",
   "entries": [
     {
+      "id": "hajimekata",
+      "date": "2026-09-29",
+      "title": "Claudeの始め方",
+      "url": "/hajimekata/",
+      "summary": "インストールでつまずいた私が、1か月でやってきたこと。Chat・Cowork・Codeの使い分けから、始める順番、実際につまずいたところ、最初の一言まで。これから始める方へ。"
+    },
+    {
       "id": "salon",
       "date": "2026-09-29",
       "title": "サロンの顧客管理",
