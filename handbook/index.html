@@ -1,30 +1,90 @@
 <!doctype html><html lang="ja"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><title>スタッフハンドブック</title>
-<style>body{font-family:"Hiragino Sans",sans-serif;background:#faf8f2;color:#17140d;
-display:flex;align-items:center;justify-content:center;min-height:90vh;margin:0}
-.box{text-align:center;padding:24px}.box h1{font-size:18px;font-weight:600}
-.box p{font-size:13px;color:#948c74}</style>
-</head><body>
-<div class="box" id="msg"><h1>読み込み中…</h1></div>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap">
+<style>
+:root{color-scheme:light dark;
+  --paper:#faf8f2;--card:#fff;--line:#e7e1d1;--ink:#17140d;--body:#4d4737;--faint:#948c74;
+  --gold:#a3801a;--wash:#fdf8e9;--alert:#a8241a}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#14120e;--card:#1c1a15;--line:#312d24;--ink:#f0ebe0;--body:#cdc6b6;--faint:#968e7d;
+  --gold:#d4ae5c;--wash:#251f11;--alert:#e8776a}}
+*{box-sizing:border-box}
+body{margin:0;min-height:100svh;display:flex;align-items:center;justify-content:center;
+  padding:24px;background:var(--paper);color:var(--body);
+  font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",sans-serif;line-height:1.85}
+.card{width:100%;max-width:392px;background:var(--card);border:1px solid var(--line);
+  border-radius:6px;padding:30px 28px 26px}
+.eyebrow{font-size:11px;letter-spacing:.24em;color:var(--gold);margin:0 0 8px}
+h1{font-family:"Shippori Mincho","Hiragino Mincho ProN",serif;font-weight:700;color:var(--ink);
+  font-size:21px;letter-spacing:.06em;margin:0 0 6px;line-height:1.45}
+p.lead{font-size:13.5px;color:var(--faint);margin:0 0 20px}
+label{display:block;font-size:12.5px;color:var(--ink);margin-bottom:6px;font-weight:500}
+input[type=password]{width:100%;padding:11px 12px;font-size:16px;font-family:inherit;
+  color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:4px}
+input[type=password]:focus{outline:2px solid var(--gold);outline-offset:1px}
+.row{display:flex;align-items:center;gap:7px;margin:13px 0 18px;font-size:12.5px;color:var(--faint)}
+button{width:100%;padding:11px;font-size:15px;font-family:inherit;font-weight:500;
+  color:#fff;background:var(--gold);border:0;border-radius:4px;cursor:pointer}
+button:hover{filter:brightness(1.08)}
+button:disabled{opacity:.55;cursor:default}
+.msg{font-size:13px;margin:14px 0 0;min-height:1.2em}
+.msg.err{color:var(--alert)}
+.foot{font-size:11.5px;color:var(--faint);margin:18px 0 0;padding-top:14px;
+  border-top:1px solid var(--line)}
+</style></head><body>
+<form class="card" id="f">
+  <p class="eyebrow">BUTTI ON LINE / SJJJF</p>
+  <h1>スタッフハンドブック</h1>
+  <p class="lead">スタッフ専用のページです。合言葉を入れてください。</p>
+  <label for="pw">合言葉</label>
+  <input type="password" id="pw" autocomplete="current-password" autocapitalize="off"
+    autocorrect="off" spellcheck="false" required>
+  <div class="row"><input type="checkbox" id="save" checked><label for="save"
+    style="margin:0;font-weight:400;color:var(--faint)">この端末に記憶する</label></div>
+  <button type="submit" id="go">開く</button>
+  <p class="msg" id="msg" role="status"></p>
+  <p class="foot">合言葉が分からないときは事務局へ。共有のパソコンでは「この端末に記憶する」のチェックを外してください。</p>
+</form>
 <script>
-(async function(){
-  const m = location.hash.match(/k=([A-Za-z0-9_-]+)/);
-  const show = (t, s) => { document.getElementById('msg').innerHTML = '<h1>'+t+'</h1><p>'+s+'</p>'; };
-  if(!m){ show('このページは鍵付きリンク専用です', '共有された正しいURL(#k=〜付き)から開いてください'); return; }
-  try{
-    let ks = m[1].replace(/-/g,'+').replace(/_/g,'/');
-    while(ks.length % 4) ks += '=';
-    const kb = Uint8Array.from(atob(ks), c=>c.charCodeAt(0));
-    const key = await crypto.subtle.importKey('raw', kb, 'AES-GCM', false, ['decrypt']);
-    const res = await fetch('data.enc?' + Date.now(), {cache:'no-store'});
-    if(!res.ok) throw new Error('fetch ' + res.status);
-    const buf = new Uint8Array(await res.arrayBuffer());
-    const plain = await crypto.subtle.decrypt({name:'AES-GCM', iv: buf.slice(0,12)}, key, buf.slice(12));
-    const html = new TextDecoder().decode(plain);
-    document.open(); document.write(html); document.close();
-  }catch(e){
-    show('開けませんでした', 'リンクが正しいか確認してください（' + e.message + '）');
+(function(){
+  var ITER = 310000;
+  var f=document.getElementById('f'), pw=document.getElementById('pw'),
+      go=document.getElementById('go'), msg=document.getElementById('msg'),
+      save=document.getElementById('save');
+  function say(t,err){ msg.textContent=t; msg.className='msg'+(err?' err':''); }
+
+  async function open_(pass, quiet){
+    go.disabled=true; say('開いています…',false);
+    try{
+      var res = await fetch('data.enc?'+Date.now(), {cache:'no-store'});
+      if(!res.ok) throw new Error('データを読み込めません ('+res.status+')');
+      var buf = new Uint8Array(await res.arrayBuffer());
+      var salt = buf.slice(0,16), iv = buf.slice(16,28), ct = buf.slice(28);
+      var base = await crypto.subtle.importKey('raw', new TextEncoder().encode(pass),
+        'PBKDF2', false, ['deriveKey']);
+      var key = await crypto.subtle.deriveKey(
+        {name:'PBKDF2', salt:salt, iterations:ITER, hash:'SHA-256'},
+        base, {name:'AES-GCM', length:256}, false, ['decrypt']);
+      var plain = await crypto.subtle.decrypt({name:'AES-GCM', iv:iv}, key, ct);
+      if(save.checked){ try{ localStorage.setItem('hb', pass); }catch(e){} }
+      else { try{ localStorage.removeItem('hb'); }catch(e){} }
+      var html = new TextDecoder().decode(plain);
+      document.open(); document.write(html); document.close();
+    }catch(e){
+      go.disabled=false;
+      try{ localStorage.removeItem('hb'); }catch(e2){}
+      if(quiet){ say('',false); }
+      else { say('合言葉が違うようです。もう一度お試しください。', true); pw.select(); }
+    }
   }
+
+  f.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if(pw.value) open_(pw.value, false);
+  });
+
+  var saved=null; try{ saved=localStorage.getItem('hb'); }catch(e){}
+  if(saved){ pw.value=saved; open_(saved, true); } else { pw.focus(); }
 })();
 </script></body></html>
