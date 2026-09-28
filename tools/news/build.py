@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 SITE = "https://jiujitsu.co.jp"
 JST = timezone(timedelta(hours=9))
-TOP_N = 4  # トップページに出す件数
+SHOW_N = 5  # トップページで最初に見せる件数（残りは「もっと見る」）
 
 START = "<!-- news:start -->"
 END = "<!-- news:end -->"
@@ -80,15 +80,18 @@ def split_tag(title):
 
 def build_block(entries, line_url=""):
     rows = []
-    for e in entries[:TOP_N]:
+    for i, e in enumerate(entries):
         y, m, d = e["date"].split("-")
         tag, title = split_tag(e["title"])
         tag_html = f'<span class="tag">{html.escape(tag)}</span>' if tag else ""
+        # 一番新しいものは大きく出して、説明文もつける
+        li = '<li class="is-latest">' if i == 0 else "<li>"
+        sum_html = f'<span class="sum">{html.escape(e["summary"])}</span>' if i == 0 else ""
         rows.append(
-            f'        <li><a href="{e["url"]}">'
-            f"<time>{y}.{m}.{d}</time>{tag_html}"
+            f'        {li}<a href="{e["url"]}">'
+            f'<time datetime="{e["date"]}">{y}.{m}.{d}</time>{tag_html}'
             f'<b>{html.escape(title)}</b>'
-            f'<span class="arrow">→</span></a></li>'
+            f'<span class="arrow">→</span>{sum_html}</a></li>'
         )
     follow = ""
     if line_url:
@@ -101,7 +104,7 @@ def build_block(entries, line_url=""):
         '  <div class="wrap">\n'
         '    <section class="news rise d2">\n'
         '      <p class="sec-label">新着</p>\n'
-        '      <ul class="newslist">\n'
+        f'      <ul class="newslist" data-show="{SHOW_N}">\n'
         + "\n".join(rows)
         + "\n      </ul>\n"
         '      <p class="newsfoot">\n'
