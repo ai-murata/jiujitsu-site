@@ -66,6 +66,11 @@ check("リンクが絶対URL", all(
     for x in root.findall(ns + "entry")))
 check("idが重複しない", len({x.find(ns + "id").text for x in root.findall(ns + "entry")}) == len(es))
 
+print("見出しの頭書き")
+check("「ブログ：」をタグに分ける", build.split_tag("ブログ：見出し") == ("ブログ", "見出し"))
+check("頭書きが無ければそのまま", build.split_tag("見出し") == ("", "見出し"))
+check("長い前半はタグにしない", build.split_tag("とても長い前置きの文章：後半") == ("", "とても長い前置きの文章：後半"))
+
 print("トップページへの差し込み")
 block = build.build_block(es, "")
 check("LINEのURLが空ならボタンを出さない", "linebtn" not in block)
