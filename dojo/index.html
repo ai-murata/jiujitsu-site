@@ -709,6 +709,11 @@ function render(){
     </article>`;
   }).join("");
 }
+// サイト内検索から ?q=… で来たら、その言葉で絞り込んでおく
+try {
+  const q0 = new URLSearchParams(location.search).get("q");
+  if (q0) { $("q").value = q0; q = q0.trim().toLowerCase(); }
+} catch (e) {}
 render();
 
 </script>

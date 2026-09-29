@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>サイト内検索｜Jiu Labo</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="jiujitsu.co.jp（Jiu Labo）のページ・ブログ・柔術ニュース・道場ガイド・補助金を、まとめて検索できます。">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mark: rgba(201,162,39,.28);
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 22px 80px; }
+
+  header { text-align: center; padding: 56px 20px 32px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { color: inherit; text-decoration: none; }
+  .brand a:hover { text-decoration: underline; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(26px, 6vw, 36px); color: var(--ink); letter-spacing: .2em; line-height: 1.4; margin: 10px 0 0; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  .sbox { display: flex; gap: 8px; margin: 40px 0 0; }
+  .sbox input { flex: 1; min-width: 0; font: inherit; font-size: 16px; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 11px 20px; outline: none; -webkit-appearance: none; appearance: none; }
+  .sbox input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,162,39,.18); }
+  .sbox button { flex: none; font: inherit; font-size: 14px; font-weight: 700; letter-spacing: .1em; color: #fff; background: var(--gold); border: 0; border-radius: 999px; padding: 0 22px; cursor: pointer; }
+  .sbox button:hover { background: #8d6e14; }
+  .hint { font-size: 12px; color: var(--faint); letter-spacing: .04em; margin: 10px 4px 0; }
+  .hint button { font: inherit; color: var(--gold); background: none; border: 0; padding: 0 5px; cursor: pointer; }
+  .hint button:hover { text-decoration: underline; }
+
+  .status { font-size: 13px; color: var(--faint); letter-spacing: .06em; margin: 32px 0 0; min-height: 1.9em; }
+  .grp { margin-top: 28px; }
+  .grp-label { font-family: var(--mincho); font-size: 13px; letter-spacing: .26em; color: var(--gold); font-weight: 700; margin: 0 0 6px; display: flex; align-items: center; gap: 14px; }
+  .grp-label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .grp-label small { font-family: var(--gothic); font-size: 11px; letter-spacing: .08em; color: var(--faint); font-weight: 500; order: 2; }
+  .results { list-style: none; margin: 0; padding: 0; }
+  .results li { border-bottom: 1px solid var(--line); }
+  .results a { display: block; padding: 16px 4px; text-decoration: none; color: inherit; }
+  .results a:hover .rt { color: var(--gold); }
+  .results a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .rt { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .04em; line-height: 1.6; display: block; transition: color .15s; }
+  .ru { font-size: 11.5px; color: var(--faint); letter-spacing: .04em; display: block; margin-top: 2px; }
+  .rs { font-size: 13px; line-height: 1.85; display: block; margin-top: 6px; overflow-wrap: anywhere; }
+  mark { background: var(--mark); color: var(--ink); border-radius: 2px; padding: 0 1px; }
+  .more { font: inherit; font-size: 12.5px; letter-spacing: .08em; color: var(--gold); background: none; border: 1px solid rgba(163,128,26,.35); border-radius: 999px; padding: 5px 18px; margin: 14px 0 0; cursor: pointer; }
+  .more:hover { border-color: var(--gold); }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 560px) {
+    header { padding: 36px 16px 24px; }
+    .wrap { padding: 0 16px 64px; }
+    .sbox { margin-top: 28px; }
+    .sbox button { padding: 0 16px; }
+  }
+</style>
+
+<header>
+  <p class="brand"><a href="/">JIU LABO ・ JIUJITSU.CO.JP</a></p>
+  <h1>サイト内検索</h1>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <form class="sbox" role="search" action="/search/" method="get">
+    <input id="q" name="q" type="search" placeholder="キーワードを入れてください" aria-label="サイト内を検索" autocomplete="off" enterkeyhint="search">
+    <button type="submit">検索</button>
+  </form>
+  <p class="hint" id="hint">スペースで区切ると、すべての言葉をふくむページにしぼれます。
+    例：<button type="button">大会</button><button type="button">札幌</button><button type="button">Claude</button><button type="button">補助金</button><button type="button">良蔵</button>
+  </p>
+
+  <p class="status" id="status" role="status" aria-live="polite"></p>
+  <div id="out"></div>
+</div>
+
+<footer>
+  <a href="/">トップページへ戻る</a><br>
+  © 2026 BUTTI ON LINE Inc.
+</footer>
+
+<script>
+(function () {
+  var qEl = document.getElementById('q');
+  var out = document.getElementById('out');
+  var status = document.getElementById('status');
+  var PAGE_LIMIT = 30;   // ページの結果は最初この件数まで
+  var ITEM_LIMIT = 8;    // 道場・補助金などは最初この件数まで
+  var index = null;
+
+  // 検索用に文字をそろえる（長さは変えない：ハイライトの位置がずれないように）
+  //   全角英数 → 半角、大文字 → 小文字、カタカナ → ひらがな
+  function norm(s) {
+    var r = '';
+    for (var i = 0; i < s.length; i++) {
+      var c = s.charCodeAt(i);
+      if (c >= 0xFF01 && c <= 0xFF5E) c -= 0xFEE0;          // 全角英数記号
+      else if (c === 0x3000) c = 0x20;                         // 全角スペース
+      else if (c >= 0x30A1 && c <= 0x30F6) c -= 0x60;          // カタカナ → ひらがな
+      r += String.fromCharCode(c);
+    }
+    return r.toLowerCase();
+  }
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function terms(q) {
+    var seen = {};
+    return norm(q).split(/\s+/).filter(function (t) {
+      if (!t || seen[t]) return false;
+      return (seen[t] = true);
+    });
+  }
+  function count(hay, t) {
+    var n = 0, i = hay.indexOf(t);
+    while (i !== -1 && n < 20) { n++; i = hay.indexOf(t, i + t.length); }
+    return n;
+  }
+
+  // 原文 s の中で ts に当たるところに <mark> を付ける
+  function highlight(s, ts) {
+    var ns = norm(s), marks = [];
+    ts.forEach(function (t) {
+      var i = ns.indexOf(t);
+      while (i !== -1) { marks.push([i, i + t.length]); i = ns.indexOf(t, i + t.length); }
+    });
+    if (!marks.length) return esc(s);
+    marks.sort(function (a, b) { return a[0] - b[0]; });
+    var html = '', pos = 0;
+    marks.forEach(function (m) {
+      if (m[0] < pos) { if (m[1] > pos) { html += '<mark>' + esc(s.slice(pos, m[1])) + '</mark>'; pos = m[1]; } return; }
+      html += esc(s.slice(pos, m[0])) + '<mark>' + esc(s.slice(m[0], m[1])) + '</mark>';
+      pos = m[1];
+    });
+    return html + esc(s.slice(pos));
+  }
+
+  // 本文のうち、最初に言葉が出てくるあたりを抜き出す
+  function snippet(text, ntext, ts, fallback) {
+    var at = -1;
+    ts.forEach(function (t) { var i = ntext.indexOf(t); if (i !== -1 && (at === -1 || i < at)) at = i; });
+    if (at === -1) return highlight(fallback || text.slice(0, 110), ts);
+    var from = Math.max(0, at - 40), to = Math.min(text.length, at + 90);
+    return (from > 0 ? '…' : '') + highlight(text.slice(from, to), ts) + (to < text.length ? '…' : '');
+  }
+
+  function prepare(data) {
+    data.pages.forEach(function (p) {
+      p.nt = norm(p.title);
+      p.nd = norm(p.description || '');
+      p.nh = norm((p.headings || []).join(' '));
+      p.nx = norm(p.text || '');
+      (p.items || []).forEach(function (it) { it.nt = norm(it.t); it.ns = norm(it.s || ''); });
+    });
+    return data;
+  }
+
+  function search(q) {
+    var ts = terms(q);
+    var pages = [], groups = [];
+    if (!ts.length) return { ts: ts, pages: pages, groups: groups };
+    index.pages.forEach(function (p) {
+      var score = 0, ok = ts.every(function (t) {
+        var s = 0;
+        if (p.nt.indexOf(t) !== -1) s += 30;
+        if (p.nh.indexOf(t) !== -1) s += 10;
+        if (p.nd.indexOf(t) !== -1) s += 8;
+        s += Math.min(count(p.nx, t), 10);
+        score += s;
+        return s > 0;
+      });
+      if (ok) pages.push({ p: p, score: score });
+
+      if (p.items) {
+        var hits = [];
+        p.items.forEach(function (it) {
+          var sc = 0, hit = ts.every(function (t) {
+            var s = (it.nt.indexOf(t) !== -1 ? 10 : 0) + (it.ns.indexOf(t) !== -1 ? 3 : 0);
+            sc += s;
+            return s > 0;
+          });
+          if (hit) hits.push({ it: it, score: sc });
+        });
+        if (hits.length) {
+          hits.sort(function (a, b) { return b.score - a.score; });
+          groups.push({ page: p, hits: hits });
+        }
+      }
+    });
+    pages.sort(function (a, b) { return b.score - a.score || a.p.url.localeCompare(b.p.url); });
+    return { ts: ts, pages: pages, groups: groups };
+  }
+
+  function pageRow(r, ts) {
+    var p = r.p;
+    return '<li><a href="' + esc(p.url) + '">' +
+      '<span class="rt">' + highlight(p.title, ts) + '</span>' +
+      '<span class="ru">jiujitsu.co.jp' + esc(p.url) + '</span>' +
+      '<span class="rs">' + snippet(p.text || '', p.nx, ts, p.description) + '</span></a></li>';
+  }
+  function itemRow(page, h, ts) {
+    var it = h.it;
+    return '<li><a href="' + esc(page.url) + '?q=' + encodeURIComponent(it.q || it.t) + '">' +
+      '<span class="rt">' + highlight(it.t, ts) + '</span>' +
+      (it.s ? '<span class="rs">' + highlight(it.s, ts) + '</span>' : '') + '</a></li>';
+  }
+  function groupName(p) {
+    return p.title.split(/[｜|—]/)[0].trim();
+  }
+
+  function listHtml(rows, limit, render, key) {
+    var html = '<ul class="results">' + rows.slice(0, limit).map(render).join('') + '</ul>';
+    if (rows.length > limit) {
+      html += '<button type="button" class="more" data-key="' + key + '">残り ' + (rows.length - limit) + ' 件も見る</button>';
+    }
+    return html;
+  }
+
+  var last = null;
+  function show(q, expanded) {
+    expanded = expanded || {};
+    var res = search(q);
+    last = { q: q, res: res, expanded: expanded };
+    if (!res.ts.length) { status.textContent = ''; out.innerHTML = ''; return; }
+    var total = res.pages.length + res.groups.reduce(function (n, g) { return n + g.hits.length; }, 0);
+    if (!total) {
+      status.textContent = '「' + q.trim() + '」に当てはまるものは見つかりませんでした。言葉を短くするか、別の言い方で試してみてください。';
+      out.innerHTML = '';
+      return;
+    }
+    status.textContent = '「' + q.trim() + '」の検索結果：' + total + ' 件';
+    var html = '';
+    if (res.pages.length) {
+      html += '<section class="grp"><p class="grp-label">ページ<small>' + res.pages.length + ' 件</small></p>' +
+        listHtml(res.pages, expanded.pages ? Infinity : PAGE_LIMIT, function (r) { return pageRow(r, res.ts); }, 'pages') +
+        '</section>';
+    }
+    res.groups.forEach(function (g) {
+      var key = g.page.url;
+      html += '<section class="grp"><p class="grp-label">' + esc(groupName(g.page)) + '<small>' + g.hits.length + ' 件</small></p>' +
+        listHtml(g.hits, expanded[key] ? Infinity : ITEM_LIMIT, function (h) { return itemRow(g.page, h, res.ts); }, key) +
+        '</section>';
+    });
+    out.innerHTML = html;
+  }
+
+  out.addEventListener('click', function (e) {
+    var b = e.target.closest('.more');
+    if (!b || !last) return;
+    last.expanded[b.getAttribute('data-key')] = true;
+    show(last.q, last.expanded);
+  });
+
+  function setUrl(q) {
+    try {
+      var u = q.trim() ? '?q=' + encodeURIComponent(q.trim()) : location.pathname;
+      history.replaceState(null, '', u);
+    } catch (e) {}
+  }
+  function run() {
+    if (!index) return;
+    show(qEl.value);
+    setUrl(qEl.value);
+  }
+
+  var t;
+  qEl.addEventListener('input', function () { clearTimeout(t); t = setTimeout(run, 150); });
+  document.querySelector('.sbox').addEventListener('submit', function (e) { e.preventDefault(); clearTimeout(t); run(); qEl.blur(); });
+  document.getElementById('hint').addEventListener('click', function (e) {
+    if (e.target.tagName !== 'BUTTON') return;
+    qEl.value = e.target.textContent;
+    run();
+  });
+
+  var q0 = '';
+  try { q0 = new URLSearchParams(location.search).get('q') || ''; } catch (e) {}
+  qEl.value = q0;
+  if (!q0) qEl.focus();
+  status.textContent = q0 ? '読み込み中…' : '';
+
+  fetch('/search/index.json', { cache: 'no-cache' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (data) { index = prepare(data); run(); })
+    .catch(function () { status.textContent = '検索の準備ができませんでした。ページを読み込み直してみてください。'; });
+})();
+</script>
+</html>
