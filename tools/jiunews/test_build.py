@@ -176,6 +176,29 @@ class EndToEndTest(unittest.TestCase):
             # 同じ日にもう一度走らせても、号は作り直さない
             self.assertEqual(build.main(args), 0)
 
+    def test_collect_then_apply(self):
+        """ルーティン用の2段階：候補を書き出す → Claude が result.json を書く → 号にする。"""
+        with tempfile.TemporaryDirectory() as tmp, tempfile.TemporaryDirectory() as work:
+            base = ["--root", tmp, "--fixture-dir", str(FIX), "--date", "2026-09-29"]
+            self.assertEqual(build.main(base + ["--collect-only", work]), 0)
+            prompt = (pathlib.Path(work) / "prompt.md").read_text(encoding="utf-8")
+            self.assertIn("result.json", prompt)
+            self.assertIn('"additionalProperties": false', prompt)
+            cands = json.loads((pathlib.Path(work) / "candidates.json").read_text(encoding="utf-8"))["candidates"]
+            self.assertFalse((pathlib.Path(tmp) / "data/jiunews/editions").exists(), "書き出しだけでは号を作らない")
+
+            pick = cands[0]
+            result = {"lead": "今日のニュースです。", "items": [
+                {"id": pick["id"], "category": "大会結果", "title": "見出し", "summary": "要約です。", "point": ""},
+            ]}
+            (pathlib.Path(work) / "result.json").write_text(json.dumps(result, ensure_ascii=False), encoding="utf-8")
+            self.assertEqual(build.main(["--root", tmp, "--date", "2026-09-29", "--apply", work]), 0)
+            ed = json.loads((pathlib.Path(tmp) / "data/jiunews/editions/2026-09-29.json").read_text(encoding="utf-8"))
+            self.assertEqual([i["link"] for i in ed["items"]], [pick["link"]])
+            self.assertTrue((pathlib.Path(tmp) / "jiunews/2026-09-29/index.html").exists())
+            seen = json.loads((pathlib.Path(tmp) / "data/jiunews/seen.json").read_text(encoding="utf-8"))["seen"]
+            self.assertEqual(len(seen), len(cands), "載せなかった候補も既出として覚える")
+
     def test_prompt_contains_candidates_and_schema_is_strict(self):
         cands = parse("2-bjjee.xml", "bjjee")
         system, user = build.build_prompt(cands, {"max_items_jp": 5, "max_items_intl": 6})
