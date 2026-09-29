@@ -1,87 +1,101 @@
-"""JBJJF の公開エントリーリスト（2023〜2026年）を集め、集計用のレコードを作る。
+"""JBJJF の公開エントリーリスト（2023〜2026年）を集めて集計する。
 
-出力（out/ 以下、Actions の artifact としてだけ保存し、リポジトリには入れない）:
-  tournaments.json : 大会ごとの URL・タイトル・エントリーリスト URL
-  records.jsonl    : 1エントリー1行。氏名はハッシュ化し、元の氏名は出力しない
-ログには件数などの集計だけを出す。
+1. Wayback Machine の CDX で jbjjf.com/entrylist/ の URL を列挙
+2. 各 entry_list2.htm（階級別の一覧）を jbjjf.com から直接取得
+3. 帯・年代・男女・年別の人数などを集計し、集計値だけを JSON で出力する
+
+氏名はプログラムの中で名寄せ（同一人物の判定）に使うだけで、出力には一切含めない。
+道場名は公開されている団体名なので、道場ごとの件数は出力する。
 """
-import hashlib, html as H, json, os, re, sys, time, unicodedata, urllib.parse, urllib.request
+import collections, hashlib, html as H, json, re, sys, time, unicodedata, urllib.request
 
-UA = {"User-Agent": "Mozilla/5.0 (jiujitsu.co.jp data research; contact info@jiujitsu.co.jp)"}
-CAL = ["https://www.jbjjf.com/calendar2016/old2023/", "https://www.jbjjf.com/calendar2016/old2024/",
-       "https://www.jbjjf.com/calendar2016/old2025/", "https://www.jbjjf.com/upcoming-events/calendar2016/"]
-OUT = sys.argv[1] if len(sys.argv) > 1 else "out"
-SALT = os.environ.get("NAME_SALT", "jiulabo")
+UA = {"User-Agent": "Mozilla/5.0 (jiujitsu.co.jp data research)"}
+BELTS = ["White", "Blue", "Purple", "Brown", "Black"]
+KIDBELTS = ["Grey", "Gray", "Yellow", "Orange", "Green"]
 
-def get(u, tries=3):
+def get(u, t=60, tries=4):
     for i in range(tries):
         try:
-            with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=40) as r:
-                return r.geturl(), r.read()
+            with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=t) as r:
+                return r.read()
         except Exception as e:
-            err = e; time.sleep(2 * (i + 1))
+            err = e; time.sleep(min(60, 10 * (i + 1)))
     raise err
 
 def dec(b):
-    for enc in ("utf-8", "cp932", "euc_jp"):
+    for enc in ("cp932", "utf-8", "euc_jp"):
         try: return b.decode(enc)
         except UnicodeDecodeError: pass
-    return b.decode("utf-8", "replace")
+    return b.decode("cp932", "replace")
 
 def text(x): return H.unescape(re.sub(r"<[^>]+>", " ", x)).replace("\xa0", " ").strip()
 
-def links(url):
-    f, b = get(url); t = dec(b)
-    return f, t, [(urllib.parse.urljoin(f, h), text(x)) for h, x in re.findall(r'<a[^>]+href="([^"#]+)"[^>]*>(.*?)</a>', t, re.S)]
+cdx = json.loads(get("https://web.archive.org/cdx/search/cdx?url=jbjjf.com/entrylist/*&output=json&fl=original&collapse=urlkey&limit=20000", 180, 8))[1:]
+urls = sorted({re.sub(r"^https?://(www\.)?", "https://www.", r[0]).split("?")[0] for r in cdx})
+lists = [u for u in urls if re.search(r"/entrylist/20(2[3-6])/[^/]+/entry_list2\.htm$", u)]
+print("entry lists 2023-2026:", len(lists), file=sys.stderr)
 
-os.makedirs(OUT, exist_ok=True)
-posts = {}
-for c in CAL:
-    try: _, _, ls = links(c)
-    except Exception as e: print("ERR calendar", c, e); continue
-    n = 0
-    for u, x in ls:
-        if re.match(r"https://www\.jbjjf\.com/20(2[3-6])/\d\d/\d+/?$", u) and u not in posts:
-            posts[u] = x; n += 1
-    print(f"calendar {c}: {n} posts")
-print("posts total", len(posts))
+def tour_code(u):  # 日別リスト（xx_1008 など）をまとめた大会コード
+    c = u.split("/entrylist/")[1].split("/")[1]
+    return re.sub(r"_\d{2,4}$", "", c)
 
-tours, lists = [], {}
-for u, x in posts.items():
-    time.sleep(0.4)
-    try: f, t, ls = links(u)
-    except Exception as e: print("ERR post", u, e); continue
-    title = re.search(r"<title>(.*?)</title>", t, re.S)
-    title = text(title.group(1)).split("|")[0].strip() if title else x
-    els = sorted({l for l, _ in ls if re.search(r"/entrylist/20\d\d/[^/]+/entry_list2\.htm$", l)})
-    tours.append({"post": u, "title": title, "lists": els})
-    for l in els: lists[l] = title
-print("tournaments", len(tours), "with lists", sum(1 for t in tours if t["lists"]), "lists", len(lists))
+rows, failed = [], []
+for u in lists:
+    time.sleep(0.3)
+    try: t = dec(get(u))
+    except Exception as e: failed.append(u); continue
+    div = None
+    for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", t, re.S | re.I):
+        cells = [text(c) for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S | re.I)]
+        if len(cells) == 1 and re.search(r"Total:\s*\d+", cells[0]):
+            div = cells[0]; continue
+        if len(cells) >= 2 and div and cells[0]:
+            m = re.search(r"[)）]\s+(.*?)\s*\(Total", div)
+            nm = re.sub(r"\s+", "", unicodedata.normalize("NFKC", cells[0])).lower()
+            rows.append({"y": int(u.split("/entrylist/")[1][:4]), "code": tour_code(u), "ja": div.split("（")[0].strip(),
+                         "en": (m.group(1) if m else ""), "who": hashlib.sha256(nm.encode()).hexdigest()[:16],
+                         "ac": unicodedata.normalize("NFKC", cells[1]).strip()})
+print("rows", len(rows), "failed", len(failed), file=sys.stderr)
 
-def h(name):
-    n = re.sub(r"\s+", "", unicodedata.normalize("NFKC", name)).lower()
-    return hashlib.sha256((SALT + n).encode()).hexdigest()[:16]
+def belt(r):
+    for b in BELTS + KIDBELTS:
+        if re.search(rf"\b{b}\b", r["en"], re.I): return "Gray" if b == "Grey" else b
+    for ja, b in [("白帯", "White"), ("青帯", "Blue"), ("紫帯", "Purple"), ("茶帯", "Brown"), ("黒帯", "Black")]:
+        if ja in r["ja"]: return b
+    return "?"
+def group(r):
+    e = r["en"].lower()
+    if e.startswith("master") or "マスター" in r["ja"]: return "master"
+    if e.startswith("adult") or "アダルト" in r["ja"]: return "adult"
+    if e.startswith("juvenile") or "ジュブナイル" in r["ja"]: return "juvenile"
+    return "kids"
+def female(r): return "女子" in r["ja"] or "female" in r["en"].lower() or "women" in r["en"].lower()
+def openclass(r): return "open class" in r["en"].lower() or "無差別" in r["ja"] or "オープンクラス" in r["ja"]
 
-recs, latin = [], 0
-with open(f"{OUT}/records.jsonl", "w", encoding="utf-8") as out:
-    for l, title in lists.items():
-        time.sleep(0.4)
-        try: _, b = get(l)
-        except Exception as e: print("ERR list", l, e); continue
-        t = dec(b)
-        stamp = re.search(r"(20\d\d)/(\d+)/(\d+)\s+\d\d:\d\d", t)
-        div = None; n = 0
-        for row in re.findall(r"<tr[^>]*>(.*?)</tr>", t, re.S | re.I):
-            cells = [text(c) for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", row, re.S | re.I)]
-            if len(cells) == 1 and re.search(r"Total:\s*\d+", cells[0]):
-                div = cells[0]; continue
-            if len(cells) >= 2 and div and cells[0]:
-                if re.search(r"[A-Za-z]{3}", cells[0]): latin += 1
-                m = re.search(r"\)\s+(.*?)\s*\(Total", div)
-                out.write(json.dumps({"list": l, "title": title, "year": int(l.split("/entrylist/")[1][:4]),
-                                      "div_ja": div.split("（")[0].strip(), "div_en": m.group(1) if m else "",
-                                      "open": "※" in row, "name": h(cells[0]), "academy": cells[1]}, ensure_ascii=False) + "\n")
-                n += 1
-        recs.append(n)
-json.dump(tours, open(f"{OUT}/tournaments.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-print("entries", sum(recs), "lists parsed", len(recs), "rows with latin names", latin)
+W = [r for r in rows if not openclass(r)]
+out = {"lists": len(lists), "failed": len(failed), "rows_all": len(rows), "rows_no_openclass": len(W),
+       "div_prefix_sample": collections.Counter(" ".join(r["en"].split()[:2]) for r in W).most_common(40),
+       "female_detected": sum(female(r) for r in W), "years": {}}
+for y in sorted({r["y"] for r in W}):
+    g = [r for r in W if r["y"] == y]
+    ad = [r for r in g if group(r) != "kids"]
+    bc = collections.Counter(belt(r) for r in ad)
+    out["years"][y] = {
+        "tournaments": len({r["code"] for r in g}), "entries": len(g), "unique_people": len({r["who"] for r in g}),
+        "kids_entries": len(g) - len(ad), "adult_entries": len(ad),
+        "adult_belts": dict(bc), "adult_groups": dict(collections.Counter(group(r) for r in ad)),
+        "female_adult": sum(female(r) for r in ad), "female_kids": sum(female(r) for r in g if group(r) == "kids"),
+        "academies": len({r["ac"].lower() for r in g}),
+    }
+P = collections.defaultdict(set)
+for r in W: P[r["who"]].add(r["code"])
+out["people_total"] = len(P)
+out["people_2plus_tournaments"] = sum(len(v) >= 2 for v in P.values())
+yrs = collections.defaultdict(set)
+for r in W: yrs[r["who"]].add(r["y"])
+out["return_next_year"] = {y: round(sum((y + 1) in v for v in yrs.values() if y in v) / max(1, sum(y in v for v in yrs.values())) * 100, 1) for y in (2023, 2024, 2025)}
+out["academies_all"] = collections.Counter(r["ac"] for r in W).most_common()
+out["tournaments"] = collections.Counter(f'{r["y"]} {r["code"]}' for r in W).most_common()
+print("=====JSON=====")
+print(json.dumps(out, ensure_ascii=False))
+print("=====END=====")

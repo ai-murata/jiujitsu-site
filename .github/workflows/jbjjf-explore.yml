@@ -1,7 +1,7 @@
-name: JBJJF エントリーリストの収集
+name: JBJJF エントリーリストの集計
 
-# jbjjf.com の公開エントリーリスト（2023〜2026年）を集める一時ワークフロー。
-# 氏名はハッシュ化し、結果は artifact（7日で削除）にだけ置く。リポジトリには保存しない。
+# jbjjf.com の公開エントリーリスト（2023〜2026年）を集めて集計する一時ワークフロー。
+# 出力は集計値（人数・割合・道場名ごとの件数）だけ。氏名は出力しない。
 on:
   push:
     branches: [claude/focused-noether-xnruny]
@@ -13,14 +13,9 @@ permissions:
   contents: read
 
 jobs:
-  scrape:
+  aggregate:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-      - run: pip install -q openpyxl && python3 tools/jbjjf/explore3.py && mkdir -p out
-      - uses: actions/upload-artifact@v4
-        with:
-          name: jbjjf-entries
-          path: out/
-          retention-days: 7
+      - run: python3 tools/jbjjf/scrape.py
