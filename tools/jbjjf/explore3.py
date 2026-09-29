@@ -1,9 +1,15 @@
 """Wayback Machine の CDX から jbjjf.com/entrylist/ の URL 一覧を取り、今も開けるか確かめる。"""
 import json, re, urllib.request, collections
 UA = {"User-Agent": "Mozilla/5.0 (jiujitsu.co.jp data research)"}
-def get(u, t=90):
-    with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=t) as r: return r.status, r.read()
-_, b = get("http://web.archive.org/cdx/search/cdx?url=jbjjf.com/entrylist/*&output=json&fl=original,timestamp,statuscode&collapse=urlkey&limit=20000", 180)
+import time
+def get(u, t=90, tries=1):
+    for i in range(tries):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=t) as r: return r.status, r.read()
+        except Exception as e:
+            print("retry", i, e); err = e; time.sleep(min(60, 10 * (i + 1)))
+    raise err
+_, b = get("https://web.archive.org/cdx/search/cdx?url=jbjjf.com/entrylist/*&output=json&fl=original,timestamp,statuscode&collapse=urlkey&limit=20000", 180, 8)
 rows = json.loads(b)[1:]
 urls = sorted({re.sub(r"^https?://(www\.)?", "https://www.", r[0]).split("?")[0] for r in rows})
 print("cdx rows", len(rows), "unique", len(urls))
