@@ -127,6 +127,7 @@
   .more-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
   /* もくじ：スクロールしなくてもサイト全体が見わたせる */
+  .pick { padding: 36px 0 0; }
   .map { padding: 36px 0 0; }
   .mapgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
   .mapgrp { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 12px 14px 12px; }
@@ -152,6 +153,7 @@
     .tagline { margin-top: 12px; font-size: 14.5px; letter-spacing: .06em; line-height: 1.7; }
     .subline { margin-top: 4px; font-size: 12px; }
     .wrap { padding: 0 16px; }
+    .pick { padding-top: 16px; }
     .map { padding-top: 16px; }
     .mapgrid { grid-template-columns: 1fr 1fr; gap: 8px; }
     .mapgrp { padding: 8px 10px 8px; }
@@ -187,6 +189,28 @@
 </header>
 
 <div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <section class="pick works rise d2">
+      <p class="cat-label" id="cat-blog">柔術ニュースとブログ</p>
+
+      <a class="card solo" href="/jiunews/">
+        <span>
+          <p class="eyebrow">NEWS ・ 毎朝更新</p>
+          <h2>きょうの柔術ニュース<span class="arrow">→</span></h2>
+          <p>国内と海外の柔術ニュースを毎朝集めて、やさしい日本語で紹介します。海外の記事は日本語に訳してお届けします。</p>
+        </span>
+      </a>
+
+      <a class="card solo" href="/blog/">
+        <span>
+          <p class="eyebrow">BLOG ・ 不定期更新</p>
+          <h2>マネージャーのブログ<span class="arrow">→</span></h2>
+          <p>柔術の道場運営のこと、良蔵さんのまわりのこと、Claude Codeのこと。マネージャー村田亜衣の目線で、ゆるく書いています。</p>
+        </span>
+      </a>
+  </section>
+</div>
 
 <div class="wrap">
   <nav class="map rise d2" aria-label="もくじ">
@@ -305,24 +329,6 @@
 <main>
   <div class="wrap">
     <div class="works rise d3">
-
-      <p class="cat-label" id="cat-blog">ブログ</p>
-
-      <a class="card solo" href="/blog/">
-        <span>
-          <p class="eyebrow">BLOG ・ 不定期更新</p>
-          <h2>マネージャーのブログ<span class="arrow">→</span></h2>
-          <p>柔術の道場運営のこと、良蔵さんのまわりのこと、Claude Codeのこと。マネージャー村田亜衣の目線で、ゆるく書いています。</p>
-        </span>
-      </a>
-
-      <a class="card solo" href="/jiunews/">
-        <span>
-          <p class="eyebrow">NEWS ・ 毎朝更新</p>
-          <h2>きょうの柔術ニュース<span class="arrow">→</span></h2>
-          <p>国内と海外の柔術ニュースを毎朝集めて、やさしい日本語で紹介します。海外の記事は日本語に訳してお届けします。</p>
-        </span>
-      </a>
 
       <p class="cat-label" id="cat-jiujitsu">柔術</p>
 
