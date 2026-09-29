@@ -5,8 +5,15 @@
   <link href="https://jiujitsu.co.jp/"/>
   <link rel="self" type="application/atom+xml" href="https://jiujitsu.co.jp/feed.xml"/>
   <id>https://jiujitsu.co.jp/</id>
-  <updated>2026-09-29T15:25:51+09:00</updated>
+  <updated>2026-09-29T18:11:20+09:00</updated>
   <author><name>BUTTI ON LINE</name></author>
+  <entry>
+    <title>きょうの柔術ニュース</title>
+    <link href="https://jiujitsu.co.jp/jiunews/"/>
+    <id>tag:jiujitsu.co.jp,2026-09-29:jiunews</id>
+    <updated>2026-09-29T09:00:00+09:00</updated>
+    <summary>国内と海外の柔術ニュースを毎朝集めて、やさしい日本語で紹介します。海外の記事は日本語に訳してお届け。第1号は、函南町の兄弟の世界大会金・銀や、UFC BJJ 11など10本です。</summary>
+  </entry>
   <entry>
     <title>柔術の研究論文ガイド</title>
     <link href="https://jiujitsu.co.jp/kenkyu/"/>
