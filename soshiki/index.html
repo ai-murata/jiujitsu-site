@@ -11,329 +11,384 @@
     --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
     --gold: #a3801a; --gold-hi: #c9a227;
     --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
-    --ol: #274a7a; --yawara: #4d3070; --sweep: #5a3c22; --tamago: #c9a227;
+    --ol: #274a7a; --yawara: #4d3070; --sweep: #5a3c22; --tamago: #8a6a12; --biz: #3d6b4a;
     --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
     --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
   }
   * { box-sizing: border-box; }
   body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
-  .wrap { max-width: 900px; margin: 0 auto; padding: 0 22px 80px; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 22px 80px; }
 
-  header { text-align: center; padding: 64px 20px 40px; }
+  header { text-align: center; padding: 60px 20px 36px; }
   .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; }
   h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(28px, 6vw, 40px); color: var(--ink); letter-spacing: .2em; line-height: 1.4; margin: 10px 0 0; }
-  .lede { font-size: 13px; color: var(--faint); margin: 14px 0 0; letter-spacing: .04em; }
+  .lede { font-size: 13px; color: var(--faint); margin: 14px 0 0; letter-spacing: .04em; line-height: 1.9; }
 
   .rank { display: flex; height: 4px; }
   .rank span { flex: 1; }
   .rank .w { background: #eceadf; } .rank .b { background: var(--ol); } .rank .p { background: var(--yawara); }
   .rank .br { background: var(--sweep); } .rank .k { background: var(--ink); }
 
-  /* ── 代表 ───────────────────────── */
-  .chart { margin-top: 56px; }
-  .head-box { max-width: 380px; margin: 0 auto; border: 1px solid var(--line); border-top: 3px solid var(--ink); background: var(--panel); padding: 22px 24px; text-align: center; }
-  .head-box .role { font-size: 11px; letter-spacing: .18em; color: var(--gold); }
-  .head-box .name { font-family: var(--mincho); font-weight: 700; font-size: 22px; color: var(--ink); letter-spacing: .12em; margin: 6px 0 2px; }
-  .head-box .kana { font-size: 11px; color: var(--faint); letter-spacing: .1em; }
-  .head-box .duty { font-size: 12.5px; line-height: 1.85; margin: 12px 0 0; text-align: left; }
+  .stem { width: 1px; height: 30px; background: var(--line); margin: 0 auto; }
 
-  .stem { width: 1px; height: 36px; background: var(--line); margin: 0 auto; }
+  /* ── 上部：株主総会〜代表 ─────────── */
+  .gov { max-width: 460px; margin: 52px auto 0; }
+  .box { border: 1px solid var(--line); background: var(--panel); padding: 16px 20px; text-align: center; }
+  .box .label { font-size: 10.5px; letter-spacing: .2em; color: var(--gold); }
+  .box .ttl { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .16em; margin: 4px 0 0; }
+  .box .sub { font-size: 12px; color: var(--body-c); margin: 6px 0 0; line-height: 1.8; }
+  .box.top { border-top: 3px solid var(--ink); }
+  .ceo { border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); background: var(--panel); padding: 20px 22px; text-align: center; }
+  .ceo .label { font-size: 10.5px; letter-spacing: .2em; color: var(--gold); }
+  .ceo .name { font-family: var(--mincho); font-weight: 700; font-size: 23px; color: var(--ink); letter-spacing: .12em; margin: 6px 0 2px; }
+  .ceo .kana { font-size: 11px; color: var(--faint); letter-spacing: .1em; }
+  .ceo .duty { font-size: 12.5px; margin: 12px 0 0; text-align: left; line-height: 1.85; }
 
-  /* ── 2部門 ──────────────────────── */
+  /* ── 2部門 ──────────────────── */
   .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; position: relative; padding-top: 28px; }
   .cols::before { content: ""; position: absolute; top: 0; left: 25%; right: 25%; height: 1px; background: var(--line); }
   .col { position: relative; }
   .col::before { content: ""; position: absolute; top: -28px; left: 50%; width: 1px; height: 28px; background: var(--line); }
 
   .dept { border: 1px solid var(--line); background: var(--panel); padding: 18px 20px; text-align: center; }
-  .dept.dojo { border-top: 3px solid var(--ol); }
-  .dept.office { border-top: 3px solid var(--gold-hi); }
-  .dept .label { font-size: 11px; letter-spacing: .2em; color: var(--gold); }
-  .dept .ja { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: .14em; margin: 4px 0 12px; }
-  .dept .name { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .1em; }
-  .dept .kana { font-size: 11px; color: var(--faint); letter-spacing: .1em; }
-  .dept .duty { font-size: 12.5px; line-height: 1.85; margin: 12px 0 0; text-align: left; }
+  .dept.jigyo { border-top: 3px solid var(--ol); }
+  .dept.kanri { border-top: 3px solid var(--gold-hi); }
+  .dept .label { font-size: 10.5px; letter-spacing: .2em; color: var(--gold); }
+  .dept .ja { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .14em; margin: 4px 0 4px; }
+  .dept .scope { font-size: 11.5px; color: var(--faint); letter-spacing: .04em; }
+  .dept .name { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .1em; margin: 12px 0 0; }
+  .dept .kana { font-family: var(--gothic); font-weight: 400; font-size: 11px; color: var(--faint); letter-spacing: .1em; margin-left: .5em; }
+  .dept .duty { font-size: 12.5px; line-height: 1.85; margin: 10px 0 0; text-align: left; }
 
-  /* ── 拠点リスト（ツリー）───────────── */
+  /* ── 拠点・事業カード ──────────── */
   .units { list-style: none; margin: 0; padding: 0 0 0 20px; position: relative; }
-  .units::before { content: ""; position: absolute; left: 0; top: -18px; bottom: 28px; width: 1px; background: var(--line); }
+  .units::before { content: ""; position: absolute; left: 0; top: -18px; bottom: 30px; width: 1px; background: var(--line); }
   .units > li { position: relative; margin-top: 18px; }
   .units > li::before { content: ""; position: absolute; left: -20px; top: 26px; width: 20px; height: 1px; background: var(--line); }
 
   .unit { border: 1px solid var(--line); border-left: 3px solid var(--faint); background: var(--paper); padding: 14px 16px; }
-  .unit.ol { border-left-color: var(--ol); }
-  .unit.yawara { border-left-color: var(--yawara); }
-  .unit.sweep { border-left-color: var(--sweep); }
-  .unit.tamago { border-left-color: var(--tamago); }
+  .unit.ol { border-left-color: var(--ol); } .unit.yawara { border-left-color: var(--yawara); }
+  .unit.sweep { border-left-color: var(--sweep); } .unit.tamago { border-left-color: var(--tamago); }
+  .unit.biz { border-left-color: var(--biz); }
   .unit .site { font-size: 11px; letter-spacing: .16em; color: var(--gold); font-weight: 500; }
   .unit .place { font-size: 11px; color: var(--faint); letter-spacing: .08em; margin-left: .5em; }
   .unit .person { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .08em; margin: 5px 0 0; }
-  .unit .person .kana { font-family: var(--gothic); font-weight: 400; font-size: 11px; color: var(--faint); letter-spacing: .08em; margin-left: .6em; }
-  .unit ul { list-style: none; margin: 9px 0 0; padding: 0; font-size: 12.5px; line-height: 1.8; }
-  .unit ul li { padding-left: 1em; position: relative; }
-  .unit ul li::before { content: "・"; position: absolute; left: -.1em; color: var(--gold); }
+  .unit .person .kana { font-family: var(--gothic); font-weight: 400; font-size: 11px; color: var(--faint); letter-spacing: .08em; margin-left: .5em; }
+
+  .chip { display: inline-block; font-family: var(--gothic); font-weight: 500; font-size: 10px; letter-spacing: .1em; color: #fff; background: var(--faint); border-radius: 2px; padding: 1px 7px; margin-left: .5em; vertical-align: 2px; }
+  .chip.emp { background: var(--ol); } .chip.out { background: var(--sweep); }
+  .chip.spot { background: var(--faint); } .chip.mark { background: #8a6a12; }
+  .tbd { display: inline-block; font-size: 10px; letter-spacing: .1em; color: #9a6b1f; background: #fdf5e0; border: 1px solid #ecdcae; border-radius: 2px; padding: 1px 6px; margin-left: .5em; vertical-align: 2px; }
+  .blankname { color: var(--faint); }
 
   .tasks { margin: 10px 0 0; font-size: 12.5px; line-height: 1.8; }
-  .tasks dt { font-family: var(--gothic); font-weight: 700; font-size: 10.5px; letter-spacing: .12em; color: var(--gold); margin-top: 9px; }
+  .tasks dt { font-weight: 700; font-size: 10.5px; letter-spacing: .12em; color: var(--gold); margin-top: 9px; }
   .tasks dt:first-child { margin-top: 0; }
   .tasks dd { margin: 1px 0 0; }
 
-  .subunits { list-style: none; margin: 12px 0 0; padding: 0 0 0 18px; position: relative; }
-  .subunits::before { content: ""; position: absolute; left: 0; top: -6px; bottom: 16px; width: 1px; background: var(--line); }
-  .subunits > li { position: relative; margin-top: 10px; }
-  .subunits > li::before { content: ""; position: absolute; left: -18px; top: 17px; width: 18px; height: 1px; background: var(--line); }
-  .subunit { border: 1px solid var(--line); background: var(--panel); padding: 10px 13px; }
-  .subunit .t { font-size: 10.5px; letter-spacing: .14em; color: var(--gold); }
-  .subunit .n { font-family: var(--mincho); font-weight: 700; font-size: 14.5px; color: var(--ink); letter-spacing: .06em; margin: 3px 0 0; }
-  .subunit .n .kana { font-family: var(--gothic); font-weight: 400; font-size: 10.5px; color: var(--faint); letter-spacing: .08em; margin-left: .5em; }
-  .chip { display: inline-block; font-family: var(--gothic); font-weight: 500; font-size: 10px; letter-spacing: .12em; color: #fff; background: var(--faint); border-radius: 2px; padding: 1px 7px; margin-left: .6em; vertical-align: 2px; }
-  .unit.ol .chip { background: var(--ol); } .unit.yawara .chip { background: var(--yawara); }
-  .unit.sweep .chip { background: var(--sweep); } .unit.tamago .chip { background: #8a6a12; }
-  .subunit .t { display: flex; justify-content: space-between; align-items: baseline; }
+  .members { list-style: none; margin: 11px 0 0; padding: 0 0 0 18px; position: relative; }
+  .members::before { content: ""; position: absolute; left: 0; top: -6px; bottom: 16px; width: 1px; background: var(--line); }
+  .members > li { position: relative; margin-top: 9px; }
+  .members > li::before { content: ""; position: absolute; left: -18px; top: 17px; width: 18px; height: 1px; background: var(--line); }
+  .mbox { border: 1px solid var(--line); background: var(--panel); padding: 9px 12px; }
+  .mbox .t { font-size: 10.5px; letter-spacing: .14em; color: var(--gold); }
+  .mbox .n { font-family: var(--mincho); font-weight: 700; font-size: 14px; color: var(--ink); letter-spacing: .05em; margin: 2px 0 0; line-height: 1.7; }
+  .mbox .n .kana { font-family: var(--gothic); font-weight: 400; font-size: 10.5px; color: var(--faint); margin-left: .4em; }
 
-  .tbd { display: inline-block; font-family: var(--gothic); font-weight: 500; font-size: 10px; letter-spacing: .1em; color: #9a6b1f; background: #fdf5e0; border: 1px solid #ecdcae; border-radius: 2px; padding: 1px 6px; margin-left: .6em; vertical-align: 2px; }
-  .blankname { color: var(--faint); }
+  /* ── 外部・内訳 ───────────────── */
+  .ext { max-width: 460px; margin: 30px auto 0; border: 1px dashed var(--line); background: var(--panel); padding: 14px 18px; text-align: center; }
+  .ext .label { font-size: 10.5px; letter-spacing: .2em; color: var(--gold); }
+  .ext .n { font-family: var(--mincho); font-weight: 700; font-size: 15px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 0; }
+  .ext .s { font-size: 11.5px; color: var(--faint); }
 
-  .note { margin-top: 56px; border: 1px solid var(--line); background: var(--panel); padding: 20px 22px; font-size: 12.5px; line-height: 1.95; }
+  .counts { margin-top: 48px; border: 1px solid var(--line); background: var(--panel); padding: 20px 22px; }
+  .counts h2 { font-family: var(--mincho); font-size: 14px; color: var(--ink); letter-spacing: .12em; margin: 0 0 12px; }
+  .counts table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .counts th, .counts td { text-align: left; padding: 7px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .counts th { font-weight: 700; color: var(--ink); white-space: nowrap; width: 8.5em; }
+
+  .note { margin-top: 32px; border: 1px solid var(--line); background: var(--panel); padding: 20px 22px; font-size: 12.5px; line-height: 1.95; }
   .note h2 { font-family: var(--mincho); font-size: 14px; color: var(--ink); letter-spacing: .12em; margin: 0 0 10px; }
   .note ul { list-style: none; margin: 0; padding: 0; }
   .note li { padding-left: 1.1em; position: relative; }
   .note li::before { content: "・"; position: absolute; left: 0; color: var(--gold); }
 
-  footer { margin-top: 64px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
   footer a { color: var(--gold); text-decoration: none; }
 
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {
     .cols { grid-template-columns: 1fr; gap: 0; }
     .cols::before { display: none; }
     .col + .col { margin-top: 36px; }
     .col::before { display: none; }
     .col + .col::after { content: ""; position: absolute; top: -36px; left: 50%; width: 1px; height: 36px; background: var(--line); }
+    .counts th { width: auto; }
   }
 </style>
 
 <header>
   <p class="brand">ORGANIZATION</p>
   <h1>組織図</h1>
-  <p class="lede">株式会社BUTTI ON LINE ／ 2026年9月時点<br>拠点ごとの担当と、その人が持っている仕事を1枚にまとめたもの</p>
+  <p class="lede">株式会社BUTTI ON LINE ／ 2026年9月29日現在<br>実態に基づくもので、組織規程に基づくものではありません</p>
 </header>
 
 <div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
 
 <div class="wrap">
-  <div class="chart">
 
-    <div class="head-box">
-      <p class="role">代表取締役</p>
+  <div class="gov">
+    <div class="box top">
+      <p class="label">SHAREHOLDERS</p>
+      <p class="ttl">株主総会</p>
+      <p class="sub">株主2名 ／ 発行済株式の総数 2,500株・資本金 25,000千円</p>
+    </div>
+    <div class="stem" aria-hidden="true"></div>
+    <div class="box">
+      <p class="label">BOARD</p>
+      <p class="ttl">取締役会</p>
+      <p class="sub">取締役4名：村田 良蔵・中島 正明・村井 庸介・李 英俊</p>
+    </div>
+    <div class="stem" aria-hidden="true"></div>
+    <div class="ceo">
+      <p class="label">代表取締役社長</p>
       <p class="name">村田 良蔵</p>
       <p class="kana">むらた りょうぞう</p>
-      <p class="duty">全体統括と意思決定。指導方針・帯の昇格判断。SJJJF代表理事として大会運営と連盟対応。メディア・協賛・提携の窓口。新拠点の出店判断と資金繰り。選手としても現役。</p>
+      <p class="duty">全体統括と意思決定。指導と帯の昇格判断。<strong>シフト作成</strong>。SJJJF代表理事として大会運営と連盟対応。メディア・協賛・提携の窓口。出店判断と資金繰り。選手としても現役。</p>
     </div>
+  </div>
 
-    <div class="stem" aria-hidden="true"></div>
+  <div class="cols">
 
-    <div class="cols">
-
-      <!-- 道場部門 -->
-      <div class="col">
-        <div class="dept dojo">
-          <p class="label">DOJO</p>
-          <p class="ja">道場部門</p>
-          <p class="name">濱田 真亮</p>
-          <p class="kana">はまだ しんすけ</p>
-          <p class="duty">道場部門の統括。4拠点のクラス編成と指導内容の品質管理、インストラクターの育成と配置。各店の主担当のとりまとめ、合同クラス・出稽古の調整、大会に向けた選手の強化。</p>
-        </div>
-
-        <ul class="units">
-          <li>
-            <div class="unit ol">
-              <p><span class="site">OVER LIMIT</span><span class="place">札幌</span></p>
-              <p class="person">諸澤 陽斗<span class="kana">もろさわ はると</span><span class="chip">代表</span></p>
-              <dl class="tasks">
-                <dt>拠点固有</dt><dd>札幌店の代表として現場全体を統括。キッズクラスの運営。Airペイ／PayPay の店頭決済と日報・月次収支表のとりまとめ。副担当・スタッフのシフト調整。</dd>
-                <dt>クラス</dt><dd>ベーシック／ベーシックⅡ／フリーマットの指導。プレミアム、ファンダメンタル、ヨガ、キッズ、RYOZO Brotherhood、パラ柔術の各枠の運営。タイムテーブルの管理と代行の手配。出稽古の受け入れ。</dd>
-                <dt>体験・入会</dt><dd>体験の受け付け（体験チケット＋クーポンで無料）。道着レンタルの案内。入会手続きとスターターキットの販売。名前カードの作成と名簿処理。</dd>
-                <dt>公式LINE</dt><dd>アカウントマネージャーの「チャット」で会員のメッセージを確認して返信。体験・見学の問い合わせ対応。<strong>退会連絡の受付（カード決済は17日まで／口座振替は7日まで）</strong>。来ていない会員への声かけ。</dd>
-                <dt>予約・枠の管理</dt><dd>hacomono のクラス枠の登録。当日キャンセル（1時間前まで）への対応。追加チケット・0円チケットの案内。招待枠・YAWARA枠・OverLimit出稽古枠の手動設定（YAWARA側と連動しないため手作業）。プラン変更と差額チケットの案内。</dd>
-                <dt>物販・レンタル</dt><dd>道着・帯・ラッシュガード・タオルのレンタルと販売。水・タンブラーの販売。チェックイン端末（iPad）のQRからの購入対応。PayPay／Square ターミナルでの決済。在庫の確認。</dd>
-                <dt>店舗管理</dt><dd>開店・閉店と清掃。マットの清掃・消毒、ダスキンマットの交換。BGM（モンスター・チャンネル）の再生。道場PCとチェックイン端末の管理。消耗品の発注依頼。設備の不具合の一次対応。</dd>
-                <dt>大会・イベント</dt><dd>大会エントリーの取りまとめと当日の引率。Jiu Fight や Super Yawara Cup などのイベント運営。</dd>
-              </dl>
-              <ul class="subunits">
-                <li>
-                  <div class="subunit">
-                    <p class="t">副担当</p>
-                    <p class="n blankname">未定</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="unit yawara">
-              <p><span class="site">YAWARA</span><span class="place">原宿</span></p>
-              <p class="person">野島 繁昭<span class="kana">のじま しげあき</span><span class="chip">主担当</span></p>
-              <dl class="tasks">
-                <dt>拠点固有</dt><dd>法人契約（福利厚生クラス）の利用実績とりまとめと請求内訳の確認。内装・設備トラブルの窓口（不動産・施工会社との調整）。なでしこクラスの運営。カイロなど外部施術者の枠の管理。</dd>
-                <dt>クラス</dt><dd>ベーシック／ベーシックⅡ／フリーマットの指導。プレミアム、ファンダメンタル、ヨガ、キッズ、RYOZO Brotherhood、パラ柔術の各枠の運営。タイムテーブルの管理と代行の手配。出稽古の受け入れ。</dd>
-                <dt>体験・入会</dt><dd>体験の受け付け（体験チケット＋クーポンで無料）。道着レンタルの案内。入会手続きとスターターキットの販売。名前カードの作成と名簿処理。</dd>
-                <dt>公式LINE</dt><dd>アカウントマネージャーの「チャット」で会員のメッセージを確認して返信。体験・見学の問い合わせ対応。<strong>退会連絡の受付（カード決済は17日まで／口座振替は7日まで）</strong>。来ていない会員への声かけ。</dd>
-                <dt>予約・枠の管理</dt><dd>hacomono のクラス枠の登録。当日キャンセル（1時間前まで）への対応。追加チケット・0円チケットの案内。招待枠・YAWARA枠・OverLimit出稽古枠の手動設定（YAWARA側と連動しないため手作業）。プラン変更と差額チケットの案内。</dd>
-                <dt>物販・レンタル</dt><dd>道着・帯・ラッシュガード・タオルのレンタルと販売。水・タンブラーの販売。チェックイン端末（iPad）のQRからの購入対応。PayPay／Square ターミナルでの決済。在庫の確認。</dd>
-                <dt>店舗管理</dt><dd>開店・閉店と清掃。マットの清掃・消毒、ダスキンマットの交換。BGM（モンスター・チャンネル）の再生。道場PCとチェックイン端末の管理。消耗品の発注依頼。設備の不具合の一次対応。</dd>
-                <dt>大会・イベント</dt><dd>大会エントリーの取りまとめと当日の引率。Jiu Fight や Super Yawara Cup などのイベント運営。</dd>
-              </dl>
-              <ul class="subunits">
-                <li>
-                  <div class="subunit">
-                    <p class="t">副担当</p>
-                    <p class="n blankname">未定</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="unit sweep">
-              <p><span class="site">SWEEP</span><span class="place">北参道</span></p>
-              <p class="person">廣鰭 翔大<span class="kana">ひろはた やすひろ</span><span class="chip">主担当</span></p>
-              <dl class="tasks">
-                <dt>拠点固有</dt><dd>YAWARAとの合同クラスの調整。ファンダメンタルクラスとヨガクラスの枠の運営。学生プラン・早慶戦枠などの招待枠の対応。</dd>
-                <dt>クラス</dt><dd>ベーシック／ベーシックⅡ／フリーマットの指導。プレミアム、ファンダメンタル、ヨガ、キッズ、RYOZO Brotherhood、パラ柔術の各枠の運営。タイムテーブルの管理と代行の手配。出稽古の受け入れ。</dd>
-                <dt>体験・入会</dt><dd>体験の受け付け（体験チケット＋クーポンで無料）。道着レンタルの案内。入会手続きとスターターキットの販売。名前カードの作成と名簿処理。</dd>
-                <dt>公式LINE</dt><dd>アカウントマネージャーの「チャット」で会員のメッセージを確認して返信。体験・見学の問い合わせ対応。<strong>退会連絡の受付（カード決済は17日まで／口座振替は7日まで）</strong>。来ていない会員への声かけ。</dd>
-                <dt>予約・枠の管理</dt><dd>hacomono のクラス枠の登録。当日キャンセル（1時間前まで）への対応。追加チケット・0円チケットの案内。招待枠・YAWARA枠・OverLimit出稽古枠の手動設定（YAWARA側と連動しないため手作業）。プラン変更と差額チケットの案内。</dd>
-                <dt>物販・レンタル</dt><dd>道着・帯・ラッシュガード・タオルのレンタルと販売。水・タンブラーの販売。チェックイン端末（iPad）のQRからの購入対応。PayPay／Square ターミナルでの決済。在庫の確認。</dd>
-                <dt>店舗管理</dt><dd>開店・閉店と清掃。マットの清掃・消毒、ダスキンマットの交換。BGM（モンスター・チャンネル）の再生。道場PCとチェックイン端末の管理。消耗品の発注依頼。設備の不具合の一次対応。</dd>
-                <dt>大会・イベント</dt><dd>大会エントリーの取りまとめと当日の引率。Jiu Fight や Super Yawara Cup などのイベント運営。</dd>
-              </dl>
-              <ul class="subunits">
-                <li>
-                  <div class="subunit">
-                    <p class="t">副担当</p>
-                    <p class="n blankname">未定</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="unit tamago">
-              <p><span class="site">TAMAGO</span><span class="place">新拠点</span></p>
-              <p class="person">河野 裕也<span class="kana">こうの ゆうや</span><span class="chip">主担当</span></p>
-              <dl class="tasks">
-                <dt>拠点固有</dt><dd>立ち上げからの店舗づくりとクラス設計。脱毛・整体メニューの運用と予約枠の管理。スペース貸しの受付と運用。</dd>
-                <dt>クラス</dt><dd>ベーシック／ベーシックⅡ／フリーマットの指導。プレミアム、ファンダメンタル、ヨガ、キッズ、RYOZO Brotherhood、パラ柔術の各枠の運営。タイムテーブルの管理と代行の手配。出稽古の受け入れ。</dd>
-                <dt>体験・入会</dt><dd>体験の受け付け（体験チケット＋クーポンで無料）。道着レンタルの案内。入会手続きとスターターキットの販売。名前カードの作成と名簿処理。</dd>
-                <dt>公式LINE</dt><dd>アカウントマネージャーの「チャット」で会員のメッセージを確認して返信。体験・見学の問い合わせ対応。<strong>退会連絡の受付（カード決済は17日まで／口座振替は7日まで）</strong>。来ていない会員への声かけ。</dd>
-                <dt>予約・枠の管理</dt><dd>hacomono のクラス枠の登録。当日キャンセル（1時間前まで）への対応。追加チケット・0円チケットの案内。招待枠・YAWARA枠・OverLimit出稽古枠の手動設定（YAWARA側と連動しないため手作業）。プラン変更と差額チケットの案内。</dd>
-                <dt>物販・レンタル</dt><dd>道着・帯・ラッシュガード・タオルのレンタルと販売。水・タンブラーの販売。チェックイン端末（iPad）のQRからの購入対応。PayPay／Square ターミナルでの決済。在庫の確認。</dd>
-                <dt>店舗管理</dt><dd>開店・閉店と清掃。マットの清掃・消毒、ダスキンマットの交換。BGM（モンスター・チャンネル）の再生。道場PCとチェックイン端末の管理。消耗品の発注依頼。設備の不具合の一次対応。</dd>
-                <dt>大会・イベント</dt><dd>大会エントリーの取りまとめと当日の引率。Jiu Fight や Super Yawara Cup などのイベント運営。</dd>
-              </dl>
-              <ul class="subunits">
-                <li>
-                  <div class="subunit">
-                    <p class="t">副担当</p>
-                    <p class="n blankname">未定</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+    <!-- 事業部門 -->
+    <div class="col">
+      <div class="dept jigyo">
+        <p class="label">BUSINESS</p>
+        <p class="ja">事業部門</p>
+        <p class="scope">柔術道場の運営・パーソナル指導・大会イベント</p>
+        <p class="name">濱田 真亮<span class="kana">はまだ しんすけ</span><span class="chip out">業務委託</span></p>
+        <p class="duty">道場側の統括。各拠点のクラス編成と指導内容の品質管理、インストラクターの育成と配置。合同クラス・出稽古の調整、大会に向けた選手の強化。</p>
       </div>
 
-      <!-- 運営事務 -->
-      <div class="col">
-        <div class="dept office">
-          <p class="label">BACK OFFICE</p>
-          <p class="ja">運営事務</p>
-          <p class="name">村田 亜衣</p>
-          <p class="kana">むらた あい</p>
-          <p class="duty">バックオフィスの統括。経理・請求（請求書発行、法人分の集計、入金消込）、契約・法務の窓口、金融機関と税理士への対応、仕入れと在庫、公式LINEの一斉配信、社内ツールとWebサイト（Jiu Labo）の運用。</p>
-        </div>
+      <ul class="units">
+        <li>
+          <div class="unit ol">
+            <p><span class="site">OVER LIMIT SAPPORO</span><span class="place">札幌・直営店</span></p>
+            <p class="person">諸澤 陽斗<span class="kana">もろさわ はると</span><span class="chip emp">従業員</span><span class="chip mark">代表</span></p>
+            <dl class="tasks">
+              <dt>拠点固有</dt><dd>札幌店の現場を統括。キッズクラスの運営。Airペイ／PayPay の店頭決済。日報と月次「OL収支」のとりまとめ。</dd>
+              <dt>クラス</dt><dd>ベーシック／ベーシックⅡ／フリーマットの指導。オールレベル、キッズなど各枠の運営。タイムテーブルの管理と代行の手配。出稽古の受け入れ。</dd>
+              <dt>体験・入会</dt><dd>体験の受け付けと道着レンタルの案内。入会手続きとスターターキットの販売。名前カードの作成と名簿処理。</dd>
+              <dt>公式LINE</dt><dd>チャットでの返信と問い合わせ対応。退会連絡の受付（カード決済は17日まで／口座振替は7日まで）。来ていない会員への声かけ。</dd>
+              <dt>予約・枠の管理</dt><dd>クラス枠の登録。当日キャンセル（1時間前まで）への対応。追加チケット・0円チケットの案内。プラン変更と差額チケットの案内。</dd>
+              <dt>物販・レンタル</dt><dd>道着・帯・ラッシュガード・タオルのレンタルと販売。水・タンブラーの販売。チェックイン端末のQRからの購入対応。在庫の確認。</dd>
+              <dt>店舗管理</dt><dd>開店・閉店と清掃。マットの清掃・消毒。BGMの再生。道場PCと端末の管理。消耗品の発注依頼。設備の不具合の一次対応。</dd>
+              <dt>大会・イベント</dt><dd>大会エントリーの取りまとめと当日の引率。</dd>
+            </dl>
+            <ul class="members">
+              <li><div class="mbox"><p class="t">副担当</p><p class="n blankname">未定<span class="tbd">これから</span></p></div></li>
+              <li><div class="mbox"><p class="t">メンバー</p>
+                <p class="n">佐藤 正幸<span class="chip out">業務委託</span></p>
+                <p class="n">宮腰 一貴<span class="chip out">業務委託</span></p>
+                <p class="n">堰本 祐希<span class="chip spot">単発</span></p>
+                <p class="n">氏家<span class="chip spot">単発</span></p>
+              </div></li>
+            </ul>
+          </div>
+        </li>
 
-        <ul class="units">
-          <li>
-            <div class="unit ol">
-              <p><span class="site">OVER LIMIT</span><span class="place">札幌</span></p>
-              <p class="person">諸澤 陽斗<span class="kana">もろさわ はると</span><span class="chip">道場と兼任</span></p>
-              <dl class="tasks">
-                <dt>拠点固有</dt><dd>日報と月次「OL収支」の作成。Airペイ／PayPay の振込確認。</dd>
-                <dt>会員管理</dt><dd>hacomono の登録・変更・退会処理。メンバータイプ（招待枠・YAWARA枠）の手動変更とプランの手動適用。名簿の整合確認。会費操作（請求書の発行・停止）。</dd>
-                <dt>請求・入金</dt><dd><strong>カード決済は毎月20日に翌月分</strong>、<strong>口座振替は10日にレコード作成・26日ごろ引き落とし</strong>。決済エラーの再手配と未払いのフォロー。入金の消込。日割り・2ヶ月分まとめ徴収などの個別対応。</dd>
-                <dt>領収書</dt><dd>メンバーサイト・管理画面からの電子発行の案内。紙の領収書のスキャンと電子帳簿保存法に沿ったファイル名付け。</dd>
-                <dt>集計</dt><dd>日次売上の集計。月次の収支表の作成。パーソナルの実施回数の集計。</dd>
-                <dt>シフト</dt><dd>シフト表の作成と、直前の変更の反映。</dd>
-                <dt>経費</dt><dd>備品・消耗品の発注。クリーニングやマットのリースなど定期支払いの管理。経費精算。</dd>
-                <dt>発信・分析</dt><dd>公式LINEの一斉配信。来店が途絶えた会員の抽出。入会・退会の推移の把握。</dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="unit yawara">
-              <p><span class="site">YAWARA</span><span class="place">原宿</span></p>
-              <p class="person">野島 繁昭<span class="kana">のじま しげあき</span><span class="chip">道場と兼任</span></p>
-              <dl class="tasks">
-                <dt>拠点固有</dt><dd>法人契約分の集計と請求書の送付（会計事務所とのやり取り）。柔術パーソナル集計表の作成。</dd>
-                <dt>会員管理</dt><dd>hacomono の登録・変更・退会処理。メンバータイプ（招待枠・YAWARA枠）の手動変更とプランの手動適用。名簿の整合確認。会費操作（請求書の発行・停止）。</dd>
-                <dt>請求・入金</dt><dd><strong>カード決済は毎月20日に翌月分</strong>、<strong>口座振替は10日にレコード作成・26日ごろ引き落とし</strong>。決済エラーの再手配と未払いのフォロー。入金の消込。日割り・2ヶ月分まとめ徴収などの個別対応。</dd>
-                <dt>領収書</dt><dd>メンバーサイト・管理画面からの電子発行の案内。紙の領収書のスキャンと電子帳簿保存法に沿ったファイル名付け。</dd>
-                <dt>集計</dt><dd>日次売上の集計。月次の収支表の作成。パーソナルの実施回数の集計。</dd>
-                <dt>シフト</dt><dd>シフト表の作成と、直前の変更の反映。</dd>
-                <dt>経費</dt><dd>備品・消耗品の発注。クリーニングやマットのリースなど定期支払いの管理。経費精算。</dd>
-                <dt>発信・分析</dt><dd>公式LINEの一斉配信。来店が途絶えた会員の抽出。入会・退会の推移の把握。</dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="unit sweep">
-              <p><span class="site">SWEEP</span><span class="place">北参道</span></p>
-              <p class="person">廣鰭 翔大<span class="kana">ひろはた やすひろ</span><span class="chip">道場と兼任</span></p>
-              <dl class="tasks">
-                <dt>拠点固有</dt><dd>Square／PayPay の入金消込。レンタル・物販の売上管理。</dd>
-                <dt>会員管理</dt><dd>hacomono の登録・変更・退会処理。メンバータイプ（招待枠・YAWARA枠）の手動変更とプランの手動適用。名簿の整合確認。会費操作（請求書の発行・停止）。</dd>
-                <dt>請求・入金</dt><dd><strong>カード決済は毎月20日に翌月分</strong>、<strong>口座振替は10日にレコード作成・26日ごろ引き落とし</strong>。決済エラーの再手配と未払いのフォロー。入金の消込。日割り・2ヶ月分まとめ徴収などの個別対応。</dd>
-                <dt>領収書</dt><dd>メンバーサイト・管理画面からの電子発行の案内。紙の領収書のスキャンと電子帳簿保存法に沿ったファイル名付け。</dd>
-                <dt>集計</dt><dd>日次売上の集計。月次の収支表の作成。パーソナルの実施回数の集計。</dd>
-                <dt>シフト</dt><dd>シフト表の作成と、直前の変更の反映。</dd>
-                <dt>経費</dt><dd>備品・消耗品の発注。クリーニングやマットのリースなど定期支払いの管理。経費精算。</dd>
-                <dt>発信・分析</dt><dd>公式LINEの一斉配信。来店が途絶えた会員の抽出。入会・退会の推移の把握。</dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="unit tamago">
-              <p><span class="site">TAMAGO</span><span class="place">新拠点</span></p>
-              <p class="person">河野 裕也<span class="kana">こうの ゆうや</span><span class="chip">道場と兼任</span></p>
-              <dl class="tasks">
-                <dt>拠点固有</dt><dd>サブスク・プレミアム会費の請求。グッズとスペース貸しの売上管理。</dd>
-                <dt>会員管理</dt><dd>hacomono の登録・変更・退会処理。メンバータイプ（招待枠・YAWARA枠）の手動変更とプランの手動適用。名簿の整合確認。会費操作（請求書の発行・停止）。</dd>
-                <dt>請求・入金</dt><dd><strong>カード決済は毎月20日に翌月分</strong>、<strong>口座振替は10日にレコード作成・26日ごろ引き落とし</strong>。決済エラーの再手配と未払いのフォロー。入金の消込。日割り・2ヶ月分まとめ徴収などの個別対応。</dd>
-                <dt>領収書</dt><dd>メンバーサイト・管理画面からの電子発行の案内。紙の領収書のスキャンと電子帳簿保存法に沿ったファイル名付け。</dd>
-                <dt>集計</dt><dd>日次売上の集計。月次の収支表の作成。パーソナルの実施回数の集計。</dd>
-                <dt>シフト</dt><dd>シフト表の作成と、直前の変更の反映。</dd>
-                <dt>経費</dt><dd>備品・消耗品の発注。クリーニングやマットのリースなど定期支払いの管理。経費精算。</dd>
-                <dt>発信・分析</dt><dd>公式LINEの一斉配信。来店が途絶えた会員の抽出。入会・退会の推移の把握。</dd>
-              </dl>
-            </div>
-          </li>
-        </ul>
+        <li>
+          <div class="unit yawara">
+            <p><span class="site">YAWARA JIU-JITSU ACADEMY</span><span class="place">原宿</span></p>
+            <p class="person">野島 繁昭<span class="kana">のじま しげあき</span><span class="chip out">業務委託</span><span class="chip mark">主担当</span></p>
+            <dl class="tasks">
+              <dt>拠点固有</dt><dd>法人契約（福利厚生クラス）の利用実績とりまとめと請求内訳の確認。内装・設備トラブルの窓口（不動産・施工会社との調整）。なでしこクラスの運営。カイロなど外部施術者の枠の管理。</dd>
+              <dt>クラス</dt><dd>ベーシック／ベーシックⅡ／フリーマットの指導。プレミアム、RYOZO Brotherhood、パラ柔術など各枠の運営。タイムテーブルの管理と代行の手配。出稽古の受け入れ。</dd>
+              <dt>体験・入会</dt><dd>体験の受け付けと道着レンタルの案内。入会手続きとスターターキットの販売。名前カードの作成と名簿処理。</dd>
+              <dt>公式LINE</dt><dd>チャットでの返信と問い合わせ対応。退会連絡の受付（カード決済は17日まで／口座振替は7日まで）。来ていない会員への声かけ。</dd>
+              <dt>予約・枠の管理</dt><dd>クラス枠の登録。当日キャンセルへの対応。追加チケット・0円チケットの案内。招待枠・OverLimit出稽古枠の手動設定。プラン変更と差額チケットの案内。</dd>
+              <dt>物販・レンタル</dt><dd>道着・帯・ラッシュガード・タオルのレンタルと販売。水・タンブラーの販売。チェックイン端末のQRからの購入対応。在庫の確認。</dd>
+              <dt>店舗管理</dt><dd>開店・閉店と清掃。マットの清掃・消毒、ダスキンマットの交換。BGMの再生。道場PCと端末の管理。消耗品の発注依頼。</dd>
+              <dt>大会・イベント</dt><dd>大会エントリーの取りまとめと当日の引率。Jiu Fight や Super Yawara Cup の運営。</dd>
+            </dl>
+            <ul class="members">
+              <li><div class="mbox"><p class="t">副担当</p><p class="n blankname">未定<span class="tbd">これから</span></p></div></li>
+              <li><div class="mbox"><p class="t">メンバー（YAWARA・SWEEP 共通）</p>
+                <p class="n">濱田 真亮<span class="chip out">業務委託</span></p>
+                <p class="n">河野 裕也<span class="chip out">業務委託</span></p>
+                <p class="n">立花 千春<span class="chip spot">単発・クラス代行</span></p>
+                <p class="n">工藤 広樹<span class="chip spot">単発・クラス代行</span></p>
+                <p class="n">粟田 健太郎<span class="chip spot">単発・クラス代行</span></p>
+              </div></li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <div class="unit sweep">
+            <p><span class="site">SWEEP JIU-JITSU ACADEMY</span><span class="place">北参道</span></p>
+            <p class="person">廣鰭 翔大<span class="kana">ひろはた やすひろ</span><span class="chip emp">従業員</span><span class="chip mark">主担当</span></p>
+            <dl class="tasks">
+              <dt>拠点固有</dt><dd>YAWARAとの合同クラスの調整。ファンダメンタルクラスとヨガクラスの枠の運営。学生プラン・早慶戦枠などの招待枠の対応。Square／PayPay の店頭決済。</dd>
+              <dt>クラス</dt><dd>ベーシック／ベーシックⅡ／フリーマットの指導。プレミアム、KIDS など各枠の運営。タイムテーブルの管理と代行の手配。出稽古の受け入れ。</dd>
+              <dt>体験・入会</dt><dd>体験の受け付け（体験チケット＋クーポンで無料）と道着レンタルの案内。入会手続きとスターターキットの販売。名簿処理。</dd>
+              <dt>公式LINE</dt><dd>チャットでの返信と問い合わせ対応。退会連絡の受付（カード決済は17日まで／口座振替は7日まで）。来ていない会員への声かけ。</dd>
+              <dt>予約・枠の管理</dt><dd>クラス枠の登録。当日キャンセルへの対応。追加チケット・0円チケットの案内。招待枠・YAWARA枠・OverLimit出稽古枠の手動設定（YAWARA側と連動しないため手作業）。</dd>
+              <dt>物販・レンタル</dt><dd>道着・帯・ラッシュガード・タオルのレンタルと販売。水・タンブラーの販売。チェックイン端末のQRからの購入対応。在庫の確認。</dd>
+              <dt>店舗管理</dt><dd>開店・閉店と清掃。マットの清掃・消毒。BGMの再生。道場PCと端末の管理。消耗品の発注依頼。</dd>
+              <dt>大会・イベント</dt><dd>大会エントリーの取りまとめと当日の引率。</dd>
+            </dl>
+            <ul class="members">
+              <li><div class="mbox"><p class="t">副担当</p><p class="n blankname">未定<span class="tbd">これから</span></p></div></li>
+              <li><div class="mbox"><p class="t">メンバー</p><p class="n blankname">YAWARA と共通（上記）</p></div></li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <div class="unit tamago">
+            <p><span class="site">TAMAGO</span><span class="place">新拠点</span></p>
+            <p class="person">河野 裕也<span class="kana">こうの ゆうや</span><span class="chip out">業務委託</span><span class="chip mark">主担当</span><span class="tbd">株価算定の図には未掲載</span></p>
+            <dl class="tasks">
+              <dt>拠点固有</dt><dd>立ち上げからの店舗づくりとクラス設計。脱毛・整体メニューの運用と予約枠の管理。スペース貸しの受付と運用。</dd>
+              <dt>会員・問い合わせ</dt><dd>公式LINEでの返信と問い合わせ対応。体験の受け付けと入会手続き。サブスク会員の管理。</dd>
+              <dt>物販・店舗管理</dt><dd>グッズの販売と在庫。開店・閉店と清掃。備品・消耗品の発注依頼。</dd>
+            </dl>
+            <ul class="members">
+              <li><div class="mbox"><p class="t">副担当</p><p class="n blankname">未定<span class="tbd">これから</span></p></div></li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <div class="unit biz">
+            <p><span class="site">パーソナルトレーニング事業</span></p>
+            <p class="person blankname">指導者への歩合制</p>
+            <dl class="tasks">
+              <dt>対象</dt><dd>OVER LIMIT SAPPORO ／ YAWARA ／ SWEEP。法人契約分を含む。</dd>
+              <dt>体制</dt><dd>村田・濱田・廣鰭・諸澤・河野・野島・中山・立花の各トレーナーがそれぞれ枠を持つ。チケット制（有効期限180日）。</dd>
+              <dt>事務</dt><dd>実施回数の集計と歩合の計算。法人契約分は月次で集計表を作成して請求。</dd>
+            </dl>
+          </div>
+        </li>
+
+        <li>
+          <div class="unit biz">
+            <p><span class="site">大会・イベント事業</span></p>
+            <p class="person blankname">JIU-FIGHT ほかの主催・運営</p>
+            <dl class="tasks">
+              <dt>運営</dt><dd>企画、会場手配、エントリーとチケットの管理、当日の進行。</dd>
+              <dt>当日スタッフ</dt><dd>受付・照明・音響・設営・物販は都度の業務委託（2026年8月9日のJIU-FIGHTは16名）。</dd>
+            </dl>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 管理部門 -->
+    <div class="col">
+      <div class="dept kanri">
+        <p class="label">ADMINISTRATION</p>
+        <p class="ja">管理部門</p>
+        <p class="scope">経理・総務・労務・庶務・広報・人事</p>
+        <p class="name">村田 亜衣<span class="kana">むらた あい</span><span class="chip emp">従業員</span></p>
+        <p class="duty">管理部門の全般。請求書の発行と振込、給与計算資料の作成、会員管理、広報（SNS）、庶務全般。契約・法務の窓口、金融機関と税理士への対応、仕入れと在庫、社内ツールとWebサイト（Jiu Labo）の運用。</p>
       </div>
 
+      <ul class="units">
+        <li>
+          <div class="unit ol">
+            <p><span class="site">OVER LIMIT SAPPORO</span><span class="place">札幌</span></p>
+            <p class="person">諸澤 陽斗<span class="kana">もろさわ はると</span><span class="chip mark">現場と兼任</span></p>
+            <dl class="tasks">
+              <dt>拠点固有</dt><dd>日報と月次「OL収支」の作成。Airペイ／PayPay の振込確認。</dd>
+              <dt>会員管理</dt><dd>hacomono の登録・変更・退会処理。名簿の整合確認。会費操作（請求書の発行・停止）。</dd>
+              <dt>請求・入金</dt><dd>カード決済は毎月20日に翌月分、口座振替は10日にレコード作成・26日ごろ引き落とし。決済エラーの再手配と未払いのフォロー。日割り・2ヶ月分まとめ徴収などの個別対応。</dd>
+              <dt>領収書</dt><dd>電子発行の案内。紙の領収書のスキャンとファイル名付け。</dd>
+              <dt>集計・経費</dt><dd>日次売上の集計。パーソナル実施回数の集計。備品・消耗品の発注と経費精算。</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <div class="unit yawara">
+            <p><span class="site">YAWARA JIU-JITSU ACADEMY</span><span class="place">原宿</span></p>
+            <p class="person">野島 繁昭<span class="kana">のじま しげあき</span><span class="chip mark">現場と兼任</span></p>
+            <dl class="tasks">
+              <dt>拠点固有</dt><dd>法人契約分の集計と請求書の送付（会計事務所とのやり取り）。柔術パーソナル集計表の作成。</dd>
+              <dt>会員管理</dt><dd>hacomono の登録・変更・退会処理。メンバータイプの手動変更とプランの手動適用。名簿の整合確認。</dd>
+              <dt>請求・入金</dt><dd>月会費の決済管理、決済エラーの再手配、未払いのフォロー、入金の消込。</dd>
+              <dt>領収書</dt><dd>電子発行の案内。紙の領収書のスキャンとファイル名付け。</dd>
+              <dt>集計・経費</dt><dd>日次売上の集計。クリーニングやマットのリースなど定期支払いの管理。備品の発注と経費精算。</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <div class="unit sweep">
+            <p><span class="site">SWEEP JIU-JITSU ACADEMY</span><span class="place">北参道</span></p>
+            <p class="person">廣鰭 翔大<span class="kana">ひろはた やすひろ</span><span class="chip mark">現場と兼任</span></p>
+            <dl class="tasks">
+              <dt>拠点固有</dt><dd>Square／PayPay の入金消込。レンタル・物販の売上管理。</dd>
+              <dt>会員管理</dt><dd>hacomono の登録・変更・退会処理。招待枠・YAWARA枠の手動変更とプランの手動適用。名簿の整合確認。</dd>
+              <dt>請求・入金</dt><dd>月会費の決済管理、決済エラーの再手配、未払いのフォロー。</dd>
+              <dt>領収書</dt><dd>電子発行の案内。紙の領収書のスキャンとファイル名付け。</dd>
+              <dt>集計・経費</dt><dd>日次売上の集計。備品・消耗品の発注と経費精算。</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <div class="unit tamago">
+            <p><span class="site">TAMAGO</span><span class="place">新拠点</span></p>
+            <p class="person">河野 裕也<span class="kana">こうの ゆうや</span><span class="chip mark">現場と兼任</span></p>
+            <dl class="tasks">
+              <dt>拠点固有</dt><dd>サブスク・プレミアム会費の請求。脱毛・整体の予約枠と売上の管理。グッズとスペース貸しの売上管理。</dd>
+              <dt>会員管理</dt><dd>会員の登録・変更・退会処理。名簿の整合確認。</dd>
+              <dt>集計・経費</dt><dd>日次売上の集計。備品・消耗品の発注と経費精算。</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <div class="unit biz">
+            <p><span class="site">全社共通</span></p>
+            <p class="person blankname">管理部門で見るもの</p>
+            <dl class="tasks">
+              <dt>人・お金</dt><dd>給与計算資料の作成。業務委託への支払い。社会保険・労務まわり。決算と税務（顧問税理士と）。</dd>
+              <dt>発信</dt><dd>公式LINEの一斉配信。SNS（Instagram）の運用。Webサイトと社内ツールの運用。</dd>
+              <dt>分析</dt><dd>来店が途絶えた会員の抽出。入会・退会の推移の把握。拠点別の収支の突き合わせ。</dd>
+            </dl>
+          </div>
+        </li>
+      </ul>
     </div>
+
+  </div>
+
+  <div class="stem" aria-hidden="true" style="margin-top:30px"></div>
+  <div class="ext">
+    <p class="label">外部</p>
+    <p class="n">公認会計士税理士 甲田拓也事務所</p>
+    <p class="s">顧問税理士</p>
+  </div>
+
+  <div class="counts">
+    <h2>人員の内訳（2026年9月時点）</h2>
+    <table>
+      <tr><th>役員</th><td>4名（うち代表取締役1名）／村田 良蔵・中島 正明・村井 庸介・李 英俊</td></tr>
+      <tr><th>従業員</th><td>3名（役員兼務を除く）／村田 亜衣・廣鰭 翔大・諸澤 陽斗</td></tr>
+      <tr><th>業務委託</th><td>継続的に11名前後／濱田 真亮・河野 裕也・野島 繁昭・佐藤 正幸・宮腰 一貴・堰本 祐希・氏家・立花 千春・工藤 広樹・粟田 健太郎 ほか</td></tr>
+      <tr><th>スポット</th><td>大会ごとに十数名（2026年8月9日のJIU-FIGHTは16名）</td></tr>
+      <tr><th>退職・契約終了</th><td>立石 修也（業務委託・YAWARA／SWEEP）2026年9月末で契約終了</td></tr>
+    </table>
   </div>
 
   <div class="note">
     <h2>この図について</h2>
     <ul>
-      <li>仕事の中身は、SWEEPの運用マニュアル（hacomono・公式LINEの手順書）、拠点別の日報と収支表、メールのやりとりから拾って書き起こした<strong>暫定版</strong>です。抜けや違いは言ってください。</li>
-      <li>LINEのトーク自体はこちらから読めません。LINE上でしか出てこない仕事は拾えていないので、必要なら履歴を共有してください。</li>
-      <li>各拠点は「主担当（札幌は代表）＋副担当」の2枚看板。副担当は「未定」なので、決まったら差し替えてください。</li>
-      <li>運営事務は、拠点ごとに道場側と同じ人が兼任する形にしています。</li>
-      <li>「拠点固有」以外の項目は、4拠点で同じ書き方にそろえてあります。</li>
-      <li>パーソナルトレーニングは全員が担当しているため、あえて各人の欄には書いていません。</li>
+      <li>骨格と人員は、株価算定用に作成した「I-3_組織図_20260929.pdf」および「I-3_組織図_人員一覧・注記」に合わせています。</li>
+      <li>仕事の中身は、SWEEPの運用マニュアル（hacomono・公式LINEの手順書）、拠点別の日報と収支表、メールのやりとりから拾って書き起こしたものです。抜けや違いは直してください。</li>
+      <li>各拠点の「主担当」と「副担当」は運用上の役割分担で、雇用区分（従業員／業務委託）とは別のものです。副担当はまだ決まっていません。</li>
+      <li>TAMAGO は株価算定の組織図には入っていません。会社の事業として位置づけが決まったら、あちらにも反映が必要です。</li>
+      <li>立石 修也さんは2026年9月末で契約終了です。hacomono に「柔術パーソナルトレーニング（立石）」の枠とチケットが残っているので、停止か引き継ぎの判断が必要です。</li>
+      <li>社内で「部」「課」という呼称は使っておらず、部門の区分は便宜上のものです。</li>
+      <li>LINEのトーク自体はこちらから読めないため、LINE上でしか出てこない仕事は拾えていません。</li>
     </ul>
   </div>
 
