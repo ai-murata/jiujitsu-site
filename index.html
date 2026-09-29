@@ -137,8 +137,8 @@
   /* もくじ：スクロールしなくてもサイト全体が見わたせる */
   .pick { padding: 36px 0 0; }
   .map { padding: 36px 0 0; }
-  .mapgrid { columns: 3; column-gap: 12px; }
-  .mapgrp { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 12px 14px 12px; break-inside: avoid; margin: 0 0 12px; }
+  .mapgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .mapgrp { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 12px 14px 12px; break-inside: avoid; }
   .mapgrp h2 { margin: 0 0 6px; font-family: var(--mincho); font-weight: 700; font-size: 14.5px; letter-spacing: .2em; }
   .mapgrp h2 a { color: var(--gold); text-decoration: none; }
   .mapgrp ul { list-style: none; margin: 0; padding: 0; }
@@ -164,7 +164,7 @@
     .wrap { padding: 0 16px; }
     .pick { padding-top: 16px; }
     .map { padding-top: 16px; }
-    .mapgrid { columns: 2; column-gap: 8px; }
+    .mapgrid { display: block; columns: 2; column-gap: 8px; }
     .mapgrp { padding: 8px 10px 8px; margin-bottom: 8px; }
     .mapgrp h2 { font-size: 13.5px; letter-spacing: .08em; margin-bottom: 2px; }
     .mapgrp li a { display: flex; align-items: baseline; font-size: 14px; line-height: 1.45; padding: 4px 0 4px 4px; white-space: normal; overflow: visible; border-radius: 8px; }
@@ -251,25 +251,30 @@
         </ul>
       </section>
       <section class="mapgrp">
-        <h2><a href="#cat-irai"><span class="ic" aria-hidden="true">🤝</span>頼まれて作ったもの</a></h2>
-        <ul>
-          <li><a href="/salon/"><span class="ic" aria-hidden="true">💆</span>サロンの顧客管理</a></li>
-        </ul>
-      </section>
-      <section class="mapgrp">
         <h2><a href="#cat-muratake"><span class="ic" aria-hidden="true">🏠</span>村田家</a></h2>
         <ul>
           <li><a href="/goroku/"><span class="ic" aria-hidden="true">💬</span>良蔵語録</a></li>
           <li><a href="/toriatsukai/"><span class="ic" aria-hidden="true">📘</span>良蔵取扱説明書</a></li>
           <li><a href="/muratake/"><span class="ic" aria-hidden="true">📦</span>Amazon履歴</a></li>
           <li><a href="/kondate/"><span class="ic" aria-hidden="true">🍙</span>良蔵の献立</a></li>
+          <li><a href="#people"><span class="ic" aria-hidden="true">👋</span>つくっている人</a></li>
+        </ul>
+      </section>
+      <section class="mapgrp">
+        <h2><a href="#cat-irai"><span class="ic" aria-hidden="true">🤝</span>頼まれて作ったもの</a></h2>
+        <ul>
+          <li><a href="/salon/"><span class="ic" aria-hidden="true">💆</span>サロンの顧客管理</a></li>
         </ul>
       </section>
       <section class="mapgrp">
         <h2><a href="/blog/"><span class="ic" aria-hidden="true">✏️</span>ブログ</a></h2>
         <ul>
           <li><a href="/blog/"><span class="ic" aria-hidden="true">📝</span>記事の一覧</a></li>
-          <li><a href="#people"><span class="ic" aria-hidden="true">👋</span>つくっている人</a></li>
+        </ul>
+      </section>
+      <section class="mapgrp">
+        <h2><a href="/company/"><span class="ic" aria-hidden="true">🧪</span>Jiu Labo について</a></h2>
+        <ul>
           <li><a href="#coming"><span class="ic" aria-hidden="true">🌱</span>これから作るもの</a></li>
           <li><a href="/company/"><span class="ic" aria-hidden="true">🏢</span>会社概要</a></li>
         </ul>
