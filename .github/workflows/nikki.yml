@@ -1,0 +1,19 @@
+name: クラウド日記のテスト
+
+# 日記そのものは毎晩の Claude Code ルーティンが PR で出す（手順は tools/nikki/ROUTINE.md）。
+# ここでは PR のときにオフラインテストだけを動かす。
+on:
+  pull_request:
+    paths:
+      - "tools/nikki/**"
+      - "data/nikki/**"
+      - "blog/nikki/**"
+      - ".github/workflows/nikki.yml"
+
+jobs:
+  test:
+    name: テスト（ネットワーク不要）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/nikki/test_build.py
