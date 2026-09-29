@@ -5,21 +5,19 @@
 
 ## 毎朝の動き（APIキー不要）
 
-**Claude Code のルーティン**が毎朝 06:49 JST に起動し、[`ROUTINE.md`](ROUTINE.md) の手順どおりに動く。
+| 時刻 (JST) | だれが | なにを |
+|---|---|---|
+| 06:30 | GitHub Actions（`jiunews.yml`） | `build.py --collect-only data/jiunews/inbox` で RSS から候補を集め、`candidates.json` と `prompt.md` を main に置く |
+| 06:49 | Claude Code のルーティン | [`ROUTINE.md`](ROUTINE.md) の手順で `prompt.md` を読み、`result.json`（選んだ記事と日本語の文章）を書き、`build.py --apply` で号とページを作って main に push |
 
-1. `build.py --collect-only /tmp/jiunews` — RSS から候補を集め、`candidates.json` と `prompt.md` を書く
-2. 実行中の Claude が `prompt.md` を読んで `result.json`（選んだ記事と日本語の文章）を書く
-3. `build.py --apply /tmp/jiunews` — 検算して号にし、ページを作る
-4. `jiunews/` と `data/jiunews/` だけをコミットして main に push
+- 外部のニュースサイトにつなぐのは Actions だけ。ルーティンは GitHub にだけつながればよいので、
+  環境のネットワーク設定を変える必要はない。
+- 翻訳・要約は Claude の月額プランの使用枠の中でおこなわれ、APIの料金はかからない。
+- 手順を変えたいときは `ROUTINE.md` を直せばよい（ルーティンは毎回このファイルを読む）。
+- ルーティンが動かなかった日の inbox は、翌朝の Actions が捨てて取り直す。
 
-翻訳・要約は Claude の月額プランの使用枠の中でおこなわれ、APIの料金はかからない。
-手順を変えたいときは `ROUTINE.md` を直せばよい（ルーティンは毎回このファイルを読む）。
-
-ルーティンの環境は、ネットワーク設定で次のホストへの接続を許可しておく必要がある:
-`news.google.com` `www.bjjee.com` `jitsmagazine.com` `grapplinginsider.com`
-
-APIキー（`ANTHROPIC_API_KEY`）を GitHub に登録すれば、Actions の「柔術ニュース更新」を
-手動実行（Run workflow）して、ルーティンを使わずに1回で作ることもできる（`build.py` 引数なし）。
+`build.py` を引数なしで動かすと、APIキー（`ANTHROPIC_API_KEY`）で Claude を呼んで取得から要約まで
+1回でおこなう（手元で試すとき用）。
 
 ## 作り
 
@@ -28,11 +26,12 @@ APIキー（`ANTHROPIC_API_KEY`）を GitHub に登録すれば、Actions の「
 - `config.json` — 取得元のRSS、何時間前までを見るか、国内/海外それぞれ最大何件載せるか。
 - `fixtures/*.xml` — RSS を模した固定データ。ネットワークなしで動作確認できる。
 - `test_build.py` — オフラインテスト（RSS/Atom の読み取り、重複・既出の除外、でっち上げidの除外、XSS対策、2段階実行）。
-- `.github/workflows/jiunews.yml` — PR時のテストと、APIキーでの手動実行。
+- `.github/workflows/jiunews.yml` — 毎朝の候補集め。PR時はテストのみ。
 
 できあがるもの:
 
 - `data/jiunews/editions/YYYY-MM-DD.json` — その日の号（ページの元データ）
+- `data/jiunews/inbox/` — その朝の候補（ルーティンが使い終わったら消す）
 - `data/jiunews/seen.json` — 一度候補に出た記事の記録（翌日また拾わないため。21日で忘れる）
 - `jiunews/index.html` — 最新号＋過去の号の一覧
 - `jiunews/YYYY-MM-DD/index.html` — 各日のページ
