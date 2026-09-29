@@ -38,7 +38,8 @@ GOOD = {
     "date": "2026-09-29",
     "title": "柔術ニュースをいちばん上に",
     "lead": "今日はトップページの並びを変えました。",
-    "items": [{"heading": "トップの並び替え", "text": "ニュースを上に移してもらいました。"}],
+    "items": [{"heading": "トップの並び替え", "text": "ニュースを上に移してもらいました。",
+               "ask": "ニュースをいちばん上に移して", "tip": "並び順は一言で変えられます。"}],
     "closing": "明日も続けます。",
 }
 
@@ -85,7 +86,7 @@ class EntryTest(unittest.TestCase):
 
     def test_rejects_private_words(self):
         self.bad(closing="まみちゃんのノートも直しました。")
-        self.bad(items=[{"heading": "スタッフ用ページ", "text": "直した"}])
+        self.bad(items=[{**GOOD["items"][0], "heading": "スタッフ用ページ"}])
 
     def test_rejects_urls_and_hashes(self):
         self.bad(lead="https://example.com を見てね")
@@ -95,6 +96,7 @@ class EntryTest(unittest.TestCase):
         self.bad(date="2026-09-28")
         self.bad(items=[])
         self.bad(title="")
+        self.bad(items=[{**GOOD["items"][0], "ask": ""}])
         self.bad(items=[GOOD["items"][0]] * (CONFIG["max_items"] + 1))
 
 
@@ -111,6 +113,7 @@ class RenderTest(unittest.TestCase):
             self.assertNotIn("<script>x", page)
             self.assertIn("&lt;script&gt;", page)
             self.assertIn("柔術ニュース 1件", page)
+            self.assertIn("真似するなら、こう頼む", page)
             self.assertIn("/blog/nikki/2026-09-29/", (root / "blog/nikki/index.html").read_text(encoding="utf-8"))
             # 同じ日はもう集めない
             self.assertFalse(build.collect(build.REPO, root, root / "again", "2026-09-29", CONFIG))

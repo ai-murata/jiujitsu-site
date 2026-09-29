@@ -27,5 +27,5 @@
   ],
   "auto_authors": ["github-actions[bot]"],
   "auto_subject_prefixes": ["chore(", "Merge "],
-  "max_items": 6
+  "max_items": 3
 }

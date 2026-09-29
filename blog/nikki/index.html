@@ -55,6 +55,12 @@
   .did li::before { content: counter(did); position: absolute; left: 4px; top: 20px; width: 26px; height: 26px; border-radius: 50%; background: var(--panel); border: 1px solid var(--gold); color: var(--gold); font-size: 12.5px; font-weight: 700; text-align: center; line-height: 24px; }
   .did h2 { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .04em; line-height: 1.6; margin: 0 0 4px; word-break: auto-phrase; text-wrap: pretty; }
   .did p { margin: 0; font-size: 14.5px; }
+  .ask { margin: 12px 0 0; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 10px 14px; }
+  .ask span { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; color: var(--gold); }
+  .did .ask p { font-size: 14.5px; color: var(--ink); }
+  .did .ask p::before { content: "「"; } .did .ask p::after { content: "」"; }
+  .did .tip { margin: 10px 0 0; font-size: 13.5px; }
+  .tip b { color: var(--gold); margin-right: 8px; font-size: 12px; letter-spacing: .08em; }
   .closing { background: var(--panel); border-left: 3px solid var(--gold); padding: 14px 18px; }
   .auto { font-size: 12.5px; color: var(--faint); }
   .note { font-size: 12px; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 40px; }
@@ -99,8 +105,8 @@
     <li>
       <a href="/blog/nikki/2026-09-28/">
         <time datetime="2026-09-28">2026.09.28（月）</time>
-        <h2>ブログを1日で3本書いた日</h2>
-        <p>今日はブログの日でした。夜中から書き始めて、気づいたら3本目から5本目まで、3本もClaude Codeといっしょに仕上げていました。</p>
+        <h2>文章は「あとから一言たす」で良くなる</h2>
+        <p>今日はブログを3本書いた日でした。書いてみて分かった、Claude Codeに文章を手伝ってもらうときのやり方を3つ残しておきます。ブログやお知らせを書く人の参考になればうれしいです。</p>
       </a>
     </li>
   </ul>

@@ -119,15 +119,26 @@ def auto_summary(subjects):
 PROMPT = """# クラウド日記の下書きを書く（{date_label}）
 
 あなたは、株式会社BUTTI ON LINE のマネージャー **村田亜衣（アイ）** になりきって、
-「今日、Claude Code（クラウド）とこんなことをしたよ」という短い日記を書きます。
+その日に Claude Code（クラウド）とやったことから、**読んだ人が「自分もやってみよう」と思える**短い日記を書きます。
 材料は、下の「今日の作業」（このサイトのリポジトリに今日入った変更の記録）だけです。
 
+## 読む人
+道場やサロン、小さなお店を切り盛りしている人、事務仕事を楽にしたい人。エンジニアではない。
+「アイさんは今日なにをしたか」より、**「それ、私の仕事ならどう使える？」「どう頼めばいい？」**を知りたい。
+
 ## 書き方
+- **作業の一覧にしない。** 今日の作業から、読む人の役に立ちそうなものを **1〜{max_items} つだけ** 選ぶ。
+  小さな修正や、ほかの人に関係のない作業は思い切って捨てる。似た作業はまとめる。
+- 1つの話ごとに次の4つを書く：
+  1. heading：読む人にとっての見出し（「〇〇をClaudeに任せた」「〇〇が1回で直る頼み方」など）
+  2. text：困っていたこと → Claude Codeと何をしたか → どう楽になったか（2〜4文）
+  3. ask：**真似するときの頼み方の例**。読む人が自分の仕事に置きかえてそのまま使える一言（「」は付けない）。
+     アイさんが実際にそう言ったとは書かない（あくまで「こう頼めばできる」の例）。
+  4. tip：やってみて分かったコツ・気をつけること（1〜2文）。材料から言えることだけ。
 - アイさんの一人称（「私」）。やさしい、です・ます調。ブログ（/blog/）の口調に合わせる。
-  エンジニアではない人が読んでわかる言葉で。専門用語は使うなら（　）でひとこと説明する。
-- **材料に書かれていないことは足さない。** 気持ちや感想は「〜してもらった」「〜になってうれしい」程度の、
-  材料から自然に言えることだけ。人の名前、数字、お客さまの話を作らない。
-- 似た作業は1つにまとめる（例：同じページの修正が5回 → 1項目）。項目は多くても {max_items} つ。
+  専門用語は使うなら（　）でひとこと説明する。
+- **材料に書かれていないことは足さない。** 人の名前、数字、お客さまの話、かかった時間を作らない。
+- title は読む人が得することが分かる言い方にする（「〇〇した日」より「〇〇はClaudeに任せられる」）。
 - ファイル名・コミットのハッシュ・URLは書かない。
 - 次の言葉や、それを指す内容は **絶対に書かない**（非公開のページのため）：{private_words}
 
@@ -137,12 +148,13 @@ PROMPT = """# クラウド日記の下書きを書く（{date_label}）
 ```json
 {{
   "date": "{date}",
-  "title": "日記のタイトル（25字くらいまで。その日のいちばんの出来事がわかるように）",
-  "lead": "書き出し（1〜2文）",
+  "title": "日記のタイトル（25字くらいまで）",
+  "lead": "書き出し（1〜2文。今日のテーマと、どんな人の役に立つか）",
   "items": [
-    {{"heading": "やったこと（20字くらいまで）", "text": "どんなことをしたか・なぜか（1〜3文）"}}
+    {{"heading": "見出し（25字くらいまで）", "text": "困りごと→やったこと→どう楽になったか",
+      "ask": "真似するときの頼み方の例", "tip": "コツ・気をつけること"}}
   ],
-  "closing": "ひとこと（1〜2文。今日の感想や、次にやりたいこと）"
+  "closing": "ひとこと（1〜2文。読んだ人へのひと押し）"
 }}
 ```
 
@@ -191,7 +203,7 @@ def collect(repo, root, out, date, config):
 # --------------------------------------------------------------------------- #
 # 確かめて保存
 # --------------------------------------------------------------------------- #
-LIMITS = {"title": 60, "lead": 300, "heading": 50, "text": 400, "closing": 300}
+LIMITS = {"title": 60, "lead": 300, "heading": 50, "text": 500, "ask": 200, "tip": 250, "closing": 300}
 
 
 def _text(value, key, errors):
@@ -225,8 +237,7 @@ def to_entry(result, candidates, config):
         errors.append(f"items が多すぎます（{len(items)} > {config['max_items']}）")
     for i, it in enumerate(items):
         it = it if isinstance(it, dict) else {}
-        entry["items"].append({"heading": _text(it.get("heading"), "heading", errors),
-                               "text": _text(it.get("text"), "text", errors)})
+        entry["items"].append({k: _text(it.get(k), k, errors) for k in ("heading", "text", "ask", "tip")})
     everything = json.dumps({k: entry[k] for k in ("title", "lead", "items", "closing")}, ensure_ascii=False)
     for w in config["private_words"]:
         if w.lower() in everything.lower():
@@ -328,6 +339,12 @@ HEAD = """<!DOCTYPE html>
   .did li::before {{ content: counter(did); position: absolute; left: 4px; top: 20px; width: 26px; height: 26px; border-radius: 50%; background: var(--panel); border: 1px solid var(--gold); color: var(--gold); font-size: 12.5px; font-weight: 700; text-align: center; line-height: 24px; }}
   .did h2 {{ font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .04em; line-height: 1.6; margin: 0 0 4px; word-break: auto-phrase; text-wrap: pretty; }}
   .did p {{ margin: 0; font-size: 14.5px; }}
+  .ask {{ margin: 12px 0 0; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 10px 14px; }}
+  .ask span {{ display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; color: var(--gold); }}
+  .did .ask p {{ font-size: 14.5px; color: var(--ink); }}
+  .did .ask p::before {{ content: "「"; }} .did .ask p::after {{ content: "」"; }}
+  .did .tip {{ margin: 10px 0 0; font-size: 13.5px; }}
+  .tip b {{ color: var(--gold); margin-right: 8px; font-size: 12px; letter-spacing: .08em; }}
   .closing {{ background: var(--panel); border-left: 3px solid var(--gold); padding: 14px 18px; }}
   .auto {{ font-size: 12.5px; color: var(--faint); }}
   .note {{ font-size: 12px; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 40px; }}
@@ -383,7 +400,9 @@ def render_entry(entry, newer, older):
     out.append(f"    <p>{esc(entry['lead'])}</p>\n")
     out.append('    <ol class="did">\n')
     for it in entry["items"]:
-        out.append(f"      <li><h2>{esc(it['heading'])}</h2><p>{esc(it['text'])}</p></li>\n")
+        out.append(f"      <li><h2>{esc(it['heading'])}</h2><p>{esc(it['text'])}</p>\n"
+                   f'        <div class="ask"><span>真似するなら、こう頼む</span><p>{esc(it["ask"])}</p></div>\n'
+                   f'        <p class="tip"><b>コツ</b>{esc(it["tip"])}</p></li>\n')
     out.append("    </ol>\n")
     out.append(f'    <p class="closing">{esc(entry["closing"])}</p>\n')
     auto = entry.get("auto") or []
