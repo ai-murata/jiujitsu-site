@@ -44,6 +44,10 @@ class ParseTest(unittest.TestCase):
         self.assertNotIn("alert", item["snippet"])
         self.assertEqual(item["source"], "BJJEE")
 
+    def test_leading_blank_lines_before_xml_declaration(self):
+        data = b"\n\n  \n" + (FIX / "2-bjjee.xml").read_bytes()
+        self.assertEqual(len(build.parse_feed(data, FEEDS["bjjee"])), 2)
+
     def test_atom_and_rejects_non_http_links(self):
         items = parse("3-atom.xml", "atom")
         self.assertEqual(len(items), 1, "javascript: のリンクは読まない")
