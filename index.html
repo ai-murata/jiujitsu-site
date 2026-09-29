@@ -45,6 +45,14 @@
   .tagline rt { font-size: .5em; font-weight: 500; letter-spacing: .04em; color: var(--ink); opacity: .75; }
   .subline { font-size: clamp(13px, 2.4vw, 14.5px); color: var(--body-c); letter-spacing: .08em; margin: 10px 0 0; }
 
+  .hsearch { position: relative; display: flex; max-width: 420px; margin: 26px auto 0; }
+  .hsearch input { flex: 1; min-width: 0; font: inherit; font-size: 16px; color: var(--ink); background: rgba(255,255,255,.9); border: 1px solid var(--line); border-radius: 999px; padding: 8px 56px 8px 20px; outline: none; -webkit-appearance: none; appearance: none; }
+  .hsearch input::placeholder { color: var(--faint); letter-spacing: .04em; }
+  .hsearch input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,162,39,.18); }
+  .hsearch button { position: absolute; right: 4px; top: 4px; bottom: 4px; width: 44px; border: 0; border-radius: 999px; background: var(--gold); color: #fff; cursor: pointer; display: grid; place-items: center; }
+  .hsearch button:hover { background: #8d6e14; }
+  .hsearch svg { width: 17px; height: 17px; }
+
   .rank { display: flex; height: 4px; }
   .rank span { flex: 1; }
   .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
@@ -152,6 +160,7 @@
     .domain { margin-top: 4px; font-size: 10.5px; }
     .tagline { margin-top: 12px; font-size: 14.5px; letter-spacing: .06em; line-height: 1.7; }
     .subline { margin-top: 4px; font-size: 12px; }
+    .hsearch { margin-top: 16px; }
     .wrap { padding: 0 16px; }
     .pick { padding-top: 16px; }
     .map { padding-top: 16px; }
@@ -186,6 +195,10 @@
   <p class="domain rise d1">JIUJITSU.CO.JP</p>
   <p class="tagline rise d2"><ruby>AI<rt>亜衣</rt></ruby>が運用する、<ruby>AI<rt>えーあい</rt></ruby>研究所。</p>
   <p class="subline rise d2">現場の「あったらいいな」を、カタチに。</p>
+  <form class="hsearch rise d2" role="search" action="/search/" method="get">
+    <input name="q" type="search" placeholder="サイト内を検索" aria-label="サイト内を検索" autocomplete="off" enterkeyhint="search">
+    <button type="submit" aria-label="検索"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
+  </form>
 </header>
 
 <div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>

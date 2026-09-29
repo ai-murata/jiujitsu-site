@@ -225,6 +225,8 @@ function render() {
   el.addEventListener('input', render);
   el.addEventListener('change', render);
 });
+// サイト内検索から ?q=… で来たら、その言葉で絞り込んでおく
+try { const q0 = new URLSearchParams(location.search).get('q'); if (q0) qEl.value = q0; } catch (e) {}
 render();
 </script>
 </html>
