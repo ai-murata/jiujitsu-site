@@ -1,0 +1,75 @@
+name: 柔術ニュース更新
+
+# 毎朝 07:00 JST に国内・海外の柔術ニュースを集め、Claude で日本語にまとめて /jiunews/ を更新する。
+on:
+  schedule:
+    - cron: "0 22 * * *" # 22:00 UTC = 07:00 JST
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "tools/jiunews/**"
+      - ".github/workflows/jiunews.yml"
+
+permissions:
+  contents: write
+
+concurrency: jiunews
+
+jobs:
+  test:
+    name: テスト（ネットワーク不要）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/jiunews/test_build.py
+
+  update:
+    name: ニュースを集めてページを更新
+    needs: test
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Claude SDK を入れる
+        run: pip install --quiet "anthropic>=1.9"
+
+      - name: 取得・要約・ページ生成
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 tools/jiunews/build.py
+
+      - name: 変更があればコミット
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add jiunews data/jiunews
+          if git diff --staged --quiet; then
+            echo "変更なし"
+            exit 0
+          fi
+          git commit -m "chore(jiunews): 柔術ニュースを更新 ($(TZ=Asia/Tokyo date +%Y-%m-%d))"
+          # このジョブが触るのは jiunews/ と data/jiunews/ だけなので、弾かれたら取り込んで積み直せばよい。
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "push が弾かれました。リモートを取り込んで再試行します ($attempt/3)"
+            git pull --rebase origin "$GITHUB_REF_NAME"
+          done
+          echo "3回試しても push できませんでした" >&2
+          exit 1
+
+      - name: サマリ
+        run: |
+          today=$(TZ=Asia/Tokyo date +%Y-%m-%d)
+          f="data/jiunews/editions/${today}.json"
+          echo "### 柔術ニュース" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f "$f" ]; then
+            echo "- ${today}: $(python3 -c "import json;print(len(json.load(open('$f'))['items']))") 件" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "- ${today}: 今日の号はなし（候補なし、またはAPIキー未設定）" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          echo "- https://jiujitsu.co.jp/jiunews/" >> "$GITHUB_STEP_SUMMARY"
