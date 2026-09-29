@@ -1,0 +1,19 @@
+name: JBJJF サイト構造の調査
+
+# jbjjf.com の公開ページからリンク構造だけを調べてログに出す（一時的な調査用）。
+on:
+  push:
+    branches: [claude/focused-noether-xnruny]
+    paths:
+      - "tools/jbjjf/**"
+      - ".github/workflows/jbjjf-explore.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  explore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/jbjjf/explore.py
