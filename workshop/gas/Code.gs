@@ -11,7 +11,7 @@ const CONFIG = {
   title: '第2回JCSAアートフェス ワークショップ',
   organizer: 'JCSA アートフェス事務局',
   // 新しい予約・キャンセルが入ったときに知らせる宛先（空なら送らない）
-  notifyTo: 'eventjcsa@gmail.com',
+  notifyTo: 'ai@jiujitsu.co.jp',
   // キャンセルページのURL（メールのリンクに使う）
   cancelUrl: 'https://jiujitsu.co.jp/workshop/cancel.html',
   // 開始の何時間前までキャンセルを受け付けるか（0なら開始まで）
