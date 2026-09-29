@@ -1,17 +1,34 @@
 # /jiunews/ きょうの柔術ニュース
 
-国内と海外の柔術ニュースを毎朝 07:00 JST に集め、Claude に「柔術に関係ある記事を選んで、
-日本語で見出し・要約・ポイントを書く」よう頼み、`/jiunews/` を作り直して push する。
-海外（英語）の記事はこのとき日本語に訳される。
+国内と海外の柔術ニュースを毎朝集め、柔術に関係ある記事を選んで、日本語で見出し・要約・ポイントを書き、
+`/jiunews/` を作り直して main に反映する。海外（英語）の記事はこのとき日本語に訳される。
+
+## 毎朝の動き（APIキー不要）
+
+**Claude Code のルーティン**が毎朝 06:49 JST に起動し、[`ROUTINE.md`](ROUTINE.md) の手順どおりに動く。
+
+1. `build.py --collect-only /tmp/jiunews` — RSS から候補を集め、`candidates.json` と `prompt.md` を書く
+2. 実行中の Claude が `prompt.md` を読んで `result.json`（選んだ記事と日本語の文章）を書く
+3. `build.py --apply /tmp/jiunews` — 検算して号にし、ページを作る
+4. `jiunews/` と `data/jiunews/` だけをコミットして main に push
+
+翻訳・要約は Claude の月額プランの使用枠の中でおこなわれ、APIの料金はかからない。
+手順を変えたいときは `ROUTINE.md` を直せばよい（ルーティンは毎回このファイルを読む）。
+
+ルーティンの環境は、ネットワーク設定で次のホストへの接続を許可しておく必要がある:
+`news.google.com` `www.bjjee.com` `jitsmagazine.com` `grapplinginsider.com`
+
+APIキー（`ANTHROPIC_API_KEY`）を GitHub に登録すれば、Actions の「柔術ニュース更新」を
+手動実行（Run workflow）して、ルーティンを使わずに1回で作ることもできる（`build.py` 引数なし）。
 
 ## 作り
 
-- `build.py` — 取得・Claudeでの要約・保存・ページ生成まで。取得とページ生成は標準ライブラリのみ、
-  要約だけ `anthropic` SDK を使う。
-- `config.json` — 取得元のRSS、何時間前までを見るか、国内/海外それぞれ最大何件載せるか、使うモデル。
+- `build.py` — 取得・保存・ページ生成（標準ライブラリのみ）。APIで要約するときだけ `anthropic` SDK を使う。
+- `ROUTINE.md` — 毎朝のルーティンが読む手順書。
+- `config.json` — 取得元のRSS、何時間前までを見るか、国内/海外それぞれ最大何件載せるか。
 - `fixtures/*.xml` — RSS を模した固定データ。ネットワークなしで動作確認できる。
-- `test_build.py` — オフラインテスト（RSS/Atom の読み取り、重複・既出の除外、でっち上げidの除外、XSS対策）。
-- `.github/workflows/jiunews.yml` — 日次実行。PR時はテストのみ。
+- `test_build.py` — オフラインテスト（RSS/Atom の読み取り、重複・既出の除外、でっち上げidの除外、XSS対策、2段階実行）。
+- `.github/workflows/jiunews.yml` — PR時のテストと、APIキーでの手動実行。
 
 できあがるもの:
 
@@ -19,15 +36,6 @@
 - `data/jiunews/seen.json` — 一度候補に出た記事の記録（翌日また拾わないため。21日で忘れる）
 - `jiunews/index.html` — 最新号＋過去の号の一覧
 - `jiunews/YYYY-MM-DD/index.html` — 各日のページ
-
-## 最初の1回だけ：APIキーを入れる
-
-1. [Claude Console](https://platform.claude.com/) で API キーを発行する
-2. GitHub の `ai-murata/jiujitsu-site` → Settings → Secrets and variables → Actions →
-   **New repository secret** で、名前 `ANTHROPIC_API_KEY`、値にそのキーを貼る
-3. Actions タブの「柔術ニュース更新」→ **Run workflow** で試しに1回動かす
-
-キーを入れるまでは、ワークフローは「準備中」のページを作るだけで、Claude は呼ばない。
 
 ## 決めごと（大事）
 
@@ -55,7 +63,11 @@ Grappling Insider の RSS。**作成時の環境からは外部に出られず�
 # 固定データ＋見本の文章（ネットワークもAPIも不要）
 python3 tools/jiunews/build.py --root /tmp/jn --fixture-dir tools/jiunews/fixtures --fake-llm
 
-# 本番と同じ（ANTHROPIC_API_KEY が要る）
+# ルーティンと同じ2段階（result.json は自分で書く）
+python3 tools/jiunews/build.py --collect-only /tmp/jiunews
+python3 tools/jiunews/build.py --apply /tmp/jiunews
+
+# APIで一気に（ANTHROPIC_API_KEY が要る）
 pip install anthropic
 python3 tools/jiunews/build.py
 
@@ -68,5 +80,5 @@ python3 tools/jiunews/test_build.py
 
 ## お金のこと
 
-1日1回、Claude Opus 5.5 を1回呼ぶだけ（候補50件前後を渡して1回で返してもらう）。
-入力・出力あわせて1回数万トークン程度なので、1日あたり数十円ほどの見込み。
+ルーティンで動かす限り、Claude の月額プランの使用枠を毎朝少し使うだけで、追加の料金はかからない。
+APIキーで動かす場合は、1日1回 Claude Opus 5.5 を呼ぶので、1日あたり数十円ほどの見込み。

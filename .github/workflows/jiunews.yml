@@ -1,9 +1,8 @@
 name: 柔術ニュース更新
 
-# 毎朝 07:00 JST に国内・海外の柔術ニュースを集め、Claude で日本語にまとめて /jiunews/ を更新する。
+# 毎朝の更新は Claude Code のルーティンが tools/jiunews/ROUTINE.md に沿っておこなう（APIキー不要）。
+# このワークフローは PR 時のテストと、APIキーで動かしたいときの手動実行（Run workflow）用。
 on:
-  schedule:
-    - cron: "0 22 * * *" # 22:00 UTC = 07:00 JST
   workflow_dispatch:
   pull_request:
     paths:

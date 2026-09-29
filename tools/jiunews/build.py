@@ -644,6 +644,10 @@ def main(argv=None):
     ap.add_argument("--config", default=str(HERE / "config.json"))
     ap.add_argument("--date", help="号の日付 YYYY-MM-DD（既定は今日のJST）")
     ap.add_argument("--render-only", action="store_true", help="取得・要約はせず、ページだけ作り直す")
+    ap.add_argument("--collect-only", metavar="DIR",
+                    help="取得だけして DIR に candidates.json と prompt.md を書く（要約は別の誰かが書く）")
+    ap.add_argument("--apply", metavar="DIR",
+                    help="DIR の candidates.json と result.json から号を作ってページを生成する")
     ap.add_argument("--force", action="store_true", help="今日の号があっても作り直す")
     ap.add_argument("--fixture-dir", help="RSS の代わりにこのフォルダの *.xml を使う")
     ap.add_argument("--fake-llm", action="store_true", help="Claude を呼ばずに見本の文章で埋める")
@@ -654,7 +658,11 @@ def main(argv=None):
     now = datetime.now(timezone.utc)
     today = args.date or now.astimezone(JST).date().isoformat()
 
-    if not args.render_only:
+    if args.collect_only:
+        return collect_to_dir(root, config, now, today, args, pathlib.Path(args.collect_only))
+    if args.apply:
+        apply_from_dir(root, config, now, today, pathlib.Path(args.apply))
+    elif not args.render_only:
         run_daily(root, config, now, today, args)
 
     editions = render_all(root)
@@ -662,19 +670,15 @@ def main(argv=None):
     return 0
 
 
-def run_daily(root, config, now, today, args):
+def gather(root, config, now, today, args):
+    """今日の候補を集める。号を作る必要がなければ None。"""
     if (editions_dir(root) / f"{today}.json").exists() and not args.force:
         print(f"{today} の号はもうあります（作り直すなら --force）")
-        return
-    if not args.fake_llm and not os.environ.get("ANTHROPIC_API_KEY"):
-        print("ANTHROPIC_API_KEY が未設定のため、ニュースの取得・要約はスキップします。", file=sys.stderr)
-        return
-
+        return None
     fetcher = fixture_fetcher(args.fixture_dir) if args.fixture_dir else fetch_url
-    seen = load_seen(root)
     if args.fixture_dir:
         config = {**config, "lookback_hours": 24 * 365 * 50}  # フィクスチャの日付は古いので期間で落とさない
-    candidates, errors = collect(config, now, seen, fetcher)
+    candidates, errors = collect(config, now, load_seen(root), fetcher)
     for e in errors:
         print(f"  ! {e}", file=sys.stderr)
     print(f"候補 {len(candidates)} 件（取得失敗 {len(errors)} / {len(config['feeds'])} フィード）")
@@ -682,22 +686,73 @@ def run_daily(root, config, now, today, args):
         raise SystemExit("すべてのフィードの取得に失敗しました")
     if not candidates:
         print("新しい候補がないため、今日の号は作りません")
-        return
+        return None
+    return candidates
 
-    system, user = build_prompt(candidates, config)
-    caller = fake_claude if args.fake_llm else call_claude
-    result = caller(system, user, config)
+
+def publish(root, config, now, today, candidates, result):
+    """Claude の返答から号を作って保存し、候補を既出として記録する。"""
     edition = to_edition(result, candidates, today, config, now)
-
+    seen = load_seen(root)
     for c in candidates:
         seen.setdefault(c["id"], today)
     save_seen(root, seen, today, config.get("seen_keep_days", 21))
-
     if not edition["items"]:
         print("柔術に関係する記事がなかったため、今日の号は作りません")
         return
     path = write_edition(root, edition)
     print(f"{len(edition['items'])} 件を掲載: {path}")
+
+
+def run_daily(root, config, now, today, args):
+    """取得から要約まで一気に。要約は API（ANTHROPIC_API_KEY）で Claude を呼ぶ。"""
+    if not args.fake_llm and not os.environ.get("ANTHROPIC_API_KEY"):
+        print("ANTHROPIC_API_KEY が未設定のため、ニュースの取得・要約はスキップします。", file=sys.stderr)
+        return
+    candidates = gather(root, config, now, today, args)
+    if candidates is None:
+        return
+    system, user = build_prompt(candidates, config)
+    caller = fake_claude if args.fake_llm else call_claude
+    publish(root, config, now, today, candidates, caller(system, user, config))
+
+
+PROMPT_TAIL = """
+## 返し方
+
+上の決まりに従って、次の形の JSON を `result.json` として、このファイルと同じフォルダに保存してください。
+JSON 以外は書かないでください。`id` は候補の `id` をそのまま写してください。
+
+```json
+{schema}
+```
+
+## 候補
+
+{user}
+"""
+
+
+def collect_to_dir(root, config, now, today, args, out):
+    """ルーティン（Claude Code の定期実行）用の前半。要約は実行中の Claude が prompt.md を読んで書く。"""
+    candidates = gather(root, config, now, today, args)
+    if candidates is None:
+        return 0
+    out.mkdir(parents=True, exist_ok=True)
+    body = {"date": today, "candidates": candidates}
+    (out / "candidates.json").write_text(json.dumps(body, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    system, user = build_prompt(candidates, config)
+    schema = json.dumps(OUTPUT_SCHEMA, ensure_ascii=False, indent=1)
+    (out / "prompt.md").write_text(system + PROMPT_TAIL.format(schema=schema, user=user), encoding="utf-8")
+    print(f"候補を書き出しました: {out / 'prompt.md'} を読んで {out / 'result.json'} を書いてください")
+    return 0
+
+
+def apply_from_dir(root, config, now, today, src):
+    """ルーティン用の後半。collect_to_dir が書いた候補と、Claude が書いた result.json から号を作る。"""
+    body = json.loads((src / "candidates.json").read_text(encoding="utf-8"))
+    result = json.loads((src / "result.json").read_text(encoding="utf-8"))
+    publish(root, config, now, body.get("date") or today, body["candidates"], result)
 
 
 if __name__ == "__main__":
