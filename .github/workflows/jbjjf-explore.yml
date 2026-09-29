@@ -18,7 +18,7 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-      - run: python3 tools/jbjjf/explore3.py && mkdir -p out
+      - run: pip install -q openpyxl && python3 tools/jbjjf/explore3.py && mkdir -p out
       - uses: actions/upload-artifact@v4
         with:
           name: jbjjf-entries
