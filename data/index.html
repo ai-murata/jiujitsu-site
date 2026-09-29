@@ -504,6 +504,52 @@
   </div>
 </section>
 
+<section class="growth">
+  <div class="wrap">
+    <div class="eyebrow" style="text-align:center">SJJJF Tournaments</div>
+    <h2>スポーツ柔術の大会を、4年分ひらく</h2>
+    <p class="growth-sub">SJJJF（スポーツ柔術日本連盟）の35大会・のべ9,765エントリー（2023〜2026年）を集計しました</p>
+    <div class="stat-row">
+      <div class="stat"><div class="v">5,508<span style="font-size:14px">人</span></div><div class="k">出場した選手（2023〜2026・同一人物は1人）</div></div>
+      <div class="stat"><div class="v">440</div><div class="k">出場選手の所属道場・チーム</div></div>
+      <div class="stat"><div class="v">41</div><div class="k">出場選手の国籍（国・地域）</div></div>
+      <div class="stat"><div class="v">39%</div><div class="k">2大会以上に出場した選手</div></div>
+    </div>
+
+    <div class="chart-box" style="margin-bottom:14px">
+      <div class="chart-title">同じ大会の、年ごとの出場者数</div>
+      <div class="hist-grid" id="sj-series" style="margin-top:0"></div>
+      <div class="chart-note">
+        大人中心の大会は伸びています。北海道柔術選手権は3年で2.3倍、リバーサル福岡は2026年に過去最多の452人。キッズ中心の柔術甲子園は横ばいからやや減少です。
+      </div>
+    </div>
+
+    <div class="stat-row" style="margin-top:22px">
+      <div class="stat"><div class="v">38<span style="font-size:14px">歳</span></div><div class="k">大人の出場者の年齢（中央値）</div></div>
+      <div class="stat"><div class="v">38→46%</div><div class="k">40歳以上の割合（2023→2025）</div></div>
+      <div class="stat"><div class="v">35%</div><div class="k">キッズ（15歳以下）のエントリー</div></div>
+      <div class="stat"><div class="v">9<span style="font-size:14px">歳</span></div><div class="k">キッズでいちばん出場が多い年齢</div></div>
+    </div>
+
+    <div class="hist-grid">
+      <div class="hist-box">
+        <div class="t">大人の出場者の年齢（18歳以上・のべ6,153エントリー）</div>
+        <div class="hist" id="sj-age-adult"></div>
+      </div>
+      <div class="hist-box">
+        <div class="t">キッズ・ユースの年齢（17歳以下・のべ3,612エントリー）</div>
+        <div class="hist" id="sj-age-kids" style="gap:3px"></div>
+      </div>
+    </div>
+
+    <div class="chart-note" style="padding-top:14px">
+      出典：SJJJF提供の大会エントリーデータ（2023年2月〜2026年4月・35大会）。キャンセル・変更前のエントリーは除き、確定したエントリーのみを集計しています。
+      年齢は大会当日時点。「出場した選手」は氏名と生年月日で同一人物をまとめた人数です。公開しているのは集計値のみで、個人が特定できる情報は掲載していません。<br>
+      大人の出場者の中心は30〜40代で、40歳以上の割合は高まる傾向です。柔術が「大人になってから始めて、長く続ける競技」であることが数字にも表れています。
+      2023年の出場者のうち41%が翌年も大会に出場しました。東日本柔術選手権は2024年に大人・マスター・キッズで大会を分けたため、比較から除いています。
+    </div>
+  </div>
+</section>
 
 <section class="beltpath">
   <div class="wrap">
@@ -553,7 +599,7 @@
 
 <footer>
   <div class="wrap">
-    出典：ASJJF大会システム（SJJIF世界選手権・SJJJF国内大会、2026年シーズン） ／ 日本ブラジリアン柔術連盟の公開資料（加盟アカデミー一覧の各年アーカイブ・大会エントリーリスト2016〜2026年・423大会）。<br>
+    出典：ASJJF大会システム（SJJIF世界選手権・SJJJF国内大会、2026年シーズン） ／ SJJJF提供の大会エントリーデータ（2023〜2026年・35大会） ／日本ブラジリアン柔術連盟の公開資料（加盟アカデミー一覧の各年アーカイブ・大会エントリーリスト2016〜2026年・423大会）。<br>
     数値はすべて公開されている大会記録からの集計で、昇帯年数は出場記録に基づく推定です。歴史年表は各種公開資料に基づきます。
   </div>
 </footer>
@@ -678,6 +724,46 @@ const GROWTH = [[2018,253],[2019,261],[2020,270],[2021,282],[2022,302],[2023,306
   }
 })();
 
+
+/* ================= SJJJF大会データ（2023〜2026） ================= */
+(function(){
+  function hist(host, data, opts){
+    if(!host) return;
+    const max = Math.max(...data.map(d=>d[1]));
+    data.forEach(([label,n],i)=>{
+      const col = document.createElement("div"); col.className="col";
+      const hl = opts && opts.hl === i;
+      col.innerHTML = `<span class="n">${n.toLocaleString()}</span><div class="bar" style="flex:none;height:${Math.round(n*64/max)}%${hl?";background:#8a6c15":""}"></div><span class="y" style="white-space:nowrap${opts&&opts.small?";font-size:9.5px":""}">${label}</span>`;
+      host.appendChild(col);
+    });
+  }
+  const SERIES = [
+    ["北海道柔術選手権", [["23",129],["24",241],["25",275],["26",291]]],
+    ["リバーサルカップ福岡", [["23",332],["24",366],["25",351],["26",452]]],
+    ["リバーサルカップ札幌", [["23",222],["24",224],["25",307]]],
+    ["全日本柔術選手権", [["23",594],["24",477],["25",616]]],
+    ["柔術甲子園（夏）", [["23",366],["24",350],["25",337]]],
+    ["春季柔術甲子園", [["24",299],["25",242],["26",222]]],
+  ];
+  const wrap = document.getElementById("sj-series");
+  if(wrap){
+    wrap.style.gridTemplateColumns = "repeat(auto-fit,minmax(200px,1fr))";
+    SERIES.forEach(([name,data])=>{
+      const box = document.createElement("div");
+      box.className = "hist-box";
+      box.style.padding = "14px 14px 10px";
+      box.innerHTML = `<div class="t">${name}</div><div class="hist" style="height:120px"></div>`;
+      wrap.appendChild(box);
+      hist(box.querySelector(".hist"), data.map(([y,n])=>["20"+y,n]), {hl:data.length-1});
+    });
+  }
+  hist(document.getElementById("sj-age-adult"),
+    [["18-",141],["20-",568],["25-",817],["30-",979],["35-",989],["40-",1037],["45-",904],["50-",520],["55-",150],["60-",48]],
+    {small:true});
+  hist(document.getElementById("sj-age-kids"),
+    [["≤4",12],["5",60],["6",154],["7",366],["8",455],["9",525],["10",505],["11",462],["12",397],["13",240],["14",179],["15",81],["16",100],["17",76]],
+    {small:true, hl:5});
+})();
 
 /* ================= 競技人口 ================= */
 (function(){
