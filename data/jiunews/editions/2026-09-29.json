@@ -1,0 +1,127 @@
+{
+ "date": "2026-09-29",
+ "generated_at": "2026-09-29T11:16:52+09:00",
+ "lead": "国内は、静岡・函南町の兄弟が世界大会で金・銀、中学3年生がノーギ世界選手権でベスト16と、若い選手の活躍が続きました。海外からは、UFC BJJ 11のメインカードや、道場のあり方をめぐるベテランの発言などをお届けします。",
+ "items": [
+  {
+   "id": "eadc11d10b75",
+   "region": "jp",
+   "category": "大会結果",
+   "title": "函南町の小川兄弟、柔術の世界大会で金と銀",
+   "summary": "静岡県函南町の小川龍乃丞さんと樟乃丞さんの兄弟が、柔術の世界大会で金メダルと銀メダルを獲得しました。記事の見出しでは、兄弟それぞれが「格闘技王者に」「高みへ」と今後の目標を語ったことが伝えられています。",
+   "point": "兄弟そろって世界の舞台で結果を出した、地元静岡からのうれしいニュースです。",
+   "source": "静岡新聞DIGITAL",
+   "original_title": "柔術 兄弟で世界 金・銀 函南の小川龍乃丞さん 樟乃丞さん 「格闘技王者に」「高みへ」",
+   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5BbmYyM1BBODhudTBPR0dCVDBkQ0hRT0s4bU5sOE5UQkNlX2hhZ2hhZ1RURlVWZ0VwN2Z6WVN4ZnpkQXRwYkRKU3laWEdwZw?oc=5",
+   "published": "2026-09-27T21:00:00+00:00"
+  },
+  {
+   "id": "227a12b01d2a",
+   "region": "jp",
+   "category": "大会結果",
+   "title": "かえつ有明の中学3年生、ノーギ世界選手権でベスト16",
+   "summary": "かえつ有明の中学3年生が、ポーランドで行われたノーギ柔術の世界選手権に出場し、ベスト16に入りました。ノーギは道着を着ずに行う柔術のことです。",
+   "point": "中学生でも世界選手権の舞台に立てるのが、柔術の間口の広さを感じさせます。",
+   "source": "読売新聞",
+   "original_title": "ノーギ柔術の世界選手権ベスト１６、中３がポーランドで熱戦…かえつ有明",
+   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNWXdYeW1pOTdGT0lCOElMZkJvT3BrWk1fNGdUblJYWGl0bG94T3pyV050NmFSYVhSQ0FaWWRyVWdJYVdPTEhMRmdUcHVIS041WUlDeUhXQmFPYVNnVWcwejBGNl9IUFFTeGk2Y3BnSXQ5WlQwQkFDcnRPRVNfQXc0clhUUjM4RWRIV2c?oc=5",
+   "published": "2026-09-28T20:00:00+00:00"
+  },
+  {
+   "id": "606e30875ce3",
+   "region": "jp",
+   "category": "選手・人物",
+   "title": "柔術・田中美佳選手、アジア大会での活躍を誓う",
+   "summary": "トヨタイムズスポーツが、柔術の田中美佳選手を紹介しました。シロイルカから癒しを得て活力にしているという話とともに、アジア大会での活躍を誓っています。",
+   "point": "アジア大会では柔術も実施競技になっており、日本代表選手の動きに注目です。",
+   "source": "トヨタイムズスポーツ",
+   "original_title": "優しい顔のシロイルカから得た癒しを活力に、アジア大会への活躍を誓う 柔術・田中美佳",
+   "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBOOUgtSXBtRjJPSjg2bDdnVEJQRk1wak13dmY4VUZYY1ZIWjlwLWJmMHpTVURnNXRlbGZ5YU9IU3ViZWM4WS1BeXlvTkFJVzhOTGVIZmhzamhnMVZwdzlvT1d3?oc=5",
+   "published": "2026-09-28T10:05:00+00:00"
+  },
+  {
+   "id": "d985af89208d",
+   "region": "jp",
+   "category": "選手・人物",
+   "title": "柔術韓国代表、再審申請で懲戒停止しアジア大会へ",
+   "summary": "韓国の柔術代表選手が、受けていた懲戒について再審を申請し、その効力が停止されました。これにより、アジア大会に出場できることになったと伝えられています。",
+   "point": "",
+   "source": "Chosunbiz",
+   "original_title": "柔術韓国代表が再審申請で懲戒効力停止しアジア大会出場へ - CHOSUNBIZ",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPNVZPTGlQRnRheU01WGo5d1lCWXllVlZRaVdaVjJ6S3o0N3RZNlM1N0s3a3Q2dVdSaXhURVkxTklETkRyZHA2ZFdoT05jNEgxOHY2bkRCNHZpY25QWW11dl9RdjFuSkMyZ3h1NXZteEp1d2F5elUzOGJxWDl2Ui1iQkljMkwwZlNaZGROVFlaMnNJQzls0gGUAUFVX3lxTE81Vk9MaVBGdGF5TTVYajl3WUJZeWVWVlFpV1pWMnpLejQ3dFk2UzU3SzdrdDZ1V1JpeFRFWTFOSURORHJkcDZkV2hPTmM0SDE4djZuREI0dmljblBZbXV2X1F2MW5KQzJneHU1dm14SnV3YXl6VTM4YnFYOXZSLWJCSWMyTDBmU1pkZE5UWVoyc0lDOWw?oc=5",
+   "published": "2026-09-28T01:23:00+00:00"
+  },
+  {
+   "id": "938340c1bd6d",
+   "region": "intl",
+   "category": "大会・イベント",
+   "title": "UFC BJJ 11、メインはミッチェル対ムスメシ",
+   "summary": "UFCが主催する柔術大会「UFC BJJ 11」のメインイベントで、ブライス・ミッチェル（Bryce Mitchell）とマイキー・ムスメシ（Mikey Musumeci）が対戦することが決まりました。",
+   "point": "UFCファイターと柔術のトップ選手の組み合わせで、打撃なしの寝技勝負がどうなるかが見どころです。",
+   "source": "mymmanews.com",
+   "original_title": "Bryce Mitchell vs. Mikey Musumeci headlines UFC BJJ 11",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNdDczaXRZWVp1R2QxT2hLdFVxaDVPb2wtbXBGZkN4N2JELW52OVI0YTJQRlFIRmZhdUxJUGVwWExzRHBxeGlwUkZNQ212OUdyTlhfeXA0VksyZDJpRGRPVXA0dm0xZDRrTFdsRmR0UVJ4T1g4MWxpa3hsMTkyRjJiYk1n?oc=5",
+   "published": "2026-09-28T05:10:52+00:00"
+  },
+  {
+   "id": "f5a85f14863c",
+   "region": "intl",
+   "category": "道場・団体",
+   "title": "ホイエッター氏「生徒を縛る道場からは離れて」",
+   "summary": "柔術のレジェンド、クリス・ホイエッター（Chris Haueter）氏が、生徒が着るものや教える内容を道場側が決めつけるような、支配的な道場について注意をうながしました。そうした道場からは離れるよう、生徒に呼びかけています。",
+   "point": "道場選びで迷っている人にとって、「居心地のよさ」も大切な基準だと考えるきっかけになります。",
+   "source": "BJJDOC",
+   "original_title": "BJJ Legend Chris Haueter Cautions Students To Leave Controlling/Toxic BJJ Academies Which Dictate What Students Can Wear Or Teach",
+   "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQWWIxYTdZMS1iLUxhQmRRQUhrcF9nZHgxTnJkVk5VSmVtemRrRWp5QWljVDZmYVg2UVBVT0g1TGYxaUtLV2UwU3k5WVp0bTNPZlIyODNTQ2NHS0lWeDZnc0xsbzdhdTN0WU8yNlc1djEtUFpZMVFDNTZLWW5vVXNlbWtXQzlaRDhUYy02WGtrRkVZMjJJR1hwS1RGVkJLYzRtV1otWFkyRlJEbnZtWTlESGE4V0xDVEhZcmkyNzhIVmp4VVBqNVFSMVJSWkIxVzU2VkJzN2hlR05ySGpxbUI4cDJSYUpmZU5BczBWdnV4VGFNc1U5?oc=5",
+   "published": "2026-09-28T08:47:12+00:00"
+  },
+  {
+   "id": "f26f9239c4df",
+   "region": "intl",
+   "category": "大会・イベント",
+   "title": "UFC BJJオープン、スラムへの対応に批判",
+   "summary": "UFC BJJオープンで、スラム（相手を持ち上げてマットにたたきつける行為）への対応がまずかったとして批判が出ています。",
+   "point": "スラムは多くの大会で反則とされる危険な行為で、審判の対応は選手の安全に直結します。",
+   "source": "BJJDOC",
+   "original_title": "UFC BJJ Open Called Out For Inept Handling Of Slams",
+   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVjZRbGxIOVRwMmNhSjNXV1FVQ3RSdlNKNFJCQWZuRi1yMldkS1U5eGdZUWRQTFBMNWQtUHhreG1tWUpvalVyS2NCdnJMWkNHdDM2c01RREplVWptRUp0ak03RDN1VUx5cndYVFExNWp2bXZCc3FDdTZQNkUwd0w3dnhEX0xhcUpSR2c?oc=5",
+   "published": "2026-09-28T10:18:21+00:00"
+  },
+  {
+   "id": "d04aca399fd6",
+   "region": "intl",
+   "category": "その他",
+   "title": "ホイス・グレイシー、バンズの柔術・MMA参入を明かす",
+   "summary": "UFCの伝説的選手ホイス・グレイシー（Royce Gracie）が、靴ブランドのバンズ（Vans）が柔術とMMA（総合格闘技）の分野に参入すると明かしました。",
+   "point": "",
+   "source": "Shredder News",
+   "original_title": "UFC Legend Royce Gracie Reveals Vans Is Entering the Jiu Jitsu and MMA Game",
+   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE83dVFpUVAzejZCSU5sN1hXM0NmbFhWVGZQcElYUUdYOUc2SEptSVkzVzBZSkNLTC10akFieXJwTnFyeEgyMHg5ZTVwcml5WERJb3ZLcnVGc0hUZk0tc2Z5SWlLTmM?oc=5",
+   "published": "2026-09-28T16:16:25+00:00"
+  },
+  {
+   "id": "55f024cef607",
+   "region": "intl",
+   "category": "技術・練習",
+   "title": "米イリノイ州の消防士が柔術で護身を学ぶ",
+   "summary": "アメリカ・イリノイ州の消防士たちが、現場での護身のために柔術のトレーニングを受けました。",
+   "point": "競技だけでなく、身を守る技術として柔術が仕事の現場でも取り入れられている例です。",
+   "source": "Eyewitness News (WEHT/WTVW)",
+   "original_title": "Illinois firefighters receive jiu-jitsu training for self-defense in the field",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQLUgzc0lkZHc0ZVl3c2xQVE5OWVFkcEh6d3RaeUNnbGF5TktRb09PSkhmaXBYVFlDZ3JwTU95Y3FzRnhKLUxZNGtFMDFnWFg0NUE5RUhDdjdPZm8tV04zU21pRk5xNHFqeXJpeGZPVVlLcWZ4VmIyM0RYaEZUZDVyRUZSRTBPY2VFcWpvT3Vwcm1hOG55T04zZmZzMEFaWDEybjFrcU4xTU5xQVFOMEkxY0syZkY2RW9r0gG-AUFVX3lxTE1ic25XV2k5ei1mam9ZS1dkdzRvOG1mZ2kzbFZRcTRrQWVvX3VwdHNERGJjTW85WWZoa05FVERhNzJabFNuelFkQzR6Mm1oTGM2R2lZUWF1MTNvQTZCSnJOUGhVenI0c2p0aE9BZFBqdUpqc2I0MzJrQTQ4VU9mQnJRU2RnZlgxdXFENV9iQ1BzSXUtVm5XMmY3SlY2MVZ5VERmRk5rbWFmSFNGdnJjbHA0ZHVFWDV3ck1tZVBGcEE?oc=5",
+   "published": "2026-09-28T19:27:18+00:00"
+  },
+  {
+   "id": "a1b92cdc68a2",
+   "region": "intl",
+   "category": "選手・人物",
+   "title": "ダブル金メダルのチャーボノー選手「継続とコミュニティ」",
+   "summary": "アラスカ州ジュノーの柔術選手で、2つの金メダルを獲ったベッカ・チャーボノー（Becca Charbonneau）さんが、続けることと仲間の大切さについて語りました。",
+   "point": "強くなる秘訣として「継続」と「仲間」を挙げる声は、これから始める人にも参考になります。",
+   "source": "KTOO",
+   "original_title": "Tongass Voices: Double gold jiu-jitsu champion Becca Charbonneau of Juneau on consistency and community",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQeUp3UktSbGQtWGd2UUxLVURZeFpFTkgwNzRmLVZOcFBmY0ItVzhrdU1xMktOcWZnR0RWakc2V3YtYnR3bXVPS0lSb184MFR1WUZLXzJRdFBaY0oyWUw5X0Q0TFoxNzdZMHg3a1ZpdnJBeGdHd2ttb2lzT1piWDAtZTFHOWNxRnJQeUpoa0dxaVVLMTcydnhmeGRQMUtpWmdveEhDLXBfU2VBUVZINEptcmF5VnJmTE1KMGNzX3ZTd1l5TlpYRTJjbUZNR2hZZWg2?oc=5",
+   "published": "2026-09-28T22:17:16+00:00"
+  }
+ ]
+}
