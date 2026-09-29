@@ -96,6 +96,7 @@ def select(commits, date, config):
             skipped += 1
             continue
         work.append({
+            "sha": c["sha"],
             "time": c["date"].strftime("%H:%M"),
             "subject": c["subject"],
             "body": body,
@@ -124,22 +125,33 @@ PROMPT = """# クラウド日記の下書きを書く（{date_label}）
 
 ## 読む人
 道場やサロン、小さなお店を切り盛りしている人、事務仕事を楽にしたい人。エンジニアではない。
-「アイさんは今日なにをしたか」より、**「それ、私の仕事ならどう使える？」「どう頼めばいい？」**を知りたい。
+AIの一般的な使い方の記事はもう読み飽きている。**「え、そんなこともできるの？」「それは知らなかった」**が読みたい。
+
+## 何を書くか（いちばん大事）
+- 今日の作業から、**読む人にとって目新しいこと**を 1〜{max_items} つだけ選ぶ。選ぶ順番：
+  1. Claude Code に「こんなことまで任せられた」という実例（自動で毎日動く仕組み、道具づくり、デザイン など）
+  2. 実際につまずいたことと、どう解決したか（fix のコミットは宝物。何が起きて、何が原因で、どう直したか）
+  3. やってみて初めて分かった具体的な発見（例：小さいアイコンでは2段の文字は読めない → タブとホーム画面で分けた）
+- **誰でも言える一般論は書かない。** 「あとから足せばいい」「まとめて頼むといい」「完璧を目指さない」のような、
+  AIの記事によくあるコツは禁止。その日の作業でしか言えない、具体的なことだけを書く。
+- 作業の中身は、材料の一覧だけでなく `git show <番号>` で実際の変更を見て、具体的に書いてよい
+  （仕組みの動き方、何回作り直したか、どんな順番で進めたか、など）。ただし推測で数字や結果を足さない。
+- 見た目の小さな調整、文言の直し、ほかの人に関係のない作業は捨てる。
+- 目新しいことが1つもない日は、items を1つにして短く書く。
 
 ## 書き方
-- **作業の一覧にしない。** 今日の作業から、読む人の役に立ちそうなものを **1〜{max_items} つだけ** 選ぶ。
-  小さな修正や、ほかの人に関係のない作業は思い切って捨てる。似た作業はまとめる。
-- 1つの話ごとに次の4つを書く：
-  1. heading：読む人にとっての見出し（「〇〇をClaudeに任せた」「〇〇が1回で直る頼み方」など）
-  2. text：困っていたこと → Claude Codeと何をしたか → どう楽になったか（2〜4文）
-  3. ask：**真似するときの頼み方の例**。読む人が自分の仕事に置きかえてそのまま使える一言（「」は付けない）。
-     アイさんが実際にそう言ったとは書かない（あくまで「こう頼めばできる」の例）。
-  4. tip：やってみて分かったコツ・気をつけること（1〜2文）。材料から言えることだけ。
+- 1つの話ごとに次を書く：
+  1. heading：読む人が「え？」と思う見出し（「〇〇を毎朝Claudeが勝手にやってくれる」「アイコンを5回作り直して分かったこと」など）
+  2. text：何をしたか、どう動くのか、何が起きたかを具体的に（2〜5文）。仕組みはたとえ話でかみくだく
+  3. ask：真似するときの頼み方の例（読む人が自分の仕事に置きかえて使える一言。「」は付けない）。
+     アイさんが実際にそう言ったとは書かない
+  4. tip：この作業でしか分からなかった発見・つまずき・注意点（1〜2文）。一般論は禁止
+  5. link：このサイトの公開ページで実物が見られるなら、そのパス（例："/jiunews/"）。無ければ ""
 - アイさんの一人称（「私」）。やさしい、です・ます調。ブログ（/blog/）の口調に合わせる。
   専門用語は使うなら（　）でひとこと説明する。
-- **材料に書かれていないことは足さない。** 人の名前、数字、お客さまの話、かかった時間を作らない。
-- title は読む人が得することが分かる言い方にする（「〇〇した日」より「〇〇はClaudeに任せられる」）。
-- ファイル名・コミットのハッシュ・URLは書かない。
+- **材料と変更の中身から言えないことは足さない。** 人の名前、数字、お客さまの話、かかった時間を作らない。
+- title は、いちばん目新しい話がひと目で分かるように。
+- ファイル名・コミットの番号・外部のURLは書かない（link だけはサイト内のパス）。
 - 次の言葉や、それを指す内容は **絶対に書かない**（非公開のページのため）：{private_words}
 
 ## 出力
@@ -149,10 +161,10 @@ PROMPT = """# クラウド日記の下書きを書く（{date_label}）
 {{
   "date": "{date}",
   "title": "日記のタイトル（25字くらいまで）",
-  "lead": "書き出し（1〜2文。今日のテーマと、どんな人の役に立つか）",
+  "lead": "書き出し（1〜2文。今日いちばんの「え？」を先に言う）",
   "items": [
-    {{"heading": "見出し（25字くらいまで）", "text": "困りごと→やったこと→どう楽になったか",
-      "ask": "真似するときの頼み方の例", "tip": "コツ・気をつけること"}}
+    {{"heading": "見出し（25字くらいまで）", "text": "何をしたか・どう動くか・何が起きたか",
+      "ask": "真似するときの頼み方の例", "tip": "この作業でしか分からなかった発見", "link": "/jiunews/ または \"\""}}
   ],
   "closing": "ひとこと（1〜2文。読んだ人へのひと押し）"
 }}
@@ -170,7 +182,7 @@ PROMPT = """# クラウド日記の下書きを書く（{date_label}）
 def build_prompt(date, work, auto, config, inbox):
     lines = []
     for w in work:
-        lines.append(f"- {w['time']}　{w['subject']}")
+        lines.append(f"- {w['time']}　{w['subject']}　（番号 {w['sha'][:7]}）")
         if w["body"]:
             lines.extend("    " + ln for ln in w["body"].splitlines())
         if w["files"]:
@@ -216,7 +228,24 @@ def _text(value, key, errors):
     return value
 
 
-def to_entry(result, candidates, config):
+def check_link(link, root, config, errors):
+    """サイト内の公開ページへのパスだけを通す（無ければ ""）。"""
+    if not link:
+        return ""
+    if not isinstance(link, str) or not re.fullmatch(r"/[a-z0-9-]+(/[a-z0-9-]+)*/", link):
+        errors.append(f"link「{link}」は /jiunews/ のようなサイト内のパスにしてください")
+        return ""
+    rel = link.strip("/") + "/"
+    if is_private_path(rel, config) or has_private_word(link, config):
+        errors.append(f"link「{link}」は非公開のページです")
+        return ""
+    if not (root / rel / "index.html").exists():
+        errors.append(f"link「{link}」のページがありません")
+        return ""
+    return link
+
+
+def to_entry(result, candidates, config, root=REPO):
     errors = []
     date = candidates["date"]
     if result.get("date") != date:
@@ -237,12 +266,14 @@ def to_entry(result, candidates, config):
         errors.append(f"items が多すぎます（{len(items)} > {config['max_items']}）")
     for i, it in enumerate(items):
         it = it if isinstance(it, dict) else {}
-        entry["items"].append({k: _text(it.get(k), k, errors) for k in ("heading", "text", "ask", "tip")})
+        item = {k: _text(it.get(k), k, errors) for k in ("heading", "text", "ask", "tip")}
+        item["link"] = check_link(it.get("link"), root, config, errors)
+        entry["items"].append(item)
     everything = json.dumps({k: entry[k] for k in ("title", "lead", "items", "closing")}, ensure_ascii=False)
     for w in config["private_words"]:
         if w.lower() in everything.lower():
             errors.append(f"非公開の言葉「{w}」が入っています")
-    if re.search(r"https?://|[0-9a-f]{12,}", everything):
+    if re.search(r"https?://|\b[0-9a-f]{7,40}\b", everything):
         errors.append("URLやハッシュが入っています")
     if errors:
         raise ValueError("result.json を直してください：\n- " + "\n- ".join(errors))
@@ -262,7 +293,7 @@ def load_entries(root):
 def apply(root, inbox, config):
     candidates = json.loads((inbox / "candidates.json").read_text(encoding="utf-8"))
     result = json.loads((inbox / "result.json").read_text(encoding="utf-8"))
-    entry = to_entry(result, candidates, config)
+    entry = to_entry(result, candidates, config, root)
     d = entries_dir(root)
     d.mkdir(parents=True, exist_ok=True)
     (d / f"{entry['date']}.json").write_text(json.dumps(entry, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -345,6 +376,8 @@ HEAD = """<!DOCTYPE html>
   .did .ask p::before {{ content: "「"; }} .did .ask p::after {{ content: "」"; }}
   .did .tip {{ margin: 10px 0 0; font-size: 13.5px; }}
   .tip b {{ color: var(--gold); margin-right: 8px; font-size: 12px; letter-spacing: .08em; }}
+  .did .see {{ margin: 8px 0 0; font-size: 13.5px; font-weight: 700; }}
+  .did .see a {{ text-decoration: none; }}
   .closing {{ background: var(--panel); border-left: 3px solid var(--gold); padding: 14px 18px; }}
   .auto {{ font-size: 12.5px; color: var(--faint); }}
   .note {{ font-size: 12px; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 40px; }}
@@ -402,7 +435,9 @@ def render_entry(entry, newer, older):
     for it in entry["items"]:
         out.append(f"      <li><h2>{esc(it['heading'])}</h2><p>{esc(it['text'])}</p>\n"
                    f'        <div class="ask"><span>真似するなら、こう頼む</span><p>{esc(it["ask"])}</p></div>\n'
-                   f'        <p class="tip"><b>コツ</b>{esc(it["tip"])}</p></li>\n')
+                   f'        <p class="tip"><b>発見</b>{esc(it["tip"])}</p>\n'
+                   + (f'        <p class="see"><a href="{esc(it["link"])}">できたものを見る →</a></p>\n' if it.get("link") else "")
+                   + "      </li>\n")
     out.append("    </ol>\n")
     out.append(f'    <p class="closing">{esc(entry["closing"])}</p>\n')
     auto = entry.get("auto") or []

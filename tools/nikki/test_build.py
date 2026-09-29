@@ -88,6 +88,13 @@ class EntryTest(unittest.TestCase):
         self.bad(closing="まみちゃんのノートも直しました。")
         self.bad(items=[{**GOOD["items"][0], "heading": "スタッフ用ページ"}])
 
+    def test_link_must_be_public_page_on_this_site(self):
+        ok = build.to_entry({**GOOD, "items": [{**GOOD["items"][0], "link": "/jiunews/"}]}, self.CANDS, CONFIG)
+        self.assertEqual(ok["items"][0]["link"], "/jiunews/")
+        self.bad(items=[{**GOOD["items"][0], "link": "https://example.com/"}])
+        self.bad(items=[{**GOOD["items"][0], "link": "/handbook/"}])
+        self.bad(items=[{**GOOD["items"][0], "link": "/no-such-page/"}])
+
     def test_rejects_urls_and_hashes(self):
         self.bad(lead="https://example.com を見てね")
         self.bad(lead="コミット 72b8c6d0a1b2c3 を入れた")
