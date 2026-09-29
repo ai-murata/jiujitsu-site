@@ -354,6 +354,15 @@
   .gpt{fill:#a5821c;stroke:#ffffff;stroke-width:1.5;cursor:pointer}
   .glabel{font-size:11px;fill:var(--text);font-weight:700;font-family:"Zen Kaku Gothic New",sans-serif}
 
+  .wscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .wscroll svg{min-width:600px}
+  .wbar{cursor:pointer}
+  .wbar.us{fill:#e2d3a4}
+  .wbar.jp{fill:#a5821c}
+  .wbar:hover{fill:#241e12}
+  .wlegend{display:flex;gap:16px;justify-content:flex-end;font-size:11.5px;color:var(--muted);letter-spacing:.05em;padding:0 6px 8px}
+  .wlegend .sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+
   /* ---- belt path ---- */
   .beltpath{
     border-top:1px solid var(--line);
@@ -478,6 +487,28 @@
         出典：JBJJF「加盟アカデミー一覧」各年のインターネットアーカイブ（2018〜2025）および現行ページ（2026年8月）。
         取得月は年によって異なります（おおむね各年の年央）。連盟の年度更新直後は登録数が一時的に少なく見えるため、年初の記録は使用していません。<br>
         選手数は国内大会のエントリーリストによる年別ユニーク出場者（同姓同名は区別できないため概数）。コロナ禍で2021年に2,130人まで落ち込んだ後、4年で2.7倍の5,752人（2025年・過去最多）まで回復・成長した。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="growth" style="background:none">
+  <div class="wrap">
+    <div class="eyebrow" style="text-align:center">World</div>
+    <h2 style="font-family:'Shippori Mincho B1',serif;font-weight:800;font-size:clamp(22px,4vw,32px);letter-spacing:.06em;text-align:center;text-wrap:balance"><span style="display:inline-block">世界選手権は、</span><span style="display:inline-block">日本で大きくなった</span></h2>
+    <p class="growth-sub">SJJIF世界選手権の参加者は、日本開催になってから3年で過去最多を更新し続けています</p>
+    <div class="stat-row">
+      <div class="stat"><div class="v">6,412<span style="font-size:14px">人</span></div><div class="k">2026年大会の参加者（東京・代々木）</div></div>
+      <div class="stat"><div class="v">53<span style="font-size:14px">か国以上</span></div><div class="k">2026年大会の参加国・地域</div></div>
+      <div class="stat"><div class="v">1.9<span style="font-size:15px">倍</span></div><div class="k">米国開催時の最多（2017年・3,435人）との比較</div></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">SJJIF世界柔術選手権の参加者数（2013–2026）</div>
+      <div class="wlegend"><span><span class="sw" style="background:#e2d3a4"></span>米国・ブラジル開催</span><span><span class="sw" style="background:#a5821c"></span>日本開催</span></div>
+      <div class="wscroll"><svg id="wchart" viewBox="0 0 720 280" role="img" aria-label="SJJIF世界柔術選手権の参加者数。2013年2,012人、2017年3,435人、2019年3,184人、2020年は開催なし、2021年700人、2023年1,491人、日本開催の2024年4,089人、2025年約5,000人、2026年6,412人"></svg></div>
+      <div class="chart-note">
+        出典：SJJIF「GS REPORT 2026」（SJJIF World Jiu-Jitsu Championship Participation 2013–2026）。2013〜2022年は米国、2023年はブラジル、2024年以降は日本で開催。
+        2020年はコロナ禍のため参加者0（開催なし）。2025年は資料上の概数で、報道では「約5,500人・70か国」とされています。
       </div>
     </div>
   </div>
@@ -628,6 +659,61 @@ const GROWTH = [[2018,253],[2019,261],[2020,270],[2021,282],[2022,302],[2023,306
       t.textContent = d[1]; svg.appendChild(t);
     }
   });
+})();
+
+/* ================= 世界選手権の参加者数 ================= */
+const WORLD = [[2013,2012,"米国"],[2014,2282,"米国"],[2015,2556,"米国"],[2016,2751,"米国"],[2017,3435,"米国"],[2018,2787,"米国"],[2019,3184,"米国"],
+  [2020,0,"米国"],[2021,700,"米国"],[2022,1116,"米国"],[2023,1491,"ブラジル"],[2024,4089,"日本"],[2025,5000,"日本"],[2026,6412,"日本"]];
+(function(){
+  const svg = document.getElementById("wchart");
+  const NS = "http://www.w3.org/2000/svg";
+  const W=720, H=280, L=46, R=10, T=24, B=46;
+  const ymax = 7000;
+  const slot = (W-L-R)/WORLD.length, bw = slot-10;
+  const y = v => T + (1 - v/ymax)*(H-T-B);
+  const el = (tag, attrs, text) => {
+    const e = document.createElementNS(NS, tag);
+    for(const k in attrs) e.setAttribute(k, attrs[k]);
+    if(text != null) e.textContent = text;
+    svg.appendChild(e); return e;
+  };
+  [0,2000,4000,6000].forEach(v=>{
+    el("line",{x1:L,x2:W-R,y1:y(v),y2:y(v),class:"ggrid"});
+    el("text",{x:L-8,y:y(v)+3.5,"text-anchor":"end",class:"gtick"}, v.toLocaleString());
+  });
+  const box = svg.closest(".chart-box");
+  const tip = document.createElement("div");
+  tip.className = "map-tip";
+  box.appendChild(tip);
+  const LABEL = new Set([2013,2017,2020,2021,2024,2025,2026]);
+  WORLD.forEach(([yr,n,host],i)=>{
+    const cx = L + slot*i + slot/2;
+    const jp = host==="日本";
+    if(n>0){
+      const top = y(n), base = y(0), r = 4;
+      const x0 = cx-bw/2, x1 = cx+bw/2;
+      el("path",{d:`M${x0},${base}V${top+r}Q${x0},${top} ${x0+r},${top}H${x1-r}Q${x1},${top} ${x1},${top+r}V${base}Z`, class:"wbar "+(jp?"jp":"us")});
+    }
+    // ホバー用の当たり判定（列全体）
+    const hit = el("rect",{x:cx-slot/2,y:T,width:slot,height:H-T-B,fill:"transparent",style:"cursor:pointer"});
+    const text = n>0 ? `${yr}年（${host}）：${n.toLocaleString()}人${yr===2025?"（概数）":""}` : `${yr}年：開催なし（コロナ禍）`;
+    hit.addEventListener("mousemove", e=>{
+      const rc = box.getBoundingClientRect();
+      tip.textContent = text;
+      tip.style.left = (e.clientX - rc.left) + "px";
+      tip.style.top  = (e.clientY - rc.top) + "px";
+      tip.style.display = "block";
+    });
+    hit.addEventListener("mouseleave", ()=>{ tip.style.display = "none"; });
+    if(LABEL.has(yr)){
+      el("text",{x:cx,y:y(n)-7,"text-anchor":"middle",class:"glabel","pointer-events":"none"},
+        n>0 ? (yr===2025 ? "約5,000" : n.toLocaleString()) : "開催なし");
+    }
+    el("text",{x:cx,y:H-26,"text-anchor":"middle",class:"gtick"}, yr);
+    el("text",{x:cx,y:H-11,"text-anchor":"middle",class:"gtick",style:jp?"fill:#8a6c15;font-weight:700":""}, host);
+  });
+  // スマホでは最新年（右端）が見えるように
+  const sc = svg.parentNode; sc.scrollLeft = sc.scrollWidth;
 })();
 
 /* ================= 黒帯までの道のり ================= */
