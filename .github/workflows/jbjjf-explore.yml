@@ -1,6 +1,7 @@
-name: JBJJF サイト構造の調査
+name: JBJJF エントリーリストの収集
 
-# jbjjf.com の公開ページからリンク構造だけを調べてログに出す（一時的な調査用）。
+# jbjjf.com の公開エントリーリスト（2023〜2026年）を集める一時ワークフロー。
+# 氏名はハッシュ化し、結果は artifact（7日で削除）にだけ置く。リポジトリには保存しない。
 on:
   push:
     branches: [claude/focused-noether-xnruny]
@@ -12,8 +13,14 @@ permissions:
   contents: read
 
 jobs:
-  explore:
+  scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-      - run: python3 tools/jbjjf/explore2.py
+      - run: python3 tools/jbjjf/scrape.py out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jbjjf-entries
+          path: out/
+          retention-days: 7
