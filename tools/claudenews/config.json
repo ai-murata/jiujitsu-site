@@ -1,0 +1,32 @@
+{
+  "_comment": "毎朝の Claude ニュース（/claudenews/）の取得元と選び方。取得元が1つ落ちても全体は止まらない。",
+  "feeds": [
+    {
+      "name": "Googleニュース（Claude）",
+      "region": "jp",
+      "url": "https://news.google.com/rss/search?q=Anthropic+OR+%22Claude+AI%22+OR+%22Claude+Code%22+when:2d&hl=ja&gl=JP&ceid=JP:ja"
+    },
+    {
+      "name": "Google News (Claude)",
+      "region": "intl",
+      "url": "https://news.google.com/rss/search?q=Anthropic+OR+%22Claude+AI%22+OR+%22Claude+Code%22+when:2d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "Anthropic",
+      "region": "intl",
+      "url": "https://news.google.com/rss/search?q=site:anthropic.com+OR+site:claude.com+when:2d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "Claude Code リリースノート",
+      "region": "intl",
+      "url": "https://github.com/anthropics/claude-code/releases.atom"
+    }
+  ],
+  "lookback_hours": 36,
+  "max_candidates_per_feed": 25,
+  "max_items_jp": 4,
+  "max_items_intl": 6,
+  "seen_keep_days": 21,
+  "model": "claude-opus-5-5",
+  "effort": "medium"
+}
