@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>組織図（A4・1枚） — BUTTI ON LINE</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper:#fff; --panel:#faf8f2; --line:#ddd6c4; --gold:#a3801a;
+    --ink:#17140d; --body-c:#403a2c; --faint:#8d856d;
+    --ol:#274a7a; --yawara:#4d3070; --sweep:#5a3c22; --tamago:#8a6a12; --biz:#3d6b4a;
+    --mincho:"Shippori Mincho","Hiragino Mincho ProN",serif;
+    --gothic:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#eceadf;font-family:var(--gothic);color:var(--body-c);-webkit-font-smoothing:antialiased}
+
+  .sheet{
+    width:210mm; min-height:297mm; margin:18px auto; padding:11mm 11mm 9mm;
+    background:var(--paper); box-shadow:0 2px 14px rgba(0,0,0,.14);
+    font-size:9pt; line-height:1.5;
+  }
+
+  .head{display:flex;align-items:flex-end;justify-content:space-between;gap:10mm;border-bottom:1.9pt solid var(--ink);padding-bottom:4px}
+  .head h1{font-family:var(--mincho);font-weight:700;font-size:18.6pt;letter-spacing:.2em;color:var(--ink);margin:0}
+  .head .co{font-family:var(--mincho);font-weight:600;font-size:11pt;color:var(--ink);letter-spacing:.06em}
+  .head .meta{font-size:7.7pt;color:var(--faint);text-align:right;line-height:1.55}
+
+  .row{display:grid;gap:3mm;margin-top:3.6mm}
+  .r3{grid-template-columns:1fr 1.15fr 1.7fr}
+  .r2{grid-template-columns:1fr 1fr}
+  .r4{grid-template-columns:repeat(4,1fr)}
+
+  .b{border:.7pt solid var(--line);background:var(--panel);padding:2.4mm 2.8mm}
+  .b .cap{font-size:6.8pt;letter-spacing:.16em;color:var(--gold);font-weight:500}
+  .b .ttl{font-family:var(--mincho);font-weight:700;font-size:11.6pt;color:var(--ink);letter-spacing:.1em;margin:.4mm 0 0}
+  .b .sub{font-size:7.7pt;margin:.8mm 0 0;line-height:1.5}
+  .b.key{border-top:1.9pt solid var(--ink)}
+  .b.ceo{border-top:1.9pt solid var(--gold)}
+  .b.ceo .ttl{font-size:15.1pt;letter-spacing:.12em}
+
+  .dept{border:.7pt solid var(--line);background:var(--panel);padding:2.6mm 3mm}
+  .dept.j{border-top:1.9pt solid var(--ol)} .dept.k{border-top:1.9pt solid var(--gold)}
+  .dept .cap{font-size:6.8pt;letter-spacing:.16em;color:var(--gold)}
+  .dept .ttl{font-family:var(--mincho);font-weight:700;font-size:12.8pt;color:var(--ink);letter-spacing:.14em;margin:.3mm 0 .6mm}
+  .dept .scope{font-size:7.5pt;color:var(--faint)}
+  .dept .who{font-family:var(--mincho);font-weight:700;font-size:11.6pt;color:var(--ink);margin:1.4mm 0 0}
+
+  .site{border:.7pt solid var(--line);border-top:1.9pt solid var(--faint);background:var(--paper);padding:2.4mm 2.6mm}
+  .site.ol{border-top-color:var(--ol)} .site.yw{border-top-color:var(--yawara)}
+  .site.sw{border-top-color:var(--sweep)} .site.tm{border-top-color:var(--tamago)}
+  .site .nm{font-size:7.7pt;letter-spacing:.09em;color:var(--gold);font-weight:700;line-height:1.35}
+  .site .pl{font-size:7.2pt;color:var(--faint)}
+  .site dl{margin:1.6mm 0 0;font-size:7.8pt;line-height:1.5}
+  .site dt{font-size:6.7pt;letter-spacing:.1em;color:var(--faint);margin-top:1.2mm}
+  .site dt:first-child{margin-top:0}
+  .site dd{margin:0;color:var(--body-c)}
+  .site dd b{font-family:var(--mincho);font-size:9.7pt;color:var(--ink);font-weight:700}
+
+  .tag{display:inline-block;font-size:6.3pt;letter-spacing:.06em;color:#fff;background:var(--faint);border-radius:1.5px;padding:0 3px;margin-left:2px;vertical-align:1.5px}
+  .tag.e{background:var(--ol)} .tag.o{background:var(--sweep)} .tag.s{background:#9a927a}
+  .none{color:var(--faint)}
+
+  .biz{border:.7pt solid var(--line);border-left:1.9pt solid var(--biz);background:var(--panel);padding:2.2mm 2.8mm}
+  .biz .t{font-weight:700;font-size:8.6pt;color:var(--ink)}
+  .biz .d{font-size:7.7pt;margin-top:.5mm;line-height:1.5}
+
+  .foot{margin-top:3.4mm;border-top:.7pt solid var(--line);padding-top:2.2mm;display:grid;grid-template-columns:1fr 1.55fr;gap:4mm}
+  .foot .t{font-size:6.8pt;letter-spacing:.16em;color:var(--gold);font-weight:500}
+  .foot .v{font-size:7.8pt;line-height:1.55;margin-top:.5mm}
+  .foot .v b{font-family:var(--mincho);color:var(--ink)}
+
+  .notes{margin-top:2.6mm;font-size:7.1pt;color:var(--faint);line-height:1.6}
+  .notes span{display:block;padding-left:.9em;text-indent:-.9em}
+
+  @page{size:A4 portrait;margin:0}
+  @media print{
+    body{background:#fff}
+    .sheet{width:auto;min-height:0;margin:0;box-shadow:none;padding:11mm 11mm 9mm}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+
+<div class="sheet">
+
+  <div class="head">
+    <div>
+      <h1>組織図</h1>
+      <p class="co" style="margin:1.2mm 0 0">株式会社 BUTTI ON LINE</p>
+    </div>
+    <p class="meta">2026年9月29日現在<br>実態に基づくものであり、組織規程に基づくものではありません</p>
+  </div>
+
+  <!-- 株主総会 → 取締役会 → 代表 -->
+  <div class="row r3">
+    <div class="b key">
+      <p class="cap">SHAREHOLDERS</p>
+      <p class="ttl">株主総会</p>
+      <p class="sub">株主2名<br>発行済株式の総数 2,500株・資本金 25,000千円</p>
+    </div>
+    <div class="b key">
+      <p class="cap">BOARD</p>
+      <p class="ttl">取締役会</p>
+      <p class="sub">取締役4名<br>村田 良蔵・中島 正明・村井 庸介・李 英俊</p>
+    </div>
+    <div class="b ceo">
+      <p class="cap">代表取締役社長</p>
+      <p class="ttl">村田 良蔵</p>
+      <p class="sub">全体統括と意思決定。指導と帯の昇格判断。SJJJF代表理事として大会運営と連盟対応。メディア・協賛・提携の窓口。出店判断と資金繰り。</p>
+    </div>
+  </div>
+
+  <!-- 2部門 -->
+  <div class="row r2">
+    <div class="dept j">
+      <p class="cap">BUSINESS</p>
+      <p class="ttl">事業部門</p>
+      <p class="scope">柔術道場の運営・パーソナル指導・大会イベント</p>
+      <p class="who">統括　濱田 真亮<span class="tag o">業務委託</span></p>
+    </div>
+    <div class="dept k">
+      <p class="cap">ADMINISTRATION</p>
+      <p class="ttl">管理部門</p>
+      <p class="scope">経理・総務・労務・庶務・広報・人事</p>
+      <p class="who">村田 亜衣<span class="tag e">従業員</span></p>
+    </div>
+  </div>
+
+  <!-- 4拠点 -->
+  <div class="row r4">
+    <div class="site ol">
+      <p class="nm">OVER LIMIT SAPPORO</p><p class="pl">札幌・直営店</p>
+      <dl>
+        <dt>主担当</dt><dd><b>諸澤 陽斗</b><span class="tag e">従業員</span></dd>
+        <dt>副担当</dt><dd class="none">未定</dd>
+        <dt>メンバー</dt><dd>佐藤 正幸<span class="tag o">委託</span><br>宮腰 一貴<span class="tag o">委託</span><br>堰本 祐希<span class="tag s">単発</span><br>氏家<span class="tag s">単発</span></dd>
+        <dt>運営事務</dt><dd>諸澤（現場と兼任）</dd>
+      </dl>
+    </div>
+    <div class="site yw">
+      <p class="nm">YAWARA JIU-JITSU ACADEMY</p><p class="pl">原宿</p>
+      <dl>
+        <dt>主担当</dt><dd><b>野島 繁昭</b><span class="tag o">業務委託</span></dd>
+        <dt>副担当</dt><dd class="none">未定</dd>
+        <dt>メンバー</dt><dd>濱田 真亮<span class="tag o">委託</span><br>河野 裕也<span class="tag o">委託</span><br>立花 千春／工藤 広樹／粟田 健太郎<span class="tag s">単発</span></dd>
+        <dt>運営事務</dt><dd>野島（現場と兼任）</dd>
+      </dl>
+    </div>
+    <div class="site sw">
+      <p class="nm">SWEEP JIU-JITSU ACADEMY</p><p class="pl">北参道</p>
+      <dl>
+        <dt>主担当</dt><dd><b>廣鰭 翔大</b><span class="tag e">従業員</span></dd>
+        <dt>副担当</dt><dd class="none">未定</dd>
+        <dt>メンバー</dt><dd>YAWARA と共通<br><span class="none">（濱田・河野ほか）</span></dd>
+        <dt>運営事務</dt><dd>廣鰭（現場と兼任）</dd>
+      </dl>
+    </div>
+    <div class="site tm">
+      <p class="nm">TAMAGO</p><p class="pl">新拠点・脱毛／整体</p>
+      <dl>
+        <dt>主担当</dt><dd><b>河野 裕也</b><span class="tag o">業務委託</span></dd>
+        <dt>副担当</dt><dd class="none">未定</dd>
+        <dt>メンバー</dt><dd class="none">—</dd>
+        <dt>運営事務</dt><dd>河野（現場と兼任）</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- 事業・全社 -->
+  <div class="row" style="grid-template-columns:1fr 1fr 1fr">
+    <div class="biz">
+      <p class="t">パーソナルトレーニング事業</p>
+      <p class="d">OVER LIMIT／YAWARA／SWEEP、法人契約分を含む。指導者への歩合制。各トレーナーがチケット制で枠を持つ。</p>
+    </div>
+    <div class="biz">
+      <p class="t">大会・イベント事業</p>
+      <p class="d">JIU-FIGHT ほかの主催・運営。当日スタッフ（受付・照明・音響・設営・物販）は都度の業務委託。</p>
+    </div>
+    <div class="biz">
+      <p class="t">全社（管理部門）</p>
+      <p class="d">請求書の発行と振込、給与計算資料の作成、会員管理、広報（SNS）、庶務全般。シフト作成は河野が全拠点分を担当。</p>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div>
+      <p class="t">外部</p>
+      <p class="v"><b>公認会計士税理士 甲田拓也事務所</b>　顧問税理士</p>
+    </div>
+    <div>
+      <p class="t">人員の内訳</p>
+      <p class="v">役員 <b>4名</b>（うち代表取締役1名）／ 従業員 <b>3名</b>（役員兼務を除く）／ 継続的な業務委託 <b>11名前後</b> ／ 大会ごとのスポット <b>十数名</b>（2026年8月9日のJIU-FIGHTは16名）</p>
+    </div>
+  </div>
+
+  <div class="notes">
+    <span>※ 社内で「部」「課」という呼称は用いておらず、本図の部門区分は便宜上のものです。</span>
+    <span>※ 取締役4名は履歴事項全部証明書（令和8年3月23日取得）の記載に基づきます。本店移転の登記は未了です。</span>
+    <span>※「主担当・副担当」は運用上の役割分担で、雇用区分（従業員／業務委託）とは別のものです。副担当は未定です。</span>
+    <span>※ 立石 修也（業務委託・YAWARA／SWEEP）は2026年9月末で契約終了です。</span>
+  </div>
+
+</div>
+</html>
