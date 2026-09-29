@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>うちの会社に、AI社員が6人いた</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="「AI社員ってかっこいいな」から始まった話。名簿にしてみたら、うちにはもう6人いました。AIを係ごとに分けるとなぜいいのか、マネージャー目線のブログ、6本目です。">
+<meta property="og:title" content="うちの会社に、AI社員が6人いた">
+<meta property="og:description" content="「AI社員ってかっこいいな」から始まって、名簿にしてみたら6人いた話。">
+<meta property="og:url" content="https://jiujitsu.co.jp/blog/ai-shain/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+</style>
+
+<header>
+  <p class="brand"><a href="/blog/">JIU LABO BLOG</a></p>
+  <h1>うちの会社に、AI社員が6人いた</h1>
+  <p class="meta"><time datetime="2026-09-29">2026.09.29</time>　村田亜衣（マネージャー）</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>こんにちは、村田亜衣です。6本目の今日は、<b>AI社員</b>の話です。</p>
+
+    <h2>きっかけは「かっこいいから」</h2>
+    <p>最近よく聞く「AIエージェント」。AIに社員みたいに仕事を任せる、というやつです。正直に言うと、最初の動機は<b>「なんかかっこいいから、うちもやりたい」</b>でした。</p>
+    <p>それでClaudeに「AI社員を作るのってどう思う？」と聞いてみたら、意外な答えが返ってきました。</p>
+
+    <blockquote><p>実はもう、半分できています。</p></blockquote>
+
+    <p>毎朝の「今日やることリスト」づくり、毎月の給与計算の準備、月会費の入金確認。これまで「毎月これやって」と頼んできた仕事が、<b>決まった日に勝手に動いていた</b>んです。私はそれを「自動の仕事」くらいにしか思っていませんでした。でも見方を変えれば、もう社員が働いていたわけです。</p>
+
+    <h2>名簿にしてみたら、6人いた</h2>
+    <p>そこで、1人ずつ名前をつけて名簿にしてもらいました。見た目は、選手紹介カードみたいな黒とゴールドです。</p>
+
+    <ul class="roster">
+      <li><span class="no">No.001</span><b>事務員</b>毎月の決まった作業が片付いているか、毎朝見張る。今日入社。</li>
+      <li><span class="no">No.002</span><b>朝の秘書</b>予定・メール・チャットを見て、今日やることをまとめる。</li>
+      <li><span class="no">No.003</span><b>給与係</b>毎月の勤怠表と歩合表を準備する。</li>
+      <li><span class="no">No.004</span><b>集金係</b>月会費がちゃんと取れているかを毎月確かめる。</li>
+      <li><span class="no">No.005</span><b>大会速報係</b>大会の日だけ出勤して、試合の時間をサイトに出す。</li>
+      <li><span class="no">No.006</span><b>期限番</b>解約や更新など、忘れると困る日にだけ出勤する。</li>
+      <li class="off"><span class="no">No.007</span><b>代表メモ係</b>うまく動かなくなって、いまは休職中。</li>
+      <li class="off"><span class="no">No.008</span><b>サイト番</b>このサイトの見回り係。採用予定。</li>
+    </ul>
+
+    <p>休職中の社員までいるのが、我ながらちょっとおもしろいです。</p>
+
+    <h2>1人に、仕事は1つだけ</h2>
+    <p>ここでClaudeに言われて、なるほどと思ったことがあります。<b>「何でもやるAI」を1人作るより、仕事ごとに係を分けたほうがいい</b>、ということです。理由は4つありました。</p>
+    <ul class="tips">
+      <li><b>何をやって、何をやっていないかが見える。</b>何でも屋だと、「あれ、これってやってくれてたっけ？」がわからなくなります。</li>
+      <li><b>1人がこけても、ほかは止まらない。</b>実際に、代表メモ係が止まっても、ほかの社員はふつうに働いていました。</li>
+      <li><b>任せる範囲を、係ごとに決められる。</b>お金の係には、送信や支払いのボタンを押させない。こういう線引きを1人ずつにできます。</li>
+      <li><b>直すときも、その係だけでいい。</b>締め日が変わったら、その係の手順だけ直せば終わりです。</li>
+    </ul>
+    <p>人間の職場と同じですね。「全部できる人」に全部任せると、その人が休んだときに何もわからなくなります。</p>
+
+    <h2>うちの社則は4つ</h2>
+    <p>AI社員みんなに守ってもらうルールも決めました。</p>
+    <div class="ex">
+      <p>AI社員の社則</p>
+      <ul>
+        <li>1人に仕事は1つ</li>
+        <li>報告は「やること一覧」の1か所だけにする</li>
+        <li>送信・支払い・削除の最後のボタンは、私が押す</li>
+        <li>私が使っているパソコンの画面を、勝手に動かさない</li>
+      </ul>
+    </div>
+    <p>とくに3つ目は大事にしています。前回の請求書の話でも書きましたが、<b>AIが速く正確に準備して、最後は私が確かめる</b>。この形が、いちばん安心できます。</p>
+
+    <h2>1人目の新人は「事務員」</h2>
+    <p>今日は、新しく「事務員」を1人採用しました。仕事は、毎月の決まった作業が片付いているかを毎朝見張ることです。</p>
+    <p>請求書は月初、振込のリストは10日と25日、給与の資料は15日まで。毎月こういう締め切りが続きます。事務員は、終わっていないものがあれば、私の「やること一覧」のいちばん上に載せてくれます。終わっていれば、何も言いません。</p>
+    <p>地味ですが、<b>「あれ、やったっけ？」をなくしてくれる</b>のは本当に助かります。</p>
+
+    <h2>かっこよさは、あとからついてくる</h2>
+    <p>やってみてわかったのは、AI社員は<b>「見せ方」の名前</b>だということです。中身は、これまでコツコツ頼んできた自動の仕事と変わりません。</p>
+    <p>でも、名前をつけて名簿にしただけで、「誰が何をしているか」が一目でわかるようになりました。「かっこいいからやりたい」も、案外悪くない入り口だったと思います。</p>
+    <p>次は、このサイトの見回りをする「サイト番」を採用する予定です。事務員の働きぶりを1〜2週間見てから決めます。</p>
+    <p>「AIエージェントって難しそう」と思っている方は、まず<b>毎月くり返している仕事を1つ</b>選んで、それだけを任せる係を作ってみてください。社員が増えていくの、けっこう楽しいですよ。</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+
+    <div class="next">
+      <p>前回の記事はこちら。</p>
+      <p><a href="/blog/shigoto-igai-de/">仕事で使えないなら、暮らしで使ってみよう →</a></p>
+    </div>
+  </article>
+
+  <footer>
+    <a href="/blog/">ブログの一覧へ</a>　／　<a href="/">jiujitsu.co.jp トップへ</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>

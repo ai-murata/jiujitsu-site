@@ -5,8 +5,15 @@
   <link href="https://jiujitsu.co.jp/"/>
   <link rel="self" type="application/atom+xml" href="https://jiujitsu.co.jp/feed.xml"/>
   <id>https://jiujitsu.co.jp/</id>
-  <updated>2026-09-29T18:11:20+09:00</updated>
+  <updated>2026-09-29T21:33:36+09:00</updated>
   <author><name>BUTTI ON LINE</name></author>
+  <entry>
+    <title>ブログ：うちの会社に、AI社員が6人いた</title>
+    <link href="https://jiujitsu.co.jp/blog/ai-shain/"/>
+    <id>tag:jiujitsu.co.jp,2026-09-29:blog-ai-shain</id>
+    <updated>2026-09-29T09:00:00+09:00</updated>
+    <summary>「AI社員ってかっこいいな」から始まった話。名簿にしてみたら、うちにはもう6人いました。AIを係ごとに分けるといい理由も書いています。マネージャー目線のブログ、6本目です。</summary>
+  </entry>
   <entry>
     <title>きょうの柔術ニュース</title>
     <link href="https://jiujitsu.co.jp/jiunews/"/>
