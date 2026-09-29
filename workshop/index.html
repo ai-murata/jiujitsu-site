@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ワークショップ参加申込み</title>
 <meta name="description" content="第2回JCSAアートフェス ワークショップの参加申込みページ。空き状況を見ながら日時を選べて、申し込み後のキャンセルもこのページからできます。">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Shippori+Mincho:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="palette" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="brandbar"><div class="in"><span class="mark">JCSA</span><span class="org">一般社団法人<br>Color Sensing Alliance</span></div></div>
+<header class="hero">
+  <p class="kicker">WORKSHOP</p>
+  <h1 id="title">第2回 JCSAアートフェス<br>ワークショップ参加申込み</h1>
+  <p class="lede">空き状況をご覧いただきながら、ご希望の日時と制作物をお選びください。お申し込み後のキャンセルも、このページから承ります。</p>
+</header>
 <div class="wrap">
-  <header>
-    <p class="kicker">WORKSHOP</p>
-    <h1 id="title">第2回JCSAアートフェス<br>ワークショップ参加申込み</h1>
-    <p class="lede">空き状況を見ながら、ご希望の日時と制作物をお選びください。お申し込み後のキャンセルもこのページからできます。</p>
-  </header>
 
   <p class="demo" id="demo" hidden>いまはデモ表示です。受付係（Googleスプレッドシート）とつなぐまで、お申し込みは届きません。</p>
 
@@ -24,7 +24,7 @@
 
   <form id="form" novalidate hidden>
     <section class="card">
-      <h2><span class="n">1</span>日時と制作物</h2>
+      <h2><span class="n">01</span>日時と制作物</h2>
       <div class="field" data-f="slot">
         <label class="lb">ご希望の日時<span class="req">必須</span></label>
         <p class="hint">おひとつお選びください。2つ以上をご希望の方は、お申し込みのあとに「続けて申し込む」からどうぞ。</p>
@@ -39,7 +39,7 @@
     </section>
 
     <section class="card">
-      <h2><span class="n">2</span>参加される方</h2>
+      <h2><span class="n">02</span>参加される方</h2>
       <div class="field" data-f="name">
         <label class="lb" for="name">お名前<span class="req">必須</span></label>
         <input type="text" id="name" name="name" autocomplete="name" maxlength="60">
@@ -80,7 +80,7 @@
     </section>
 
     <section class="card">
-      <h2><span class="n">3</span>お支払い・同意事項</h2>
+      <h2><span class="n">03</span>お支払い・同意事項</h2>
       <div class="terms" tabindex="0">
         <h3>■ お支払いにつきまして</h3>
         <p>・お支払いは当日現金のみとさせていただいております。お願いいたします。<br>・恐れ入りますが、お釣りのないようご準備にご協力いただけますと幸いです。</p>
@@ -121,7 +121,7 @@
   </section>
 
   <p class="links"><a href="cancel.html">予約のキャンセルはこちら</a></p>
-  <footer>© JCSA アートフェス事務局</footer>
+  <footer>一般社団法人 Color Sensing Alliance<br><a href="https://www.japancolorsensing.com/">japancolorsensing.com</a></footer>
 </div>
 
 <script src="config.js"></script>
