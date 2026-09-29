@@ -107,7 +107,8 @@ def item_id(link, title):
 
 def parse_feed(data, feed):
     """RSS 2.0 と Atom の両方を読む。壊れた1件は飛ばす。"""
-    root = ET.fromstring(data)
+    # WordPress のフィードには、XML宣言の前に空行や BOM が入っているものがある（BJJEE など）
+    root = ET.fromstring(data.lstrip(b"\xef\xbb\xbf \t\r\n"))
     entries = [el for el in root.iter() if _local(el.tag) in ("item", "entry")]
     out = []
     for el in entries:
