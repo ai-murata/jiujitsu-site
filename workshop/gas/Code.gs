@@ -1,11 +1,15 @@
 /**
  * ワークショップ予約の受付係（Google Apps Script）
  *
- * このファイルを予約管理用スプレッドシートの「拡張機能 → Apps Script」に貼り付けて使う。
+ * SHEET_ID のスプレッドシートに予約を書き込む（空なら、貼り付けたスプレッドシート自身）。
  * 最初に一度だけ setup を実行すると「予約」「枠」シートができる。
  * 日時・定員は「枠」シートで、制作物や年齢の選択肢は下の CONFIG で変える。
  * くわしい手順は同じフォルダの README.md を参照。
  */
+
+// 予約を書き込むスプレッドシートのID（URLの /d/ と /edit の間）。
+// 空ならこのプログラムが付いているスプレッドシートを使う。
+const SHEET_ID = '1_Ln8S1m3r4bcFPtc6Cq631u4pKQiGCo2xrap-AIY8MI';
 
 const CONFIG = {
   title: '第2回JCSAアートフェス ワークショップ',
@@ -31,7 +35,7 @@ const CANCELED = 'キャンセル';
 
 /** 最初に一度だけ実行：シートと見出しを用意する */
 function setup() {
-  const ss = SpreadsheetApp.getActive();
+  const ss = book_();
   let r = ss.getSheetByName(SHEET_RESV) || ss.insertSheet(SHEET_RESV);
   if (r.getLastRow() === 0) {
     r.appendRow(RESV_HEADERS);
@@ -85,7 +89,7 @@ function json(o) {
 /* ---------- 枠と残り ---------- */
 
 function slots_() {
-  const s = SpreadsheetApp.getActive().getSheetByName(SHEET_SLOT);
+  const s = book_().getSheetByName(SHEET_SLOT);
   const rows = s.getDataRange().getValues().slice(1).filter(r => r[0] !== '');
   const used = {};
   resvRows_().forEach(r => { if (r.row[2] === ACTIVE) used[r.row[10]] = (used[r.row[10]] || 0) + 1; });
@@ -134,7 +138,7 @@ function reserve_(b) {
   const id = newId_();
   const key = Utilities.getUuid().replace(/-/g, '').slice(0, 20);
   const now = new Date();
-  SpreadsheetApp.getActive().getSheetByName(SHEET_RESV).appendRow([
+  book_().getSheetByName(SHEET_RESV).appendRow([
     id, now, ACTIVE, safe_(f.name), safe_(f.kana), safe_(f.email), safe_(f.address), "'" + f.tel, f.age, f.product, f.slot, f.source, '同意する', '', key,
   ]);
 
@@ -185,7 +189,7 @@ function cancel_(b) {
   const d = canCancel_(r[10]);
   if (!d.ok) return { ok: false, error: d.msg };
 
-  const sh = SpreadsheetApp.getActive().getSheetByName(SHEET_RESV);
+  const sh = book_().getSheetByName(SHEET_RESV);
   sh.getRange(hit.index, 3).setValue(CANCELED);
   sh.getRange(hit.index, 14).setValue(new Date());
   r[2] = CANCELED;
@@ -209,8 +213,12 @@ function canCancel_(label) {
 
 /* ---------- 小道具 ---------- */
 
+function book_() {
+  return SHEET_ID ? SpreadsheetApp.openById(SHEET_ID) : SpreadsheetApp.getActive();
+}
+
 function resvRows_() {
-  const v = SpreadsheetApp.getActive().getSheetByName(SHEET_RESV).getDataRange().getValues();
+  const v = book_().getSheetByName(SHEET_RESV).getDataRange().getValues();
   const out = [];
   for (let i = 1; i < v.length; i++) out.push({ index: i + 1, row: v[i] });
   return out;
