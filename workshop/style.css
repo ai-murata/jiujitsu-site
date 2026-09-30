@@ -81,7 +81,7 @@ input:focus, select:focus { border-color: var(--taupe-deep); box-shadow: 0 0 0 3
 .btn.ghost:hover { background: var(--panel); }
 .btn.danger { background: var(--warn); }
 .btn + .btn { margin-top: 10px; }
-.formerr { display: none; background: #fdefe7; color: var(--warn); padding: 10px 14px; font-size: 13.5px; margin-bottom: 14px; }
+.formerr { display: none; white-space: pre-line; background: #fdefe7; color: var(--warn); padding: 10px 14px; font-size: 13.5px; margin-bottom: 14px; }
 .formerr.show { display: block; }
 
 .done { text-align: center; }
