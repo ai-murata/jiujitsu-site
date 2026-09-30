@@ -1,4 +1,4 @@
-# 毎晩のクラウド日記：ルーティンの手順
+# 毎晩のブログ日記：ルーティンの手順
 
 Claude Code のルーティン（毎晩 23:41 JST）が、このファイルを読んで上から順におこなう。
 APIキーは使わない。日記の文章は、実行中の Claude 自身が書く。
@@ -9,7 +9,8 @@ APIキーは使わない。日記の文章は、実行中の Claude 自身が書
 
 ```bash
 git fetch origin main
-DATE=$(TZ=Asia/Tokyo date +%Y-%m-%d)
+# ルーティンが遅れて日付をまたいでも（0〜5時台）、前の日の日記にする
+DATE=$(TZ=Asia/Tokyo date -d '-6 hours' +%Y-%m-%d)
 git checkout -B "nikki/$DATE" origin/main
 ```
 
@@ -44,15 +45,15 @@ rm -rf data/nikki/inbox
 ## 5. PR を出す
 
 ```bash
-git add -A blog/nikki data/nikki
-git commit -m "chore(nikki): クラウド日記 ($DATE)"
+git add -A blog/nikki data/nikki blog/index.html
+git commit -m "chore(nikki): ブログの日記 ($DATE)"
 git push -u origin "nikki/$DATE"
 ```
 
-- 触ってよいのは `blog/nikki/` と `data/nikki/` だけ。ほかのファイルが変わっていたらコミットしない。
+- 触ってよいのは `blog/nikki/` と `data/nikki/`、それに `blog/index.html` の日記の一覧（`<!-- nikki:start -->` 〜 `<!-- nikki:end -->`）だけ。ほかのファイルが変わっていたらコミットしない。
 - GitHub のツール（`create_pull_request`）で `ai-murata/jiujitsu-site` に PR を作る。
   - base: `main` / head: `nikki/$DATE`
-  - タイトル: `クラウド日記 $DATE：<日記のタイトル>`
+  - タイトル: `日記 $DATE：<日記のタイトル>`
   - 本文: 日記の本文（タイトル・書き出し・項目・ひとこと）をそのまま貼り、最後に
     「公開してよければマージしてください。直したいところはこの PR にコメントするか、ブランチで直してください。」と書く。
 - **マージはしない。**

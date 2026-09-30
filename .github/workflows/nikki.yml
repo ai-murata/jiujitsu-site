@@ -1,4 +1,4 @@
-name: クラウド日記のテスト
+name: ブログ日記のテスト
 
 # 日記そのものは毎晩の Claude Code ルーティンが PR で出す（手順は tools/nikki/ROUTINE.md）。
 # ここでは PR のときにオフラインテストだけを動かす。
@@ -8,6 +8,7 @@ on:
       - "tools/nikki/**"
       - "data/nikki/**"
       - "blog/nikki/**"
+      - "blog/index.html"
       - ".github/workflows/nikki.yml"
 
 jobs:

@@ -134,6 +134,32 @@
   .more-btn:hover { background: var(--gold); color: var(--paper); }
   .more-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
+  /* ブログ欄：いちばん上。最新記事は書き出しを抜粋して見せる */
+  .bfeat { margin-top: 18px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 26px 28px 24px; }
+  .bfeat .eyebrow { display: flex; align-items: center; gap: 12px; letter-spacing: .12em; }
+  .blabel { font-family: var(--gothic); font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: var(--paper); background: var(--gold); border-radius: 3px; padding: 0 8px; line-height: 1.8; }
+  .bfeat time { color: var(--faint); }
+  .bfeat h2 { font-family: var(--mincho); font-weight: 700; font-size: clamp(21px, 4vw, 27px); line-height: 1.55; letter-spacing: .05em; margin: 0 0 14px; word-break: auto-phrase; text-wrap: pretty; }
+  .bfeat h2 a { color: var(--ink); text-decoration: none; }
+  .bfeat h2 a:hover { color: var(--gold); }
+  .bexcerpt { position: relative; max-height: 13.5em; overflow: hidden; }
+  .bexcerpt::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4.5em; background: linear-gradient(rgba(250,248,242,0), var(--panel)); pointer-events: none; }
+  .bexcerpt p { font-size: 15.5px; line-height: 2; margin: 0 0 .8em; }
+  .bread { display: inline-block; margin-top: 10px; background: var(--gold); color: var(--paper); border-radius: 999px; padding: 10px 30px; font-size: 14.5px; font-weight: 700; letter-spacing: .1em; text-decoration: none; transition: background .15s; }
+  .bread:hover { background: #6f5610; }
+  .bread:focus-visible, .bfeat h2 a:focus-visible, .bmore a:focus-visible, .ball a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .bmore { list-style: none; margin: 18px 0 0; padding: 0; border-top: 1px solid var(--line); }
+  .bmore li { border-bottom: 1px solid var(--line); }
+  .bmore a { display: flex; align-items: baseline; gap: 16px; padding: 12px 4px; text-decoration: none; color: inherit; }
+  .bmore time { flex: none; font-family: var(--mincho); font-size: 13px; letter-spacing: .1em; color: var(--faint); }
+  .bmore b { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: .04em; }
+  .bmore a:hover b { color: var(--gold); }
+  .ball { margin: 14px 0 0; text-align: right; font-size: 14px; letter-spacing: .08em; }
+  .ball a { color: var(--gold); text-decoration: none; font-weight: 700; }
+  .ball a:hover { text-decoration: underline; }
+  .dailynews { margin-top: 72px; scroll-margin-top: 20px; }
+  .dailynews .works { margin-top: 20px; }
+
   /* もくじ：スクロールしなくてもサイト全体が見わたせる */
   .pick { padding: 36px 0 0; }
   .map { padding: 36px 0 0; }
@@ -179,6 +205,14 @@
     .newslist li.is-latest b { font-size: 18px; }
     .newslist .sum { font-size: 14px; line-height: 1.8; }
     main { padding-top: 40px; }
+    .bfeat { padding: 20px 18px 20px; margin-top: 12px; }
+    .bexcerpt { max-height: 12em; }
+    .bexcerpt p { font-size: 14.5px; line-height: 1.9; }
+    .bread { display: block; text-align: center; }
+    .bmore a { flex-wrap: wrap; gap: 0 8px; padding: 10px 2px; }
+    .bmore time { font-size: 12.5px; }
+    .bmore b { flex-basis: 100%; font-size: 15px; line-height: 1.6; }
+    .dailynews { margin-top: 48px; }
   }
 
   footer { border-top: 1px solid var(--line); padding: 34px 24px 46px; text-align: center; font-size: 13px; letter-spacing: .12em; color: var(--faint); }
@@ -205,34 +239,65 @@
 <div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
 
 <div class="wrap">
-  <section class="pick works rise d2">
-      <p class="cat-label" id="cat-blog">ニュースとブログ</p>
+  <section class="pick blogtop rise d2" id="cat-blog">
+    <p class="cat-label">マネージャーのブログ</p>
 
-      <a class="card solo" href="/jiunews/">
-        <span>
-          <p class="eyebrow">NEWS ・ 毎朝更新</p>
-          <h2>きょうの柔術ニュース<span class="arrow">→</span></h2>
-          <p>国内と海外の柔術ニュースを毎朝集めて、やさしい日本語で紹介します。海外の記事は日本語に訳してお届けします。</p>
-        </span>
-      </a>
+    <!-- 最新記事。/blog/ に記事が増えると、下のスクリプトが自動で差し替えます -->
+    <article class="bfeat">
+      <p class="eyebrow"><span class="blabel">最新記事</span><time datetime="2026-09-29">2026.09.29</time></p>
+      <h2><a href="/blog/ai-shain/">うちの会社に、AI社員が6人いた</a></h2>
+      <div class="bexcerpt">
+        <p>こんにちは、村田亜衣です。6本目の今日は、AI社員の話です。</p>
+        <p>最近よく聞く「AIエージェント」。AIに社員みたいに仕事を任せる、というやつです。正直に言うと、最初の動機は「なんかかっこいいから、うちもやりたい」でした。</p>
+        <p>それでClaudeに「AI社員を作るのってどう思う？」と聞いてみたら、意外な答えが返ってきました。</p>
+      </div>
+      <a class="bread" href="/blog/ai-shain/">続きを読む →</a>
+    </article>
 
-      <a class="card solo" href="/claudenews/">
-        <span>
-          <p class="eyebrow">NEWS ・ 毎朝更新</p>
-          <h2>きょうの Claude ニュース<span class="arrow">→</span></h2>
-          <p>新しいモデルやサービスの発表を中心に、Claude のニュースを毎朝集めて、やさしい日本語で紹介します。</p>
-        </span>
-      </a>
-
-      <a class="card solo" href="/blog/">
-        <span>
-          <p class="eyebrow">BLOG ・ 不定期更新</p>
-          <h2>マネージャーのブログ<span class="arrow">→</span></h2>
-          <p>柔術の道場運営のこと、良蔵さんのまわりのこと、Claude Codeのこと。マネージャー村田亜衣の目線で、ゆるく書いています。</p>
-        </span>
-      </a>
+    <ul class="bmore">
+      <li><a href="/blog/shigoto-igai-de/"><time datetime="2026-09-28">2026.09.28</time><b>仕事で使えないなら、暮らしで使ってみよう</b></a></li>
+      <li><a href="/blog/seikyusho-claude/"><time datetime="2026-09-28">2026.09.28</time><b>請求書の1年分を、Claudeに見直してもらった話</b></a></li>
+      <li><a href="/blog/waapuro-kara-ai/"><time datetime="2026-09-27">2026.09.27</time><b>ワープロ好きだった私が、Claude Codeにハマった理由</b></a></li>
+    </ul>
+    <p class="ball"><a href="/blog/">ブログの記事をぜんぶ見る →</a></p>
   </section>
 </div>
+<script>
+// トップのブログ欄：/blog/ の一覧から最新記事を拾い、本文の書き出しを抜粋して出す
+(function () {
+  var box = document.querySelector('.blogtop');
+  if (!box || !window.fetch || !window.DOMParser) return;
+  function doc(t) { return new DOMParser().parseFromString(t, 'text/html'); }
+  function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+  function get(u) { return fetch(u).then(function (r) { if (!r.ok) throw r; return r.text(); }).then(doc); }
+  get('/blog/').then(function (d) {
+    var posts = Array.prototype.map.call(d.querySelectorAll('.posts li a'), function (a) {
+      var t = a.querySelector('time'), h = a.querySelector('h2');
+      return { url: a.getAttribute('href'), date: t ? t.getAttribute('datetime') : '', label: t ? t.textContent : '', title: h ? h.textContent.trim() : '' };
+    }).filter(function (p) { return p.url && p.title; });
+    if (!posts.length) return;
+    posts.sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
+    var top = posts[0];
+    box.querySelector('.bmore').innerHTML = posts.slice(1, 4).map(function (p) {
+      return '<li><a href="' + esc(p.url) + '"><time datetime="' + esc(p.date) + '">' + esc(p.label) + '</time><b>' + esc(p.title) + '</b></a></li>';
+    }).join('');
+    if (box.querySelector('.bfeat h2 a').getAttribute('href') === top.url) return;
+    return get(top.url).then(function (a) {
+      var ps = Array.prototype.filter.call(a.querySelectorAll('article > p'), function (p) {
+        return p.textContent.trim().length > 0;
+      }).slice(0, 3);
+      if (!ps.length) return;
+      var f = box.querySelector('.bfeat');
+      f.querySelector('time').setAttribute('datetime', top.date);
+      f.querySelector('time').textContent = top.label;
+      f.querySelector('h2 a').textContent = top.title;
+      f.querySelector('h2 a').href = top.url;
+      f.querySelector('.bread').href = top.url;
+      f.querySelector('.bexcerpt').innerHTML = ps.map(function (p) { return '<p>' + esc(p.textContent.trim()) + '</p>'; }).join('');
+    });
+  }).catch(function () {});
+})();
+</script>
 
 <div class="wrap">
   <nav class="map rise d2" aria-label="もくじ">
@@ -510,6 +575,28 @@
 
 
     </div>
+
+    <section class="dailynews" id="cat-news">
+      <p class="cat-label">毎朝のニュース</p>
+      <div class="works">
+      <a class="card solo" href="/jiunews/">
+        <span>
+          <p class="eyebrow">NEWS ・ 毎朝更新</p>
+          <h2>きょうの柔術ニュース<span class="arrow">→</span></h2>
+          <p>国内と海外の柔術ニュースを毎朝集めて、やさしい日本語で紹介します。海外の記事は日本語に訳してお届けします。</p>
+        </span>
+      </a>
+
+      <a class="card solo" href="/claudenews/">
+        <span>
+          <p class="eyebrow">NEWS ・ 毎朝更新</p>
+          <h2>きょうの Claude ニュース<span class="arrow">→</span></h2>
+          <p>新しいモデルやサービスの発表を中心に、Claude のニュースを毎朝集めて、やさしい日本語で紹介します。</p>
+        </span>
+      </a>
+
+      </div>
+    </section>
 
     <section class="people" id="people">
       <p class="sec-label">つくっている人たち</p>

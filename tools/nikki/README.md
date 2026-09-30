@@ -1,7 +1,9 @@
-# /blog/nikki/ クラウド日記
+# ブログの日記（/blog/nikki/YYYY-MM-DD/）
 
 その日に Claude Code とやったこと（このリポジトリの main に入った変更）をもとに、
-マネージャー村田亜衣の目線で短い日記を書き、`/blog/nikki/` に載せる。
+マネージャー村田亜衣の目線で短い日記を書き、ブログ（`/blog/`）の一覧に「日記」のしるしつきで並べる。
+
+（前は「クラウド日記」という別の一覧があったが、わかりにくいのでブログにまとめた。`/blog/nikki/` は `/blog/` へ飛ぶだけ。）
 
 ## 毎晩の動き（APIキー不要）
 
@@ -29,7 +31,8 @@
 - `build.py` — 材料集め（`--collect`）、確認と保存（`--apply`）、ページ生成（`--render-only`）。標準ライブラリのみ。
 - `test_build.py` — オフラインテスト（日付の切り分け、自動更新・非公開の除外、文章のチェック、エスケープ）。
 - `data/nikki/entries/YYYY-MM-DD.json` — 各日の日記（ページの元データ）。手で直したら `--render-only` でページを作り直す。
-- `blog/nikki/index.html` — 一覧 / `blog/nikki/YYYY-MM-DD/index.html` — 各日のページ
+- `blog/index.html` の `<!-- nikki:start -->` 〜 `<!-- nikki:end -->` — ブログ一覧に並ぶ日記（自動で差し替える。手で触らない）
+- `blog/nikki/YYYY-MM-DD/index.html` — 各日のページ / `blog/nikki/index.html` — `/blog/` へ飛ばすだけ
 
 ## 手元で動かす
 
