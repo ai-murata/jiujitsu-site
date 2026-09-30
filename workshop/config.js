@@ -3,11 +3,26 @@
 window.WORKSHOP_API = 'https://script.google.com/macros/s/AKfycbzWtuuNEUqNYTwg-E7d_EMYvLa10DCcHQV4elprUfrWkS034Fs3aFrlJZkGOs7F02fDdA/exec';
 
 // 受付係とのやりとり。POST は text/plain で送ると事前確認なしで Apps Script に届く。
+// 返事がJSONでないとき（ログイン画面・Googleのエラー画面など）は、原因が分かる文にして投げる
+function workshopJson(r) {
+  return r.text().then(function (t) {
+    try { return JSON.parse(t); } catch (e) {
+      var m = t.match(/<title>([^<]*)<\/title>/i) || t.match(/class="errorMessage"[^>]*>([^<]*)</i);
+      throw new Error('受付係から予期しない返事がありました（' + r.status + (m ? '：' + m[1].trim() : '') + '）');
+    }
+  });
+}
+
+// 通信そのものが断られたとき（公開設定が「全員」でない・URL違いなど）の言い換え
+function workshopNetErr(e) {
+  throw new Error(e instanceof TypeError ? '受付係につながりませんでした（公開設定が「全員」になっているか、URLが正しいかをご確認ください）' : e.message);
+}
+
 window.workshopApi = {
   get: function (params) {
     if (!window.WORKSHOP_API) return Promise.resolve(workshopDemo.get(params));
     var q = new URLSearchParams(params || {}).toString();
-    return fetch(window.WORKSHOP_API + (q ? '?' + q : ''), { cache: 'no-store' }).then(function (r) { return r.json(); });
+    return fetch(window.WORKSHOP_API + (q ? '?' + q : ''), { cache: 'no-store' }).then(workshopJson, workshopNetErr);
   },
   post: function (body) {
     if (!window.WORKSHOP_API) return Promise.resolve(workshopDemo.post(body));
@@ -15,7 +30,7 @@ window.workshopApi = {
       method: 'POST',
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify(body),
-    }).then(function (r) { return r.json(); });
+    }).then(workshopJson, workshopNetErr);
   },
 };
 
