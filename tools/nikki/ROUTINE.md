@@ -9,7 +9,8 @@ APIキーは使わない。日記の文章は、実行中の Claude 自身が書
 
 ```bash
 git fetch origin main
-DATE=$(TZ=Asia/Tokyo date +%Y-%m-%d)
+# ルーティンが遅れて日付をまたいでも（0〜5時台）、前の日の日記にする
+DATE=$(TZ=Asia/Tokyo date -d '-6 hours' +%Y-%m-%d)
 git checkout -B "nikki/$DATE" origin/main
 ```
 
