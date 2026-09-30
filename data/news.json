@@ -3,6 +3,13 @@
   "line_url": "",
   "entries": [
     {
+      "id": "blog-benkyou-shinai",
+      "date": "2026-09-30",
+      "title": "ブログ：Claude Codeは、勉強しないで使いこなす",
+      "url": "/blog/benkyou-shinai/",
+      "summary": "使いこなしている人ほど、たぶん勉強していない。毎日の「これ楽できそう」を拾っていく話と、大きい車のためのコインパーキング探しの仕組み。マネージャー目線のブログ、7本目です。"
+    },
+    {
       "id": "blog-ai-shain",
       "date": "2026-09-29",
       "title": "ブログ：うちの会社に、AI社員が6人いた",
@@ -38,25 +45,25 @@
       "summary": "「誰に、いくら」をスマホで打つだけで、月の売上とお客さまのカルテが育っていく。エステサロンに頼まれて作った、スマホの外に情報を出さない顧客管理です。"
     },
     {
-        "id": "blog-shigoto-igai-de",
-        "date": "2026-09-28",
-        "title": "ブログ：仕事で使えないなら、暮らしで使ってみよう",
-        "url": "/blog/shigoto-igai-de/",
-        "summary": "会社の規定でClaudeを仕事に使えない人へ。だったら暮らしの中で試してみませんか。4年分たまった料理教室のレシピをサイトにする話です。マネージャー目線のブログ、5本目です。"
+      "id": "blog-shigoto-igai-de",
+      "date": "2026-09-28",
+      "title": "ブログ：仕事で使えないなら、暮らしで使ってみよう",
+      "url": "/blog/shigoto-igai-de/",
+      "summary": "会社の規定でClaudeを仕事に使えない人へ。だったら暮らしの中で試してみませんか。4年分たまった料理教室のレシピをサイトにする話です。マネージャー目線のブログ、5本目です。"
     },
     {
-        "id": "blog-seikyusho-claude",
-        "date": "2026-09-28",
-        "title": "ブログ：請求書の1年分を、Claudeに見直してもらった話",
-        "url": "/blog/seikyusho-claude/",
-        "summary": "毎月ひとりで作ってきた業務委託の請求書。Claudeに1年分さかのぼってもらったら、自分では気づけなかった間違いが見つかりました。マネージャー目線のブログ、4本目です。"
+      "id": "blog-seikyusho-claude",
+      "date": "2026-09-28",
+      "title": "ブログ：請求書の1年分を、Claudeに見直してもらった話",
+      "url": "/blog/seikyusho-claude/",
+      "summary": "毎月ひとりで作ってきた業務委託の請求書。Claudeに1年分さかのぼってもらったら、自分では気づけなかった間違いが見つかりました。マネージャー目線のブログ、4本目です。"
     },
     {
-        "id": "blog-waapuro-kara-ai",
-        "date": "2026-09-27",
-        "title": "ブログ：ワープロ好きだった私が、Claude Codeにハマった理由",
-        "url": "/blog/waapuro-kara-ai/",
-        "summary": "ワープロ→Excel・PowerPoint→AI。道具が変わるたびに覚えてきた私が、今AIにハマっている理由。マネージャー目線のブログ、3本目です。"
+      "id": "blog-waapuro-kara-ai",
+      "date": "2026-09-27",
+      "title": "ブログ：ワープロ好きだった私が、Claude Codeにハマった理由",
+      "url": "/blog/waapuro-kara-ai/",
+      "summary": "ワープロ→Excel・PowerPoint→AI。道具が変わるたびに覚えてきた私が、今AIにハマっている理由。マネージャー目線のブログ、3本目です。"
     },
     {
       "id": "blog-onsei-tsukaiwake",
