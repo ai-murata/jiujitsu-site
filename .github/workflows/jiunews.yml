@@ -1,0 +1,75 @@
+name: 柔術ニュースの候補集め
+
+# 毎朝 06:30 JST に国内・海外の柔術ニュースを RSS から集め、data/jiunews/inbox/ に置く。
+# 06:49 JST に Claude Code のルーティンがそれを読んで日本語にまとめ、/jiunews/ を更新する
+# （手順は tools/jiunews/ROUTINE.md）。取得は外部に自由につながる Actions でおこない、
+# ルーティン側は GitHub にだけつながればよい。APIキーは使わない。
+on:
+  schedule:
+    - cron: "30 21 * * *" # 21:30 UTC = 06:30 JST
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "tools/jiunews/**"
+      - ".github/workflows/jiunews.yml"
+
+permissions:
+  contents: write
+
+concurrency: jiunews
+
+jobs:
+  test:
+    name: テスト（ネットワーク不要）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/jiunews/test_build.py
+
+  collect:
+    name: ニュースの候補を集める
+    needs: test
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 候補を集めて inbox に置く
+        run: |
+          set -euo pipefail
+          # 前の日の inbox が残っていたら捨てる（ルーティンが動かなかった日の分）
+          rm -rf data/jiunews/inbox
+          python3 tools/jiunews/build.py --collect-only data/jiunews/inbox
+
+      - name: 変更があればコミット
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -e data/jiunews ]; then git add -A data/jiunews; fi
+          if git diff --staged --quiet; then
+            echo "変更なし"
+            exit 0
+          fi
+          git commit -m "chore(jiunews): ニュースの候補を集めました ($(TZ=Asia/Tokyo date +%Y-%m-%d))"
+          # このジョブが触るのは data/jiunews/ だけなので、弾かれたら取り込んで積み直せばよい。
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "push が弾かれました。リモートを取り込んで再試行します ($attempt/3)"
+            git pull --rebase origin "$GITHUB_REF_NAME"
+          done
+          echo "3回試しても push できませんでした" >&2
+          exit 1
+
+      - name: サマリ
+        run: |
+          f=data/jiunews/inbox/candidates.json
+          echo "### 柔術ニュースの候補" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f "$f" ]; then
+            echo "- 候補 $(python3 -c "import json;print(len(json.load(open('$f'))['candidates']))") 件（06:49 のルーティンが日本語にまとめます）" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "- 今日は候補なし（または今日の号がすでにある）" >> "$GITHUB_STEP_SUMMARY"
+          fi

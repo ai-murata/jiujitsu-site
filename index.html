@@ -12,6 +12,9 @@
 </script>
 
 <title>Jiu Labo｜jiujitsu.co.jp</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="description" content="「柔術 × AI」で、日本の最先端をいく。現場の「あったらいいな」を、カタチに。柔術の現場で必要にせまられて作った道具を置いています。">
 <link rel="alternate" type="application/atom+xml" title="Jiu Labo の新着" href="/feed.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
@@ -20,11 +23,11 @@
     --paper: #ffffff;
     --panel: #faf8f2;
     --line: #e7e1d1;
-    --gold: #a3801a;
+    --gold: #8a6c12;
     --gold-hi: #c9a227;
     --ink: #17140d;
-    --body-c: #5d5745;
-    --faint: #948c74;
+    --body-c: #4d4838;
+    --faint: #736b55;
     --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
     --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
   }
@@ -36,11 +39,19 @@
   header::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 30%, rgba(201,162,39,.08), transparent 70%); pointer-events: none; }
   .wordmark { font-family: var(--mincho); font-weight: 600; font-size: clamp(44px, 9vw, 84px); line-height: 1.1; letter-spacing: .02em; margin: 0; padding: .05em .12em .24em; background: linear-gradient(175deg, var(--gold-hi) 10%, var(--gold) 50%, #6f5610 95%); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .domain { margin-top: 2px; }
-  .domain { font-size: 12px; letter-spacing: .28em; color: var(--faint); margin: 14px 0 0; }
+  .domain { font-size: 12.5px; letter-spacing: .28em; color: var(--faint); margin: 14px 0 0; }
   .tagline { font-family: var(--mincho); font-weight: 600; font-size: clamp(16px, 3vw, 21px); color: var(--ink); letter-spacing: .12em; margin: 34px 0 0; text-wrap: balance; }
   .tagline ruby { ruby-align: center; }
   .tagline rt { font-size: .5em; font-weight: 500; letter-spacing: .04em; color: var(--ink); opacity: .75; }
-  .subline { font-size: clamp(13px, 2.4vw, 14.5px); color: var(--body-c); letter-spacing: .08em; margin: 10px 0 0; }
+  .subline { font-size: clamp(14px, 2.4vw, 15.5px); color: var(--body-c); letter-spacing: .08em; margin: 10px 0 0; }
+
+  .hsearch { position: relative; display: flex; max-width: 420px; margin: 26px auto 0; }
+  .hsearch input { flex: 1; min-width: 0; font: inherit; font-size: 16px; color: var(--ink); background: rgba(255,255,255,.9); border: 1px solid var(--line); border-radius: 999px; padding: 8px 56px 8px 20px; outline: none; -webkit-appearance: none; appearance: none; }
+  .hsearch input::placeholder { color: var(--faint); letter-spacing: .04em; }
+  .hsearch input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,162,39,.18); }
+  .hsearch button { position: absolute; right: 4px; top: 4px; bottom: 4px; width: 44px; border: 0; border-radius: 999px; background: var(--gold); color: #fff; cursor: pointer; display: grid; place-items: center; }
+  .hsearch button:hover { background: #8d6e14; }
+  .hsearch svg { width: 17px; height: 17px; }
 
   .rank { display: flex; height: 4px; }
   .rank span { flex: 1; }
@@ -57,40 +68,40 @@
   a.card:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
   a.card.solo { grid-template-columns: 1fr; }
   .thumb { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; border: 1px solid var(--line); background: var(--paper); display: block; }
-  .eyebrow { font-family: var(--mincho); font-size: 12px; letter-spacing: .24em; color: var(--gold); margin: 0 0 8px; }
-  .card h2 { font-family: var(--mincho); font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: .06em; margin: 0 0 8px; }
+  .eyebrow { font-family: var(--mincho); font-size: 13px; letter-spacing: .2em; color: var(--gold); margin: 0 0 8px; }
+  .card h2 { font-family: var(--mincho); font-weight: 700; font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 0 0 8px; }
   .card h2 .arrow { color: var(--gold); margin-left: 8px; font-weight: 500; }
-  .card p { font-size: 13.5px; margin: 0; }
-  .card .note { display: inline-block; margin-top: 10px; font-size: 11px; letter-spacing: .08em; color: var(--gold); border: 1px solid rgba(163,128,26,.35); padding: 2px 10px; border-radius: 999px; }
+  .card p { font-size: 15px; line-height: 1.95; margin: 0; }
+  .card .note { display: inline-block; margin-top: 10px; font-size: 12px; letter-spacing: .08em; color: var(--gold); border: 1px solid rgba(138,108,18,.4); padding: 2px 10px; border-radius: 999px; }
   @media (max-width: 660px) {
     a.card { grid-template-columns: 1fr; gap: 16px; }
   }
 
   .people { margin-top: 72px; }
-  .sec-label { font-family: var(--mincho); font-size: 13px; letter-spacing: .3em; color: var(--gold); font-weight: 700; margin: 0 0 20px; }
+  .sec-label { font-family: var(--mincho); font-size: 15px; letter-spacing: .3em; color: var(--gold); font-weight: 700; margin: 0 0 20px; }
   .pgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   @media (max-width: 660px) { .pgrid { grid-template-columns: 1fr; } }
   .pcard { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 26px 28px 28px; }
   .pname { font-family: var(--mincho); font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: .08em; margin: 0 0 2px; }
-  .pname small { display: block; font-family: var(--gothic); font-size: 10px; letter-spacing: .26em; color: var(--faint); font-weight: 500; margin-top: 4px; }
-  .prole { font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 500; margin: 10px 0 12px; }
-  .pbio { font-size: 13px; line-height: 2; margin: 0; }
+  .pname small { display: block; font-family: var(--gothic); font-size: 11px; letter-spacing: .26em; color: var(--faint); font-weight: 500; margin-top: 4px; }
+  .prole { font-size: 13px; letter-spacing: .1em; color: var(--gold); font-weight: 500; margin: 10px 0 12px; }
+  .pbio { font-size: 14.5px; line-height: 2; margin: 0; }
   .pbio a { color: var(--gold); text-decoration: none; }
   .pbio a:hover { text-decoration: underline; }
-  .pdata { font-size: 12px; color: var(--faint); letter-spacing: .04em; margin: -4px 0 12px; }
-  .pinsta { margin: 18px 0 0; font-size: 12px; letter-spacing: .06em; }
+  .pdata { font-size: 13px; color: var(--faint); letter-spacing: .04em; margin: -4px 0 12px; }
+  .pinsta { margin: 18px 0 0; font-size: 13px; letter-spacing: .06em; }
   .pinsta a { color: var(--gold); text-decoration: none; }
   .pinsta a:hover { text-decoration: underline; }
-  .rec-label { font-family: var(--mincho); font-size: 12px; letter-spacing: .26em; color: var(--gold); font-weight: 700; margin: 18px 0 8px; }
-  .record { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; font-size: 12.5px; line-height: 1.7; }
+  .rec-label { font-family: var(--mincho); font-size: 13px; letter-spacing: .26em; color: var(--gold); font-weight: 700; margin: 18px 0 8px; }
+  .record { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 13.5px; line-height: 1.75; }
   .record .ry { font-family: var(--mincho); font-weight: 500; color: var(--gold); margin-right: 10px; letter-spacing: .04em; }
-  .record .fst { font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: var(--paper); background: var(--gold); border-radius: 3px; padding: 1px 7px; margin-left: 8px; vertical-align: 1px; }
+  .record .fst { font-size: 11px; font-weight: 700; letter-spacing: .1em; color: var(--paper); background: var(--gold); border-radius: 3px; padding: 1px 7px; margin-left: 8px; vertical-align: 1px; }
 
   .coming { margin-top: 56px; border-left: 2px solid var(--gold); padding: 4px 0 4px 26px; }
   .coming h3 { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .08em; margin: 0 0 8px; }
-  .coming p { font-size: 13.5px; margin: 0; max-width: 40em; }
+  .coming p { font-size: 15px; margin: 0; max-width: 40em; }
   .soon { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-  .soon li { font-size: 13.5px; }
+  .soon li { font-size: 15px; }
   .soon b { font-family: var(--mincho); font-weight: 700; color: var(--ink); letter-spacing: .04em; margin-right: 10px; }
   .soon span { color: var(--body-c); }
 
@@ -100,37 +111,64 @@
   .newslist a { display: flex; align-items: baseline; gap: 18px; padding: 13px 4px; text-decoration: none; color: inherit; transition: color .15s; }
   .newslist a:hover { color: var(--gold); }
   .newslist a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
-  .newslist time { font-family: var(--mincho); font-size: 12px; letter-spacing: .1em; color: var(--faint); flex: none; }
-  .newslist b { font-family: var(--mincho); font-weight: 700; font-size: 15px; color: var(--ink); letter-spacing: .04em; }
+  .newslist time { font-family: var(--mincho); font-size: 13px; letter-spacing: .1em; color: var(--faint); flex: none; }
+  .newslist b { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: .04em; }
   .newslist a:hover b { color: var(--gold); }
   .newslist .arrow { color: var(--gold); margin-left: auto; flex: none; }
   .newsfoot { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 18px 0 0; }
-  .linebtn { font-size: 12.5px; font-weight: 700; letter-spacing: .08em; text-decoration: none; color: #fff; background: #06c755; border-radius: 999px; padding: 8px 20px; }
+  .linebtn { font-size: 13.5px; font-weight: 700; letter-spacing: .08em; text-decoration: none; color: #fff; background: #06c755; border-radius: 999px; padding: 8px 20px; }
   .linebtn:hover { filter: brightness(.93); }
-  .feedlink { font-size: 11.5px; letter-spacing: .1em; color: var(--faint); text-decoration: none; }
+  .feedlink { font-size: 13px; letter-spacing: .1em; color: var(--faint); text-decoration: none; }
   .feedlink:hover { color: var(--gold); text-decoration: underline; }
 
-  .newslist .tag { flex: none; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: var(--gold); border: 1px solid rgba(163,128,26,.4); border-radius: 3px; padding: 0 6px; line-height: 1.7; }
+  .newslist .tag { flex: none; font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: var(--gold); border: 1px solid rgba(138,108,18,.45); border-radius: 3px; padding: 0 6px; line-height: 1.7; }
   .newslist b { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   /* 一番新しいお知らせを大きく */
   .newslist li.is-latest a { flex-wrap: wrap; gap: 4px 12px; align-items: center; background: var(--panel); border-top: 3px solid var(--gold); padding: 20px 20px 22px; }
-  .newslist li.is-latest b { flex-basis: 100%; font-size: 19px; line-height: 1.6; white-space: normal; }
+  .newslist li.is-latest b { flex-basis: 100%; font-size: 21px; line-height: 1.6; white-space: normal; }
   .newslist li.is-latest .arrow { display: none; }
-  .newslist .sum { flex-basis: 100%; font-size: 13px; line-height: 1.8; color: var(--body-c); }
-  .newslist .new-badge { flex: none; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: var(--paper); background: var(--gold); border-radius: 3px; padding: 0 7px; line-height: 1.7; }
+  .newslist .sum { flex-basis: 100%; font-size: 14.5px; line-height: 1.8; color: var(--body-c); }
+  .newslist .new-badge { flex: none; font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: var(--paper); background: var(--gold); border-radius: 3px; padding: 0 7px; line-height: 1.7; }
   .newslist li.is-hidden { display: none; }
-  .more-btn { background: none; border: 1px solid var(--gold); color: var(--gold); border-radius: 999px; padding: 6px 22px; font: inherit; font-size: 12px; letter-spacing: .1em; cursor: pointer; transition: background .15s, color .15s; }
+  .more-btn { background: none; border: 1px solid var(--gold); color: var(--gold); border-radius: 999px; padding: 8px 24px; font: inherit; font-size: 13.5px; letter-spacing: .1em; cursor: pointer; transition: background .15s, color .15s; }
   .more-btn:hover { background: var(--gold); color: var(--paper); }
   .more-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
+  /* ブログ欄：いちばん上。最新記事は書き出しを抜粋して見せる */
+  .bfeat { margin-top: 18px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 26px 28px 24px; }
+  .bfeat .eyebrow { display: flex; align-items: center; gap: 12px; letter-spacing: .12em; }
+  .blabel { font-family: var(--gothic); font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: var(--paper); background: var(--gold); border-radius: 3px; padding: 0 8px; line-height: 1.8; }
+  .bfeat time { color: var(--faint); }
+  .bfeat h2 { font-family: var(--mincho); font-weight: 700; font-size: clamp(21px, 4vw, 27px); line-height: 1.55; letter-spacing: .05em; margin: 0 0 14px; word-break: auto-phrase; text-wrap: pretty; }
+  .bfeat h2 a { color: var(--ink); text-decoration: none; }
+  .bfeat h2 a:hover { color: var(--gold); }
+  .bexcerpt { position: relative; max-height: 13.5em; overflow: hidden; }
+  .bexcerpt::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4.5em; background: linear-gradient(rgba(250,248,242,0), var(--panel)); pointer-events: none; }
+  .bexcerpt p { font-size: 15.5px; line-height: 2; margin: 0 0 .8em; }
+  .bread { display: inline-block; margin-top: 10px; background: var(--gold); color: var(--paper); border-radius: 999px; padding: 10px 30px; font-size: 14.5px; font-weight: 700; letter-spacing: .1em; text-decoration: none; transition: background .15s; }
+  .bread:hover { background: #6f5610; }
+  .bread:focus-visible, .bfeat h2 a:focus-visible, .bmore a:focus-visible, .ball a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .bmore { list-style: none; margin: 18px 0 0; padding: 0; border-top: 1px solid var(--line); }
+  .bmore li { border-bottom: 1px solid var(--line); }
+  .bmore a { display: flex; align-items: baseline; gap: 16px; padding: 12px 4px; text-decoration: none; color: inherit; }
+  .bmore time { flex: none; font-family: var(--mincho); font-size: 13px; letter-spacing: .1em; color: var(--faint); }
+  .bmore b { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: .04em; }
+  .bmore a:hover b { color: var(--gold); }
+  .ball { margin: 14px 0 0; text-align: right; font-size: 14px; letter-spacing: .08em; }
+  .ball a { color: var(--gold); text-decoration: none; font-weight: 700; }
+  .ball a:hover { text-decoration: underline; }
+  .dailynews { margin-top: 72px; scroll-margin-top: 20px; }
+  .dailynews .works { margin-top: 20px; }
+
   /* もくじ：スクロールしなくてもサイト全体が見わたせる */
+  .pick { padding: 36px 0 0; }
   .map { padding: 36px 0 0; }
-  .mapgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-  .mapgrp { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 12px 14px 12px; }
-  .mapgrp h2 { margin: 0 0 6px; font-family: var(--mincho); font-weight: 700; font-size: 13px; letter-spacing: .2em; }
+  .mapgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .mapgrp { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 12px 14px 12px; break-inside: avoid; }
+  .mapgrp h2 { margin: 0 0 6px; font-family: var(--mincho); font-weight: 700; font-size: 14.5px; letter-spacing: .2em; }
   .mapgrp h2 a { color: var(--gold); text-decoration: none; }
   .mapgrp ul { list-style: none; margin: 0; padding: 0; }
-  .mapgrp li a { display: block; font-size: 13px; line-height: 1.5; padding: 4px 0; color: var(--ink); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .mapgrp li a { display: block; font-size: 14.5px; line-height: 1.5; padding: 4px 0; color: var(--ink); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .mapgrp li a:hover { color: var(--gold); }
   .mapgrp li a:focus-visible, .mapgrp h2 a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
   .cat-label, .people, .coming { scroll-margin-top: 20px; }
@@ -145,28 +183,39 @@
   @media (max-width: 660px) {
     header { padding: 30px 16px 22px; }
     .wordmark { font-size: 44px; }
-    .domain { margin-top: 4px; font-size: 10.5px; }
-    .tagline { margin-top: 12px; font-size: 14.5px; letter-spacing: .06em; line-height: 1.7; }
-    .subline { margin-top: 4px; font-size: 12px; }
+    .domain { margin-top: 4px; font-size: 11px; }
+    .tagline { margin-top: 12px; font-size: 15.5px; letter-spacing: .06em; line-height: 1.7; }
+    .subline { margin-top: 4px; font-size: 13.5px; }
+    .hsearch { margin-top: 16px; }
     .wrap { padding: 0 16px; }
+    .pick { padding-top: 16px; }
     .map { padding-top: 16px; }
-    .mapgrid { grid-template-columns: 1fr 1fr; gap: 8px; }
-    .mapgrp { padding: 8px 10px 8px; }
-    .mapgrp h2 { font-size: 12px; margin-bottom: 2px; }
-    .mapgrp li a { font-size: 12.5px; padding: 3px 0; }
+    .mapgrid { display: block; columns: 2; column-gap: 8px; }
+    .mapgrp { padding: 8px 10px 8px; margin-bottom: 8px; }
+    .mapgrp h2 { font-size: 13.5px; letter-spacing: .08em; margin-bottom: 2px; }
+    .mapgrp li a { display: flex; align-items: baseline; font-size: 14px; line-height: 1.45; padding: 4px 0 4px 4px; white-space: normal; overflow: visible; border-radius: 8px; }
+    .map .ic { flex: none; }
     .news { padding-top: 28px; }
     .sec-label { margin-bottom: 10px; }
     .newslist a { flex-wrap: wrap; gap: 0 8px; padding: 9px 2px; align-items: center; }
-    .newslist time { font-size: 11px; }
-    .newslist b { flex-basis: 100%; font-size: 14px; letter-spacing: .02em; line-height: 1.6; }
+    .newslist time { font-size: 12.5px; }
+    .newslist b { flex-basis: 100%; font-size: 15.5px; letter-spacing: .02em; line-height: 1.6; }
     .newslist .arrow { display: none; }
     .newslist li.is-latest a { gap: 2px 8px; padding: 14px 14px 16px; }
-    .newslist li.is-latest b { font-size: 16.5px; }
-    .newslist .sum { font-size: 12.5px; line-height: 1.75; }
+    .newslist li.is-latest b { font-size: 18px; }
+    .newslist .sum { font-size: 14px; line-height: 1.8; }
     main { padding-top: 40px; }
+    .bfeat { padding: 20px 18px 20px; margin-top: 12px; }
+    .bexcerpt { max-height: 12em; }
+    .bexcerpt p { font-size: 14.5px; line-height: 1.9; }
+    .bread { display: block; text-align: center; }
+    .bmore a { flex-wrap: wrap; gap: 0 8px; padding: 10px 2px; }
+    .bmore time { font-size: 12.5px; }
+    .bmore b { flex-basis: 100%; font-size: 15px; line-height: 1.6; }
+    .dailynews { margin-top: 48px; }
   }
 
-  footer { border-top: 1px solid var(--line); padding: 34px 24px 46px; text-align: center; font-size: 12px; letter-spacing: .12em; color: var(--faint); }
+  footer { border-top: 1px solid var(--line); padding: 34px 24px 46px; text-align: center; font-size: 13px; letter-spacing: .12em; color: var(--faint); }
   footer b { color: var(--body-c); font-weight: 700; }
   footer a { color: var(--faint); }
 
@@ -181,9 +230,74 @@
   <p class="domain rise d1">JIUJITSU.CO.JP</p>
   <p class="tagline rise d2"><ruby>AI<rt>亜衣</rt></ruby>が運用する、<ruby>AI<rt>えーあい</rt></ruby>研究所。</p>
   <p class="subline rise d2">現場の「あったらいいな」を、カタチに。</p>
+  <form class="hsearch rise d2" role="search" action="/search/" method="get">
+    <input name="q" type="search" placeholder="サイト内を検索" aria-label="サイト内を検索" autocomplete="off" enterkeyhint="search">
+    <button type="submit" aria-label="検索"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
+  </form>
 </header>
 
 <div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <section class="pick blogtop rise d2" id="cat-blog">
+    <p class="cat-label">マネージャーのブログ</p>
+
+    <!-- 最新記事。/blog/ に記事が増えると、下のスクリプトが自動で差し替えます -->
+    <article class="bfeat">
+      <p class="eyebrow"><span class="blabel">最新記事</span><time datetime="2026-09-29">2026.09.29</time></p>
+      <h2><a href="/blog/ai-shain/">うちの会社に、AI社員が6人いた</a></h2>
+      <div class="bexcerpt">
+        <p>こんにちは、村田亜衣です。6本目の今日は、AI社員の話です。</p>
+        <p>最近よく聞く「AIエージェント」。AIに社員みたいに仕事を任せる、というやつです。正直に言うと、最初の動機は「なんかかっこいいから、うちもやりたい」でした。</p>
+        <p>それでClaudeに「AI社員を作るのってどう思う？」と聞いてみたら、意外な答えが返ってきました。</p>
+      </div>
+      <a class="bread" href="/blog/ai-shain/">続きを読む →</a>
+    </article>
+
+    <ul class="bmore">
+      <li><a href="/blog/shigoto-igai-de/"><time datetime="2026-09-28">2026.09.28</time><b>仕事で使えないなら、暮らしで使ってみよう</b></a></li>
+      <li><a href="/blog/seikyusho-claude/"><time datetime="2026-09-28">2026.09.28</time><b>請求書の1年分を、Claudeに見直してもらった話</b></a></li>
+      <li><a href="/blog/waapuro-kara-ai/"><time datetime="2026-09-27">2026.09.27</time><b>ワープロ好きだった私が、Claude Codeにハマった理由</b></a></li>
+    </ul>
+    <p class="ball"><a href="/blog/">ブログの記事をぜんぶ見る →</a></p>
+  </section>
+</div>
+<script>
+// トップのブログ欄：/blog/ の一覧から最新記事を拾い、本文の書き出しを抜粋して出す
+(function () {
+  var box = document.querySelector('.blogtop');
+  if (!box || !window.fetch || !window.DOMParser) return;
+  function doc(t) { return new DOMParser().parseFromString(t, 'text/html'); }
+  function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+  function get(u) { return fetch(u).then(function (r) { if (!r.ok) throw r; return r.text(); }).then(doc); }
+  get('/blog/').then(function (d) {
+    var posts = Array.prototype.map.call(d.querySelectorAll('.posts li a'), function (a) {
+      var t = a.querySelector('time'), h = a.querySelector('h2');
+      return { url: a.getAttribute('href'), date: t ? t.getAttribute('datetime') : '', label: t ? t.textContent : '', title: h ? h.textContent.trim() : '' };
+    }).filter(function (p) { return p.url && p.title; });
+    if (!posts.length) return;
+    posts.sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
+    var top = posts[0];
+    box.querySelector('.bmore').innerHTML = posts.slice(1, 4).map(function (p) {
+      return '<li><a href="' + esc(p.url) + '"><time datetime="' + esc(p.date) + '">' + esc(p.label) + '</time><b>' + esc(p.title) + '</b></a></li>';
+    }).join('');
+    if (box.querySelector('.bfeat h2 a').getAttribute('href') === top.url) return;
+    return get(top.url).then(function (a) {
+      var ps = Array.prototype.filter.call(a.querySelectorAll('article > p'), function (p) {
+        return p.textContent.trim().length > 0;
+      }).slice(0, 3);
+      if (!ps.length) return;
+      var f = box.querySelector('.bfeat');
+      f.querySelector('time').setAttribute('datetime', top.date);
+      f.querySelector('time').textContent = top.label;
+      f.querySelector('h2 a').textContent = top.title;
+      f.querySelector('h2 a').href = top.url;
+      f.querySelector('.bread').href = top.url;
+      f.querySelector('.bexcerpt').innerHTML = ps.map(function (p) { return '<p>' + esc(p.textContent.trim()) + '</p>'; }).join('');
+    });
+  }).catch(function () {});
+})();
+</script>
 
 <div class="wrap">
   <nav class="map rise d2" aria-label="もくじ">
@@ -195,6 +309,8 @@
           <li><a href="/tournament/"><span class="ic" aria-hidden="true">🏆</span>大会出場スケジュール</a></li>
           <li><a href="/hajimete/"><span class="ic" aria-hidden="true">🔰</span>はじめての大会ガイド</a></li>
           <li><a href="/dojo/"><span class="ic" aria-hidden="true">🗾</span>全国柔術道場ガイド</a></li>
+          <li><a href="/jiunews/"><span class="ic" aria-hidden="true">📰</span>きょうの柔術ニュース</a></li>
+          <li><a href="/kenkyu/"><span class="ic" aria-hidden="true">🔬</span>柔術の研究論文ガイド</a></li>
         </ul>
       </section>
       <section class="mapgrp">
@@ -204,12 +320,8 @@
           <li><a href="/hojokin/"><span class="ic" aria-hidden="true">💰</span>道場が使える補助金</a></li>
           <li><a href="/ryoshusho/"><span class="ic" aria-hidden="true">🧾</span>領収書のデジタル化</a></li>
           <li><a href="/claudecode/"><span class="ic" aria-hidden="true">🤖</span>道場のClaude Code</a></li>
-        </ul>
-      </section>
-      <section class="mapgrp">
-        <h2><a href="#cat-irai"><span class="ic" aria-hidden="true">🤝</span>頼まれて作ったもの</a></h2>
-        <ul>
-          <li><a href="/salon/"><span class="ic" aria-hidden="true">💆</span>サロンの顧客管理</a></li>
+          <li><a href="/hajimekata/"><span class="ic" aria-hidden="true">🌱</span>Claudeの始め方</a></li>
+          <li><a href="/claudenews/"><span class="ic" aria-hidden="true">🗞️</span>きょうのClaudeニュース</a></li>
         </ul>
       </section>
       <section class="mapgrp">
@@ -219,13 +331,25 @@
           <li><a href="/toriatsukai/"><span class="ic" aria-hidden="true">📘</span>良蔵取扱説明書</a></li>
           <li><a href="/muratake/"><span class="ic" aria-hidden="true">📦</span>Amazon履歴</a></li>
           <li><a href="/kondate/"><span class="ic" aria-hidden="true">🍙</span>良蔵の献立</a></li>
+          <li><a href="#people"><span class="ic" aria-hidden="true">👋</span>つくっている人</a></li>
+        </ul>
+      </section>
+      <section class="mapgrp">
+        <h2><a href="#cat-irai"><span class="ic" aria-hidden="true">🤝</span>頼まれて作ったもの</a></h2>
+        <ul>
+          <li><a href="/salon/"><span class="ic" aria-hidden="true">💆</span>サロンの顧客管理</a></li>
+          <li><a href="/irai/"><span class="ic" aria-hidden="true">🙋</span>AIのお手伝い、承ります</a></li>
         </ul>
       </section>
       <section class="mapgrp">
         <h2><a href="/blog/"><span class="ic" aria-hidden="true">✏️</span>ブログ</a></h2>
         <ul>
           <li><a href="/blog/"><span class="ic" aria-hidden="true">📝</span>記事の一覧</a></li>
-          <li><a href="#people"><span class="ic" aria-hidden="true">👋</span>つくっている人</a></li>
+        </ul>
+      </section>
+      <section class="mapgrp">
+        <h2><a href="/company/"><span class="ic" aria-hidden="true">🧪</span>Jiu Labo について</a></h2>
+        <ul>
           <li><a href="#coming"><span class="ic" aria-hidden="true">🌱</span>これから作るもの</a></li>
           <li><a href="/company/"><span class="ic" aria-hidden="true">🏢</span>会社概要</a></li>
         </ul>
@@ -239,7 +363,11 @@
     <section class="news rise d2">
       <p class="sec-label">新着</p>
       <ul class="newslist" data-show="5">
-        <li class="is-latest"><a href="/salon/"><time datetime="2026-09-29">2026.09.29</time><b>サロンの顧客管理</b><span class="arrow">→</span><span class="sum">「誰に、いくら」をスマホで打つだけで、月の売上とお客さまのカルテが育っていく。エステサロンに頼まれて作った、スマホの外に情報を出さない顧客管理です。</span></a></li>
+        <li class="is-latest"><a href="/blog/ai-shain/"><time datetime="2026-09-29">2026.09.29</time><span class="tag">ブログ</span><b>うちの会社に、AI社員が6人いた</b><span class="arrow">→</span><span class="sum">「AI社員ってかっこいいな」から始まった話。名簿にしてみたら、うちにはもう6人いました。AIを係ごとに分けるといい理由も書いています。マネージャー目線のブログ、6本目です。</span></a></li>
+        <li><a href="/jiunews/"><time datetime="2026-09-29">2026.09.29</time><b>きょうの柔術ニュース</b><span class="arrow">→</span></a></li>
+        <li><a href="/kenkyu/"><time datetime="2026-09-29">2026.09.29</time><b>柔術の研究論文ガイド</b><span class="arrow">→</span></a></li>
+        <li><a href="/hajimekata/"><time datetime="2026-09-29">2026.09.29</time><b>Claudeの始め方</b><span class="arrow">→</span></a></li>
+        <li><a href="/salon/"><time datetime="2026-09-29">2026.09.29</time><b>サロンの顧客管理</b><span class="arrow">→</span></a></li>
         <li><a href="/blog/shigoto-igai-de/"><time datetime="2026-09-28">2026.09.28</time><span class="tag">ブログ</span><b>仕事で使えないなら、暮らしで使ってみよう</b><span class="arrow">→</span></a></li>
         <li><a href="/blog/seikyusho-claude/"><time datetime="2026-09-28">2026.09.28</time><span class="tag">ブログ</span><b>請求書の1年分を、Claudeに見直してもらった話</b><span class="arrow">→</span></a></li>
         <li><a href="/blog/waapuro-kara-ai/"><time datetime="2026-09-27">2026.09.27</time><span class="tag">ブログ</span><b>ワープロ好きだった私が、Claude Codeにハマった理由</b><span class="arrow">→</span></a></li>
@@ -300,16 +428,6 @@
   <div class="wrap">
     <div class="works rise d3">
 
-      <p class="cat-label" id="cat-blog">ブログ</p>
-
-      <a class="card solo" href="/blog/">
-        <span>
-          <p class="eyebrow">BLOG ・ 不定期更新</p>
-          <h2>マネージャーのブログ<span class="arrow">→</span></h2>
-          <p>柔術の道場運営のこと、良蔵さんのまわりのこと、Claude Codeのこと。マネージャー村田亜衣の目線で、ゆるく書いています。</p>
-        </span>
-      </a>
-
       <p class="cat-label" id="cat-jiujitsu">柔術</p>
 
       <a class="card" href="/tournament/">
@@ -339,12 +457,21 @@
         </span>
       </a>
 
+      <a class="card" href="/kenkyu/">
+        <img class="thumb" src="/assets/kenkyu.jpg" alt="柔術の研究論文ガイドの画面。テーマ別に並んだ論文の要約">
+        <span>
+          <p class="eyebrow">04 ・ KENKYU</p>
+          <h2>柔術の研究論文ガイド<span class="arrow">→</span></h2>
+          <p>柔術は、科学的にどこまでわかっているのか。怪我、絞め技の安全性、試合の体力、減量、メンタル、高齢者の健康まで。海外の学術論文17本を、日本語で要約しました。</p>
+        </span>
+      </a>
+
       <p class="cat-label" id="cat-shigoto">道場のしごと</p>
 
       <a class="card" href="/shift/">
         <img class="thumb" src="/assets/shift.jpg" alt="月次シフト表の画面。タイムラインにスタッフの出勤バーとクラス枠が並ぶ">
         <span>
-          <p class="eyebrow">04 ・ SHIFT</p>
+          <p class="eyebrow">05 ・ SHIFT</p>
           <h2>月次シフト表<span class="arrow">→</span></h2>
           <p>2店舗のジムのシフトを、スマホで見やすいタイムラインに。日別・人別の切り替え、スタッフごとの色分け、直前の変更箇所のハイライトつき。毎月Excelから自動生成しています。</p>
           <span class="note">展示用サンプル・スタッフ名は仮名です</span>
@@ -354,7 +481,7 @@
       <a class="card" href="/hojokin/">
         <img class="thumb" src="/assets/hojokin.jpg" alt="補助金ページの画面。都道府県で絞り込める補助金の一覧">
         <span>
-          <p class="eyebrow">05 ・ HOJOKIN</p>
+          <p class="eyebrow">06 ・ HOJOKIN</p>
           <h2>道場が使える補助金<span class="arrow">→</span></h2>
           <p>マットの入れ替え、更衣室の改修、予約システムの導入、スタッフ採用。「これ、補助金出るのでは？」を探すための一覧です。国の公開データ（Jグランツ）から毎朝自動で集めて、都道府県別に絞り込めます。</p>
           <span class="note">毎日自動更新・出典 Jグランツ</span>
@@ -364,7 +491,7 @@
       <a class="card" href="/ryoshusho/">
         <img class="thumb" src="/assets/ryoshusho.jpg" alt="領収書のデジタル化のページ。スキャンした領収書の下に日付・金額・用途が書き込まれている">
         <span>
-          <p class="eyebrow">06 ・ RECEIPTS</p>
+          <p class="eyebrow">07 ・ RECEIPTS</p>
           <h2>領収書のデジタル化<span class="arrow">→</span></h2>
           <p>紙の領収書をスキャンして読み取り、カレンダーの予定と突き合わせて「誰と・何のために」まで画像に焼き込む手順。ファイル名だけで電子帳簿保存法の検索条件を満たします。連盟と会社で432枚をスキャンして、順に片付けています。</p>
         </span>
@@ -373,9 +500,18 @@
       <a class="card" href="/claudecode/">
         <img class="thumb" src="/assets/claudecode.jpg" alt="柔術道場のClaude Codeのページ。白帯から黒帯までの帯ごとに使い方が並ぶ">
         <span>
-          <p class="eyebrow">07 ・ CLAUDE CODE</p>
+          <p class="eyebrow">08 ・ CLAUDE CODE</p>
           <h2>柔術道場のClaude Code<span class="arrow">→</span></h2>
           <p>朝のやること一覧から、問い合わせの返信、会費の集計、大会の速報まで。このサイトを作ってきたAIに、道場の裏方仕事を毎日どう任せているか。白帯から黒帯までの段階に並べて、そのまま使える頼み方も付けました。</p>
+        </span>
+      </a>
+
+      <a class="card" href="/hajimekata/">
+        <img class="thumb" src="/assets/hajimekata.jpg" alt="Claudeの始め方のページ。Chat・Cowork・Codeの使い分けと、始める順番が並ぶ">
+        <span>
+          <p class="eyebrow">09 ・ START</p>
+          <h2>Claudeの始め方<span class="arrow">→</span></h2>
+          <p>インストールでつまずいた私が、1か月でやってきたこと。Chat・Cowork・Codeの使い分けから、「しつこく」やりきる最初の1つ、音声入力、毎月の作業を型にするまで。始める順番と、実際につまずいたところをまとめました。</p>
         </span>
       </a>
 
@@ -384,10 +520,18 @@
       <a class="card" href="/salon/">
         <img class="thumb" src="/assets/salon.jpg" alt="サロンの顧客管理の画面。お客さまのカルテに累計・来店回数・誕生日・肌のメモが並ぶ">
         <span>
-          <p class="eyebrow">08 ・ SALON</p>
+          <p class="eyebrow">10 ・ SALON</p>
           <h2>サロンの顧客管理<span class="arrow">→</span></h2>
           <p>「誰に、いくら」をスマホで打つだけで、月の売上とお客さまのカルテが育っていく。知り合いのエステサロンに頼まれて作りました。記録は暗証番号で暗号化して、スマホの外には一切出しません。</p>
           <span class="note">画面はサンプルデータ・お名前は仮名です</span>
+        </span>
+      </a>
+
+      <a class="card solo" href="/irai/">
+        <span>
+          <p class="eyebrow">WORK WITH US ・ 先着3名さま無料</p>
+          <h2>AIのお手伝い、承ります<span class="arrow">→</span></h2>
+          <p>エンジニアじゃない私が、同じ目線で。小さな道具づくり、Claudeの始め方の伴走、毎月の作業の自動化をお手伝いします。いまはお会いしたことがある方に限って、先着3名さま・道具ひとつ分まで無料です。</p>
         </span>
       </a>
 
@@ -396,7 +540,7 @@
       <a class="card" href="/goroku/">
         <img class="thumb" src="/assets/goroku.jpg" alt="良蔵語録のページ。金の線に続く明朝体の言葉が並ぶ">
         <span>
-          <p class="eyebrow">09 ・ GOROKU</p>
+          <p class="eyebrow">11 ・ GOROKU</p>
           <h2>良蔵語録<span class="arrow">→</span></h2>
           <p>畳の上や日々の会話で、ぽろっとこぼれた言葉たちを、そばで聞き集めた語録。「必死とは、必ず死ぬということ」「なければ、つくればいい」——少しずつ増えていきます。</p>
         </span>
@@ -405,7 +549,7 @@
       <a class="card" href="/toriatsukai/">
         <img class="thumb" src="/assets/toriatsukai.jpg" alt="良蔵取扱説明書のページ。家電の取説のような目次と製品仕様が並ぶ">
         <span>
-          <p class="eyebrow">10 ・ TORIATSUKAI</p>
+          <p class="eyebrow">12 ・ TORIATSUKAI</p>
           <h2>良蔵取扱説明書<span class="arrow">→</span></h2>
           <p>26歳で柔術を始めて、38歳で世界一。そんな人と毎日を過ごすための手引きを、取扱説明書の体裁でまとめました。朝はコーヒーを飲み終わるまでそっとしておくのがいちばんです。同じ体裁で、自分の取扱説明書もつくれます。</p>
         </span>
@@ -414,7 +558,7 @@
       <a class="card" href="/muratake/">
         <img class="thumb" src="/assets/muratake.jpg" alt="村田家のAmazon履歴。無添加の調味料や洗剤が並ぶリスト">
         <span>
-          <p class="eyebrow">11 ・ MURATAKE</p>
+          <p class="eyebrow">13 ・ MURATAKE</p>
           <h2>村田家のAmazon履歴<span class="arrow">→</span></h2>
           <p>調味料も洗剤も、村田家が実際に使っているものをAmazonの購入履歴からそのまま並べたカタログ。全部リアルな愛用品。ちなみにほぼ無添加です。</p>
         </span>
@@ -423,7 +567,7 @@
       <a class="card" href="/kondate/">
         <img class="thumb" src="/assets/kondate.jpg" alt="良蔵の献立のページ。曜日ごとの昼ごはんの一覧">
         <span>
-          <p class="eyebrow">12 ・ KONDATE</p>
+          <p class="eyebrow">14 ・ KONDATE</p>
           <h2>良蔵の献立<span class="arrow">→</span></h2>
           <p>朝は食べない、夜は外食。だから昼の一食がすべてです。本人が「食べる」と言ったものだけで一週間ぶんの昼ごはんを組んで、PFCの計算まで付けました。卵は7日とも、形を変えて入っています。グミも枝豆もハムも入っていません。</p>
         </span>
@@ -431,6 +575,28 @@
 
 
     </div>
+
+    <section class="dailynews" id="cat-news">
+      <p class="cat-label">毎朝のニュース</p>
+      <div class="works">
+      <a class="card solo" href="/jiunews/">
+        <span>
+          <p class="eyebrow">NEWS ・ 毎朝更新</p>
+          <h2>きょうの柔術ニュース<span class="arrow">→</span></h2>
+          <p>国内と海外の柔術ニュースを毎朝集めて、やさしい日本語で紹介します。海外の記事は日本語に訳してお届けします。</p>
+        </span>
+      </a>
+
+      <a class="card solo" href="/claudenews/">
+        <span>
+          <p class="eyebrow">NEWS ・ 毎朝更新</p>
+          <h2>きょうの Claude ニュース<span class="arrow">→</span></h2>
+          <p>新しいモデルやサービスの発表を中心に、Claude のニュースを毎朝集めて、やさしい日本語で紹介します。</p>
+        </span>
+      </a>
+
+      </div>
+    </section>
 
     <section class="people" id="people">
       <p class="sec-label">つくっている人たち</p>

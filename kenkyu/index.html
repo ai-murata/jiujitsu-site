@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>柔術の研究論文ガイド</title>
+<meta name="description" content="ブラジリアン柔術を扱った学術論文を、怪我・体力・試合分析・減量・メンタルのテーマ別に、日本語で要約して紹介します。">
+<meta property="og:title" content="柔術の研究論文ガイド">
+<meta property="og:description" content="柔術は、科学的にどこまでわかっているのか。論文17本を日本語で要約。">
+<meta property="og:url" content="https://jiujitsu.co.jp/kenkyu/">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --ok: #3f6b3a; --ok-bg: #edf3ea;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; font-size: 14.5px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 80px; }
+
+  header { text-align: center; padding: 64px 20px 36px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 700; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(26px, 6vw, 38px); color: var(--ink); letter-spacing: .08em; line-height: 1.5; margin: 10px 0 8px; text-wrap: balance; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  .intro { margin: 40px 0 0; font-size: 14px; }
+  .intro p { margin: 0 0 12px; }
+
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; padding: 0; list-style: none; }
+  .toc a { display: inline-block; font-size: 12.5px; color: var(--ink); text-decoration: none; border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 4px 14px; letter-spacing: .04em; }
+  .toc a:hover { border-color: var(--gold); color: var(--gold); }
+  .toc .n { color: var(--faint); margin-left: 4px; font-size: 11px; }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 21px; color: var(--ink); letter-spacing: .08em; margin: 64px 0 6px; display: flex; align-items: center; gap: 12px; scroll-margin-top: 16px; }
+  h2::before { content: "▼"; color: var(--gold); font-size: 14px; }
+  .h2sub { font-size: 12.5px; color: var(--faint); margin: 0 0 20px; letter-spacing: .04em; line-height: 1.9; }
+
+  .paper { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold); padding: 20px 22px 18px; margin: 16px 0; }
+  .paper .ja { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: .03em; line-height: 1.7; margin: 0 0 4px; }
+  .paper .en { font-size: 12px; color: var(--faint); line-height: 1.7; margin: 0 0 10px; font-style: italic; }
+  .paper .meta { font-size: 12px; color: var(--body-c); line-height: 1.8; margin: 0 0 10px; }
+  .paper .meta b { color: var(--ink); font-weight: 700; }
+  .paper ul { margin: 0 0 12px; padding-left: 1.2em; font-size: 13.5px; line-height: 1.9; }
+  .paper li { margin: 0 0 4px; }
+  .paper .memo { font-size: 13px; background: var(--paper); border: 1px dashed var(--line); padding: 8px 12px; margin: 0 0 12px; line-height: 1.85; }
+  .paper .memo b { color: var(--gold); font-weight: 700; margin-right: 6px; }
+  .links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 12px; }
+  .links a { color: var(--gold); text-decoration: none; font-weight: 700; letter-spacing: .04em; }
+  .links a:hover { text-decoration: underline; }
+  .badge { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; border-radius: 3px; padding: 1px 8px; }
+  .badge.oa { color: var(--ok); background: var(--ok-bg); }
+  .badge.pay { color: var(--faint); background: #f1eee6; }
+  .badge.kind { color: var(--gold); background: #f6efd9; }
+
+  .note { font-size: 12.5px; color: var(--faint); background: var(--panel); border: 1px solid var(--line); padding: 16px 20px; margin: 64px 0 0; line-height: 1.9; }
+  .note b { color: var(--ink); }
+  .note p { margin: 0 0 8px; }
+  .note p:last-child { margin: 0; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 22px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+
+<header>
+  <p class="brand">JIU LABO ／ KENKYU</p>
+  <h1>柔術の研究論文ガイド</h1>
+  <p class="lede">柔術は、科学的にどこまでわかっているのか。</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <div class="intro">
+    <p>ブラジリアン柔術を扱った学術論文を集め、テーマごとに日本語で要約しました。「絞めは危なくないの？」「試合前の減量は体にどう響く？」「年をとってからでも効果はある？」のように、道場でよく聞かれる疑問に関わるものを選んでいます。</p>
+    <p>どの論文も、PubMedや学術誌の公式ページで存在を確かめたものだけを載せています。<span class="badge oa">無料で読める</span> の論文は、リンク先で全文を読めます。</p>
+  </div>
+
+  <ul class="toc" aria-label="テーマ">
+    <li><a href="#injury">怪我・安全<span class="n">5</span></a></li>
+    <li><a href="#physiology">体力・生理学<span class="n">3</span></a></li>
+    <li><a href="#match">試合分析<span class="n">3</span></a></li>
+    <li><a href="#weight">減量・栄養<span class="n">2</span></a></li>
+    <li><a href="#health">健康・メンタル<span class="n">3</span></a></li>
+    <li><a href="#japanese">日本語の文献<span class="n">1</span></a></li>
+  </ul>
+
+  <!-- ========== 怪我・安全 ========== -->
+  <h2 id="injury">怪我・安全</h2>
+  <p class="h2sub">どこを、どんな場面で痛めやすいのか。絞め技の安全性についての研究も、ここにまとめています。</p>
+
+  <article class="paper">
+    <p class="ja">柔術の試合で起きる怪我の調査</p>
+    <p class="en">Assessment of Injuries During Brazilian Jiu-Jitsu Competition</p>
+    <p class="meta"><b>Scoggin JF, et al.（2014）</b> ／ Orthopaedic Journal of Sports Medicine 2(2)</p>
+    <ul>
+      <li>ハワイ州で開かれた柔術大会8回分（2005〜2011年）の救護記録を分析。延べ5,022試合で46件の怪我があり、1,000試合あたりの発生は<b>約9.2件</b>でした。</li>
+      <li>怪我の78%は骨や関節などの整形外科的なもので、いちばん多かった部位は<b>肘</b>。原因となった技は<b>腕十字</b>が最多でした。</li>
+      <li>柔術の試合中の怪我を医学的に調べた、最初期の論文です。</li>
+    </ul>
+    <p class="memo"><b>ひとこと</b>柔術は、ほかの格闘技に比べて怪我が少なめとちまたではよく言われます（この論文の結論ではありません）。それでも肘は要注意。タップは早めに。</p>
+    <p class="links"><span class="badge oa">無料で読める</span><a href="https://doi.org/10.1177/2325967114522184" target="_blank" rel="noopener">原文を読む →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">柔術選手1,140人に聞いた、怪我の傾向・リスク・競技復帰</p>
+    <p class="en">Injury Patterns, Risk Factors, and Return to Sport in Brazilian Jiu Jitsu: A Cross-sectional Survey of 1140 Athletes</p>
+    <p class="meta"><b>Hinz M, et al.（2021）</b> ／ Orthopaedic Journal of Sports Medicine 9(12)</p>
+    <ul>
+      <li>1,140人へのアンケートで、過去3年間に怪我をした人は<b>69%</b>。</li>
+      <li>いちばん多い部位は<b>膝</b>（20.8%）。怪我の約3割は、相手にサブミッションを仕掛けられている最中に起きていました。</li>
+      <li>怪我のしやすさに関わる要因や、競技に戻るまでの経過も分析しています。</li>
+    </ul>
+    <p class="links"><span class="badge oa">無料で読める</span><a href="https://doi.org/10.1177/23259671211062568" target="_blank" rel="noopener">原文を読む →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">柔術の練習で多い怪我の調査</p>
+    <p class="en">Prevalence of Injuries during Brazilian Jiu-Jitsu Training</p>
+    <p class="meta"><b>McDonald AR, et al.（2017）</b> ／ Sports 5(2)</p>
+    <ul>
+      <li>試合ではなく<b>ふだんの練習</b>での怪我を、アメリカのジム166か所に送ったアンケートで調べました。</li>
+      <li>医師に診断されたもので最も多かったのは<b>皮膚の感染症</b>。次いで膝、足・足指の怪我でした。</li>
+      <li>自己申告の怪我では、手・指、腕・肘、足・足指が上位でした。</li>
+    </ul>
+    <p class="memo"><b>ひとこと</b>いちばん多いのが「感染症」というのは、道場の衛生管理の大切さを示しています。道着は毎回洗う、爪は短く、傷があるときは覆って。</p>
+    <p class="links"><span class="badge oa">無料で読める</span><a href="https://doi.org/10.3390/sports5020039" target="_blank" rel="noopener">原文を読む →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">競技としての絞め技は安全か：アンケートによる横断研究</p>
+    <p class="en">The safety of sportive chokes: a cross-sectional survey-based study</p>
+    <p class="meta"><b>Stellpflug SJ, et al.（2020）</b> ／ The Physician and Sportsmedicine 48(4)</p>
+    <ul>
+      <li>組み技の選手4,307人に、絞め技（首の血管を圧迫する技）を受けた経験を聞きました。7割以上が<b>100回以上</b>絞められた経験がありました。</li>
+      <li>絞め落とされた経験がある人も約28%と、珍しくありませんでした。</li>
+      <li>後遺症が続いていると答えたのは<b>0.05%</b>で、それも脳の血流不足によるものではなさそうでした。著者は「競技の絞め技は概ね安全」と結論づけています。</li>
+    </ul>
+    <p class="links"><span class="badge pay">有料</span><a href="https://doi.org/10.1080/00913847.2020.1754734" target="_blank" rel="noopener">原文を読む →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">絞め技に関連した頸動脈の損傷と脳梗塞の症例報告</p>
+    <p class="en">Cervical Artery Dissections and Ischemic Strokes Associated with Vascular Neck Compression Techniques (Sportive Chokes)</p>
+    <p class="meta"><b>Stellpflug SJ, et al.（2022）</b> ／ Journal of Emergency Medicine 63</p>
+    <ul>
+      <li>絞め技のあとに重い血管のトラブルが起きた選手<b>10例</b>の報告。頸動脈の解離が5例、椎骨動脈の解離が3例、解離を伴わない脳梗塞が2例でした。</li>
+      <li>ひとつ前の論文と同じ研究チームによるもので、「ふだんは安全でも、まれに重大な事故は起こりうる」ことを救急医に知らせるために書かれています。</li>
+    </ul>
+    <p class="memo"><b>ひとこと</b>2本セットで読むのがおすすめです。練習後に首の痛み、ひどい頭痛、しびれ、ろれつが回らないなどの症状が出たら、すぐに病院へ。</p>
+    <p class="links"><span class="badge pay">有料</span><a href="https://doi.org/10.1016/j.jemermed.2022.04.015" target="_blank" rel="noopener">原文を読む →</a></p>
+  </article>
+
+  <!-- ========== 体力・生理学 ========== -->
+  <h2 id="physiology">体力・生理学</h2>
+  <p class="h2sub">柔術選手はどんな体をしていて、試合では体の中で何が起きているのか。</p>
+
+  <article class="paper">
+    <p class="ja">柔術選手の体格と体力：システマティックレビュー</p>
+    <p class="en">Physical and Physiological Profiles of Brazilian Jiu-Jitsu Athletes: a Systematic Review</p>
+    <p class="meta"><b>Andreato LV, et al.（2017）</b> ／ Sports Medicine – Open 3</p>
+    <ul>
+      <li>2016年1月までの研究をまとめ、体組成、体型、有酸素・無酸素の能力、筋力やパワーを整理しました。</li>
+      <li>柔術選手は全体として体脂肪が低めで、<b>筋肉質な体型</b>が中心でした。</li>
+      <li>有酸素能力（持久力）の高さは、競技レベルの差とはあまり関係がなさそうでした。</li>
+    </ul>
+    <p class="memo"><b>ひとこと</b>これまでの研究をまとめた論文なので、全体像をつかむ1本目に向いています。</p>
+    <p class="links"><span class="badge oa">無料で読める</span><a href="https://doi.org/10.1186/s40798-016-0069-5" target="_blank" rel="noopener">原文を読む →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">柔術選手の生理・栄養・パフォーマンスの特徴</p>
+    <p class="en">Physiological, Nutritional and Performance Profiles of Brazilian Jiu-Jitsu Athletes</p>
+    <p class="meta"><b>Andreato LV, et al.（2016）</b> ／ Journal of Human Kinetics 53</p>
+    <ul>
+      <li>茶帯・黒帯の選手15人を測定。平均の体脂肪率は<b>12.7%</b>で、筋肉質な体型でした。</li>
+      <li>食事は<b>炭水化物が少なく、タンパク質が多い</b>偏りがあり、全体として質は高くありませんでした。</li>
+      <li>柔軟性も低めで、栄養とコンディショニングには改善の余地がある、とまとめています。</li>
+    </ul>
+    <p class="links"><span class="badge oa">無料で読める</span><a href="https://doi.org/10.1515/hukin-2016-0029" target="_blank" rel="noopener">原文を読む →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">模擬大会の研究 パート1：代謝・ホルモン・筋ダメージ・心拍の反応</p>
+    <p class="en">Brazilian Jiu-Jitsu Simulated Competition Part I: Metabolic, Hormonal, Cellular Damage, and Heart Rate Responses</p>
+    <p class="meta"><b>Andreato LV, et al.（2015）</b> ／ Journal of Strength and Conditioning Research 29(9)</p>
+    <ul>
+      <li>経験豊富な選手10人が、<b>10分×4試合</b>の模擬大会を戦い、血液と心拍を測定しました。</li>
+      <li>試合ごとに、糖を使うエネルギー代謝、ホルモン、筋肉のダメージがはっきり反応しました。</li>
+      <li>後半の試合では、乳酸やアドレナリンなどの値が低くなっていました。</li>
+    </ul>
+    <p class="links"><span class="badge pay">有料</span><a href="https://doi.org/10.1519/JSC.0000000000000918" target="_blank" rel="noopener">原文を読む →</a></p>
+  </article>
+
+  <!-- ========== 試合分析 ========== -->
+  <h2 id="match">試合分析</h2>
+  <p class="h2sub">試合の時間はどう使われ、どんな技で決まっているのか。</p>
+
+  <article class="paper">
+    <p class="ja">模擬大会の研究 パート2：体力・時間構成・技術・主観的なきつさ</p>
+    <p class="en">Brazilian Jiu-Jitsu Simulated Competition Part II: Physical Performance, Time-Motion, Technical-Tactical Analyses, and Perceptual Responses</p>
+    <p class="meta"><b>Andreato LV, et al.（2015）</b> ／ Journal of Strength and Conditioning Research 29(7)</p>
+    <ul>
+      <li>上の「パート1」と同じ模擬大会で、試合の時間構成、使われた技、選手が感じたきつさを分析しました。</li>
+      <li><b>握力</b>は3試合目と4試合目のあとに落ちていました。</li>
+      <li>一方で、動いている時間と止まっている時間の比率は試合を重ねても変わらず、疲れていても動きのペースは保たれていました。</li>
+    </ul>
+    <p class="memo"><b>ひとこと</b>勝ち上がるほど、まず握力が落ちる。連戦のある大会では、握力のもちが勝負を分けるのかもしれません。</p>
+    <p class="links"><span class="badge pay">有料</span><a href="https://doi.org/10.1519/JSC.0000000000000819" target="_blank" rel="noopener">原文を読む →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">「ポジション・ビフォア・サブミッション」は本当か：ノーギ柔術の技術と戦術</p>
+    <p class="en">Position before submission? Techniques and tactics in competitive no-gi Brazilian jiu-jitsu</p>
+    <p class="meta"><b>Spanias C, Kirk C, Øvretveit K（2022）</b> ／ Revista de Artes Marciales Asiáticas 17(2)</p>
+    <ul>
+      <li>一本勝ちのみのノーギの試合を、地域大会と国際大会で比べました。</li>
+      <li>激しく動く時間と落ち着いている時間の比は、地域大会で1:2、国際大会で1:1。国際レベルほど動きが激しくなります。</li>
+      <li>足関節（主に<b>アンクルフック</b>）で決まった試合では、ポジションを固めないまま極めていることが多く、「まずポジション、それから極め」という格言に疑問を投げかけています。</li>
+    </ul>
+    <p class="links"><span class="badge oa">無料で読める</span><a href="https://doi.org/10.18002/rama.v17i2.7410" target="_blank" rel="noopener">原文を読む →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">女子トップ選手の試合は、階級でどう違うか</p>
+    <p class="en">Effects of weight divisions in time-motion of female high-level Brazilian Jiu-jitsu combat behaviors</p>
+    <p class="meta"><b>dos Santos MAF, et al.（2023）</b> ／ Frontiers in Psychology 14</p>
+    <ul>
+      <li>2020年の国際大会で行われた女子トップ選手の<b>422試合</b>を、8つの階級で比べました。</li>
+      <li>組み手、攻撃、防御、マウント、ガード、サイドコントロール、サブミッションなどの時間を細かく計測しています。</li>
+      <li>階級によって試合の中身が違い、たとえば最重量級は組み手争いの時間が短めでした。</li>
+    </ul>
+    <p class="links"><span class="badge oa">無料で読める</span><a href="https://doi.org/10.3389/fpsyg.2023.1048642" target="_blank" rel="noopener">原文を読む →</a></p>
+  </article>
+
+  <!-- ========== 減量・栄養 ========== -->
+  <h2 id="weight">減量・栄養</h2>
+  <p class="h2sub">計量に向けて、選手はどれくらい、どうやって体重を落としているのか。</p>
+
+  <article class="paper">
+    <p class="ja">イギリスの柔術選手の、試合前の減量の実態</p>
+    <p class="en">Pre-competition body mass loss characteristics of Brazilian jiu-jitsu competitors in the United Kingdom</p>
+    <p class="meta"><b>White T, Kirk C（2021）</b> ／ Nutrition and Health</p>
+    <ul>
+      <li>イギリスの試合に出る柔術選手に、減量についてアンケートを行いました。</li>
+      <li>試合前の減量は平均<b>約1.9kg（体重の2.3%）</b>。始める時期は「3〜7日前」（34%）や「0〜2日前」（16%）が多く見られました。</li>
+      <li>方法は、食事と運動でカロリーを減らすものが中心。コーチなど、誰の影響を受けているかも調べています。</li>
+    </ul>
+    <p class="links"><span class="badge pay">有料</span><a href="https://doi.org/10.1177/0260106020983800" target="_blank" rel="noopener">原文を読む →</a><a href="https://shura.shu.ac.uk/27927/" target="_blank" rel="noopener">著者による公開版 →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">急な減量は、試合期の気分や燃え尽きにどう影響するか</p>
+    <p class="en">Effect of rapid weight loss on mood states and burnout of Brazilian jiu-jitsu athletes during a competitive process</p>
+    <p class="meta"><b>Bueno JCA, et al.（2023）</b> ／ Frontiers in Psychology 14</p>
+    <ul>
+      <li>男子選手31人を、急速減量をするグループとしないグループに分けて比べました。減量グループは平均<b>3.5kg（体重の4.2%）</b>を落としました。</li>
+      <li>計量の日は、どちらのグループも緊張と混乱の気分が高まっていました。</li>
+      <li>燃え尽き（バーンアウト）の度合いは低いままで、グループや時期による差はありませんでした。</li>
+    </ul>
+    <p class="links"><span class="badge oa">無料で読める</span><a href="https://doi.org/10.3389/fpsyg.2023.1114816" target="_blank" rel="noopener">原文を読む →</a></p>
+  </article>
+
+  <!-- ========== 健康・メンタル ========== -->
+  <h2 id="health">健康・メンタル</h2>
+  <p class="h2sub">競技の外で、柔術は心と体に何をもたらすのか。</p>
+
+  <article class="paper">
+    <p class="ja">PTSDの症状がある軍人・退役軍人への柔術トレーニング</p>
+    <p class="en">Brazilian Jiu Jitsu Training for US Service Members and Veterans with Symptoms of PTSD</p>
+    <p class="meta"><b>Willing AE, et al.（2019）</b> ／ Military Medicine 184(11–12)</p>
+    <ul>
+      <li>アメリカ・タンパの男性の軍人・退役軍人が、<b>5か月間・計40回</b>の柔術プログラムに参加しました。</li>
+      <li>PTSDの症状が臨床的に意味のある幅で軽くなり、うつ、不安、飲酒量も減っていました。</li>
+      <li>比較するグループを置かない小規模な試験的研究なので、今後の本格的な検証が待たれます。</li>
+    </ul>
+    <p class="links"><span class="badge pay">有料</span><a href="https://doi.org/10.1093/milmed/usz074" target="_blank" rel="noopener">原文を読む →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">12週間の柔術で、高齢男性の生活体力が向上</p>
+    <p class="en">12 weeks of Brazilian jiu-jitsu training improves functional fitness in elderly men</p>
+    <p class="meta"><b>Queiroz JL, et al.（2016）</b> ／ Sport Sciences for Health 12</p>
+    <ul>
+      <li>高齢男性62人を、柔術グループ（<b>週2回・90分・12週間</b>）と比較グループに分けました。</li>
+      <li>柔術グループは、生活に必要な体力のテストすべてで向上。とくに<b>脚の筋力と持久力</b>の伸びが大きく、敏捷性とバランスも向上しました。</li>
+      <li>著者は、柔術を高齢者の健康づくりの選択肢として提案しています。</li>
+    </ul>
+    <p class="memo"><b>ひとこと</b>「この年齢から始めても大丈夫？」と聞かれたときに紹介したい1本です。</p>
+    <p class="links"><span class="badge pay">有料</span><a href="https://doi.org/10.1007/s11332-016-0287-8" target="_blank" rel="noopener">原文を読む →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">帯の色で見る、柔術選手の心理的な特徴</p>
+    <p class="en">Rank-Based Psychological Characteristics in Brazilian Jiu-Jitsu Athletes: Mental Strength, Resilience, Grit, Self-Efficacy, Self-Control, Aggression, Life Satisfaction, and Mental Health</p>
+    <p class="meta"><b>de Lorenco-Lima L, et al.（2025）</b> ／ Journal of Functional Morphology and Kinesiology 10(2)</p>
+    <ul>
+      <li>18〜60歳、白帯から黒帯までの<b>420人</b>に、心理面の標準的な質問票に答えてもらいました。</li>
+      <li>白帯と比べて黒帯は、メンタルの強さ、立ち直る力、自分ならできるという感覚、自制心、生活の満足度が高く、心の不調のスクリーニングでは低い値でした。</li>
+      <li><b>攻撃性</b>は、帯による違いがありませんでした。</li>
+    </ul>
+    <p class="memo"><b>ひとこと</b>一時点で比べた調査なので、「柔術を続けたから強くなった」のか「もともと強い人が続けた」のかまでは、この研究だけでは言えません。</p>
+    <p class="links"><span class="badge oa">無料で読める</span><a href="https://doi.org/10.3390/jfmk10020100" target="_blank" rel="noopener">原文を読む →</a></p>
+  </article>
+
+  <!-- ========== 日本語 ========== -->
+  <h2 id="japanese">日本語の文献</h2>
+  <p class="h2sub">柔術を正面から扱った日本語の実証研究（怪我・体力・減量など）は、J-STAGEやCiNiiで探したかぎり、まだ見つかりませんでした。</p>
+
+  <article class="paper">
+    <p class="ja">ブラジル格闘技の現在：柔道 ブラジリアン柔術 総合格闘技</p>
+    <p class="meta"><b>菱田慶文・中嶋哲也・細谷洋子（2022）</b> ／ スポーツ人類學研究 24</p>
+    <ul>
+      <li>ブラジルにおける格闘技の意味を探る研究プロジェクト（科研費）の現地調査の報告です。</li>
+      <li>現在のブラジルの柔道、ブラジリアン柔術、総合格闘技の姿を扱い、講道館柔道が前田光世からグレイシー家に伝わって柔術が生まれた流れにも触れています。</li>
+    </ul>
+    <p class="links"><span class="badge kind">調査報告</span><span class="badge oa">無料で読める</span><a href="https://doi.org/10.7192/santhropology.2022.24_41" target="_blank" rel="noopener">J-STAGEで読む →</a></p>
+  </article>
+
+  <div class="note">
+    <p><b>このページについて</b></p>
+    <p>要約は、各論文の抄録（アブストラクト）をもとにJiu Labo編集部が日本語でまとめたものです。論文のタイトルの日本語訳も編集部によるもので、正式な邦題ではありません。数字や結論の正確なところは、必ず原文でご確認ください。「ひとこと」は編集部の感想です。</p>
+    <p>ここに載せた内容は医学的なアドバイスではありません。怪我や体調の不安があるときは、医師にご相談ください。</p>
+    <p>おすすめの論文や、日本語で書かれた柔術の研究をご存じの方は、ぜひ教えてください。随時追加していきます。</p>
+  </div>
+
+  <footer>
+    2026年9月29日 作成<br>
+    <a href="/">← jiujitsu.co.jp トップへ</a>
+  <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+
+<a href="/" style="position:fixed;right:14px;bottom:14px;z-index:99;background:#17140d;color:#e8c95e;font-size:11px;letter-spacing:.1em;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);font-family:sans-serif;">TOPへ</a>
+</html>

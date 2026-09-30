@@ -12,6 +12,9 @@
 </script>
 
 <title>Jiu Labo ブログ</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="description" content="柔術の道場運営、良蔵さんのまわりのこと、Claude Codeのこと。マネージャー村田亜衣の目線で書くブログです。">
 <meta property="og:title" content="Jiu Labo ブログ">
 <meta property="og:description" content="柔術の道場運営、良蔵さんのまわりのこと、Claude Codeのこと。マネージャー目線のブログです。">
@@ -69,6 +72,8 @@
     .posts li.is-latest p { font-size: 13px; }
   }
 
+  .tag { display: inline-block; margin-left: 10px; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: var(--gold); border: 1px solid var(--gold); border-radius: 3px; padding: 0 6px; line-height: 1.6; vertical-align: 1px; }
+
   footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
   footer a { color: var(--gold); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
@@ -84,6 +89,22 @@
 
 <div class="wrap">
   <ul class="posts">
+    <!-- nikki:start -->
+    <li class="is-nikki">
+      <a href="/blog/nikki/2026-09-29/">
+        <time datetime="2026-09-29">2026.09.29</time><span class="tag">日記</span>
+        <h2>全国の柔術道場684件を、Claudeと地図から集めた</h2>
+        <p>今日いちばんの「え？」は、Googleマップを47都道府県ぜんぶ見て回り、道場ガイドに新しく133の道場を足せたことです。ほかにも、毎朝のニュースを自動でまとめる仕組みを1日で2つ作りました。</p>
+      </a>
+    </li>
+    <!-- nikki:end -->
+    <li>
+      <a href="/blog/ai-shain/">
+        <time datetime="2026-09-29">2026.09.29</time>
+        <h2>うちの会社に、AI社員が6人いた</h2>
+        <p>「AI社員ってかっこいいな」から始まって、名簿にしてみたら6人いた話。AIを係ごとに分けるといい理由。</p>
+      </a>
+    </li>
     <li>
       <a href="/blog/shigoto-igai-de/">
         <time datetime="2026-09-28">2026.09.28</time>
@@ -124,6 +145,7 @@
 <script>
 // 記事の並べ替え・最新を大きく・NEWバッジ・「もっと見る」
 // 記事は <li> を足すだけでOK（日付は <time datetime="YYYY-MM-DD"> から読む）
+// 日記（nikki:start〜end のあいだ）は tools/nikki/build.py が自動で入れるので手で触らない
 (function () {
   var NEW_DAYS = 3;  // 何日間NEWを出すか
   var SHOW_MAX = 5;  // 最初に見せる件数（それ以上は「もっと見る」）
@@ -135,7 +157,8 @@
     var p = new Date((t ? t.getAttribute('datetime') : '') + 'T00:00:00');
     return isNaN(p) ? new Date(0) : p;
   }
-  items.sort(function (a, b) { return toDate(b) - toDate(a); });
+  // 同じ日なら、ふつうの記事を日記より上に
+  items.sort(function (a, b) { return (toDate(b) - toDate(a)) || (a.classList.contains('is-nikki') - b.classList.contains('is-nikki')); });
   var today = new Date(); today.setHours(0, 0, 0, 0);
   items.forEach(function (li, i) {
     list.appendChild(li);

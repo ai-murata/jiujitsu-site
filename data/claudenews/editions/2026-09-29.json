@@ -1,0 +1,67 @@
+{
+ "date": "2026-09-29",
+ "generated_at": "2026-09-29T16:00:00+09:00",
+ "lead": "創刊号です。この1か月の大きな話題として、Claude Marketplace の開始と、Opus 5.5・Fable 5.1 の公開をまとめました。明日からは毎朝、その日の新しいニュースが届きます。",
+ "items": [
+  {
+   "id": "c56cfa0ca04b",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Marketplace が始まる、2,000以上のツールを一か所に",
+   "summary": "Anthropic が「Claude Marketplace」を発表しました。プラグインやコネクタ、エージェントなど、Claude で使えるツールを一か所にまとめたもので、2,000以上がそろっています。",
+   "point": "Claude に足したい機能を、ばらばらに探さずに一か所で見つけられるようになります。",
+   "source": "BleepingComputer",
+   "original_title": "Anthropic turns Claude into an AI marketplace with 2,000+ plugins and connectors",
+   "link": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-turns-claude-into-an-ai-marketplace-with-2-000-plus-plugins-and-connectors/",
+   "published": ""
+  },
+  {
+   "id": "993d9144bb6e",
+   "region": "intl",
+   "category": "新モデル",
+   "title": "Claude Opus 5.5 が登場、Opus 5 より4割安く",
+   "summary": "Anthropic が 9月22日に Claude Opus 5.5 を公開しました。これまでの Opus 5 より効率がよく、動かすコストは40%下がっています。多くの作業で Claude Fable 5.1 と同じくらいの力を出すとされています。",
+   "point": "上位モデルの力を、これまでより安く使えるようになりました。",
+   "source": "Yahoo Finance",
+   "original_title": "Anthropic launches new update to Claude – after telling the world to slow down AI",
+   "link": "https://uk.finance.yahoo.com/news/anthropic-launches-claude-telling-world-160928480.html",
+   "published": ""
+  },
+  {
+   "id": "ff53fa36dcf5",
+   "region": "intl",
+   "category": "新モデル",
+   "title": "Claude Fable 5.1 と Mythos 5.1 が公開",
+   "summary": "9月1日に Claude Fable 5.1 と Claude Mythos 5.1 が公開されました。Fable 5.1 は、あとから出た Opus 5.5 の性能を比べるときの目安にもなっている上位のモデルです。",
+   "point": "",
+   "source": "Wikipedia",
+   "original_title": "Claude Mythos",
+   "link": "https://en.wikipedia.org/wiki/Claude_Mythos",
+   "published": ""
+  },
+  {
+   "id": "6de7f6fffcf5",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Claude が CRISPR に似た新しい酵素のしくみを発見",
+   "summary": "Anthropic のサンフランシスコの生物学研究ラボで、Claude が細菌の DNA から新しい酵素のしくみを自分で見つけました。遺伝子編集の技術「CRISPR（クリスパー）」に似た、新しい遺伝子編集のしくみになる可能性があるそうです。",
+   "point": "",
+   "source": "Al Jazeera",
+   "original_title": "AI model Claude discovers CRISPR-like enzyme system, Anthropic says",
+   "link": "https://www.aljazeera.com/economy/2026/9/24/ai-model-claude-discovers-crispr-like-enzyme-system-anthropic-says",
+   "published": ""
+  },
+  {
+   "id": "43d59e7f3b1f",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Claude が次の Claude づくりを手伝っている",
+   "summary": "Anthropic によると、Claude はすでに次のより賢いモデルの開発を手伝っていて、同社のモデルの研究開発のうち26%を Claude が主導しています。",
+   "point": "",
+   "source": "Spectrum News",
+   "original_title": "Anthropic says its model Claude is helping to build the next version of itself",
+   "link": "https://spectrumlocalnews.com/us/snplus/business/2026/09/18/anthropic-claude-helping-to-build-next-version",
+   "published": ""
+  }
+ ]
+}
