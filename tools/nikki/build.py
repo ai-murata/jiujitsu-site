@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""クラウド日記（/blog/nikki/）：その日に Claude Code とやったことを、アイさん目線の短い日記にする。
+"""ブログの日記（/blog/ の一覧に「日記」として並ぶ）：その日に Claude Code とやったことを、アイさん目線の短い日記にする。
+
+各日のページは /blog/nikki/YYYY-MM-DD/。一覧は /blog/index.html の <!-- nikki:start --> 〜 <!-- nikki:end --> に差し込む。
+/blog/nikki/ は /blog/ へ飛ばすだけのページ。
 
 毎晩のルーティン（ROUTINE.md）が2段階で使う。
 
@@ -7,7 +10,7 @@
         その日（JST）の main のコミットを集め、candidates.json と prompt.md を置く
     （ルーティンの Claude が prompt.md を読んで result.json を書く）
     python3 tools/nikki/build.py --apply data/nikki/inbox
-        result.json を確かめて data/nikki/entries/YYYY-MM-DD.json に保存し、ページを作り直す
+        result.json を確かめて data/nikki/entries/YYYY-MM-DD.json に保存し、ページとブログ一覧を作り直す
     python3 tools/nikki/build.py --render-only
         保存済みの日記からページだけ作り直す（デザインを変えたとき）
 
@@ -108,7 +111,7 @@ def select(commits, date, config):
 
 def auto_summary(subjects):
     """自動更新の件数を、種類ごとにまとめる（例：柔術ニュース 2件、補助金一覧 1件）。"""
-    names = {"jiunews": "柔術ニュース", "hojokin": "補助金一覧", "news": "お知らせ", "nikki": "クラウド日記"}
+    names = {"jiunews": "柔術ニュース", "hojokin": "補助金一覧", "news": "お知らせ", "nikki": "日記"}
     counts = {}
     for s in subjects:
         m = re.match(r"chore\(([^)]+)\)", s)
@@ -117,7 +120,7 @@ def auto_summary(subjects):
     return [{"name": k, "count": v} for k, v in counts.items()]
 
 
-PROMPT = """# クラウド日記の下書きを書く（{date_label}）
+PROMPT = """# ブログの日記の下書きを書く（{date_label}）
 
 あなたは、株式会社BUTTI ON LINE のマネージャー **村田亜衣（アイ）** になりきって、
 その日に Claude Code（クラウド）とやったことから、**読んだ人が「自分もやってみよう」と思える**短い日記を書きます。
@@ -385,15 +388,6 @@ HEAD = """<!DOCTYPE html>
   .pager {{ display: flex; justify-content: space-between; gap: 12px; margin: 36px 0 0; font-size: 13.5px; }}
   .pager a {{ text-decoration: none; }}
 
-  .posts {{ list-style: none; margin: 40px 0 0; padding: 0; border-top: 1px solid var(--line); }}
-  .posts a {{ display: block; padding: 20px 4px; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; }}
-  .posts a:hover h2 {{ color: var(--gold); }}
-  .posts time {{ font-size: 12px; color: var(--faint); letter-spacing: .1em; font-variant-numeric: tabular-nums; }}
-  .posts h2 {{ font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; margin: 2px 0 4px; word-break: auto-phrase; text-wrap: pretty; }}
-  .posts p {{ font-size: 13.5px; margin: 0; }}
-  .posts li:first-child a {{ background: var(--panel); border-top: 3px solid var(--gold); padding: 24px 20px; }}
-  .empty {{ text-align: center; background: var(--panel); border-radius: 8px; padding: 36px 20px; margin: 44px 0 0; font-size: 14px; }}
-
   footer {{ margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }}
   footer a {{ color: var(--gold); text-decoration: none; }}
   footer a:hover {{ text-decoration: underline; }}
@@ -403,9 +397,7 @@ HEAD = """<!DOCTYPE html>
     h1 {{ font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }}
     article {{ font-size: 15px; }}
     .did li {{ padding-left: 38px; }}
-    .did h2, .posts h2 {{ font-size: 16px; }}
-    .posts a {{ padding: 16px 2px; }}
-    .posts li:first-child a {{ padding: 20px 14px; }}
+    .did h2 {{ font-size: 16px; }}
   }}
 </style>
 """
@@ -419,11 +411,11 @@ NOTE = ('    <p class="note">この日記は、その日にこのサイトへ入
 def render_entry(entry, newer, older):
     date = entry["date"]
     url = f"https://jiujitsu.co.jp/blog/nikki/{date}/"
-    out = [HEAD.format(title=esc(f"{entry['title']}｜クラウド日記"), description=esc(entry["lead"]),
+    out = [HEAD.format(title=esc(f"{entry['title']}｜Jiu Labo ブログ"), description=esc(entry["lead"]),
                        url=url, og_type="article")]
     out.append(f"""
 <header>
-  <p class="brand"><a href="/blog/nikki/">クラウド日記</a></p>
+  <p class="brand"><a href="/blog/">JIU LABO BLOG</a>　·　日記</p>
   <h1>{esc(entry['title'])}</h1>
   <p class="meta"><time datetime="{esc(date)}">{date_label(date)}</time>　村田亜衣（マネージャー）</p>
 </header>
@@ -445,8 +437,8 @@ def render_entry(entry, newer, older):
         parts = "、".join(f"{esc(a['name'])} {int(a['count'])}件" for a in auto)
         out.append(f'    <p class="auto">このほか、自動の更新が動きました（{parts}）。</p>\n')
     out.append('\n    <div class="share"></div>\n    <script src="/blog/share.js"></script>\n')
-    prev_link = f'<a href="/blog/nikki/{esc(older["date"])}/">← {date_label(older["date"])}</a>' if older else "<span></span>"
-    next_link = f'<a href="/blog/nikki/{esc(newer["date"])}/">{date_label(newer["date"])} →</a>' if newer else "<span></span>"
+    prev_link = f'<a href="/blog/nikki/{esc(older["date"])}/">← 前の日記（{date_label(older["date"])}）</a>' if older else "<span></span>"
+    next_link = f'<a href="/blog/nikki/{esc(newer["date"])}/">次の日記（{date_label(newer["date"])}）→</a>' if newer else "<span></span>"
     out.append(f'    <p class="pager">{prev_link}{next_link}</p>\n')
     out.append(NOTE)
     out.append("  </article>\n")
@@ -456,51 +448,66 @@ def render_entry(entry, newer, older):
 
 FOOT = """
   <footer>
-    <a href="/blog/nikki/">クラウド日記の一覧へ</a>　／　<a href="/blog/">ブログへ</a>　／　<a href="/">jiujitsu.co.jp トップへ</a>
+    <a href="/blog/">ブログの一覧へ</a>　／　<a href="/">jiujitsu.co.jp トップへ</a>
     <br>© 2026 BUTTI ON LINE Inc.
   </footer>
 </div>
 """
 
 
-def render_index(entries):
-    desc = "マネージャーの村田亜衣が、その日 Claude Code（クラウド）といっしょにやったことを、毎日みじかく書く日記です。"
-    out = [HEAD.format(title="クラウド日記｜Jiu Labo", description=esc(desc),
-                       url="https://jiujitsu.co.jp/blog/nikki/", og_type="website")]
-    out.append("""
-<header>
-  <p class="brand"><a href="/blog/">JIU LABO BLOG</a></p>
-  <h1>クラウド日記</h1>
-  <p class="lede">今日、Claude Codeとこんなことをしました。</p>
-</header>
-""")
-    out.append(RANK)
-    out.append('\n<div class="wrap">\n')
-    if entries:
-        out.append('  <ul class="posts">\n')
-        for e in entries:
-            out.append(f'    <li>\n      <a href="/blog/nikki/{esc(e["date"])}/">\n'
-                       f'        <time datetime="{esc(e["date"])}">{date_label(e["date"])}</time>\n'
-                       f'        <h2>{esc(e["title"])}</h2>\n'
-                       f'        <p>{esc(e["lead"])}</p>\n      </a>\n    </li>\n')
-        out.append("  </ul>\n")
-    else:
-        out.append('  <p class="empty">1日目は準備中です。</p>\n')
-    out.append(FOOT)
+REDIRECT = """<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<title>Jiu Labo ブログ</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://jiujitsu.co.jp/blog/">
+<meta http-equiv="refresh" content="0; url=/blog/">
+<p>日記はブログにまとめました。<a href="/blog/">ブログへ</a></p>
+"""
+
+NIKKI_START = "<!-- nikki:start -->"
+NIKKI_END = "<!-- nikki:end -->"
+
+
+def render_list_items(entries):
+    """ブログ一覧（/blog/index.html）に差し込む、日記の <li>。"""
+    out = []
+    for e in entries:
+        d = esc(e["date"])
+        out.append(f'    <li class="is-nikki">\n      <a href="/blog/nikki/{d}/">\n'
+                   f'        <time datetime="{d}">{d.replace("-", ".")}</time><span class="tag">日記</span>\n'
+                   f'        <h2>{esc(e["title"])}</h2>\n'
+                   f'        <p>{esc(e["lead"])}</p>\n      </a>\n    </li>\n')
     return "".join(out)
+
+
+def update_blog_index(root, entries):
+    """/blog/index.html の目印のあいだを、日記の一覧で差し替える。ページが無ければ何もしない。"""
+    path = root / "blog" / "index.html"
+    if not path.exists():
+        return False
+    page = path.read_text(encoding="utf-8")
+    i, j = page.find(NIKKI_START), page.find(NIKKI_END)
+    if i < 0 or j < i:
+        raise ValueError(f"{path} に {NIKKI_START} 〜 {NIKKI_END} がありません")
+    new = page[: i + len(NIKKI_START)] + "\n" + render_list_items(entries) + "    " + page[j:]
+    if new != page:
+        path.write_text(new, encoding="utf-8")
+    return True
 
 
 def render_all(root):
     entries = load_entries(root)
     base = root / "blog" / "nikki"
     base.mkdir(parents=True, exist_ok=True)
-    (base / "index.html").write_text(render_index(entries), encoding="utf-8")
+    (base / "index.html").write_text(REDIRECT, encoding="utf-8")
     for i, e in enumerate(entries):
         newer = entries[i - 1] if i > 0 else None
         older = entries[i + 1] if i + 1 < len(entries) else None
         day = base / e["date"]
         day.mkdir(parents=True, exist_ok=True)
         (day / "index.html").write_text(render_entry(e, newer, older), encoding="utf-8")
+    update_blog_index(root, entries)
     return entries
 
 

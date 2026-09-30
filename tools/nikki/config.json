@@ -1,5 +1,5 @@
 {
-  "_comment": "クラウド日記（/blog/nikki/）の設定。private_paths に触れたファイルは日記の材料から外す。private_words を含むコミットは丸ごと外し、日記の文章にも書かせない。",
+  "_comment": "ブログの日記（/blog/nikki/YYYY-MM-DD/）の設定。private_paths に触れたファイルは日記の材料から外す。private_words を含むコミットは丸ごと外し、日記の文章にも書かせない。",
   "branch": "origin/main",
   "private_paths": [
     "handbook/",
