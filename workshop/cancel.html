@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ワークショップ予約のキャンセル</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Shippori+Mincho:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="brandbar"><div class="in"><span class="mark">JCSA</span><span class="org">一般社団法人<br>Color Sensing Alliance</span></div></div>
+<header class="hero">
+  <p class="kicker">CANCEL</p>
+  <h1>ご予約のキャンセル</h1>
+  <p class="lede">予約番号とお申し込み時のメールアドレスで、ご予約を呼び出してキャンセルいただけます。</p>
+</header>
+<div class="wrap">
+
+  <p class="demo" id="demo" hidden>いまはデモ表示です。受付係（Googleスプレッドシート）とつなぐまで、実際の予約は変わりません。</p>
+
+  <form class="card" id="find" novalidate>
+    <h2>ご予約を呼び出す</h2>
+    <div class="field" data-f="id">
+      <label class="lb" for="rid">予約番号</label>
+      <p class="hint">予約完了メールに書かれている6文字の英数字です。</p>
+      <input type="text" id="rid" autocomplete="off" autocapitalize="characters" maxlength="10" style="letter-spacing:.12em">
+      <p class="err">予約番号をご入力ください。</p>
+    </div>
+    <div class="field" data-f="email">
+      <label class="lb" for="email">メールアドレス</label>
+      <input type="email" id="email" autocomplete="email" inputmode="email" maxlength="120">
+      <p class="err">メールアドレスをご入力ください。</p>
+    </div>
+    <p class="formerr" id="findErr"></p>
+    <button class="btn" type="submit" id="findBtn">予約を呼び出す</button>
+  </form>
+
+  <div id="loading" class="loading" hidden>ご予約を確認しています…</div>
+
+  <section class="card" id="show" hidden>
+    <h2 id="showTitle">こちらのご予約をキャンセルしますか？</h2>
+    <div class="ticket"><dl>
+      <dt>予約番号</dt><dd class="id" id="sId"></dd>
+      <dt>日時</dt><dd id="sSlot"></dd>
+      <dt>制作物</dt><dd id="sProduct"></dd>
+      <dt>お名前</dt><dd id="sName"></dd>
+      <dt>状態</dt><dd id="sStatus"></dd>
+    </dl></div>
+    <p class="formerr" id="cancelErr"></p>
+    <button class="btn danger" type="button" id="cancelBtn">キャンセルする</button>
+    <a class="btn ghost" href="./">キャンセルせずに戻る</a>
+  </section>
+
+  <section class="card done" id="done" hidden>
+    <div class="mark gray">✓</div>
+    <h2>キャンセルを承りました</h2>
+    <p class="small" id="doneMsg">確認のメールをお送りしました。またの機会にお会いできるのを楽しみにしております。</p>
+    <a class="btn ghost" href="./">別の日時で申し込む</a>
+  </section>
+
+  <p class="links"><a href="./">← 参加申込みページへ</a></p>
+  <footer>一般社団法人 Color Sensing Alliance<br><a href="https://www.japancolorsensing.com/">japancolorsensing.com</a></footer>
+</div>
+
+<script src="config.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var q = new URLSearchParams(location.search);
+  var cred = null; // 呼び出しに使った {id, key} または {id, email}
+
+  if (!window.WORKSHOP_API) $('demo').hidden = false;
+
+  function showErr(el, msg) { el.textContent = msg; el.classList.add('show'); }
+
+  function show(v) {
+    $('sId').textContent = v.id;
+    $('sSlot').textContent = v.slot;
+    $('sProduct').textContent = v.product;
+    $('sName').textContent = v.name;
+    $('sStatus').textContent = v.status;
+    $('cancelErr').classList.remove('show');
+    var btn = $('cancelBtn');
+    if (v.status !== '予約中') {
+      $('showTitle').textContent = 'このご予約はキャンセル済みです';
+      btn.hidden = true;
+    } else if (!v.cancelable) {
+      $('showTitle').textContent = 'ページからのキャンセルはできません';
+      showErr($('cancelErr'), v.note || 'キャンセルの受付期限を過ぎています。');
+      btn.hidden = true;
+    }
+    $('find').hidden = true;
+    $('loading').hidden = true;
+    $('show').hidden = false;
+  }
+
+  function lookup(c) {
+    $('find').hidden = true;
+    $('loading').hidden = false;
+    return workshopApi.get(Object.assign({ action: 'lookup' }, c)).then(function (r) {
+      if (!r.ok) throw new Error(r.error);
+      cred = c;
+      show(r.reservation);
+    }).catch(function (err) {
+      $('loading').hidden = true;
+      $('find').hidden = false;
+      showErr($('findErr'), err.message || '通信できませんでした。時間をおいてお試しください。');
+    });
+  }
+
+  // メールのリンクから来たときは、そのまま呼び出す
+  if (q.get('id') && q.get('key')) {
+    $('rid').value = q.get('id');
+    lookup({ id: q.get('id'), key: q.get('key') });
+  }
+
+  $('find').addEventListener('submit', function (e) {
+    e.preventDefault();
+    $('findErr').classList.remove('show');
+    var id = $('rid').value.trim().toUpperCase(), email = $('email').value.trim();
+    $('find').querySelector('[data-f=id]').classList.toggle('bad', !id);
+    $('find').querySelector('[data-f=email]').classList.toggle('bad', !email);
+    if (!id || !email) return;
+    lookup({ id: id, email: email });
+  });
+
+  $('cancelBtn').addEventListener('click', function () {
+    if (!confirm('このご予約をキャンセルします。よろしいですか？')) return;
+    var btn = this;
+    btn.disabled = true; btn.textContent = '手続きしています…';
+    workshopApi.post(Object.assign({ action: 'cancel' }, cred)).then(function (r) {
+      if (!r.ok) throw new Error(r.error);
+      if (r.already) $('doneMsg').textContent = 'このご予約は、すでにキャンセル済みです。';
+      $('show').hidden = true;
+      $('done').hidden = false;
+      history.replaceState(null, '', location.pathname);
+    }).catch(function (err) {
+      showErr($('cancelErr'), err.message || '通信できませんでした。時間をおいてお試しください。');
+      btn.disabled = false; btn.textContent = 'キャンセルする';
+    });
+  });
+})();
+</script>
+</body>
+</html>
