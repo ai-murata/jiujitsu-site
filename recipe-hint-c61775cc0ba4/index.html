@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>レシピのヒント帖</title>
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head><body>
+
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Maru+Gothic:wght@400;500;700&family=Klee+One:wght@600&display=swap" rel="stylesheet">
+<style>
+/* 携帯で上から：これまでの傾向（数字と棒）→ 先生らしさの型 → 月ごとの5案（開いて読む） */
+:root{
+  --bg:#FDF6F7; --card:#FFFFFF; --ink:#3B2A31; --sub:#8A6F77; --pink:#C4577A; --rose:#E9A3B6; --pale:#F8E1E7; --line:#F0D6DE; --leaf:#7FA37A; --chipfg:#FFFFFF;
+  --f-display:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;
+  --f-hand:"Klee One","Zen Maru Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1F171A;--card:#2A2024;--ink:#F5E8EC;--sub:#C4A8B1;--pink:#EE93AF;--rose:#B9677F;--pale:#3A2A30;--line:#45333B;--leaf:#9CC296;--chipfg:#1F171A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1F171A;--card:#2A2024;--ink:#F5E8EC;--sub:#C4A8B1;--pink:#EE93AF;--rose:#B9677F;--pale:#3A2A30;--line:#45333B;--leaf:#9CC296;--chipfg:#1F171A;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.75}
+.wrap{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:28px 56px}
+.eyebrow{font-family:var(--f-hand);color:var(--pink);font-size:14px;letter-spacing:.1em;text-align:center}
+h1{font-family:var(--f-display);font-size:28px;letter-spacing:.12em;text-align:center;margin:4px 0 6px}
+.lead{text-align:center;color:var(--sub);font-size:13px;margin:0 auto;max-width:34em}
+h2{font-family:var(--f-display);font-size:20px;margin:34px 0 10px;display:flex;align-items:baseline;gap:8px;text-wrap:balance}
+h2::before{content:"✿";color:var(--rose);font-size:14px}
+.card{background:var(--card);border-radius:20px;padding:16px}
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:3.2em 1fr 3em;align-items:center;gap:8px;font-size:14px}
+.bar .t{height:14px;border-radius:99px;background:var(--pale);overflow:hidden}
+.bar .t i{display:block;height:100%;border-radius:99px;background:var(--rose)}
+.bar.low .t i{background:var(--pink)}
+.bar .n{text-align:right;font-variant-numeric:tabular-nums;color:var(--sub)}
+.note{font-size:12px;color:var(--sub);margin-top:8px}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.fact{background:var(--card);border-radius:18px;padding:12px 14px}
+.fact b{display:block;font-family:var(--f-display);font-size:15px}
+.fact span{display:block;font-size:12px;color:var(--sub);line-height:1.6;margin-top:2px}
+.fact .num{font-family:var(--f-display);color:var(--pink);font-size:22px;line-height:1.2;font-variant-numeric:tabular-nums}
+.gap{border:1.5px dashed var(--rose);background:transparent}
+.months{display:grid;gap:10px}
+details{background:var(--card);border-radius:20px;padding:0 16px}
+summary{list-style:none;cursor:pointer;padding:14px 0;display:flex;align-items:baseline;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary .m{font-family:var(--f-display);font-size:20px;color:var(--pink);min-width:2.6em}
+summary .s{font-size:13px;color:var(--sub);flex:1;min-width:0}
+summary::after{content:"＋";color:var(--rose);font-size:18px}
+details[open] summary::after{content:"−"}
+summary:focus-visible{outline:2px solid var(--pink);outline-offset:2px;border-radius:8px}
+.idea{border-top:1px dotted var(--line);padding:12px 0}
+.idea .k{display:inline-block;font-size:11px;border-radius:999px;padding:0 9px;background:var(--pale);color:var(--sub);margin-bottom:2px}
+.idea .k.sweet{background:var(--pink);color:var(--chipfg)}
+.idea h3{font-family:var(--f-display);font-size:17px;margin:2px 0 4px;line-height:1.45}
+.idea p{margin:0;font-size:14px}
+.idea .why{font-size:13px;color:var(--sub);margin-top:4px}
+.idea .ref{font-size:12px;color:var(--sub);margin-top:4px}
+.idea .ref b{font-weight:500;color:var(--ink)}
+.end{margin-top:30px;font-size:13px;color:var(--sub);text-align:center}
+@media (max-width:380px){.facts{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">これまでの195品から</div>
+  <h1>レシピのヒント帖</h1>
+  <p class="lead">お教室のレシピを数えてみると、先生らしい「型」と、まだ少ない季節・ジャンルが見えてきました。10月から翌年9月までの1年分、毎月5品・全60品の案をまとめています。</p>
+
+  <h2>季節ごとの品数</h2>
+  <div class="card">
+    <div class="bars">
+      <div class="bar"><span>春</span><span class="t"><i style="width:100%"></i></span><span class="n">56品</span></div>
+      <div class="bar"><span>夏</span><span class="t"><i style="width:98%"></i></span><span class="n">55品</span></div>
+      <div class="bar low"><span>秋</span><span class="t"><i style="width:30%"></i></span><span class="n">17品</span></div>
+      <div class="bar"><span>冬</span><span class="t"><i style="width:63%"></i></span><span class="n">35品</span></div>
+      <div class="bar"><span>秋冬</span><span class="t"><i style="width:18%"></i></span><span class="n">10品</span></div>
+      <div class="bar"><span>通年</span><span class="t"><i style="width:39%"></i></span><span class="n">22品</span></div>
+    </div>
+    <p class="note">秋の料理は春・夏の3分の1くらい。これからの半年で増やすと、秋冬のレシピ帖が厚くなります。</p>
+  </div>
+
+  <h2>先生らしさの「型」</h2>
+  <div class="facts">
+    <div class="fact"><span class="num">約30品</span><b>白出汁で味を決める</b><span>炊き込みご飯・お浸し・あんまで</span></div>
+    <div class="fact"><span class="num">21品</span><b>昆布茶で旨みを足す</b><span>クリーム・衣・和え衣にもひとさじ</span></div>
+    <div class="fact"><span class="num">16品</span><b>柚子の香り</b><span>柚子胡椒も含めて。仕上げの香りづけが得意</span></div>
+    <div class="fact"><span class="num">18品</span><b>和えもの・白和え</b><span>果物や生ハムと合わせる白和えが個性的</span></div>
+    <div class="fact"><span class="num">17品</span><b>揚げもの</b><span>米粉・片栗粉の軽い衣。とうもろこしや冬瓜も揚げる</span></div>
+    <div class="fact"><span class="num">16品</span><b>炊き込みご飯・土鍋</b><span>季節の具を1つ主役にする</span></div>
+    <div class="fact"><span class="num">13品</span><b>包む・巻く</b><span>春巻き・信田巻き・印籠詰め</span></div>
+    <div class="fact"><span class="num">20品</span><b>和に洋をひとさじ</b><span>オリーブオイル・チーズ・生ハム・ディル・ナンプラー</span></div>
+  </div>
+
+  <h2>まだ少ないもの</h2>
+  <div class="facts">
+    <div class="fact gap"><span class="num">17品</span><b>秋の料理</b><span>きのこ・芋・栗・柿・新米の季節</span></div>
+    <div class="fact gap"><span class="num">13品</span><b>汁物</b><span>すり流しは得意。季節のお椀をもう少し</span></div>
+    <div class="fact gap"><span class="num">3品</span><b>麺</b><span>冬のにゅうめん、夏の冷たいうどん</span></div>
+    <div class="fact gap"><span class="num">3品</span><b>作り置き・常備菜</b><span>梅やらっきょうなど季節の手仕事も</span></div>
+  </div>
+
+  <h2>1年分の案（10月〜翌9月・毎月5品）</h2>
+  <p class="note" style="margin-top:0">毎月「ご飯か麺・主菜・副菜・汁物・作り置きか前菜」を1品ずつ、全60品。どれも案なので、分量や味は先生の手で決めてください。「近い過去のレシピ」は、作り方の土台にできそうなものです。</p>
+  <div class="months">
+  <details open><summary><span class="m">10月</span><span class="s">秋の入口・新米ときのこ</span></summary>
+    <div class="idea"><span class="k">ご飯</span><h3>むかごと銀杏の塩昆布ご飯</h3><p>新米に、秋の小さな実をたっぷり。塩昆布の旨みだけで味が決まる。</p><p class="why">先生らしさ：季節の具を1つ主役にする炊き込みご飯</p><p class="ref">近い過去のレシピ：<b>ほっくり栗ご飯</b>／<b>ゆり根ごはん</b></p></div>
+    <div class="idea"><span class="k">主菜</span><h3>秋鮭のきのこあんかけ 柚子の香り</h3><p>焼いた秋鮭に、数種のきのこの白出汁あん。仕上げに柚子の皮。</p><p class="why">先生らしさ：白出汁のあん＋柚子の香り</p><p class="ref">近い過去のレシピ：<b>ふわとろ蓮根豆腐バーグ〜柚子あんかけ〜</b>／<b>冬瓜のそぼろあんかけ</b></p></div>
+    <div class="idea"><span class="k">副菜</span><h3>さつまいもと里芋の米粉揚げ 昆布茶塩</h3><p>秋の芋2種をカリッと揚げて、昆布茶を混ぜた塩で。</p><p class="why">先生らしさ：米粉の軽い衣＋昆布茶</p><p class="ref">近い過去のレシピ：<b>冬瓜の唐揚げ</b>／<b>とうもろこしの唐揚げ</b></p></div>
+    <div class="idea"><span class="k">汁物</span><h3>舞茸と豆乳のすり流し</h3><p>舞茸を炒めて豆乳とのばす、秋のとろりとした一椀。</p><p class="why">先生らしさ：すり流し・ポタージュを豆乳で軽く</p><p class="ref">近い過去のレシピ：<b>新玉ねぎのすり流し</b>／<b>マッシュルームカプチーノスープ</b></p></div>
+    <div class="idea"><span class="k">作り置き</span><h3>さつまいもと昆布の甘辛煮</h3><p>昆布の旨みで煮含める、お弁当にも使える常備菜。</p><p class="why">先生らしさ：昆布の旨み（50品）を作り置きに</p><p class="ref">近い過去のレシピ：<b>昆布の旨味の手作りなめたけ</b></p></div>
+  </details>
+  <details><summary><span class="m">11月</span><span class="s">蓮根・蕪・柿がおいしくなる</span></summary>
+    <div class="idea"><span class="k">ご飯</span><h3>蓮根と鶏そぼろの実山椒ご飯</h3><p>シャキッと残した蓮根と甘辛そぼろ、実山椒のぴりっと感。</p><p class="why">先生らしさ：実山椒・山椒（11品）＋炊き込みご飯</p><p class="ref">近い過去のレシピ：<b>新玉と新ゴボウと鶏肉の実山椒煮</b>／<b>長ネギたっぷりじゃこの炊き込みご飯</b></p></div>
+    <div class="idea"><span class="k">主菜</span><h3>豚バラと蕪の塩麹煮 すだち添え</h3><p>塩麹で下味をつけた豚バラと、とろける蕪を昆布出汁で。</p><p class="why">先生らしさ：塩麹＋柑橘の香り</p><p class="ref">近い過去のレシピ：<b>春キャベツと絹さやとしらすの塩麹和風コールスロー</b>／<b>蕪みぞれの肉汁ハンバーグ</b></p></div>
+    <div class="idea"><span class="k">副菜</span><h3>柿と生ハムのすだち白和え</h3><p>甘い柿と塩気の生ハムを、すだちを効かせた白和え衣で。</p><p class="why">先生らしさ：果物×生ハムの白和え</p><p class="ref">近い過去のレシピ：<b>春菊とあんぽ柿のなめらか白和え</b>／<b>セロリの葉と甘夏と生ハムの白和え</b></p></div>
+    <div class="idea"><span class="k">汁物</span><h3>百合根と蕪の白味噌椀</h3><p>ほくっとした百合根と蕪を、白味噌でやさしく。</p><p class="why">先生らしさ：白味噌（9品）の汁物</p><p class="ref">近い過去のレシピ：<b>京風お雑煮</b>／<b>蕪の和ポタージュ</b></p></div>
+    <div class="idea"><span class="k">前菜</span><h3>春菊と蓮根チップのサラダ 柚子胡椒ドレッシング</h3><p>生の春菊に、揚げ焼きした蓮根チップをのせて。</p><p class="why">先生らしさ：和に洋をひとさじ＋柚子胡椒</p><p class="ref">近い過去のレシピ：<b>里芋と蓮根の味噌サラダ</b></p></div>
+  </details>
+  <details><summary><span class="m">12月</span><span class="s">鰤・牡蠣・柚子、冬至と年の瀬</span></summary>
+    <div class="idea"><span class="k">麺</span><h3>牡蠣の白出汁にゅうめん 柚子あん</h3><p>ぷっくり牡蠣と細いそうめんに、柚子を効かせたとろみあん。</p><p class="why">先生らしさ：少ない「麺」を冬の温かい一杯で</p><p class="ref">近い過去のレシピ：<b>牡蠣の昆布焼き</b>／<b>ちゅるちゅるヘルシー茄子そうめん</b></p></div>
+    <div class="idea"><span class="k">主菜</span><h3>鰤の黒七味照り焼き 焼きねぎ添え</h3><p>いつもの照り焼きに、黒七味の香りで大人の味に。</p><p class="why">先生らしさ：黒七味（3品）の香りづけ</p><p class="ref">近い過去のレシピ：<b>ブリの照り焼き</b>／<b>黒七味香るズッキーニとエビの黄身煮</b></p></div>
+    <div class="idea"><span class="k">前菜</span><h3>大根と生ハムのミルフィーユ 柚子胡椒オイル</h3><p>甘酢に漬けた薄切り大根と生ハムを重ねて。年末のおもてなしに。</p><p class="why">先生らしさ：重ねる前菜＋柚子胡椒</p><p class="ref">近い過去のレシピ：<b>甘酢大根と寒ぶりのミルフィーユ</b></p></div>
+    <div class="idea"><span class="k">汁物</span><h3>冬至の南瓜すり流し 白味噌仕立て</h3><p>冬至に食べる南瓜を、白味噌でのばしたすり流しに。</p><p class="why">先生らしさ：すり流し＋季節の行事</p><p class="ref">近い過去のレシピ：<b>蕪の和ポタージュ</b></p></div>
+    <div class="idea"><span class="k">作り置き</span><h3>柚子大根</h3><p>柚子の皮と昆布で漬ける、冬の定番の漬けもの。</p><p class="why">先生らしさ：柚子の香り（16品）を作り置きに</p><p class="ref">近い過去のレシピ：<b>白瓜の昆布浅漬け</b>／<b>柚子釜 紅白なます</b></p></div>
+  </details>
+  <details><summary><span class="m">1月</span><span class="s">七草・鱈・白菜で体をいたわる</span></summary>
+    <div class="idea"><span class="k">ご飯</span><h3>七草の塩麹粥 じゃこ添え</h3><p>七草を塩麹で下味して、カリッと炒ったじゃこをのせる。</p><p class="why">先生らしさ：じゃこ（7品）＋塩麹</p><p class="ref">近い過去のレシピ：<b>菜飯</b>／<b>長ネギたっぷりじゃこの炊き込みご飯</b></p></div>
+    <div class="idea"><span class="k">主菜</span><h3>鱈と白菜の酒粕鍋仕立て</h3><p>酒粕と白味噌で体が温まる、一人分の小鍋。</p><p class="why">先生らしさ：冬の温かい主菜を増やす</p><p class="ref">近い過去のレシピ：<b>たらの蕪蒸し</b></p></div>
+    <div class="idea"><span class="k">副菜</span><h3>春菊と焼き椎茸の胡麻和え</h3><p>香ばしく焼いた椎茸と春菊を、たっぷりの胡麻で。</p><p class="why">先生らしさ：和えもの（18品）の定番を冬の食材で</p><p class="ref">近い過去のレシピ：<b>インゲンの胡麻和え</b></p></div>
+    <div class="idea"><span class="k">汁物</span><h3>白菜と豚の重ね蒸しスープ 柚子ポン酢</h3><p>白菜と豚を重ねて蒸し、スープごと柚子ポン酢で。</p><p class="why">先生らしさ：手作りのポン酢</p><p class="ref">近い過去のレシピ：<b>冬瓜と柔らかささみの手作りへベス塩ポン酢和え</b></p></div>
+    <div class="idea"><span class="k">作り置き</span><h3>金柑と大根の甘酢漬け</h3><p>すし酢で簡単に。お正月明けの口直しや、お弁当のすき間に。</p><p class="why">先生らしさ：すし酢を使った簡単な漬けもの</p><p class="ref">近い過去のレシピ：<b>柚子釜 紅白なます</b>／<b>白瓜の昆布浅漬け</b></p></div>
+  </details>
+  <details><summary><span class="m">2月</span><span class="s">節分・牡蠣・春を待つ菜の花</span></summary>
+    <div class="idea"><span class="k">ご飯</span><h3>鰯の蒲焼き恵方巻</h3><p>節分の鰯と恵方巻をひとつに。甘辛の蒲焼きと大葉を巻く。</p><p class="why">先生らしさ：巻きもの＋節分の行事</p><p class="ref">近い過去のレシピ：<b>鰯の蒲焼き 冷やしひつまぶし風</b>／<b>お花太巻き</b></p></div>
+    <div class="idea"><span class="k">主菜</span><h3>牡蠣の米粉ソテー 蕗味噌ソース</h3><p>米粉をはたいてカリッと焼いた牡蠣に、ほろ苦い蕗味噌を。</p><p class="why">先生らしさ：米粉の衣＋季節の味噌</p><p class="ref">近い過去のレシピ：<b>蕗味噌</b>／<b>牡蠣とクレソンのリゾット</b></p></div>
+    <div class="idea"><span class="k">副菜</span><h3>菜の花と蛤の酒蒸し</h3><p>早春の菜の花と蛤を、昆布と酒でさっと蒸す。</p><p class="why">先生らしさ：貝の出汁を生かす</p><p class="ref">近い過去のレシピ：<b>菜の花とアサリのお浸し</b>／<b>ハマグリ真薯のお吸い物</b></p></div>
+    <div class="idea"><span class="k">汁物</span><h3>ほうれん草と焼き海苔のお吸い物 柚子香る</h3><p>焼き海苔の香りと、ほうれん草の甘み。</p><p class="why">先生らしさ：基本のお椀を季節の香りで</p><p class="ref">近い過去のレシピ：<b>山芋となめこのお吸い物</b></p></div>
+    <div class="idea"><span class="k">作り置き</span><h3>蓮根と牛蒡の黒酢きんぴら</h3><p>いつものきんぴらを黒酢でさっぱり。日持ちする常備菜に。</p><p class="why">先生らしさ：少ない「作り置き」を増やす</p><p class="ref">近い過去のレシピ：<b>シャキシャキ蓮根とエリンギのきんぴら</b></p></div>
+  </details>
+  <details><summary><span class="m">3月</span><span class="s">ひな祭り・新玉・春キャベツ</span></summary>
+    <div class="idea"><span class="k">ご飯</span><h3>桜海老のひな祭りちらし 菜の花添え</h3><p>すし酢で手軽に。桜海老と錦糸卵、菜の花で春色に。</p><p class="why">先生らしさ：桜海老の香り（4品）＋すし酢</p><p class="ref">近い過去のレシピ：<b>桜海老香るそら豆と新茶の茶豆飯</b></p></div>
+    <div class="idea"><span class="k">主菜</span><h3>鯛と春キャベツの昆布蒸し 木の芽あん</h3><p>昆布の上で鯛と春キャベツを蒸して、木の芽を散らしたあんで。</p><p class="why">先生らしさ：昆布・昆布茶の旨み（50品）＋あん</p><p class="ref">近い過去のレシピ：<b>桜海老香る春キャベツの出汁ロールキャベツ</b>／<b>鯛の昆布締めとうるいのすだちカルパッチョ</b></p></div>
+    <div class="idea"><span class="k">副菜</span><h3>新玉ねぎの丸ごと白出汁煮</h3><p>新玉ねぎをまるごと白出汁で煮て、とろとろに。</p><p class="why">先生らしさ：いちばん人気の春の食材（新玉ねぎ9品）</p><p class="ref">近い過去のレシピ：<b>新玉ねぎのすり流し</b></p></div>
+    <div class="idea"><span class="k">汁物</span><h3>蛤の潮汁 三つ葉と柚子</h3><p>ひな祭りの定番を、先生の出汁の取り方で基本から。</p><p class="why">先生らしさ：基本の一品があると、初めての人にもやさしい</p><p class="ref">近い過去のレシピ：<b>ハマグリ真薯のお吸い物</b></p></div>
+    <div class="idea"><span class="k">作り置き</span><h3>蛍烏賊と新玉の山椒オイル漬け</h3><p>さっと茹でた蛍烏賊と新玉を、山椒の香りのオイルに漬けて。</p><p class="why">先生らしさ：和に洋をひとさじ＋山椒</p><p class="ref">近い過去のレシピ：<b>パリパリ新じゃがと三つ葉の桜海老香味オイル和え</b></p></div>
+  </details>
+  <details><summary><span class="m">4月</span><span class="s">筍・鰆・うど、春まっさかり</span></summary>
+    <div class="idea"><span class="k">ご飯</span><h3>筍と木の芽の土鍋ご飯</h3><p>掘りたての筍を昆布出汁で炊き、木の芽をたっぷり。</p><p class="why">先生らしさ：季節の具を1つ主役にする土鍋ご飯</p><p class="ref">近い過去のレシピ：<b>シンプル空豆の昆布出汁土鍋ご飯</b></p></div>
+    <div class="idea"><span class="k">主菜</span><h3>鰆の木の芽味噌焼き</h3><p>白味噌に木の芽を混ぜて、鰆にのせて焼く。</p><p class="why">先生らしさ：白味噌の焼きもの</p><p class="ref">近い過去のレシピ：<b>鰆の菜種焼き〜白味噌焼き〜</b></p></div>
+    <div class="idea"><span class="k">副菜</span><h3>うどと甘夏の白和え</h3><p>しゃきっとしたうどと、ほろ苦い甘夏を白和え衣で。</p><p class="why">先生らしさ：果物の白和え</p><p class="ref">近い過去のレシピ：<b>セロリの葉と甘夏と生ハムの白和え</b></p></div>
+    <div class="idea"><span class="k">汁物</span><h3>あさりと春キャベツの白出汁スープ</h3><p>あさりの出汁と春キャベツの甘みだけのやさしいスープ。</p><p class="why">先生らしさ：貝の出汁＋白出汁</p><p class="ref">近い過去のレシピ：<b>旨味がギュ！基本＋1の春アクアパッツァ</b></p></div>
+    <div class="idea"><span class="k">作り置き</span><h3>新玉ねぎの塩昆布漬け</h3><p>切って混ぜるだけ。サラダにも和えものにも使える。</p><p class="why">先生らしさ：新玉ねぎ（9品）を作り置きに</p><p class="ref">近い過去のレシピ：<b>白瓜の昆布浅漬け</b></p></div>
+  </details>
+  <details><summary><span class="m">5月</span><span class="s">新茶・そら豆・アスパラ、初夏の手仕事</span></summary>
+    <div class="idea"><span class="k">麺</span><h3>アスパラと桜海老の冷やしうどん 柚子胡椒だれ</h3><p>茹でたてのアスパラと桜海老を、柚子胡椒の効いたつけだれで。</p><p class="why">先生らしさ：少ない「麺」を初夏の一品で</p><p class="ref">近い過去のレシピ：<b>ちゅるちゅるヘルシー茄子そうめん</b></p></div>
+    <div class="idea"><span class="k">主菜</span><h3>豚しゃぶと新玉の梅おろしだれ</h3><p>さっと茹でた豚と新玉を、梅入りの大根おろしで。</p><p class="why">先生らしさ：梅（11品）＋さっぱり仕立て</p><p class="ref">近い過去のレシピ：<b>柔らか豚しゃぶと冬瓜とミョウガのらっきょうドレ和え</b></p></div>
+    <div class="idea"><span class="k">副菜</span><h3>アスパラの白和え 黒七味</h3><p>アスパラを白和えに、黒七味をひとふり。</p><p class="why">先生らしさ：白和え＋黒七味</p><p class="ref">近い過去のレシピ：<b>アスパラの塩茹で</b></p></div>
+    <div class="idea"><span class="k">汁物</span><h3>そら豆のすり流し</h3><p>そら豆の青い香りを、昆布出汁でのばしたすり流しに。</p><p class="why">先生らしさ：すり流し（得意）を初夏の豆で</p><p class="ref">近い過去のレシピ：<b>生グリーンピースの白雪あん</b>／<b>新玉ねぎのすり流し</b></p></div>
+    <div class="idea"><span class="k">作り置き</span><h3>実山椒の醤油漬け</h3><p>5〜6月だけの実山椒を、1年使える醤油漬けに。</p><p class="why">先生らしさ：季節の手仕事。実山椒は先生の定番</p><p class="ref">近い過去のレシピ：<b>新生姜のがり</b></p></div>
+  </details>
+  <details><summary><span class="m">6月</span><span class="s">梅・新生姜・らっきょう、梅雨の手仕事</span></summary>
+    <div class="idea"><span class="k">ご飯</span><h3>鯵と新生姜の混ぜご飯</h3><p>焼いた鯵をほぐして、刻んだ新生姜と大葉を混ぜる。</p><p class="why">先生らしさ：鯵（8品）＋新生姜</p><p class="ref">近い過去のレシピ：<b>手作り煎り酒とガリの鯵の博多押し</b></p></div>
+    <div class="idea"><span class="k">主菜</span><h3>鶏手羽の梅煮 新生姜たっぷり</h3><p>梅干しと新生姜で、手羽をさっぱり柔らかく煮る。</p><p class="why">先生らしさ：梅＋新生姜のさっぱり煮</p><p class="ref">近い過去のレシピ：<b>手羽先のスパイシーチューリップ唐揚げ</b></p></div>
+    <div class="idea"><span class="k">副菜</span><h3>じゅんさいと長芋の土佐酢和え</h3><p>つるんとしたじゅんさいと、しゃきしゃきの長芋。</p><p class="why">先生らしさ：土佐酢の和えもの</p><p class="ref">近い過去のレシピ：<b>新生姜とハリハリ野菜柔らかささみの土佐酢和え</b></p></div>
+    <div class="idea"><span class="k">汁物</span><h3>新じゃがと茗荷の冷たいお味噌汁</h3><p>冷やしても香りが立つ、茗荷をたっぷり。</p><p class="why">先生らしさ：茗荷（夏の定番）を汁物に</p><p class="ref">近い過去のレシピ：<b>いりこ出汁で白瓜のお味噌汁</b></p></div>
+    <div class="idea"><span class="k">作り置き</span><h3>手作りらっきょうの甘酢漬け</h3><p>6月だけの手仕事。刻んでタルタルや和えものにも。</p><p class="why">先生らしさ：らっきょうは先生の料理によく出てくる</p><p class="ref">近い過去のレシピ：<b>卵豆腐と豚しゃぶ、モロヘイヤのすり流し</b></p></div>
+  </details>
+  <details><summary><span class="m">7月</span><span class="s">茄子・胡瓜・オクラ、暑さをしのぐ</span></summary>
+    <div class="idea"><span class="k">麺</span><h3>オクラとささみの冷やし梅うどん</h3><p>とろろ昆布とオクラの粘りで、つるっと食べられる。</p><p class="why">先生らしさ：梅＋ねばねば</p><p class="ref">近い過去のレシピ：<b>モロヘイヤと梅のねばねば崩し豆腐和え</b></p></div>
+    <div class="idea"><span class="k">主菜</span><h3>夏野菜と豚肉の揚げ浸し 柚子胡椒</h3><p>揚げた茄子・ピーマン・豚を、柚子胡椒の効いた出汁に浸す。</p><p class="why">先生らしさ：揚げもの（17品）＋浸し</p><p class="ref">近い過去のレシピ：<b>ズッキーニの焼き浸し</b></p></div>
+    <div class="idea"><span class="k">副菜</span><h3>たたき胡瓜と茗荷の塩昆布和え</h3><p>たたいた胡瓜に、茗荷と塩昆布。5分でできる。</p><p class="why">先生らしさ：簡単（6品）＋昆布の旨み</p><p class="ref">近い過去のレシピ：<b>春キャベツと絹さやとしらすの塩麹和風コールスロー</b></p></div>
+    <div class="idea"><span class="k">汁物</span><h3>とうもろこしの冷たいすり流し</h3><p>とうもろこしの甘みだけで作る、冷たいすり流し。</p><p class="why">先生らしさ：すり流し＋夏の甘み</p><p class="ref">近い過去のレシピ：<b>とうもろこし豆腐 じゅんさいかけ</b></p></div>
+    <div class="idea"><span class="k">作り置き</span><h3>大葉の醤油漬け</h3><p>大葉を重ねて漬けるだけ。ご飯に巻いても。</p><p class="why">先生らしさ：大葉（夏に8品）を作り置きに</p><p class="ref">近い過去のレシピ：<b>新生姜のがり</b></p></div>
+  </details>
+  <details><summary><span class="m">8月</span><span class="s">鯵・ゴーヤ・枝豆、夏の元気ごはん</span></summary>
+    <div class="idea"><span class="k">ご飯</span><h3>枝豆とじゃこの梅ご飯</h3><p>炊きたてのご飯に、枝豆・じゃこ・梅を混ぜるだけ。</p><p class="why">先生らしさ：じゃこ＋梅の混ぜご飯</p><p class="ref">近い過去のレシピ：<b>茗荷のじゃこの炊き込みご飯〜揚げもろこし〜</b></p></div>
+    <div class="idea"><span class="k">主菜</span><h3>鶏むね肉の冷やししゃぶ 胡麻だれ</h3><p>低温で柔らかく火を通した鶏むねを、たっぷりの胡麻だれで。</p><p class="why">先生らしさ：柔らか（6品）の火入れ</p><p class="ref">近い過去のレシピ：<b>低温調理器いらず！柔らか出汁ローストポーク</b></p></div>
+    <div class="idea"><span class="k">副菜</span><h3>ゴーヤのおかか塩昆布和え</h3><p>さっと茹でたゴーヤを、おかかと塩昆布で。</p><p class="why">先生らしさ：鰹節・昆布の旨み</p><p class="ref">近い過去のレシピ：<b>ゴーヤとつるむらさきの胡麻酢和え</b></p></div>
+    <div class="idea"><span class="k">汁物</span><h3>オクラとトマトの冷やし味噌汁</h3><p>トマトの酸味で夏でも食べやすい、冷たいお味噌汁。</p><p class="why">先生らしさ：味噌（22品）を夏向けに</p><p class="ref">近い過去のレシピ：<b>いりこ出汁で白瓜のお味噌汁</b></p></div>
+    <div class="idea"><span class="k">作り置き</span><h3>ピーマンのじゃこ山椒炒め煮</h3><p>ピーマンをじゃこと山椒で炒め煮に。日持ちする常備菜。</p><p class="why">先生らしさ：じゃこ＋山椒の常備菜</p><p class="ref">近い過去のレシピ：<b>セロリとジャコのきんぴら</b></p></div>
+  </details>
+  <details><summary><span class="m">9月</span><span class="s">秋茄子・里芋・無花果、実りの入口</span></summary>
+    <div class="idea"><span class="k">ご飯</span><h3>里芋と鶏の炊き込みご飯 柚子胡椒</h3><p>ねっとりした里芋と鶏を、柚子胡椒をきかせて炊く。</p><p class="why">先生らしさ：炊き込みご飯＋柚子胡椒</p><p class="ref">近い過去のレシピ：<b>きのこの旨味が凝縮な炊き込みご飯</b></p></div>
+    <div class="idea"><span class="k">主菜</span><h3>秋茄子の鶏ひき肉挟み揚げ 生姜あん</h3><p>茄子にひき肉を挟んで揚げ、生姜の効いたあんをかける。</p><p class="why">先生らしさ：挟み揚げ＋あん</p><p class="ref">近い過去のレシピ：<b>海老蓮根挟み焼き干し椎茸銀餡がけ</b>／<b>そら豆の海老山葵挟み揚げ</b></p></div>
+    <div class="idea"><span class="k">副菜</span><h3>無花果と春菊の白和え</h3><p>とろりと甘い無花果と、ほろ苦い春菊を白和えに。</p><p class="why">先生らしさ：果物の白和え</p><p class="ref">近い過去のレシピ：<b>春菊とあんぽ柿のなめらか白和え</b></p></div>
+    <div class="idea"><span class="k">汁物</span><h3>きのこと豆腐のとろみ汁 生姜</h3><p>きのこの旨みと生姜で、朝晩冷えてきた頃の一椀。</p><p class="why">先生らしさ：あん（11品）を汁物に</p><p class="ref">近い過去のレシピ：<b>即席！とろろ昆布の碗</b></p></div>
+    <div class="idea"><span class="k">作り置き</span><h3>梨と大根のすだち甘酢漬け</h3><p>梨のやさしい甘さと大根、すだちの香り。</p><p class="why">先生らしさ：すし酢の甘酢漬け＋柑橘</p><p class="ref">近い過去のレシピ：<b>白瓜の昆布浅漬け</b></p></div>
+  </details>
+
+  </div>
+
+</div>
+
+</body></html>
