@@ -12,7 +12,8 @@ body { background: var(--paper); color: var(--body-c); font-family: var(--serif)
 
 /* 上の帯（公式サイトのヘッダーと同じグレージュ） */
 .brandbar { background: var(--taupe); color: #fff; }
-.brandbar .in { max-width: 640px; margin: 0 auto; padding: 16px 16px; display: flex; align-items: center; gap: 14px; }
+.brandbar .in { max-width: 1200px; margin: 0 auto; padding: 12px 16px; display: flex; align-items: center; gap: 14px; }
+.brandbar .logo { width: 64px; height: auto; flex: none; display: block; }
 .brandbar .mark { font-size: 22px; letter-spacing: .04em; line-height: 1; border-right: 1px solid rgba(255,255,255,.55); padding-right: 14px; }
 .brandbar .org { font-size: 12.5px; letter-spacing: .06em; line-height: 1.4; }
 
