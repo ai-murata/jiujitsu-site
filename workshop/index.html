@@ -66,11 +66,6 @@
         <input type="tel" id="tel" name="tel" autocomplete="tel" inputmode="tel" maxlength="30">
         <p class="err">電話番号をご入力ください。</p>
       </div>
-      <div class="field" data-f="address">
-        <label class="lb" for="address">住所<span class="req">必須</span></label>
-        <input type="text" id="address" name="address" autocomplete="street-address" maxlength="200">
-        <p class="err">住所をご入力ください。</p>
-      </div>
       <div class="field" data-f="source">
         <label class="lb" for="source">このイベントをどこで知りましたか？<span class="req">必須</span></label>
         <select id="source" name="source"><option value="">お選びください</option></select>
@@ -124,7 +119,7 @@
   <footer>一般社団法人 Color Sensing Alliance<br><a href="https://www.japancolorsensing.com/">japancolorsensing.com</a></footer>
 </div>
 
-<script src="config.js?v=4"></script>
+<script src="config.js?v=5"></script>
 <script>
 (function () {
   var $ = function (id) { return document.getElementById(id); };
@@ -184,11 +179,11 @@
   function check() {
     var d = {
       slot: val('slot'), product: val('product'), name: val('name'), kana: val('kana'), age: val('age'),
-      email: val('email'), tel: val('tel'), address: val('address'), source: val('source'),
+      email: val('email'), tel: val('tel'), address: '—', source: val('source'),
       agree: $('agree').checked, website: $('website').value,
     };
     var bad = [];
-    ['slot', 'product', 'name', 'kana', 'age', 'tel', 'address', 'source'].forEach(function (k) { if (!d[k]) bad.push(k); });
+    ['slot', 'product', 'name', 'kana', 'age', 'tel', 'source'].forEach(function (k) { if (!d[k]) bad.push(k); });
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) bad.push('email');
     if (!d.agree) bad.push('agree');
     form.querySelectorAll('.field').forEach(function (f) { f.classList.toggle('bad', bad.indexOf(f.dataset.f) >= 0); });

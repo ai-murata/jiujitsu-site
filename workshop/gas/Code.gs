@@ -124,6 +124,7 @@ function reserve_(b) {
     address: clean_(b.address, 200), tel: clean_(b.tel, 30), age: clean_(b.age, 20),
     product: clean_(b.product, 40), slot: clean_(b.slot, 60), source: clean_(b.source, 40),
   };
+  if (!f.address) f.address = '—'; // 住所は聞かない（列は残す）
   const miss = Object.keys(f).filter(k => !f[k]);
   if (miss.length) return { ok: false, error: '未入力の項目があります。' };
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) return { ok: false, error: 'メールアドレスの形をご確認ください。' };
