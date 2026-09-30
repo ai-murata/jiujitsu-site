@@ -1,6 +1,6 @@
 // 受付係（Google Apps Script）のウェブアプリURL。
 // 公開手順は gas/README.md。空のままだと画面の確認用のデモ表示になり、予約は届かない。
-window.WORKSHOP_API = 'https://script.google.com/a/macros/jiujitsu.co.jp/s/AKfycbyVIWoYKZn-b8DGUELiX3i-rDX1iahenFMkrVxNLChMI9kD2Ic4S7Igf1p-ERPhwA16/exec';
+window.WORKSHOP_API = 'https://script.google.com/macros/s/AKfycbzWtuuNEUqNYTwg-E7d_EMYvLa10DCcHQV4elprUfrWkS034Fs3aFrlJZkGOs7F02fDdA/exec';
 
 // 受付係とのやりとり。POST は text/plain で送ると事前確認なしで Apps Script に届く。
 window.workshopApi = {
