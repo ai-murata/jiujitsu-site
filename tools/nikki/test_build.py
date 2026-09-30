@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""クラウド日記のオフラインテスト（ネットワーク不要）。
+"""ブログの日記のオフラインテスト（ネットワーク不要）。
 
     python3 tools/nikki/test_build.py
 """
@@ -111,6 +111,10 @@ class RenderTest(unittest.TestCase):
     def test_apply_and_render_escapes(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = pathlib.Path(tmp)
+            (root / "blog").mkdir()
+            (root / "blog/index.html").write_text(
+                '<ul class="posts">\n    <!-- nikki:start -->\n    <!-- nikki:end -->\n    <li>ふつうの記事</li>\n</ul>\n',
+                encoding="utf-8")
             inbox = root / "inbox"
             inbox.mkdir()
             (inbox / "candidates.json").write_text(json.dumps(EntryTest.CANDS), encoding="utf-8")
@@ -121,7 +125,15 @@ class RenderTest(unittest.TestCase):
             self.assertIn("&lt;script&gt;", page)
             self.assertIn("柔術ニュース 1件", page)
             self.assertIn("真似するなら、こう頼む", page)
-            self.assertIn("/blog/nikki/2026-09-29/", (root / "blog/nikki/index.html").read_text(encoding="utf-8"))
+            self.assertIn("url=/blog/", (root / "blog/nikki/index.html").read_text(encoding="utf-8"))
+            # ブログ一覧に「日記」として並ぶ（ふつうの記事はそのまま、何度作り直しても同じ）
+            blog = (root / "blog/index.html").read_text(encoding="utf-8")
+            self.assertIn('href="/blog/nikki/2026-09-29/"', blog)
+            self.assertIn('<span class="tag">日記</span>', blog)
+            self.assertIn("<li>ふつうの記事</li>", blog)
+            self.assertNotIn("<script>x", blog)
+            build.render_all(root)
+            self.assertEqual(blog, (root / "blog/index.html").read_text(encoding="utf-8"))
             # 同じ日はもう集めない
             self.assertFalse(build.collect(build.REPO, root, root / "again", "2026-09-29", CONFIG))
 
