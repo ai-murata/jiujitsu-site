@@ -75,9 +75,11 @@ print("トップページへの差し込み")
 block = build.build_block(es, "")
 check("LINEのURLが空ならボタンを出さない", "linebtn" not in block)
 check("URLがあればボタンを出す", "linebtn" in build.build_block(es, "https://lin.ee/x"))
-check("お知らせを全部並べる", block.count("<li") == len(es))
-check("一番新しいものだけ大きく", block.count('class="is-latest"') == 1
-      and block.index('class="is-latest"') < block.index("<li>" if len(es) > 1 else "</ul>"))
+tools_only = [e for e in es if build.split_tag(e["title"])[0] != build.BLOG_TAG]
+check("ブログ以外を全部並べる", block.count("<li") == len(tools_only))
+check("ブログは新着欄に載せない", "/blog/" not in block or all(
+    e["url"] not in block for e in es if build.split_tag(e["title"])[0] == build.BLOG_TAG))
+check("feed.xmlにはブログも載る", len(root.findall(ns + "entry")) == len(es))
 check("最初に見せる件数を渡す", f'data-show="{build.SHOW_N}"' in block)
 src = "A\n" + build.START + "ふるい\n" + build.END + "\nB"
 once = build.inject(src, block)

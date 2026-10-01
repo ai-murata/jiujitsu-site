@@ -160,25 +160,13 @@
   .dailynews { margin-top: 72px; scroll-margin-top: 20px; }
   .dailynews .works { margin-top: 20px; }
 
-  /* もくじ：スクロールしなくてもサイト全体が見わたせる */
   .pick { padding: 36px 0 0; }
-  .map { padding: 36px 0 0; }
-  .mapgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-  .mapgrp { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 12px 14px 12px; break-inside: avoid; }
-  .mapgrp h2 { margin: 0 0 6px; font-family: var(--mincho); font-weight: 700; font-size: 14.5px; letter-spacing: .2em; }
-  .mapgrp h2 a { color: var(--gold); text-decoration: none; }
-  .mapgrp ul { list-style: none; margin: 0; padding: 0; }
-  .mapgrp li a { display: block; font-size: 14.5px; line-height: 1.5; padding: 4px 0; color: var(--ink); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .mapgrp li a:hover { color: var(--gold); }
-  .mapgrp li a:focus-visible, .mapgrp h2 a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 28px 0 0; }
+  .menu a { display: inline-flex; align-items: center; gap: 4px; padding: 8px 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 999px; font-size: 14.5px; font-weight: 500; color: var(--ink); text-decoration: none; white-space: nowrap; transition: border-color .15s, color .15s; }
+  .menu a:hover { border-color: var(--gold); color: var(--gold); }
+  .menu a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .menu .ic { font-style: normal; }
   .cat-label, .people, .coming { scroll-margin-top: 20px; }
-  .map .ic { display: inline-block; width: 1.4em; margin-right: 4px; text-align: center; font-style: normal; letter-spacing: 0; }
-  .mapgrp h2 .ic { margin-right: 2px; }
-  .mapgrp li a { border-radius: 999px; padding-left: 4px; margin-left: -4px; transition: background .15s, color .15s; }
-  .mapgrp li a:hover { background: rgba(201,162,39,.12); }
-  .mapgrp li a:hover .ic { display: inline-block; animation: bob .5s ease; }
-  @keyframes bob { 40% { transform: translateY(-3px) rotate(-8deg); } }
-  @media (prefers-reduced-motion: reduce) { .mapgrp li a:hover .ic { animation: none; } }
 
   @media (max-width: 660px) {
     header { padding: 30px 16px 22px; }
@@ -189,13 +177,8 @@
     .hsearch { margin-top: 16px; }
     .wrap { padding: 0 16px; }
     .pick { padding-top: 16px; }
-    .map { padding-top: 16px; }
-    .mapgrid { display: block; columns: 2; column-gap: 8px; }
-    /* Safari は段の頭に前のカードの margin を持ち越すので inline-block で揃える */
-    .mapgrp { display: inline-block; width: 100%; vertical-align: top; padding: 8px 10px 8px; margin: 0 0 8px; }
-    .mapgrp h2 { font-size: 13.5px; letter-spacing: .08em; margin-bottom: 2px; }
-    .mapgrp li a { display: flex; align-items: baseline; font-size: 14px; line-height: 1.45; padding: 4px 0 4px 4px; white-space: normal; overflow: visible; border-radius: 8px; }
-    .map .ic { flex: none; }
+    .menu { gap: 6px; padding-top: 20px; }
+    .menu a { font-size: 13.5px; padding: 7px 11px; }
     .news { padding-top: 28px; }
     .sec-label { margin-bottom: 10px; }
     .newslist a { flex-wrap: wrap; gap: 0 8px; padding: 9px 2px; align-items: center; }
@@ -238,6 +221,17 @@
 </header>
 
 <div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <nav class="menu rise d2" aria-label="メニュー">
+    <a href="#cat-jiujitsu"><span class="ic" aria-hidden="true">🥋</span>柔術</a>
+    <a href="#cat-shigoto"><span class="ic" aria-hidden="true">🗂️</span>道場のしごと</a>
+    <a href="#cat-irai"><span class="ic" aria-hidden="true">🤝</span>頼まれて作ったもの</a>
+    <a href="#cat-muratake"><span class="ic" aria-hidden="true">🏠</span>村田家</a>
+    <a href="#cat-news"><span class="ic" aria-hidden="true">📰</span>毎朝のニュース</a>
+    <a href="/blog/"><span class="ic" aria-hidden="true">✏️</span>ブログ</a>
+  </nav>
+</div>
 
 <div class="wrap">
   <section class="pick blogtop rise d2" id="cat-blog">
@@ -300,84 +294,15 @@
 })();
 </script>
 
-<div class="wrap">
-  <nav class="map rise d2" aria-label="もくじ">
-    <p class="sec-label"><span class="ic" aria-hidden="true">📖</span>もくじ</p>
-    <div class="mapgrid">
-      <section class="mapgrp">
-        <h2><a href="#cat-jiujitsu"><span class="ic" aria-hidden="true">🥋</span>柔術</a></h2>
-        <ul>
-          <li><a href="/tournament/"><span class="ic" aria-hidden="true">🏆</span>大会出場スケジュール</a></li>
-          <li><a href="/hajimete/"><span class="ic" aria-hidden="true">🔰</span>はじめての大会ガイド</a></li>
-          <li><a href="/dojo/"><span class="ic" aria-hidden="true">🗾</span>全国柔術道場ガイド</a></li>
-          <li><a href="/jiunews/"><span class="ic" aria-hidden="true">📰</span>きょうの柔術ニュース</a></li>
-          <li><a href="/kenkyu/"><span class="ic" aria-hidden="true">🔬</span>柔術の研究論文ガイド</a></li>
-        </ul>
-      </section>
-      <section class="mapgrp">
-        <h2><a href="#cat-shigoto"><span class="ic" aria-hidden="true">🗂️</span>道場のしごと</a></h2>
-        <ul>
-          <li><a href="/shift/"><span class="ic" aria-hidden="true">📅</span>月次シフト表</a></li>
-          <li><a href="/hojokin/"><span class="ic" aria-hidden="true">💰</span>道場が使える補助金</a></li>
-          <li><a href="/ryoshusho/"><span class="ic" aria-hidden="true">🧾</span>領収書のデジタル化</a></li>
-          <li><a href="/claudecode/"><span class="ic" aria-hidden="true">🤖</span>道場のClaude Code</a></li>
-          <li><a href="/hajimekata/"><span class="ic" aria-hidden="true">🌱</span>Claudeの始め方</a></li>
-          <li><a href="/claudenews/"><span class="ic" aria-hidden="true">🗞️</span>きょうのClaudeニュース</a></li>
-        </ul>
-      </section>
-      <section class="mapgrp">
-        <h2><a href="#cat-muratake"><span class="ic" aria-hidden="true">🏠</span>村田家</a></h2>
-        <ul>
-          <li><a href="/goroku/"><span class="ic" aria-hidden="true">💬</span>良蔵語録</a></li>
-          <li><a href="/toriatsukai/"><span class="ic" aria-hidden="true">📘</span>良蔵取扱説明書</a></li>
-          <li><a href="/muratake/"><span class="ic" aria-hidden="true">📦</span>Amazon履歴</a></li>
-          <li><a href="/kondate/"><span class="ic" aria-hidden="true">🍙</span>良蔵の献立</a></li>
-          <li><a href="#people"><span class="ic" aria-hidden="true">👋</span>つくっている人</a></li>
-        </ul>
-      </section>
-      <section class="mapgrp">
-        <h2><a href="#cat-irai"><span class="ic" aria-hidden="true">🤝</span>頼まれて作ったもの</a></h2>
-        <ul>
-          <li><a href="/salon/"><span class="ic" aria-hidden="true">💆</span>サロンの顧客管理</a></li>
-          <li><a href="/yoyaku/"><span class="ic" aria-hidden="true">🎨</span>ワークショップの申込み受付</a></li>
-          <li><a href="/recipe/"><span class="ic" aria-hidden="true">🍲</span>料理教室のレシピ帖</a></li>
-          <li><a href="/irai/"><span class="ic" aria-hidden="true">🙋</span>AIのお手伝い、承ります</a></li>
-        </ul>
-      </section>
-      <section class="mapgrp">
-        <h2><a href="/blog/"><span class="ic" aria-hidden="true">✏️</span>ブログ</a></h2>
-        <ul>
-          <li><a href="/blog/"><span class="ic" aria-hidden="true">📝</span>記事の一覧</a></li>
-        </ul>
-      </section>
-      <section class="mapgrp">
-        <h2><a href="/company/"><span class="ic" aria-hidden="true">🧪</span>Jiu Labo について</a></h2>
-        <ul>
-          <li><a href="#coming"><span class="ic" aria-hidden="true">🌱</span>これから作るもの</a></li>
-          <li><a href="/company/"><span class="ic" aria-hidden="true">🏢</span>会社概要</a></li>
-        </ul>
-      </section>
-    </div>
-  </nav>
-</div>
-
 <!-- news:start -->
   <div class="wrap">
     <section class="news rise d2">
-      <p class="sec-label">新着</p>
-      <ul class="newslist" data-show="5">
-        <li class="is-latest"><a href="/blog/shabetta-6pun/"><time datetime="2026-10-01">2026.10.01</time><span class="tag">ブログ</span><b>しゃべったのは6分。今日1日でClaudeに頼んだ14の仕事</b><span class="arrow">→</span><span class="sum">「音声入力は5倍速い」を1日の記録で確かめてみました。しゃべったのは約1,800字、片付いた仕事は14件。夜の1時間40分は6件を同時に回していました。マネージャー目線のブログ、8本目です。</span></a></li>
-        <li><a href="/blog/benkyou-shinai/"><time datetime="2026-09-30">2026.09.30</time><span class="tag">ブログ</span><b>Claude Codeは、勉強しないで使いこなす</b><span class="arrow">→</span></a></li>
-        <li><a href="/blog/ai-shain/"><time datetime="2026-09-29">2026.09.29</time><span class="tag">ブログ</span><b>うちの会社に、AI社員が6人いた</b><span class="arrow">→</span></a></li>
+      <p class="sec-label">新しく作ったもの</p>
+      <ul class="newslist" data-show="3">
         <li><a href="/jiunews/"><time datetime="2026-09-29">2026.09.29</time><b>きょうの柔術ニュース</b><span class="arrow">→</span></a></li>
         <li><a href="/kenkyu/"><time datetime="2026-09-29">2026.09.29</time><b>柔術の研究論文ガイド</b><span class="arrow">→</span></a></li>
         <li><a href="/hajimekata/"><time datetime="2026-09-29">2026.09.29</time><b>Claudeの始め方</b><span class="arrow">→</span></a></li>
         <li><a href="/salon/"><time datetime="2026-09-29">2026.09.29</time><b>サロンの顧客管理</b><span class="arrow">→</span></a></li>
-        <li><a href="/blog/shigoto-igai-de/"><time datetime="2026-09-28">2026.09.28</time><span class="tag">ブログ</span><b>仕事で使えないなら、暮らしで使ってみよう</b><span class="arrow">→</span></a></li>
-        <li><a href="/blog/seikyusho-claude/"><time datetime="2026-09-28">2026.09.28</time><span class="tag">ブログ</span><b>請求書の1年分を、Claudeに見直してもらった話</b><span class="arrow">→</span></a></li>
-        <li><a href="/blog/waapuro-kara-ai/"><time datetime="2026-09-27">2026.09.27</time><span class="tag">ブログ</span><b>ワープロ好きだった私が、Claude Codeにハマった理由</b><span class="arrow">→</span></a></li>
-        <li><a href="/blog/onsei-tsukaiwake/"><time datetime="2026-09-27">2026.09.27</time><span class="tag">ブログ</span><b>打つのをやめて、しゃべり始めた。Chat・Cowork・Codeの使い分け</b><span class="arrow">→</span></a></li>
-        <li><a href="/blog/claude-code-hajimari/"><time datetime="2026-09-27">2026.09.27</time><span class="tag">ブログ</span><b>エンジニアじゃない私が、Claude Codeと「しつこく」付き合って1か月</b><span class="arrow">→</span></a></li>
         <li><a href="/claudecode/"><time datetime="2026-09-27">2026.09.27</time><b>柔術道場のClaude Code</b><span class="arrow">→</span></a></li>
         <li><a href="/kondate/"><time datetime="2026-09-27">2026.09.27</time><b>良蔵の献立</b><span class="arrow">→</span></a></li>
         <li><a href="/toriatsukai/"><time datetime="2026-09-18">2026.09.18</time><b>良蔵取扱説明書</b><span class="arrow">→</span></a></li>
