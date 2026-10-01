@@ -11,16 +11,16 @@
   gtag('config', 'G-H79CRFSZFH');
 </script>
 
-<title>全国の柔術道場684件を、Claudeと地図から集めた｜Jiu Labo ブログ</title>
+<title>予約ページとGoogleスプレッドシートをつないだ日｜Jiu Labo ブログ</title>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="今日いちばんの「え？」は、Googleマップを47都道府県ぜんぶ見て回り、道場ガイドに新しく133の道場を足せたことです。ほかにも、毎朝のニュースを自動でまとめる仕組みを1日で2つ作りました。">
-<meta property="og:title" content="全国の柔術道場684件を、Claudeと地図から集めた｜Jiu Labo ブログ">
-<meta property="og:description" content="今日いちばんの「え？」は、Googleマップを47都道府県ぜんぶ見て回り、道場ガイドに新しく133の道場を足せたことです。ほかにも、毎朝のニュースを自動でまとめる仕組みを1日で2つ作りました。">
-<meta property="og:url" content="https://jiujitsu.co.jp/blog/nikki/2026-09-29/">
+<meta name="description" content="今日いちばんの「え？」は、イベントのワークショップ予約ページを、Googleの「Apps Script」（スプレッドシートの裏で動く小さなプログラム）につないで、空き状況を見ながら申し込める仕組みにできたことです。つなぐまでに、いくつかつまずきました。">
+<meta property="og:title" content="予約ページとGoogleスプレッドシートをつないだ日｜Jiu Labo ブログ">
+<meta property="og:description" content="今日いちばんの「え？」は、イベントのワークショップ予約ページを、Googleの「Apps Script」（スプレッドシートの裏で動く小さなプログラム）につないで、空き状況を見ながら申し込める仕組みにできたことです。つなぐまでに、いくつかつまずきました。">
+<meta property="og:url" content="https://jiujitsu.co.jp/blog/nikki/2026-09-30/">
 <meta property="og:type" content="article">
-<link rel="canonical" href="https://jiujitsu.co.jp/blog/nikki/2026-09-29/">
+<link rel="canonical" href="https://jiujitsu.co.jp/blog/nikki/2026-09-30/">
 <link rel="alternate" type="application/atom+xml" title="Jiu Labo の新着" href="/feed.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <style>
@@ -85,38 +85,36 @@
 
 <header>
   <p class="brand"><a href="/blog/">JIU LABO BLOG</a>　·　日記</p>
-  <h1>全国の柔術道場684件を、Claudeと地図から集めた</h1>
-  <p class="meta"><time datetime="2026-09-29">2026.09.29（火）</time>　村田亜衣（マネージャー）</p>
+  <h1>予約ページとGoogleスプレッドシートをつないだ日</h1>
+  <p class="meta"><time datetime="2026-09-30">2026.09.30（水）</time>　村田亜衣（マネージャー）</p>
 </header>
 
 <div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
 
 <div class="wrap">
   <article>
-    <p>今日いちばんの「え？」は、Googleマップを47都道府県ぜんぶ見て回り、道場ガイドに新しく133の道場を足せたことです。ほかにも、毎朝のニュースを自動でまとめる仕組みを1日で2つ作りました。</p>
+    <p>今日いちばんの「え？」は、イベントのワークショップ予約ページを、Googleの「Apps Script」（スプレッドシートの裏で動く小さなプログラム）につないで、空き状況を見ながら申し込める仕組みにできたことです。つなぐまでに、いくつかつまずきました。</p>
     <ol class="did">
-      <li><h2>47都道府県の地図を見て回って、道場が684件に</h2><p>道場ガイドの道場を増やすために、Claudeに47都道府県すべてのGoogleマップを見て回ってもらいました。新しく見つかった道場は133件で、全部で684件になりました。そのあと、見つけた道場のホームページ・インスタグラム・練習の時間割も調べて足してもらい、ホームページは508件、インスタは307件、時間割は312件まで載りました。</p>
-        <div class="ask"><span>真似するなら、こう頼む</span><p>〇〇県から順番に、地図で『〇〇教室』を探して、まだ一覧にないところを名前と場所つきで足していって</p></div>
-        <p class="tip"><b>発見</b>地図で見つかっても、場所をピンで示せない道場もありました。684件のうち、地図にピンを立てられたのは562件です。数字で残してもらうと、どこが足りないかが見えてきます。</p>
-        <p class="see"><a href="/dojo/">できたものを見る →</a></p>
+      <li><h2>予約ページの受付係を、Googleに任せる</h2><p>イベントのワークショップの申し込みページを作り、申し込みを受け付ける係をGoogleのApps Scriptにしました。お客さまは空き状況を見ながら日時を選べて、キャンセルも同じページからできます。サーバーを借りなくても、受付の仕組みが作れるのが驚きでした。</p>
+        <div class="ask"><span>真似するなら、こう頼む</span><p>〇〇の申し込みページを作って。受付はGoogleのApps Scriptでスプレッドシートに記録して、空き状況も見られるようにして</p></div>
+        <p class="tip"><b>発見</b>最初はページが読み込めず、原因が分かりませんでした。Googleの公開設定が「全員」になっていないときやURLが違うときに、その原因を画面に出すように直してもらいました。</p>
       </li>
-      <li><h2>1つ作った仕組みを写して、ニュースをもう1つ</h2><p>朝に作った「きょうの柔術ニュース」は、毎朝ニュースを集めて、関係ある記事だけを日本語でまとめる仕組みです。夕方には、この仕組みをそのまま写して「きょうのClaudeニュース」も作りました。新しいモデルの発表や、新しいサービスの開始を優先して選ぶように、選び方だけ変えています。</p>
-        <div class="ask"><span>真似するなら、こう頼む</span><p>柔術ニュースと同じしくみで、〇〇のニュースを毎朝まとめるページも作って。選び方は〇〇を優先して</p></div>
-        <p class="tip"><b>発見</b>ゼロから説明せず「あれと同じしくみで」と頼みました。朝に直したニュースの読み取りの不具合も、直った状態のまま写されています。</p>
-        <p class="see"><a href="/claudenews/">できたものを見る →</a></p>
+      <li><h2>「必須の欄」は、ページだけ消しても通らない</h2><p>申し込みの住所欄はいらないので、ページから消してもらいました。ところが、受付係のほうは住所を「必ず入れる」設定のまま公開されていました。そこで、ページからは住所の代わりに「—」を送り、受付係の次の版では住所が空でも受け付けるように直しています。</p>
+        <div class="ask"><span>真似するなら、こう頼む</span><p>この申し込みページから住所の欄をなくして。受付の側で必須になっていないかも確かめて</p></div>
+        <p class="tip"><b>発見</b>入力欄を減らすときは、見えているページと、裏で受け取る側の両方を直す必要があります。受付係を作り直すと公開用のURLが変わるので、その差し替えも忘れずに。</p>
       </li>
-      <li><h2>論文17本を要約して、1か所だけ書き直した</h2><p>柔術を扱った学術論文17本を、怪我・体力・試合分析・減量・メンタルなどのテーマ別に、日本語でやさしく要約したページを作りました。論文はどれも、論文のデータベースで本当にあるものか確かめてから載せています。</p>
-        <div class="ask"><span>真似するなら、こう頼む</span><p>〇〇についての研究論文を探して、テーマ別に日本語で短く要約して。本当にある論文かどうか、1本ずつ確かめてから載せて</p></div>
-        <p class="tip"><b>発見</b>公開したあと、怪我についての「ひとこと」が、論文に書いていないことを「著者はこうまとめています」と書いていたのに気づき、「よく言われる話で、この論文の結論ではありません」と直しました。AIの要約は、誰が言ったことになっているかまで確かめるのが大事です。</p>
-        <p class="see"><a href="/kenkyu/">できたものを見る →</a></p>
+      <li><h2>大会の出場スケジュールを、その夜のうちに何度も更新</h2><p>リバーサル柔術カップ札幌2026の出場スケジュールのページを作りました。情報が入るたびに、夜のあいだに何度も更新しています。大会の一覧ページにも載せました。</p>
+        <div class="ask"><span>真似するなら、こう頼む</span><p>〇〇大会の出場スケジュールのページを作って。新しい情報を送ったら、そのつど足していって</p></div>
+        <p class="tip"><b>発見</b>一度ページを作ってしまえば、あとは新しい情報を送るだけで更新してもらえます。大会前の慌ただしい時間に、自分でページを直さなくていいのが助かりました。</p>
+        <p class="see"><a href="/tournament/reversal-sapporo-2026/">できたものを見る →</a></p>
       </li>
     </ol>
-    <p class="closing">地図を見て回るのも論文を探すのも、ひとりではとても手が回らないことです。「さすがにこれは無理かな」と思うことほど、一度頼んでみてください。</p>
-    <p class="auto">このほか、自動の更新が動きました（search 8件、柔術ニュース 3件、補助金一覧 1件）。</p>
+    <p class="closing">つまずいたときは、「どうして動かないのか、画面に出るようにして」と頼むのがおすすめです。原因が見えると、次からは慌てずにすみます。</p>
+    <p class="auto">このほか、自動の更新が動きました（search 11件、claudenews 1件、補助金一覧 1件、柔術ニュース 1件、日記 1件）。</p>
 
     <div class="share"></div>
     <script src="/blog/share.js"></script>
-    <p class="pager"><span></span><a href="/blog/nikki/2026-09-30/">次の日記（2026.09.30（水））→</a></p>
+    <p class="pager"><a href="/blog/nikki/2026-09-29/">← 前の日記（2026.09.29（火））</a><span></span></p>
     <p class="note">この日記は、その日にこのサイトへ入った変更の記録をもとに Claude が下書きし、村田が読んでから載せています。</p>
   </article>
 
