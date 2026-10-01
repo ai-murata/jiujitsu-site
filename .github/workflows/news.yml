@@ -1,7 +1,8 @@
 name: 新着のお知らせ
 
 # data/news.json にお知らせを1件足してpushすると、
-# トップページの新着欄と feed.xml を作り直し、LINE公式アカウントへ1通配信する。
+# トップページの新着欄と feed.xml を作り直す。
+# LINE配信は2026-10-01に停止（tools/news/notify_line.py は残してある）。
 on:
   push:
     branches: [main]
@@ -23,7 +24,7 @@ concurrency: news
 
 jobs:
   news:
-    name: 新着欄とLINE配信
+    name: 新着欄
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -34,12 +35,6 @@ jobs:
       - name: 新着欄と feed.xml を作り直す
         if: github.event_name != 'pull_request'
         run: python3 tools/news/build.py
-
-      - name: LINEへ配信
-        if: github.event_name != 'pull_request'
-        env:
-          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
-        run: python3 tools/news/notify_line.py --send
 
       - name: 変更があればコミット
         if: github.event_name != 'pull_request'
