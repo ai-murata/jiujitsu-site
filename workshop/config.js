@@ -2,6 +2,19 @@
 // 公開手順は gas/README.md。空のままだと画面の確認用のデモ表示になり、予約は届かない。
 window.WORKSHOP_API = 'https://script.google.com/macros/s/AKfycbzWtuuNEUqNYTwg-E7d_EMYvLa10DCcHQV4elprUfrWkS034Fs3aFrlJZkGOs7F02fDdA/exec';
 
+// ?demo を付けて開くと、本物の受付係につながず見本データで動く（紹介ページから試してもらう用）。
+// ページ内のリンクにも ?demo を引き継いで、デモの中だけで行き来できるようにする。
+window.WORKSHOP_DEMO = /[?&]demo(=|&|$)/.test(location.search);
+if (window.WORKSHOP_DEMO) {
+  window.WORKSHOP_API = '';
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (/^(\.\/|cancel\.html)/.test(h) && h.indexOf('demo') < 0) a.setAttribute('href', h + (h.indexOf('?') < 0 ? '?' : '&') + 'demo');
+    });
+  });
+}
+
 // 受付係とのやりとり。POST は text/plain で送ると事前確認なしで Apps Script に届く。
 // 返事がJSONでないとき（ログイン画面・Googleのエラー画面など）は、原因が分かる文にして投げる
 function workshopJson(r) {

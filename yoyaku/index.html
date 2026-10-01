@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>ワークショップの申込み受付</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="アートフェスのワークショップを、Googleフォームの代わりに受け付けるページ。日時ごとの残り席が見えて満席なら選べず、申し込んだ人がメールのリンクから自分でキャンセルできます。一般社団法人 Color Sensing Alliance に頼まれて作りました。">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 22px 80px; }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(28px, 6vw, 42px); color: var(--ink); letter-spacing: .14em; line-height: 1.4; margin: 10px 0 14px; }
+  .lede { font-size: 13.5px; color: var(--body-c); margin: 0 auto; max-width: 34em; letter-spacing: .04em; text-wrap: balance; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: .2em; margin: 68px 0 20px; display: flex; align-items: center; gap: 16px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h2 small { font-size: 10.5px; letter-spacing: .22em; color: var(--gold); font-family: var(--gothic); font-weight: 700; }
+  p { margin: 0 0 16px; font-size: 14px; }
+  b { color: var(--ink); }
+  .lead-copy { max-width: 42em; }
+
+  /* 画面 */
+  .phones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 8px; }
+  .phones figure { margin: 0; }
+  .phones img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 6px 22px rgba(23,20,13,.08); }
+  .phones figcaption { font-size: 12px; color: var(--ink); text-align: center; margin-top: 12px; line-height: 1.7; }
+  .phones figcaption small { display: block; color: var(--faint); font-size: 11.5px; }
+  @media (max-width: 660px) {
+    .phones { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 72%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; margin: 8px -22px 0; padding-left: 22px; padding-right: 22px; }
+    .phones figure { scroll-snap-align: center; }
+  }
+  .ba-note { font-size: 12.5px; color: var(--faint); margin: 12px 0 0; }
+
+  /* 手順 */
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; counter-reset: st; }
+  .steps li { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold); padding: 18px 22px; }
+  .steps h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .08em; margin: 0 0 6px; counter-increment: st; }
+  .steps h3::before { content: "0" counter(st); font-family: var(--gothic); font-size: 11px; letter-spacing: .18em; color: var(--gold); margin-right: 14px; vertical-align: 2px; }
+  .steps p { font-size: 13.5px; margin: 0; }
+  .steps p + p { margin-top: 6px; color: var(--faint); font-size: 12.5px; }
+
+  /* セキュリティ */
+  .rules { border: 1px solid var(--line); border-bottom: none; margin: 0; }
+  .rules div { display: grid; grid-template-columns: 250px 1fr; gap: 24px; padding: 16px 20px; border-bottom: 1px solid var(--line); background: var(--paper); }
+  .rules div:nth-child(odd) { background: var(--panel); }
+  .rules dt { font-size: 13px; color: var(--ink); font-weight: 700; margin: 0; }
+  .rules dt small { display: block; font-size: 11px; color: var(--faint); font-weight: 400; letter-spacing: .04em; margin-top: 2px; }
+  .rules dd { margin: 0; font-size: 13.5px; }
+  @media (max-width: 660px) { .rules div { grid-template-columns: 1fr; gap: 6px; } }
+  .lockrow { display: grid; grid-template-columns: 200px 1fr; gap: 30px; align-items: center; margin-bottom: 26px; }
+  .lockrow img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 6px 22px rgba(23,20,13,.08); }
+  @media (max-width: 660px) { .lockrow { grid-template-columns: 1fr; } .lockrow img { max-width: 220px; margin: 0 auto; } }
+  .caution { border-left: 3px solid var(--gold); background: var(--panel); padding: 18px 22px; margin-top: 22px; }
+  .caution p { font-size: 13px; margin: 0; }
+  .caution p + p { margin-top: 10px; color: var(--faint); font-size: 12.5px; }
+
+  ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  ul.plain li { font-size: 13.5px; padding-left: 20px; position: relative; }
+  ul.plain li::before { content: ""; position: absolute; left: 0; top: .78em; width: 7px; height: 7px; background: var(--gold); border-radius: 50%; }
+
+  .tools { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 0; }
+  .tools div { background: var(--panel); padding: 18px 20px; }
+  .tools dt { font-size: 11px; letter-spacing: .16em; color: var(--gold); font-weight: 700; margin: 0 0 4px; }
+  .tools dd { margin: 0; font-size: 13px; color: var(--ink); }
+  .tools dd small { display: block; color: var(--faint); font-size: 12px; font-weight: 400; }
+  @media (max-width: 660px) { .tools { grid-template-columns: 1fr; } }
+
+  .closing { margin-top: 76px; text-align: center; }
+  .closing p.t { font-family: var(--mincho); font-weight: 600; font-size: clamp(17px, 4vw, 21px); color: var(--ink); letter-spacing: .08em; margin: 0; text-wrap: balance; }
+  .closing p.by { font-size: 12px; color: var(--gold); letter-spacing: .14em; margin: 12px 0 0; }
+
+  footer { margin-top: 64px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  /* デモを試すボタン */
+  .try { display: grid; grid-template-columns: 1fr auto; gap: 18px 24px; align-items: center; margin-top: 26px; padding: 20px 22px; border: 1px solid var(--gold); background: #fffaf0; }
+  .try p { margin: 0; font-size: 13.5px; }
+  .try .go { display: inline-block; background: var(--ink); color: #e8c95e; text-decoration: none; font-size: 13px; letter-spacing: .12em; padding: 13px 22px; white-space: nowrap; }
+  .try .go:hover { background: #2b2618; }
+  @media (max-width: 660px) { .try { grid-template-columns: 1fr; } .try .go { text-align: center; } }
+</style>
+
+<header>
+  <p class="brand">WORKSHOP</p>
+  <h1>ワークショップの申込み受付</h1>
+  <p class="lede">日時を選んで、名前を入れて、申し込むだけ。<br>残りの席が見えて、キャンセルも参加者が自分でできる。<br>Googleフォームの代わりに作った、小さな受付係です。</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <h2>頼まれたこと<small>REQUEST</small></h2>
+  <div class="lead-copy">
+    <p>一般社団法人 Color Sensing Alliance（JCSA）のアートフェスでは、アルコールインクのワークショップの申込みをGoogleフォームで受けていました。日時と作りたいもの（アートバック・アートタンブラー）を選んでもらう形です。</p>
+    <p>ただ、フォームでは<b>どの回があと何席か</b>が申し込む人に見えず、<b>キャンセルしたい人</b>は事務局に連絡するしかありません。「同じ項目のまま、参加者が自分でキャンセルできるようにしたい」。そんな相談から作りました。</p>
+  </div>
+
+  <h2>画面<small>SCREENS</small></h2>
+  <div class="phones">
+    <figure>
+      <img src="/assets/yoyaku/slots.jpg" alt="申込みの画面。日時ごとに残り3席・満席・残り6席と表示され、満席の回は選べない" loading="lazy">
+      <figcaption>日時を選ぶ<small>残りの席が見えて、満席の回は選べない</small></figcaption>
+    </figure>
+    <figure>
+      <img src="/assets/yoyaku/done.jpg" alt="予約完了の画面。予約番号・日時・制作物・お名前が表示されている" loading="lazy">
+      <figcaption>予約完了<small>予約番号が出て、確認メールが届く</small></figcaption>
+    </figure>
+    <figure>
+      <img src="/assets/yoyaku/cancel.jpg" alt="キャンセルの画面。呼び出した予約の内容と、キャンセルするボタン" loading="lazy">
+      <figcaption>キャンセル<small>メールのリンクから、自分で取り消せる</small></figcaption>
+    </figure>
+  </div>
+  <p class="ba-note">※ 画面はデモ用の見本データです。日時もお名前も、実際の申込みではありません。</p>
+
+  <div class="try">
+    <p><b>実際に触ってみられます。</b>デモ版は見本の日時で動いていて、申し込んでも本物の予約にはならず、メールも届きません。</p>
+    <a class="go" href="/workshop/?demo">デモを開く →</a>
+  </div>
+
+  <h2>できること<small>FEATURES</small></h2>
+  <ol class="steps">
+    <li>
+      <h3>残りの席が、その場でわかる</h3>
+      <p>日時ごとに「残り3席」「満席」と出ます。満席になった回は選べなくなるので、定員より多く申し込まれることがありません。</p>
+      <p>同時に申し込みが重なっても、受付係が1件ずつ順番に数えるので、最後の1席を2人が取ることはありません。</p>
+    </li>
+    <li>
+      <h3>申し込むと、予約番号とメール</h3>
+      <p>完了すると画面に予約番号が出て、同じ内容の確認メールが届きます。メールにはキャンセル用のリンクが入っています。事務局にも「新しい予約・残り○席」のお知らせが届きます。</p>
+    </li>
+    <li>
+      <h3>キャンセルは、参加者が自分で</h3>
+      <p>メールのリンクを押すか、予約番号とメールアドレスを入れれば、その場で取り消せます。空いた席は、すぐにほかの人が申し込めるようになります。</p>
+      <p>キャンセルできるのは開始の24時間前まで。それを過ぎると「事務局へ直接ご連絡ください」と案内します。</p>
+    </li>
+    <li>
+      <h3>2つ目の申込みも、続けて</h3>
+      <p>フォームの頃は「2つ以上希望の方は、もう一度お申し込みください」でした。いまは完了画面の「続けて別の日時も申し込む」を押すと、名前などはそのままで日時と制作物だけ選び直せます。</p>
+    </li>
+    <li>
+      <h3>管理は、いつものスプレッドシート</h3>
+      <p>申込みはGoogleスプレッドシートに1行ずつたまります。日時と定員も「枠」というシートに書くだけで、ページの表示が変わります。プログラムを触らなくても、事務局で回の追加や受付停止ができます。</p>
+    </li>
+  </ol>
+
+  <h2>個人情報の守り方<small>PRIVACY</small></h2>
+  <div class="lead-copy">
+    <p>申込みでは、お名前・メールアドレス・電話番号をお預かりします。ページは誰でも開ける場所にあるので、<b>名簿そのものには、ページからたどり着けない</b>作りにしました。</p>
+  </div>
+
+  <dl class="rules">
+    <div>
+      <dt>名簿が丸ごと見られる<small>いちばん避けたいこと</small></dt>
+      <dd>名簿のスプレッドシートは事務局のアカウントだけのもので、誰にも共有していません。ページとやりとりする「受付係」が外に返すのは、日時ごとの残り席数だけです。</dd>
+    </div>
+    <div>
+      <dt>ほかの人の予約を見られる<small>予約番号を当てずっぽうで</small></dt>
+      <dd>予約を呼び出すには、予約番号とメールアドレスの両方が合っている必要があります。合っていても返すのは、その1件のお名前・日時・制作物だけ。電話番号やメールアドレスは返しません。</dd>
+    </div>
+    <div>
+      <dt>いたずらの申込み<small>機械で大量に送られる</small></dt>
+      <dd>人には見えない入力欄を1つ置いてあり、そこが埋まっている送信は受け付けません。選択肢にない値や、形のおかしいメールアドレスもはじきます。</dd>
+    </div>
+    <div>
+      <dt>入力に数式を仕込まれる<small>スプレッドシートならでは</small></dt>
+      <dd>「=」などで始まる入力は、スプレッドシートで数式として動かないよう、ただの文字として書き込みます。</dd>
+    </div>
+  </dl>
+
+  <h2>割り切ったこと<small>TRADE-OFFS</small></h2>
+  <ul class="plain">
+    <li><b>お支払いは当日の現金のまま。</b>オンライン決済を入れると手数料と手間が増えるので、フォームの頃と同じにしました。</li>
+    <li><b>1回の申込みは1枠ずつ。</b>家族で別々の回に、といった場合は「続けて申し込む」で1件ずつ。そのぶん、キャンセルも1件ずつ確実にできます。</li>
+    <li><b>サーバーを借りない。</b>受付係はGoogleの仕組み（Apps Script）の上で動かしているので、月額の費用はかかりません。</li>
+  </ul>
+
+  <h2>使っている道具<small>TOOLS</small></h2>
+  <dl class="tools">
+    <div><dt>PAGE</dt><dd>申込み・キャンセルのページ<small>スマホでもパソコンでも</small></dd></div>
+    <div><dt>BACKEND</dt><dd>Google Apps Script<small>受付・定員の確認・メール送信</small></dd></div>
+    <div><dt>STORAGE</dt><dd>Googleスプレッドシート<small>名簿と日時・定員の表</small></dd></div>
+    <div><dt>AI</dt><dd>Claude Code<small>相談からデザインまで、会話しながら</small></dd></div>
+  </dl>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">こんな道具、うちにもほしい。</b><br>
+    そんな方は、ご相談ください。いまはお会いしたことがある方に限って、先着3名さま・道具ひとつ分まで無料です。<a href="/irai/" style="color:#a3801a;white-space:nowrap;">AIのお手伝い、承ります →</a>
+  </p>
+
+  <div class="closing">
+    <p class="t">申し込むのも、取り消すのも、ひとりでできる。</p>
+    <p class="by">── BUTTI ON LINE</p>
+  </div>
+
+  <footer>
+    柔術の現場で、必要にせまられて作ったものたち。<br>
+    <a href="/">← jiujitsu.co.jp トップへ</a>
+  <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<a href="/" style="position:fixed;right:14px;bottom:14px;z-index:99;background:#17140d;color:#e8c95e;font-size:11px;letter-spacing:.1em;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);font-family:sans-serif;">TOPへ</a>
+</html>
