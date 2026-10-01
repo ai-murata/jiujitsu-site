@@ -166,8 +166,7 @@ ol.steps li::before{content:counter(s);position:absolute;left:0;top:6px;width:26
     <p>季節の和食 <span class="n" id="total"></span> 品・展示用サンプル</p>
   </div>
   <div id="shop" hidden>
-    <div class="year"><div class="l"><span class="badge">会員</span><b>全部のレシピが読み放題</b><small>いまある<span id="nall"></span>品＋毎月5品ずつ新しいレシピが増えます<br>いつでも解約できます</small></div>
-      <div class="r"><div class="p">月680円</div><small>税込</small></div></div>
+    <div class="year"><div class="l"><span class="badge">会員</span><b>全部のレシピが読み放題</b><small>いまある<span id="nall"></span>品＋毎月5品ずつ新しいレシピが増えます</small></div></div>
     <p class="demo" id="demo"></p>
     <div class="keybar"><button class="keybtn" id="keybtn" type="button">🔑 会員の合言葉を入れる</button><span class="owned" id="owned"></span></div>
   </div>
@@ -251,7 +250,7 @@ if (DEMO) {
   $("#go").onclick = tryPass; $("#pass").onkeydown = e => { if (e.key === "Enter") tryPass(); };
   $("#demo").textContent = `展示用サンプルです。「無料」の3品は最後まで、ほかは途中まで。会員の合言葉「みほん」を入れると全部読めます。`;
 }
-const PAY = r => `<div class="pay"><b>続きは会員になると読めます</b><span class="sub">月680円で、全部のレシピと毎月の新しいレシピが読み放題</span><div class="plans"><div class="best"><span>レシピ帖 会員</span><span class="c">${R.length}品＋毎月5品</span><span class="p">月680円</span></div></div>いつでも解約できます<br><button type="button" disabled>会員になる（準備中）</button><small>見本のため、このボタンはまだ動きません</small><button class="haskey" type="button" onclick="openUl()">会員の方はこちら（合言葉を入れる）</button></div>`;
+const PAY = r => `<div class="pay"><b>続きは会員になると読めます</b><span class="sub">全部のレシピと毎月の新しいレシピが読み放題</span><div class="plans"><div class="best"><span>レシピ帖 会員</span><span class="c">${R.length}品＋毎月5品</span></div></div><button type="button" disabled>会員になる（準備中）</button><small>見本のため、このボタンはまだ動きません</small><button class="haskey" type="button" onclick="openUl()">会員の方はこちら（合言葉を入れる）</button></div>`;
 let genre = "すべて", book = "";
 function chips() {
   $("#ings").innerHTML = `<span class="ingl">材料から</span>` + TOP.map(w => `<button class="chip" id="w-${w}" data-w="${w}">${w}</button>`).join("");
@@ -304,7 +303,7 @@ async function openRead(id, push) {
   $("#detail").innerHTML = `<div class="dbar"><button class="back" id="back">← もどる</button><span class="count">資料</span></div>
     <article class="dbody article"><h2>${esc(x.title)}</h2><p class="lead">${esc(x.lead)}</p>
     ${x.sections.map(sc => `<h3>${esc(sc.h)}</h3>${sc.html}`).join("")}
-    ${x.locked ? `<div class="pay"><b>続きはレシピ帖で読めます</b><span class="sub">この資料（全${x.total}項目）は会員になると読めます</span><div class="plans"><div class="best"><span>レシピ帖 会員</span><span class="c">${R.length}品＋毎月5品</span><span class="p">月680円</span></div></div><button type="button" disabled>会員になる（準備中）</button><small>見本のため、このボタンはまだ動きません</small><button class="haskey" type="button" onclick="openUl()">会員の方はこちら（合言葉を入れる）</button></div>` : ""}
+    ${x.locked ? `<div class="pay"><b>続きはレシピ帖で読めます</b><span class="sub">この資料（全${x.total}項目）は会員になると読めます</span><div class="plans"><div class="best"><span>レシピ帖 会員</span><span class="c">${R.length}品＋毎月5品</span></div></div><button type="button" disabled>会員になる（準備中）</button><small>見本のため、このボタンはまだ動きません</small><button class="haskey" type="button" onclick="openUl()">会員の方はこちら（合言葉を入れる）</button></div>` : ""}
     ${recipes.map(r => `<button class="golink" data-id="${r.id}">← ${esc(r.title)}に戻る</button>`).join("")}</article>`;
   $("#detail").hidden = false; $("#detail").scrollTop = 0; document.body.style.overflow = "hidden";
   $("#back").onclick = () => history.length > 1 && location.hash ? history.back() : close();
