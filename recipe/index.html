@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>和食レシピ帖（展示用サンプル） — BUTTI ON LINE</title>
+<meta name="description" content="料理教室の紙のレシピを、携帯で材料から探せる会員制のレシピ帖にした制作例。展示用サンプルです。">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}.samplebar{position:sticky;top:0;z-index:30;background:#3B2A31;color:#fff;font:13px/1.6 "Hiragino Sans",sans-serif;text-align:center;padding:6px 12px}.samplebar a{color:#fff}</style>
+</head><body>
+<div class="samplebar">制作例の展示用サンプルです（レシピはサンプル・お店の名前は伏せています） ／ <a href="/">BUTTI ON LINE トップへ</a></div>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Maru+Gothic:wght@400;500;700&family=Klee+One:wght@600&display=swap" rel="stylesheet">
+<style>
+/* 携帯で片手：表紙→レシピ帖の案内→検索と絞り込み→写真2列のカード。料理をタップすると全面でレシピ */
+:root{
+  --bg:#FDF6F7; --card:#FFFFFF; --ink:#3B2A31; --sub:#8A6F77; --pink:#C4577A; --rose:#E9A3B6; --pale:#F8E1E7; --line:#F0D6DE; --leaf:#7FA37A; --chipfg:#FFFFFF;
+  --f-display:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;
+  --f-hand:"Klee One","Zen Maru Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1F171A;--card:#2A2024;--ink:#F5E8EC;--sub:#C4A8B1;--pink:#EE93AF;--rose:#B9677F;--pale:#3A2A30;--line:#45333B;--leaf:#9CC296;--chipfg:#1F171A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1F171A;--card:#2A2024;--ink:#F5E8EC;--sub:#C4A8B1;--pink:#EE93AF;--rose:#B9677F;--pale:#3A2A30;--line:#45333B;--leaf:#9CC296;--chipfg:#1F171A;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.7;-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding-inline:16px;padding-block:0 48px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--pink);outline-offset:2px}
+
+/* 表紙 */
+.cover{position:relative;text-align:center;padding-block:34px 22px;overflow:hidden}
+.cover canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.cover .eyebrow{font-family:var(--f-hand);color:var(--pink);font-size:14px;letter-spacing:.12em;position:relative}
+.cover h1{position:relative;font-family:var(--f-display);font-size:32px;letter-spacing:.14em;margin:6px 0 4px;text-wrap:balance}
+.cover p{position:relative;margin:0;color:var(--sub);font-size:13px}
+.cover .n{font-family:var(--f-display);color:var(--pink);font-size:18px;font-variant-numeric:tabular-nums}
+
+/* レシピ帖の案内 */
+.books{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:6px}
+.book{background:var(--card);border-radius:18px;padding:12px 8px;text-align:center;border:1px solid var(--line)}
+.book .s{font-family:var(--f-display);font-size:16px}
+.book .c{font-size:11px;color:var(--sub)}
+.book .p{font-family:var(--f-display);color:var(--ink);font-size:16px;font-variant-numeric:tabular-nums}
+.year{margin-top:8px;border-radius:20px;padding:14px 16px;background:var(--pale);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.year .l{flex:1;min-width:0}
+.year b{font-family:var(--f-display);font-size:18px;display:block}
+.year small{color:var(--sub);font-size:12px;display:block}
+.year .r{text-align:right}
+.year s{color:var(--sub);font-size:13px}
+.year .p{font-family:var(--f-display);color:var(--pink);font-size:26px;line-height:1.1;font-variant-numeric:tabular-nums}
+.badge{display:inline-block;font-family:var(--f-hand);font-size:12px;background:var(--pink);color:var(--chipfg);border-radius:999px;padding:1px 10px;margin-bottom:2px}
+.demo{margin-top:10px;font-size:12px;color:var(--sub);text-align:center}
+
+/* 検索と絞り込み */
+.tools{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px 6px;margin-top:14px}
+#q{width:100%;font:inherit;font-size:16px;padding:11px 18px;border:1.5px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);outline:none}
+#q:focus-visible{border-color:var(--pink);outline:none}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-block:8px 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--rose);color:var(--pink);background:var(--card);border-radius:999px;padding:3px 13px;font-size:13px;cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--pink);border-color:var(--pink);color:var(--chipfg)}
+.ings .chip{border-color:var(--line);color:var(--ink);background:var(--card)}
+.ingl{flex:none;font-size:12px;color:var(--sub);align-self:center}
+.seasons .chip{border-color:var(--line);color:var(--sub)}
+.seasons .chip[aria-pressed="true"]{background:var(--leaf);border-color:var(--leaf);color:var(--chipfg)}
+.count{font-size:12px;color:var(--sub);font-variant-numeric:tabular-nums}
+
+/* 一覧 */
+section{margin-top:22px}
+h2{font-family:var(--f-display);font-size:19px;margin:0 0 10px;display:flex;align-items:baseline;gap:8px}
+h2::before{content:"✿";color:var(--rose);font-size:14px}
+h2 small{font-family:var(--f-body);font-size:12px;color:var(--sub);font-weight:400}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (min-width:560px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.item{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;height:100%;background:var(--card);border:0;border-radius:20px;padding:8px 8px 10px;text-align:left;cursor:pointer;width:100%}
+.ph{position:relative;display:block;aspect-ratio:1/1;max-width:100%;border-radius:14px;overflow:hidden;background:var(--pale)}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph .none{position:absolute;inset:0;display:grid;place-items:center;color:var(--rose);font-size:28px}
+.tagfree,.taglock{position:absolute;top:6px;left:6px;font-family:var(--f-hand);font-size:11px;border-radius:999px;padding:0 8px}
+.tagfree{background:var(--pink);color:var(--chipfg)}
+.taglock{background:var(--card);color:var(--sub)}
+.item .t{display:block;font-family:var(--f-display);font-size:14px;line-height:1.45;margin:8px 4px 2px;overflow-wrap:anywhere}
+.item .m{display:block;font-size:11px;color:var(--sub);margin:0 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.empty{color:var(--sub);text-align:center;padding:40px 0}
+mark{background:var(--pale);color:inherit;border-radius:3px}
+
+/* レシピを開いたとき */
+#detail{position:fixed;inset:0;z-index:10;background:var(--bg);overflow-y:auto;-webkit-overflow-scrolling:touch}
+.dbar{position:sticky;top:0;z-index:1;background:var(--bg);padding:calc(env(safe-area-inset-top,0px) + 10px) 16px 8px;display:flex;align-items:center;gap:10px}
+.back{border:0;background:var(--card);border-radius:999px;padding:6px 16px;cursor:pointer;font-size:14px}
+.dbar .count{margin-left:auto}
+.dbody{max-width:640px;margin:0 auto;padding-inline:16px;padding-block:4px calc(env(safe-area-inset-bottom,0px) + 48px)}
+.dbody .photo{width:100%;max-width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:24px;display:block}
+.dbody h2{font-size:22px;margin-top:16px;line-height:1.45;display:block}
+.dbody h2::before{content:none}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 6px}
+.tag{font-size:12px;background:var(--pale);color:var(--sub);border-radius:999px;padding:1px 10px}
+.yield{font-size:13px;color:var(--sub)}
+h3{font-family:var(--f-display);font-size:17px;color:var(--pink);margin:22px 0 6px;display:flex;align-items:center;gap:8px}
+h3::after{content:"";flex:1;height:1px;background:var(--line)}
+h4{font-size:13px;margin:10px 0 2px;color:var(--sub);font-weight:700}
+.ing{list-style:none;margin:0;padding:0;background:var(--card);border-radius:16px;padding:4px 14px}
+.ing{max-width:520px}
+.ing li{display:flex;align-items:baseline;gap:6px;padding:6px 0}
+.ing li span:first-child{min-width:0}
+.ing li i{flex:1 1 12px;min-width:12px;border-bottom:2px dotted var(--rose);opacity:.7;transform:translateY(-4px)}
+.ing li span:last-child{text-align:right;color:var(--ink);flex:0 1 auto;max-width:60%;font-variant-numeric:tabular-nums}
+ol.steps{margin:0;padding-left:0;list-style:none;counter-reset:s var(--start,0)}
+ol.steps li{position:relative;padding:6px 0 6px 38px;counter-increment:s}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:6px;width:26px;height:26px;border-radius:50%;background:var(--pale);color:var(--pink);font-weight:700;font-size:13px;display:grid;place-items:center;font-variant-numeric:tabular-nums}
+.tips{background:var(--card);border-radius:16px;padding:10px 14px;font-family:var(--f-hand);font-size:14px}
+.tips ul{margin:0;padding-left:1.2em}
+.src{font-size:11px;color:var(--sub);margin-top:18px}
+.pay{margin-top:16px;background:var(--card);border:1.5px dashed var(--rose);border-radius:22px;padding:18px 16px;text-align:center}
+.pay>b{font-family:var(--f-display);font-size:18px;display:block}
+.pay .sub{font-size:12px;color:var(--sub)}
+.plans{display:grid;gap:6px;margin:12px 0;text-align:left}
+.plans div{display:flex;align-items:baseline;gap:8px;border-bottom:1px dotted var(--line);padding-bottom:5px}
+.plans span:first-child{flex:1;min-width:0}
+.plans .c{font-size:12px;color:var(--sub)}
+.plans .p{font-family:var(--f-display);font-size:16px;font-variant-numeric:tabular-nums}
+.plans .best span:first-child{font-weight:700;color:var(--pink)}
+.plans .best .p{color:var(--pink)}
+.plans s{font-size:12px;color:var(--sub)}
+.pay button{margin-top:8px;border:0;background:var(--pink);color:var(--chipfg);font-weight:700;border-radius:999px;padding:11px 24px;cursor:not-allowed}
+.pay small{display:block;color:var(--sub);margin-top:6px;font-size:11px}
+.doc{display:flex;gap:12px;align-items:center;width:100%;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:12px 14px;text-align:left;cursor:pointer}
+.doc .ic{flex:none;font-size:22px}
+.doc b{display:block;font-family:var(--f-display);font-size:15px}
+.doc small{display:block;color:var(--sub);font-size:12px;line-height:1.5}
+.readcard{display:flex;gap:12px;align-items:center;width:100%;margin-top:18px;background:var(--pale);border:0;border-radius:20px;padding:14px 16px;text-align:left;cursor:pointer}
+.readcard .ic{flex:none;width:48px;height:48px;border-radius:50%;background:var(--card);display:grid;place-items:center;font-family:var(--f-display);color:var(--pink);font-size:15px}
+.readcard b{display:block;font-family:var(--f-display);font-size:16px}
+.readcard small{display:block;color:var(--sub);font-size:12px;line-height:1.5}
+.golink{display:inline-flex;align-items:center;gap:6px;margin-top:10px;border:1.5px solid var(--rose);background:var(--card);color:var(--pink);border-radius:999px;padding:6px 16px;cursor:pointer;font-size:14px}
+.article .lead{color:var(--sub);font-size:13px}
+.article h3{margin-top:26px}
+.article p{margin:8px 0}
+.article ul{padding-left:1.3em;margin:6px 0}
+.article h5{font-size:14px;margin:12px 0 2px}
+.article .hand{font-family:var(--f-hand);color:var(--pink)}
+.tbl{overflow-x:auto;margin:8px 0}
+.tbl table{border-collapse:collapse;font-size:13px;min-width:100%}
+.tbl th,.tbl td{border:1px solid var(--line);padding:6px 8px;vertical-align:top;text-align:left}
+.tbl th{background:var(--pale)}
+.keybar{margin-top:10px;display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;font-size:13px;color:var(--sub)}
+.keybtn{border:1.5px solid var(--pink);background:var(--card);color:var(--pink);border-radius:999px;padding:6px 16px;cursor:pointer;font-size:14px}
+.owned{font-family:var(--f-hand);color:var(--leaf)}
+#unlock{position:fixed;inset:0;z-index:20;background:rgba(40,20,28,.45);display:grid;place-items:center;padding:16px}
+#unlock .box{width:100%;max-width:420px;background:var(--bg);border-radius:24px;padding:22px 18px;text-align:center}
+#unlock b{font-family:var(--f-display);font-size:18px;display:block}
+#unlock p{font-size:13px;color:var(--sub);margin:6px 0 12px}
+#pass{width:100%;font:inherit;font-size:17px;padding:11px 16px;border:1.5px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);text-align:center}
+#unlock .row{display:flex;gap:8px;margin-top:12px}
+#unlock .row button{flex:1;border-radius:999px;padding:10px;font-weight:700;cursor:pointer;border:0}
+#go{background:var(--pink);color:var(--chipfg)}
+#cancel{background:var(--pale);color:var(--ink)}
+#msg{min-height:1.6em;font-size:13px;margin-top:10px}
+#msg.ok{color:var(--leaf)} #msg.ng{color:var(--pink)}
+.tagopen{position:absolute;top:6px;left:6px;font-family:var(--f-hand);font-size:11px;border-radius:999px;padding:0 8px;background:var(--leaf);color:var(--chipfg)}
+.haskey{margin-top:10px;border:0;background:transparent;color:var(--pink);text-decoration:underline;cursor:pointer;font-size:13px}
+@media (prefers-reduced-motion:no-preference){#detail{animation:up .2s ease-out}@keyframes up{from{transform:translateY(14px);opacity:.6}to{transform:none;opacity:1}}}
+</style>
+<div class="wrap">
+  <div class="cover">
+    <canvas id="petals" aria-hidden="true"></canvas>
+    <div class="eyebrow">料理教室のレシピを、いつでも</div>
+    <h1>和食レシピ帖</h1>
+    <p>季節の和食 <span class="n" id="total"></span> 品・展示用サンプル</p>
+  </div>
+  <div id="shop" hidden>
+    <div class="year"><div class="l"><span class="badge">会員</span><b>全部のレシピが読み放題</b><small>いまある<span id="nall"></span>品＋毎月5品ずつ新しいレシピが増えます<br>いつでも解約できます</small></div>
+      <div class="r"><div class="p">月680円</div><small>税込</small></div></div>
+    <p class="demo" id="demo"></p>
+    <div class="keybar"><button class="keybtn" id="keybtn" type="button">🔑 会員の合言葉を入れる</button><span class="owned" id="owned"></span></div>
+  </div>
+  <div class="tools">
+    <input id="q" type="search" placeholder="今日は何を作ろう？ 材料や料理名で（例：人参 豚肉）" autocomplete="off">
+    <div class="chips" id="genres" role="group" aria-label="ジャンル"></div>
+    <div class="chips seasons" id="seasons" role="group" aria-label="季節"></div>
+    <div class="chips ings" id="ings" role="group" aria-label="材料から探す"></div>
+    <span class="count" id="count"></span>
+  </div>
+  <main id="list"></main>
+</div>
+<div id="detail" hidden></div>
+<div id="unlock" hidden><div class="box" role="dialog" aria-labelledby="ul-t"><b id="ul-t">会員の合言葉を入れる</b><p>会員の方にメールでお送りしている合言葉を入れると、全部のレシピが読めるようになります。合言葉は毎月新しくなります。</p>
+<input id="pass" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="例：かいいん-さくら-1234"><div id="msg"></div>
+<div class="row"><button id="cancel" type="button">閉じる</button><button id="go" type="button">読めるようにする</button></div></div></div>
+<script>
+const R = [{"id":"r0001","title":"鶏のから揚げ","yield":"2〜3人分","photo":null,"tags":{"ingredients":["鶏もも肉","生姜","にんにく"],"season":["通年"],"category":["揚げ物","主菜"]},"ingredients":[{"group":"","items":[{"name":"鶏もも肉","amount":"2枚"},{"name":"醤油","amount":"大さじ2"},{"name":"酒","amount":"大さじ1"},{"name":"生姜（すりおろし）","amount":"小さじ1"},{"name":"にんにく（すりおろし）","amount":"小さじ1/2"},{"name":"片栗粉","amount":"大さじ4"},{"name":"揚げ油","amount":"適量"}]}],"steps":[{"group":"","items":["鶏肉はひと口大に切り、醤油・酒・生姜・にんにくをもみ込んで15分おく。","汁気を軽く切り、片栗粉をまぶす。","170度の油で3分揚げ、いったん取り出して3分休ませる。","190度の油で1分、表面がカリッとするまで揚げる。"]}],"tips":["二度揚げにすると、中はしっとり外はカリッと仕上がります。"]},{"id":"r0002","title":"だし巻き卵","yield":"1本分","photo":null,"tags":{"ingredients":["卵","だし"],"season":["通年"],"category":["副菜"]},"ingredients":[{"group":"","items":[{"name":"卵","amount":"3個"},{"name":"だし","amount":"大さじ3"},{"name":"薄口醤油","amount":"小さじ1/2"},{"name":"砂糖","amount":"小さじ1"},{"name":"油","amount":"適量"}]}],"steps":[{"group":"","items":["卵をよく溶き、だしと調味料を混ぜる。","卵焼き器を温めて油をなじませ、卵液を1/3流す。","半熟のうちに奥から手前へ巻き、残りも2回に分けて同じように焼く。","巻きすで形を整え、少し冷ましてから切る。"]}],"tips":["火は中火から弱めの中火で。焦らずゆっくり巻くのがコツです。"]},{"id":"r0003","title":"具だくさん豚汁","yield":"4人分","photo":null,"tags":{"ingredients":["豚バラ肉","大根","人参","ごぼう"],"season":["冬"],"category":["汁物"]},"ingredients":[{"group":"","items":[{"name":"豚バラ肉","amount":"150g"},{"name":"大根","amount":"5cm"},{"name":"人参","amount":"1/2本"},{"name":"ごぼう","amount":"1/2本"},{"name":"こんにゃく","amount":"1/2枚"},{"name":"だし","amount":"800ml"},{"name":"味噌","amount":"大さじ4"},{"name":"ごま油","amount":"小さじ1"}]}],"steps":[{"group":"","items":["野菜はいちょう切り、ごぼうはささがき、こんにゃくはちぎって下ゆでする。","鍋にごま油を熱し、豚肉を炒める。","野菜とこんにゃくを加えて炒め、だしを注いで柔らかくなるまで煮る。","火を弱めて味噌を溶き入れ、煮立つ直前で火を止める。"]}],"tips":["味噌を入れたら煮立たせないと香りが残ります。"]},{"id":"r0004","title":"鮭の塩麹焼き","yield":"2人分","photo":null,"tags":{"ingredients":["鮭","塩麹"],"season":["秋"],"category":["主菜"]},"ingredients":[{"group":"","items":[{"name":"生鮭","amount":"2切れ"},{"name":"塩麹","amount":"大さじ1"},{"name":"すだち","amount":"1個"}]}],"steps":[{"group":"","items":["鮭の水気を拭き、塩麹を全体に塗る。","ラップで包み、冷蔵庫で30分〜ひと晩おく。","塩麹を軽くぬぐい、魚焼きグリルで焦がさないように焼く。"]}],"tips":[],"locked":true},{"id":"r0005","title":"きのこの炊き込みご飯","yield":"2合分","photo":null,"tags":{"ingredients":["米","しめじ","舞茸","油揚げ"],"season":["秋"],"category":["ご飯"]},"ingredients":[{"group":"","items":[{"name":"米","amount":"2合"},{"name":"しめじ","amount":"1/2パック"},{"name":"舞茸","amount":"1/2パック"},{"name":"油揚げ","amount":"1/2枚"},{"name":"だし","amount":"適量"},{"name":"醤油","amount":"大さじ1.5"},{"name":"みりん","amount":"大さじ1"},{"name":"酒","amount":"大さじ1"}]}],"steps":[{"group":"","items":["米は研いでざるにあげ、30分おく。","きのこはほぐし、油揚げは細切りにする。","炊飯器に米と調味料を入れ、だしを2合の目盛りまで注ぐ。"]}],"tips":[],"locked":true},{"id":"r0006","title":"ほうれん草の胡麻和え","yield":"2人分","photo":null,"tags":{"ingredients":["ほうれん草","胡麻"],"season":["冬"],"category":["副菜"]},"ingredients":[{"group":"","items":[{"name":"ほうれん草","amount":"1束"},{"name":"すりごま","amount":"大さじ2"},{"name":"醤油","amount":"小さじ2"},{"name":"砂糖","amount":"小さじ1"}]}],"steps":[{"group":"","items":["ほうれん草は塩を入れた湯で30秒ゆで、冷水にとる。","水気をしっかり絞り、4cmに切る。","すりごま・醤油・砂糖を混ぜ、ほうれん草と和える。"]}],"tips":[],"locked":true},{"id":"r0007","title":"ほっこり肉じゃが","yield":"3〜4人分","photo":null,"tags":{"ingredients":["牛肉","じゃがいも","玉ねぎ","人参"],"season":["通年"],"category":["主菜"]},"ingredients":[{"group":"","items":[{"name":"牛薄切り肉","amount":"200g"},{"name":"じゃがいも","amount":"3個"},{"name":"玉ねぎ","amount":"1個"},{"name":"人参","amount":"1本"},{"name":"だし","amount":"300ml"},{"name":"醤油","amount":"大さじ3"},{"name":"みりん","amount":"大さじ3"},{"name":"砂糖","amount":"大さじ1"}]}],"steps":[{"group":"","items":["じゃがいもと人参は大きめに、玉ねぎはくし形に切る。","鍋で牛肉を炒め、色が変わったら野菜を加えて炒め合わせる。","だしと調味料を入れ、落とし蓋をして15分煮る。"]}],"tips":[],"locked":true},{"id":"r0008","title":"きゅうりの浅漬け","yield":"作りやすい分量","photo":null,"tags":{"ingredients":["きゅうり","昆布"],"season":["夏"],"category":["常備菜"]},"ingredients":[{"group":"","items":[{"name":"きゅうり","amount":"3本"},{"name":"塩","amount":"小さじ1"},{"name":"昆布","amount":"5cm"},{"name":"鷹の爪","amount":"1本"}]}],"steps":[{"group":"","items":["きゅうりは塩をまぶして板ずりし、乱切りにする。","保存袋にきゅうり・昆布・鷹の爪を入れ、もみ込む。","冷蔵庫で1時間以上おく。"]}],"tips":[],"locked":true},{"id":"r0009","title":"かぼちゃの煮物","yield":"3〜4人分","photo":null,"tags":{"ingredients":["かぼちゃ"],"season":["秋"],"category":["副菜"]},"ingredients":[{"group":"","items":[{"name":"かぼちゃ","amount":"1/4個"},{"name":"だし","amount":"200ml"},{"name":"砂糖","amount":"大さじ1"},{"name":"醤油","amount":"大さじ1"},{"name":"みりん","amount":"大さじ1"}]}],"steps":[{"group":"","items":["かぼちゃは種を取り、ところどころ皮をむいてひと口大に切る。","皮を下にして鍋に並べ、だしと調味料を入れる。","落とし蓋をして、竹串がすっと通るまで弱めの中火で煮る。"]}],"tips":[],"locked":true},{"id":"r0010","title":"薬味たっぷり冷やしそうめん","yield":"2人分","photo":null,"tags":{"ingredients":["そうめん","大葉","茗荷","生姜"],"season":["夏"],"category":["麺"]},"ingredients":[{"group":"","items":[{"name":"そうめん","amount":"3束"},{"name":"大葉","amount":"5枚"},{"name":"茗荷","amount":"2個"},{"name":"生姜","amount":"1かけ"},{"name":"めんつゆ","amount":"適量"}]}],"steps":[{"group":"","items":["薬味はすべて細切りにして水にさらす。","そうめんを表示どおりにゆで、冷水でしっかり洗う。","器に盛り、薬味をのせてめんつゆを添える。"]}],"tips":[],"locked":true},{"id":"r0011","title":"春キャベツのコールスロー","yield":"2〜3人分","photo":null,"tags":{"ingredients":["春キャベツ","人参","コーン"],"season":["春"],"category":["前菜","冷菜"]},"ingredients":[{"group":"","items":[{"name":"春キャベツ","amount":"1/4個"},{"name":"人参","amount":"1/3本"},{"name":"コーン","amount":"大さじ3"},{"name":"塩","amount":"小さじ1/3"},{"name":"マヨネーズ","amount":"大さじ2"},{"name":"酢","amount":"小さじ2"}]}],"steps":[{"group":"","items":["キャベツと人参は千切りにし、塩をふって10分おく。","水気を絞り、コーンと合わせる。","マヨネーズと酢で和える。"]}],"tips":[],"locked":true},{"id":"r0012","title":"あさりの味噌汁","yield":"2人分","photo":null,"tags":{"ingredients":["あさり","三つ葉"],"season":["春"],"category":["汁物"]},"ingredients":[{"group":"","items":[{"name":"あさり（砂抜き済み）","amount":"200g"},{"name":"水","amount":"400ml"},{"name":"昆布","amount":"5cm"},{"name":"味噌","amount":"大さじ1.5"},{"name":"三つ葉","amount":"少々"}]}],"steps":[{"group":"","items":["鍋に水・昆布・あさりを入れ、中火にかける。","あさりの口が開いたら、アクを取る。","火を弱めて味噌を溶き、三つ葉を散らす。"]}],"tips":[],"locked":true}];
+const READS = [];
+const LOCK = {"iter":150000,"items":{"r0009":{"ct":"RpwhQ1iHosgmdEgW/oisxqzxpzstNHZbUFCzTknYBLyiJiUNXxMjxt/XnJzXigMAx0rK3MhFm35uH8Fs1mRcAywRNw0Ztwla9IpT92+qJOgisG7Sd7r0/K237n5G4gOVy0ygfOinnvh/yyNxhcyNGBKKgvMbh7OQkYo3rYdACUTlCqRAKLZsQJKUFKxn0B5RAMlLsoIpXC0aGfjN6hqwBBXc5qeRpWn90FJ4SE0zeaPdNXxqUYTyQsKoGiXGXREYSF+bdbqschrhTskee/f9AfBsfdZWLr08Z2AN+9FgPFlI8y2sTyT5KlDdlerGuU8DsTWP2x2XKpD0g4rAbvA+Dv+r9AG6TQIzoVTyPx86n2tjH4YCr13Ka0sLiE2Mrf9oo6Uotxu/TkcZVizicyYX52bRkx+OTWff8Wkiwqe+4Y+EbNQlrI2ofXtElm0X4lDa+jLz7jUNxQs+jMEgLJIv1wf+mX3dZZWTlTxAq3pQoIeEKYc=","iv":"5XEHL/Jjq+dpOiYv"},"r0010":{"iv":"RiY3r/u4lBY0iJDU","ct":"jCyPZ7fhouDVXd/ZXEpGtZeRMEKhmD9C5Y2iDcnu+LtNTxkGtPqA70VeaOEi+fuvijqJz7nHSh5xoODG9w0Ki9Z1pQ200Mbg/WV708qhEJgefttz2zHp0Qbd2tFawTK1MiUggn7B8QVcyOIueonU0+Dt3GjLFU0Xd/VlyjHknn9FHl/9DJQDRzsfrsbqTin0i++7WJOpiltE2V1cwSzxjWFeiqDhbjf/UIJ7N4QjIdO8DGCbUGwDfjzYN2Fr8sN4ItH0+B/PWLUh5WqYKh6rlkGwJEMwS5C6sYuopVIlFXh2P4PaXrPNIoA00i1fA9GZCg91E8aXiRfpxW7NUXmG5qzf2mYQE1DYgBkccLnYRtK3/wwRLQZXCj0ARwIp3Lsa2vJZfp5QnPZE8vKLL9Bgf2wtqfCx/UdLfAevrZ0="},"r0005":{"ct":"21bfdtFop8ZxJxFO4i4aBn3BRiGI4skyug+dQGE2qUChyRKRVBT9cVkZUuUmylNVR2rD4kpebMbdaoqLU0Kk42ubkrAtqGKeQMnCDkOtJmGPb0hLe8Xff4BAv6fXRDEUYSNlg4BM4wgHcYE07J/P5dX0hB8nGIgg8vz5n5W4k9C09V7dOnEeS4Ujm0NiNcDS+gDkHgNz+blSQfC7chv01BvhWlYYkyoWs62YbFPQtzJkTArxAcRSQdRFytpBEHy8cjNxRXZjRxLIwHVtdpRmf1/6kkxNcXCz4MEOKcW7vcS9gWVbaJJ3UA+8Eo20YgjCT8+e9jiaxZtX3szUef1OQAowfG2n0eH6xAXEd2gS01wRrJOY8JKBQ1ozyq/1U55usya2RUjqPSbUh2skvtOtzPlS33HPzd1oFRbErj339FaOxdaReVwmsP/mfs6JpXJ4nO9PkzSNirVUPEADL84rOFvgApqc2NgPg9scyPlAn42SnkID/yBLYPPsliEEj/3oWSilgEaCS9w4XYtE56QHBXN9jTYFMCU=","iv":"vBb6MjT5PPf8upkt"},"r0011":{"ct":"xHzfV5jPhT/Snh27VmPS90bKu0/20oAe8g/kZXnRKPAB7xted1srSEujHtLL52vrQzp9rLeiA1Ef9YpLI6IODcarmUDASe+oJwfIpHQ/e20jOMwIcht6s9UXgg6A/weFPcfTgJKh1XOQXrG4HjQI4iQrBBXysmNFRzsRom2nVjxiJZPwrZQWRIYI1Rc3MKyF/uTxL+wFnLu2cJLTth3cjlQ1v8Zocjb1bujkfwkpCE4buKhVeMHDJDa4RDHae4X8rDBRKjDPffPkx+reYcYR+CEcF6IedIs1DzVUJk8V36z3s8hRvhVF9tsT9wlLhYebDsKIeBnWcU71MXLr2ZpzIgoxYwc3yKzA+w6If4RshaGPR52ixBHVLdMoGnCsTg==","iv":"WmD6uRQo0V3QS3l5"},"r0007":{"iv":"l7FLLaxLFtvNhxQB","ct":"eVoh318HKTII1za6o5L4/jRxCeWl4YoRBqRVkeg9zEGwBh1TrkATvZch55dqGtxlT4oZ2gR1fhoBzLp2cF6DPmISFevdNU/qEkLyeKIIs0sb7TrzgpAELwfJg/1oO7kpSv//5XUm5PYxwlMJ3f8rXuuNxHHYp71xKX/t/kgZNYnLS+TZghiYMXFQTIbgnhMdofbPzTl+1d489TMkRI63A2lDZuSjBzxUX65TXUDdoShNTTdRJqwoXm8NutjXVGxwMzQgnekKyVuIXVTKLJRAOAE74UYYCSqIUatdFqOOQk1BGcVRSsLdNGDCEmMhWkBoDrSLb95MdEkhTg7rkqEttBQhFkQuOoa3NWxLNBupjCGhrORCSoWGt/yr7pDMIX5l0SUvB+TWLrDrzqpO9rf1Soo7qUuQXksKCeuV5lNbfODW5wNmJrqVZUBBS0IFoai6re7stIvOxxR+ZBLR3Q/C19P4BTgkFdt4mHf34Ym1hTpamiElnw07BT4OiijaQrPONED0AgtzKZhI7X3phFZZ8zIzw++6F3Tj1Q=="},"r0004":{"ct":"4V2skHuJTRejsP1SX3XoiHUDBDxz2e9FWHpSvhWzIwQq3BHERpBMpFPEUuP+/NdbGRZ3EltWu/+o1KU/xKjecMpnDhC/T6JQM+df0LTa13gV+dElz3jspQr05VwdG8MP32EDYx3VrNY+7WxFkWmn6ydINC2xsdvxIyibiRIw7A/TuxxUNAP/W7ZD6Yw0VrQPmeXwxLeVQGr2aQy+A7xHj3cbYaq+TjwGH33wXJodtGS5LpZdOeG+6C7jRoLat52IlVEa403VDV3LtWSnvZw6xxin10pkvj+VqIYgFYqx5hgUDUSNPm+vvKE7vxMMfatd8wJRjy+iNadIhFjwKuxjQx6fO7CTxJK182ckAt51Dq/ItADD6oK/tPhiQszBt/SWfBAR7wejal0nwGF32DH7DZNvGIwBmCIbvUIzEaD64qJl1Fx3f0PgmFtXhk6t9K2qaRMQihfhVnT+Ppa3mkE5WNzfYBt+rw==","iv":"N62z8/pjw5wXFgOD"},"r0008":{"iv":"TaWgd07oEnah1LWK","ct":"tDWQwWQQMDiuQl0cNpn8Qe3K1REDW3YTXADYO+DkYKDR1Za+1pAB3XUdgV2qIgE48m/NaAxhmilNkZhgNS/pU3K+9hLkAtEaGYBGAb2rsohbXRo+5fC9OS3UNp0ewM6w5Mgajz47yg3/xXbAX9EV9gMBZIyD1YRa0kAGuCE48jhjlEcPYqcg+p9Bf2GO4cPB0GxmCwy7rQoXQGfAPN/Ua94Gz5NPhtkyyDPB8qkb73XVVYiPlNsxmmnxGIdQjKiMimsNgT5+VgrUZaI121KcXJh+9QxBJuXqmo+lUtKxOlBGH4rb9SDPYiYVxABUs3SUMJirNmmXvnQC52gQpAzRrWfbj4753fVCZXXcEjNc1a2IVCwEV18cjH56hgEpBN2pvA=="},"r0012":{"ct":"NwKtsvYurbm/Yoe2RWheQDudyX2yavGkUhsNjm+/vITYIisz+QapiP5od65UhmD/kztn8sUdRYieilOUmBJyjMDtiYPB3eTjxU4CPSxsSqc9Qmz/s672wwFi/2Aziia7yLeBNFkWxAQyn8ZK6zLvLP4YGTZ9UpjEVtJUiuShm5J7FOmQSEWGHALOWYqJQzEzwQAs4jLkVDVXUIe94R+qWgLDkJXBr1Zbv2f7Ux3s300sJP3MXxcQZ8bpY4F7hm9OFEIhjvQ50ss35TtPIPU9flKLHk92g2yTzEFSpz625n0sv7sCw+Jt+1ojqgGmQMYAj3a3bCIKHBrTXAWkWcybZ+aY2uJeF2Lk5GzmwuzmzspCXpHpStCc7FePCyHFklfpyfJxTIPivoJpM3U+NeWbgNp229vEtQfgDvhLuMc=","iv":"baX+vYfMUamJF0Vn"},"r0006":{"ct":"Ro6GxZzfiw0CJR9NGjKy93bK2DOoHQr7MEI1UBbOCf113+XXnvu0j8zE1NMkuS6IKmEOGKErTPVgcBi2DHJMEPk/X9O9LT/rpGvlGR2k6p+gVW0zfTRDAaKgTtSEEc6S6lpBYCJfaesN8v3fZR3JgdOgXMRKFmGH9ZWYR7cYL16jEGl9gF7pK06afRphFlac2C308J7blD2MVgJLdA1zcZ2HlXXANGmjSky1ewQ0ocBN4hIyELTL8VLtVKroTdmBxS2+N4243QhKpftjuVgSoTZrGNy8IItBhr9b/QwiZiDkp72pPkDukKcEq9Fw8yZc3J3DLaKV5dZBUMHAGUtqeMSpP5zjFtibfH6GdK+G0Pzh+WjebsDx/CB2fB9EcBQyuTr/VgDDeGTE/BHUT/tFUk81dAxM1Arv0Clit6Y2li7PP5gnYQ==","iv":"4H55ju66g3pHzwyN"}},"boxes":[{"iv":"BnrhyjL5GIE2kqM0","ct":"ilH3QZFLNFY7jV4DbjAeRTP566H5Uez7mAoZVWFgbSrmbh4MuH7bK5ZnxKuT2zTuh42mUow0VyWYEBh5bX/vCSfn8gTgZt6HEujxAp+YrqYnkn98bDDB85Qmj2SXdN+p75xHPKaKLTnK+vgjG/GyBIkk3YBg6oND6w0ocAWb6O766Qh4U4AmJ5Rq9EHNfbFSV8QaMsO4Pl5THB8PRaZRTvQoetu7MGCbogUOQUtcqjxCFtMPZ0iyv7xSDldYRoXgNkcWZhCCn/v7vjhUEM1EqvcjU+z98uSVWWDYs3YfkSe4EU3tYsk73BS5LVCQVB94N3DRaOh7BQ=="}],"salt":"gz++7QKvYK/u8ZSEC1KN3Q=="};
+const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+const KEYNAME = "recipe-keys-" + (LOCK ? LOCK.salt.slice(0, 8) : "none");
+let KEYS = {}; try { KEYS = JSON.parse(localStorage.getItem(KEYNAME) || "{}"); } catch (e) {}
+const normPass = p => p.normalize("NFKC").replace(/[\u30a1-\u30f6]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60)).replace(/[\s\u3000\-－・]/g, "").toLowerCase();
+async function unlock(pass) {
+  const salt = b64(LOCK.salt), base = await crypto.subtle.importKey("raw", new TextEncoder().encode(normPass(pass)), "PBKDF2", false, ["deriveKey"]);
+  const k = await crypto.subtle.deriveKey({ name: "PBKDF2", salt, iterations: LOCK.iter, hash: "SHA-256" }, base, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+  for (const bx of LOCK.boxes) { try { const pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv: b64(bx.iv) }, k, b64(bx.ct)); const got = JSON.parse(new TextDecoder().decode(pt)).books; Object.assign(KEYS, got); try { localStorage.setItem(KEYNAME, JSON.stringify(KEYS)); } catch (e) {} return Object.keys(got); } catch (e) {} }
+  return null;
+}
+async function openItem(id, book) {
+  if (!LOCK || !KEYS[book] || !LOCK.items[id]) return null;
+  const k = await crypto.subtle.importKey("raw", b64(KEYS[book]), "AES-GCM", false, ["decrypt"]);
+  const it = LOCK.items[id]; return JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({ name: "AES-GCM", iv: b64(it.iv) }, k, b64(it.ct))));
+}
+const has = b => !!KEYS[b];
+const DEMO = R.some(r => r.locked);
+const GENRES = ["ご飯・麺","汁物・スープ","主菜","揚げ物","前菜・冷菜","副菜・小鉢","常備菜"];
+const BOOKS = ["春","夏","秋冬","通年"];
+const PRICE = {"春":"1,280円","夏":"1,280円","秋冬":"1,280円"};
+const YEAR = "<s>2,980円</s> 1,980円";
+const genreOf = r => { const c = (r.tags && r.tags.category) || [];
+  if (c.includes("ご飯") || c.includes("麺")) return "ご飯・麺";
+  if (c.includes("汁物")) return "汁物・スープ";
+  if (c.includes("揚げ物")) return "揚げ物";
+  if (c.includes("主菜")) return "主菜";
+  if (c.includes("常備菜")) return "常備菜";
+  if (c.includes("前菜") || c.includes("冷菜")) return "前菜・冷菜";
+  return "副菜・小鉢"; };
+const bookOf = r => { const s = ((r.tags && r.tags.season) || []).map(x => x === "初夏" ? "夏" : x);
+  if (s.includes("秋") || s.includes("冬")) return "秋冬";
+  if (s.includes("春")) return "春";
+  if (s.includes("夏")) return "夏";
+  return "通年"; };
+R.forEach(r => { r.g = genreOf(r); r.b = bookOf(r); });
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const hl = (s, q) => { s = esc(s); return q ? s.split(esc(q)).join("<mark>" + esc(q) + "</mark>") : s; };
+const hay = r => [r.title, r.g, ...(r.tags?.ingredients||[]), ...(r.ingredients||[]).flatMap(g => [g.group, ...(g.items||[]).map(i => i.name)])].join(" ");
+// 材料名のゆれ（漢字・ひらがな・カタカナ）をそろえて探す。先頭が代表の書き方
+const SYN = [["たまねぎ","玉ねぎ","玉葱"],["しんたま","新玉"],["ながねぎ","長ねぎ","長葱"],["ねぎ","葱"],["にんじん","人参"],["だいこん","大根"],["かぶ","蕪"],["なす","茄子"],["きゅうり","胡瓜"],["しょうが","生姜"],["にんにく","大蒜"],["ごぼう","牛蒡"],["れんこん","蓮根"],["かぼちゃ","南瓜"],["さつまいも","薩摩芋"],["さといも","里芋"],["じゃがいも","馬鈴薯"],["とうがん","冬瓜"],["みょうが","茗荷"],["しそ","大葉","紫蘇"],["はくさい","白菜"],["たけのこ","筍"],["しいたけ","椎茸"],["まいたけ","舞茸"],["そらまめ","空豆","そら豆"],["えだまめ","枝豆"],["とうもろこし","玉蜀黍"],["ゆず","柚子"],["すだち","酢橘"],["ごま","胡麻"],["たまご","玉子","卵"],["えび","海老"],["いか","烏賊"],["たこ","蛸"],["あじ","鯵"],["いわし","鰯"],["さば","鯖"],["さけ","鮭","しゃけ"],["かつお","鰹"],["ぶり","鰤"],["たい","鯛"],["さわら","鰆"],["さんま","秋刀魚"],["あわび","鮑"],["ほたて","帆立"],["はまぐり","蛤"],["あさり","浅蜊"],["かき","牡蠣"],["ふき","蕗"],["とりにく","鶏肉"],["ぶたにく","豚肉"],["ぎゅうにく","牛肉"]];
+const norm = t => { t = String(t).normalize("NFKC").replace(/[\u30a1-\u30f6]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
+  for (const g of SYN) for (const v of g.slice(1)) t = t.split(v).join(g[0]); return t; };
+// よく使う材料（押すだけで探せる）
+const TOP = (() => { const c = {}, show = {}; R.forEach(r => (r.tags?.ingredients||[]).forEach(w => { const k = norm(w); c[k] = (c[k]||0) + 1; show[k] = show[k] || w; }));
+  return Object.keys(c).filter(k => k.length > 1 && !/米|水|出汁|だし|油|塩|醤油|しょうゆ|みそ|味噌|酒|砂糖/.test(k)).sort((a, b) => c[b] - c[a]).slice(0, 18).map(k => show[k]); })();
+R.forEach(r => { r._h = norm(hay(r)); });
+const n = b => R.filter(r => r.b === b).length;
+$("#total").textContent = R.length; if ($("#nall")) $("#nall").textContent = R.length;
+if (DEMO) {
+  $("#shop").hidden = false;
+  const showOwned = () => { const o = ["春","夏","秋冬"].filter(has); $("#owned").textContent = o.length ? "✓ 会員として読めます" : ""; };
+  showOwned();
+  const ul = $("#unlock"), openUl = () => { ul.hidden = false; $("#msg").textContent = ""; $("#msg").className = ""; setTimeout(() => $("#pass").focus(), 50); };
+  $("#keybtn").onclick = openUl; window.openUl = openUl;
+  $("#cancel").onclick = () => { ul.hidden = true; };
+  const tryPass = async () => { const m = $("#msg"); m.className = ""; m.textContent = "確かめています…";
+    let got = null; try { got = await unlock($("#pass").value); } catch (e) {}
+    if (got) { m.className = "ok"; m.textContent = "全部のレシピが読めるようになりました"; showOwned(); draw(); const h = location.hash.slice(1); if (h) route(h); setTimeout(() => { ul.hidden = true; }, 1200); }
+    else { m.className = "ng"; m.textContent = "合言葉が違うようです。いちばん新しいメールの合言葉をご確認ください。"; } };
+  $("#go").onclick = tryPass; $("#pass").onkeydown = e => { if (e.key === "Enter") tryPass(); };
+  $("#demo").textContent = `展示用サンプルです。「無料」の3品は最後まで、ほかは途中まで。会員の合言葉「みほん」を入れると全部読めます。`;
+}
+const PAY = r => `<div class="pay"><b>続きは会員になると読めます</b><span class="sub">月680円で、全部のレシピと毎月の新しいレシピが読み放題</span><div class="plans"><div class="best"><span>レシピ帖 会員</span><span class="c">${R.length}品＋毎月5品</span><span class="p">月680円</span></div></div>いつでも解約できます<br><button type="button" disabled>会員になる（準備中）</button><small>見本のため、このボタンはまだ動きません</small><button class="haskey" type="button" onclick="openUl()">会員の方はこちら（合言葉を入れる）</button></div>`;
+let genre = "すべて", book = "";
+function chips() {
+  $("#ings").innerHTML = `<span class="ingl">材料から</span>` + TOP.map(w => `<button class="chip" id="w-${w}" data-w="${w}">${w}</button>`).join("");
+  $("#genres").innerHTML = ["すべて", ...GENRES].map(g => `<button class="chip" id="g-${g}" aria-pressed="${g===genre}" data-g="${g}">${g}</button>`).join("");
+  $("#seasons").innerHTML = BOOKS.map(b => `<button class="chip" id="s-${b}" aria-pressed="${b===book}" data-s="${b}">${b}</button>`).join("");
+}
+$("#genres").onclick = e => { const g = e.target.dataset.g; if (!g) return; genre = g; chips(); draw(); };
+$("#ings").onclick = e => { const w = e.target.dataset.w; if (!w) return; $("#q").value = $("#q").value.trim() === w ? "" : w; draw(); };
+$("#seasons").onclick = e => { const s = e.target.dataset.s; if (!s) return; book = book === s ? "" : s; chips(); draw(); };
+const card = (r, q) => `<button class="item" id="i-${r.id}" data-id="${r.id}"><span class="ph">${r.photo ? `<img src="${esc(r.photo)}" alt="" loading="lazy">` : `<span class="none">✿</span>`}${DEMO ? (r.locked ? (has(r.b) ? `<span class="tagopen">✓</span>` : `<span class="taglock">会員</span>`) : `<span class="tagfree">無料</span>`) : ""}</span><span class="t">${hl(r.title, q)}</span><span class="m">${esc((r.tags?.ingredients||[]).slice(0,3).join("・"))}</span></button>`;
+function draw() {
+  const q = $("#q").value.trim();
+  const terms = norm(q).split(/\s+/).filter(Boolean);
+  const hits = R.filter(r => terms.every(t => r._h.includes(t)) && (genre === "すべて" || r.g === genre) && (!book || r.b === book));
+  $("#count").textContent = `${hits.length}品`;
+  if (DEMO) hits.sort((a, b) => (a.locked ? 1 : 0) - (b.locked ? 1 : 0));
+  const groups = (genre === "すべて" ? GENRES : [genre]).map(g => [g, hits.filter(r => r.g === g)]).filter(([, L]) => L.length);
+  const rq = [];
+  const readHtml = rq.map(x => `<button class="readcard" id="rc-${x.id}" data-read="${x.id}"><span class="ic">読</span><span><b>読み物：${esc(x.title)}</b><small>${esc(x.lead)}</small></span></button>`).join("");
+  $("#list").innerHTML = readHtml + (groups.length ? groups.map(([g, L]) => `<section><h2>${g}<small>${L.length}品</small></h2><div class="grid">${L.map(r => card(r, q)).join("")}</div></section>`).join("")
+    : (readHtml ? "" : `<p class="empty">「${esc(q)}」に合う料理は見つかりませんでした。<br>ひらがなや漢字を変えて探してみてください。</p>`));
+}
+$("#list").onclick = e => { const rc = e.target.closest(".readcard"); if (rc) return openRead(rc.dataset.read, true); const b = e.target.closest(".item"); if (b) open(b.dataset.id, true); };
+$("#q").oninput = draw;
+async function open(id, push) {
+  let r = R.find(x => x.id === id); if (!r) return;
+  if (r.locked && has(r.b)) { try { const full = await openItem(r.id, r.b); if (full) r = { ...r, steps: full.steps, tips: full.tips, locked: false }; } catch (e) {} }
+  let k = 0;
+  const ing = (r.ingredients||[]).map(g => (g.group ? `<h4>${esc(g.group)}</h4>` : "") + `<ul class="ing">${(g.items||[]).map(i => `<li><span>${esc(i.name)}</span><i></i><span>${esc(i.amount||"")}</span></li>`).join("")}</ul>`).join("");
+  const st = (r.steps||[]).map(g => (g.group ? `<h4>${esc(g.group)}</h4>` : "") + `<ol class="steps" style="--start:${k}">${(g.items||[]).map(s => (k++, `<li>${esc(s)}</li>`)).join("")}</ol>`).join("");
+  $("#detail").innerHTML = `<div class="dbar"><button class="back" id="back">← もどる</button><span class="count">${esc(r.g)}・${esc(r.b)}</span></div>
+    <article class="dbody">${r.photo ? `<img class="photo" src="${esc(r.photo)}" alt="${esc(r.title)}">` : ""}
+    <h2>${esc(r.title)}</h2>
+    <div class="meta">${(r.tags?.ingredients||[]).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>
+    ${r.yield ? `<div class="yield">分量：${esc(r.yield)}</div>` : ""}
+    <h3>材料</h3>${ing}<h3>作り方</h3>${st}
+    ${READS.filter(x => x.links.includes(r.id)).map(x => `<h3>資料</h3><button class="doc" id="go-${x.id}" data-read="${x.id}"><span class="ic">📄</span><span><b>${esc(x.title)}</b><small>${esc(x.lead)}</small></span></button>`).join("")}
+    ${r.locked ? PAY(r) : ""}
+    ${!r.locked && (r.tips||[]).length ? `<h3>先生のコツ・メモ</h3><div class="tips"><ul>${r.tips.map(t => `<li>${esc(t)}</li>`).join("")}</ul></div>` : ""}
+    <div class="src">No.${esc(r.id.slice(1))}</div></article>`;
+  $("#detail").hidden = false; $("#detail").scrollTop = 0; document.body.style.overflow = "hidden";
+  $("#back").onclick = () => history.length > 1 && location.hash ? history.back() : close();
+  $("#detail").querySelectorAll(".doc").forEach(b => b.onclick = () => openRead(b.dataset.read, true));
+  if (push) history.pushState(null, "", "#" + id);
+}
+async function openRead(id, push) {
+  let x = READS.find(y => y.id === id); if (!x) return;
+  if (x.locked && has("通年")) { try { const full = await openItem("read-" + x.id, "通年"); if (full) x = { ...x, sections: full.sections, locked: false }; } catch (e) {} }
+  const recipes = R.filter(r => x.links.includes(r.id));
+  $("#detail").innerHTML = `<div class="dbar"><button class="back" id="back">← もどる</button><span class="count">資料</span></div>
+    <article class="dbody article"><h2>${esc(x.title)}</h2><p class="lead">${esc(x.lead)}</p>
+    ${x.sections.map(sc => `<h3>${esc(sc.h)}</h3>${sc.html}`).join("")}
+    ${x.locked ? `<div class="pay"><b>続きはレシピ帖で読めます</b><span class="sub">この資料（全${x.total}項目）は会員になると読めます</span><div class="plans"><div class="best"><span>レシピ帖 会員</span><span class="c">${R.length}品＋毎月5品</span><span class="p">月680円</span></div></div><button type="button" disabled>会員になる（準備中）</button><small>見本のため、このボタンはまだ動きません</small><button class="haskey" type="button" onclick="openUl()">会員の方はこちら（合言葉を入れる）</button></div>` : ""}
+    ${recipes.map(r => `<button class="golink" data-id="${r.id}">← ${esc(r.title)}に戻る</button>`).join("")}</article>`;
+  $("#detail").hidden = false; $("#detail").scrollTop = 0; document.body.style.overflow = "hidden";
+  $("#back").onclick = () => history.length > 1 && location.hash ? history.back() : close();
+  $("#detail").querySelectorAll(".golink[data-id]").forEach(b => b.onclick = () => open(b.dataset.id, true));
+  if (push) history.pushState(null, "", "#read-" + id);
+}
+
+function close() { $("#detail").hidden = true; document.body.style.overflow = ""; }
+const route = h => h.startsWith("read-") ? openRead(h.slice(5), false) : open(h, false);
+window.addEventListener("popstate", () => { const id = location.hash.slice(1); id ? route(id) : close(); });
+chips(); draw();
+if (location.hash.length > 1) route(location.hash.slice(1));
+
+// 表紙の花びら（止まった絵として描く。動きを減らす設定なら動かさない）
+(function petals(){
+  const c = $("#petals"), x = c.getContext("2d"); if (!x) return;
+  const css = getComputedStyle(document.documentElement);
+  const col = [css.getPropertyValue("--rose").trim() || "#E9A3B6", css.getPropertyValue("--pale").trim() || "#F8E1E7"];
+  let W, H, P;
+  const size = () => { const r = c.getBoundingClientRect(), d = devicePixelRatio || 1; W = r.width; H = r.height; c.width = W * d; c.height = H * d; x.setTransform(d, 0, 0, d, 0, 0); };
+  const seed = () => { P = Array.from({length: 14}, (_, i) => ({ x: (i * 97) % 100 / 100 * W, y: (i * 53) % 100 / 100 * H, r: 5 + (i % 4) * 2, a: i, v: .15 + (i % 5) * .05, c: col[i % 2] })); };
+  const petal = p => { x.save(); x.translate(p.x, p.y); x.rotate(p.a); x.globalAlpha = .55; x.fillStyle = p.c;
+    x.beginPath(); x.moveTo(0, -p.r); x.quadraticCurveTo(p.r, 0, 0, p.r); x.quadraticCurveTo(-p.r, 0, 0, -p.r); x.fill(); x.restore(); };
+  const frame = () => { x.clearRect(0, 0, W, H); P.forEach(petal); };
+  size(); seed(); frame();
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const tick = () => { P.forEach(p => { p.y += p.v; p.x += Math.sin(p.a) * .2; p.a += .004; if (p.y > H + 10) p.y = -10; }); frame(); requestAnimationFrame(tick); };
+  addEventListener("resize", () => { size(); seed(); frame(); });
+  requestAnimationFrame(tick);
+})();
+</script>
+
+</body></html>
