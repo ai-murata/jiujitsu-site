@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>しゃべったのは6分。今日1日でClaudeに頼んだ14の仕事</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="「音声入力は5倍速い」を、1日の記録で確かめてみました。しゃべったのは合計約1,800字、片付いた仕事は14件。夜の1時間40分は6件を同時に回していました。マネージャー目線のブログ、8本目です。">
+<meta property="og:title" content="しゃべったのは6分。今日1日でClaudeに頼んだ14の仕事">
+<meta property="og:description" content="しゃべったのは6分。夜の1時間40分で6件を同時に回した、ある1日の記録。">
+<meta property="og:url" content="https://jiujitsu.co.jp/blog/shabetta-6pun/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 24px 0 32px; }
+  .stat { background: var(--k); border-top: 3px solid var(--gold-hi); padding: 16px 16px 14px; text-align: center; }
+  .stat .lbl { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold-hi); font-weight: 700; }
+  .stat b { display: block; font-family: var(--mincho); font-size: 30px; color: #f3ecd8; letter-spacing: .04em; line-height: 1.4; }
+  .stat small { display: block; font-size: 12px; color: #b0a88f; line-height: 1.6; }
+</style>
+
+<header>
+  <p class="brand"><a href="/blog/">JIU LABO BLOG</a></p>
+  <h1>しゃべったのは6分。今日1日でClaudeに頼んだ14の仕事</h1>
+  <p class="meta"><time datetime="2026-10-01">2026.10.01</time>　村田亜衣（マネージャー）</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>こんにちは、村田亜衣です。8本目の今日は、<b>ある1日の記録</b>です。</p>
+    <p>前に「キーボードで打つより、音声入力のほうが5倍速い」と書きました。でもあれは体感です。そこで今日は、1日ぶんの記録をClaudeに数えてもらいました。</p>
+
+    <h2>今日の成績表</h2>
+    <div class="stats">
+      <div class="stat"><span class="lbl">しゃべった量</span><b>約1,800字</b><small>原稿用紙4枚半くらい</small></div>
+      <div class="stat"><span class="lbl">しゃべった時間</span><b>約6分</b><small>1分300字として計算</small></div>
+      <div class="stat"><span class="lbl">Claudeが動いた回数</span><b>約300回</b><small>開く・調べる・直す・作る</small></div>
+      <div class="stat"><span class="lbl">片付いた仕事</span><b>14件</b><small>うち3件は私が寝ている間</small></div>
+    </div>
+    <p>6分しゃべって、14件。字にすると、だいたいこのブログ1本ぶんより少ないくらいです。</p>
+
+    <h2>しかも、ちゃんとしゃべっていない</h2>
+    <p>記録を読み返して、自分で笑ってしまいました。私がClaudeに送った言葉は、こんな感じです。</p>
+    <ul class="talk">
+      <li>「キャンバー二つのスイープのスケジュールを直してほしくて」<small>→ Canvaに2つある、SWEEP（道場）のスケジュール表のこと</small></li>
+      <li>「両うぞう、両うぞうね、会社の代表ね」<small>→ 良蔵さん。2回言い直しても直っていない</small></li>
+      <li>「電話書は、まあ、売るっていうのは今度相談しましょう」<small>→ 提案書のこと</small></li>
+      <li>「保存していいですか、ぞでください。画像でください」<small>→ 保存していいです、画像でください</small></li>
+    </ul>
+    <p>「えーと」「あの」「まあ」も山ほど入っています。それでも、<b>14件とも聞き返されずに伝わっていました。</b>前後の流れから、ちゃんと意味をくみ取ってくれます。</p>
+
+    <h2>朝：寝ている間に3件</h2>
+    <p>朝起きる前に、決まった時間に動くAI社員が3件片付けてくれていました。</p>
+    <ul class="tips">
+      <li>今日のやること一覧づくり。カードの引き落としができていなかったこと、今日キャンセルされてしまう注文があることまで拾ってくれていました。危なかった</li>
+      <li>毎月の定例作業がちゃんと終わっているかの見張り</li>
+      <li>シフト表のURLを引っ越す準備の確認</li>
+    </ul>
+    <p>この3件で、私がしゃべったのは0字です。</p>
+
+    <h2>夕方：ひとつずつ、ポンポンと</h2>
+    <ul class="timeline">
+      <li><span class="when">16:50</span><b>大会速報の「マット」を「MAT」に戻す？</b><span class="d">相談したら理由つきで「戻すほうがいい」。そのまま直して公開まで。</span></li>
+      <li><span class="when">16:53</span><b>33分の録音が、まるごと無音だった</b><span class="d">良蔵さんの話を車の中で録った音声を渡したら、「中身が完全にゼロです」。車のBluetoothにマイクを持っていかれたのかもしれません。今日いちばんのショックでした。次からはBluetoothを切って録ります。</span></li>
+      <li><span class="when">17:05</span><b>「HP更新のLINE通知やめるわ」</b><span class="d">これで全部。15文字で1件終わりました。</span></li>
+      <li><span class="when">19:41</span><b>「アクセス数を見たい」</b><span class="d">9文字で、9月は140人・690回見られていたと分かりました。</span></li>
+    </ul>
+
+    <h2>夜：1時間40分で、6件を同時に</h2>
+    <p>いちばん伝えたいのはここです。夜の19:57から21:34まで、私はこの6件を<b>同時に</b>進めていました。</p>
+    <div class="ex">
+      <p>同時に走っていた6件</p>
+      <ul>
+        <li>取引先への請求書メールの下書き</li>
+        <li>レシピ帖の見本を、作品集に載せる</li>
+        <li>このブログを、noteにも載せる相談</li>
+        <li>住民税の支払いと、大会ポスター作りの段取り</li>
+        <li>道場のスケジュール表とチラシを、Canvaで作り直す</li>
+        <li>会社のお金の明細を、Boxとメールから洗い出す</li>
+      </ul>
+    </div>
+    <p>やり方は簡単です。1件頼んだら、Claudeが作業している間に次の画面へ移って、また話しかける。戻ると答えができている。これをぐるぐる回すだけです。</p>
+    <p>人に頼むときは「お願いして、待って、確かめる」の「待って」で手が止まります。でも<b>待っている間に次の仕事を始められる</b>ので、6件が1時間40分に収まりました。感覚としては、6人の部下に順番に声をかけて回っている感じです。</p>
+
+    <h3>出せないレシピ帖は、中身だけ差し替えて展示</h3>
+    <p>6件のうち、ちょっとおもしろかったのがこれです。お教室の紙のレシピを、携帯で材料から探せるレシピ帖にしています。でも、この先どうするかは先生と相談して決めるので、本物はまだどこにも出せません。</p>
+    <p>そこで、<b>仕組みはそのままで、レシピだけ一般的な家庭料理12品に差し替えた「展示用」</b>を作って、作品集に載せました。</p>
+    <p>最初は写真の枠に花のマークが入っているだけで、これが思った以上にさびしい。から揚げ、だし巻き卵、豚汁、肉じゃが……12品ぶんの写真もAIで作ってもらって、やっとそれらしくなりました。見本でも、写真は大事です。</p>
+
+    <h3>スケジュール表は3回直した</h3>
+    <p>道場のスケジュール表は、しゃべりながら3回直しました。「文字の大きさがさ」「いや、それだと分かりにくくない？」「やっぱり1時間ごとに1行にしよう」。</p>
+    <p>デザインの人にこれをやったら、たぶん嫌な顔をされます。Claudeは毎回すぐ直してくれて、最後はチラシの上半分まで差し替えてくれました。</p>
+
+    <h2>うまくいかなかったことも</h2>
+    <p>請求書のメールは、ChromeとClaudeをつなぐ機能が最後までつながらず、途中で止まりました。</p>
+    <p>それでも困らなかったのは、止まったときの報告がはっきりしていたからです。「<b>まだ何も変えていません</b>」「ご自分でやるなら、この3か所です」。どこまでやって、どこで止まったのかが一目で分かります。止まり方が上手なのも、任せて安心な理由だと思います。</p>
+
+    <h2>同じ時間で、どれくらい違うのか</h2>
+    <p>今日の14件を全部自分の手でやっていたら、たぶん丸2日はかかっていました。録音の確認、明細の洗い出し、表の作り直し。どれも1件で半日つぶれてもおかしくない仕事です。</p>
+    <blockquote><p>私がやったのは、6分しゃべることと、<br>出来上がりを確かめることだけ。</p></blockquote>
+    <p>コツは2つです。</p>
+    <ul class="tips">
+      <li><b>きれいにしゃべろうとしない。</b>「両うぞう」でも伝わります</li>
+      <li><b>1件ずつ待たない。</b>頼んだら次へ。戻ったときに確かめればいい</li>
+    </ul>
+    <p>まずは今日、思いついたことをひとつ、そのままClaudeに話しかけてみてください。言い間違えても大丈夫です。私なんて、会社の代表の名前を2回まちがえました。</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">うちでもAIに仕事を任せたい。</b><br>
+    毎月の作業を「係」にするお手伝いをしています。いまはお会いしたことがある方に限って、先着3名さま・道具ひとつ分まで無料です。<a href="/irai/" style="color:#a3801a;white-space:nowrap;">AIのお手伝い、承ります →</a>
+  </p>
+
+  <footer>
+    <a href="/blog/">ブログの一覧へ</a>　／　<a href="/">jiujitsu.co.jp トップへ</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
