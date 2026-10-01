@@ -93,12 +93,44 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
 
 [
  {
-  "id": "7173ff64b8f7",
+  "id": "92f9d801c1c2",
+  "region": "jp",
+  "source": "hokkaido-np.co.jp",
+  "title": "極めた寝技 野中さん全国3位 ブラジリアン柔術大会 江別高2年 競技歴2年「次は世界」",
+  "snippet": "",
+  "published": "2026-09-30T19:00:00+00:00"
+ },
+ {
+  "id": "8f944c803e50",
+  "region": "jp",
+  "source": "ベースボールチャンネル",
+  "title": "アジア大会2026 柔術日本代表のテレビ放送・配信予定・日程｜アジア競技大会 愛知・名古屋",
+  "snippet": "",
+  "published": "2026-09-30T22:00:53+00:00"
+ },
+ {
+  "id": "cf111874c4a3",
   "region": "jp",
   "source": "Vietnam.vn",
-  "title": "ベトナムの柔術選手は、第20回アジア競技大会でメダルの色を変えることを目指している。",
+  "title": "カン・トー柔術は全国スポーツ大会に向けて加速している。",
   "snippet": "",
-  "published": "2026-09-29T11:44:41+00:00"
+  "published": "2026-09-30T06:37:40+00:00"
+ },
+ {
+  "id": "658748667fd3",
+  "region": "jp",
+  "source": "YouTube",
+  "title": "【FULL FIGHT】前田直紀 vs ジョアオ・コバヤシ / SJJIF WORLD 2026 【ブラジリアン柔術】 Naoki Maeda vs Joao Kobayashi",
+  "snippet": "",
+  "published": "2026-09-30T05:26:03+00:00"
+ },
+ {
+  "id": "d303f547ecde",
+  "region": "jp",
+  "source": "Yahoo!ニュース",
+  "title": "「最強芸能人」ランキング、\"剣道二段\"吉沢亮を抑えた「かっこいいのに強い」イケオジ俳優は【総合順位】（ピンズバNEWS）",
+  "snippet": "",
+  "published": "2026-09-30T02:00:37+00:00"
  },
  {
   "id": "02caf267897b",
@@ -109,12 +141,60 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-09-29T22:35:00+00:00"
  },
  {
-  "id": "2c8614730588",
+  "id": "bc11e5c6c23f",
   "region": "jp",
-  "source": "朝日新聞",
-  "title": "なぜアジアは格闘技が強くて盛んなのか？ 五輪金メダルの6割占める [アジア大会2026]",
+  "source": "ピンズバNEWS",
+  "title": "「最強芸能人」ランキング、\"空手世界一\"横浜流星を抑えた「別格の強さ」の人物は【トップ3】｜ニュース",
   "snippet": "",
-  "published": "2026-09-29T02:28:09+00:00"
+  "published": "2026-09-29T23:30:00+00:00"
+ },
+ {
+  "id": "87d2052c04e1",
+  "region": "jp",
+  "source": "Infoseek",
+  "title": "レスリング日下、尾崎ら登場 第13日見どころ",
+  "snippet": "",
+  "published": "2026-09-30T08:24:01+00:00"
+ },
+ {
+  "id": "3b9e4cde68a2",
+  "region": "jp",
+  "source": "Laodong.vn",
+  "title": "本日(10月1日)の第20回アジア競技大会に出場するベトナム代表団の生中継",
+  "snippet": "",
+  "published": "2026-09-30T23:48:00+00:00"
+ },
+ {
+  "id": "c4fbcb5e1307",
+  "region": "jp",
+  "source": "au Webポータル",
+  "title": "「最強芸能人」ランキング、\"空手世界一\"横浜流星を抑えた「別格の強さ」の人物は【トップ3】",
+  "snippet": "",
+  "published": "2026-09-30T02:08:55+00:00"
+ },
+ {
+  "id": "1ab1576d3620",
+  "region": "jp",
+  "source": "Vietnam.vn",
+  "title": "10月1日のアジア競技大会（ASIAD 20）のスケジュール：eスポーツによる「衝撃」が期待できる。テコンドー競技も開催される。",
+  "snippet": "",
+  "published": "2026-10-01T00:00:12+00:00"
+ },
+ {
+  "id": "8f82fe15cc63",
+  "region": "jp",
+  "source": "Laodong.vn",
+  "title": "柔術選手のダン・ディン・トゥン、フン・ティ・フエがアジア大会20のメダル獲得のチャンスを狙う",
+  "snippet": "",
+  "published": "2026-09-30T02:42:38+00:00"
+ },
+ {
+  "id": "c27792d15b58",
+  "region": "jp",
+  "source": "Goal.com",
+  "title": "全競技スケジュール・日程｜第20回アジア大会",
+  "snippet": "",
+  "published": "2026-09-30T09:42:56+00:00"
  },
  {
   "id": "600f7866c330",
@@ -125,20 +205,12 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-09-29T23:30:00+00:00"
  },
  {
-  "id": "81620a4231c6",
+  "id": "c27fd40c8e57",
   "region": "jp",
-  "source": "efight.jp",
-  "title": "“工場勤務10年”まゆゆ、むっちり健康美！ミニワンピでラウンドガール",
+  "source": "Vietnam.vn",
+  "title": "10月1日から10日まで開催される第20回アジア競技大会におけるベトナムスポーツ代表団のスケジュール。",
   "snippet": "",
-  "published": "2026-09-29T16:12:21+00:00"
- },
- {
-  "id": "1ce51b70f1d3",
-  "region": "jp",
-  "source": "クランクイン！",
-  "title": "“日本好き”モデルのバーバラ・パルヴィン、第1子出産 ドジャース大谷のユニフォームを着て報告",
-  "snippet": "",
-  "published": "2026-09-29T07:55:14+00:00"
+  "published": "2026-10-01T00:05:49+00:00"
  },
  {
   "id": "6bc2ab4780e2",
@@ -149,60 +221,108 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-09-29T23:30:00+00:00"
  },
  {
+  "id": "d46320940912",
+  "region": "jp",
+  "source": "au Webポータル",
+  "title": "「最強芸能人」ランキング、\"剣道二段\"吉沢亮を抑えた「かっこいいのに強い」イケオジ俳優は【総合順位】",
+  "snippet": "",
+  "published": "2026-09-30T02:06:00+00:00"
+ },
+ {
+  "id": "a594218adc91",
+  "region": "jp",
+  "source": "Vietnam.vn",
+  "title": "10月1日のアジア競技大会（ASIAD 20）のスケジュール：ベトナム代表は、決定的な試合での突破口を待ち望んでいる。",
+  "snippet": "",
+  "published": "2026-10-01T00:05:53+00:00"
+ },
+ {
+  "id": "1180d03e30e1",
+  "region": "jp",
+  "source": "oita-press.co.jp",
+  "title": "レスリング日下、尾崎ら登場",
+  "snippet": "",
+  "published": "2026-09-29T20:30:36+00:00"
+ },
+ {
   "id": "c3a08c7d2466",
   "region": "jp",
   "source": "ぐぐスポ！",
   "title": "【柔術】アジア大会2026 日本代表の結果速報・日程・組み合わせ・放送予定",
   "snippet": "",
-  "published": "2026-09-29T13:50:43+00:00"
+  "published": "2026-09-30T10:51:53+00:00"
  },
  {
-  "id": "a85bcdc4719a",
+  "id": "811186980c3f",
   "region": "jp",
-  "source": "t.co",
-  "title": "まこあᜊ⍤⃝ᜊ (@makoawallflower) on X",
+  "source": "スポカレ",
+  "title": "【石黒翔也】ONE Fight Night 48の視聴方法！配信サービス、対戦カードを解説",
   "snippet": "",
-  "published": "2026-09-28T13:12:56+00:00"
+  "published": "2026-09-30T03:49:37+00:00"
  },
  {
-  "id": "6e1d5209262c",
+  "id": "72035b4e6491",
   "region": "jp",
-  "source": "t.co",
-  "title": "アジア大会ライバル選手をざっくり紹介｜伯柔記",
+  "source": "Vietnam.vn",
+  "title": "フエ市国境警備隊が、海上で遭難した人々を救助するための訓練を実施した。",
   "snippet": "",
-  "published": "2026-09-29T06:28:56+00:00"
+  "published": "2026-09-30T18:04:59+00:00"
  },
  {
-  "id": "152924914d06",
+  "id": "df2af45b9c94",
   "region": "jp",
-  "source": "Infoseek",
+  "source": "au Webポータル",
   "title": "“圧倒的に好評”デモ版が配信中のメトロイドヴァニア『Iron Bramble』ウィッシュリスト数10万件突破",
   "snippet": "",
-  "published": "2026-09-29T15:45:03+00:00"
+  "published": "2026-09-29T16:16:00+00:00"
  },
  {
-  "id": "d566d9556c3d",
-  "region": "jp",
-  "source": "ニコニコニュース",
-  "title": "【最大4人協力】ネズミたちがおんぼろ蒸気船を動かすアクションゲーム『All Rats on",
-  "snippet": "",
-  "published": "2026-09-29T07:54:10+00:00"
- },
- {
-  "id": "b63b3072b68b",
+  "id": "257c8031ed84",
   "region": "intl",
-  "source": "flograppling.com",
-  "title": "Everything To Know About The 2026 Pan IBJJF Jiu-Jitsu No-Gi Championship",
+  "source": "Community Impact Newspaper",
+  "title": "Gracie Barra Brazilian jiu-jitsu academy to open in Liberty Hill",
   "snippet": "",
-  "published": "2026-09-29T15:13:00+00:00"
+  "published": "2026-09-30T21:01:04+00:00"
  },
  {
-  "id": "1fb1fc189be8",
+  "id": "d58344c02142",
   "region": "intl",
-  "source": "Inside The Games",
-  "title": "South Korean jiu-jitsu athletes cleared for Asian Games",
+  "source": "UFC.com",
+  "title": "UFC BJJ 12: Moura vs Fornarino Fight Card",
   "snippet": "",
-  "published": "2026-09-29T19:56:33+00:00"
+  "published": "2026-09-30T16:00:00+00:00"
+ },
+ {
+  "id": "f6fbad4f8649",
+  "region": "intl",
+  "source": "FloGrappling",
+  "title": "The Black Belt Brackets Are Out For The IBJJF No-Gi Pan Championship",
+  "snippet": "",
+  "published": "2026-09-30T21:13:22+00:00"
+ },
+ {
+  "id": "0bb2e8cace4e",
+  "region": "intl",
+  "source": "Sportscape Magazine",
+  "title": "WATCH: Charles Oliveira Hilariously Reacts to ‘Purple Belt Syndrome’ in New BJJ Skit",
+  "snippet": "",
+  "published": "2026-09-30T18:56:41+00:00"
+ },
+ {
+  "id": "dc0ffa5feb9c",
+  "region": "intl",
+  "source": "boxingnews.com",
+  "title": "UFC BJJ 12: Moura vs Fornarino — Full Card, Start Time & How to Watch",
+  "snippet": "",
+  "published": "2026-09-30T22:07:40+00:00"
+ },
+ {
+  "id": "6bdb8d641625",
+  "region": "intl",
+  "source": "dailydispatch.com",
+  "title": "Firefighters receive jiu-jitsu training in Springfield for self-defense in the field",
+  "snippet": "",
+  "published": "2026-09-29T14:46:37+00:00"
  },
  {
   "id": "5b352664ea72",
@@ -213,20 +333,76 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-09-29T14:51:09+00:00"
  },
  {
-  "id": "2b91302e4964",
+  "id": "1fb1fc189be8",
   "region": "intl",
-  "source": "dailydispatch.com",
-  "title": "Firefighters in Illinois receive jiu-jitsu training for self-defense in the field",
+  "source": "Inside The Games",
+  "title": "South Korean jiu-jitsu athletes cleared for Asian Games",
   "snippet": "",
-  "published": "2026-09-28T17:54:43+00:00"
+  "published": "2026-09-29T19:56:33+00:00"
+ },
+ {
+  "id": "296704fec2fc",
+  "region": "intl",
+  "source": "Bloody Elbow",
+  "title": "Mikey Musumeci outlines plans to win UFC title once held by Demetrius Johnson after BJJ switch",
+  "snippet": "",
+  "published": "2026-09-30T02:54:07+00:00"
+ },
+ {
+  "id": "88aa2ec6a1f8",
+  "region": "intl",
+  "source": "jordannews.jo",
+  "title": "Jordan’s jiu-jitsu team begins Asian Games campaign in Nagoya tomorrow",
+  "snippet": "",
+  "published": "2026-09-30T12:58:35+00:00"
+ },
+ {
+  "id": "b63b3072b68b",
+  "region": "intl",
+  "source": "FloGrappling",
+  "title": "Everything To Know About The 2026 Pan IBJJF Jiu-Jitsu No-Gi Championship",
+  "snippet": "",
+  "published": "2026-09-29T15:13:00+00:00"
  },
  {
   "id": "d18ad9f69f69",
   "region": "intl",
-  "source": "flograppling.com",
+  "source": "FloGrappling",
   "title": "2026 Pan IBJJF Jiu-Jitsu No-Gi Championship Schedule",
   "snippet": "",
   "published": "2026-09-29T15:32:21+00:00"
+ },
+ {
+  "id": "1ef9a70ea258",
+  "region": "intl",
+  "source": "FloGrappling",
+  "title": "2026 CBJJ Brazilian Jiu-Jitsu Championship No-Gi",
+  "snippet": "",
+  "published": "2026-09-30T00:30:57+00:00"
+ },
+ {
+  "id": "a49e0c6efa8d",
+  "region": "intl",
+  "source": "FloGrappling",
+  "title": "2026 Pan IBJJF Jiu-Jitsu No-Gi Championship",
+  "snippet": "",
+  "published": "2026-09-29T15:28:51+00:00"
+ },
+ {
+  "id": "8e185a9862e8",
+  "region": "intl",
+  "source": "FloGrappling",
+  "title": "Lucas Gualberto Gomes Nascimento",
+  "snippet": "",
+  "published": "2026-09-29T21:31:10+00:00"
+ },
+ {
+  "id": "f9ee79e20836",
+  "region": "intl",
+  "source": "FloGrappling",
+  "title": "How Helena Crevar Submitted Everyone And Made ADCC History | The FloGrappling Show (Ep 106)",
+  "snippet": "",
+  "published": "2026-09-29T16:50:30+00:00"
  },
  {
   "id": "54c783739822",
@@ -237,28 +413,12 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-09-29T22:22:56+00:00"
  },
  {
-  "id": "6db8f53fa2e7",
-  "region": "intl",
-  "source": "Eyewitness News (WEHT/WTVW)",
-  "title": "Illinois firefighters receive jiu-jitsu training for self-defense in the field",
-  "snippet": "",
-  "published": "2026-09-28T14:27:18+00:00"
- },
- {
   "id": "0bab1b41d97f",
   "region": "intl",
   "source": "jordannews.jo",
   "title": "Jordan’s Jiu-Jitsu Team Begins Training Ahead of the Asian Games",
   "snippet": "",
-  "published": "2026-09-29T11:02:42+00:00"
- },
- {
-  "id": "a49e0c6efa8d",
-  "region": "intl",
-  "source": "flograppling.com",
-  "title": "2026 Pan IBJJF Jiu-Jitsu No-Gi Championship",
-  "snippet": "",
-  "published": "2026-09-29T15:28:51+00:00"
+  "published": "2026-09-29T13:59:15+00:00"
  },
  {
   "id": "81a5937ab388",
@@ -266,94 +426,78 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "source": "CTV News",
   "title": "Cambridge athlete wins gold again at Brazilian jiu-jitsu championship",
   "snippet": "",
-  "published": "2026-09-29T22:55:37+00:00"
- },
- {
-  "id": "491136a2f1bf",
-  "region": "intl",
-  "source": "flograppling.com",
-  "title": "How Helena Crevar Submitted Everyone And Made ADCC History | The FloGrappling Show (Ep 106)",
-  "snippet": "",
-  "published": "2026-09-29T16:30:28+00:00"
+  "published": "2026-09-29T23:24:48+00:00"
  },
  {
   "id": "79920095f084",
   "region": "intl",
-  "source": "flograppling.com",
+  "source": "FloGrappling",
   "title": "WHO'S IN For the 2026 IBJJF No-Gi Pan Championships",
   "snippet": "",
   "published": "2026-09-29T20:17:23+00:00"
  },
  {
-  "id": "5d43eb2372a2",
+  "id": "21d68a055ecd",
   "region": "intl",
-  "source": "FightBook MMA",
-  "title": "Cassia Moura Can Make UFC BJJ History — Adele Fornarino Stands in Her Way",
+  "source": "Secret NYC",
+  "title": "‘It’s my job to make you a mountain climber’: inside the Webster Ave dojo where a 6-time world champion has combined karate, kickboxing, and jiu-jitsu to mentor Bronx youth for over 20 years",
   "snippet": "",
-  "published": "2026-09-29T21:15:17+00:00"
+  "published": "2026-09-30T18:54:23+00:00"
  },
  {
-  "id": "05115e337c5d",
+  "id": "df177775ec1c",
   "region": "intl",
-  "source": "LowKickMMA.com",
-  "title": "“People Are Going To Be Really Surprised” – Mikey Musumeci Ready for MMA Move, Wants to Chase UFC Flyweight Championship",
+  "source": "FloGrappling",
+  "title": "2026 ADCC World Championships Presented by FloGrappling",
   "snippet": "",
-  "published": "2026-09-29T21:30:35+00:00"
+  "published": "2026-09-29T15:01:07+00:00"
  },
  {
-  "id": "97a20aa869ac",
+  "id": "1c09601ce92b",
   "region": "intl",
-  "source": "bjjdoc.com",
-  "title": "Top Divorce Lawyer Says Daddy Issues Turn Men Into BJJ Guys",
+  "source": "sherdog.com",
+  "title": "Mikey Musumeci targets UFC flyweight title with MMA transition",
   "snippet": "",
-  "published": "2026-09-29T07:19:02+00:00"
+  "published": "2026-09-30T07:47:22+00:00"
  },
  {
-  "id": "50bfbc1bdfa8",
+  "id": "f7ddabb085b9",
   "region": "intl",
-  "source": "bjjdoc.com",
-  "title": "UFC Cop Luis Hernandez Promoted To BJJ Black Belt After Submitting Wanted Man At UFC Apex",
+  "source": "MMA Sucka",
+  "title": "Mikey Musumeci Makes MMA Case With Bryce Mitchell-Ilia Topuria Wrestling Comparison",
   "snippet": "",
-  "published": "2026-09-29T07:48:11+00:00"
+  "published": "2026-09-30T05:59:45+00:00"
  },
  {
-  "id": "b2a9e622471e",
+  "id": "9f746775cba8",
   "region": "intl",
-  "source": "SheFinds",
-  "title": "Tom Brady Was Reportedly 'Blindsided' By Gisele Bündchen Divorce After 'Cheating' Rumors With Her Jiu Jitsu Instructor, Biographer Reveals: 'Something Very Bad' Happened",
+  "source": "Inquirer.net",
+  "title": "Asian Games 2026: Team Philippines’ schedule for October 1",
   "snippet": "",
-  "published": "2026-09-28T21:00:11+00:00"
+  "published": "2026-09-30T14:51:00+00:00"
  },
  {
-  "id": "1808ec2728a4",
-  "region": "intl",
-  "source": "Mix Vale",
-  "title": "Willian Masuda returns home facing paralysis after illegal jiu-jitsu slam",
-  "snippet": "",
-  "published": "2026-09-29T19:26:38+00:00"
- },
- {
-  "id": "98a423af8cac",
+  "id": "e72d9f483d3e",
   "region": "intl",
   "source": "BJJEE",
-  "title": "Top Divorce Lawyer: “When A Guy Has Daddy Issues, He Ends Up Doing BJJ”",
-  "snippet": "Brazilian jiu-jitsu has picked up an unusual reputation online in recent years – with the sport sometimes joked about as something for “divorced dads”. On the Mostly Wise podcast, divorce lawyer James Sexton addressed the stereotype and offered an explanation for where it comes from: When a girl has daddy issues, you end up with a stri**er. And when a guy has daddy issues, you end up with a guy who does BJJ. The line got laughs, but the conversation quickly shifted toward what Sexton, who’s practiced divorce law for decades, believes actually draws men to the sport: Because it is really like a…",
-  "published": "2026-09-29T07:50:05+00:00"
+  "title": "Tye Ruotolo To Compete For The Lightweight MMA Title At ONE: The Inner Circle 37",
+  "snippet": "ONE Championship has booked one of its most compelling title fights of the year, pitting two athletes from major martial arts lineages against each other… As the reigning ONE Lightweight and Welterweight MMA World Champion Christian Lee will defend his lightweight belt against reigning ONE Welterweight Submission Grappling World Champion Tye Ruotolo, at The Inner Circle 37. Ruotolo already holds the distinction of handing Christian’s younger brother, Adrian Lee, his first career loss, and now the 23-year-old grappling prodigy has a shot at defeating a second member of the Lee family, this time…",
+  "published": "2026-09-30T06:19:17+00:00"
  },
  {
-  "id": "427cdb6523c7",
+  "id": "2f52fb9c7a46",
   "region": "intl",
   "source": "BJJEE",
-  "title": "Chris Haueter Warns Against Academies That Try To Control Students Off The Mat: “Toxic Relationship”",
-  "snippet": "Chris Haueter, one of the first twelve non-Brazilians to earn a Brazilian Jiu-Jitsu black belt and a member of the “Dirty Dozen”, has spent decades around the sport. In a recent podcast conversation, the 61-year-old had a warning for anyone training under an instructor who tries to extend their authority well past technique: If you’re stuck in one of those unhealthy relationships where you’re paying some man to tell you what you can and can’t wear, you can’t and can’t teach, you might be in a toxic relationship. The comment took direct aim at academies that police things like uniforms, appeara…",
-  "published": "2026-09-29T07:38:56+00:00"
+  "title": "ADCC Introduces New Rule: Interference From Coaches Or Spectators Can Cost Athletes The Match",
+  "snippet": "The ADCC has rolled out a new policy that puts athletes’ results directly at risk when coaches, parents, or spectators overstep boundaries during a match. Under the updated code of conduct, unauthorized individuals are now barred from entering the competition area while a match is underway, with the restricted zone covering both the mat itself and a clearly marked perimeter around it. Anyone who breaks this rule, threatens participants or officials, or disregards referee instructions triggers immediate consequences that can end an athlete’s competition on the spot. Notably, the rule applies ev…",
+  "published": "2026-09-30T06:11:38+00:00"
  },
  {
-  "id": "78cfe7824a7b",
+  "id": "5640a3d4a5bd",
   "region": "intl",
-  "source": "BJJEE",
-  "title": "Fighters talk BKFC Fight Night Belgrade, World’s Baddest Man global tournament tryouts come to Belgrade, Serbia, in October 2026",
-  "snippet": "The Bare Knuckle Fighting Championship (BKFC) is bringing one of the biggest combat sports events of 2026 to the brilliant Belgrade, Serbia! BKFC Belgrade fight week festivities are coming to Serbia and the Balkans. The combat sports happenings in Eastern Europe will decide the future of the fight game worldwide. First comes the highly anticipated BKFC Belgrade tryouts for the $20 million World’s Baddest Man (WBM) global tournament (2026-2027) , on October 15, 2026. Second comes the BKFC Fight Night Belgrade (aka BKFC Belgrade) event – featuring a stacked fight card of pivotal bare-knuckle box…",
-  "published": "2026-09-28T15:35:59+00:00"
+  "source": "Jits Magazine",
+  "title": "Tye Ruotolo Set For First ONE Title-Fight Against Christian Lee",
+  "snippet": "Tye Ruotolo has just taken a huge leap in his MMA career as he will now be challenging Christian Lee for the ONE Championship lightweight world title at ONE: The Inner Circle 37 on November 6th, 2026. It’s going to be the biggest challenge he’s ever faced and not just because there’s a title on the line, but also because Lee will be the most experienced opponent he’s had. Ruotolo is currently just 2-0 in professional MMA and only a little over a year removed from making his debut . It’s an unprecedented rise through the ONE Championship ranks but if anyone is capable of doing it, it’s one of t…",
+  "published": "2026-09-30T15:08:36+00:00"
  }
 ]
