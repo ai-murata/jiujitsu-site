@@ -140,6 +140,7 @@ ol.steps li::before{content:counter(s);position:absolute;left:0;top:6px;width:26
 .tbl table{border-collapse:collapse;font-size:13px;min-width:100%}
 .tbl th,.tbl td{border:1px solid var(--line);padding:6px 8px;vertical-align:top;text-align:left}
 .tbl th{background:var(--pale)}
+.keybar[hidden]{display:none}
 .keybar{margin-top:10px;display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;font-size:13px;color:var(--sub)}
 .keybtn{border:1.5px solid var(--pink);background:var(--card);color:var(--pink);border-radius:999px;padding:6px 16px;cursor:pointer;font-size:14px}
 .owned{font-family:var(--f-hand);color:var(--leaf)}
@@ -168,7 +169,7 @@ ol.steps li::before{content:counter(s);position:absolute;left:0;top:6px;width:26
   <div id="shop" hidden>
     <div class="year"><div class="l"><span class="badge">会員</span><b>全部のレシピが読み放題</b><small>いまある<span id="nall"></span>品＋毎月5品ずつ新しいレシピが増えます</small></div></div>
     <p class="demo" id="demo"></p>
-    <div class="keybar"><button class="keybtn" id="keybtn" type="button">🔑 会員の合言葉を入れる</button><span class="owned" id="owned"></span></div>
+    <div class="keybar" hidden><button class="keybtn" id="keybtn" type="button">🔑 会員の合言葉を入れる</button><span class="owned" id="owned"></span></div>
   </div>
   <div class="tools">
     <input id="q" type="search" placeholder="今日は何を作ろう？ 材料や料理名で（例：人参 豚肉）" autocomplete="off">
@@ -248,9 +249,9 @@ if (DEMO) {
     if (got) { m.className = "ok"; m.textContent = "全部のレシピが読めるようになりました"; showOwned(); draw(); const h = location.hash.slice(1); if (h) route(h); setTimeout(() => { ul.hidden = true; }, 1200); }
     else { m.className = "ng"; m.textContent = "合言葉が違うようです。いちばん新しいメールの合言葉をご確認ください。"; } };
   $("#go").onclick = tryPass; $("#pass").onkeydown = e => { if (e.key === "Enter") tryPass(); };
-  $("#demo").textContent = `展示用サンプルです。「無料」の3品は最後まで、ほかは途中まで。会員の合言葉「みほん」を入れると全部読めます。`;
+  $("#demo").textContent = `展示用サンプルです。「無料」の3品は最後まで、ほかは途中まで読めます。`;
 }
-const PAY = r => `<div class="pay"><b>続きは会員になると読めます</b><span class="sub">全部のレシピと毎月の新しいレシピが読み放題</span><div class="plans"><div class="best"><span>レシピ帖 会員</span><span class="c">${R.length}品＋毎月5品</span></div></div><button type="button" disabled>会員になる（準備中）</button><small>見本のため、このボタンはまだ動きません</small><button class="haskey" type="button" onclick="openUl()">会員の方はこちら（合言葉を入れる）</button></div>`;
+const PAY = r => `<div class="pay"><b>続きは会員になると読めます</b><span class="sub">全部のレシピと毎月の新しいレシピが読み放題</span><div class="plans"><div class="best"><span>レシピ帖 会員</span><span class="c">${R.length}品＋毎月5品</span></div></div><button type="button" disabled>会員になる（準備中）</button><small>見本のため、このボタンはまだ動きません</small></div>`;
 let genre = "すべて", book = "";
 function chips() {
   $("#ings").innerHTML = `<span class="ingl">材料から</span>` + TOP.map(w => `<button class="chip" id="w-${w}" data-w="${w}">${w}</button>`).join("");
@@ -303,7 +304,7 @@ async function openRead(id, push) {
   $("#detail").innerHTML = `<div class="dbar"><button class="back" id="back">← もどる</button><span class="count">資料</span></div>
     <article class="dbody article"><h2>${esc(x.title)}</h2><p class="lead">${esc(x.lead)}</p>
     ${x.sections.map(sc => `<h3>${esc(sc.h)}</h3>${sc.html}`).join("")}
-    ${x.locked ? `<div class="pay"><b>続きはレシピ帖で読めます</b><span class="sub">この資料（全${x.total}項目）は会員になると読めます</span><div class="plans"><div class="best"><span>レシピ帖 会員</span><span class="c">${R.length}品＋毎月5品</span></div></div><button type="button" disabled>会員になる（準備中）</button><small>見本のため、このボタンはまだ動きません</small><button class="haskey" type="button" onclick="openUl()">会員の方はこちら（合言葉を入れる）</button></div>` : ""}
+    ${x.locked ? `<div class="pay"><b>続きはレシピ帖で読めます</b><span class="sub">この資料（全${x.total}項目）は会員になると読めます</span><div class="plans"><div class="best"><span>レシピ帖 会員</span><span class="c">${R.length}品＋毎月5品</span></div></div><button type="button" disabled>会員になる（準備中）</button><small>見本のため、このボタンはまだ動きません</small></div>` : ""}
     ${recipes.map(r => `<button class="golink" data-id="${r.id}">← ${esc(r.title)}に戻る</button>`).join("")}</article>`;
   $("#detail").hidden = false; $("#detail").scrollTop = 0; document.body.style.overflow = "hidden";
   $("#back").onclick = () => history.length > 1 && location.hash ? history.back() : close();
