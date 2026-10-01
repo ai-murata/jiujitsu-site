@@ -191,7 +191,8 @@
     .pick { padding-top: 16px; }
     .map { padding-top: 16px; }
     .mapgrid { display: block; columns: 2; column-gap: 8px; }
-    .mapgrp { padding: 8px 10px 8px; margin-bottom: 8px; }
+    /* Safari は段の頭に前のカードの margin を持ち越すので inline-block で揃える */
+    .mapgrp { display: inline-block; width: 100%; vertical-align: top; padding: 8px 10px 8px; margin: 0 0 8px; }
     .mapgrp h2 { font-size: 13.5px; letter-spacing: .08em; margin-bottom: 2px; }
     .mapgrp li a { display: flex; align-items: baseline; font-size: 14px; line-height: 1.45; padding: 4px 0 4px 4px; white-space: normal; overflow: visible; border-radius: 8px; }
     .map .ic { flex: none; }
