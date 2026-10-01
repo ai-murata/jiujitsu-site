@@ -11,7 +11,7 @@
   var css = document.createElement('style');
   css.textContent =
     '.share { margin-top: 56px; text-align: center; }' +
-    '.share .label { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 700; margin: 0 0 14px; }' +
+    '.share .label { font-size: 12px; letter-spacing: .3em; color: var(--gold); font-weight: 700; margin: 0 0 14px; }' +
     '.share .btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }' +
     '.share a, .share button { display: inline-flex; align-items: center; gap: 8px; height: 42px; padding: 0 18px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); font: 500 13.5px var(--gothic); letter-spacing: .06em; text-decoration: none; cursor: pointer; border-radius: 999px; transition: background .15s, border-color .15s; }' +
     '.share a:hover, .share button:hover { background: var(--panel); border-color: var(--gold); }' +

@@ -437,6 +437,8 @@ TEMPLATE = """<!DOCTYPE html>
     .controls {{ position: static; }}
     header {{ padding-top: 56px; }}
   }}
+  /* スマホで小さい字と押しにくいボタンを底上げ（~/.claude/scripts/sp_readable.py と同じ値） */
+  @media (max-width:640px){{.field label{{font-size:12px}}.hints-label{{font-size:12px}}.tag{{font-size:12px}}.back{{padding-top:8.5px;padding-bottom:8.5px}}}}
 </style>
 
 <div class="rank"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>

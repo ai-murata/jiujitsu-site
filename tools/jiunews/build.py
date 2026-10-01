@@ -493,6 +493,8 @@ HEAD = """<!DOCTYPE html>
     .item h3 {{ font-size: 16.5px; }}
     .item p {{ font-size: 14px; }}
   }}
+  /* スマホで小さい字と押しにくいボタンを底上げ（~/.claude/scripts/sp_readable.py と同じ値） */
+  @media (max-width:640px){{.tag{{font-size:12px}}}}
 </style>
 
 <header>
