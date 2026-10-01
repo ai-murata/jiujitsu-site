@@ -399,6 +399,8 @@ HEAD = """<!DOCTYPE html>
     .did li {{ padding-left: 38px; }}
     .did h2 {{ font-size: 16px; }}
   }}
+  /* スマホで小さい字を底上げ（~/.claude/scripts/sp_readable.py と同じ値） */
+  @media (max-width:640px){{.brand{{font-size:12px}}.ask span{{font-size:12.5px}}}}
 </style>
 """
 
