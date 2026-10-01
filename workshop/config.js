@@ -12,6 +12,13 @@ if (window.WORKSHOP_DEMO) {
       var h = a.getAttribute('href');
       if (/^(\.\/|cancel\.html)/.test(h) && h.indexOf('demo') < 0) a.setAttribute('href', h + (h.indexOf('?') < 0 ? '?' : '&') + 'demo');
     });
+    // デモ版では依頼元の名前とロゴを出さない（紹介ページから誰でも開けるため）
+    var bar = document.querySelector('.brandbar .in');
+    if (bar) bar.innerHTML = '<span class="mark">ART FES</span><span class="org">ワークショップ受付<br>デモ版</span>';
+    var t = document.getElementById('title');
+    if (t) t.innerHTML = 'アートフェス<br>ワークショップ参加申込み';
+    var f = document.querySelector('footer');
+    if (f) f.textContent = 'デモ版 ・ 見本の日時で動いています';
   });
 }
 
@@ -51,7 +58,7 @@ window.workshopApi = {
 var workshopDemo = {
   config: {
     ok: true,
-    title: '第2回JCSAアートフェス ワークショップ',
+    title: 'アートフェス ワークショップ',
     products: ['アートバック', 'アートタンブラー'],
     ages: ['大人', '中学生', '小学6年', '小学5年', '小学4年', '小学3年', '小学2年', '小学1年', '年長', '年中', '年少', 'その他'],
     sources: ['Instagram', 'チラシ・ポスター', 'ホームページ', '知人の紹介', 'その他'],
