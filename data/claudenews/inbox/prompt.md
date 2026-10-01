@@ -96,12 +96,124 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
 
 [
  {
-  "id": "aeb0a46bb641",
+  "id": "54eaeaebb828",
+  "region": "jp",
+  "source": "日経クロステック（xTECH）",
+  "title": "Claude Codeの「ごまかし」に直面 マネージド版と併用で乗り切る",
+  "snippet": "",
+  "published": "2026-09-30T22:02:00+00:00"
+ },
+ {
+  "id": "45e05fc1291d",
+  "region": "jp",
+  "source": "newspicks.com",
+  "title": "あなたのClaude Codeが微妙なのは、プロンプトのせいじゃない",
+  "snippet": "",
+  "published": "2026-09-30T21:30:13+00:00"
+ },
+ {
+  "id": "ae82d35789ca",
+  "region": "jp",
+  "source": "株式会社エクサウィザーズ",
+  "title": "Google、次世代「Gemini 4 Argon」を発表 OpenAI・Anthropicとの最先端モデル競争が再加速",
+  "snippet": "",
+  "published": "2026-09-30T22:28:35+00:00"
+ },
+ {
+  "id": "3aa14c5cf3f6",
+  "region": "jp",
+  "source": "PC Watch",
+  "title": "Mythos並みのサイバー攻撃能力を持つGLM-5.3にAnthropicが警鐘",
+  "snippet": "",
+  "published": "2026-09-30T05:46:31+00:00"
+ },
+ {
+  "id": "576fbf9996b0",
+  "region": "jp",
+  "source": "株式会社マネーフォワード",
+  "title": "「経理AI Forward – AIとともに経理をもっと前へ。 – 」に Anthropic Japan 合同会社 菅野 信 氏の登壇が決定",
+  "snippet": "",
+  "published": "2026-09-30T06:04:31+00:00"
+ },
+ {
+  "id": "58a0b5cf15d6",
+  "region": "jp",
+  "source": "Unite.AI",
+  "title": "Anthropic、Claude for Government をエージェンシー向けに一般提供",
+  "snippet": "",
+  "published": "2026-09-30T17:58:05+00:00"
+ },
+ {
+  "id": "10b2640018ed",
   "region": "jp",
   "source": "Yahoo!ニュース",
-  "title": "【2026年最新】Claude Code勢に迫る？ 激変したCopilot、仕事が回る“7つ”の新機能（ビジネス＋IT）",
+  "title": "米コングがAIエージェント基盤「Volcano」、DBや認証を一体化 Claude Codeから本番へ（ビジネス＋IT）",
   "snippet": "",
-  "published": "2026-09-29T22:20:06+00:00"
+  "published": "2026-09-30T21:06:50+00:00"
+ },
+ {
+  "id": "dd57ff7b1650",
+  "region": "jp",
+  "source": "Gizmodo",
+  "title": "Anthropic、驚異的なハイペースで日常使いに最適な新モデルを発表",
+  "snippet": "",
+  "published": "2026-10-01T01:00:00+00:00"
+ },
+ {
+  "id": "7959873e18be",
+  "region": "jp",
+  "source": "sbbit.jp",
+  "title": "米Anthropic「AIによる人類滅亡のリスク」投資家に向けIPO目論見書に記載",
+  "snippet": "",
+  "published": "2026-09-30T09:04:00+00:00"
+ },
+ {
+  "id": "111560f1b1c2",
+  "region": "jp",
+  "source": "Pasquale Pillitteri",
+  "title": "Anthropicが「AIに何を求めるか」調査を再開、インタビューは公開も選べる",
+  "snippet": "",
+  "published": "2026-09-30T20:16:19+00:00"
+ },
+ {
+  "id": "922da09f4bac",
+  "region": "jp",
+  "source": "Межа. Новини України.",
+  "title": "Anthropic、史上最大級の株式上場を目指す一方で人工知能の危険性を警告",
+  "snippet": "",
+  "published": "2026-09-30T21:38:04+00:00"
+ },
+ {
+  "id": "f33640998060",
+  "region": "jp",
+  "source": "tradingview.com",
+  "title": "AnthropicのIPOプレゼンテーションは、AIの将来性とリスクの両面に焦点を当てている",
+  "snippet": "",
+  "published": "2026-09-30T19:52:08+00:00"
+ },
+ {
+  "id": "ab2ec600c2be",
+  "region": "jp",
+  "source": "about.gitlab.com",
+  "title": "GitLabとClaude Code でスピードとコンプライアンスを両立する",
+  "snippet": "",
+  "published": "2026-09-30T03:26:53+00:00"
+ },
+ {
+  "id": "711f26619bfd",
+  "region": "jp",
+  "source": "Vietnam.vn",
+  "title": "Anthropic社は、AIによる深刻なリスクについて警告を発している。",
+  "snippet": "",
+  "published": "2026-09-30T13:12:14+00:00"
+ },
+ {
+  "id": "8b267cd4ef48",
+  "region": "jp",
+  "source": "Moomoo",
+  "title": "GraniteSharesの2倍レバレッジ・Anthropic ETF（AILおよびANS）",
+  "snippet": "",
+  "published": "2026-09-30T14:18:17+00:00"
  },
  {
   "id": "b38f1ad1cf62",
@@ -112,268 +224,284 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-09-29T20:00:00+00:00"
  },
  {
-  "id": "da4af6f1f0db",
+  "id": "980e13502031",
   "region": "jp",
-  "source": "Reuters",
-  "title": "The 'alarming' safety warning in the Anthropic IPO filing",
+  "source": "日経クロステック（xTECH）",
+  "title": "生成AI＋「手足」＝AIエージェント 1年半前のClaude Code登場でブレーク",
   "snippet": "",
-  "published": "2026-09-29T23:48:45+00:00"
+  "published": "2026-09-30T22:00:00+00:00"
  },
  {
-  "id": "70e1829fbb77",
+  "id": "9230c8aef558",
   "region": "jp",
-  "source": "XenoSpectrum",
-  "title": "AnthropicのIPO目論見書が「人類存亡リスク」に言及、現行AIの危険はどこまで確認されたか",
+  "source": "Yahoo!ニュース",
+  "title": "「人類存続に関わるリスク」AI開発企業Anthropicが自ら“警鐘” OpenAIは新モデル「GPT6.1アストラ」の公開中止【news23】",
   "snippet": "",
-  "published": "2026-09-29T21:33:01+00:00"
+  "published": "2026-09-30T03:25:23+00:00"
  },
  {
-  "id": "25114075e9e0",
-  "region": "jp",
-  "source": "Unite.AI",
-  "title": "Anthropic、Claude.ai、Code、Cowork、API全体でのサービス障害を報告",
-  "snippet": "",
-  "published": "2026-09-29T15:16:06+00:00"
- },
- {
-  "id": "70a7bd0e7f53",
-  "region": "jp",
-  "source": "gihyo.jp",
-  "title": "スキルに新コマンド「build-eval」",
-  "snippet": "",
-  "published": "2026-09-29T10:32:00+00:00"
- },
- {
-  "id": "12b421a315c8",
+  "id": "82c87aca2c32",
   "region": "jp",
   "source": "Межа. Новини України.",
-  "title": "Anthropicは2025年売上の47％をAmazonとGoogle経由で得て、巨大ITへの依存を深めた",
+  "title": "米連邦取引委員会がAnthropicやOpenAIを調査、AIエージェントの消費者リスクを検証",
   "snippet": "",
-  "published": "2026-09-29T21:45:50+00:00"
+  "published": "2026-09-30T15:27:38+00:00"
  },
  {
-  "id": "adfd9928dcd9",
-  "region": "jp",
-  "source": "Moomoo",
-  "title": "速報：Anthropicの届出で420億ドルの損失判明、AMDがWorld Labsを買収",
-  "snippet": "",
-  "published": "2026-09-29T14:03:45+00:00"
- },
- {
-  "id": "13db6df2c2bf",
-  "region": "jp",
-  "source": "SHIFT AI",
-  "title": "【2026年最新】Claude Codeセミナー・講座おすすめ17選！種類別の選び方も徹底解説",
-  "snippet": "",
-  "published": "2026-09-29T04:23:07+00:00"
- },
- {
-  "id": "83f8689dbfd4",
-  "region": "jp",
-  "source": "jp.beincrypto.com",
-  "title": "AnthropicのIPO申請、AIが人類に脅威と警告",
-  "snippet": "",
-  "published": "2026-09-29T14:07:48+00:00"
- },
- {
-  "id": "0e64947e639d",
-  "region": "jp",
-  "source": "BigGo ファイナンス",
-  "title": "Anthropic CPOマイク・クリーガー氏：「正しいAIプロダクトの形を誰もまだ知らない」",
-  "snippet": "",
-  "published": "2026-09-29T13:08:00+00:00"
- },
- {
-  "id": "1e4695bf2c00",
-  "region": "jp",
-  "source": "itmedia.co.jp",
-  "title": "Anthropic、IPO目論見書でAIによる「人類存亡リスク」を警告 海外報道",
-  "snippet": "",
-  "published": "2026-09-29T10:18:11+00:00"
- },
- {
-  "id": "ab2865db3532",
-  "region": "jp",
-  "source": "Межа. Новини України.",
-  "title": "Anthropic、自律型AIエージェントの法的責任リスクを警告",
-  "snippet": "",
-  "published": "2026-09-29T18:16:23+00:00"
- },
- {
-  "id": "cdb4e8692b73",
-  "region": "jp",
-  "source": "SHIFT AI",
-  "title": "Claude Codeの本おすすめ9選！初心者に合う1冊の選び方",
-  "snippet": "",
-  "published": "2026-09-29T09:29:57+00:00"
- },
- {
-  "id": "85567827541b",
+  "id": "46d2755b4324",
   "region": "jp",
   "source": "XenoSpectrum",
-  "title": "Anthropic、売上46億ドルで純損失420億ドル その裏に5,180億ドルの巨額契約",
+  "title": "中国発AI「GLM-5.3」、Claude最上位モデルに迫る攻撃能力 Anthropicが警告",
   "snippet": "",
-  "published": "2026-09-29T10:56:40+00:00"
+  "published": "2026-09-30T08:07:04+00:00"
  },
  {
-  "id": "5fd413b37f49",
+  "id": "a61d5b01c87c",
   "region": "jp",
-  "source": "TechTargetジャパン",
-  "title": "GPU偏重に迫る転換点 AnthropicがAkamaiにCPUインフラ託す理由：GPU一極集中から分散型CPU基盤への転換",
+  "source": "sbbit.jp",
+  "title": "【2026年最新】Claude Code勢に迫る？ 激変したCopilot、仕事が回る“7つ”の新機能",
   "snippet": "",
-  "published": "2026-09-29T20:00:00+00:00"
+  "published": "2026-09-29T22:10:00+00:00"
  },
  {
-  "id": "6823d4ca8b63",
+  "id": "4c2aa23532d8",
   "region": "jp",
-  "source": "itmedia.co.jp",
-  "title": "Anthropic、「Claude Sonnet 5.5」公開 料金据え置きで30％以上高速化、タスク当たりコスト最大3割減",
+  "source": "디지털투데이",
+  "title": "Anthropic、上場関連の投資説明書でAIエージェントの法的リスクに言及",
   "snippet": "",
-  "published": "2026-09-28T21:55:33+00:00"
+  "published": "2026-09-30T22:57:04+00:00"
  },
  {
-  "id": "b561ccd4c8fc",
+  "id": "a2862efac3af",
   "region": "jp",
-  "source": "クラウド Watch",
-  "title": "NSSOLがAnthropicと協業、AIエージェント連携やレガシーシステム刷新などを推進へ",
+  "source": "Yahoo!ニュース",
+  "title": "米Anthropic「AIによる人類滅亡のリスク」投資家に向けIPO目論見書に記載 (ビジネス＋IT)",
   "snippet": "",
-  "published": "2026-09-29T04:27:00+00:00"
+  "published": "2026-09-30T09:15:06+00:00"
  },
  {
-  "id": "bea36a6899b1",
+  "id": "8a6afe5bc9cb",
   "region": "jp",
-  "source": "jp.beincrypto.com",
-  "title": "AnthropicのIPOに関する8つの疑問点",
+  "source": "yellow.com",
+  "title": "グーグル、次世代モデル「Gemini 4 Argon」を発表 OpenAI・Anthropicをベンチマークで上回ったと主張",
   "snippet": "",
-  "published": "2026-09-29T18:06:38+00:00"
+  "published": "2026-09-30T21:49:17+00:00"
  },
  {
-  "id": "0816aad2102b",
+  "id": "24891458d89d",
   "region": "jp",
-  "source": "Reuters",
-  "title": "アンソロピックＩＰＯ目論見書、壮大なＡＩ構想もコスト増浮き彫り",
+  "source": "ASCII.jp",
+  "title": "「誰でも入手できるAI」がサイバー攻撃を自律構築 Anthropicが「GLM-5.3」に警鐘",
   "snippet": "",
-  "published": "2026-09-29T00:30:00+00:00"
+  "published": "2026-09-30T05:55:00+00:00"
  },
  {
-  "id": "d2f04630a396",
-  "region": "jp",
-  "source": "BigGo ファイナンス",
-  "title": "米株価指数先物はまちまち、半導体株が反発。AnthropicのIPO申請で巨額損失が明らかに",
-  "snippet": "",
-  "published": "2026-09-29T13:25:00+00:00"
- },
- {
-  "id": "c83f1dff65c4",
-  "region": "jp",
-  "source": "株式会社エクサウィザーズ",
-  "title": "エクサベース AI、 Anthropic最新モデル「Claude Opus 5.5」を提供開始 ～長時間の自律的なタスク遂行と、これまでで最も高い安全性評価を両立",
-  "snippet": "",
-  "published": "2026-09-28T23:35:55+00:00"
- },
- {
-  "id": "5aff97db9ddf",
-  "region": "jp",
-  "source": "日本経済新聞",
-  "title": "アンソロピックIPO書類「強力なAI、人類存亡のリスク」 ロイター報道",
-  "snippet": "",
-  "published": "2026-09-29T02:46:05+00:00"
- },
- {
-  "id": "689ac58006e2",
-  "region": "jp",
-  "source": "ビジネス+IT",
-  "title": "AIが作った資料、そのまま出してない？Claude Codeで「AI部下」に検品させる神ワザ7選 連載：きょうから使える生成AI仕事術",
-  "snippet": "",
-  "published": "2026-09-28T21:10:00+00:00"
- },
- {
-  "id": "d22b2a4a75f2",
-  "region": "jp",
-  "source": "Moomoo",
-  "title": "Anthropicの2兆ドル規模IPOの可能性を探る",
-  "snippet": "",
-  "published": "2026-09-29T07:00:00+00:00"
- },
- {
-  "id": "c79c379ee257",
+  "id": "970ebef21f7c",
   "region": "intl",
   "source": "Reuters",
-  "title": "EXCLUSIVE: Anthropic IPO prospectus lays bare deep dependence on Big Tech partners",
+  "title": "FTC opens probe into AI giants including Anthropic and OpenAI",
   "snippet": "",
-  "published": "2026-09-29T21:52:24+00:00"
+  "published": "2026-09-30T18:17:19+00:00"
  },
  {
-  "id": "7ee1dbbeec83",
+  "id": "b96a6df26dab",
   "region": "intl",
   "source": "The New York Times",
-  "title": "Is Claude Conscious? Inside Anthropic’s Quest to Instill Morality Into Its A.I. Models",
+  "title": "F.T.C. Investigates OpenAI and Anthropic Over Potential Consumer Harms",
   "snippet": "",
-  "published": "2026-09-30T00:09:48+00:00"
+  "published": "2026-09-30T19:26:02+00:00"
+ },
+ {
+  "id": "ef85ddc463d7",
+  "region": "intl",
+  "source": "finance.yahoo.com",
+  "title": "Anthropic’s $11.6 Billion Quarter Just Changed How the Market Should Read the S-1",
+  "snippet": "",
+  "published": "2026-09-30T19:44:12+00:00"
+ },
+ {
+  "id": "3682d0f6ba4d",
+  "region": "intl",
+  "source": "CNBC",
+  "title": "Kalshi traders see high odds Anthropic's IPO is announced this year",
+  "snippet": "",
+  "published": "2026-09-30T17:19:57+00:00"
+ },
+ {
+  "id": "48ea1735c49a",
+  "region": "intl",
+  "source": "The Guardian",
+  "title": "US trade regulator opens investigation into AI giants including Anthropic and OpenAI",
+  "snippet": "",
+  "published": "2026-09-30T18:35:00+00:00"
+ },
+ {
+  "id": "bdfa0be116df",
+  "region": "intl",
+  "source": "cbsnews.com",
+  "title": "FTC investigating Anthropic, OpenAI and other companies over potential AI risks",
+  "snippet": "",
+  "published": "2026-09-30T15:07:00+00:00"
+ },
+ {
+  "id": "e79fbf6b1deb",
+  "region": "intl",
+  "source": "Forbes",
+  "title": "Google And Amazon Are The Reason For Anthropic’s Eye-Watering $42 Billion Loss",
+  "snippet": "",
+  "published": "2026-09-30T14:02:58+00:00"
+ },
+ {
+  "id": "0ce56d65cae0",
+  "region": "intl",
+  "source": "WSJ",
+  "title": "FTC Opens Investigation of Anthropic and OpenAI",
+  "snippet": "",
+  "published": "2026-09-30T17:29:00+00:00"
+ },
+ {
+  "id": "be696999f061",
+  "region": "intl",
+  "source": "washingtonpost.com",
+  "title": "FTC launches broad investigation into Anthropic, OpenAI",
+  "snippet": "",
+  "published": "2026-10-01T00:26:52+00:00"
+ },
+ {
+  "id": "c6cda4af3133",
+  "region": "intl",
+  "source": "New York Post",
+  "title": "Exclusive | FTC opens sweeping probe of Anthropic, OpenAI and other 'super intelligence' models",
+  "snippet": "",
+  "published": "2026-09-30T13:26:00+00:00"
+ },
+ {
+  "id": "4c71ce6f4954",
+  "region": "intl",
+  "source": "ABC News - Breaking News, Latest News and Videos",
+  "title": "FTC opens probe into safety of AI, including Anthropic and OpenAI",
+  "snippet": "",
+  "published": "2026-09-30T20:41:49+00:00"
+ },
+ {
+  "id": "269daccde8a0",
+  "region": "intl",
+  "source": "Anthropic",
+  "title": "Can we predict the jobs robots will do?",
+  "snippet": "",
+  "published": "2026-09-30T16:01:00+00:00"
+ },
+ {
+  "id": "a10a15490ccd",
+  "region": "intl",
+  "source": "Axios",
+  "title": "AI safety fears put OpenAI and Anthropic in the FTC's crosshairs",
+  "snippet": "",
+  "published": "2026-09-30T21:40:34+00:00"
+ },
+ {
+  "id": "73e9ff9c9771",
+  "region": "intl",
+  "source": "Tom's Hardware",
+  "title": "Anthropic claims popular Chinese AI model has Mythos-class hacking abilities",
+  "snippet": "",
+  "published": "2026-09-30T14:40:00+00:00"
+ },
+ {
+  "id": "03b7da140a53",
+  "region": "intl",
+  "source": "CNBC",
+  "title": "FTC is investigating OpenAI, Anthropic and other AI companies over product risks",
+  "snippet": "",
+  "published": "2026-09-30T15:27:47+00:00"
+ },
+ {
+  "id": "743b4e14f5b9",
+  "region": "intl",
+  "source": "finance.yahoo.com",
+  "title": "Billionaire Bill Ackman calls Anthropic “perhaps the greatest business story I've ever seen”",
+  "snippet": "",
+  "published": "2026-09-30T18:37:46+00:00"
+ },
+ {
+  "id": "823b7c1b4fbe",
+  "region": "intl",
+  "source": "Reuters",
+  "title": "EXCLUSIVE: Anthropic's IPO pitch embraces AI's promise and peril",
+  "snippet": "",
+  "published": "2026-09-30T19:52:00+00:00"
+ },
+ {
+  "id": "85348af57714",
+  "region": "intl",
+  "source": "finance.yahoo.com",
+  "title": "Anthropic IPO documents show there really is only one risk with AI",
+  "snippet": "",
+  "published": "2026-09-30T10:00:00+00:00"
+ },
+ {
+  "id": "a98cfc6e0969",
+  "region": "intl",
+  "source": "Reuters",
+  "title": "EXCLUSIVE: Anthropic's IPO prospectus shows sweeping AI vision, surging costs",
+  "snippet": "",
+  "published": "2026-09-30T01:16:47+00:00"
+ },
+ {
+  "id": "79a02878e66d",
+  "region": "intl",
+  "source": "finance.yahoo.com",
+  "title": "FTC reportedly looking into whether OpenAI, Anthropic violated consumer protection laws.",
+  "snippet": "",
+  "published": "2026-09-30T18:58:20+00:00"
+ },
+ {
+  "id": "a91fa04d0d77",
+  "region": "intl",
+  "source": "XDA",
+  "title": "I compared my Claude Code workflow to a beginner's, and some of my habits were making things worse",
+  "snippet": "",
+  "published": "2026-09-30T20:00:20+00:00"
+ },
+ {
+  "id": "2c9bf6538024",
+  "region": "intl",
+  "source": "latimes.com",
+  "title": "Anthropic says its AI models could manipulate, blackmail and harm humans",
+  "snippet": "",
+  "published": "2026-09-30T18:15:00+00:00"
+ },
+ {
+  "id": "d3acd7e7b00f",
+  "region": "intl",
+  "source": "Reuters",
+  "title": "NEWSLETTER: Inside Anthropic’s confidential S-1: a Q&A",
+  "snippet": "",
+  "published": "2026-09-30T22:25:09+00:00"
+ },
+ {
+  "id": "65739aca37bf",
+  "region": "intl",
+  "source": "The Motley Fool",
+  "title": "Anthropic Plans to Spend $518 Billion on Cloud and Data Centers. More Than $100 Billion Is Already Promised to Amazon.",
+  "snippet": "",
+  "published": "2026-10-01T00:43:28+00:00"
+ },
+ {
+  "id": "f4a5583f763f",
+  "region": "intl",
+  "source": "New York Post",
+  "title": "Anthropic co-founder Daniela Amodei and husband used stuffed-animal 'advisory council' for workplace conflicts: report",
+  "snippet": "",
+  "published": "2026-09-30T15:05:00+00:00"
  },
  {
   "id": "6bec62ce7919",
   "region": "intl",
   "source": "Anthropic",
-  "title": "What Do You Want from AI?",
+  "title": "What do you want from AI?",
   "snippet": "",
   "published": "2026-09-29T16:39:00+00:00"
- },
- {
-  "id": "7a36ad9ca701",
-  "region": "intl",
-  "source": "finance.yahoo.com",
-  "title": "Anthropic IPO: What investors should know about costs, risks after leaked prospectus",
-  "snippet": "",
-  "published": "2026-09-29T16:47:31+00:00"
- },
- {
-  "id": "eba0a23427e1",
-  "region": "intl",
-  "source": "Mashable",
-  "title": "Anthropic launches Claude Opus 5.5: Benchmarks, pricing, safety",
-  "snippet": "",
-  "published": "2026-09-29T20:12:06+00:00"
- },
- {
-  "id": "bc0fa0266610",
-  "region": "intl",
-  "source": "CNN",
-  "title": "Anthropic says its AI models pose ‘existential risk to humanity’ in leaked IPO filing: report",
-  "snippet": "",
-  "published": "2026-09-29T14:37:34+00:00"
- },
- {
-  "id": "3eb6d145f0f5",
-  "region": "intl",
-  "source": "inc.com",
-  "title": "A Quarter of Anthropic's Revenue Comes From 2 Customers. Experts Say the Real Test Comes Next",
-  "snippet": "",
-  "published": "2026-09-29T16:15:49+00:00"
- },
- {
-  "id": "a6b3a75abc69",
-  "region": "intl",
-  "source": "theguardian.com",
-  "title": "Anthropic ‘warns of existential AI risks to humanity’ in IPO document",
-  "snippet": "",
-  "published": "2026-09-29T12:16:00+00:00"
- },
- {
-  "id": "e74a9534f5b0",
-  "region": "intl",
-  "source": "Gizmodo",
-  "title": "Leaked Anthropic IPO Prospectus Gives Wall Street an Early Look at How AI Could Go Off the Rails",
-  "snippet": "",
-  "published": "2026-09-29T17:00:29+00:00"
- },
- {
-  "id": "f74745b2c6f4",
-  "region": "intl",
-  "source": "Reuters",
-  "title": "EXCLUSIVE: Anthropic warns AI may pose 'existential risks to humanity' in IPO filing",
-  "snippet": "",
-  "published": "2026-09-29T17:04:59+00:00"
  },
  {
   "id": "eb144befd6f5",
@@ -384,166 +512,6 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-09-29T15:46:00+00:00"
  },
  {
-  "id": "ee928c6a4bcd",
-  "region": "intl",
-  "source": "finance.yahoo.com",
-  "title": "Anthropic’s S-1 Is Here. The $518 Billion Commitment Is the Real Story.",
-  "snippet": "",
-  "published": "2026-09-29T16:57:31+00:00"
- },
- {
-  "id": "e70b89633f54",
-  "region": "intl",
-  "source": "The New York Times",
-  "title": "What’s In Anthropic’s I.P.O. Filing",
-  "snippet": "",
-  "published": "2026-09-29T11:58:36+00:00"
- },
- {
-  "id": "ecd668897575",
-  "region": "intl",
-  "source": "theguardian.com",
-  "title": "As AI models go rogue, do you still trust OpenAI and Anthropic to stop them? I don’t and neither should you",
-  "snippet": "",
-  "published": "2026-09-29T16:32:00+00:00"
- },
- {
-  "id": "e93dcefebda3",
-  "region": "intl",
-  "source": "Reuters",
-  "title": "Anthropic's $518 billion AI buildout hinges largely on deals that cannot be canceled, filing shows",
-  "snippet": "",
-  "published": "2026-09-29T16:48:56+00:00"
- },
- {
-  "id": "31232a545b93",
-  "region": "intl",
-  "source": "finance.yahoo.com",
-  "title": "Anthropic IPO leaks — here are 2 big hot takes",
-  "snippet": "",
-  "published": "2026-09-29T14:53:45+00:00"
- },
- {
-  "id": "79337459cf8f",
-  "region": "intl",
-  "source": "Reuters",
-  "title": "EXCLUSIVE: Anthropic says rogue AI agents pose uncertain legal risk for the company",
-  "snippet": "",
-  "published": "2026-09-29T17:16:36+00:00"
- },
- {
-  "id": "e4ee0142c30f",
-  "region": "intl",
-  "source": "finance.yahoo.com",
-  "title": "Anthropic Reportedly Generated $4.6 Billion in Revenue and Lost $42 Billion in 2025. Will This Impact Its Targeted $2 Trillion Valuation?",
-  "snippet": "",
-  "published": "2026-09-29T14:37:01+00:00"
- },
- {
-  "id": "ebb1b4ffb076",
-  "region": "intl",
-  "source": "Reuters",
-  "title": "Anthropic's IPO prospectus sharpens focus on AI valuations",
-  "snippet": "",
-  "published": "2026-09-29T14:15:53+00:00"
- },
- {
-  "id": "fd7d8d19d8ef",
-  "region": "intl",
-  "source": "Reuters",
-  "title": "Trump, AI CEOs sign voluntary safety pact, back data center expansion",
-  "snippet": "",
-  "published": "2026-09-29T22:45:58+00:00"
- },
- {
-  "id": "8d08bfd06570",
-  "region": "intl",
-  "source": "fortune.com",
-  "title": "Anthropic’s leaked IPO prospectus details steep losses, rapid growth, and a fear that AI could end humanity",
-  "snippet": "",
-  "published": "2026-09-29T10:03:00+00:00"
- },
- {
-  "id": "aa6eb781d65b",
-  "region": "intl",
-  "source": "Investor's Business Daily",
-  "title": "Anthropic IPO Filing Shows Fast Growth, Big Losses and 'Catastrophic Risk' Warning: Report",
-  "snippet": "",
-  "published": "2026-09-29T13:50:00+00:00"
- },
- {
-  "id": "bf7bd4adac19",
-  "region": "intl",
-  "source": "The Next Web",
-  "title": "Claude is down as Anthropic investigates errors across its services",
-  "snippet": "",
-  "published": "2026-09-29T17:34:38+00:00"
- },
- {
-  "id": "c3490ab34d66",
-  "region": "intl",
-  "source": "Bloomberg.com",
-  "title": "ExodusPoint Joins Hedge Funds Partnering With Anthropic Over AI",
-  "snippet": "",
-  "published": "2026-09-29T13:09:22+00:00"
- },
- {
-  "id": "9d7c913545a6",
-  "region": "intl",
-  "source": "Reuters",
-  "title": "Breakingviews - COMMENTARY: Anthropic’s $2 trln goal is AI’s biggest moonshot",
-  "snippet": "",
-  "published": "2026-09-29T19:08:01+00:00"
- },
- {
-  "id": "6096e6b78172",
-  "region": "intl",
-  "source": "Anthropic",
-  "title": "Introducing Claude Sonnet 5.5",
-  "snippet": "",
-  "published": "2026-09-28T22:47:04+00:00"
- },
- {
-  "id": "bd6e02d9333e",
-  "region": "intl",
-  "source": "Claude Platform",
-  "title": "Prompting Claude Sonnet 5.5",
-  "snippet": "",
-  "published": "2026-09-28T18:01:55+00:00"
- },
- {
-  "id": "dfa6fdcebcc6",
-  "region": "intl",
-  "source": "Claude Platform",
-  "title": "Claude Sonnet 5.5",
-  "snippet": "",
-  "published": "2026-09-28T17:59:48+00:00"
- },
- {
-  "id": "e2148b46b050",
-  "region": "intl",
-  "source": "Anthropic",
-  "title": "Claude Sonnet 5.5 System Card",
-  "snippet": "",
-  "published": "2026-09-28T18:06:05+00:00"
- },
- {
-  "id": "d30ca3f5cca3",
-  "region": "intl",
-  "source": "Claude Platform",
-  "title": "Migrating to Claude Sonnet 5.5",
-  "snippet": "",
-  "published": "2026-09-28T18:01:46+00:00"
- },
- {
-  "id": "15da86502fbc",
-  "region": "intl",
-  "source": "claude.com",
-  "title": "Giving companies more control over their AI agents, with NVIDIA",
-  "snippet": "",
-  "published": "2026-09-28T21:02:46+00:00"
- },
- {
   "id": "6093cfce68e8",
   "region": "intl",
   "source": "Anthropic",
@@ -552,28 +520,28 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-09-30T00:02:28+00:00"
  },
  {
-  "id": "c86e0fbd3806",
+  "id": "bd6e02d9333e",
   "region": "intl",
   "source": "Claude Platform",
-  "title": "Capabilities",
+  "title": "Prompting Claude Sonnet 5.5",
   "snippet": "",
-  "published": "2026-09-28T16:15:01+00:00"
+  "published": "2026-10-01T00:59:50+00:00"
  },
  {
-  "id": "50649cb48912",
+  "id": "3141cb4fdf43",
   "region": "intl",
-  "source": "support.claude.com",
-  "title": "Why Claude switched models in your conversation with Sonnet 5.5",
+  "source": "claude.com",
+  "title": "Claude for Government is now generally available",
   "snippet": "",
-  "published": "2026-09-28T18:02:18+00:00"
+  "published": "2026-09-30T17:34:15+00:00"
  },
  {
-  "id": "6d3aad834d55",
+  "id": "d30ca3f5cca3",
   "region": "intl",
-  "source": "support.claude.com",
-  "title": "Real-time cyber safeguards on Claude Opus and Sonnet",
+  "source": "Claude Platform",
+  "title": "Migrating to Claude Sonnet 5.5",
   "snippet": "",
-  "published": "2026-09-28T19:21:59+00:00"
+  "published": "2026-10-01T00:50:30+00:00"
  },
  {
   "id": "cdbfeef20de6",
@@ -589,31 +557,23 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "source": "support.claude.com",
   "title": "Use Claude Cowork on web, desktop, and mobile | Claude Help Center",
   "snippet": "",
+  "published": "2026-09-30T22:06:02+00:00"
+ },
+ {
+  "id": "2788fc37f9b5",
+  "region": "intl",
+  "source": "support.claude.com",
+  "title": "Schedule recurring tasks in Claude Cowork | Claude Help Center",
+  "snippet": "",
   "published": "2026-09-29T19:04:22+00:00"
  },
  {
-  "id": "310df9abad1c",
-  "region": "intl",
-  "source": "support.claude.com",
-  "title": "How Claude marks AI-generated content | Claude Help Center",
-  "snippet": "",
-  "published": "2026-09-28T18:34:34+00:00"
- },
- {
-  "id": "7ac985bcdef7",
-  "region": "intl",
-  "source": "Claude Platform",
-  "title": "What's new in Claude Sonnet 5.5",
-  "snippet": "",
-  "published": "2026-09-28T18:00:08+00:00"
- },
- {
-  "id": "f26ba77aff5c",
+  "id": "89e5db3177a0",
   "region": "intl",
   "source": "academy.claude.com",
-  "title": "Plugins: Encode your team's expertise · Introduction to Claude Cowork",
+  "title": "Get started in Claude Cowork in three steps",
   "snippet": "",
-  "published": "2026-09-29T14:28:24+00:00"
+  "published": "2026-09-29T16:52:58+00:00"
  },
  {
   "id": "9ccbbcf4e1a3",
@@ -621,7 +581,7 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "source": "academy.claude.com",
   "title": "- academy.claude.com",
   "snippet": "academy.claude.com",
-  "published": "2026-09-29T22:11:58+00:00"
+  "published": "2026-09-30T22:25:21+00:00"
  },
  {
   "id": "9d72d5707bd7",
@@ -632,68 +592,116 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-09-29T19:38:52+00:00"
  },
  {
-  "id": "897b6d00b9d7",
-  "region": "intl",
-  "source": "Anthropic",
-  "title": "Claude Sonnet 5",
-  "snippet": "",
-  "published": "2026-09-28T18:00:12+00:00"
- },
- {
-  "id": "d9da138975c5",
-  "region": "intl",
-  "source": "Claude Platform",
-  "title": "Claude Sonnet 5.5 system prompts",
-  "snippet": "",
-  "published": "2026-09-28T19:14:18+00:00"
- },
- {
-  "id": "2a011c7f7ffa",
-  "region": "intl",
-  "source": "Anthropic",
-  "title": "Policy on the AI Exponential",
-  "snippet": "",
-  "published": "2026-09-28T14:00:06+00:00"
- },
- {
   "id": "006a7a871bca",
   "region": "intl",
   "source": "Anthropic",
   "title": "- Anthropic",
   "snippet": "Anthropic",
-  "published": "2026-09-29T15:54:04+00:00"
+  "published": "2026-09-30T14:00:43+00:00"
  },
  {
-  "id": "dcdfed08d1ca",
+  "id": "c91a96312fda",
   "region": "intl",
   "source": "support.claude.com",
-  "title": "Preserved thinking: changing how the Messages API handles thinking blocks to protect against distillation",
+  "title": "Get started with smart reports | Claude Help Center",
   "snippet": "",
-  "published": "2026-09-28T18:36:28+00:00"
+  "published": "2026-09-29T22:25:44+00:00"
  },
  {
-  "id": "a3dbb26ac21b",
+  "id": "88c2b983d4e4",
   "region": "intl",
   "source": "claude.com",
-  "title": "Apply to the Anthropic VC partner program",
+  "title": "How Anthropic's sales team rebuilt inbound with Claude Managed Agents",
   "snippet": "",
-  "published": "2026-09-29T03:24:50+00:00"
+  "published": "2026-09-30T14:06:32+00:00"
  },
  {
-  "id": "46b30df39c5b",
+  "id": "f5825f00ee38",
   "region": "intl",
   "source": "claude.com",
-  "title": "Replit Claude Platform (API) case study",
+  "title": "Connectors and plugins - Claude",
   "snippet": "",
-  "published": "2026-09-28T21:11:05+00:00"
+  "published": "2026-09-30T18:58:07+00:00"
  },
  {
-  "id": "cad569c6c442",
+  "id": "5ff1d1380674",
   "region": "intl",
   "source": "claude.com",
-  "title": "Productivity",
+  "title": "Cyera",
   "snippet": "",
-  "published": "2026-09-29T03:46:23+00:00"
+  "published": "2026-09-30T18:16:57+00:00"
+ },
+ {
+  "id": "310df9abad1c",
+  "region": "intl",
+  "source": "support.claude.com",
+  "title": "How Claude marks AI-generated content | Claude Help Center",
+  "snippet": "",
+  "published": "2026-10-01T00:01:14+00:00"
+ },
+ {
+  "id": "a7188554c0a6",
+  "region": "intl",
+  "source": "claude.com",
+  "title": "Box Claude Platform (API) case study",
+  "snippet": "",
+  "published": "2026-09-30T14:39:29+00:00"
+ },
+ {
+  "id": "71678365a80b",
+  "region": "intl",
+  "source": "claude.com",
+  "title": "Partner waitlist",
+  "snippet": "",
+  "published": "2026-09-30T14:38:23+00:00"
+ },
+ {
+  "id": "e2812381b10f",
+  "region": "intl",
+  "source": "claude.com",
+  "title": "Factory",
+  "snippet": "",
+  "published": "2026-09-30T15:01:18+00:00"
+ },
+ {
+  "id": "d8c8c316a5f5",
+  "region": "intl",
+  "source": "claude.com",
+  "title": "Claude Marketplace",
+  "snippet": "",
+  "published": "2026-09-29T19:08:37+00:00"
+ },
+ {
+  "id": "e906205e2ba5",
+  "region": "intl",
+  "source": "claude.com",
+  "title": "Slack Claude Platform (API) case study",
+  "snippet": "",
+  "published": "2026-09-30T02:36:56+00:00"
+ },
+ {
+  "id": "d9aceddd3007",
+  "region": "intl",
+  "source": "claude.com",
+  "title": "CodeRabbit",
+  "snippet": "",
+  "published": "2026-09-30T02:31:39+00:00"
+ },
+ {
+  "id": "a5afe4bc0fad",
+  "region": "intl",
+  "source": "claude.com",
+  "title": "monday.com",
+  "snippet": "",
+  "published": "2026-09-30T14:41:42+00:00"
+ },
+ {
+  "id": "efce1daa2ff1",
+  "region": "intl",
+  "source": "Claude Code リリースノート",
+  "title": "v2.1.286",
+  "snippet": "What's changed Added a count such as \"2 of 5\" to the permission prompt when several permission requests stack up Added mouse support for the \"N more\" rows of lists in fullscreen mode: click one to jump to that end of the list, with hover and pressed states Fixed several Claude Code processes and IDE extensions each opening a login browser when gcpAuthRefresh or awsAuthRefresh credentials expire Fixed claude --resume and --continue sometimes losing every turn after a batch of parallel tool calls when the earlier session crashed or was killed Fixed API 400 errors after a tool or hook returned an…",
+  "published": "2026-09-30T19:10:13+00:00"
  },
  {
   "id": "d906990043d7",
@@ -702,13 +710,5 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "title": "v2.1.285",
   "snippet": "What's changed Added CLAUDE_CODE_DISABLE_WEB_FETCH environment variable to turn off the WebFetch tool Added claude --desktop to open the Claude desktop app on the current directory, or on a session with --continue / --resume <id> Added claude plugin configure <plugin> to show a plugin's options and which are unset, or save new values read from stdin with --values-stdin Added <server>.<key>=<value> to claude plugin install --config , so a bundled .mcpb MCP server's own settings can be set at install time and it starts without visiting /plugin → Configure Added allowedProviders managed setting t…",
   "published": "2026-09-29T19:27:30+00:00"
- },
- {
-  "id": "00e36c8cef2e",
-  "region": "intl",
-  "source": "Claude Code リリースノート",
-  "title": "v2.1.284",
-  "snippet": "What's changed Added Claude Sonnet 5.5 ( claude-sonnet-5-5 ), now the default Sonnet model on the Anthropic API — 1M context, $2/$10 per Mtok with $0.20/Mtok cache reads Added a \"Yes, but ask again next time\" answer to auto mode's prompt before a read outside the working directories, so you can allow that one read and still be asked about later ones Added dollar amounts to the Claude apps gateway spend limit in /usage and the status line (for example \"$271.40 / $500.00 spent this month\") when the gateway runs this version or later; the status line's rate_limits.spend_limit also gains used_usd…",
-  "published": "2026-09-28T18:02:03+00:00"
  }
 ]
