@@ -6,7 +6,9 @@
     "staff/",
     "mami-",
     "secondo-",
-    "data/news-sent.json"
+    "data/news-sent.json",
+    "wa-recipe-",
+    "recipe-hint-"
   ],
   "private_words": [
     "まみ",
@@ -23,9 +25,17 @@
     "パスワード",
     "mami-",
     "b5d5e37cd655",
-    "dc5c53f37d6d"
+    "dc5c53f37d6d",
+    "wa-recipe-",
+    "recipe-hint-",
+    "先生用"
   ],
-  "auto_authors": ["github-actions[bot]"],
-  "auto_subject_prefixes": ["chore(", "Merge "],
+  "auto_authors": [
+    "github-actions[bot]"
+  ],
+  "auto_subject_prefixes": [
+    "chore(",
+    "Merge "
+  ],
   "max_items": 3
 }
