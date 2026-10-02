@@ -1,6 +1,6 @@
 # 毎朝の柔術ニュース：ルーティンの手順
 
-Claude Code のルーティン（毎朝 06:49 JST）が、このファイルを読んで上から順におこなう。
+Claude Code のルーティン（毎日 11:49 JST）が、このファイルを読んで上から順におこなう。
 APIキーは使わない。翻訳・要約は、実行中の Claude 自身が書く。
 
 ニュースの取得は、その前の 06:30 JST に GitHub Actions（`.github/workflows/jiunews.yml`）が済ませ、

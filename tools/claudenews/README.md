@@ -12,8 +12,10 @@ Claude（Anthropic）に関する国内と海外のニュースを毎朝集め�
 | 時刻 (JST) | だれが | なにを |
 |---|---|---|
 | 07:10 | GitHub Actions（`claudenews.yml`） | `build.py --collect-only data/claudenews/inbox` で RSS から候補を集め、`candidates.json` と `prompt.md` を main に置く |
-| 07:52 | Claude Code のルーティン | [`ROUTINE.md`](ROUTINE.md) の手順で `prompt.md` を読み、`result.json` を書き、`build.py --apply` で号とページを作って main に push |
+| 11:52 | Claude Code のルーティン | [`ROUTINE.md`](ROUTINE.md) の手順で `prompt.md` を読み、`result.json` を書き、`build.py --apply` で号とページを作って main に push |
 
+- GitHub Actions の時刻指定は混んでいると数時間遅れる（実際に 07:10 予定が 10:15 ごろになった）。
+  ルーティンはその遅れを見込んで昼前に動かしている。
 - 外部のニュースサイトにつなぐのは Actions だけ。ルーティンは GitHub にだけつながればよい。
 - 手順を変えたいときは `ROUTINE.md` を直せばよい（ルーティンは毎回このファイルを読む）。
 - 選び方（何を優先するか・何を載せないか）を変えたいときは `build.py` の `SYSTEM_PROMPT` を直す。
