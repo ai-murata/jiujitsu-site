@@ -95,6 +95,8 @@
     .item h3 { font-size: 16.5px; }
     .item p { font-size: 14px; }
   }
+  /* スマホで小さい字と押しにくいボタンを底上げ（~/.claude/scripts/sp_readable.py と同じ値） */
+  @media (max-width:640px){.brand{font-size:12px}.tag{font-size:12px}}
 </style>
 
 <header>
@@ -188,7 +190,7 @@
     </li>
     </ul>
   </section>
-  <p class="pager"><span></span><span></span></p>
+  <p class="pager"><span></span><a href="/jiunews/2026-10-02/">2026.10.02（金） →</a></p>
   <p class="note">
     ※ 各ニュースは、公開されている記事の見出しと冒頭部分をもとに、AI（Claude）が選んで日本語で要約したものです。
     海外の記事はAIが翻訳しています。訳や要約にまちがいがある場合があるので、くわしくは必ず元の記事でご確認ください。
@@ -199,5 +201,3 @@
     <br>© 2026 BUTTI ON LINE Inc.
   </footer>
 </div>
-<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.tag{font-size:12px}}</style>
-
