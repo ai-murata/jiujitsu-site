@@ -93,12 +93,36 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
 
 [
  {
-  "id": "92f9d801c1c2",
+  "id": "068796aadcec",
   "region": "jp",
-  "source": "hokkaido-np.co.jp",
-  "title": "極めた寝技 野中さん全国3位 ブラジリアン柔術大会 江別高2年 競技歴2年「次は世界」",
+  "source": "nnn.ed.jp",
+  "title": "N高2年 鈴木美結選手が「第20回アジア競技大会」柔術で銅メダルを獲得！",
   "snippet": "",
-  "published": "2026-09-30T19:00:00+00:00"
+  "published": "2026-10-02T00:45:30+00:00"
+ },
+ {
+  "id": "5a02b2d85595",
+  "region": "jp",
+  "source": "読売新聞",
+  "title": "柔術 男子69キロ級 試合結果・記録 アジア競技大会2026 愛知・名古屋",
+  "snippet": "",
+  "published": "2026-10-01T13:09:00+00:00"
+ },
+ {
+  "id": "68e59705e3d3",
+  "region": "jp",
+  "source": "河北新報オンライン",
+  "title": "柔術男子69キロ級・熊田堅信（宮城・名取出身）人生を変えた柔術「才能よりも努力がものをいう。練習すればするだけ強くなる」＜アジア大会",
+  "snippet": "",
+  "published": "2026-10-01T09:21:00+00:00"
+ },
+ {
+  "id": "0907e97a1846",
+  "region": "jp",
+  "source": "TVer",
+  "title": "佐々木と町田がブラジリアン柔術でガチ対決！？ 仙台市・カルペディエム仙台",
+  "snippet": "",
+  "published": "2026-10-01T15:20:24+00:00"
  },
  {
   "id": "8f944c803e50",
@@ -109,68 +133,60 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-09-30T22:00:53+00:00"
  },
  {
-  "id": "cf111874c4a3",
+  "id": "92f9d801c1c2",
   "region": "jp",
-  "source": "Vietnam.vn",
-  "title": "カン・トー柔術は全国スポーツ大会に向けて加速している。",
+  "source": "北海道新聞デジタル",
+  "title": "極めた寝技 野中さん全国3位 ブラジリアン柔術大会 江別高2年 競技歴2年「次は世界」",
   "snippet": "",
-  "published": "2026-09-30T06:37:40+00:00"
+  "published": "2026-09-30T19:00:00+00:00"
  },
  {
-  "id": "658748667fd3",
+  "id": "de9870bd8408",
   "region": "jp",
-  "source": "YouTube",
-  "title": "【FULL FIGHT】前田直紀 vs ジョアオ・コバヤシ / SJJIF WORLD 2026 【ブラジリアン柔術】 Naoki Maeda vs Joao Kobayashi",
+  "source": "UFC公式",
+  "title": "UFC BJJ 12: Moura vs Fornarino Fight Card",
   "snippet": "",
-  "published": "2026-09-30T05:26:03+00:00"
+  "published": "2026-09-30T16:00:00+00:00"
  },
  {
-  "id": "d303f547ecde",
-  "region": "jp",
-  "source": "Yahoo!ニュース",
-  "title": "「最強芸能人」ランキング、\"剣道二段\"吉沢亮を抑えた「かっこいいのに強い」イケオジ俳優は【総合順位】（ピンズバNEWS）",
-  "snippet": "",
-  "published": "2026-09-30T02:00:37+00:00"
- },
- {
-  "id": "02caf267897b",
-  "region": "jp",
-  "source": "ダイヤモンド・オンライン",
-  "title": "50代になっても「若い頃と同じ頑張り方」をする人が、うまくいかなくなる理由",
-  "snippet": "",
-  "published": "2026-09-29T22:35:00+00:00"
- },
- {
-  "id": "bc11e5c6c23f",
-  "region": "jp",
-  "source": "ピンズバNEWS",
-  "title": "「最強芸能人」ランキング、\"空手世界一\"横浜流星を抑えた「別格の強さ」の人物は【トップ3】｜ニュース",
-  "snippet": "",
-  "published": "2026-09-29T23:30:00+00:00"
- },
- {
-  "id": "87d2052c04e1",
-  "region": "jp",
-  "source": "Infoseek",
-  "title": "レスリング日下、尾崎ら登場 第13日見どころ",
-  "snippet": "",
-  "published": "2026-09-30T08:24:01+00:00"
- },
- {
-  "id": "3b9e4cde68a2",
+  "id": "a3cfe956df0b",
   "region": "jp",
   "source": "Laodong.vn",
-  "title": "本日(10月1日)の第20回アジア競技大会に出場するベトナム代表団の生中継",
+  "title": "ベトナムのeスポーツは、アジア大会20でさらに銅メダルを獲得するという任務を完了しました。",
   "snippet": "",
-  "published": "2026-09-30T23:48:00+00:00"
+  "published": "2026-10-01T07:07:10+00:00"
  },
  {
-  "id": "c4fbcb5e1307",
+  "id": "d2e6a405d408",
   "region": "jp",
-  "source": "au Webポータル",
-  "title": "「最強芸能人」ランキング、\"空手世界一\"横浜流星を抑えた「別格の強さ」の人物は【トップ3】",
+  "source": "Vietnam.vn",
+  "title": "アジア競技大会ライブ中継 10月1日：セパタクローがグループリーグ全3試合に勝利。eスポーツが銅メダルを獲得。",
   "snippet": "",
-  "published": "2026-09-30T02:08:55+00:00"
+  "published": "2026-10-01T12:39:47+00:00"
+ },
+ {
+  "id": "94bb7587e562",
+  "region": "jp",
+  "source": "YouTube",
+  "title": "[CHAINSAW BLOOD･10/8&10/29]反転柔術式208外伝1359",
+  "snippet": "",
+  "published": "2026-09-30T16:41:15+00:00"
+ },
+ {
+  "id": "25131833e09b",
+  "region": "jp",
+  "source": "Laodong.vn",
+  "title": "本日(10月2日)の第20回アジア競技大会でのベトナム代表団の試合を生中継",
+  "snippet": "",
+  "published": "2026-10-02T00:05:00+00:00"
+ },
+ {
+  "id": "8201be6c6887",
+  "region": "jp",
+  "source": "Vietnam.vn",
+  "title": "ベトナムとブラジルのスポーツ協力関係の強化",
+  "snippet": "",
+  "published": "2026-10-01T01:14:51+00:00"
  },
  {
   "id": "1ab1576d3620",
@@ -181,28 +197,92 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-10-01T00:00:12+00:00"
  },
  {
-  "id": "8f82fe15cc63",
+  "id": "ccaad092e16c",
+  "region": "jp",
+  "source": "Vietnam.vn",
+  "title": "2026年アジア競技大会、10月1日：ベトナムのスポーツ界には多くのメダル獲得のチャンスが待っている。",
+  "snippet": "",
+  "published": "2026-10-01T00:59:46+00:00"
+ },
+ {
+  "id": "3b9e4cde68a2",
   "region": "jp",
   "source": "Laodong.vn",
-  "title": "柔術選手のダン・ディン・トゥン、フン・ティ・フエがアジア大会20のメダル獲得のチャンスを狙う",
+  "title": "本日(10月1日)の第20回アジア競技大会に出場するベトナム代表団の生中継",
   "snippet": "",
-  "published": "2026-09-30T02:42:38+00:00"
+  "published": "2026-09-30T23:48:00+00:00"
  },
  {
-  "id": "c27792d15b58",
+  "id": "59355d655b72",
+  "region": "jp",
+  "source": "Yahoo!ニュース",
+  "title": "50代になっても「若い頃と同じ頑張り方」をする人が、うまくいかなくなる理由（ダイヤモンド・オンライン）",
+  "snippet": "",
+  "published": "2026-10-01T22:39:45+00:00"
+ },
+ {
+  "id": "7eb6f358808d",
+  "region": "jp",
+  "source": "ｄメニューニュース",
+  "title": "体重５０キロ台力士で注目の新道が相撲教習所入所「序ノ口で勝ち越したい」九州場所へ闘志【大相撲】",
+  "snippet": "",
+  "published": "2026-10-01T08:37:30+00:00"
+ },
+ {
+  "id": "d0c19e81a6b9",
+  "region": "jp",
+  "source": "Vietnam.vn",
+  "title": "10月2日から10日まで開催される第20回アジア競技大会におけるベトナムスポーツ代表団のスケジュール。",
+  "snippet": "",
+  "published": "2026-10-01T23:56:08+00:00"
+ },
+ {
+  "id": "c79b0f9d0971",
   "region": "jp",
   "source": "Goal.com",
-  "title": "全競技スケジュール・日程｜第20回アジア大会",
+  "title": "【10月1日】アジア大会の地上波TBS・ネットU-NEXT中継予定",
   "snippet": "",
-  "published": "2026-09-30T09:42:56+00:00"
+  "published": "2026-09-30T21:00:00+00:00"
  },
  {
-  "id": "600f7866c330",
+  "id": "320fa0290a2a",
   "region": "jp",
-  "source": "ピンズバNEWS",
-  "title": "「最強芸能人」ランキング、\"空手世界一\"横浜流星を抑えた「別格の強さ」の人物は【トップ3】｜概要｜ニュース",
+  "source": "Vietnam.vn",
+  "title": "2026年アジア競技大会、10月2日：ボクシングの金メダル獲得への期待は高く、女子セパタクローは決勝進出を目指す。",
   "snippet": "",
-  "published": "2026-09-29T23:30:00+00:00"
+  "published": "2026-10-02T00:50:44+00:00"
+ },
+ {
+  "id": "4c9859b2003a",
+  "region": "jp",
+  "source": "Vietnam.vn",
+  "title": "10月1日のアジア競技大会のスケジュール：ダン・コン・ドゥック選手はアーチェリーの準々決勝、リーグ・オブ・レジェンドの準決勝に出場します。",
+  "snippet": "",
+  "published": "2026-10-01T02:41:19+00:00"
+ },
+ {
+  "id": "00e534be0e17",
+  "region": "jp",
+  "source": "Vietnam.vn",
+  "title": "本日、グエン・ティ・タムはオリンピックチャンピオンと金メダルをかけて競い合います。",
+  "snippet": "",
+  "published": "2026-10-01T22:43:59+00:00"
+ },
+ {
+  "id": "f2a1455ec799",
+  "region": "jp",
+  "source": "Goal.com",
+  "title": "【番組表】アジア大会2026全競技のテレビ放送・地上波中継・ネット配信予定",
+  "snippet": "",
+  "published": "2026-10-01T13:22:52+00:00"
+ },
+ {
+  "id": "ebf462338665",
+  "region": "jp",
+  "source": "Vietnam.vn",
+  "title": "10月1日時点のアジア競技大会20のメダル順位：eスポーツが銅メダルを獲得、セパタクローも素晴らしいパフォーマンスを見せた。",
+  "snippet": "",
+  "published": "2026-10-01T14:34:29+00:00"
  },
  {
   "id": "c27fd40c8e57",
@@ -213,52 +293,28 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-10-01T00:05:49+00:00"
  },
  {
-  "id": "6bc2ab4780e2",
+  "id": "e4d7409cfd29",
   "region": "jp",
-  "source": "ピンズバNEWS",
-  "title": "「最強芸能人」ランキング、\"剣道二段\"吉沢亮を抑えた「かっこいいのに強い」イケオジ俳優は【第4位以下】｜概要｜ニュース",
+  "source": "YouTube",
+  "title": "ドンマイ川端さんと岩崎正寛さんに小内刈を教えてもらったよ",
   "snippet": "",
-  "published": "2026-09-29T23:30:00+00:00"
+  "published": "2026-10-01T12:43:56+00:00"
  },
  {
-  "id": "d46320940912",
+  "id": "cc7e7473afbf",
   "region": "jp",
-  "source": "au Webポータル",
-  "title": "「最強芸能人」ランキング、\"剣道二段\"吉沢亮を抑えた「かっこいいのに強い」イケオジ俳優は【総合順位】",
+  "source": "news.nicovideo.jp",
+  "title": "【RIZIN】芦澤竜誠、4連敗から復活へ 対戦相手に助言も「操られたピエロになるな。自分の意志で生きて」",
   "snippet": "",
-  "published": "2026-09-30T02:06:00+00:00"
+  "published": "2026-10-01T05:09:27+00:00"
  },
  {
-  "id": "a594218adc91",
+  "id": "f359eae75589",
   "region": "jp",
-  "source": "Vietnam.vn",
-  "title": "10月1日のアジア競技大会（ASIAD 20）のスケジュール：ベトナム代表は、決定的な試合での突破口を待ち望んでいる。",
+  "source": "ゴング格闘技",
+  "title": "【RIZIN】BDで屈辱の敗戦から7カ月、芦澤竜誠「死んでも負けたくないって言ってたんですけど、今は必死で頑張りたい」井上の挑発には「言わされてるから台本があるんじゃないですか」",
   "snippet": "",
-  "published": "2026-10-01T00:05:53+00:00"
- },
- {
-  "id": "1180d03e30e1",
-  "region": "jp",
-  "source": "oita-press.co.jp",
-  "title": "レスリング日下、尾崎ら登場",
-  "snippet": "",
-  "published": "2026-09-29T20:30:36+00:00"
- },
- {
-  "id": "c3a08c7d2466",
-  "region": "jp",
-  "source": "ぐぐスポ！",
-  "title": "【柔術】アジア大会2026 日本代表の結果速報・日程・組み合わせ・放送予定",
-  "snippet": "",
-  "published": "2026-09-30T10:51:53+00:00"
- },
- {
-  "id": "811186980c3f",
-  "region": "jp",
-  "source": "スポカレ",
-  "title": "【石黒翔也】ONE Fight Night 48の視聴方法！配信サービス、対戦カードを解説",
-  "snippet": "",
-  "published": "2026-09-30T03:49:37+00:00"
+  "published": "2026-10-01T09:10:00+00:00"
  },
  {
   "id": "72035b4e6491",
@@ -269,12 +325,44 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-09-30T18:04:59+00:00"
  },
  {
-  "id": "df2af45b9c94",
-  "region": "jp",
-  "source": "au Webポータル",
-  "title": "“圧倒的に好評”デモ版が配信中のメトロイドヴァニア『Iron Bramble』ウィッシュリスト数10万件突破",
+  "id": "4715049a39e6",
+  "region": "intl",
+  "source": "The Vacaville Reporter",
+  "title": "Vacaville man, former Vanden wrestler, wins jiu-jitsu championship",
   "snippet": "",
-  "published": "2026-09-29T16:16:00+00:00"
+  "published": "2026-10-01T22:57:07+00:00"
+ },
+ {
+  "id": "a49e0c6efa8d",
+  "region": "intl",
+  "source": "FloGrappling",
+  "title": "2026 Pan IBJJF Jiu-Jitsu No-Gi Championship - Videos",
+  "snippet": "",
+  "published": "2026-10-02T00:07:56+00:00"
+ },
+ {
+  "id": "ee66315cd922",
+  "region": "intl",
+  "source": "holtonrecorder.net",
+  "title": "Holton native Binkley earns jiu jitsu championship",
+  "snippet": "",
+  "published": "2026-10-01T14:20:33+00:00"
+ },
+ {
+  "id": "ebedc95bca4f",
+  "region": "intl",
+  "source": "shafaq.com",
+  "title": "Shafaq News..Iraqi competitor opens jiu-jitsu campaign",
+  "snippet": "",
+  "published": "2026-10-01T23:02:14+00:00"
+ },
+ {
+  "id": "df05eed00945",
+  "region": "intl",
+  "source": "Idaho State Journal",
+  "title": "Asian Games Jiu-Jitsu",
+  "snippet": "",
+  "published": "2026-10-01T09:53:55+00:00"
  },
  {
   "id": "257c8031ed84",
@@ -282,18 +370,66 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "source": "Community Impact Newspaper",
   "title": "Gracie Barra Brazilian jiu-jitsu academy to open in Liberty Hill",
   "snippet": "",
-  "published": "2026-09-30T21:01:04+00:00"
+  "published": "2026-10-01T01:53:59+00:00"
  },
  {
-  "id": "d58344c02142",
+  "id": "bf72d59472f6",
   "region": "intl",
-  "source": "UFC.com",
-  "title": "UFC BJJ 12: Moura vs Fornarino Fight Card",
+  "source": "FloGrappling",
+  "title": "Watch Jiu-Jitsu",
   "snippet": "",
-  "published": "2026-09-30T16:00:00+00:00"
+  "published": "2026-10-01T09:31:30+00:00"
  },
  {
-  "id": "f6fbad4f8649",
+  "id": "6971e7bbde3b",
+  "region": "intl",
+  "source": "FloGrappling",
+  "title": "2026 Pan Kids Jiu-Jitsu IBJJF Championship",
+  "snippet": "",
+  "published": "2026-10-01T02:31:58+00:00"
+ },
+ {
+  "id": "7fa18e34ca8d",
+  "region": "intl",
+  "source": "facebook.com",
+  "title": "World champion jiu-jitsu Kimberly Custodio made an early exit at the 20th Asian Games after bowing to to the United Arab Emirates’ Balqees Abdulla in the round-of-16 of the women's -48kg class. See comments section for the full story.",
+  "snippet": "",
+  "published": "2026-10-01T14:45:03+00:00"
+ },
+ {
+  "id": "12a98ace14dd",
+  "region": "intl",
+  "source": "Qazinform",
+  "title": "Nurzhan Batyrbekov wins Asian Games jiu-jitsu silver",
+  "snippet": "",
+  "published": "2026-10-01T08:45:23+00:00"
+ },
+ {
+  "id": "dfc606043405",
+  "region": "intl",
+  "source": "Sportscape Magazine",
+  "title": "WATCH: “No Time for Pictures!” UFC BJJ Hypes Adele Fornarino vs. Cassia Moura Title Clash",
+  "snippet": "",
+  "published": "2026-10-01T19:25:34+00:00"
+ },
+ {
+  "id": "e601e86e848a",
+  "region": "intl",
+  "source": "ABS-CBN",
+  "title": "Asiad: World champ Custodio bows out in rough start for PH jiu-jitsu",
+  "snippet": "",
+  "published": "2026-10-01T22:29:00+00:00"
+ },
+ {
+  "id": "0c848d6f1b1f",
+  "region": "intl",
+  "source": "thenationalnews.com",
+  "title": "UAE win three Asian Games gold medals in jiu-jitsu",
+  "snippet": "",
+  "published": "2026-10-01T08:42:03+00:00"
+ },
+ {
+  "id": "20bdf20bc716",
   "region": "intl",
   "source": "FloGrappling",
   "title": "The Black Belt Brackets Are Out For The IBJJF No-Gi Pan Championship",
@@ -301,12 +437,68 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-09-30T21:13:22+00:00"
  },
  {
+  "id": "9358b8b1c851",
+  "region": "intl",
+  "source": "uaebarq.ae",
+  "title": "UAE wins three golds, two silvers in jiu-jitsu at Aichi-Nagoya Asian Games",
+  "snippet": "",
+  "published": "2026-10-01T16:44:20+00:00"
+ },
+ {
+  "id": "aacc7463456b",
+  "region": "intl",
+  "source": "atlaspress.news",
+  "title": "Afghanistan’s Jiu-Jitsu Athlete Reaches Asian Games Quarter-Finals",
+  "snippet": "",
+  "published": "2026-10-01T08:20:16+00:00"
+ },
+ {
+  "id": "50d3d98336ef",
+  "region": "intl",
+  "source": "Sharjah24",
+  "title": "UAE jiu-jitsu wins five medals in single day at Asian Games",
+  "snippet": "",
+  "published": "2026-10-01T19:56:55+00:00"
+ },
+ {
+  "id": "3894676980e2",
+  "region": "intl",
+  "source": "Dubai Eye 103.8",
+  "title": "UAE wins three jiu-jitsu golds, two silvers at Asian Games",
+  "snippet": "",
+  "published": "2026-10-01T12:55:43+00:00"
+ },
+ {
+  "id": "69698425bfed",
+  "region": "intl",
+  "source": "Gulf News",
+  "title": "UAE claim three jiu-jitsu golds at Asian Games",
+  "snippet": "",
+  "published": "2026-10-01T08:11:52+00:00"
+ },
+ {
   "id": "0bb2e8cace4e",
   "region": "intl",
   "source": "Sportscape Magazine",
   "title": "WATCH: Charles Oliveira Hilariously Reacts to ‘Purple Belt Syndrome’ in New BJJ Skit",
   "snippet": "",
-  "published": "2026-09-30T18:56:41+00:00"
+  "published": "2026-09-30T19:49:35+00:00"
+ },
+ {
+  "id": "9ebef23e07b8",
+  "region": "intl",
+  "source": "SPIN.ph: Sports Interactive Network Philippines",
+  "title": "World champion Custodio ousted in first day of Asiad jiu-jitsu",
+  "snippet": "",
+  "published": "2026-10-01T08:29:39+00:00"
+ },
+ {
+  "id": "548df8f4e765",
+  "region": "intl",
+  "source": "thenationalnews.com",
+  "title": "UAE win a record six medals including three golds at Asian Games",
+  "snippet": "",
+  "published": "2026-10-01T10:56:52+00:00"
  },
  {
   "id": "dc0ffa5feb9c",
@@ -314,183 +506,39 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "source": "boxingnews.com",
   "title": "UFC BJJ 12: Moura vs Fornarino — Full Card, Start Time & How to Watch",
   "snippet": "",
-  "published": "2026-09-30T22:07:40+00:00"
+  "published": "2026-09-30T17:46:32+00:00"
  },
  {
-  "id": "6bdb8d641625",
+  "id": "9da9c73376be",
   "region": "intl",
-  "source": "dailydispatch.com",
-  "title": "Firefighters receive jiu-jitsu training in Springfield for self-defense in the field",
+  "source": "Mindanao Gold Star Daily",
+  "title": "Mindanao jiu-jitsu team brings home 29 medals",
   "snippet": "",
-  "published": "2026-09-29T14:46:37+00:00"
+  "published": "2026-10-01T06:59:04+00:00"
  },
  {
-  "id": "5b352664ea72",
+  "id": "7e1fedad7ee4",
   "region": "intl",
-  "source": "Yahoo Sports",
-  "title": "How To Watch The 2026 Pan IBJJF Jiu-Jitsu No-Gi Championship",
+  "source": "News of Bahrain",
+  "title": "UAE Claim 3 Jiu-Jitsu Golds At Asian Games",
   "snippet": "",
-  "published": "2026-09-29T14:51:09+00:00"
+  "published": "2026-10-01T09:00:43+00:00"
  },
  {
-  "id": "1fb1fc189be8",
-  "region": "intl",
-  "source": "Inside The Games",
-  "title": "South Korean jiu-jitsu athletes cleared for Asian Games",
-  "snippet": "",
-  "published": "2026-09-29T19:56:33+00:00"
- },
- {
-  "id": "296704fec2fc",
-  "region": "intl",
-  "source": "Bloody Elbow",
-  "title": "Mikey Musumeci outlines plans to win UFC title once held by Demetrius Johnson after BJJ switch",
-  "snippet": "",
-  "published": "2026-09-30T02:54:07+00:00"
- },
- {
-  "id": "88aa2ec6a1f8",
-  "region": "intl",
-  "source": "jordannews.jo",
-  "title": "Jordan’s jiu-jitsu team begins Asian Games campaign in Nagoya tomorrow",
-  "snippet": "",
-  "published": "2026-09-30T12:58:35+00:00"
- },
- {
-  "id": "b63b3072b68b",
-  "region": "intl",
-  "source": "FloGrappling",
-  "title": "Everything To Know About The 2026 Pan IBJJF Jiu-Jitsu No-Gi Championship",
-  "snippet": "",
-  "published": "2026-09-29T15:13:00+00:00"
- },
- {
-  "id": "d18ad9f69f69",
-  "region": "intl",
-  "source": "FloGrappling",
-  "title": "2026 Pan IBJJF Jiu-Jitsu No-Gi Championship Schedule",
-  "snippet": "",
-  "published": "2026-09-29T15:32:21+00:00"
- },
- {
-  "id": "1ef9a70ea258",
-  "region": "intl",
-  "source": "FloGrappling",
-  "title": "2026 CBJJ Brazilian Jiu-Jitsu Championship No-Gi",
-  "snippet": "",
-  "published": "2026-09-30T00:30:57+00:00"
- },
- {
-  "id": "a49e0c6efa8d",
-  "region": "intl",
-  "source": "FloGrappling",
-  "title": "2026 Pan IBJJF Jiu-Jitsu No-Gi Championship",
-  "snippet": "",
-  "published": "2026-09-29T15:28:51+00:00"
- },
- {
-  "id": "8e185a9862e8",
-  "region": "intl",
-  "source": "FloGrappling",
-  "title": "Lucas Gualberto Gomes Nascimento",
-  "snippet": "",
-  "published": "2026-09-29T21:31:10+00:00"
- },
- {
-  "id": "f9ee79e20836",
-  "region": "intl",
-  "source": "FloGrappling",
-  "title": "How Helena Crevar Submitted Everyone And Made ADCC History | The FloGrappling Show (Ep 106)",
-  "snippet": "",
-  "published": "2026-09-29T16:50:30+00:00"
- },
- {
-  "id": "54c783739822",
-  "region": "intl",
-  "source": "CTV News",
-  "title": "Canadian Brazilian jiu-jitsu athlete wins another gold medal at international championship",
-  "snippet": "",
-  "published": "2026-09-29T22:22:56+00:00"
- },
- {
-  "id": "0bab1b41d97f",
-  "region": "intl",
-  "source": "jordannews.jo",
-  "title": "Jordan’s Jiu-Jitsu Team Begins Training Ahead of the Asian Games",
-  "snippet": "",
-  "published": "2026-09-29T13:59:15+00:00"
- },
- {
-  "id": "81a5937ab388",
-  "region": "intl",
-  "source": "CTV News",
-  "title": "Cambridge athlete wins gold again at Brazilian jiu-jitsu championship",
-  "snippet": "",
-  "published": "2026-09-29T23:24:48+00:00"
- },
- {
-  "id": "79920095f084",
-  "region": "intl",
-  "source": "FloGrappling",
-  "title": "WHO'S IN For the 2026 IBJJF No-Gi Pan Championships",
-  "snippet": "",
-  "published": "2026-09-29T20:17:23+00:00"
- },
- {
-  "id": "21d68a055ecd",
-  "region": "intl",
-  "source": "Secret NYC",
-  "title": "‘It’s my job to make you a mountain climber’: inside the Webster Ave dojo where a 6-time world champion has combined karate, kickboxing, and jiu-jitsu to mentor Bronx youth for over 20 years",
-  "snippet": "",
-  "published": "2026-09-30T18:54:23+00:00"
- },
- {
-  "id": "df177775ec1c",
-  "region": "intl",
-  "source": "FloGrappling",
-  "title": "2026 ADCC World Championships Presented by FloGrappling",
-  "snippet": "",
-  "published": "2026-09-29T15:01:07+00:00"
- },
- {
-  "id": "1c09601ce92b",
-  "region": "intl",
-  "source": "sherdog.com",
-  "title": "Mikey Musumeci targets UFC flyweight title with MMA transition",
-  "snippet": "",
-  "published": "2026-09-30T07:47:22+00:00"
- },
- {
-  "id": "f7ddabb085b9",
-  "region": "intl",
-  "source": "MMA Sucka",
-  "title": "Mikey Musumeci Makes MMA Case With Bryce Mitchell-Ilia Topuria Wrestling Comparison",
-  "snippet": "",
-  "published": "2026-09-30T05:59:45+00:00"
- },
- {
-  "id": "9f746775cba8",
-  "region": "intl",
-  "source": "Inquirer.net",
-  "title": "Asian Games 2026: Team Philippines’ schedule for October 1",
-  "snippet": "",
-  "published": "2026-09-30T14:51:00+00:00"
- },
- {
-  "id": "e72d9f483d3e",
+  "id": "abd9247bef47",
   "region": "intl",
   "source": "BJJEE",
-  "title": "Tye Ruotolo To Compete For The Lightweight MMA Title At ONE: The Inner Circle 37",
-  "snippet": "ONE Championship has booked one of its most compelling title fights of the year, pitting two athletes from major martial arts lineages against each other… As the reigning ONE Lightweight and Welterweight MMA World Champion Christian Lee will defend his lightweight belt against reigning ONE Welterweight Submission Grappling World Champion Tye Ruotolo, at The Inner Circle 37. Ruotolo already holds the distinction of handing Christian’s younger brother, Adrian Lee, his first career loss, and now the 23-year-old grappling prodigy has a shot at defeating a second member of the Lee family, this time…",
-  "published": "2026-09-30T06:19:17+00:00"
+  "title": "Mikey Musumeci Says PED Use In Jiu-Jitsu Has Him Ready To “Transfer” To MMA",
+  "snippet": "Mikey Musumeci has reached a breaking point with PED use in Brazilian Jiu-Jitsu, and his recent win over Bryce Mitchell at UFC BJJ 11 may end up being one of his final traditional grappling matches because of it. The five-time IBJJF world champion and reigning UFC bantamweight grappling champion opened up about his frustration during a recent appearance on The Ariel Helwani Show. Asked about the issue, he didn’t soften his response: Nothing’s gotten better in this sport, you know? So, it’s just very discouraging for me to continue in a sport that nothing’s gotten better. Musumeci pointed to th…",
+  "published": "2026-10-01T08:00:55+00:00"
  },
  {
-  "id": "2f52fb9c7a46",
+  "id": "958db40a40e2",
   "region": "intl",
   "source": "BJJEE",
-  "title": "ADCC Introduces New Rule: Interference From Coaches Or Spectators Can Cost Athletes The Match",
-  "snippet": "The ADCC has rolled out a new policy that puts athletes’ results directly at risk when coaches, parents, or spectators overstep boundaries during a match. Under the updated code of conduct, unauthorized individuals are now barred from entering the competition area while a match is underway, with the restricted zone covering both the mat itself and a clearly marked perimeter around it. Anyone who breaks this rule, threatens participants or officials, or disregards referee instructions triggers immediate consequences that can end an athlete’s competition on the spot. Notably, the rule applies ev…",
-  "published": "2026-09-30T06:11:38+00:00"
+  "title": "Claudia Gadelha Questions UFC BJJ’s Policy On Minors After 17-Year-Old Suffers Arm Break",
+  "snippet": "A gruesome arm injury suffered by a 17-year-old competitor at UFC BJJ 11 has sparked a serious conversation about athlete safety within the organization… With Claudia Gadelha now questioning whether minors should be competing at the professional level at all. Speaking at the post-event press conference, Gadelha didn’t hold back her reaction to the injury sustained by Kolby Gonzales: It was nasty. I felt physically sick with that arm breaking. I felt like the submission was there. I didn’t think that Kolby Gonzales wouldn’t tap and he didn’t tap. He showed how tough he is and he’s so young. I t…",
+  "published": "2026-10-01T07:55:34+00:00"
  },
  {
   "id": "5640a3d4a5bd",
