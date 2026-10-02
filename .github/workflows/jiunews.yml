@@ -1,7 +1,7 @@
 name: 柔術ニュースの候補集め
 
 # 毎朝 06:30 JST に国内・海外の柔術ニュースを RSS から集め、data/jiunews/inbox/ に置く。
-# 06:49 JST に Claude Code のルーティンがそれを読んで日本語にまとめ、/jiunews/ を更新する
+# 11:49 JST に Claude Code のルーティンがそれを読んで日本語にまとめ、/jiunews/ を更新する
 # （手順は tools/jiunews/ROUTINE.md）。取得は外部に自由につながる Actions でおこない、
 # ルーティン側は GitHub にだけつながればよい。APIキーは使わない。
 on:
@@ -69,7 +69,7 @@ jobs:
           echo "### 柔術ニュースの候補" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
           if [ -f "$f" ]; then
-            echo "- 候補 $(python3 -c "import json;print(len(json.load(open('$f'))['candidates']))") 件（06:49 のルーティンが日本語にまとめます）" >> "$GITHUB_STEP_SUMMARY"
+            echo "- 候補 $(python3 -c "import json;print(len(json.load(open('$f'))['candidates']))") 件（11:49 のルーティンが日本語にまとめます）" >> "$GITHUB_STEP_SUMMARY"
           else
             echo "- 今日は候補なし（または今日の号がすでにある）" >> "$GITHUB_STEP_SUMMARY"
           fi

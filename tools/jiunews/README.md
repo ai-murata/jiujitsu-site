@@ -8,8 +8,10 @@
 | 時刻 (JST) | だれが | なにを |
 |---|---|---|
 | 06:30 | GitHub Actions（`jiunews.yml`） | `build.py --collect-only data/jiunews/inbox` で RSS から候補を集め、`candidates.json` と `prompt.md` を main に置く |
-| 06:49 | Claude Code のルーティン | [`ROUTINE.md`](ROUTINE.md) の手順で `prompt.md` を読み、`result.json`（選んだ記事と日本語の文章）を書き、`build.py --apply` で号とページを作って main に push |
+| 11:49 | Claude Code のルーティン | [`ROUTINE.md`](ROUTINE.md) の手順で `prompt.md` を読み、`result.json`（選んだ記事と日本語の文章）を書き、`build.py --apply` で号とページを作って main に push |
 
+- GitHub Actions の時刻指定は混んでいると数時間遅れる（実際に 07:10 予定が 10:15 ごろになった）。
+  ルーティンはその遅れを見込んで昼前に動かしている。
 - 外部のニュースサイトにつなぐのは Actions だけ。ルーティンは GitHub にだけつながればよいので、
   環境のネットワーク設定を変える必要はない。
 - 翻訳・要約は Claude の月額プランの使用枠の中でおこなわれ、APIの料金はかからない。

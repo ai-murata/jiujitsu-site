@@ -1,7 +1,7 @@
 name: Claude ニュースの候補集め
 
 # 毎朝 07:10 JST に Claude（Anthropic）関連のニュースを RSS から集め、data/claudenews/inbox/ に置く。
-# 07:52 JST に Claude Code のルーティンがそれを読んで日本語にまとめ、/claudenews/ を更新する
+# 11:52 JST に Claude Code のルーティンがそれを読んで日本語にまとめ、/claudenews/ を更新する
 # （手順は tools/claudenews/ROUTINE.md）。しくみは jiunews.yml と同じ。APIキーは使わない。
 on:
   schedule:
@@ -68,7 +68,7 @@ jobs:
           echo "### Claude ニュースの候補" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
           if [ -f "$f" ]; then
-            echo "- 候補 $(python3 -c "import json;print(len(json.load(open('$f'))['candidates']))") 件（07:52 のルーティンが日本語にまとめます）" >> "$GITHUB_STEP_SUMMARY"
+            echo "- 候補 $(python3 -c "import json;print(len(json.load(open('$f'))['candidates']))") 件（11:52 のルーティンが日本語にまとめます）" >> "$GITHUB_STEP_SUMMARY"
           else
             echo "- 今日は候補なし（または今日の号がすでにある）" >> "$GITHUB_STEP_SUMMARY"
           fi
