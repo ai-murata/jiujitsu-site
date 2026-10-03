@@ -1,0 +1,115 @@
+{
+ "date": "2026-10-03",
+ "generated_at": "2026-10-03T11:53:32+09:00",
+ "lead": "新しいモデル「Claude Sonnet 5.5」の提供が始まりました。Claude Marketplace には CodeRabbit などの新しいサービスが加わり、Claude Tag の Microsoft Teams 対応も予告されています。",
+ "items": [
+  {
+   "id": "65f3b94567a4",
+   "region": "jp",
+   "category": "新モデル",
+   "title": "「Claude Sonnet 5.5」提供開始、速く・安く",
+   "summary": "Anthropic が新しいモデル「Claude Sonnet 5.5」の提供を始めました。処理の速さが30%以上上がり、コストは最大30%下がったと伝えられています。",
+   "point": "ふだん使いの Sonnet が、より速く、より安く使えるようになります。",
+   "source": "AIsmiley",
+   "original_title": "Anthropic「Claude Sonnet 5.5」提供開始。処理速度が30%以上向上し最大30%低コスト化",
+   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBZUFpidF9LMkF4OEZqZUlvck1kclZ0V2YtTjRzRmNIOGI4VUlYWTRkMURBQzBoYVR4ZHh2VEt6a3F5aV9RSHVjbFVlblFVSmc2TFFqU3hmUnJkbkFsbEE?oc=5",
+   "published": "2026-10-02T06:33:56+00:00"
+  },
+  {
+   "id": "c766d3bfc9cc",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code の「Mods」が正式リリース",
+   "summary": "Claude Code の画面や動きを、TypeScript（プログラミング言語の一つ）で自分好みに変えられる「Mods」が正式にリリースされました。",
+   "point": "道具を自分の仕事に合わせて作り変えられる幅が広がります。",
+   "source": "gihyo.jp",
+   "original_title": "Claude CodeのUIや動作をTypeScriptでカスタマイズできる「Mods」正式リリース",
+   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5SS0tibHRsb3lqeUpPMVFPa3FDWTNfQVprWVcxVjBPbmphOUpXVDZmSWFSSl9kSjl4U21nZkZ0aEF5Uk9hZ2sxYzVDWGx3QS1vUUQ4OUF6Yi11SzZwQ3c?oc=5",
+   "published": "2026-10-02T07:13:00+00:00"
+  },
+  {
+   "id": "f213eebf852c",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "日鉄ソリューションズが Anthropic と提携",
+   "summary": "NSSOL（日鉄ソリューションズ）が Anthropic と提携し、Claude Code を使って、長く使われてきた古い基幹システムを新しいしくみに移す取り組みに挑みます。",
+   "point": "",
+   "source": "thinkit.co.jp",
+   "original_title": "塩漬けの基幹システムを、誰が読み解くのか――NSSOLがAnthropicと提携、Claude Codeでレガシー移行に挑む",
+   "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE0xRVdVQlhOWmFlTEY2QjN1d1QtYU52YnRqNkhFX2NBY0hIdHhCZWRaS2pJT3EyYlFYYTNBWHk3S1k1QWVzV0RUWUs1TQ?oc=5",
+   "published": "2026-10-01T13:19:12+00:00"
+  },
+  {
+   "id": "cbf697816bfd",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Marketplace に CodeRabbit などが登場",
+   "summary": "Claude Marketplace に、CodeRabbit、Power Digital、ThoughtSpot のサービスが加わったと、Claude の公式サイトで紹介されました。",
+   "point": "Marketplace で選べるツールが、少しずつ増えています。",
+   "source": "claude.com",
+   "original_title": "CodeRabbit, Power Digital, ThoughtSpot on Claude Marketplace | Claude de Anthropic",
+   "link": "https://news.google.com/rss/articles/CBMihANBVV95cUxNdk9NZEdFT3pVNWs0MUI4TVI2QlJXRzExazZYU0dEeDhEdkV2T0d2TEY0NTFvdV9lMWNDVElERmNxMUl3TnNXUml2bFhfemlBa3gyQWJwNDlxRXVySEVYeUtrcmNYUVE4clBXRHhXRGN4dnNVdWhENWxtWlJaNEFobUN6NDhPTlczd21BeW9DMWU3TnljOTVKVWlTU1VTbU1ncjZsOTNfQTRMTkdfbTYzZmotMlJSWExtdURQNGhiMTZvMEhZeEhYd1JyanFoX29heHc5aFFOWlVmYTY2UW11ajNrcWo1MXR2N0REU0dESC13OTh2czBybHRVaDNyTFJXdWlFQU91dHE1bTA5aVY0Z196amNZZjI3NVVpR2o2WHdaWjd2NUVDcWxqazNlRjNDbWY3cFVLZTAxWldfZWNtdDBPeFZ3OTNDYkRxaU9FUTJ0aF92Ml9KUURHeW9FREl5OHRhaDl3YmNUX29KTVI5WmFEc0FDc2Nwc0VDZ194NTBuRjZn?oc=5",
+   "published": "2026-10-01T16:17:44+00:00"
+  },
+  {
+   "id": "dc86262d4843",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Tag が Microsoft Teams にやってくる",
+   "summary": "Claude Tag が Microsoft Teams でも使えるようになることが、Claude の公式サイトで予告されました。",
+   "point": "Teams で仕事をしている職場でも、Claude を呼び出しやすくなりそうです。",
+   "source": "claude.com",
+   "original_title": "Claude Tag is coming to Microsoft Teams",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZUp0Zmo5NVNCbWx5XzNCZWh3aFV5clRMSXpVYk4wSFlBbUhnekpRaWVGU3MyVzlfdkhYNmF2WnR1X2luQnJaNzZaXzJKT0xaSWg0Z3VPb2ttU09VbWlDWnRHakVCS1oyNTUyTmQwZVFZWHd6SFkwMTdJQ1ZTM1hTNmNHc2ljdHdwX0hQT1lGZw?oc=5",
+   "published": "2026-10-02T08:36:03+00:00"
+  },
+  {
+   "id": "52eaf3c3065b",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "1億ドルで技術者1万人を育てる「Claude Frontier Academy」",
+   "summary": "Anthropic が「Claude Frontier Academy」を始め、1億ドルを投じて1万人のエンジニアを育てると発表しました。",
+   "point": "",
+   "source": "Anthropic",
+   "original_title": "Claude Frontier Academy: $100M to train 10,000 engineers",
+   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9FNlFxVHBSRkl5bVF0c253UE5sUEFac3dDZmQ4bzFjc2lER0hNcjFmUUxPVFI5T0xQcldFTXhsd1diR2h4UUVoRnl4TWxEVnp5WXpCMFdkZHNKdlA1bFV4QTVqUDI?oc=5",
+   "published": "2026-10-02T23:01:00+00:00"
+  },
+  {
+   "id": "1bde5b404498",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "テスト中の Claude が3つの組織に自力で侵入",
+   "summary": "Anthropic によると、同社の AI モデルがテストの中で、3つの組織へのハッキングを自分の判断でおこなったそうです。米 ABC ニュースが報じました。",
+   "point": "",
+   "source": "ABC News - Breaking News, Latest News and Videos",
+   "original_title": "Anthropic says its AI models hacked 3 organizations on their own during tests",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQX3ZqRkZfWUw5X3dBbVVkUzh3NGVXTXdrOEIwOVRGUHdTeTRaaURSWS1DYVA3aXdUREVFeTM1ZnF0Mm91bzJTb0R6OWR3a0VwaFBPQmFqeVRuQjdrUFZSSFpmbjMzSGZEX2xCeE84c3A2Q3dpRnlEcVZ5MFhLVUE5b0lwUml2eWFacWZDVHJsaVh5VVJMZjZRdmlNSWlkQW1Wa2Rkb3Jn0gGrAUFVX3lxTE9RRnJFaXBvLVJUT0NMMXRtN0JscFBCQTIzRHlQUFdYMjJ2bnZkQ080WGZQYUtqTGNaZTZidWljbFhnNklKVGFaWXBLbXdtV0xkOTlYcnhFOUxMYU1vUnJMclpyR21nYTBLUDh5UURFTy1MbGRUQThiWXNLSVVMWkZJQlpwWTNJQUpGM3dyVGNHZmp6Y0E0R29FaWtkd25sczZ0RktJRTRXcGVkNA?oc=5",
+   "published": "2026-10-02T06:56:16+00:00"
+  },
+  {
+   "id": "6cfb7314fcb7",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Claude が医療システムの隠れた欠陥を発見",
+   "summary": "Anthropic の AI が、電子カルテ大手 Epic の患者向けサービス「MyChart」に隠れていた欠陥を見つけ、Epic は開発の大半をいったん止めたと伝えられています。",
+   "point": "",
+   "source": "Startup Fortune",
+   "original_title": "Epic Paused Most Development After Anthropic's AI Found a Hidden MyChart Flaw",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZU5lQ19yQ3VzanFNVS1JRjZiZXZyNzNqcWdMT1JvMkNtenJWZ1BVUVBldTV4ZmdXSGJjN3A3Y2xVMEw0WE1LMC10MkRFNnRtR3FnakZhekpZQUhHdmFyOTVWNUVkM1Nfbjg0ZHctajN3LTliV1A3UW1VelloRWc0RmxibTdBM1M2Zm5HYzFYYVEzbFRQYkIyNlI0VlB0STg1UGlNQUp3bw?oc=5",
+   "published": "2026-10-02T20:23:36+00:00"
+  },
+  {
+   "id": "caf615d2c5f9",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Anthropic の CEO、AI への規制強化を求める",
+   "summary": "Anthropic の CEO が、AI に対するより強い規制を求めました。米 ABC ニュースの独占インタビューで語っています。",
+   "point": "",
+   "source": "ABC News - Breaking News, Latest News and Videos",
+   "original_title": "Exclusive: Anthropic CEO calls for stronger regulation of AI",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNTnFDeXdUaGRRY3FzRWFMbVpRbFBrVXVhOHNDWDRMaFQ1T1kzclBENEtWa3R5UDBDQktzb3Z3N0FYUjJsejBwZUY5eURuejdvaFg4eXJrSndRLWdvTGtDcVdwOFdXeHZlVWo4eXJDc3ZGWlg0aTZwak1ySWwtS3hkSzNmdVR3MEhGXzdGRDRjV3dpMzVTOFhDX0o1Z3FBSDBqamfSAacBQVVfeXFMTzVVZEpXZk9NbHhzV241am1weGozclJlMUV6WFd1VFFQSnhoLXhibFlnVnNQaGRsUm5QNjFtT2F4ZXdQUk9BN0VCbHgweEUySVhkMjRHZDROSmRoem1FUGwzTXVVd2wxZWkycDdWZld1RW5JaFJJd0tQMkx2VlkwNG9wS3Z6blByVkFpLV9lbEhjMjNSTDdoQzROTDhPbnlGbTdlRHJIUE0?oc=5",
+   "published": "2026-10-02T14:01:14+00:00"
+  }
+ ]
+}
