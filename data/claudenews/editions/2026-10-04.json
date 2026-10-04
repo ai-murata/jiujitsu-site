@@ -1,0 +1,103 @@
+{
+ "date": "2026-10-04",
+ "generated_at": "2026-10-04T11:53:33+09:00",
+ "lead": "Claude が Android アプリを扱えるようになり、Google の開発ツール「Antigravity」でも Opus 5.5・Sonnet 5.5 が使えるようになりました。一方で、トランプ大統領が米政府に Anthropic との関係を断つよう命じたと報じられています。",
+ "items": [
+  {
+   "id": "853f928670d5",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude が Android アプリを扱えるように",
+   "summary": "Anthropic によると、Claude が Android のアプリを使って作業できるようになりました。記事では、Google の Gemini と比べて試しています。",
+   "point": "スマホのアプリ操作も Claude に頼める場面が出てきそうです。",
+   "source": "MakeUseOf",
+   "original_title": "Anthropic says Claude can work with Android apps now, so I tested it against Gemini",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBiVGZwU29XazRFNnJXREdtc1BMUUhLcDUwVjRPMUxWNklxRWVlR3B5ZklVeXh2T2JHNEdYMnppbFRnQlFSeHRCVmFnTlNPa3duVUhTcFlpbEV5V3ZNTTEycVRMUWFFR1E?oc=5",
+   "published": "2026-10-03T17:30:15+00:00"
+  },
+  {
+   "id": "a686971798a0",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Google の「Antigravity」で Opus 5.5・Sonnet 5.5 が使える",
+   "summary": "Google の開発ツール「Antigravity」に、Anthropic の Claude Opus 5.5 と Claude Sonnet 5.5 が加わりました。",
+   "point": "Google のツールを使っている人も、最新の Claude を選べるようになります。",
+   "source": "startupfortune.com",
+   "original_title": "Google Antigravity adds Anthropic's Claude Opus 5.5 and Sonnet 5.5",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWXNxMHprdm9DXzhqWEFHMUhqMGlNSUZCY2JJdTR6YXRBWnNGWENsNWR6VVBmb3YtUU4ydXZNeFR3eWQtZFhjUFJHTjlqSXJiWUxRNnJPY0R3YlR3THhMY2tNUXh5RHZBc0lrWmFlNy1aQ19pMDRHT0ZrczhhY2g5dVZvTXBJNjMxWXczY1BKXzlNcmNBQ3c?oc=5",
+   "published": "2026-10-03T13:20:53+00:00"
+  },
+  {
+   "id": "15da86502fbc",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "NVIDIA と組み、AI エージェントを会社で管理しやすく",
+   "summary": "Anthropic が NVIDIA と組んで、企業が自社の AI エージェントをより細かく管理できるようにすると、Claude の公式サイトで発表しました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Giving companies more control over their AI agents, with NVIDIA",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNUklTTmlNTWo2cTdONXVZaWZqMVEweG5BWFpzdGtSam83SjVjNWFSaWxuYVdMWjVNVVg4SG9CNXQ3NHliOHBRUlgzTl9pOG8zMndPX2JrZDM1bmdnVlZWVXBDMXhBa2JnYzBGWUlYRG9pM1NJREhlLW9RV0ZtQ0hZdlZQNTZjOUN4MXBuTnFxVQ?oc=5",
+   "published": "2026-10-03T05:33:53+00:00"
+  },
+  {
+   "id": "f6b235b64f7f",
+   "region": "jp",
+   "category": "新モデル",
+   "title": "「Opus 5.5 が性能低下」の声、計測ではふだんの揺らぎの範囲",
+   "summary": "Claude Opus 5.5 の性能が落ちたという声が出ていましたが、性能の変化を測る「Nerf Bench」で調べたところ、ふだんの揺らぎの範囲内だったそうです。",
+   "point": "「最近調子が悪い？」と感じても、まずは落ち着いて様子を見てよさそうです。",
+   "source": "pasqualepillitteri.it",
+   "original_title": "Opus 5.5に性能低下の声、Nerf Benchでは通常の揺らぎ内と判明",
+   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNYXJkX0lEYnJyUkwzNnNpcGhHems5VWQyZlQxRy1vUnVoaHgxWGdzWm9ILW5ZOENmZ2xzM2JmWWM4ckczcUhDcXVmOEFtbEpWSlZ2WFU2RnVFQVNVaHV3RzZIZmNoVGFtUUM5WFllN28yZVVrek9fMzNUWWgxSGtPYnZ0QVNuYWhzN2c?oc=5",
+   "published": "2026-10-03T14:12:57+00:00"
+  },
+  {
+   "id": "213c5cb0e06a",
+   "region": "jp",
+   "category": "その他",
+   "title": "Claude と真鍋大度さんが新作アート、木工×AI の展覧会",
+   "summary": "Anthropic が「木工×AI」をテーマにした展覧会を開き、Claude とメディアアーティストの真鍋大度さんが新しい作品を作りました。",
+   "point": "",
+   "source": "KAI-YOU",
+   "original_title": "Claude×真鍋大度が新作アートを制作 Anthropicが「木工×AI」展覧会を開催",
+   "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBSVEt4SkdWSjRCVEZCanhMUXowNGdaOWZFV0hxLUxsT2czYlVRVGNaeXVnbF9QWkdaSU9IRW1qbTlhM3BhZEFPVg?oc=5",
+   "published": "2026-10-03T21:30:00+00:00"
+  },
+  {
+   "id": "77a430eb2248",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "トランプ氏、米政府に Anthropic との関係を断つよう命令",
+   "summary": "トランプ大統領が米政府に Anthropic との関係を断つよう命じ、ヘグセス国防長官は同社をサプライチェーン（調達先）上の「リスク」と位置づけたと、米 ABC ニュースが報じました。",
+   "point": "",
+   "source": "ABC News - Breaking News, Latest News and Videos",
+   "original_title": "Trump orders US government to cut ties with Anthropic; Hegseth declares supply chain 'risk'",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPazMyTEtZY2RWSjJJaC05T0Y2NDE4bG9NeF9od29uVmtubVYxQnVNOGFuY0hrNjM1bW0xRFVGUkJHbEJNSjJWVGc0YzA0TFZKcl9fRlM0YnVjcU55aXhDcTk1Nl9PYkhXWWZYUnVpMUx5XzNIVTBwR0VPUkxfMnltUEExbGE0alRYZXQtUzhJWDZrTTFqbm1EMW5LbTd1UGx0Z1JCejgxVU1BOWs30gGyAUFVX3lxTE45MVA4TGJmSW1LU1BrdW5MOFhVb1UwU0FDdTZwcnhiNUN5NlhHaW4wTjc5ZDFya2NRUEE0TjEtU21INHhORE5LRUxoeEhNYmo5YXBVcEtjWm1JOGdUaFVYMHV4RndneXVIZ2EwWEN0QjVzOHBRVFVJODR3MzJGSVlPM0RfZTJQWENuaGZHck1zMmZUd0tsOFc0bUpRRmdjUzFTYUFtZHJGUmoxel9oV2t2MXc?oc=5",
+   "published": "2026-10-03T21:50:50+00:00"
+  },
+  {
+   "id": "37feb66e1499",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "Anthropic の上場資料、約80ページを AI のリスクに",
+   "summary": "Anthropic の IPO（株式上場）のための資料のうち、約80ページが AI のリスクの説明にあてられ、「人類存亡のリスク」にも触れているそうです。",
+   "point": "",
+   "source": "マイナビニュース",
+   "original_title": "Anthropic、IPO資料の約80ページをAIリスクに割く - 「人類存亡のリスク」にも言及",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9CR0lfbjM0OGtBYllIUzdtSnhOYklYZGNEMGliOG9rN0hZTXVTSGJyaGhUdlU3RGhfcmhRM1BycE5ZZVlCcmI1Z3lGc3p6NF8wSEJLYnVoNVg4bTcybW43cVhpcF83QjB0?oc=5",
+   "published": "2026-10-03T05:20:06+00:00"
+  },
+  {
+   "id": "666606bcae3d",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "AI を使った生物兵器づくりを防いだと Anthropic",
+   "summary": "Anthropic が、AI が生物兵器づくりに悪用されるおそれのある使い方を食い止めたと明らかにしました。米 ABC ニュースが伝えています。",
+   "point": "",
+   "source": "ABC News - Breaking News, Latest News and Videos",
+   "original_title": "Anthropic says it blocked potential AI bioweapon misuse",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNcHNiU2w4UlN0ZmswWlFZZHBCTFpzZW02U3RNQ29wVUJKQ2NsM2xjV1d4U0dtYjVhWUpmM1N3dm5HYkg3a1ZaMWlYUVdSMFN1SjlfOEt1bVZGNWdMLXFNcGpIZnhjT1FqNVZHdWR0QU40YWs5NlFzY01aekNoaTBja2lfUjRlODJ0c29ObjU2b2c2OHc0OTZQTzFZNNIBoAFBVV95cUxNdFdUcWN0blhrMU85WE55cGo2aldZRTIwT1lxZlA1a2tSS3lUNnJPTFlwRktnZlR0alhrNjlCX1J4T21CMlUwZEItRGhuVTZOajNpNHRoczNsek5nS2RuSTQ4MFFzZUFHRl9Ja01UVUg2VTlUVVozWFA3TVExSWp3d0daZm5KNWY1OHJWNTZEdHZ4ajlYdVF2aFJjVFRTcHZn?oc=5",
+   "published": "2026-10-02T22:16:19+00:00"
+  }
+ ]
+}
