@@ -65,10 +65,11 @@ li::marker{color:var(--gold)}
 strong{font-weight:700;color:var(--ink)}
 
 .table{overflow-x:auto;margin:8px 0 22px;-webkit-overflow-scrolling:touch}
-table{width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.7;background:var(--paper);min-width:520px}
+table{width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.7;background:var(--paper)}
 th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
 th{font-weight:700;background:var(--panel);color:var(--ink);border-bottom:2px solid var(--gold);font-size:13px;letter-spacing:.08em}
 td:first-child{font-weight:700;white-space:nowrap;color:var(--ink)}
+@media (max-width:640px){table{font-size:13.5px}th,td{padding:10px 8px}td:first-child{white-space:normal;min-width:7em}th{white-space:nowrap;letter-spacing:.02em}}
 
 .note{background:var(--panel);border-left:2px solid var(--gold);padding:14px 18px;margin:20px 0;font-size:15px}
 
