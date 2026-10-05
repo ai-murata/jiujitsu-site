@@ -1,0 +1,103 @@
+{
+ "date": "2026-10-05",
+ "generated_at": "2026-10-05T11:53:40+09:00",
+ "lead": "米政府が Anthropic への輸出規制を解き、Fable と Mythos の提供が再開されると伝えられています。金融向けの AI エージェント10種類の公開や、声のデータを学習に使う協力のお願いなど、使う人に関わる話題も続きました。",
+ "items": [
+  {
+   "id": "8d94f492b023",
+   "region": "jp",
+   "category": "新モデル",
+   "title": "米政府が輸出規制を解除、Fable と Mythos の提供再開へ",
+   "summary": "米国政府が Anthropic に対する輸出規制を解き、Claude Fable と Claude Mythos の提供が再開される見通しだと伝えられています。",
+   "point": "止まっていた上位モデルが、また使えるようになるかもしれません。",
+   "source": "Межа. Новини України.",
+   "original_title": "米政府がAnthropicの輸出規制を解除しFableとMythosの提供を再開へ",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBRcTNIUjljcXlldmE5ZmtKaTkzVVNVUVRRbDNIaXlQbE9HRkxfSmVGVFY0MXRLM0NrT3MweEh5T3ExdmNFRmU4YzAzOGJSbGNIVVlYZUVVVzBFOTBZZjJsdg?oc=5",
+   "published": "2026-10-04T01:12:03+00:00"
+  },
+  {
+   "id": "00f70e792e9c",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "金融向けの AI エージェントを10種類公開",
+   "summary": "Anthropic が、金融の仕事を自動化するための AI エージェントを10種類公開したと伝えられています。",
+   "point": "",
+   "source": "Межа. Новини України.",
+   "original_title": "Anthropicが金融向けに10のAIエージェントを公開し業務自動化を支援",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBXb0NPMmlOR24wX1pWampKVk95akRPQ2RWU2FPUGZORHQwX1NjdFlXak5RbFlKajMwVmkyNmZid3BzdnNNclZlWnV1WUtsTklnenVPd2JnQXVlSXFYTXFIbnVudTZuUTFQ?oc=5",
+   "published": "2026-10-04T01:09:05+00:00"
+  },
+  {
+   "id": "890a59eede3c",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "Antigravity の Opus 5.5、使えるのは有料会員だけ",
+   "summary": "Google の開発ツール「Antigravity」に Claude Opus 5.5 が加わりましたが、使えるのは Pro と Ultra の有料会員に限られるそうです。",
+   "point": "無料のままでは Opus 5.5 は選べない点に注意が必要です。",
+   "source": "Pasquale Pillitteri",
+   "original_title": "Claude Opus 5.5がAntigravityに登場、利用できるのはProとUltraの有料会員だけ",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOaVd3RzNBbkh0WmlxdWYwX3d6a1ZSeHNuRjZEVGZpR1ZWVnY4TVBBTUxUZVEtOGtsUFViUTZtTnBIVDBSdWpUM1ExMFNvVUpPMms4bzZRaGE3VWNwcjFHX1dVWGk3WjR3RGN2U2R3cElYdEtteG1QNXdwWnB5QmRmVUpESkNqNlRRTnFLZA?oc=5",
+   "published": "2026-10-03T13:06:40+00:00"
+  },
+  {
+   "id": "f2cc80fd6f5a",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "手描きのラクガキが、Claude Code で3Dプリント用データに",
+   "summary": "手で描いたラクガキを見せるだけで、Claude Code が3Dプリンター用のデータに仕上げてくれたという体験記事です。",
+   "point": "プログラミングをしない人にも、Claude Code の使いみちが広がっています。",
+   "source": "ライフハッカー",
+   "original_title": "手描きのラクガキを見せるだけ。Claude Codeが3Dプリント用のデータに仕上げてくれた",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNaW9aT29PWnlXOHhQR0NVbmdvajNIaVc4VkNzQTNpTzA5ZWlmbFV4bzVScUdpLVZMVFA0YXh2Z1pNRmtWM2ZMU2FLWjRreDRsR2Jkd2ptbUUxM1JKNkM3UlNNYTBPUDZmZ0pOR0x2UFI4bzFJekwxZ21aQUVXc0NwWmNlV21BOXpyY2Jodzc3SkZkTUNYeDd2VzdTYmF4N2c?oc=5",
+   "published": "2026-10-04T03:00:00+00:00"
+  },
+  {
+   "id": "8d36181547bb",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Anthropic、声のデータを学習に使う協力を利用者にお願い",
+   "summary": "Anthropic が、Claude の利用者に声のデータを共有してもらい、AI モデルの学習に使えるよう協力を呼びかけていると BleepingComputer が報じました。",
+   "point": "協力するかどうかは自分で選べるので、設定を一度確かめておくと安心です。",
+   "source": "BleepingComputer",
+   "original_title": "Anthropic asks Claude users to share voice data for AI model training",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNYXdOQkNGN2NyMjVhNDlOZUVRTUdMWkE1OVNsaEtCQUcyS1hzQ2R3UkhLX1A4VjlWX2lOSHZXSjNSQ3NTT0g1M3ZCX0ltWHJSaGhDelJqdjJwbmVKeENqSkFIallKdzdVUWdqR0IwcndOLWhDbjdnbHN2NXFwTk1UczBMNkRoM3NVdllOcUhJUkFDZ3dWM0dfWnV4V19ldVVnS21UbEg3bnhBWV9FNzFHM3ZieWlYTy05aDJfYm9YYzZYdlJUODZBV0ZyTm3SAdIBQVVfeXFMTXhoYkFWNEtHOEVIclNCSlc0X3BsWk8yaGlGLVQyeFRZUm5rX2hNVjZtY0owZFIxZFFqdUxtbXNaQUgyR040UEpYM21Hdi1UTF9DbVJLRjRSa1RxdHA3cXNROFNtZ09ldEwtLWpSNGtJYnFqaVIta3BKdkdacXZqNFRWd0xZR0tLMUpWLVdUSUlhLUtvTUxSdGJEWS0zbEg1UkxPNHFDOURSalhKTHY5RXQ2b2xyNHRjbC1FNEMxcFR4Z1RWQnhyRVA1amZ1NHBqX1N3?oc=5",
+   "published": "2026-10-04T10:53:21+00:00"
+  },
+  {
+   "id": "6dc397a6ea8d",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "ロシアが AI で偽情報を広げている？ Anthropic の報告",
+   "summary": "中央アフリカ共和国などで、ロシアが AI を偽情報の拡散に使っているのではないかという内容の Anthropic の報告書を、ドイツの放送局 DW が取り上げました。",
+   "point": "",
+   "source": "DW.com",
+   "original_title": "Anthropic report: Is Russia using AI for disinformation in the Central African Republic and elsewhere?",
+   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOazlNYnZxZmdrTTV4TGdjQUJtLXlzY0M3bm8xWFRwdGhYTDBKR2tQT1NEWlpoeEZJUGI4TTRJakpBc0liSDQtZTNEZmZUZV9kUHNYMmIzM0xsbU9FaERadjFtRDNxVGdOb2Z6M1pmNkZxcUppNzlyMFNpNFdOc0dMQUF0MHR2bTNqYXM2Rk84cVdTdGk5RHY0cXVvX0tObC0tZjdGTm9DNDhEdlFuek03X0pramxKM0YwSnRCUFBxZzVQTG9ucjJYR1NuV1hSUdIBzgFBVV95cUxOazlNYnZxZmdrTTV4TGdjQUJtLXlzY0M3bm8xWFRwdGhYTDBKR2tQT1NEWlpoeEZJUGI4TTRJakpBc0liSDQtZTNEZmZUZV9kUHNYMmIzM0xsbU9FaERadjFtRDNxVGdOb2Z6M1pmNkZxcUppNzlyMFNpNFdOc0dMQUF0MHR2bTNqYXM2Rk84cVdTdGk5RHY0cXVvX0tObC0tZjdGTm9DNDhEdlFuek03X0pramxKM0YwSnRCUFBxZzVQTG9ucjJYR1NuV1hSUQ?oc=5",
+   "published": "2026-10-04T17:19:00+00:00"
+  },
+  {
+   "id": "a2a6eb5eb916",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "中国のハッカー、Anthropic 社員になりすまして情報を狙う",
+   "summary": "中国のハッカーが Anthropic の社員になりすまし、AI の機密情報を引き出そうとしたと Futurism が報じました。",
+   "point": "",
+   "source": "Futurism",
+   "original_title": "Chinese Hackers Impersonate Anthropic Employee to Extract AI Secrets",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVGlSM2lMaWg5Ym1HS3gxSXNMaC1raEUyUm5TdkgtOTY4ak5NNm9tMTRydmlRRTFfQ01sOGtLWUpNQ25oVzJrckMwQU5fb3hrQUhDRDhOeFJvamdjNVF4VmRfSk0wS0prZkx0MlNNQjUxdW9jV0hBTTlTWkZOZXZya0Vfc3RMVmtPeHV5dURneFpsWmNSQ1B6LQ?oc=5",
+   "published": "2026-10-04T20:03:00+00:00"
+  },
+  {
+   "id": "c558b9ac44b1",
+   "region": "intl",
+   "category": "その他",
+   "title": "中国で Claude アカウントの闇取引が横行",
+   "summary": "中国で、Claude のアカウントを売り買いする闇市場が広がっていると、韓国の朝鮮日報が伝えました。",
+   "point": "",
+   "source": "조선일보",
+   "original_title": "Claude AI Account Black Market Thrives in China",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVEtBQmd3VXE2cFp4MHNEd0lhUnJxd1dzbkx3c25DakwyakU1dFI4VFF2eHhwOXJ2QzQxdTJsS045MWpMWHNWNXp3VlVvbkVhaVBWMGpRUllxZFlSMXQ2X2pSeWVBY2RMMEVldEJ2VV9oazhfajhScFVwTlpJcFR1SXpma2JPSllY?oc=5",
+   "published": "2026-10-04T20:33:08+00:00"
+  }
+ ]
+}
