@@ -3,6 +3,13 @@
   "line_url": "",
   "entries": [
     {
+      "id": "claude-nyumon",
+      "date": "2026-10-05",
+      "title": "パソコン初心者がClaudeを使いこなすまで",
+      "url": "/claude-nyumon/",
+      "summary": "パソコン選びからClaudeの登録、スマホとの連携、使いこなすコツまでを、柔術の帯のように5段階で順番にまとめました。"
+    },
+    {
       "id": "blog-prompt-jidai",
       "date": "2026-10-05",
       "title": "ブログ：プロンプトの時代は終わった",
