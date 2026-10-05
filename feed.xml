@@ -5,8 +5,15 @@
   <link href="https://jiujitsu.co.jp/"/>
   <link rel="self" type="application/atom+xml" href="https://jiujitsu.co.jp/feed.xml"/>
   <id>https://jiujitsu.co.jp/</id>
-  <updated>2026-10-02T10:55:12+09:00</updated>
+  <updated>2026-10-05T16:46:11+09:00</updated>
   <author><name>BUTTI ON LINE</name></author>
+  <entry>
+    <title>ブログ：プロンプトの時代は終わった</title>
+    <link href="https://jiujitsu.co.jp/blog/prompt-jidai/"/>
+    <id>tag:jiujitsu.co.jp,2026-10-05:blog-prompt-jidai</id>
+    <updated>2026-10-05T09:00:00+09:00</updated>
+    <summary>AIを使いこなすのに「呪文」はもういらない。大事になったのは、文脈を渡すこと・判断すること・任せ方を知ること。柔術道場のバックオフィスをほぼ一人で回すマネージャーの実感です。</summary>
+  </entry>
   <entry>
     <title>ブログ：しゃべったのは6分。今日1日でClaudeに頼んだ14の仕事</title>
     <link href="https://jiujitsu.co.jp/blog/shabetta-6pun/"/>
