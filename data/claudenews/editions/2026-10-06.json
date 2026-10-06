@@ -1,0 +1,115 @@
+{
+ "date": "2026-10-06",
+ "generated_at": "2026-10-06T11:53:12+09:00",
+ "lead": "Pro・Max プランの Claude Cowork がクラウドで動くようになり、ゲームエンジンの Unity も Claude Code 向けの公式プラグインを出しました。一方で、Meta と Microsoft が社内での Claude の利用を減らしていると報じられています。",
+ "items": [
+  {
+   "id": "ea77d945faab",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "Pro・Max の Claude Cowork がクラウドで動くように",
+   "summary": "Anthropic が、Pro プランと Max プランの Claude Cowork をクラウドで動かせるようにすると伝えられています。",
+   "point": "Cowork の使い方が広がりそうです。",
+   "source": "pasqualepillitteri.it",
+   "original_title": "Anthropicが、ProとMaxのCoworkをクラウドで実行へ",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFAzal8xN0w5NFN1MTAxQzlta3ZvV0NCYklsbE5PZUJBQXRDZTNrSGswVUFWSzdMcWlsUkVLaGMzenA1a2lUQXNydVdZQTNyeEdzTzB4ZzBZb3pBNzItZ3MxOXV3OUFDTjJFT3lvMnlmSDZfNXMzcWZVQg?oc=5",
+   "published": "2026-10-05T16:57:18+00:00"
+  },
+  {
+   "id": "5c0d20a3ae0c",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Unity が Claude Code 向けの公式プラグインを公開",
+   "summary": "ゲーム制作ツールの Unity が、Claude Code と OpenAI Codex 向けの公式プラグインをリリースしました。たくさんの機能（スキル）が入っていて、Unity のエディターを細かく操作できるそうです。",
+   "point": "ゲームづくりにも Claude Code を使いやすくなります。",
+   "source": "CGWORLD.jp",
+   "original_title": "Unity、Claude CodeとOpenAI Codex向け公式プラグインをリリース 多数のネイティブスキル搭載、高度なエディター制御を実現",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE92R2YxQURaYXJpbG54NEFNb0M5V095YjkwTklXQlRWclFzYVBrTUVlbXVaYWNDRkktQzVRWjh5Rmg0RDk1TS1VSkhOSVlfdFhvclRCUzRPUUd1SGQtN0g3bU1VbG56MVk?oc=5",
+   "published": "2026-10-06T00:22:45+00:00"
+  },
+  {
+   "id": "3065b7fd9e40",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "アクセンチュアと Anthropic、AI の安全性を評価するチームで提携",
+   "summary": "アクセンチュアと Anthropic が提携し、AI の安全性を評価する「組み込み型評価者」の専門チームを Anthropic の社内に作ることになりました。",
+   "point": "",
+   "source": "newsroom.accenture.jp",
+   "original_title": "アクセンチュアとAnthropic、AIの安全性評価を担う「組み込み型評価者」専門チームのAnthropicでの社内設立に向け提携",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdmJmYUo5dlM0bWtteklGcEZJUEY5R3NvZ19IYzIzdGZXTVo4RDF0SWxrRzc4OGNoaENBTlF4R2hjeTNtVHhWWW1RT2hxWEktTmZDXy0yaUVFNXJvVGJBVmdPVHBWMDVLMWRpS21kYWhmNzM1aVI0T0g5X1Nvb3pPbktWYkRqLV9fQnVpczFPN0c1TDdXZlo4Tk9VNGtCd1p5Ny1QWVNjU0daSE5LWjhMRFhNSTd4SXFENGtpaXNrbG5iZw?oc=5",
+   "published": "2026-10-05T16:53:13+00:00"
+  },
+  {
+   "id": "8b36ce91f21d",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "NHN テコラス、「Claude 総合支援サービス」を開始",
+   "summary": "NHN テコラスが、会社が Claude を導入してから使いこなすまでを手伝う「Claude 総合支援サービス」を始めました。",
+   "point": "会社で Claude を入れたいときに、相談できる窓口が国内にも増えています。",
+   "source": "gamebiz【ゲームビズ】",
+   "original_title": "NHN テコラス、米Anthropicの提供する生成AIモデル「Claude」の導入から活用までを支援する「Claude総合支援サービス」を提供開始",
+   "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE5wbW1GU3BfbzM3dGxocFBWanpCNTFsVU16UU9aSFBLc2NHWS13UXVqWlpmcFJFbklBS05oNzUwTG4wQWF3?oc=5",
+   "published": "2026-10-05T01:58:00+00:00"
+  },
+  {
+   "id": "0d195305a507",
+   "region": "intl",
+   "category": "新モデル",
+   "title": "Claude Sonnet 5.5 の中身・料金・試し方",
+   "summary": "Anthropic が公開した Claude Sonnet 5.5 について、くわしい内容や料金、試し方を Mashable がまとめました。",
+   "point": "",
+   "source": "mashable.com",
+   "original_title": "Anthropic releases Claude Sonnet 5.5: Details, pricing, how to try it",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNXzZmVllHd3ZISlAtUEZSa0xkaExzZ1RfNl9LU2dGZUdiU0xNb1FLZlNlMldSc2pFWnFVbEhPbDRKbG50bXlNVVRqcEpOUEl0VTdhZXpabFg0N29fbXVMYlM5TlVSU1hDZFU1NUxnd2N3SzNVb0dvMlRQbmJtSnVDcQ?oc=5",
+   "published": "2026-10-05T18:11:11+00:00"
+  },
+  {
+   "id": "a2aa2203a7ba",
+   "region": "intl",
+   "category": "料金・プラン",
+   "title": "Claude の有料プランは OpenAI の5倍以上お得、という分析",
+   "summary": "調査会社 SemiAnalysis が、Anthropic の有料プランは OpenAI のものと比べて5倍以上の価値があるという分析を出しました。",
+   "point": "",
+   "source": "newsletter.semianalysis.com",
+   "original_title": "Anthropic Subscriptions Offer 5x+ More Value Than OpenAI",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1obmlsblJmOTI4SDVYR1hzd3lzNEVkM0JONGV0ZUJjZXpWRjdzaW85cjNIclpLZXJVbzQyU0VkbFVzX3VuM0M5VkZ2MlowRG1DaVc0ZllobllaLTBDaFlrSllvRmpqZVBMS0E2b1NNRkdwMkNnT0xxSFhn?oc=5",
+   "published": "2026-10-05T20:01:09+00:00"
+  },
+  {
+   "id": "6b144d720a96",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Meta と Microsoft、社内での Claude の利用を減らす",
+   "summary": "Meta と Microsoft が、社内での Anthropic の Claude の利用を減らしていると報じられました。",
+   "point": "",
+   "source": "Yahoo Finance UK",
+   "original_title": "Meta and Microsoft scale back internal use of Anthropic’s Claude, report says",
+   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMkhVcTdOZ3F5a1h6QjFSRTVZbDRUdmUtMmh3NUsyTXJudHNuU1Fia3BRT25LeVhTWFlmbzFBc1IyZ05SVk9sc0VWaDlydmkzSkNGQkc5SzJQNEhLUEhMWV9sMEdQQnh6ZzZWR3BZQlJLY0MwUmhqLVNDcElPREtmOXFSN0p3TlVtbEhZ?oc=5",
+   "published": "2026-10-05T19:00:11+00:00"
+  },
+  {
+   "id": "a5d5379bc0d4",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "米国防総省、Anthropic の AI ツールの使用を停止",
+   "summary": "米国防総省が、Anthropic をブラックリストに入れたあと、同社の AI ツールの使用をやめたと、英 BBC が伝えました。",
+   "point": "",
+   "source": "BBC",
+   "original_title": "Pentagon stops using Anthropic AI tools after blacklisting company, BBC told",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5ILU5UbWc0NDdJSEowdm9PaE14Nkl1MjlpSEJ4djdRQUlhVWNocFAyMXpxN0pXOUZNQk1YQ3JiZnd5MVpGckNkLU5NU1FXTjZzS2EyWDU0RnB3N1U?oc=5",
+   "published": "2026-10-05T16:13:21+00:00"
+  },
+  {
+   "id": "cdc285707a99",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "NY 市議会の公聴会で研究者が警告「自分たちの敵を育てている」",
+   "summary": "ニューヨーク市議会の AI に関する公聴会で、AI の研究者が「私たちは自分たちの敵を作り、育てる競争をしている」と警告しました。",
+   "point": "",
+   "source": "CNBC",
+   "original_title": "AI researcher warns 'we are racing to build and grow our own adversary' in NYC hearing",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZUIydzZYNjQ4a2RSMEROU0N4RC1NM2JPdXp3RTdtRWVqSjc0Zk5YTU9EWGd2ZEtWSk1JTkZacVkwejgyajZIRlRvMnNsSkkzMFhFbzczNGM4eVVRLXktR19kYjNybkdpVzl4bkpIdHFzRVdYSmlUTjkwR2Z2VjR5cnpSMlRLcEVFSnVlVUN0MTdRLXZERzI1eURTaGxTNllCTndqbtIBqgFBVV95cUxPcVFrM05qVE9lTUtNUUdYV0ZtZ0xNSy1NdGQ2aURSQU1pd3g3ZnA1YlMwbUxPaFZhWlh4bWVwQ3NvalBSajNFZk5DNlA0NjVERUZiLXZ0cmZhMHdRQXo0dVg5elgyTjZsbDR5Sl9KWVJvaVVNZGRKZGFrWlpzak1veGN0Yy1PX3FIWEJCYXl3YlpFMXhnaFg4ZHpkcVMxblp4NTRWM2pRT2FPdw?oc=5",
+   "published": "2026-10-05T10:41:41+00:00"
+  }
+ ]
+}
