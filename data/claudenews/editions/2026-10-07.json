@@ -1,0 +1,115 @@
+{
+ "date": "2026-10-07",
+ "generated_at": "2026-10-07T11:52:50+09:00",
+ "lead": "Google のドキュメント・スプレッドシート・スライドで Claude が使えるアドオンが出ました。サブスクの利用上限の見直しや、スタートアップに Claude Team を1年無料で提供する制度の拡大など、プランにかかわる話題も続いています。",
+ "items": [
+  {
+   "id": "a0414ef6474e",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "「Claude for Google Workspace」アドオンが登場",
+   "summary": "Anthropic が「Claude for Google Workspace」というアドオン（追加機能）をリリースしました。Google Workspace は、Google のドキュメントやスプレッドシートなどをまとめた仕事用のツールです。",
+   "point": "ふだん Google のツールで仕事をしている人には、うれしい知らせです。",
+   "source": "Yahoo!ニュース",
+   "original_title": "Anthropic、「Claude for Google Workspace」アドオンをリリース（窓の杜）",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4ycFFiVFk4MzgtbzV2UUpxVFl4M1VreVpsSk40VzdnVVBkeTBESzJVdEpSUTYxUkRLWkxHSkFNejM2M2VTbHc2YmpvNjJKUnNybXQxN253Z0F0Y0ZlbGhvR1hmX2dwX2JLTExTUWZMc1ctTFdYMjVrVmFVX1k5cmc?oc=5",
+   "published": "2026-10-06T22:05:00+00:00"
+  },
+  {
+   "id": "4a233fd16a0e",
+   "region": "jp",
+   "category": "料金・プラン",
+   "title": "OpenAI と Anthropic、サブスクの利用上限を見直し",
+   "summary": "OpenAI と Anthropic が、AI のサブスクリプション（月額プラン）の利用上限を見直しています。背景には、AI を動かすコストの高さがあるそうです。",
+   "point": "月額プランで使える量が変わるかもしれないので、気にかけておきましょう。",
+   "source": "マイナビニュース",
+   "original_title": "OpenAIとAnthropic、AIサブスクの利用上限を見直し - 背景に推論コスト",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE91MHFNaVpwemRlb0t0eDBMWG85VnhjWW44azNHWkNjV05UeDluVlc0alZmQTB3Ti0ybVJkMWltbm9kUnhYZWFaaTBmTmNwNWEzOUJfMHB0UnJreXZVMUV4OE5KLXdiX2pQ?oc=5",
+   "published": "2026-10-07T00:30:12+00:00"
+  },
+  {
+   "id": "b739ff13fb6e",
+   "region": "jp",
+   "category": "料金・プラン",
+   "title": "スタートアップに Claude Team を1年無料、クレジットも",
+   "summary": "Anthropic がスタートアップ支援の「Claude Startups」を広げ、Claude Team プランを1年間無料にし、1,000ドル分のクレジットも提供すると発表しました。",
+   "point": "これから会社を始める人には、試しやすい制度です。",
+   "source": "Pasquale Pillitteri",
+   "original_title": "Claude Startups、Anthropicが1年間のClaude Team無料提供と1,000ドル分のクレジットを発表",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOeVhVVERteVR0WWttbWlkbDVRMzlVQUFKR0xydlVHWmltR1dRU1lLMzNWQzZrVUt6ODE5WURjMDZaWHpsUjJDRGhrUkdDVkhHcW9LZS1ucTlJeUo4QVJKa2hkeC0yTjJnbWx3c056VUhwVDhsaVhGY0RDUGxuSk9QczhRbEl5Wk9CZ3hiNGhQLW92NjdjRkZz?oc=5",
+   "published": "2026-10-06T18:44:33+00:00"
+  },
+  {
+   "id": "cb9c48f386d4",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "サイバー防御向けプログラムを3段階に、Mythos 5.1 も提供",
+   "summary": "Anthropic が、サイバー攻撃から守る側の人向けの「サイバー検証プログラム」を3段階に広げ、「Glasswing」と一つにまとめました。防御側には Mythos 5.1 も提供されます。",
+   "point": "",
+   "source": "innovaTopia",
+   "original_title": "Anthropic、CVPを3段階に拡張しGlasswingと統合｜防御側にMythos 5.1も",
+   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAtcTVGa2xoY0xvZERGdG5Uc0djRHYxOUZQR3hwQWEyeGVGOUVYaWs0emRRR0dqVno0TGVlQ3F2NXhMcjY4M2pObmxRRWcyLVlfaHVB?oc=5",
+   "published": "2026-10-07T00:35:19+00:00"
+  },
+  {
+   "id": "d60f63813c09",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "「プロジェクト」機能が新しく生まれ変わる",
+   "summary": "Claude の「プロジェクト」機能のデザインが見直され、フォルダのような形から、会話を中心にした形に変わったと、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Projects redesigned: from folder to conversation",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5PbGhNQVkwcUkyNXY3dnZ0NWlrVlBZVUt6cjA4TUVCak9nenVKOWh3YjdmSnJfcElWVThxX2Z2Nnh5RHc5WkFFV2hNUUgyUWJwU1VPelZyUV9lZ2lZaWZ3ZjZoZ2tobmxt?oc=5",
+   "published": "2026-10-06T15:07:48+00:00"
+  },
+  {
+   "id": "f465f4e38540",
+   "region": "intl",
+   "category": "Claude Code",
+   "title": "Claude Code、マーケットプレイスからのプラグイン導入が簡単に",
+   "summary": "Claude Code の新しい版（v2.1.292）で、プラグインを入れるときにマーケットプレイスを指定できるようになりました。必要ならマーケットプレイスの追加からインストールまでを一度におこないます。",
+   "point": "",
+   "source": "Claude Code リリースノート",
+   "original_title": "v2.1.292",
+   "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.292",
+   "published": "2026-10-06T18:59:30+00:00"
+  },
+  {
+   "id": "1b7d4e0f60de",
+   "region": "intl",
+   "category": "料金・プラン",
+   "title": "大口ユーザーから OpenAI と Anthropic に値下げ圧力",
+   "summary": "AI をたくさん使う大口の利用者から、OpenAI と Anthropic に対して価格を下げるよう求める圧力が強まっていると Bloomberg が報じました。",
+   "point": "",
+   "source": "Bloomberg.com",
+   "original_title": "OpenAI and Anthropic Face Rising Price Pressure From Big AI Users",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNRHhUUnpNdE5CR1VFVEx2Q1NsTjg5cjNCb2VYazhWeERKMVpMOWdlQVFteW52b1o5UTRONGt4TmdJbE8xbld4RHFkaE5vSHQ2MHBFdVlOY1ZSeVJsamNVc0VERHp3dE5xUmV6Ymk5S1FvblZlcTU4REVZQ2kwVHRBck9Ma1dkVk9Bb3VfVUphN3V3X1FsNThpVzlMTktSSGV4SHlhZzU1MEZicW5vQTQ3SlNoUldWcFBMVlMw?oc=5",
+   "published": "2026-10-07T00:33:40+00:00"
+  },
+  {
+   "id": "16d934182e6a",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "JPモルガンのダイモン氏「Mythos でサイバーリスクが10倍に」",
+   "summary": "米大手銀行 JPモルガンのジェイミー・ダイモン CEO が、Anthropic の Mythos によってサイバー攻撃のリスクが10倍に高まったと語りました。",
+   "point": "",
+   "source": "Bloomberg.com",
+   "original_title": "JPMorgan CEO Dimon Says Anthropic’s Mythos Pushed Cyber Risk Up 10-Fold",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPeVhyUEVBSkFKQUtRTTh3RWh2dHVfWU53OGVRV3gtdzlBcGRTRTVWUFBOQWxzWjlfNXl1WGp4X2l3aExTTHlLalhZRGdrek1QOFctaGRFeHhIaGhyRllneWZ4WG5kamhCNkdKZ0NOVHJyLUFiSTZLM1ZYUTFQT3ZkTFZVdHRXeHU4SktvNDVoMzEwV1RScEVjTnJRQ3gzVTNQbzY4b09vNFZQNml1QUE?oc=5",
+   "published": "2026-10-06T13:41:39+00:00"
+  },
+  {
+   "id": "927a045802cd",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "米国防総省、裁判所の判断を受けて Anthropic の AI 使用を停止",
+   "summary": "裁判所が Anthropic を「サプライチェーン上のリスク」とする指定を認めたことを受け、米国防総省が同社の AI の使用を止めました。",
+   "point": "",
+   "source": "MeriTalk",
+   "original_title": "DOD Halts Use of Anthropic AI After Court Upholds Supply Chain Risk Designation",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUGF5V3Q1a2o1bVVxRUUwUU91dHFxR09VbU41aXZ0NFZDSDRkdzV3cU40VV8xanVqSGtCZ2JDOWVJdnN5dWhZZXpqRGtJUFUteGxkYlc1cXRsNlFqY1hvV25BcjRIUGlXZmdYbTdJamlrcW0zUnpZc2stLTFFbGUyV21UdEV6NjdQYnFwa0VwV3FqcXZrelhkOW1KWksxa3ZVa2hDRlNZZlpWdFQ0RkdJNGJIT0w?oc=5",
+   "published": "2026-10-06T20:17:49+00:00"
+  }
+ ]
+}
