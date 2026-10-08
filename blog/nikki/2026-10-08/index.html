@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>57日分の自分の使い方を、Claudeに数えてもらった｜Jiu Labo ブログ</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="「私、結構使いこなしてるのかな？」と気になって、Claude Codeを使い始めた8月12日からの記録を、Claude自身に全部数えてもらいました。それをそのままブログの記事にしています。">
+<meta property="og:title" content="57日分の自分の使い方を、Claudeに数えてもらった｜Jiu Labo ブログ">
+<meta property="og:description" content="「私、結構使いこなしてるのかな？」と気になって、Claude Codeを使い始めた8月12日からの記録を、Claude自身に全部数えてもらいました。それをそのままブログの記事にしています。">
+<meta property="og:url" content="https://jiujitsu.co.jp/blog/nikki/2026-10-08/">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://jiujitsu.co.jp/blog/nikki/2026-10-08/">
+<link rel="alternate" type="application/atom+xml" title="Jiu Labo の新着" href="/feed.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.95; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { color: inherit; text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; word-break: auto-phrase; text-wrap: balance; }
+  .meta, .lede { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 40px; }
+  article p { margin: 0 0 1.4em; }
+  .did { list-style: none; margin: 8px 0 32px; padding: 0; counter-reset: did; border-top: 1px solid var(--line); }
+  .did li { counter-increment: did; padding: 18px 0 16px 44px; border-bottom: 1px solid var(--line); position: relative; }
+  .did li::before { content: counter(did); position: absolute; left: 4px; top: 20px; width: 26px; height: 26px; border-radius: 50%; background: var(--panel); border: 1px solid var(--gold); color: var(--gold); font-size: 12.5px; font-weight: 700; text-align: center; line-height: 24px; }
+  .did h2 { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .04em; line-height: 1.6; margin: 0 0 4px; word-break: auto-phrase; text-wrap: pretty; }
+  .did p { margin: 0; font-size: 14.5px; }
+  .ask { margin: 12px 0 0; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 10px 14px; }
+  .ask span { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; color: var(--gold); }
+  .did .ask p { font-size: 14.5px; color: var(--ink); }
+  .did .ask p::before { content: "「"; } .did .ask p::after { content: "」"; }
+  .did .tip { margin: 10px 0 0; font-size: 13.5px; }
+  .tip b { color: var(--gold); margin-right: 8px; font-size: 12px; letter-spacing: .08em; }
+  .did .see { margin: 8px 0 0; font-size: 13.5px; font-weight: 700; }
+  .did .see a { text-decoration: none; }
+  .closing { background: var(--panel); border-left: 3px solid var(--gold); padding: 14px 18px; }
+  .auto { font-size: 12.5px; color: var(--faint); }
+  .note { font-size: 12px; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 40px; }
+
+  .pager { display: flex; justify-content: space-between; gap: 12px; margin: 36px 0 0; font-size: 13.5px; }
+  .pager a { text-decoration: none; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+    article { font-size: 15px; }
+    .did li { padding-left: 38px; }
+    .did h2 { font-size: 16px; }
+  }
+  /* スマホで小さい字を底上げ（~/.claude/scripts/sp_readable.py と同じ値） */
+  @media (max-width:640px){.brand{font-size:12px}.ask span{font-size:12.5px}}
+</style>
+
+<header>
+  <p class="brand"><a href="/blog/">JIU LABO BLOG</a>　·　日記</p>
+  <h1>57日分の自分の使い方を、Claudeに数えてもらった</h1>
+  <p class="meta"><time datetime="2026-10-08">2026.10.08（木）</time>　村田亜衣（マネージャー）</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>「私、結構使いこなしてるのかな？」と気になって、Claude Codeを使い始めた8月12日からの記録を、Claude自身に全部数えてもらいました。それをそのままブログの記事にしています。</p>
+    <ol class="did">
+      <li><h2>Claudeに、自分の成績表を作らせた</h2><p>57日間で私が話しかけたのは2,072回、Claudeが自分で手を動かしたのは21,696回でした。1回頼むと、Claudeは平均で約10回、ファイルを開いたり計算したり表に書き込んだりしています。2週間ごとに区切ってもらうと、覚えさせたメモが43枚から100枚に増えるにつれて、話しかける回数が764回から300〜400回台に減っていました。数字を見て、「上手な頼み方」より「覚えさせたこと」が効いていたんだと、はっきり分かりました。</p>
+        <div class="ask"><span>真似するなら、こう頼む</span><p>これまで私が頼んだ回数と、あなたが動いた回数を数えて。2週間ごとに区切って、覚えたメモの枚数と並べて表にして</p></div>
+        <p class="tip"><b>発見</b>最後の2週間は1回あたりの回数が8.9回に下がっていました。ブログやデザインのように、見ながら短く何度も直す仕事が増えたからで、回数が減った＝下手になった、ではありませんでした。</p>
+        <p class="see"><a href="/blog/oboesasekata/">できたものを見る →</a></p>
+      </li>
+    </ol>
+    <p class="closing">自分の使い方も、Claudeに聞けば数字で見せてもらえます。まずは今週2回同じ説明をしたことを、ひとつだけ「覚えておいて」と言ってみてください。</p>
+    <p class="auto">このほか、自動の更新が動きました（search 5件、claudenews 2件、柔術ニュース 3件、補助金一覧 1件）。</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+    <p class="pager"><a href="/blog/nikki/2026-10-07/">← 前の日記（2026.10.07（水））</a><span></span></p>
+    <p class="note">この日記は、その日にこのサイトへ入った変更の記録をもとに Claude が下書きし、村田が読んでから載せています。</p>
+  </article>
+
+  <footer>
+    <a href="/blog/">ブログの一覧へ</a>　／　<a href="/">jiujitsu.co.jp トップへ</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
