@@ -1,0 +1,115 @@
+{
+ "date": "2026-10-08",
+ "generated_at": "2026-10-08T11:53:29+09:00",
+ "lead": "小さくて速い新モデル「Claude Haiku 5.5」が公開され、コストは前のモデルより大きく下がりました。Claude Code のクラウド実行の正式版や、会話の中で動く図を作る機能など、新機能の発表も相次いでいます。",
+ "items": [
+  {
+   "id": "b07092309daf",
+   "region": "jp",
+   "category": "新モデル",
+   "title": "「Claude Haiku 5.5」公開、性能アップでコスト約75％減",
+   "summary": "Anthropic が小型モデル「Claude Haiku 5.5」を公開しました。前の「Haiku 4.5」より性能が大きく上がり、使うコストは約75％下がったそうです。",
+   "point": "安く使える小型モデルが新しくなりました。",
+   "source": "ITmedia",
+   "original_title": "Anthropic、「Claude Haiku 5.5」公開 「Haiku 4.5」から大幅性能向上で利用コスト約75％減",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE94TFdiNm5uMTBPd3VwRlJOQ1B2SG1IYktjck9GcGRBTHJiSmhBMHpjSWVYWlBsbXFPY1Fnc1JFeTUxbThIWW5tdXJkU3otT1VTcEt2N2M5c1F6d0E3UTNFN3F5a0hJSGV5ckE?oc=5",
+   "published": "2026-10-07T22:25:53+00:00"
+  },
+  {
+   "id": "0319184b5dd9",
+   "region": "jp",
+   "category": "料金・プラン",
+   "title": "Haiku 5.5 の API 料金は10分の1、Sonnet 5.5 のキャッシュは半額",
+   "summary": "Claude Haiku 5.5 の API 料金は、Haiku 4.5 の10分の1になりました。あわせて、Claude Sonnet 5.5 のキャッシュ読み込み（くり返し使う文章を再利用するしくみ）の料金も半額になっています。",
+   "point": "API で Claude を使うしくみを作っている人には、うれしい値下げです。",
+   "source": "ITmedia",
+   "original_title": "Anthropic、「Claude Haiku 5.5」のAPI料金を「Haiku 4.5」の10分の1に 「Sonnet 5.5」のキャッシュ読み込み料金は半額に",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5uRTdWNHpfNzNha1FxeWFoMHpKeTFaY3JPaFQ0M3F4WFNTOVMyOGttQ1oycFJDRUs5ZmZac2xCN0JnNlBsanRnT2FnbS1LSFlzVDlYUTFPekJMZWtPWGpYbkFkZXJEXzRtUzdkNA?oc=5",
+   "published": "2026-10-07T23:20:36+00:00"
+  },
+  {
+   "id": "03c95277d281",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code のクラウド実行が正式版に",
+   "summary": "Claude Code をクラウドで動かす機能が正式版になりました。いくつもの開発作業を同時に進められます。",
+   "point": "",
+   "source": "株式会社マイナビ",
+   "original_title": "Claude Codeのクラウド実行が正式版に 複数の開発作業を並行して実行",
+   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE03X20tbFJNOG94cnRaUU9TTXpWMDRYUExZbzFadlpnUzNqcXR4ZW95ZnktNDhfbG1kcTlINjlER25PODU4c3o3QU9oRWhmQWItWFBiRXlYUkVhNmM4dXRj?oc=5",
+   "published": "2026-10-07T22:35:12+00:00"
+  },
+  {
+   "id": "06c1cf8dadaf",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "「ファイルの読ませ方」を変えたら、使用上限がほぼ1日もつように",
+   "summary": "Claude Code で、ファイルの読ませ方を変えただけで、ほぼ1日もつようになったという体験記事です。",
+   "point": "使用上限が気になる人は、読ませる量を見直すと長く使えるかもしれません。",
+   "source": "ライフハッカー",
+   "original_title": "Claude Codeの使用上限がほぼ1日もつように。変えたのは「ファイルの読ませ方」だけ",
+   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBpSUxQSGpENGRYZkFCaTR5c3Mza3F0OHJvZWhjaTZmMVRpcFlYYVBjVmxwazFOWEM5RS1BR1oxRE9sNm1zQXNZN0paTVFISWpweThQYXBZMzUxLTRrRkJOdFFYYzY1d2t3STVXX3pvQ2poWUJUYW9DaC00YUI?oc=5",
+   "published": "2026-10-08T01:20:01+00:00"
+  },
+  {
+   "id": "8980416216d3",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude が会話の中で、動かせる図を作れるように",
+   "summary": "Claude が、会話の中でそのまま操作できるインタラクティブな図やグラフを作れるようになったと、Claude の公式サイトで紹介されました。",
+   "point": "説明を図で見たいときに、その場で作ってもらえます。",
+   "source": "claude.com",
+   "original_title": "Claude builds interactive visuals right in your conversation",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1TR3ozU0RYOEs3XzcxTFVrTnhBV0h1RFhsV0hERFBKY3hERTFGY0xZdFFDR09VTndCSUw4UnNReGJ2cFRVOTBnMVNSX1V6dk44MFl6Nk1qNmk2a0VlY1hmVXJoNU1nWks1d0Q4?oc=5",
+   "published": "2026-10-06T18:33:26+00:00"
+  },
+  {
+   "id": "1e192f1c8df2",
+   "region": "intl",
+   "category": "Claude Code",
+   "title": "Claude Code の「オートモード」が標準に",
+   "summary": "Pro・Max・Team プランの Claude Code で、「オートモード」が最初から使われる設定になりました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPdGdSbm4xVDg0T3JiOXJTdEN0MXc4QlFUZTVtcDl4cXRveW1OYllGT0dDSnhRRHlJZF8zTXRLakNzcDQyR2dfUmZlQkRWTmdNeWFicEM1bGM2cndVcG84MEhrYzRENHo1ODM1eXN1TENYM25OQnZ0VVlyVVcwaDRudTA2Vk9aNlh2dFRsUkZyYVBDSmpzUFdNS3Y2X0pnQ3B1dFZiWHpn?oc=5",
+   "published": "2026-10-06T15:33:19+00:00"
+  },
+  {
+   "id": "eda5b3ddc05f",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "「Claude Security」の公開ベータが始まる",
+   "summary": "「Claude Security」が公開ベータ（だれでも試せる試験版）になったと、Claude の公式サイトで発表されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Claude Security is now in public beta",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQczVnbFp4ajZCNkRreVo4TlZNeWxRbkV5Z3cydmRWWFo3a2lORk1mLWNXQ2NBTi13cGxjZmlxeGNxTnNDUmNteXA1a183aW82M0JDdk1rcEk0UnNpZmdvbnRuYmlTU0Z1d1VqRFBOc0t6OV95Y09JNnZuRVVhaS1wTVBESlY2TlpSVzVkUTJuRlJHTll4bkNZYUdiczZpaVR1aDYyblMyMkJmZTVxUTNZRDdPc28?oc=5",
+   "published": "2026-10-06T15:07:48+00:00"
+  },
+  {
+   "id": "64fb5051a201",
+   "region": "intl",
+   "category": "料金・プラン",
+   "title": "Max・Team プランに API クレジットが付く",
+   "summary": "Max プランと Team プランで使える API クレジットについての案内が、Claude の開発者向けサイトで公開されました。",
+   "point": "Max や Team を使っている人は、API も試せるか確かめてみるとよさそうです。",
+   "source": "Claude Platform",
+   "original_title": "API credits for Max and Team plans",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOSzAzNlpXU2thSjJNM18zMFJpVkd2TVBwUkczRDN1a2cyXzZEVEdIOFd4emd6QVMxWW9yZ19HMmNkYldWRVdkbkg4RU1XZGRqSFB4UzdMS3VfQk03Z21reC12S3RDME9qaDZqczlvUVpMYl9lWm5NRHI0VkNxcE5jSDB3?oc=5",
+   "published": "2026-10-07T17:59:50+00:00"
+  },
+  {
+   "id": "adcb2edcbbca",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "AI の値下げ競争が激化、OpenAI が Anthropic を追い上げ",
+   "summary": "AI の値下げ競争が激しくなり、OpenAI が Anthropic との差を縮めていると、ウォール・ストリート・ジャーナルが報じました。",
+   "point": "",
+   "source": "WSJ",
+   "original_title": "The AI Price War Is Heating Up—and OpenAI Is Gaining Ground on Anthropic",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTlhERVptZkJWLU92UGliVXFjZVpsSWVTRmYteVZUYkJmSFF1R2luWU94c2dySFVhWk1VSFVzMWV1M1FESTFyUmliNkh0MXdlUGFyTFhlLUtjZnZoOHNFSEx3Rm01UFVSRVdqc25rUHh3SGtjSnVBSlUwUTBZZTBVQ0gzemFKcWo1azZIRTJEQm5yRUUyOFluVkhGY21YRzR5UVk3Nk9nb3U0UG1p?oc=5",
+   "published": "2026-10-08T00:00:00+00:00"
+  }
+ ]
+}
