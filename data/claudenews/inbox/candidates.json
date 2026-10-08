@@ -1,0 +1,765 @@
+{
+ "date": "2026-10-08",
+ "candidates": [
+  {
+   "id": "f77821e6f69c",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "Yahoo!ニュース",
+   "title": "Claude Codeの使用上限がほぼ1日もつように。変えたのは「ファイルの読ませ方」だけ（ライフハッカー・ジャパン）",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1MNjJqUXBGYTVDcjZRczNRZ2xGZU9IM1RRblZyM3Y5SjVHcXJsaDBlMHY0M0dPV0RXMUphNnN5QWtQTHFmMGxtZmVQRFY4YWhjMzVDZWstbTlIZVo1VGpHaHVwcTk3RUlRZ3RLU2NYWmJ3aWx6bEswNDlaU042QlU?oc=5",
+   "snippet": "",
+   "published": "2026-10-08T00:01:02+00:00"
+  },
+  {
+   "id": "06c1cf8dadaf",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "ライフハッカー",
+   "title": "Claude Codeの使用上限がほぼ1日もつように。変えたのは「ファイルの読ませ方」だけ",
+   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBpSUxQSGpENGRYZkFCaTR5c3Mza3F0OHJvZWhjaTZmMVRpcFlYYVBjVmxwazFOWEM5RS1BR1oxRE9sNm1zQXNZN0paTVFISWpweThQYXBZMzUxLTRrRkJOdFFYYzY1d2t3STVXX3pvQ2poWUJUYW9DaC00YUI?oc=5",
+   "snippet": "",
+   "published": "2026-10-08T01:20:01+00:00"
+  },
+  {
+   "id": "b07092309daf",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "ITmedia",
+   "title": "Anthropic、「Claude Haiku 5.5」公開 「Haiku 4.5」から大幅性能向上で利用コスト約75％減",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE94TFdiNm5uMTBPd3VwRlJOQ1B2SG1IYktjck9GcGRBTHJiSmhBMHpjSWVYWlBsbXFPY1Fnc1JFeTUxbThIWW5tdXJkU3otT1VTcEt2N2M5c1F6d0E3UTNFN3F5a0hJSGV5ckE?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T22:25:53+00:00"
+  },
+  {
+   "id": "bd3485a2dadf",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "BRIDGE（ブリッジ）",
+   "title": "Anthropic、小型モデル「Claude Haiku 5.5」を公開——前モデル比コスト平均約75%削減",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBvTVVPbWY2emhhdzVlcFZaaHRuZEM0VG0yR2JSWE1nLWRib1dOUkZ4VjBycnh6cW9xUFM3Y0M1aWdrS2d2WG5wRzI1aFpVX1A2cUFZVzhBcDgyX0k5VWlkcHdJUjVkNDRJSU5EMm4tcWlwYVNodmtfcVRn?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T22:38:12+00:00"
+  },
+  {
+   "id": "bba09025c02e",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "合同会社ロケットボーイズ",
+   "title": "Anthropic、Cyber Verification Programを拡張―Claude Mythos 5.1など高度なサイバー能力を3段階で提供",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNdUFxNi15bm9QaEotRWY4VWtKVk9sRE04azVHeWNYRFNTVi12M2o0dTVWYW5yZ0NBYmNNOUR1UndWX0VkellUV1ZnTFM3T2tra2staWtHOW0wTWtFOExhaUszZ2k1ZlNOU1N2akRyUExab3FrWFB6MWw0d3RFLWFoQlhFRDhURFNEZXZuLUhRRkFrQThQYVk2RWV2WQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T21:00:58+00:00"
+  },
+  {
+   "id": "9668d4e37b7b",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "Ledge.ai",
+   "title": "Anthropic、ロボットは身体作業の74％を実行可能と推計 人間より安く担えるのは全労働時間の0.3％",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE15azk0TE93U3ZzQlZ5bWR5cUducWdORG9ZSmk5NGRVRjFlNTRLbUI5LXZBMFhWRmNhY2toUnQxWHpsZHdaYjlkejhsSFhWMm81NVFOa2NvMDZiSjlwdWs0UkN6Wk5VZw?oc=5",
+   "snippet": "",
+   "published": "2026-10-08T01:06:49+00:00"
+  },
+  {
+   "id": "be15702c59d8",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "ｄメニューニュース",
+   "title": "Anthropic「Claude Haiku 5.5」発表 API料金最大90％減、性能も向上",
+   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5GTXJ4UUlXVHZzZDdxUkhQQzhxWExMQnpzb1VfT2tSRGp6SFc1eEFaMDdoQjcxSVh5amhFdnJrWlhkUlFwV1ZBeGtPTTB2SUJmTGdlUlE5Z2FUUlhNUzlTczVISHRGMmRyNXg4eGxiWmhNcW9wcW91alBGQ2bSAXxBVV95cUxORk1yeFFJV1R2c2Q3cVJIUEM4cVhMTEJ6c29VX09rUkRqekhXNXhBWjA3aEI3MUlYeWpoRXZya1pYZFJRcFdWQXhrT00wdklCZkxnZVJROWdhVFJYTVM5U3M1SEh0RjJkcjV4OHhsYlpoTXFvcHFvdWpQRkNm?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T23:04:00+00:00"
+  },
+  {
+   "id": "03c95277d281",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "株式会社マイナビ",
+   "title": "Claude Codeのクラウド実行が正式版に 複数の開発作業を並行して実行",
+   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE03X20tbFJNOG94cnRaUU9TTXpWMDRYUExZbzFadlpnUzNqcXR4ZW95ZnktNDhfbG1kcTlINjlER25PODU4c3o3QU9oRWhmQWItWFBiRXlYUkVhNmM4dXRj?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T22:35:12+00:00"
+  },
+  {
+   "id": "513fe237468a",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "Vietnam.vn",
+   "title": "Anthropic社は、最も強力なAIモデルのテストを拡大する。",
+   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNNWc1WS1XYm9rMENFRFMzajZ1TTFTMkZLQWdSNndnNXdiMWF1ZmFhSVM4LWxKcEJXRVdJM2VJcm9BOVhJMVJ1SGNBZjJwWnlwLWZlNHlTOXpxcHNwRTl1eEUwdDFhaDZCaDh2eUJLZTBiM0FRcDIzcnNMaGpVcXgxeWM4SWdudw?oc=5",
+   "snippet": "",
+   "published": "2026-10-08T00:17:34+00:00"
+  },
+  {
+   "id": "5834dc58a3b9",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "窓の杜",
+   "title": "Anthropic、「Claude Haiku 5.5」を発表 ～1年ぶりの小型モデル、最速・最安を更新",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE82VEVlTzMzcVJ3ekFKcUkzTUZVakZsNE9oMndHeXJCd2tMc1pMOHVqclpyMTVXLThlOWRORmphY01uWXF6QVg5bGlyRUhrcnZ2ZEJadGNjZEFkZGJIQ0ZDUUxVNFpDSTNU?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T20:05:00+00:00"
+  },
+  {
+   "id": "db8c85ba3f8c",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "BigGo ファイナンス",
+   "title": "Anthropic、低コストAI向け「Haiku 5.5」発表 運用コスト75%削減",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5nNXo3UGVubUtOeVRYdGxJVmlmM1JwM0FfNy1aWWRNVjhhSV9oaGhyOC00SnViaDFwb3RqTlk1SWJDNmtjeVB1ZUc2UjEzOTJxbmJrSTZnSGlheVlvWFZfcjN2TXdZcVVBc2g1dG5TUVk2SzNE?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T18:55:00+00:00"
+  },
+  {
+   "id": "768f3be1bd37",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "gihyo.jp",
+   "title": "Anthropic、Cyber Verification Programを拡大 ——防御・侵入テストなどのセキュリティ業務向けにClaudeの利用制限を緩和",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdnR1OFRjeFpUMzhhQmllR3JITGFoR3hSdzBsS09OZVRuVHgxckl6TG4zczhLbnNxV3Y0Y05xQ2JoQm4zZWN2UXdhNXpUTDVYMl8zc2Y0WnZBLXBBeHdZZDVOWWFHUm1FTGgxRldoVjVxZV9DZk9Dem9VdDdoZ2ZYMGln?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T08:39:00+00:00"
+  },
+  {
+   "id": "52d79852397b",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "Unite.AI",
+   "title": "Anthropic、Claude Sonnet 5.5 のキャッシュ読み取りコストを 50% 削減",
+   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOWGdnZFZzRWVKcU1mcmhmWUF0RDB0RURSbVlVQWpKX1ZRRTZadGJidXRWX3NidkhFbnQtRzEzaHNrZE9qNnhwMHFuMEdxMklTV0ZTcGtraVVGZXNMVWpOZGdpQmhqUUxURDBkeFBvTm9PeHpPWXd1c3B4a1dOay1VeE1RUTBqTTNwQkE?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T19:44:53+00:00"
+  },
+  {
+   "id": "0319184b5dd9",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "ITmedia",
+   "title": "Anthropic、「Claude Haiku 5.5」のAPI料金を「Haiku 4.5」の10分の1に 「Sonnet 5.5」のキャッシュ読み込み料金は半額に",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5uRTdWNHpfNzNha1FxeWFoMHpKeTFaY3JPaFQ0M3F4WFNTOVMyOGttQ1oycFJDRUs5ZmZac2xCN0JnNlBsanRnT2FnbS1LSFlzVDlYUTFPekJMZWtPWGpYbkFkZXJEXzRtUzdkNA?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T23:20:36+00:00"
+  },
+  {
+   "id": "8d5eb910d8b1",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "Ledge.ai",
+   "title": "生成AIを巡る問題が各所で噴出 国内の不正アクセス被害公表は最多ペース、日販子会社がAnthropicに書籍を無断販売",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPWHVFUVZ0enk5NF9UUXBXeDBEWkRTODgzWHdYUUhwc2tFOFpiZjRMM1BOVFltcUw3SVNoXzJ4VHFlNDg1dUVFV0R4b1hpRXhNTDltTGNuOGMyajJFaTg0NXZsSVRiYzc1MGpSOXBvV2pmUnkwWS1zMF9jOTBKb3dTN3J3?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T23:06:35+00:00"
+  },
+  {
+   "id": "979c8df4defd",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "Unite.AI",
+   "title": "Anthropic、Claude Haiku 5.5 を発表、スモールモデル API の価格を引き下げ",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQRHg5UnRuWjV2RjZIc2NMbGtqMmVZQmdkNlZpNEpuNTRhanhYMFpZVHRrRGtscVVDTUlXZklQQU50dGN1UW9tYnpqb3ZFSUc0SjVIRnRLNjViaGwtQkU5S1RiSHZ2TkVqVHA5OFlpM3RteTd3NGxpTG03Sm9uazQ5bnNLbEJWRkZEX0pWbmJxdERZTkp2c0E?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T18:32:37+00:00"
+  },
+  {
+   "id": "fd42ba60f77b",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "Yahoo!ニュース",
+   "title": "Anthropic、「Claude Haiku 5.5」を発表 ～1年ぶりの小型モデル、最速・最安を更新 (窓の杜)",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOcXNwSlR6WkxZUGtfMWVoRlRIdlpNWWZXa09BXzlpNW5CbFZ1eGdCazQ0bzk4ZHJ1TktYWjJPdVNDbU5YT2QtYzVXNkg2UVU1dDVaZHZ5a0lPdEVzWm1YOWZ1aVo4YVR2LVB0RXdFdVV4OHVMY2MzTEdTcXhfYy1lVEtVUmhOXzBGTXZPYWR3?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T21:05:26+00:00"
+  },
+  {
+   "id": "1b5b20faca90",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "Yahoo!ニュース",
+   "title": "アクセンチュアとAnthropicがAIの安全性評価を行う「組み込み型評価者」チーム設立へ提携（Web担当者Forum）",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE45ak0xeUhpbUY4Y1JnUGFJVUlESm5vclZBRVpyNjZHdEI5REMyNmdsY3pLM1lXd01aZjVDZ1Bnemc5MmVSRm0yU2REWnc0OS1MdW1uUHVvT3cwNFFrWWczSHA3MnZkUUlyZmRCeXp6MlVtWU5DTFVOeEdJNUVhTmM?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T06:01:13+00:00"
+  },
+  {
+   "id": "59830214e91c",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "ITmedia",
+   "title": "Anthropic、セキュリティ専門家向け「Cyber Verification Program」を拡充 「Claude Mythos 5.1」も対象に",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBWbklOUEZSWWhpd1M0RDhuS2dLWDB0NnJNd2ZRU19HZHJhR1VXa1Z1Y0JpU2JVWkJIUkpXSG04RGRZck1LOUlxOVFLVXAzaUgtaUxvSHV4Q2lNaWw1bVVjSVE1Y0JEUV9KOHc?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T03:52:55+00:00"
+  },
+  {
+   "id": "60833e64cc9c",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "BRIDGE（ブリッジ）",
+   "title": "Anthropic、サイバー認証プログラムを拡充——Claudeへのアクセスを3段階に",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNb3duX1lRZWQxdzZnQzgyQXo3cTFWZU9FTEx5anV0ZVFOZ1VibHFUUk9lWlVGUkJtV0lqaWRLNzEwNUNKdkFJTmY5Tl9ieDJTOUpfMVZ1QUtLbkF3NFZXZDRLWXRxa3ZHY1Y2RXBTaDEtNUZfTWhRbHhsT3J2NWxhQkxJVQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T02:06:43+00:00"
+  },
+  {
+   "id": "4a11eb4a2c79",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "千葉テレビ放送株式会社",
+   "title": "Anthropic、「Claude Haiku 5.5」を発表 ～1年ぶりの小型モデル、最速・最安を更新／高頻度・コスト重視の用途にピッタリ、「Opus」「Sonnet」の手足にも",
+   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA3cnVUZ0NoOGpJSGIyWndMREFEcXhZbnZQampmVDk4Q3JieVZxSWZ1cWxhM3R2Wi1ubldiaUtDNjBOdTNwaVQ5UGZvamJvS1dPUm5vdDN6a1RjRVk5bExJ?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T20:19:25+00:00"
+  },
+  {
+   "id": "5dc83e34d505",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "디지털투데이",
+   "title": "Anthropic、低価格モデル「Claude Haiku 5.5」発表 前世代比で運用コスト平均約75%減",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNb2NVUEVPSHRWVzNXSDJxTnJDa1RXRVlwWWs1NjVQMFoydnlrTmM2TDdyUGI0WVFtWE9MNTFiUlJJZWh2M0hLQWlvbG11ZnZ2eGh6dXdHQ1lZM1pPWEVmREZDbTNRdGI5TXZhVGswWDZ4VW5XSy11cl9lX21hUHA0RlpPZTl0SnB1eUlSQXhtcDNKeGdRemtnSEh1bnBrY3RXcUFxa2NjUURaenpLenozdVc3RHhJcVdPN3hN?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T23:20:32+00:00"
+  },
+  {
+   "id": "0141abfe073c",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "株式会社インプレス",
+   "title": "Anthropic、「サイバー検証プログラム」を拡張 防御・レッドチームなど3階層でAIを活用",
+   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5kU2YwdTBvcUdxWlhwclc4Z3VzWFR5Ympkc05JOW5YcEhKNjRCMXVPMndMam0xYjlCYkI2YllhUHVGWUVWNG9haDJ5Rm1UTi1USXlBRGx3MmhvbEo5NmRabmdfSQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T03:58:40+00:00"
+  },
+  {
+   "id": "7f0ad45ebece",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "窓の杜",
+   "title": "Anthropic、「Claude for Google Workspace」アドオンをリリース",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9LRnROVFN4WEFxSUhkRDIxYkJnU1l4UHBUb2QtUW1WZ00zRFhPMWljOUVSZ2hoMHlqMzUwcVhtQ3AzSlF4MVEzS3J4Q01YdUNNMjVBYXVaSHdseTFFczR3aV96VElFb2dt?oc=5",
+   "snippet": "",
+   "published": "2026-10-06T21:45:00+00:00"
+  },
+  {
+   "id": "2607e11a14ec",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "Pasquale Pillitteri",
+   "title": "Anthropic、Claude Haiku 5.5を100万トークン0.10ドルで発表",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOMXJnNHl3TTB1OV8wUDJCSFRuTDRhd2xjMHlmN0h3eFRrZ1VZbDBNaUpTUUw4MEkzbGsyZWxsWjNUTFlYclY0dUdhWExTdTFmck9UWUhtd0tneUZzR3FNRFFzdWZHc1J5SkJVVmRtZDBMM0tNNVhFSnhzX1JEOG1sUEROYw?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T21:17:08+00:00"
+  },
+  {
+   "id": "dd6e8c6de49e",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "CNBC",
+   "title": "Anthropic will be 'most ridiculous IPO' of year, analyst says",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPd2dKUllnNVk3MmI2SFFNYUV4cm1jd3Z4VVJCcEJGclVRTDlSOE5NSkV2NjRBVm1PTEthM2tlVEUtNmZLV0UtMm5RY09IY1R2TFFpRkJhbDcwZ2F0allhc0lWNFNXS2V3UmVmdS1BdEtLY2g2WEk4aXlSSkR1Yjh3eFloUHVEVFhKR0k0eEdxY1dUcWRzeVA0UW9HVdIBoAFBVV95cUxOSnd6UVJsLTE4Rjc1dHE0bE9uMUZ1MnR1VnpvN2Y2M19mMkp1MVd2c1pBZUpQejhONC12REdXOHRuaGNuX0VaMkQwRW5jWTRvZGFUOEZNTlp1YnFXZmhSUEFtclRNZTNhVVg2TmtlNC0zWnBQOFF5dGZZM0QxdnlfclVsZGJCVnFPdU1xWUhuUGFZcUI4VXF1dEtSZ1A5ZEN3?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T22:29:41+00:00"
+  },
+  {
+   "id": "4188995afad7",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Reuters",
+   "title": "Anthropic launches third Claude 5.5 model, expanding AI lineup before planned IPO",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbENadk1Lcm1iLUZOd0hYSmRZLWJHLTd0YjAwTExuMVozWW9McllnVWJuTHdPY3ZfRWJwVGdzMmpVaHhvODVVMkFMd0U0ejdyRjQxcEJMVzRqcTJqbWVaLXI5QnM1ckRSYmZVYjlBR2NqRTZaaW42QjFZMC00ZmxKOF9Fal9EODV2dEZnb1BPUDBlSFJrRDVtWkNLTWhacE04b3dyemlvckZTR3JmR0xONmxGb19hNU1tWFJMcVlJajNYUQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T18:07:44+00:00"
+  },
+  {
+   "id": "58f83ddece9b",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Yahoo Finance",
+   "title": "Anthropic reveals Haiku 5.5 model as AI pricing war intensifies",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQeHZ0WUJYU0QtenhKZXlFVWhIY2taQ1dCakNleGN1Ulp1Q3l1Ylk4V0Q1NDcyRDk1d2J6RXdUZzFIbnU5Rkc0Ykw2QVBQTGF3bVBuME85eTBPZW9QU3VnQVZWeW1POUFEVE5WTXlKY1ZMMjBXX2VpSVo2WV9uOXlqSm5aMzBYSlQ5N0hyLTVvb05jZXFyVlhpNEd5MXVNdy1Lc1VmQkhLVkV0QmJMd2NJeHVSMU51dU5Zc2FLTmRDUQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T18:00:00+00:00"
+  },
+  {
+   "id": "adcb2edcbbca",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "WSJ",
+   "title": "The AI Price War Is Heating Up—and OpenAI Is Gaining Ground on Anthropic",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTlhERVptZkJWLU92UGliVXFjZVpsSWVTRmYteVZUYkJmSFF1R2luWU94c2dySFVhWk1VSFVzMWV1M1FESTFyUmliNkh0MXdlUGFyTFhlLUtjZnZoOHNFSEx3Rm01UFVSRVdqc25rUHh3SGtjSnVBSlUwUTBZZTBVQ0gzemFKcWo1azZIRTJEQm5yRUUyOFluVkhGY21YRzR5UVk3Nk9nb3U0UG1p?oc=5",
+   "snippet": "",
+   "published": "2026-10-08T00:00:00+00:00"
+  },
+  {
+   "id": "1d4d3b2a1975",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "MarkTechPost",
+   "title": "Anthropic Releases Claude Haiku 5.5: A Small Model With 1M Context Priced at $0.10 per Million Input Tokens",
+   "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNQ004TDgwUFlDTU9VcE12Rl9IZDRVR0VNREdxdWQ0dTNnRlpQbmNVa25uZGhDN2FNTklfVENRZFN6cmpFWU1jdEwtV2VMcDV2Y2lCMDFLbXQwSThrRHRQaTdjZDEzQm03Rnhhc1BybEt2VEVUT0t2UUZmZ1MyMEVEX09ZV01UMXhxNFVldnBacWlGd3ZwUXlRaklsb0ttNlFnRm9zbExWM0Z5Qld4TnV2OHduaDZ4NWVsR3VONDZ0eDhXT25MejRuQk1oTF84RVItT0JvOTlHazhBdFlUeGRz0gHfAUFVX3lxTE1DTThMODBQWUNNT1VwTXZGX0hkNFVHRU1ER3F1ZDR1M2dGWlBuY1Vrbm5kaEM3YU1OSV9UQ1FkU3pyakVZTWN0TC1XZUxwNXZjaUIwMUttdDBJOGtEdFBpN2NkMTNCbTdGeGFzUHJsS3ZURVRPS3ZRRmZnUzIwRURfT1lXTVQxeHE0VWV2cFpxaUZ3dnBReVFqSWxvS202UWdGb3NsTFYzRnlCV3hOdXY4d25oNng1ZWxHdU40NnR4OFdPbkx6NG5CTWhMXzhFUi1PQm85OUdrOEF0WVR4ZHM?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T20:38:30+00:00"
+  },
+  {
+   "id": "18cd533c41ac",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "The New Stack",
+   "title": "Anthropic launches Haiku 5.5 at a much lower price",
+   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBROXVUc29Pb3I2bTdHTDRZaXVjQzM3Z2pCd05nbHFhbUhZdDVGaG0yVFVXdlYtLUMyVzRCWTNvY3RzOVRVbFk5c21HeFk2NmFxYTJUOWR1b0JUSWVKU0hV?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T18:03:46+00:00"
+  },
+  {
+   "id": "ede35b99cfa2",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "SiliconANGLE",
+   "title": "Anthropic releases Claude Haiku 5.5 small model and halves Sonnet 5.5 cache read prices",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNV0pNOFU1Vk9OTXVjSnhQY1hqUWtIWGZSbWYtTUFTRTRhcE9qYUlaNklFbkdfaXBvVFllbnhFUHNSZVFvazFEMkdSOVYyR2toa3RuNC1tMjR2WWNSSHVmZGhxay1kbnlqZU50cUxxSDlMbjdFV1Q0NG1oMWZNVEQ5SW1Xcnp6a2R6UW1kQkUxU1E1UFAtRnRMTzhieFo4bUprNERRckpneXJ4ZUY0bklRUm9xSmtPNWJMV3g5bnY5WUk5QQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T22:28:00+00:00"
+  },
+  {
+   "id": "670ab88662ab",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "South China Morning Post",
+   "title": "‘China already has spies’ at US AI labs, claims ex-Anthropic researcher",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOLWktLVFoNWs4WWFDZnB5ODdqRmZCTmhKM3liRC1lN01zMlpNLUV0V0VBaVBUNzVsME0zYzg2NmVtclZ3bFlMRVJUT3dtekhWQmVqQ0NBY1NlWDJlV3dfMDdWbVNZbHgyTTBSSUFUTldRS3EwUkhZemYzUnFYaTRpbDVJaUNrS0dyOHRLSWNQMlRVMENyVVlyVC0yTG1Vc0stcXpFS3ZyMC1IWXNSYm1HLUN3UzBPMnF4Z2RtMU5LUmfSAcABQVVfeXFMTThmbkk1d3lIczl2SEEzSnUtbHpodWxyUVA3VEY5bkNZLVFKSHMwXzMzVVpOTEdjWFYyaW1BdllMOEFITDk3aTgycHppR3Qtby1IYWR5ZW9jUGZaamU0Z3lSckMyQmh0Y3ZKNkp1YWI5TW92UklhZm8xZmp5Sm51T3hfem1SN2pDVkpaeVdZdnk4YUpkRkcxQVhfN05kVnFpaGlTTUdGZkpnQ1JVcFR6SGVQYWxQbVNNRVMybXFvMXJj?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T23:39:15+00:00"
+  },
+  {
+   "id": "be35b41c9039",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Business Insider",
+   "title": "Claude Code's creator says he talks to AI like a coworker. Here are his 3 prompting tips.",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQUnVRMWdhVWVPTkp2RGRuTDdPY0pSSzk2ZUgzdHQ1bG9DSkJXMjlIUUN6TTV2bEZfVV82Q291aHBCamhMeGVPYWtzbzVKTmRVUTdkU18yRkpyZG84NFpYX0tXd1BHVnFEMnN5YTFzRTFwc1JWVG8xTk9pS1VtSkdMZHJXbmF2aTdGU0ptcC1uRXB5TDQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T16:02:00+00:00"
+  },
+  {
+   "id": "9007e65475c3",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "9to5Mac",
+   "title": "Grok Bot just got a lot smarter thanks to Anthropic’s Claude",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOR3lNT3Z6allrVnFWSU10dHBSYzVjVUZVZEx1UmlVcXk1S0JIWWxBcW9HV1EzbHZPMFNfbUpOeE0wbGtYaTBVa1NrcE9ZWDVnV3BCRWhMMk1Lenk4clNTanducHZNeHhlRWpGS0QwQ01oWVNtR1JyWmNUR2RNOF95VWhyZEhFenR6SHhVMnZTc0lXck9xLVE?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T15:02:00+00:00"
+  },
+  {
+   "id": "e775329ae3e2",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Dark Reading",
+   "title": "Anthropic Gives Vetted Defenders Fewer Claude Guardrails",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdlJ3aHNaMlhXUDN5UmQ2dzFhQzJNVWxiY3MzcXlNS1Q4ekRiSkRRQVJlX0d2TzBiR0gtTnlxbkpLMlpJeDJqQjZkUTMyVVRFMUZXNGdxZ1ozdU5abG5UYURGM3Q1OHNTcU94WXNxcEd2UmJXNHN5Z1BDN200NkIwMHhnTWE3eUtGTldzLXhPR2cwNWxCRnhmSFRLMVA?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T21:09:59+00:00"
+  },
+  {
+   "id": "0aaadcbbfacf",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "HackerNoon",
+   "title": "Claude Code Finally Made Me an Engineer After 10 Years in Figma",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWXJZT3EtUE9Cd0FlVWpiM0VzT3pfRmNVLThBLUM1UlRjZ05fc2dvM1lNOTg4ODQxNUxZR0tvWjEweGxUNmhzY3NzZmNMMWlmZTF0TmF2Nloxdmk0WDRsY0FiQTV3WURha1h6TjNHZDFPc0hVQkNGci0zcVVRMFJpMXVYb0ZPLWNKcE5YYzg0QQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T22:56:01+00:00"
+  },
+  {
+   "id": "6a46408cb6e9",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "VentureBeat",
+   "title": "Anthropic launches Claude Haiku 5.5 with 90% API price reduction, matching GPT-6 Luna",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOTFMTVFQOTJ2SmdCSGdjR2Z4Q2ZYMF9ncldZM3NUNTlEWUVOUERVUVVpdHdfQno4c3F3aWJ1WnIybnpYNGxnMmk5d3FCaUlkdkhCeHpPMENmRG81MEpBcGx5Y1kxY25GY3oxb3gzNGk1bDdOS0JwMkxFZ1hkUFI2M21GMWowTzc4VVJaLUNaajc5MGJrMTdtcXNJem93Q2lpSGFvYXJCbEFwN2hMTnY4bzcxdEswa29DWFE?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T18:08:26+00:00"
+  },
+  {
+   "id": "d4bfae0deddc",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Unite.AI",
+   "title": "Anthropic Releases Claude Haiku 5.5, Cutting Small-Model API Prices",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOYmJRRU5wbnZielE5Ul95NTNadVFONVZkYlV0c2xweHI4TFFhQmVQVHh6TDZ1aW5wdmxTcF9PQWxRZHp0SVJQTnN4aWdZMWREUklBRGpXanl4ejBEdGpjYkV0aGk3MFk2Sy1GcGNYVG1tTWhPb09ScjF3ZlpEZ2lITUdfR2xEbmdRRmotd0M1blBWZw?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T18:27:02+00:00"
+  },
+  {
+   "id": "cf12b5c029a2",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "The Business Journals",
+   "title": "Data center eyed by Anthropic could break ground soon in Bastrop County",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQYXRJbjVYNTEwZEpqQ3FRY0hvNDRPakRIb0hSb2N5WjJhVTVUWDlHcDByUzZOSkZfVnYwVVZUdEQ0SDZKOTRZQ3dqYVFiWGxsZFRkN3dxc2RaR00yeWluajA4OTBISmRoVjJsTWVpTTlfNC0wckpac0RRMHUyS1pxYXkxampsNU10QmZLcHphMFNsUEFPVGoxeDNFcEhFMGdrdTkyX0c5TzI?oc=5",
+   "snippet": "",
+   "published": "2026-10-08T01:23:00+00:00"
+  },
+  {
+   "id": "08e5e7498c91",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Legis1",
+   "title": "Anthropic Dispute Highlights Gaps in Pentagon AI Oversight",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1fT25RLW4yNU1VQXM2dTEtaFN4cmp2a0ZWTUhvQ3BLRVJFVzJwWGo5LWVVZk5reEc1NDBickRUeEZuUlN6WDNGZkJQeEhLSnFjV3Q4VTZmYXJPcmtlRm1aUk1jMlkzZUwxTGlpYzdFeTM0ZlUxZGxV?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T16:52:33+00:00"
+  },
+  {
+   "id": "4ab9c6c4090d",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "CNBC",
+   "title": "Anthropic unveils a new, cheaper Haiku model",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQVnBDOWhTa1hmOERadHNuSjFXMzNGaTFmd3BKemkxaDBHNDRPOEtpNFlnbEZDUnRyYXNyWW94aWZSREtFcU5qcEJwRkd6YzFuYlFFMU5BMVJ1N0tDT0FCOG1OZXJkdDU2aDdBY0Q1Qkt1ZTFscFlBdndNUlhvUjQ2LVdhZ3RfYlZRU0d2WTdUVQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T18:30:23+00:00"
+  },
+  {
+   "id": "d9a7861ab2f3",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "TechTarget",
+   "title": "Anthropic opens cyber program applications, releases cheaper Haiku",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPX1l3aFA0N0h5QllXQTZpWWxSM1V0aTF4VFZXd0VPVWlmZFZGZkMzay1MMXhBd1NESFF1TUV4VHJzc2wzanp5U0tCdzg2ZnVSeldKSWo2ZV9NVWRGZF8xUjFaTGw5VlJUMVZvQWcxM0RBSG5rZnB3OUZ2MlBYbEtxakptdDZBZk5aaG5iNTQ2RlQteVFaZVQ0azJ6aFpWaE12TWx3OG1ZUnF4NExCbUdj?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T22:31:06+00:00"
+  },
+  {
+   "id": "24aa58b8770a",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Yahoo Finance",
+   "title": "SpaceX Still Trades Above Its IPO Price. Could Anthropic Do the Same?",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOeGRhakJZZGJ6M0F2R3NGM3FjOEgycWFibC03OWQ4bVV5NzlBMEtVTE00X2JFYlF5aWMyUjktcGtYRDNuR0tacDJlRU9kZ0xrdTdGOWtyQjdIVlV6TXFaMGlUcVhoX3JZTVpMRkF1OE9kU1NlVDBDMUNrU1d0NDZ4MjVkRHMzUUxvNXRZOUFqTFNhRTQ3ekltd013?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T20:36:00+00:00"
+  },
+  {
+   "id": "330216b8d166",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "ExecutiveBiz",
+   "title": "Anthropic Expands Cyber Verification Program With 3 Access Tiers",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPM3o0b0VUa1hucHFNYVRqMEs0LXFoaEloVXNDZmZ0aUVyUmZzUG1nd3RScWxLTVg4NFNQU0gwdkw3QUFHRm9GaXMyWVowVldhbmdaa25Bb1JSMTFONG1UbVFka0lrUG5kNUd4TFhQaHBDX0RrVTJEcXlCelpsRjhDRDV6YW5GcFpzX1R3b0FYUHpVWldoX2xn?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T15:47:56+00:00"
+  },
+  {
+   "id": "e4f5b265d2e0",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "GovTech",
+   "title": "How many states are paying more for AI from Anthropic than OpenAI?",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQV1VaOUZlRXduSDZVWExrQzdSTWE3YVlnQ283WW1SYWpNdnROSXpZTjh6V19OQW1ITXBtYmJ6MEh6S3V0YndqXzR2Q2ZaeWp6d0JuY0xOb1U0Umd3OXZKT3lYWlVQSHRjN3RsRXF5ZUMxUVZsdWJxbHNRNGRQcndNalE2RG5adEd0M253T0c1VDcwM3RGXzBPd2hueGh5d3IwRUxlQnY0X2FmR1JzbXc?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T19:51:42+00:00"
+  },
+  {
+   "id": "2166bb5a0f19",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "BankInfoSecurity",
+   "title": "Anthropic Expands Access to Frontier Cyber AI Models",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOTy13QlROMl9XNXliNTduNFdXV282MFhLd1A5bDZYVUt6ZVlsWVM0WWxEZ2lNMjlWdmx6cWtoaUJfajNBV2thblZ2RGdzR1B6UDBkSXRzSEJhdDVpYjNmWVg1MkJNQXJJTVpPdkZJOGh6Z2ZsdWViNThjWUYwX3NvckN1Q1dFUzVtaVBsY1RSdlowRHFwVlFBQQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T22:16:15+00:00"
+  },
+  {
+   "id": "f7b8bac77551",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Investing.com",
+   "title": "Anthropic expands AI model suite with low-cost, high-speed Haiku 5.5 launch",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQcTV3Qm50UGtaVEJRM19nR1hsdzZRMUUzWEstUFVGMHE1aTZOY0R6aDVoQVYyeV9kZ0t2UG9RbVhOY04yLV9LN2lrSmZDaTdWNzFHV2pMS3Q2aFJQZ0g3ZjQyMXpWUVgyVVo4RnBvbVU2amNfUm1tODVsdUEtcmh1Sl9GQkNDUUdSd2xCdzVhc1g3Z3hHcWZpNTEtYktaaDU1SVJuS1hwV3BhZjVvNlpjOEFhTUhKZWdSUC1YWm0tV1BubnRkYjdB?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T20:01:05+00:00"
+  },
+  {
+   "id": "cb265e25f437",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "The Real Deal",
+   "title": "Anthropic shifts focus from office to R&D, eyes 100K sf of Mission District industrial",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOV3RhWFc4OTh0czJReFlGMmx1Y2UyVndhdVMyRjhsQVlOSGtXNUktenZiblBQejhZYlQ5UzM2MGw3ZmhaN1pnNWFKdEhIS2ZUSk5leEtkV3RiV3oyaE1hT0tWTEdiSS1oeGpMSnZGM3B6SjlpdEVrR04tNTNOQTJ0cmtoX2pocG9QQThkMmZzRXFhdDBwdXpKN0puNmU4bWxrR2xN?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T16:54:00+00:00"
+  },
+  {
+   "id": "48bda31c1ce8",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Bloomberg.com",
+   "title": "Watch BofA Sees Strong Demand for OpenAI, Anthropic IPOs",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOdXNjTVZGbzRRVC1tTXd2M2RNT0xHanpRTG15Z3ZaeXY2LUlGR2VQVXA5MWpwRDhnckdKcW5PUGhJcFdDYXA0RlNsTW5ZT01VeHpWUlZQZHZjRGRsblU3NXhqaExCZ1MtWUhkMU13WVNMN2JKZzUtWm5pZWltZ3N6ZUVqQ1NIWkxXUy1DdFQxTG9CaWVsYzdYTzZhdHFOWjFqMDZHdmx1NA?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T18:08:43+00:00"
+  },
+  {
+   "id": "c435919116b4",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Anthropic",
+   "title": "Introducing Claude Haiku 5.5",
+   "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE94MUNId0d0TmJZUzNMVGwtcU5ZX0ZGYnlwZFVlRUxaM2tndlktanQwR3Z5OWJvMVRhWlNsVkhlWEpzY3pMY0M5Wl9DWkptZmlMYUtleA?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T18:06:12+00:00"
+  },
+  {
+   "id": "bfb652ff6d82",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Claude Help Center",
+   "title": "Monthly API credits for Max and Team plans | Claude Help Center",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQOWlsd3FVWTZPQmtaX3E3RFFINlBsWWcxcEd4cm55NjJGcldxbzRrcVVVMTEyOUlXWVhsV2NCZy15dUFjSVhlMm10V0hsVGFjTnJ3dXVrTHJaaGJ4N2NETnlSaHdJYVdSYlJMRENKcVUtU0pMam9jakFQUEptbVEwRExBQ1d0MnExRWZ5NDMtSldabWI5?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T22:53:26+00:00"
+  },
+  {
+   "id": "64fb5051a201",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Claude Platform",
+   "title": "API credits for Max and Team plans",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOSzAzNlpXU2thSjJNM18zMFJpVkd2TVBwUkczRDN1a2cyXzZEVEdIOFd4emd6QVMxWW9yZ19HMmNkYldWRVdkbkg4RU1XZGRqSFB4UzdMS3VfQk03Z21reC12S3RDME9qaDZqczlvUVpMYl9lWm5NRHI0VkNxcE5jSDB3?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T17:59:50+00:00"
+  },
+  {
+   "id": "624f715fe806",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Claude Platform",
+   "title": "What's new in Claude Haiku 5.5",
+   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5scGp2MDJoYkdDUTJIeWRrVVE5YTQ0dmdkcThNd1h2c0h6MWdQN3V2U2hQYjJUNm5YeDFqNS1mdGt6bXhzOUV5RGhOVUJsMmVPN1lXTllzR3lfc2hlTk5xUUhGV1lQQkZ2clZYVlJYMTdmQzdqVFpmZXNKNUo?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T17:55:52+00:00"
+  },
+  {
+   "id": "2e5f2e69be4b",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Claude Platform",
+   "title": "Claude Haiku 5.5",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1YRjlEU2RrU2k4dmw3dTZnY2tBQ0dicVZQSWR2VjcyWGt1b05rUklMaXVYekVITm9NcUJxTncxVzkzLXVWZlVyNW9qenpXRWhNRXNrNTJJYWxmeVo0SFZUR3JkSlMyN1BKRmlsbk9R?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T17:55:52+00:00"
+  },
+  {
+   "id": "f0a7e4144022",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "How Comcast and Booz Allen use Claude Mythos to find exploit chains and secure their codebases",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOZkJiZ0RPSjVQd2FZbnpFRmhyam9JX0t6SDBCLXMzUXhQQlpyRnFYVjRZWHdMdV9LT1Q1QU9CazlLazdNaV95SzlsbDIyUzVkRGZsRnZfSVdCQUtKd3JBcUprWnJUR1labWd5TlpYNERPdHROQTJIdjd3RkpoSHY4WWJDSk9FTDdQMVBEc1BPZUFyeUo1MGpfX21WWFh2NnlWeE8zQXdnZw?oc=5",
+   "snippet": "",
+   "published": "2026-10-06T19:54:40+00:00"
+  },
+  {
+   "id": "b9c6c94921e1",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Claude Platform",
+   "title": "Prompting Claude Haiku 5.5",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQOTlXWjhJa1BQNnZqMExmQmJqS2RoeFc0TUtBVzZfNzdDMWlZdHNKNXBfTEFTMm5SNUZnQzg5Y05zWWRzYmdqVENzYlNXXzJnNnRfc1VvdjVJNVRsX2pQQnFWdXM4dHlGYVgzbUtlN3VsMVVRVFRVb1JraXNBeHgxUUp1Ri1UUEVFdzJlWGhia0ViWGkyTXNjR0VfcVI1Nm85?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T17:55:52+00:00"
+  },
+  {
+   "id": "b86ccc99eaed",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Claude Platform",
+   "title": "Browser and computer use with the SDK toolsets",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPOXdHb3pfT1lfUGxDU013MHE2NUtkODl3aW82QUFEU0dhRWhqRTlZek9wYjFSNjJSZk01NDg0c1N6Q1B3a1dxdWpvTHB2M1FNVEthTjhTSXZObjdocUpwTnppVVhjSEsyVGlOd0N5VkJ6Yzh6ZFNjVGJWbVE5TjJINWcxRQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T18:13:52+00:00"
+  },
+  {
+   "id": "35ba0084f82c",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Claude Help Center",
+   "title": "Release notes | Claude Help Center",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9rRlZwOW9YUnZUWTA0ak9DdGZNbURzZDg2aGFHNHhLbjNCWXV1QmxMUUZwdEx2bUhidFhxMEV0RVpKTk5LSHhkVUQyWmNnQnAxYkVYSDBKZGxsdXNGZXo3RXdxSDA3UTgtTEdhc1ln?oc=5",
+   "snippet": "",
+   "published": "2026-10-08T00:05:50+00:00"
+  },
+  {
+   "id": "38dad4139fcf",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Claude Help Center",
+   "title": "Use the Claude Agent SDK with your Claude plan | Claude Help Center",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPQWdOenFub3pvckVXcGpweGxoSndtVkhqb0hodlZ3bEg0Y29YMDNOVzBVcEJOYmhDSUl6VmUwMXQ5X3JXSjItbDFhNTlPRncySHEwZDQ5SERiOFdLRUpsZm92R2k1VW9HemdwSUN2Y3czX1NDa3hkSXZaQWlQQXo5dWk4b3Y3QUgyVkZramxFaGg3NFB6U0dZcXVB?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T22:33:28+00:00"
+  },
+  {
+   "id": "810c58be7224",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Foundations",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE13QVFqNTlLUG9wUkFCX0RfdWZNbnBEazZHcTF5aGlIandNbDZHaTJQZzM5YXNlN25Kdzk0c1NlOGNid0RkZnc2MlhFOTB2NEIyS0Fsd21FVjV5WTJFX2I0eVhBb0tPb1plQ3VUVmx3?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T10:58:09+00:00"
+  },
+  {
+   "id": "30817be51e3e",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Claude Platform",
+   "title": "Claude Haiku 5.5 migration guide",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1iTmpJLXRpN2o3NHJYWUdrVGZBUGdlVy1zaF9lOGdIN2JFUVY3X0VaTlV4SF9GM0dUaXljcW95VnpKSFZvcENYQjgyZ0FqVWd4RlFaR3JzNGo4d0hzRURDOHpSSlktRlc0OHZPNXFFSnpGUE90d2lF?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T17:55:52+00:00"
+  },
+  {
+   "id": "3e625cec11c0",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Claude Help Center",
+   "title": "Understanding your Pro or Max plan invoices",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNYzNBTlBKX1l1dlVBY0VJQ3E5ck0tck1BV0pJX18teEdQU2xfNVUwdGpfc3BfdUhjMnlmb2NCdngwal90R3ktVUZ4Uklrak43T3dHREMxR01FLU8tTE1Kd2R3elp6aWJNdXJXVmFTV1FDbGIwLUhlRzJLNzBtTjZhczU1QkZ1SjRRczFOUWlqa1p6SktBc1E?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T17:55:37+00:00"
+  },
+  {
+   "id": "06d850a775b6",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Anthropic",
+   "title": "Claude in Production: Executive Briefings",
+   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQSm9haTRtWDVUUUw5OFFWcUVRT3JkWHpMQjEwUnhZTlF3UUVMV1JHcEhFX0xiWi1lN01wVzQ5eVdMOWpqYWotM1lhQUpiT2Fuajl6TmF4U2dQdDJqX21sUUkwdmx3VWpUWWczaU5xUmtyWDNSd1p2SldPZ0IxTUxpcjNRNUlONFdjeFoxdzB1R01obC1zdm9wWkMzZFhnVmtDaC12NXRHZU9ZMnBONktVY280R0xnOEhabFk1RFdFcU5pNTRNaUMtb3RQOHZwUXlGRUsyZXkxNVJVbjhQM2U0dkRvZkNUNGlITE84?oc=5",
+   "snippet": "",
+   "published": "2026-10-06T14:52:16+00:00"
+  },
+  {
+   "id": "1ffc7c9ea979",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Anthropic",
+   "title": "Virtual Claude Code Workshop",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQTjJEMjFrTURuSUg5WkppbDNvNDR5dzg1WDFIM0JXZFRnMFVweXpDMTFNNTFvajZjVGtaUjk3RVlMSzBGS1J0MGI2TXgyMnRlNGp1dXBwTXhLU1liOFpGWGRzVEtYZS1uWXNla1YtQWEzSnI3cTF5THVUajlmZGU0SEpKbFA1UU1DbGlJckRUamlxbEpBbHNZa2p3MS1WQmkwV3kyQzk3RngzVDlqbW1vWjVDcVNVb0hCWmVjODJLbmtMZVM1SVdCczFB?oc=5",
+   "snippet": "",
+   "published": "2026-10-06T21:52:52+00:00"
+  },
+  {
+   "id": "96210ee1ce89",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Anthropic",
+   "title": "How to Roadmap With Decisions Rather Than Dates",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxON2Vvc3FfaF9oV3ZicEVCS1ZabE9xanZFNFA3aFZkS3N0OXZUOUVYV0hIeTFoQnFMY1pPbmNubGR3QlljTTFSWF9iMEw3OTdzV1VoMGZqcGFMY3JHNGxzYS1rU2pNMzluZGhySl8xNjllNlRrNkFBMjIteUM2UmFrTFdGc1VOejhKbVJfWTRwNG9aOWt0WkF3S3BMeWg5ZHFTRlJPenQwaktSWWZEX2VGTS1oLUlFdjRGQTBLQ2o4WQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-06T16:18:30+00:00"
+  },
+  {
+   "id": "9159493cc50d",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Anthropic",
+   "title": "Claude Haiku 5.5 System Card",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9IaGozUDdUNlhjNnB3M2pUTU5EQ2MxVUtuQlpTR2hpcnhjVVA2R29fWm9GdTdfNF9DaUhFVEpRSnlzTnR2YmtYOW5QUVZMSmlyT0IyeVZLR25kbnRucDZiT2R0REFOSHdWVzFnQVp5Slg?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T17:55:52+00:00"
+  },
+  {
+   "id": "7cdb97819472",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Claude Platform",
+   "title": "Claude Haiku 5.5 system prompts",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQZHZ1ellZSjV0bV9HRFZxa2wya25keUJ2cENteFR2ZEhtRWpTQjdtZTNYQkhIVllhSzJUR2wzQ0F3VXlCV2RMaXR5ZjgybzRjU3BwNjktSW4yUDUzQ2FBUU1OU1JWU2NpZzNuSzFjcVNYMWdGVm43d3RiVkpHMWZudTdtQ0JEZXYt?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T17:55:52+00:00"
+  },
+  {
+   "id": "1e192f1c8df2",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPdGdSbm4xVDg0T3JiOXJTdEN0MXc4QlFUZTVtcDl4cXRveW1OYllGT0dDSnhRRHlJZF8zTXRLakNzcDQyR2dfUmZlQkRWTmdNeWFicEM1bGM2cndVcG84MEhrYzRENHo1ODM1eXN1TENYM25OQnZ0VVlyVVcwaDRudTA2Vk9aNlh2dFRsUkZyYVBDSmpzUFdNS3Y2X0pnQ3B1dFZiWHpn?oc=5",
+   "snippet": "",
+   "published": "2026-10-06T15:33:19+00:00"
+  },
+  {
+   "id": "0edf76ae63b3",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Claude Managed Agents: get to production 10x faster",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQemZsNkI5OG5jcFNDb3dFXzlqbklmU1o2UEFDN0preUR3MjE5b3V2Rm4wYWtRcE4xLWJoZzJwTU9KV21ka3FGbHJPVjl0cW5xcUNqb1oweUxYSmVrc2ZMMFdWaTlUWTdUb1NyV0ZKYm5ISktqUHNhZXNQbjNtYnUyejV0ai03ZGU1bkZlZlRxLXJjaDl1?oc=5",
+   "snippet": "",
+   "published": "2026-10-06T20:03:45+00:00"
+  },
+  {
+   "id": "eda5b3ddc05f",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Claude Security is now in public beta",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQczVnbFp4ajZCNkRreVo4TlZNeWxRbkV5Z3cydmRWWFo3a2lORk1mLWNXQ2NBTi13cGxjZmlxeGNxTnNDUmNteXA1a183aW82M0JDdk1rcEk0UnNpZmdvbnRuYmlTU0Z1d1VqRFBOc0t6OV95Y09JNnZuRVVhaS1wTVBESlY2TlpSVzVkUTJuRlJHTll4bkNZYUdiczZpaVR1aDYyblMyMkJmZTVxUTNZRDdPc28?oc=5",
+   "snippet": "",
+   "published": "2026-10-06T15:07:48+00:00"
+  },
+  {
+   "id": "8980416216d3",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Claude builds interactive visuals right in your conversation",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1TR3ozU0RYOEs3XzcxTFVrTnhBV0h1RFhsV0hERFBKY3hERTFGY0xZdFFDR09VTndCSUw4UnNReGJ2cFRVOTBnMVNSX1V6dk44MFl6Nk1qNmk2a0VlY1hmVXJoNU1nWks1d0Q4?oc=5",
+   "snippet": "",
+   "published": "2026-10-06T18:33:26+00:00"
+  },
+  {
+   "id": "01e97a8d716c",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Salesforce in Claude",
+   "link": "https://news.google.com/rss/articles/CBMiugJBVV95cUxOeS1LVnJEeFNxNjJ3aWhISE5ZYU9uSjF6clFnM3VrUjZncW90SmtPR0ZCQUlSNE93bzB1ekFBeFJSZnZ1UXlYUDRuRHNRckJJNl9jZ3pILUJQWDN5eHNxYVF0TTVpU3RqcDVRYTVOZGZubk5YYkJxamNSX05WN1BFd3dmcGdiU3BwMXVuUGk2Z25nWFR0Um84ajR2TFhQMXhxck9sR3ExaHpyT2dYdHBaVFJua0N5WmNBZnE5a0NDd1pwX1F1WmItR0VxdUMyUW9jamh5NDZ6bGs3M3JLeGZEMEc0dTRXTFBmVFFoNmxsbnZJREt4dnE4ZWdSMEpHY09XWFdxd2xwODVLYlFCVE4wNl9uZUh4V0RHY013MmpsV01tVDFZYXZVd24zWHBJX2ZpdFAtZE5sNHFsdw?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T01:07:30+00:00"
+  },
+  {
+   "id": "8164a9ffc76a",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Connector observability and in-app directory submission",
+   "link": "https://news.google.com/rss/articles/CBMi7wJBVV95cUxOOFpBclZTSzItc2c1TlNaNjVLQWEzY1lTN1QxbUhlNTdsR1o3aFdtajcxZzZyWHZ0bFVsc3hNTUdVZzBJLVZwQVZVanhKSEVPazJrMEdoUmZTZFpoRV9tdjVzNENyZFc4QnRKMW9SdXRmUGpBazhtUl9RTzlfZGdvNzBjcmNEM2Fvb0pUbml5blpvVjhfR2Z0enQ1Nk0zdVNvVFpBRzFoUUlGVTlXdEJDVzNoeDhsOWVmRWVqd3NTWlM1QW9kVWJ1UWFwT1Nqc1BveE8wUVhJdnB6V2hpWkNpcVFnbGxLbWthUTE5OWRycDIwTUFXNVljaFh2T0Znc1RRMDVhX2NIMUYweE1WZUxKQU9kUjlWWUdUTnNQREZMS3JTakRhTFFHa1lyaXZLNVZnMVluQ1VYUWlGNmpFRC1sQTlJNnQ0Z0EwX050U21paV82bTZWZ3g5Yno2OWMzUEE5MENKQndQczR3R19GQy1r?oc=5",
+   "snippet": "",
+   "published": "2026-10-07T02:10:36+00:00"
+  },
+  {
+   "id": "a62b1b90ed17",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Bringing Claude Code and Claude Cowork to government",
+   "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOTkplRkp2bUE3Rmk4WDNpY21hZFFzN3hBdVBPLVQ0QmlRS3VJVldpMG11aG50NHlFQTFIcWQ0Zk5OdG9kTXdvTk9CTXJRSm1SamZzVDFuaDAxV3NBYTA3VWpDRTdZUVp5b3Z5b2M0dEk1WGhGRkdzTXdxbVFoVXI5ME91X29ZYWpQRTNzeDFBV3VYUXRjdUZ6OHhYczZXNHUzT2ZTM2ltUkl6TnZhajJDWlJBcFBrX2R6UnhnZGl5d083OG9MT010cTRiNXBmX2xZaUlwR0FwRURiaTlJSVJubGozeWgzZU1XNDBTSlBwQVh1NnU2R0Vv?oc=5",
+   "snippet": "",
+   "published": "2026-10-06T14:15:00+00:00"
+  },
+  {
+   "id": "4250e365b896",
+   "region": "intl",
+   "feed": "Claude Code リリースノート",
+   "source": "Claude Code リリースノート",
+   "title": "v2.1.293",
+   "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
+   "snippet": "What's changed Added Claude Haiku 5.5 ( claude-haiku-5-5 ), now the default Haiku model on the Anthropic API — 1M context, $0.10/$0.50 per Mtok ($0.50/$2.50 for prompts over 100K) Added agentType to the subagentStatusLine payload, so scripts can tell custom subagent types apart Added isDeferred to $.tool.register for mods: false lists the tool's schema in the prompt from the start instead of behind tool search Fixed Claude sometimes treating its own last actions before a context compaction as done after it, and retracting or redoing finished work Fixed a memory leak where an HTTP MCP connectio…",
+   "published": "2026-10-07T18:10:20+00:00"
+  }
+ ]
+}
