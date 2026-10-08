@@ -3,6 +3,13 @@
   "line_url": "",
   "entries": [
     {
+      "id": "blog-oboesasekata",
+      "date": "2026-10-08",
+      "title": "ブログ：頼み方より、覚えさせ方。Claudeが2万回動いた57日間",
+      "url": "/blog/oboesasekata/",
+      "summary": "Claude Codeを使い始めて57日。頼んだのは2,072回、Claudeが動いたのは21,696回でした。1回頼むと約10回動く理由と、覚えさせ方のコツをまとめました。"
+    },
+    {
       "id": "nikki-2026-10-07",
       "date": "2026-10-07",
       "title": "日記：昼から夜まで、9個の仕事をClaudeと片付けた日",

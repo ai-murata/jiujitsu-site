@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>頼み方より、覚えさせ方。Claudeが2万回動いた57日間</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Claude Codeを使い始めて57日。頼んだのは2,072回、Claudeが動いたのは21,696回でした。1回頼むと約10回動く。その差を生んでいるのは、上手な頼み方ではなく、覚えさせてきたことでした。">
+<meta property="og:title" content="頼み方より、覚えさせ方。Claudeが2万回動いた57日間">
+<meta property="og:description" content="頼んだのは2,072回、Claudeが動いたのは21,696回。1回で10回動いてくれる理由は、覚えさせ方にありました。">
+<meta property="og:url" content="https://jiujitsu.co.jp/blog/oboesasekata/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 24px 0 32px; }
+  .stat { background: var(--k); border-top: 3px solid var(--gold-hi); padding: 16px 16px 14px; text-align: center; }
+  .stat .lbl { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold-hi); font-weight: 700; }
+  .stat b { display: block; font-family: var(--mincho); font-size: 30px; color: #f3ecd8; letter-spacing: .04em; line-height: 1.4; }
+  .stat small { display: block; font-size: 12px; color: #b0a88f; line-height: 1.6; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; font-variant-numeric: tabular-nums; }
+  .tbl th, .tbl td { border-bottom: 1px solid var(--line); padding: 9px 8px; text-align: right; }
+  .tbl th:first-child, .tbl td:first-child { text-align: left; }
+  .tbl thead th { font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; border-bottom: 2px solid var(--gold); }
+  @media (max-width: 560px) { .tbl { font-size: 13px; } .tbl th, .tbl td { padding: 8px 4px; } }
+</style>
+
+<header>
+  <p class="brand"><a href="/blog/">JIU LABO BLOG</a></p>
+  <h1>頼み方より、覚えさせ方。Claudeが2万回動いた57日間</h1>
+  <p class="meta"><time datetime="2026-10-08">2026.10.08</time>　村田亜衣（マネージャー）</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>こんにちは、村田亜衣です。</p>
+    <p>昨日の日記を書いたあと、ふと気になってClaudeに聞きました。「こんだけ動くのって、私、結構使いこなしてるのかな？」。そこで、Claude Codeを使い始めた8月12日から昨日までの記録を、全部数えてもらいました。</p>
+
+    <h2>57日間の成績表</h2>
+    <div class="stats">
+      <div class="stat"><span class="lbl">私が話しかけた回数</span><b>2,072回</b><small>使った日は57日中54日</small></div>
+      <div class="stat"><span class="lbl">Claudeが動いた回数</span><b>21,696回</b><small>調べる・開く・直す・作る</small></div>
+      <div class="stat"><span class="lbl">1回頼むと</span><b>約10回</b><small>Claudeが自分で動く回数</small></div>
+      <div class="stat"><span class="lbl">いちばん動いた日</span><b>1,209回</b><small>9月16日・話しかけたのは100回</small></div>
+    </div>
+    <p>このほかに、大きな仕事のときにClaudeが呼ぶ「手伝い役」が6,249回動いていました。それも足すと、約2万8千回です。</p>
+
+    <h2>1回頼むと、10回動く</h2>
+    <p>「動いた回数」というのは、ファイルを開く、計算する、ページを読む、表に書き込む、といったClaudeの一つひとつの作業のことです。私が1回話しかけると、Claudeは平均で約10回、自分で手を動かしています。</p>
+    <p>たとえば昨日の朝は、こうでした。</p>
+    <ul class="talk">
+      <li>「10日振込のやつやって」<small>→ 毎月10日に払う分の振込リスト。私が話しかけたのは2回、Claudeが動いたのは30回</small></li>
+      <li>「柔術甲子園入賞の賞状作成したい。a4で柔術甲子園のロゴ入れる」<small>→ 話しかけたのは14回、Claudeが動いたのは127回。印刷の注文まで進みました</small></li>
+    </ul>
+    <p>「10日振込のやつ」で通じるのは、毎月の振込リストがどこにあって、誰にいくら払って、金額をどこから拾うのかを、Claudeがもう知っているからです。毎回一から説明していたら、1回では終わりません。</p>
+
+    <h2>覚えさせていること、3つの層</h2>
+    <p>前に<a href="/blog/prompt-jidai/">「プロンプトの時代は終わった」</a>という記事を書きました。上手な頼み方（呪文）より、文脈を渡すことのほうが大事、という話です。数えてみて、その「文脈」の正体がはっきりしました。私がClaudeに覚えさせているのは、この3つです。</p>
+    <div class="three">
+      <div class="tool"><span class="want">決まり</span><b>34行</b><span>どの仕事でも守ること</span></div>
+      <div class="tool"><span class="want">メモ</span><b>104枚</b><span>仕事や人や道具のこと</span></div>
+      <div class="tool code"><span class="want">手順書</span><b>6本</b><span>毎月の作業のやり方</span></div>
+    </div>
+    <h3>決まり：どの仕事でも守ること</h3>
+    <p>いちばん土台になる約束ごとです。たとえば、こんなことを書いています。</p>
+    <ul class="tips">
+      <li>できたファイルは、デスクトップではなく決まったフォルダに置く</li>
+      <li>お金の支払い・送信・削除は、直前まで準備して、最後は私に確認する</li>
+      <li>私が使っている画面を、勝手に動かさない</li>
+      <li>専門用語を使わず、はっきりした数字で答える</li>
+    </ul>
+    <h3>メモ：仕事や人や道具のこと</h3>
+    <p>「この取引先の書類はここにある」「このサイトはこうやって更新する」「デザインは黒×ゴールドが好み、パステルはNG」。仕事の中で分かったことを、1枚1テーマのメモにして残してもらっています。今は104枚あります。</p>
+    <h3>手順書：毎月の作業のやり方</h3>
+    <p>振込リスト、請求書、勤怠と歩合の集計、領収書、イベントの収支、パーソナルトレーニングの集計。毎月必ずある6つの作業は、手順書にしてあります。「10日振込のやつ」の一言で動けるのは、これのおかげです。</p>
+
+    <h2>回数の移り変わり</h2>
+    <p>2週間ごとに区切ると、こうなりました。メモの枚数は、その2週間の終わりの時点です。</p>
+    <table class="tbl">
+      <thead><tr><th>期間</th><th>話しかけた</th><th>Claudeが動いた</th><th>1回あたり</th><th>メモ</th></tr></thead>
+      <tbody>
+        <tr><td>8/12〜8/25</td><td>764回</td><td>7,084回</td><td>9.3回</td><td>43枚</td></tr>
+        <tr><td>8/26〜9/8</td><td>434回</td><td>5,271回</td><td>12.1回</td><td>55枚</td></tr>
+        <tr><td>9/9〜9/22</td><td>308回</td><td>4,524回</td><td>14.7回</td><td>81枚</td></tr>
+        <tr><td>9/23〜10/6</td><td>487回</td><td>4,320回</td><td>8.9回</td><td>100枚</td></tr>
+      </tbody>
+    </table>
+    <p>最初の2週間は、764回も話しかけています。いちばん多いです。何をどこに置くのか、誰が誰なのか、全部を説明していた時期でした。</p>
+    <p>そこからメモが増えるにつれて、話しかける回数は300〜400回台に減り、1回あたりに動く回数は増えていきました。9月15日には手順書を3本まとめて作っていて、その翌日と翌々日が、57日間でいちばん動いた2日間です。</p>
+    <p>最後の2週間は、1回あたりが8.9回に下がっています。この時期はブログやデザインのように、見ながら「ここをもう少し」と短く何度も直す仕事が増えたからだと思います。回数だけを見ると下がっていますが、仕事の中身が変わった、というのが実感です。</p>
+
+    <h2>覚えさせるときのコツ</h2>
+    <p>57日やってみて、覚えさせ方にはコツがあると分かりました。</p>
+    <ul class="tips">
+      <li><b>間違えたら、その場で「覚えておいて」。</b>同じ説明を2回したら、それは覚えさせるサインです</li>
+      <li><b>毎月の作業は、一度いっしょに通しでやってから手順書にする。</b>最初から手順を書こうとしなくて大丈夫。やりながら分かった落とし穴まで書き残してくれます</li>
+      <li><b>古くなったら書き換える。</b>ルールが変わったら、メモも直してもらいます。ブログで良蔵さんを「代表」と書くルールも、本人の確認がとれて実名に変えました</li>
+      <li><b>止まってほしいところを決めておく。</b>任せる範囲が広がるほど、「ここだけは私が押す」という線が大事になります</li>
+    </ul>
+
+    <h2>回数が多ければいい、わけではない</h2>
+    <p>ただ、Claudeが動いた回数が多ければ上手、というわけではありません。同じ失敗をやり直して回数が増えることもあります。</p>
+    <p>使いこなせていると感じるのは、回数そのものより、<b>短い一言で、思っていたところまで進んでくれる</b>ときです。昨日なら「この看板、AIっぽくて嫌」で直ってきたこと。支払いや送信の手前で、ちゃんと止まって待っていてくれたこと。</p>
+    <blockquote><p>上手に頼もうとするより、<br>一度覚えさせたほうが、ずっと早い。</p></blockquote>
+    <p>まずは、今週2回同じ説明をしたことを、ひとつだけClaudeに「覚えておいて」と言ってみてください。来週の自分が、少し楽になります。</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">うちでもAIに仕事を任せたい。</b><br>
+    毎月の作業を「係」にするお手伝いをしています。いまはお会いしたことがある方に限って、先着3名さま・道具ひとつ分まで無料です。<a href="/irai/" style="color:#a3801a;white-space:nowrap;">AIのお手伝い、承ります →</a>
+  </p>
+
+  <footer>
+    <a href="/blog/">ブログの一覧へ</a>　／　<a href="/">jiujitsu.co.jp トップへ</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}.timeline .when{font-size:12px}.stat .lbl{font-size:12px}}</style>
+

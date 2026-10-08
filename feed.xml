@@ -5,8 +5,15 @@
   <link href="https://jiujitsu.co.jp/"/>
   <link rel="self" type="application/atom+xml" href="https://jiujitsu.co.jp/feed.xml"/>
   <id>https://jiujitsu.co.jp/</id>
-  <updated>2026-10-07T23:26:11+09:00</updated>
+  <updated>2026-10-08T00:21:57+09:00</updated>
   <author><name>BUTTI ON LINE</name></author>
+  <entry>
+    <title>ブログ：頼み方より、覚えさせ方。Claudeが2万回動いた57日間</title>
+    <link href="https://jiujitsu.co.jp/blog/oboesasekata/"/>
+    <id>tag:jiujitsu.co.jp,2026-10-08:blog-oboesasekata</id>
+    <updated>2026-10-08T09:00:00+09:00</updated>
+    <summary>Claude Codeを使い始めて57日。頼んだのは2,072回、Claudeが動いたのは21,696回でした。1回頼むと約10回動く理由と、覚えさせ方のコツをまとめました。</summary>
+  </entry>
   <entry>
     <title>日記：昼から夜まで、9個の仕事をClaudeと片付けた日</title>
     <link href="https://jiujitsu.co.jp/blog/nikki/2026-10-07/"/>
