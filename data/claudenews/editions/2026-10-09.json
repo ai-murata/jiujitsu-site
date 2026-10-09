@@ -1,0 +1,103 @@
+{
+ "date": "2026-10-09",
+ "generated_at": "2026-10-09T11:53:40+09:00",
+ "lead": "Claude に新機能「Dashboards」と「Motion」が加わり、「Docs」「Slides」「Design」は無料でも使えるようになりました。あわせて利用ポリシーが改定され、Claude への「虐待」が禁止されます。",
+ "items": [
+  {
+   "id": "488f58551c3e",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "新機能「Dashboards」「Motion」、Docs・Slides・Design は無料でも",
+   "summary": "Anthropic が Claude の新しい機能「Dashboards」と「Motion」を発表しました。あわせて「Docs」「Slides」「Design」の機能は、無料プランでも使えるようになります。",
+   "point": "無料で試せる機能が増えたので、まだ有料プランでない人もさわってみるチャンスです。",
+   "source": "窓の杜",
+   "original_title": "Anthropic、「Claude」の新機能「Dashboards」「Motion」を発表。「Docs」「Slides」「Design」は無償でも提供",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBFSUE0anJTTmJISXJWa29vVkpxbEN2TGpULUtRVDdNSHRnLWs5QlcxR3NNWjNCd2w5Mk1RYndpUHhaYkpLeUc1ZXdLX25YV296NHJyd2JoaHFjNkpSU0xrQWN5ZW9SS25v?oc=5",
+   "published": "2026-10-08T22:50:00+00:00"
+  },
+  {
+   "id": "e733b9e47ea9",
+   "region": "jp",
+   "category": "その他",
+   "title": "Claude への「虐待」を利用ポリシーで禁止",
+   "summary": "Anthropic が利用ポリシー（使うときの決まり）を改定し、Claude への「虐待」を禁止しました。世論を操作する「影響工作」についての決まりも一つにまとめています。",
+   "point": "ふつうに使っている分には気にしなくて大丈夫ですが、決まりが変わったことは知っておきましょう。",
+   "source": "ITmedia",
+   "original_title": "Anthropic、Claudeへの“虐待”を利用ポリシーで禁止 影響工作の規定も集約",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5ORGVSTDdtcklNMGJKNVd0bWxxZUNya2Z4eFJvYkpjZGF5QmdVVVFCUHJEQkJwd1dkd243NmNzVDFmc3dZaGxpblJNa0RlV2FlTVJQUXEwQVBldXBYQTlPaXBmUFZIVkRmZFE?oc=5",
+   "published": "2026-10-09T00:07:24+00:00"
+  },
+  {
+   "id": "8e4305a4d9c7",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "イーロン・マスク氏の Grok が Claude を採用",
+   "summary": "イーロン・マスク氏の AI「Grok」が Claude を採用し、Anthropic のモデルで動くようになると伝えられています。",
+   "point": "",
+   "source": "Korben",
+   "original_title": "GrokがClaudeを採用、イーロン・マスクのAIがAnthropicのモデルで動く時代に",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5NbnZGU0lhcS1zSWtvVmhPZ01SM0t3TnFnMXhfQWU1aUFUQ3VVYjJxa3NzZUtWMkVJT3psaUdKT0VPM1ZOZTV1OW1VbjIzY19PN0ZjRXlRcElHTDVrNXgtV0dwUk4tekdrek4yeEM0Q3ZvN2dZUUhybg?oc=5",
+   "published": "2026-10-08T13:37:47+00:00"
+  },
+  {
+   "id": "a4eb71532ca2",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "Google の「Gemini agent」、Claude のモデルにも対応",
+   "summary": "Google が「Gemini agent」を発表しました。Anthropic の Claude のモデルにも対応しているそうです。",
+   "point": "",
+   "source": "Pasquale Pillitteri",
+   "original_title": "GoogleがGemini agentを発表、AnthropicのClaudeモデルにも対応",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNajhiaURrZzZXWFVDTFpuSGt0T1l6TTdpQmFfNWJtYzFSSnBQeE92emQyRHN4eVNtdXVDN3A2VGJfRmpFcEx0S0ZLTlJ2VGdEbVZ0RElXRjdZZ0JBMzVVT2lOMlJ6UjZKY09sSFNyT1Nsbk1oMnEtRGxmV3lwU1lacWxMRQ?oc=5",
+   "published": "2026-10-08T22:29:46+00:00"
+  },
+  {
+   "id": "80a17728c44f",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "重要インフラを守る取り組みと、オープンソース向け無料スキャナー",
+   "summary": "Anthropic が、社会を支える重要インフラを守るためのプログラムを始め、オープンソースのソフトウェアの弱点を無料で調べる「OSS Scanner」も公開しました。",
+   "point": "",
+   "source": "SiliconANGLE",
+   "original_title": "Anthropic launches critical infrastructure program and free OSS Scanner for open source",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZkZHUjRzak52dUpfUnJLRzk3YXF3Nm95WU9iY3Zac0xTYnlJeEc5NkJVcGwxdXlpQ052alJ6SWllNTZ6STJlTFlOSldCWVBqOC1UdVRDWGdqZllZN3dCNGJjaGdCSjhEQnhRQWNGWmYyeWtBYUVad1NUT0hQRnhfbFVkZ1FNRUlzVTZKbVB4d1VBZmRhZ3BWamdjalAwallyMzR4WnJCQWxDTGl0MWQ3SmlkTUp2amROejJndDR0ZFpTUQ?oc=5",
+   "published": "2026-10-08T22:42:00+00:00"
+  },
+  {
+   "id": "93a3b1bc0703",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Claude Science で、紫外線で見た空の地図を初めて完成",
+   "summary": "Anthropic が、Claude Science を使って、紫外線で見た空全体の地図を初めて完成させたと紹介しました。",
+   "point": "",
+   "source": "Anthropic",
+   "original_title": "Using Claude Science to produce the first complete map of the sky in UV light",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9sMnp6UURINkFSMTYxWUIwUkhnTkRQLWhjYS1tMFZ5VU1acWY5STFDRDcyVXJVN3JfdXU0bmMxd0VPaG9tM1NDcUJHTENGbHdLVkxLa1ZQUVY5enJIVndMYVRRem9Idmdmei1ZTWVR?oc=5",
+   "published": "2026-10-08T20:59:00+00:00"
+  },
+  {
+   "id": "fd28b969ca36",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Claude が見つけたという生物学の発見、科学者は慎重",
+   "summary": "Claude が主導したとされる生物学の発見について、その中身と、科学者がまだ納得していない理由を米 CNN が解説しました。",
+   "point": "",
+   "source": "CNN",
+   "original_title": "What to know about Anthropic’s ‘Claude-led’ biological discovery — and why scientists aren’t convinced",
+   "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBzUzRFekFCZGVRTWVpRExUVWJkYTVGeFYxekkxMkpmYnRJSF9sNXdOd3BGd0NZVnhzakp0eWwxR3hTX2tqdUdOZXd3WjVZRlhZaDFkOHpoVElnanRZZXhwaEdweDRCTlVPVHEzRmxUWUpPVTU5Y0NTRHpJam5zZw?oc=5",
+   "published": "2026-10-08T13:58:07+00:00"
+  },
+  {
+   "id": "96a03f107553",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "2028年の大統領選に向け、候補者に AI 政策を助言へ",
+   "summary": "Anthropic が、2028年の米大統領選挙を前に、候補者たちに AI の政策について助言する取り組みを始めると Fortune が報じました。",
+   "point": "",
+   "source": "Fortune",
+   "original_title": "Anthropic is launching a 'presidential engagement' effort to advise candidates on AI policy ahead of the 2028 election",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSk9lbDZlSVFIVlZ1aXZKMzNxWkJudG1aVHN6cXc3bXhwTnVhMUZvcDZxdTlkNGVwR0ZEVEZUTzJCenlMN19TeDJ3cHdiU0dPMGVLWjlRbnBiMXVHX2lrTWx4ZlZnb25MdGZhTmdPdU1lQ3FibVQ0MFhaNmtuaG1OTmpQVnBMa1o2dEZBYXlJa192eWVFU0JyN0p3WEZFVlgtZk9LTkZPWXRseU83ZHo0?oc=5",
+   "published": "2026-10-08T23:14:00+00:00"
+  }
+ ]
+}
