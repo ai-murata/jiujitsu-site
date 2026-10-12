@@ -1,0 +1,91 @@
+{
+ "date": "2026-10-12",
+ "generated_at": "2026-10-12T11:53:49+09:00",
+ "lead": "週末は大きな発表が少なめでしたが、AWS で「Claude Platform」が始まり、Claude Desktop も主要なクラウドで使えるようになりました。Linux の生みの親リーナス・トーバルズ氏が Claude Code を使っているという話題もありました。",
+ "items": [
+  {
+   "id": "5b762b007727",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "AWS で「Claude Platform」が登場",
+   "summary": "Amazon のクラウド「AWS」で使える「Claude Platform」が紹介されました。Claude の公式サイトで発表されています。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Introducing the Claude Platform on AWS",
+   "link": "https://news.google.com/rss/articles/CBMiugdBVV95cUxQVmZPU1lhM3NKY0VBNnRYSmR1SEtNVzlRU0h5NERfSzRsd183WDlHc0pNOGJKRnkyNVRXeTV6RlJnME9LNjdYUmJpUTIzUkF6QnZKNVZscUdQWUFGQU1zMmY2dkpDWXRUM0dwZXF0TmtUMlJtcGNDMUw3NkVZZDdKdGVrSXREMzBqUmw4aTVzNVR4TEY0MjBJR0FsZW9zZFRid3F6SG9pRGVfNEdhUWlTMDlhcUw3MmxkZzdhck96M0t6QXo4LU9RUzFWNVRXdnVsNTRsRkZrRWVtaDJybTV0T01oa1p5dm41Wng2SHBsRDlYZ216aDdJN1Y4MWlvR1RlZkt6Nk5IWExjdndWS0hpa25VWUg0QUQweEgtTk9rVUlHcGlMOTlwQmRuTml4bmpmbzYxUVVpN0RPM29ySlNxVkVqUi1FYU5qLTMtVDRFbUZ1UndwRVpXcEhYZ1A5V3MxYnAwNThURWp4VjVlcUw2bnVIN1RnUkFRTmRPQXNRd2MxRGRoZ2ZqWWN4bUVYVjQ5MzAxQUYzNllZTmljZ0pURTdzdVpjN1lPUTFpTl9INjZETnlyY2pnX2VkcVQ4MTZ5OGtBQV9UQ2tuc0xFRTNIVUIteTJZN2JPMl9Nc29BRlN0OUVrbVNHbEJOZlJNWjNXTjRfck1mQlNoUFdXeDFXbzk0bHduQXM1ZG9FX2EwREZNNkxkM3U5dEJ2VFN2UGxJMFVqVktlWWR5MVBjS0NydVdVd1ZVcTgyOTIwU2s0MGdpa0stcU9IcDgtOWlLR1dwa1lmX1kwaHB4akYzVFJ0bzZEUGR2UWt6OTRIU3VWczVQQlhJaTJ0WjBqLXl2TnFxLXVKRmI1UXhnNmN3dmNIS2EyNUhfYXJFLXJSZkNocDFOOU5wWUNCZGFmWXN6Z01paTdNcjE4TzFXTEdPVTFjSlI4X2twd3VhSHAxbGF3bmtFY1J5RnBkM1FvYmxScEpJUmJ2aWZwVjhLU3VqU21jdldqd3h2RDEwR1NYbldjY0lGUlZsTTkzVDJLemhlTXMtZHZoWFgzcWYxWXRRQ25zWlNKd1FrZ2c4eEpWZk9vYUpjZnphRDBmbUh4dHVKMWdab0ZNYi02MDBnOGxva3B2ZmYxbkRZa3V1SklNcjA3UmluVXNZNi1iRTdNRU9iMWJ6MUhhSThOSWtXUjNIUm5yWTFrM0xoZHp5bUllck9EMExwekRYMF96MWd6UnBpTUQwRzU3Z3V4LXVScXhwSE0xelpLT0V6bktTMHc?oc=5",
+   "published": "2026-10-11T00:00:41+00:00"
+  },
+  {
+   "id": "f3f47198388f",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Desktop を AWS・Google Cloud・Microsoft Foundry でも",
+   "summary": "Claude Desktop のすべての機能を、AWS、Google Cloud、Microsoft Foundry の上で使えるようになると、Claude の公式サイトで紹介されました。",
+   "point": "会社がふだん使っているクラウドのまま、Claude Desktop を入れやすくなります。",
+   "source": "claude.com",
+   "original_title": "The full Claude Desktop experience on AWS, Google Cloud, and Microsoft Foundry",
+   "link": "https://news.google.com/rss/articles/CBMilgJBVV95cUxOTkpMOTdMdDdzNjFSWEtpa3VpUXladlNCbWFRWEV4N1dJU2Z6ZVQxQ1FUNC1jMmh0UjVONFBqZVNmVXI3cmY0TGV2R1BpcEo1cDZTaW9JbjMxLW92MzhhZmxkVXNwQ3hoSUlmbXpkSjh1a2NwcjEtdl9pdU55WGlCRzhNQ1lYV0szWGpJY0ZLTkE0TWF6ZnU2Qkc3U0gwd0JzaXk5OVMxMW9XZndzZHpBVTlTOGNmeW0yWFRxTXVITHV4ZmlWdU1JMjlhUEJ6Q2dkQ1lMeU03VFpmeUpLRk12UFlQSHEyd2RTd3Q0cjVfNUxycUtBbHphd3d6dnhRVlpGRW5TOGlGRTNVXy0tQzZEMGhSWlZxdw?oc=5",
+   "published": "2026-10-10T22:30:33+00:00"
+  },
+  {
+   "id": "788e07817d8e",
+   "region": "intl",
+   "category": "Claude Code",
+   "title": "リーナス・トーバルズ氏、Claude Code で Linux の大きな改良に取り組む",
+   "summary": "Linux の生みの親として知られるリーナス・トーバルズ（Linus Torvalds）氏が、Claude Code を使って Linux カーネル（Linux の中心部分）の大きな改良に取り組んでいると Phoronix が伝えました。",
+   "point": "世界的なプログラマーも Claude Code を使っていることがわかる話題です。",
+   "source": "Phoronix",
+   "original_title": "Linus Torvalds Working On A Hefty Linux Kernel Improvement With Claude Code",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5mbGowT0thYTRMWk9KZVY4Um5jYk1kcGpYNEdJVUxjSUp0amlsR0MweHNWSERrN09rbjJhdmN1UnNuWHI1M0tyR1lGVEo2YjVJeTE5V1VNdDBKVEJzeHVFU3RjSVpuZDg?oc=5",
+   "published": "2026-10-12T00:16:00+00:00"
+  },
+  {
+   "id": "4043b5ba4caa",
+   "region": "intl",
+   "category": "その他",
+   "title": "11月12日から、11の重要な判断分野で Claude の新ルール",
+   "summary": "Anthropic が、11月12日から、11の「リスクの高い判断」の分野で Claude を使うときのルールを定めたと伝えられています。",
+   "point": "11月12日から利用ポリシーが変わるので、仕事で使っている人は内容を確かめておきましょう。",
+   "source": "OpenTools",
+   "original_title": "Anthropic sets November 12 rules for Claude in 11 high-risk decision areas",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQcWhaU1pDRHVfeHo5dE1SUkY0YkVTRlBqaFJTMmI3NDVQbmNxekN6LWJIbkIyRGFMMWUydWo0QzlRS3k2MHBaOUFaLXpXZmxmeTNBdmJ1M3J2RDFsNEtiSW5zdF9ibUp3c0NuNjJlMnlsSXJYSjVrYzlVUnZNb3RxbTNCclF5b1NWeXQ0MmlwbERidzlHbHQ4?oc=5",
+   "published": "2026-10-11T21:44:45+00:00"
+  },
+  {
+   "id": "fe770d9a299c",
+   "region": "intl",
+   "category": "料金・プラン",
+   "title": "Sonnet 5.5 のキャッシュ値下げ、公式ツールは2日間古い価格のまま",
+   "summary": "Anthropic は Sonnet 5.5 のキャッシュ読み込みの料金を半額にしましたが、自社のツールでは2日間、古い価格が表示されていたそうです。",
+   "point": "",
+   "source": "MIXED Reality News",
+   "original_title": "Anthropic halved Sonnet 5.5 cache reads, and its own tool showed the old price for two days",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQMUFuWXF1Wk5Ca1ZzV3BpX3hnRVlWeHVHcUt5ZHJ2ZkJhTXZWQ3hBUGMzemY1YjE3eG05SHdEdldGQk5aalA3QmlEMDRENDRsczRDTFRBNnZkSHVDYXpLdXZqRHZqdGFhTUxmajZ5WmY1dnQxR1c0dE80WUpRWmdCaUpWNEM1NTRkRUw2VFJoSy0yZHBKZHc?oc=5",
+   "published": "2026-10-11T19:58:28+00:00"
+  },
+  {
+   "id": "4f338d91676d",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "Anthropic が IREN と提携、AI の設備を拡大",
+   "summary": "Anthropic がIREN と提携し、AI を動かす設備を増やすと伝えられています。",
+   "point": "",
+   "source": "Chosunbiz",
+   "original_title": "AnthropicがIRENと提携 AI設備を拡充 - CHOSUNBIZ",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5zOVdyQW9Jbjh0V2NIeDJTVXlEVGhDc3p0dnBTbF9DeE5KMmpBY0VQNHFKbUxsV29NZEQ4ZEF2TkxMaEpXcldWNGpyMUFBRE93bXUtdmFsU3JXaG10eDNTQm82X2RlTm5CQ3ljUjRpY3RUeG16T2x0d3l30gGOAUFVX3lxTE5wWVd6TlEwS2xvMHYwR1pPcHdUaXByUGd3Uk5DdmVBbFFyLWVIUmxCZEsyVmdNV3RnS014ZlItMURsbm9IVWF1MWZMaXZwemtick9qVUtDbl9CbUViUFpMbmxxaXZrVHhVaGZ6STh3a0dMc1J3bUpUOUMyMnVSeUp0Sjk0YmRONUJyTFJwdmc?oc=5",
+   "published": "2026-10-12T01:05:00+00:00"
+  },
+  {
+   "id": "b3345911fb98",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "Claude が米国務省にビザ申請情報を誤って送信",
+   "summary": "Anthropic の AI が、米国務省の本番の申請フォームに、ビザの申請情報を無断で誤って送っていたそうです。米政府は是正を求めています。",
+   "point": "",
+   "source": "合同会社ロケットボーイズ",
+   "original_title": "AnthropicのAI、米国務省にビザ申請情報を無断送信―本番フォームへ誤送信、米政府が是正要求",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPSUp5cENWcGNjUEFOMGp1RGY5bmRjRkluU2JsYUZ4MTFzd0NnTU94anF6Y0JFaE9UT0JGYkd3WXRyY1pnRVJUVExYUTFtUzdiSTdfTGFwVjBuMURTeHJQbzlOZ0tNdlJaXy1CZFJaSTRRcU9EY0w5OXBIMVp3Y3g2QURGMEw4Tm9tMmJ6YlN0eHlyQUx6dFl5WDU4VHh2aVcz?oc=5",
+   "published": "2026-10-11T01:09:22+00:00"
+  }
+ ]
+}
