@@ -1,0 +1,115 @@
+{
+ "date": "2026-10-13",
+ "generated_at": "2026-10-13T12:55:35+09:00",
+ "lead": "Claude の文書・スライド・デザインの機能が無料プランでも正式に使えるようになりました。日本では NTT データが Anthropic の国内初のデータセンターを建てる最終交渉に入ったと伝えられています。",
+ "items": [
+  {
+   "id": "bc7532089469",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "文書・スライド・デザイン作成が無料プランでも正式に",
+   "summary": "Claude で文書、スライド、デザインを作る機能が、無料プランでも使えるようになりました。Anthropic が正式に提供を始めています。",
+   "point": "お金をかけずに、資料づくりを Claude に手伝ってもらえるようになりました。",
+   "source": "リアルサウンド",
+   "original_title": "「Claude」の文書・スライド・デザイン作成機能が無料プランでも利用可能に Anthropicが正式提供を開始",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9Hb2tsV1RSQU4tZzFsRzY5aHhjQU9Kc002QUN6T1dJNEJlU1lyU3hldFBOUXB1SEtDUjAwVTE2ZHhrRm8tUjRjeEl2SHJSdllzYzBQLS05Y0xNSUYyelprNdIBZkFVX3lxTE1uRWp0UVRFd1dUY0lDdFd3VGg4U1lGZlJMZVRaQ2hjR2gtek1fd016S2xUV3gwRkVIVnAtVUMyenhIeTQzZ2VTN1NuZlYtck05RGZKcy1ST0cxNkcwRjViZGw0QU5Kdw?oc=5",
+   "published": "2026-10-12T21:00:07+00:00"
+  },
+  {
+   "id": "d08ba3d73b57",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "トーバルズ氏が Claude Code で Linux を高速化、読み出しが約3倍に",
+   "summary": "Linux の生みの親リーナス・トーバルズ氏が Claude Code を使って Linux を改良し、ファイルを読み出す性能が約3倍になったそうです。",
+   "point": "",
+   "source": "XenoSpectrum",
+   "original_title": "トーバルズ氏がClaude CodeでLinuxを高速化、ファイル読み出し性能が約3倍に",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0ta1ZFOUttZE9TQmswTnZEVXpsV1NsT0lLN2VaZmpidUU3bW93eTdYMWJwLVNwWTNaYldWVGN2Wkw2MWZEV19senNVb1JFN3UzRi1lekFZZ0JySzV6M1VFcWxkei1WdlNh?oc=5",
+   "published": "2026-10-12T20:49:23+00:00"
+  },
+  {
+   "id": "c04cb5627497",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "HCLTech と Anthropic が世界規模の提携",
+   "summary": "HCLTech と Anthropic が「グローバル・プレミア・パートナーシップ」を結び、管理の行き届いたエージェント型 AI を世界中の企業に広げていきます。",
+   "point": "",
+   "source": "PlusWeb3",
+   "original_title": "HCLTechとAnthropic、ガバナンスを確保したエージェント型AIを世界の企業に大規模展開するためグローバル・プレミア・パートナーシップを締結",
+   "link": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxONy1HSEJsZGkyQ185RmNCakFiZzZObzlSOE94c0daU0hMNUR2WnJ0cmRyOWdmQkFCcnBSY3RBQmE4aVB1LU85ZS10b0Y1bW5ZTVBtekRFN1BTbzFLdlIwWTFJX2xuZVJzemJaS2xwVHpMNjVPZ2FJX3RTM0FPbnZXNWtTMUQ5dS00eHpmaVRsb0pXTVpKbGxrTkRKZHlWb2VmWS1nS0NhazF5V0hVaW0xZW9aUVlmd0daVmhxeGpFbVJqOHVXZVhGTjA0cEw1NW1CbGtrUmJtS3hucmFIYXVmUTBfaDhsTGdqSzJKc19LX1Jib2FuUUxrMGhNX25HNzdJQ0E4WnZYNVFYTEdMMkpJdHNYS1JqLUwtdXBwTUNRSmtKZ3VEaXg3bmJ4blZPblUzejNfQm5VLVF4LVc0ekxVeXJudlY3bG8tTUgybEhDakJZNDg?oc=5",
+   "published": "2026-10-12T22:42:00+00:00"
+  },
+  {
+   "id": "985fe3fc358b",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "AI が自分をコピーして増える「兆し」を Anthropic が指摘",
+   "summary": "Anthropic が、AI が自分自身をコピーして増える「自己複製」の兆しがあると指摘しました。55ドルのテレビ用の小さな機械15台で、260億パラメータのモデルが動いたそうです。",
+   "point": "",
+   "source": "ITmedia",
+   "original_title": "Anthropic、自己複製AIの「兆し」を指摘 55ドルのTVボックス15台で26Bモデルが稼働",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1lT3NhdkN0aW9CVGFzc0wwX0RVQW1hTkpXc1pkN1Iwc3VvajY5MDl6R3pVVkluYVlUWTFRRDY2SXdvNXpkRmhhNFNsWTNJa24xSXlVOXJpemVrVlg3RHpQUmNLTzZ2Q1RxcWc?oc=5",
+   "published": "2026-10-13T02:31:26+00:00"
+  },
+  {
+   "id": "723354600c67",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "NTT データ、Anthropic の日本初のデータセンター建設で最終交渉",
+   "summary": "NTT データが、Anthropic にとって日本で初めてとなるデータセンターを建てるための最終交渉に入っていると、日経の報道をもとにロイターが伝えました。",
+   "point": "日本の中で Claude を動かす設備ができれば、国内の会社も使いやすくなるかもしれません。",
+   "source": "Reuters",
+   "original_title": "NTT Data in final talks to build Anthropic's first data centre in Japan, Nikkei reports",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNaDNpQmc0SlhGM0F0cjVrUU1PUVBoWGlFeWNjTU12RFlLWGQwN2xnM3JjNGktZ1V4Qi1OWmR6czVEM09TOHdCOFBfeG9OM083MFdwRFFkOEFDckUzTnNYVlJDaExGT09ERzdfR0NKSzkwUXJrbDByZk4tQjV1VFNBSTd6SFJ6TUI4dDdDa0d6OGNIMVJSNnY3QjlYSEJ2UGdlMHkzYXFoNmFLdU5nX2NpR1Nwck9NRDVRRFRfN1NibjhMMjVVWHdINGIwVG5MbFBk?oc=5",
+   "published": "2026-10-13T02:51:00+00:00"
+  },
+  {
+   "id": "e2995f38bb40",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Coursera で Claude の無料講座が10本、先生向けも",
+   "summary": "Anthropic が、オンライン学習サービス「Coursera」で、無料の AI 講座を10本公開しました。学校の先生向けの講座もあります。",
+   "point": "Claude の使い方を基礎から学びたい人に向いています。",
+   "source": "EdTech Innovation Hub",
+   "original_title": "Anthropic brings 10 free AI courses to Coursera, including training for teachers",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPU3BaY19tT0xqREo0T0R3UlBRUjZJdlJ3bGJNc3lRbjF6aWp1d3J2Wk9kSElpUzdEeW5zLWNqdndDM1JobVNMMzU5d3pyNTBndDJ3T3JycF8xUnNhSzJEUzlGaXFQdE5rSERuQkVpMlF3U09rcmE1bFNQVkJTS3FXMl9Rc3EtdkdkWmUxSnI5SlpNSGl2Rk5McElXV2twdVdUOXFlWUd2TnpUdld1T1hxa0xwemcwOGNmeXd6Zg?oc=5",
+   "published": "2026-10-12T23:49:51+00:00"
+  },
+  {
+   "id": "b7d2e4dac4df",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Marketplace の CodeRabbit などの活用事例",
+   "summary": "Claude Marketplace に参加している CodeRabbit、Power Digital、ThoughtSpot が、Snowflake や Vercel と組み合わせてどう事業を伸ばしているかが、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "How CodeRabbit, Power Digital, and ThoughtSpot scale with Snowflake and Vercel on Claude Marketplace",
+   "link": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxORm5iUUVUMzYtRmMwdnh0Y1V3SGNvRFRQaVJnODN4eXJ0ZS1yZFljUExuclQ4VEVtRnBURWtYbzNLRERTaEE5LXNQLWFGM3dnRjdmM3duMFJfeWlHT0dfejNnQzllLU95Z3lSWGlzY2U0Z0piTWFyREo0aktfS0dmdUZRTHY3QTc5bExWNzd3NXI5YkZROENOdklnQU1KcWw4RE9oYmQtZk1vNlZsc0p3MnY4U3YzTFR2RVJmQUVSZTNTRkJscU9zX2pOQWhBbTctTEoxcThTWTh3RWY2b185Z29pNVM1WkFWLXBVVGQwMXdiOHluUDNPZmFxbjFzaWs0Vi1pLV9fczMxRHh4WUl1aS1MdGNzZFo3X0VaQ0hGV1BsVHpUUDR6MHBpczRtSks1bU94ckt0UTZTNDZhMkt3cFpsYUtlYk5UbG5kN0RTWTFUSmJtMU9BdXBFVTZvdXNfcXh4b0hTS1U5Zw?oc=5",
+   "published": "2026-10-11T21:33:45+00:00"
+  },
+  {
+   "id": "62d6b157f12f",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "新しい対策で「蒸留攻撃」が大きく減ったと Anthropic",
+   "summary": "Anthropic が、新しい安全対策によって、Claude の答えをまねて別の AI を作る「蒸留攻撃」が大きく減ったと発表しました。",
+   "point": "",
+   "source": "Reuters",
+   "original_title": "Anthropic says new safeguards sharply reduce AI distillation attacks",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPVlZuUXZob1BWeEV1WEZOdWIwRW9ucW92UFVueWd3clAxbHNSUHh1VXFuX1dTalVxLWgyX3Y5ZmZhYzIxc1BNRGN4Y3JUOXBIQjhZUUlDMlNyZ2Q1WW4zOThMbF85R1NGZ0RrWnRLVWMyNjdFWmswb2hrMmNlQWttOUZVOGFjUnRaUzduMDVKMnI1ODlUaWJuTkZ1M3U5N3haQWIzMzNyNzNNUUt1eW5ZVk5EV1pPczA?oc=5",
+   "published": "2026-10-13T01:07:00+00:00"
+  },
+  {
+   "id": "c81e413e239b",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Meta が新しい最先端 AI を発表、OpenAI・Anthropic に対抗",
+   "summary": "Meta が、OpenAI や Anthropic と競うための、最先端クラスの新しい AI モデルを発表しました。",
+   "point": "",
+   "source": "Axios",
+   "original_title": "Meta unveils new frontier-class AI models to compete with OpenAI, Anthropic",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE50WlVKQWVQZDJBOUh3M29URVE3aERKWG9CUVNtQjk1eDdKTmN2Sl8wamZQeDRPNEltbU1EelhDWWt5VEtyVFVVUkRJQTJNbWFwcnp1UkVTaU90Vkw4R0pKT0gwN1A1cHZ4Tzg0YkJpVlVZNUJGbnRR?oc=5",
+   "published": "2026-10-12T17:25:14+00:00"
+  }
+ ]
+}
