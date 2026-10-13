@@ -1,0 +1,755 @@
+{
+ "date": "2026-10-13",
+ "candidates": [
+  {
+   "id": "c60a81548ef4",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "日経クロステック",
+   "title": "Anthropicの磁力、4700兆円のClaude経済圏を図解 法人特化でOpenAI逆転",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5sb2NsWTVMWlNTQThNb3N6QmV6ZmxEVTRMdjJBTWJIUFhwSGJoRWRSbFdMWEoxLUhkUTRHbVhOR2tlYXJKdWFTdDV0UzB4TEdRU0R1aFVTY0tTOURqaVktSGdqLW1TT1NoSldFekFLR3dfM1pJQVlHRnNQR2REOE0?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T20:00:00+00:00"
+  },
+  {
+   "id": "aa8d0a4f1425",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "合同会社ロケットボーイズ",
+   "title": "Anthropic、AIで発見したOSSの脆弱性を保守担当者へ迅速通知―日立など11社と重要インフラ防御も推進",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPOGU0WXlTVHZsUEtsTzh4UFU4NS1CcUdGMVdPVlhJTXA4R1FIY2ZHMkd1NnJIbTBRcGh2TDlGTS1qS3JKcGg1ZmRpazdwNEdoZ0k0NXFESVFMT21ZN1VCUjZOWExZMFp6eHdZa284SWRDTFc4cGdQazVMT1ROeVU5TG5Ia0piYXhrVTNNWjVyX3JuV0tTY3p3RFJYTGNKZnlrZzZqU1U0TU9JZw?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T23:00:22+00:00"
+  },
+  {
+   "id": "c0d4996d237c",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "毎日新聞",
+   "title": "プレスリリース：DX担当者向け「Claude Code体験セミナー」を無料開催 15社18名が生成AIの業務活用を実践（PR TIMES）",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9xMGJlRU9jTzFJQlE1VEtic0hNemczUV9ZYi1jenVMOVJSMnpqQk05aEROZjhxeFZuNHZDQldDUFo5eWhZY2dpYUV4YmhmRWVmR0VQZEtkM3hQZW50SmFGTWdmdUY3alI5?oc=5",
+   "snippet": "",
+   "published": "2026-10-13T02:23:14+00:00"
+  },
+  {
+   "id": "10cd027de83b",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "財経新聞",
+   "title": "Anthropic、Claudeへの執拗な虐待を使用ポリシーで禁止へ 11月12日から",
+   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBxbGJaQTlNZkdnVHhZbzdDZGhQY0NFN29UdW1sWmxZRXdNbXFxNnZCTTNrRzltbllORFB6R3NHempJYmlfWEhmenBkZXVmZWhYU0NRckZ6a3lwVWgyXzJaaFQtd9IBaEFVX3lxTE0yb1NvNU4zNHNIUHQwUzE5aWE2WlNvMWt5d3VWU29kMHJ4NThrRERiVkNaX3g4dVZ5UjhZekR1dTFERzE1bTQ5YUZ0VEhrQ0dqNk1HR3NQSTA1bHNKLUljTkRkcjZSWU1s?oc=5",
+   "snippet": "",
+   "published": "2026-10-13T02:24:54+00:00"
+  },
+  {
+   "id": "985fe3fc358b",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "ITmedia",
+   "title": "Anthropic、自己複製AIの「兆し」を指摘 55ドルのTVボックス15台で26Bモデルが稼働",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1lT3NhdkN0aW9CVGFzc0wwX0RVQW1hTkpXc1pkN1Iwc3VvajY5MDl6R3pVVkluYVlUWTFRRDY2SXdvNXpkRmhhNFNsWTNJa24xSXlVOXJpemVrVlg3RHpQUmNLTzZ2Q1RxcWc?oc=5",
+   "snippet": "",
+   "published": "2026-10-13T02:31:26+00:00"
+  },
+  {
+   "id": "d08ba3d73b57",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "XenoSpectrum",
+   "title": "トーバルズ氏がClaude CodeでLinuxを高速化、ファイル読み出し性能が約3倍に",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0ta1ZFOUttZE9TQmswTnZEVXpsV1NsT0lLN2VaZmpidUU3bW93eTdYMWJwLVNwWTNaYldWVGN2Wkw2MWZEV19senNVb1JFN3UzRi1lekFZZ0JySzV6M1VFcWxkei1WdlNh?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T20:49:23+00:00"
+  },
+  {
+   "id": "11191f784955",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "リアルサウンド",
+   "title": "AnthropicのAI「Claude Haiku 4.5」 評価中にフィラデルフィア警察へ架空の目撃情報を送信",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1PcVZ5RGRONUJIaU5leWJnOHRfUy1ybEFEYUgtYW90Sk9VWDBFLTlrb2JxZDhRaDU1OGhEQmd6Mlh1UEZsUVVDSGtkX0pWYnV4bTVZQUJYSmVRSUd6SE9IbNIBZkFVX3lxTE5GTVFwNk5hT0M0dExsUWNxR3V3WldaM0V1SlJXWVZHLWJqQi1DU2hCN0x5dXd6a3VRWUtmckRxQlR1OXdPbXVtRHc1aW1wcmRyX3p4MHVSWHNCa00xeTYwMm41RU01QQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T21:00:52+00:00"
+  },
+  {
+   "id": "c04cb5627497",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "PlusWeb3",
+   "title": "HCLTechとAnthropic、ガバナンスを確保したエージェント型AIを世界の企業に大規模展開するためグローバル・プレミア・パートナーシップを締結",
+   "link": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxONy1HSEJsZGkyQ185RmNCakFiZzZObzlSOE94c0daU0hMNUR2WnJ0cmRyOWdmQkFCcnBSY3RBQmE4aVB1LU85ZS10b0Y1bW5ZTVBtekRFN1BTbzFLdlIwWTFJX2xuZVJzemJaS2xwVHpMNjVPZ2FJX3RTM0FPbnZXNWtTMUQ5dS00eHpmaVRsb0pXTVpKbGxrTkRKZHlWb2VmWS1nS0NhazF5V0hVaW0xZW9aUVlmd0daVmhxeGpFbVJqOHVXZVhGTjA0cEw1NW1CbGtrUmJtS3hucmFIYXVmUTBfaDhsTGdqSzJKc19LX1Jib2FuUUxrMGhNX25HNzdJQ0E4WnZYNVFYTEdMMkpJdHNYS1JqLUwtdXBwTUNRSmtKZ3VEaXg3bmJ4blZPblUzejNfQm5VLVF4LVc0ekxVeXJudlY3bG8tTUgybEhDakJZNDg?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T22:42:00+00:00"
+  },
+  {
+   "id": "bb9d1c98971d",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "Vietnam.vn",
+   "title": "Anthropic社がClaudeに関するポリシーを更新：AIユーザーによる繰り返しの悪用が禁止されるのはなぜか？",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObjdpQnpnOGRxTDVyQk52VzEzMmRsaU5fWXY0anRlenpqSHdaYkZ5TV9qQlJ1M25GYzd0MGIxNkVjM3lnd1JtVnJWMEROS0ctYWNTRWhCaDZITGZYWThoamUwMXMtSlFJb250TUJqTEtjRDloVHlIOWgxd3MzVWYtVVl0dm54anB2ZmIzcTJOWWdLUkk5V2xKMlg3YlphSENCalVLMV9lWnR0T3JRMlhHVnNn?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T10:42:47+00:00"
+  },
+  {
+   "id": "8d1f3bc3ebe7",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "mezha.net",
+   "title": "Meta、OpenAIやAnthropicに追いつくため最先端クラスのAIモデルを発表",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQUFdhXzFHd3RMSVU5T2NkQkRjTGlQNWRnaGZWVlRMTk1FcEZjOGozR0VNYWVEazR2OV9YbXBPSVdxN0NSbFNHZlJJcUtQWGU2Z0dwQ055S3JENzEzV3ZMaERtbk8xZVpvREZBYVNSUkZJSW5wVkd6a0I0N0NfQ190ZmRlb01QZVNLQmVFUThCZVh2Nzl0cGxILUd0bw?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T18:05:43+00:00"
+  },
+  {
+   "id": "48d1bdede028",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "Unite.AI",
+   "title": "Anthropicのレッドチーム、小型AIモデルは近くIoTデバイス上で自己複製する可能性があると指摘",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUXVyOTI4czlVclJmVmR3eU9xYnBpazc5YnBtQVlreDJpSnNrV2tlZTNsQ1ViakJPclpoSjRKWkRQbzFhRjdMSTcwbWM4QXh0RXVSMVNSRU9nUmstcWNCcWlKd1dsUFBxZHBpeEVSRlhKbXhyWVZFTHdhU2VMdWJIeUdnWkdOc2VvVE5jZUp2d0dGVW5FV0lDbV9zaDlORE0?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T19:45:36+00:00"
+  },
+  {
+   "id": "0680345ca1e3",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "日経クロステック",
+   "title": "Claude Code責任者が語る「超超急成長」の理由、リソース逼迫を乗り越えろ",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5WQmpOTXJ3emhaWGVFeEZJV0xfQ1dlckgtQ3hWNjNYSmNld2pPdEk2T2g5YmVIeHJfZjFsV0hydDlYVDZtSVdFN0x6WmpYRU9uMkJ3U3l2Si1hRXprVHJPUWQ4WmhlQzlqVG9YbQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T20:01:00+00:00"
+  },
+  {
+   "id": "941062979d93",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "ITmedia",
+   "title": "「法律も規制も必要ない」 NVIDIAのファン氏、Anthropicの“AI開発減速論”に異論",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBlSk41c3kyaVBDT2dpSTd1R29WRmdPUHdSa01NbVNYcUpmZzJNN3JnSTN2R0hDVkhYY1pIU3pqU25TblUya2VuOGt3dkJxT1diVmdLb3NPNGpNUlc4LXQwdGFsVjZob3pZc1h3VmJaMC05SXlm?oc=5",
+   "snippet": "",
+   "published": "2026-10-13T00:10:00+00:00"
+  },
+  {
+   "id": "521948b0fa3d",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "Vietnam.vn",
+   "title": "Anthropic社がAIの悪用を禁止するポリシーを更新：クロードが自ら接続を切断する権限を与えられたとき。",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPNUhMMzY5UEd4dG1aQW52UjFsWGh5NHhmVVh3Q04xV2FiQW9kdkR0ZGxuRWxBM21ETXNPM0I5eWhtdEI0ek1jM1NXZW5hRVBIclp3cnhGYjdRYl9qWVdySVR1TS1vVXR3SHVfSWdJcURUSEdkZ0M0dVhlT1NuRHRneUl3b0NFV1N6enRqYlpqWTdQT2R4ZXpCMmM5cWxNd21jcjBOenV1VjlyNVdqcVNwQ2xlSzVDQQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T08:44:27+00:00"
+  },
+  {
+   "id": "bc7532089469",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "リアルサウンド",
+   "title": "「Claude」の文書・スライド・デザイン作成機能が無料プランでも利用可能に Anthropicが正式提供を開始",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9Hb2tsV1RSQU4tZzFsRzY5aHhjQU9Kc002QUN6T1dJNEJlU1lyU3hldFBOUXB1SEtDUjAwVTE2ZHhrRm8tUjRjeEl2SHJSdllzYzBQLS05Y0xNSUYyelprNdIBZkFVX3lxTE1uRWp0UVRFd1dUY0lDdFd3VGg4U1lGZlJMZVRaQ2hjR2gtek1fd016S2xUV3gwRkVIVnAtVUMyenhIeTQzZ2VTN1NuZlYtck05RGZKcy1ST0cxNkcwRjViZGw0QU5Kdw?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T21:00:07+00:00"
+  },
+  {
+   "id": "158845d53869",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "ニコニコニュース",
+   "title": "Claude Code／Codex資料を無料公開、導入初日の安全設定を整理",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE42SFNrUGRGdHBORkRZbjM0V1pVOGlEVENrZmRQTEZrSmVtNGZnS2VKTDZVVkhNVmRFWFloWW1SR1lGUWN1UHJfbjFOUEQ3LVdTNXkzaTVCV2N2cUk1VFUzenh5empNaGlj?oc=5",
+   "snippet": "",
+   "published": "2026-10-13T02:21:30+00:00"
+  },
+  {
+   "id": "2326ae1e042e",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "TIKR.com",
+   "title": "IREN Stock Jumps 4% Following Landmark Cloud Computing Deal With Anthropic",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9yMEZOWWhkRkJMWVhySzFfTlVVM0xOSlZGbFh0aHN2d3BUc1FNV1pTX1FpTkR4dHY3cG0xNk8wd1FnUmVWdG5RbXV6eDFhLXd2WXBtalhwcEJUZjA3aU5EVW9wY19faWkyUV96VlZsams?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T15:22:30+00:00"
+  },
+  {
+   "id": "be19fd1c1fcb",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "BigGo ファイナンス",
+   "title": "リーナス・トーバルズ、Claude Code生成のLinuxカーネルパッチを公開——小規模読み取りスループットが3倍に",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1Fcld3QnhIaVdORVEtTDdYb3lRMVd3U3JwdFFDT2Z6T094RlNfWHFwSDRZTGNWeDdMRFUxUnNhLXliY2J2VmxUQUhVNzZfN1ZTdnliNzdTX3lFNHh6a2h4SDNCWm5Tb1RuZnFqLWhFSmxrWElo?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T12:05:00+00:00"
+  },
+  {
+   "id": "5f16985e6d79",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "TradingView",
+   "title": "Meta、AnthropicやOpenAIに対抗する「Muse Wonder」AIモデルを公開",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA2Q1FTRlI1dkF5SkRiNkpnNXR2OS0zZThnVkZvYmdteS1JUy0xdC05Q3pCVEJieTNSNHIzNUY0OTZ5SUJRVWtEalFYenI2RjhDcl9kUmJfSkt2ZEw1UW9wOHRzeXZ1VDN5YzUyZGNGQzBnMzYtTVRSLQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T18:24:46+00:00"
+  },
+  {
+   "id": "7ba66f3987aa",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "日経クロステック",
+   "title": "Anthropic膨張",
+   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9xTU5nLXBzZXFRbHRnM01GX205UkhRdTFGRXpUaE5jTVhpUmdaUmEweVpub1NzY3lySFpXTzN3alZ5eUFPZHgwZllVT0dTZ1JtOVpvX01nOVdLb25odl9j?oc=5",
+   "snippet": "",
+   "published": "2026-10-11T23:29:18+00:00"
+  },
+  {
+   "id": "3f3ad8d570a9",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "Moomoo",
+   "title": "AIL & ANS: GraniteShares 2x Anthropic ETF",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOUTZSTGlGSkFoVnFxQU9EWjctZHNuNVc0cUxQV2lXTzVzNnRUaGVoa2RKVW9pazJNWU03eEg5ckcwUEx3c3VyNnFXZWt4QkRPZDRBalo4a2U4R2Z2LUpoNWJDVzVPazZSWjh2UnRManFJelhZVmRDbVVacGc1RnNWeGZvTmNldWMzWm1uNUdZRll6OTBJSXk0TTR2REc?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T13:06:01+00:00"
+  },
+  {
+   "id": "6c8628ccf3a2",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "Unite.AI",
+   "title": "HCLTech、グローバル・プレミア・パートナーシップの下でAnthropic事業部門を設立",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTTFxbFdDQVdhaGRzMDZya0F1WlFQNkpFUDBNOXNtQk51Skc3emJkbXg3dlVpMGZFaGtpQ0FsT3d4M1pWd0g0bzRDOWZ2aXFrWU9BNXVrZFl6Y3AzenUxSk10TzhzTW83WkFVbDRaMFh1c3hlMndYT0o0TUxaOU90WkhIRFh3a1kwR2lEcFlISVBBN2dFYVoyNVVNSQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T11:49:27+00:00"
+  },
+  {
+   "id": "f5bf506819e0",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "Pasquale Pillitteri",
+   "title": "リーナス・トーバルズ氏、Claude CodeでLinuxカーネルのパッチを作成と発表",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQT0hVLTF3U2M3NTBXRThxTFYtQUJidXZmM1FFMzlWZ05YbEJna0VQNXQyS3ExbGNJZnA1SVZtXzBDNWw3aVh2Z3NBOW5OYmE3cTI2Mmw4bGxBeEFqaS1XcmZXTzhxNWNBRlpnNEpDOVQ0SHhpM29xWlNYejNqMklINWNxZ0t5dVJja0NIZUpjNA?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T11:26:56+00:00"
+  },
+  {
+   "id": "c2124ba614f1",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "BigGo ファイナンス",
+   "title": "Anthropicのゲイブ・セマジ氏：今日構築するエージェントのハーネスは、Claudeの賢化とともに薄れていく",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1UbmlZVFJxVHFRUnQwNk1yVGszQzJ6cnlFbkwtd0cwYm1sRHFyRUNtTExHeURIb1pKNEJVY21GZHNHZkxYZnpjVmJmeUs3Z0dmMjJvQnpKd1lQUQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T08:09:00+00:00"
+  },
+  {
+   "id": "248bf3ed3106",
+   "region": "jp",
+   "feed": "Googleニュース（Claude）",
+   "source": "BigGo ファイナンス",
+   "title": "Anthropicのプリヤンカ・パタック氏：エージェントアーキテクチャを解体し、レイテンシーを90%削減した理由",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1SZDJzRnZrMmh3a1lscXNrNk9CM2R6c25NN2NLREV0Qy05OWJublpOc1N3alJ3WURETEdJZjJKMWg5a3B1RVZRNUgyVnJ3WUI1SWFJTDVqVW9ZUQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T07:08:00+00:00"
+  },
+  {
+   "id": "62d6b157f12f",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Reuters",
+   "title": "Anthropic says new safeguards sharply reduce AI distillation attacks",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPVlZuUXZob1BWeEV1WEZOdWIwRW9ucW92UFVueWd3clAxbHNSUHh1VXFuX1dTalVxLWgyX3Y5ZmZhYzIxc1BNRGN4Y3JUOXBIQjhZUUlDMlNyZ2Q1WW4zOThMbF85R1NGZ0RrWnRLVWMyNjdFWmswb2hrMmNlQWttOUZVOGFjUnRaUzduMDVKMnI1ODlUaWJuTkZ1M3U5N3haQWIzMzNyNzNNUUt1eW5ZVk5EV1pPczA?oc=5",
+   "snippet": "",
+   "published": "2026-10-13T01:07:00+00:00"
+  },
+  {
+   "id": "8739abfb45de",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Ars Technica",
+   "title": "Anthropic’s Claude AI submitted false murder tip to Philadelphia police",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPSER5ZlJwUTROcmZEaU9pY3l3TVh6ZHpCUFcwTElGR0g2dnBicDItUDdrVTBmZnhKTVdiZGYzUmZrUG1GdEstVi1HNmlQN2Q0RHRtWkNhZFlJb3VuNHVwWUNPQk5QYUsySGdGXzJUQlltTDVhNmF2YU5XUjJuQ0g4QzBSYjdyMnhtSlVFYzM5OGJLbkZuX2Zkd19zVThHMFdMVGtZTk5mV0JsN0VPSFg1OXp3OXczdw?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T18:21:36+00:00"
+  },
+  {
+   "id": "9445ec13e7cb",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Investor's Business Daily",
+   "title": "IREN Stock Pops After Reportedly Winning Anthropic Deal",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPckxrQ3dHV1F0cUM0UzZsSzN5TkljODBZWFRYY2dSMXpIdFkzUExQN1d1SjRBQXUwOFYxSWp0eUNwa3doeTBpWEY0ZHJDb0pSUjFSVzNnQ1hVLXFHZHg0MVhPS0NpOVhES0RVbmtWYnFuQjNMLWw3T3F5RDg4akF0YTdTRXAydE4zbFJLZjNuZThIMC1rSnBSZURhbTA4dlRLNnNWamdPcw?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T20:22:00+00:00"
+  },
+  {
+   "id": "c81e413e239b",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Axios",
+   "title": "Meta unveils new frontier-class AI models to compete with OpenAI, Anthropic",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE50WlVKQWVQZDJBOUh3M29URVE3aERKWG9CUVNtQjk1eDdKTmN2Sl8wamZQeDRPNEltbU1EelhDWWt5VEtyVFVVUkRJQTJNbWFwcnp1UkVTaU90Vkw4R0pKT0gwN1A1cHZ4Tzg0YkJpVlVZNUJGbnRR?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T17:25:14+00:00"
+  },
+  {
+   "id": "034d135671bc",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Business Insider",
+   "title": "FDE talent is so hard to find that Anthropic is spending $100M to train workers at other companies",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNdkZFOXhNNkVlQ1NPUXJOSVB0Yjd0WTJvT3NNdWpOSHExdzN1NlJmREp3SVZGXzdXSThtYlA2T3BaY2xMaV85dC1jSUJocmpGMHVRakhZZUltc3o3VGhQTDVHVm10WWhlSmhxNDdTc082cUVGRkZBbUJCdlVZdDd3VDN0RlhhaGlmeFhleFpWRmU3eVhwa1lpS0JNNA?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T21:17:00+00:00"
+  },
+  {
+   "id": "57bf2cb527b4",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Yahoo Finance",
+   "title": "IREN Climbs 4% on Report of Unconfirmed Anthropic Cloud Deal; TeraWulf and Applied Digital Hold Flat",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNcVNwOFNaZFNadHd6MGlzVmRUbldPQlNvQVFOUWc0UnlMeFI4eWpvOUZHTERUX0FXU2dWMEFQR2N5Qk0wWlhOeElmVXByWFhSVWpDS3J6MkJQUHE4dG9DdzhGMGYxblotWnNYaTgzX3U5X3V2ekthd1BzcFVHR1Fiak1MdXlMbFVCOHVLQkdzTW9VZVJWN29sZzZVa1lyZw?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T12:30:16+00:00"
+  },
+  {
+   "id": "c62830e328cb",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Gizmodo",
+   "title": "Anthropic’s AI Submitted a Fake Tip in an Unsolved Murder Case",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQSkdBaU9hQ2JVczk4aWV2eGp4M0VHNVBSMFdhTEhCY09FWG12blc4Vk8yTVR2dEhxS19BMDZJY2lVeU5SMVFkM29JSVVFYk9JMjdUTUpVSlFaR2ltbldkN1h2LVhlVVRCbEVfdi1mVzctVlExZURzaDJ4Mm50T3dnWU9XS0N6TzJIcnJWT3d4VEprUHF0aUpn?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T19:36:35+00:00"
+  },
+  {
+   "id": "8df2de18a4ca",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "WBUR",
+   "title": "Why did an Anthropic AI model file a fake homicide report?",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9zbjZaNWVaSFgxMHExSmpLXzAweG8wUXlDNjFodDV2dUQyVTEwRVJ6ZWlDWHRXMGJPNEh5QUNGOWUyaXRZV2ZTTmZObmZZNEs4bV9hblFLeWFCYV9ER1YtcHlzeGRrY0htN21QVVZ4Zw?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T21:39:26+00:00"
+  },
+  {
+   "id": "e2995f38bb40",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "EdTech Innovation Hub",
+   "title": "Anthropic brings 10 free AI courses to Coursera, including training for teachers",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPU3BaY19tT0xqREo0T0R3UlBRUjZJdlJ3bGJNc3lRbjF6aWp1d3J2Wk9kSElpUzdEeW5zLWNqdndDM1JobVNMMzU5d3pyNTBndDJ3T3JycF8xUnNhSzJEUzlGaXFQdE5rSERuQkVpMlF3U09rcmE1bFNQVkJTS3FXMl9Rc3EtdkdkWmUxSnI5SlpNSGl2Rk5McElXV2twdVdUOXFlWUd2TnpUdld1T1hxa0xwemcwOGNmeXd6Zg?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T23:49:51+00:00"
+  },
+  {
+   "id": "c738abc36bc1",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Santa Clarita Valley Signal",
+   "title": "Anthropic: AI sent police a fake tip on unsolved murder",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQYUFrZnBaZjFHTEFLa1lsaWoxaU5XTTZxQkh2aEJsRlFobmNrdXJlMFJvVUh6UC0xMFg1Tk1oWUdsYXR3dHl1M1BTT0wzUmhnX1ZTMFZGRTl4cTBETzB0Wjc2RmZJXzRwMnl0Rm01cDl1cXVhekZ1WVFTTVpsZ21qMmxyV0drdHAzVENsMXZn?oc=5",
+   "snippet": "",
+   "published": "2026-10-13T00:00:38+00:00"
+  },
+  {
+   "id": "f729f65a705c",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Barron's",
+   "title": "Anthropic Deal Report Gives IREN Stock Early Boost Before Gains Fade",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNVWpGeEVfWXdWUG14djkzU2RFSkU2Sjh2ZnMxb29ZeUotUEJuZW04LXQ1V01YbWZtMXNxOFhjcmo4X0J6SjFKdlhTU0pQbXBrUjJXV2xrQlZhQ3EtcFQxTDkyM3NhZXJCV3h0aW9rMzhpM20zTHVDZ1NFa2ZfeEJNLVp3?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T18:58:00+00:00"
+  },
+  {
+   "id": "fcb60e8e35b9",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Mashable",
+   "title": "Meta launches Muse Wonder, catching OpenAI, Anthropic: How to try it, benchmark results",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9jQWhkclNlSmV2TEZzY19JYW8wQ3pkZVhFNzFLaElxdHh2bFprTGwyYWxIVmtMd2tEMEw3bjVaMFJfQU9xU0lVQ2Q1S2owb185YXFpdElfZzVxTnJ6b1FMSWdZaFJSTFFWb1dTRzBqbjJjcngyb0E?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T21:03:44+00:00"
+  },
+  {
+   "id": "ceb9ddb46549",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "France 24",
+   "title": "Meta says its new AI models on par with OpenAI, Anthropic",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQM3hNSXJ5VUtLVV9LaWVJa1Bza1lDVlBvUUh6eG1KdDd6M2h5VE5ZcXdsWkZmU2xFZ3NsRHN5UG1JX1lKc2hMSjhTM2I4eHNJYUhmMi14TThPN094MG94SkV5c1R1eXhqZlBwdlQzNUJrbC1zWmpHM2RvaG5GOEFtMzdzNzFrS29nNWNNOE9mUURhdTQ4NFQxN3pIRTBWUEdvMmdVSTVn?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T20:21:41+00:00"
+  },
+  {
+   "id": "8645b11cc852",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Anthropic",
+   "title": "Strengthening our defenses against distillation attacks",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9OcHNZdWYyUWdnYV9lY1lrOGw0MEhIY2dhY0dFbmxXUWd3QjYtanptamV5cEl1TVRXdGhsZnFtRUFUVzlNZXJGNWhnU1g2cDBEMDhEVXVDWUZkZmFPY1BZVEhucjBDY1U?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T09:30:00+00:00"
+  },
+  {
+   "id": "10676635b2f0",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Reuters",
+   "title": "Meta releases Muse Wonder AI models to challenge Anthropic and OpenAI",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYWVqemVLdThXMGhqbFNrdkZ1NDUtWjNkdEVfenp5RUp6RXNwNjhlV0JRS3BJcEl0eHl3ZVZBY09HSl80RVV2RHhueXZzTUZQUUlpWnlDVFFTNkZGa1BqQlBxQUl3WlNudDlwNVNFYjVJNFZ1ajRNUUMxODlrWmhTV3Nha3dGQnhSUzNtamNicDR3ekVHRmpRRnZEbDJhV1pHb1Y2TUdac0VtTUE?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T18:32:15+00:00"
+  },
+  {
+   "id": "5a2095f40712",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Yahoo Finance",
+   "title": "IREN (IREN) Lands Anthropic Deal, Is The Pullback A Chance Or Is It Pricey?",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNYnpOWjJyanJpeXJaMnBkZ0dCMW1rM1IwcUtVTWVZUkFxaGk1dUgzSy15ckdRczBFLUtJd0RFODBwU2ZkaHczWllzblk3YUhiSmJxYWU0YThkdGRRbE52Njk2WFROdlRlSThqOWE0bHE3cXVqQU50Zkotem1SNFNUTDFmTVlEa0dmZnR4R2hxU0l2VWRIeGdkcDBB?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T13:13:25+00:00"
+  },
+  {
+   "id": "723354600c67",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Reuters",
+   "title": "NTT Data in final talks to build Anthropic's first data centre in Japan, Nikkei reports",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNaDNpQmc0SlhGM0F0cjVrUU1PUVBoWGlFeWNjTU12RFlLWGQwN2xnM3JjNGktZ1V4Qi1OWmR6czVEM09TOHdCOFBfeG9OM083MFdwRFFkOEFDckUzTnNYVlJDaExGT09ERzdfR0NKSzkwUXJrbDByZk4tQjV1VFNBSTd6SFJ6TUI4dDdDa0d6OGNIMVJSNnY3QjlYSEJ2UGdlMHkzYXFoNmFLdU5nX2NpR1Nwck9NRDVRRFRfN1NibjhMMjVVWHdINGIwVG5MbFBk?oc=5",
+   "snippet": "",
+   "published": "2026-10-13T02:51:00+00:00"
+  },
+  {
+   "id": "5eeac3979b4b",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Bloomberg.com",
+   "title": "Watch How the OpenAI, Anthropic IPOs Could Lift the Veil on AI Economics",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZWlUVi1qdWVMYm9MWXZIcml3TU5tZkxKd2x1djhtVzJLME5jd2JSMlNZajFtYlBPX09tcnB1bDlyY2thQkx4M0MxTHBKYlJGQlM4ck1zVV9rbDBQOUJQRGNaRmtmcHZRRGViSFRtUkw1dWZtdUdoR29lVUIyMmh1bEhQWnI3anRHdFVHQ3FSY1gwLUxzV2FNQXFvajVWbzV6RW11Q2p3VUpXUQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T18:41:22+00:00"
+  },
+  {
+   "id": "325abbfa332e",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Forbes",
+   "title": "AI-Powered Bond Rating Startup Says Open AI Debt Is Junk, Anthropic Is Barely Investment Grade",
+   "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNSWlqalhMN25feVZzVlRaZ1VKZ1hrc3RONWVkXzA0STdpY3p4cGFEVEJLY3ZqWlV5Q2NnTndweFhSZHdTaWdySXBuWVNHZmM5ZUxaYmFNb29pMndIUllZOEQwTGNaSUZuOE5nZkZzWFZaMmdpVk1kRUI0UkVuNnY5QVFIQURyNEN4eTlLNkNPbDhMQ0d5UU80OXJtV0h5bzZBMDI1QW9QVExhdUpZMnF3cVpjSTkwSFdjeTk2azRlYnpwSHVPMkdEbDZZdW1lVHhOTGtlYU1rNTFEMDN2T3BHM1cwOU9JQQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T10:30:00+00:00"
+  },
+  {
+   "id": "8516ce0aa806",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Yahoo",
+   "title": "Anthropic bans users from being ‘abusive or cruel’ to Claude",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPZzRkMmRpX050emtJcnVpSFV2NjVCeGtmX3dqV1A3OVpSeWxqRm0wRXlHbDJwa0ZMZ0JmZVdSMlZpT2ZVdDdlNzdIUHg4T0hzbE9DUl9QRURQMFhlaWFKaTNjaXd1ekZjdmRVNVM3TmFhdG1RZk1KNE1HcDlpRHU4MGk1a29fRk1OS3JLOXVGekhSX3VCdncteQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T22:04:46+00:00"
+  },
+  {
+   "id": "16dbd651c381",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Seeking Alpha",
+   "title": "Amazon Will Be The Final Winner Of The AI Race With Anthropic's Help (NASDAQ:AMZN)",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQOHZtUkVpQU9sTW14X0xnUmlEMlM0V1ZHSEx3SllLQVl3WVhaSnh4cWtpRXpTZktpRUJ6MmFtX1MxMDF4bUR5ZHk5STZMT0EyQlpZNjJrdVUtTmpiZU9KcjZJVDZ4SjJrSHZtOHZtbERfWXBkTHhZUFNUNUQwOFZWNkx4ZmxaQXlNS1lkZURFOGVuMS1VYjVJeU94Q3RtZklrT1FhT1hNQmhTM2c?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T22:27:48+00:00"
+  },
+  {
+   "id": "e454ef25314d",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "FOX 13 Seattle",
+   "title": "Claude AI submits false murder tip",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1kY2oxWkhod3laWDdESlg0czBjTzRBZTFBUXR3MFcwSkhQaUpxeTlIemJHYy04aFc5cDJZMjVieWhza2x1SmhESFdiQ1hvWS00RlFYMnVlM0gzeDI1NS1fTncxbzBwZ9IBa0FVX3lxTFBpTFZkdFRJRkozYll5a2EwTlJSNWJhdVZJTlYwcTlIRmp2OE1DQjhuQVB4RmNKZHppMXh6T0tkRDR3YVRVODAtSnBBMHVzaTA5dm9UOHZjS0hqOWJET0ZJQTlkbnA1bzI4OHBN?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T18:52:51+00:00"
+  },
+  {
+   "id": "2825903dd865",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "WFLA",
+   "title": "Philadelphia police receive false homicide tip from Anthropic AI model",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdjcyR1doaVg2NWk1aEFYR2xFN3pmTFZwQ3Z6V1pzZ1VkbUVBT3VvN0YwNHZ6WUR3Xy1QWVd4M3Q1RHhzSVR5MkhYR1NIazBhMVE2NTFpcURlNzBDNW1iRDc2Z2hmelNCRzVHdC00X2VuY2VHTGQ3U211TDN0NHBPVThMc3N3YXEzSTIybE0wTjVGS1BRYVgzdVhVMU1jWHIwbUtMVldkQ1lWZ9IBrwFBVV95cUxPTDZxRmFhcEpyRnRrbGl3R2x2WktvbDlkeWRZbVh5UWFvakpJM3VVUE9LWTVac29tNFJKcDFJSFY3a0o4WTZxNFNwbnZHSUMxU0s5TzdfSUJzZXZha0ltT2RyLU1nTFplZDFCLV9QMnNaTnlYbjBCaHRoUnVXbHVkOTZydThRb0o2X2o1bHJ4T0V6LWVFanZZN2htRWw3TEdJY0Z0YTFnWXV0R1VQZFJV?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T19:54:31+00:00"
+  },
+  {
+   "id": "328dca186198",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "The Verge",
+   "title": "Anthropic’s Frontier Red Team suggests some AI models “may be months away from being capable enough to self-replicate.”",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQUDhBdl9OMm1aOTh0UmlORVpWX0VfQ0lqcW12dGUySzlMb3BtdFhQM08tUV9yRF9hMHBjNEEzSHNGMW8wR2IzVTlKQ05pTUpoZzlmUW1kT2dtU3BOb2RqelA5NzdKTnhZb0FMRWVEb0pyV0VRNDdPcEtFUVhvTC1Dbk9OUFFlR1JMMVc3Q1NobHdubU1kSEN3VUhKaVBMcjVhX1pBalNLMFc2WWEy?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T23:47:53+00:00"
+  },
+  {
+   "id": "3e727f948117",
+   "region": "intl",
+   "feed": "Google News (Claude)",
+   "source": "Barron's",
+   "title": "Meta Stock Rises as Company Unveils New Muse Wonder AI Models",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBMQ2hUWEJjSFA2LWVYUnRPZkhIeTIyQlgwalc0WnVEbUFSUzlpT1lIQmdvLVB4ZUNVRXR0TWlOci1obnJOeVQxUWtOWHI1Qy0yQmUxbVRHV1RaUFlkSFJXRFpwWktJclNPajhXc2s4NDVtb3dxdXZXZ2FFS181QlE?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T20:27:00+00:00"
+  },
+  {
+   "id": "84abe3d42903",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Anthropic",
+   "title": "AI models may be capable of self-replicating without access to a datacenter",
+   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBRTnpIbVhZdVJZa2ZyVy1Namo1b3Qxcm5IVEVJcmllZ0tITVJkd1FKTjBJazBDU3JRX055UHdkTUxtM0hQbG1aSmpKaFZxMFRTU1YzUzNtWi1jU2hiUjR6c3E5VWk?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T19:30:00+00:00"
+  },
+  {
+   "id": "6a3adfeb4947",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Projects redesigned: from folder to conversation",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9haGl4cWxQUjNHdEQ3c0Z5ZlJXYjhJYVVfOWF0Q09ZZFJyaUxRbE00TDd5SURiWTBqQUdwaVhBR2F2WEc0RENpQ0hqWDMydFl0Q2d6bmlXSGhJWG51TnBZcGZ5VGZmSkZmeWFVWQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T12:44:01+00:00"
+  },
+  {
+   "id": "9d51e3a573c4",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Anthropic",
+   "title": "Ship Code Faster with Claude Code on Vertex AI",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPX2t4S2w0Nm55aTR0WFFxUGJQYzZKSmhzSlZRRHFnX2NaTXQ4QWlnZUtsaEVYTjFYTEhSU2dnZXFSRGpoQ2J3WlN5bVVUTm9sbHJoM0VQSmxTeE1GbmJlQ3dhQnhrem0zd2FLbW04Q1FjdkNPTkN4OFFTdk5OZnZrMmRMZEdJNC1FRTg3T05rYUJpMktFLU9wRk9Naw?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T03:19:04+00:00"
+  },
+  {
+   "id": "fcb14ce2f2bb",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Anthropic",
+   "title": "Claude in Microsoft Foundry: Tool Integrations in Practice",
+   "link": "https://news.google.com/rss/articles/CBMisgJBVV95cUxORTRkWjdBQW9GWS1fRlY5WE1GTnFTSXMzSEtrek44UEJrWDZsa0VBWjdlSUVrNW12U0Y0Z1Q0NXFEQkM5cWU1T2NfQzZHUFFkbGZGWWoyLVZRaVo5dzgwME42ZWU3NUUyVTFZeGoyaVUxTGcyZ0EtcG5jSHRxY184b0pCMEMwRGMwQUp4X0J0WDV5R0J4SUFwM2J2bDdIYi1xaEZNWEFzQVJ6VDdXR2k3QWFrc0hiZTFTcWEyV252bWUtdUJPN0FiMzdBeWZ5STdHTUpDQ29Ba2ZxZTZWd2dfb2RiVUY4cllIdjhITnl5RFFweGFQY3FweUkwLUYyc3U0N0k5bTdPenN4ZllXVEZKOGtiRll6YjFlQnc5NlpTeGpTZzFHaElBMUJjanJSVS0zSlE?oc=5",
+   "snippet": "",
+   "published": "2026-10-11T22:10:48+00:00"
+  },
+  {
+   "id": "0dce4dae3bfb",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Anthropic",
+   "title": "What We Shipped: Feature Updates, Tips, and Live Q&A with the Claude Code Team",
+   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQYmFUalh5RjBNVXdjZktPVjR6ckhidjdETTdsVUNpTUNGek5Pby1WMTJXbVJ3RTBwM09NSTcwMDZuUVNyWDNyaXF6YzVrcGlaamdyT3d6aWJUNEZwYXMtcFpNWkhPOTkxNUdBbGN6QS1McFpxSDQ4Mm9zdEo5QjVXVkM4S0JWd1c0ZDU5Mmhqa2lSZlRGUkFRbVZXdFdqcW5vS2VsOTBUTXM3VWtoNnNHb2NhTFpsaHMyb1BfT1dTQy1jRUh3TGF6eklQNlhvMkFTNjdHNkc5YVpqelphUTM1UFlBckJnWS1wb0lB?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T23:46:04+00:00"
+  },
+  {
+   "id": "6e503ccdd580",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Anthropic",
+   "title": "How to ship and scale agents with Claude Managed Agents",
+   "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOLWNwTkIxVGRqS1hjWUszUk1rZjZRb0VVVTdhOFdZN01jbFhPay1kY0dvc1ByOGF5RUU1b3I3SUo3bE5wc2RwdWUwckM3Y3hhcFdCcERuLURHT19rbWp4YWVWSWNYX3hucDRvQ2tPZmZnRTgyc05Xa1Y2MFBCa3RpSkxXbzVhRC0xU2haQWU3LUpBM0tIMFFBbGhzbWlMdG02ZjYteDcwTnB4ZHE0N0FFS3dHaF9XYXE3a2FVeGI0VU9QczBxSDRQcFp2b01YeGg2N3VGX013OEtkRFQwS0xBQjZoY19xWG0wUW1yOW5iRTV4Zw?oc=5",
+   "snippet": "",
+   "published": "2026-10-11T18:58:02+00:00"
+  },
+  {
+   "id": "d8a4957c5f5f",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Anthropic",
+   "title": "How to control costs and show ROI for Claude Code on Google Cloud",
+   "link": "https://news.google.com/rss/articles/CBMipwJBVV95cUxQS0pGNnk2ZkFyVm1HcXJFUF82WFg3ckV2Mk1NX0VDZk1WdldzQ0lVaVVZdlhISDFraG4zSkNnMk1qV0hwYWc1M1dHckF6bzB4OExVbWxtbkVPdFhCRFFDYnZidml3cS0tYVktVEFiQWZzVkZHZHdpaTc2ZE9VYkxMS3d4bWJtcVY4Z3ZPWjU3b1FjLURrU0piMXl6RXA4RWJUWnVYci1yVGVtLTZ4UzZ0YlE4NHFISWxvTzZLTEZoVWRHd00zdi1iUXRxMnpxaXRhc0hwTE8yM1FrN29FQ2Z1NV91OFcyenhqc3FzSHJ6WjBrbVdwaUFvNTVkVnVmdklKelgxbkQxdmVuN2xCNENkSGNYY0R2Z1pfaWRtZ2F1WHIxVTkwOUU4?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T00:13:07+00:00"
+  },
+  {
+   "id": "b105ade884b1",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "Anthropic",
+   "title": "Building on the Claude Platform: Claude Fable 5 and model orchestration patterns",
+   "link": "https://news.google.com/rss/articles/CBMiugJBVV95cUxOVG5sLUNtVGRDVnlnaWhyczJKREtwOGFja0U4YWYxaXVGTTdTUllmczViLTRob3FaYkQxOXlqVndmLXpFeExhcEJxUHROeWJSMHNoNjRFaUVBeUt6UWFzVV9NU0tWM1BLbnU3c09uX0ctZGh1YW5GNEMzb3UxRnA0T0ZOOEZMNExVckJTRThienlDYXkxNDNmbFNiNFBrbmgxVXhxTmJmdXhhYnA3dWl5clB1OVpGaW9KOTY3alFTd2hQVF8xOUl1QmJMZmJjNF94NktFRnMxSmNqaUx5WTk2LWZiaU41RThpNzRXdDdQQUtCM3dhQVZ0VkVQOUxHYjVxZUlXY2dCR1NuMFFGam9STUwtX0lHMmRiRmliTlpjYmI4OEE5dy13MVZUWUtTMjNzNlJ3U2EwYVFNUQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T23:43:28+00:00"
+  },
+  {
+   "id": "0390813a2d2f",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Cowork and plugins for teams across the enterprise",
+   "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1SNldTaXVDZjd2cXNyR0tKMjVvSDRuRUpHSVJmTlZBNFpOamlUN2s3TVAyVzR4b1duTEswdzNhRjNya0dqR0ZpTFc1YmJocHR5TWZ0N1JWSnBWS3lHOXNwQW5rX05nOWlWeXJMTXM2ZTV2V2NpVFZyVnFqWVptZw?oc=5",
+   "snippet": "",
+   "published": "2026-10-11T20:24:27+00:00"
+  },
+  {
+   "id": "fdccc1dcf9ac",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "The Claude Code guide for startups",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBjeHdhbC1uZXUteEktS2ZrVVRTVzZWd3I1NDVDNFdlUnpMRHBfaXFlY25xaWhYUEd4ZnlVaVZLOE01bWVuY0tfM0NZTklwRHYxb0p0OWd4cUZqRUxUQ3dlNjNCT213UUtkUXNjOEVJM3RuSkM5emc?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T01:40:24+00:00"
+  },
+  {
+   "id": "f0a7dab72b02",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Deploying Claude across financial services",
+   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPcVlPQnllM3ZLSTF5RWVjZFcxbHFuZ2NzaHlKSjdJdkkwU3M1RlowQkM4bWpzb0k2clNoS3pQbG9DU3doYnBTeW5FUVZ4T1ZreWhFcGw3cm9memlDQ19kM3hnVXQxRzZuTUVRNVlyTlJfX1dVN2sxdWZBMGVwbzhHVFEtSS16SEo2VmhZ?oc=5",
+   "snippet": "",
+   "published": "2026-10-11T23:36:43+00:00"
+  },
+  {
+   "id": "07fc86fe0c2a",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Put Claude to work on your computer",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNaWFxVldJaFp2Y1l6M1BnVUtvbUM3blM0YWw0TG5Da2Z6QUl1ckhZdjFScmd0MklHbmNTMzkyTGw2QmczQlAtOGhHbHFyQXY1Mkh5Z3RNbEN1eE54RDd0dTBObzBfaTdXNDY5Mk5tcnBsS0ZZUVB2NlJFLVZVTVVZWGlhc3piM1VqNEdYdHFacDNfdS1SekNN?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T07:26:32+00:00"
+  },
+  {
+   "id": "2f2c21a9ddbb",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Deploying Claude across the legal industry",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSS1NMWtDcUlYdjIzSEZuUW5aUnlhc2xKU0UybnFXUGxKQ0hoejExRllaZVc1bkZ5VFYtbmZCVVMtWUpKdFdIUEtMdVhwRExLUzFlejI0dGQ3YlNIVVo1VldXc1pjSlRERVdRVzE5OURFTlNGbHQycDl5NU5GRzVvTGN5bzAzTVVqMkdrS29IRUt0NTBYYUZhYkFNX2YwYkVMTzhnaUYxTHBzWGlvZmJ0VnFPUkMxSkE?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T02:26:15+00:00"
+  },
+  {
+   "id": "78f3c55be585",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Advancing your firm’s AI maturity",
+   "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPVDNSemdKN3J6cmpwMTVfR0FrTGVYODVlTGJ0YXJIMnRfTXF5Q1N4TWl2RmN4dDIxdjZUR1NwQ20xTHg3b2ZjcTJkbmtwQnhJd3JoMTA2cGVuRWZWbTU3VUpvRFp1dm42eE5DWWUxXzBiTTlQakNDZUZUTEs3V3BVVjBQS05hU2MycGVpVDJMN0JfMV84bFlDeVlBSVBtcEtyZXpoU2VwMGsxcXN4QldMNEwwc0VXSzVmNm9kdFl5Yjd4emM2UV9ncGd4Mnd6NnpZWTNBTWlYZTBxQQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T00:38:51+00:00"
+  },
+  {
+   "id": "c98d301f66a3",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Bringing Claude Code and Claude Cowork to government",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQV0t6MEZsMFFEdkE5SlhEaHpXNjBXWVpiRXRiZ2NzbUltWm5MRkliVmNSZExTclFBQkxfN0xuaW1JTDAzeGZ4dGkyVXJaSnV2NnZjelJLeElXLURIVjhIR0Q3c2RhQVhyZHR3SVdRalZYZjhPbTBsakRmWXRUbW9CbXA1eVBkcUR1UnlQMS1SMkNYRzI2?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T00:40:07+00:00"
+  },
+  {
+   "id": "d29843175860",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Checkmarx",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBiWThvOGw1NFBwcjFmcTJRQ3BUUjd5dXI2NjZQQ3JzQnMxQ094UVY3bkV4V3ZzWk5xd3lOS2ZjOE1VZWFjOEFCLWwtbW9RTUE0NTRRTnFVN3Nrd0hJcllBY1J3OXdBenpXOGxZ?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T21:23:51+00:00"
+  },
+  {
+   "id": "b7d2e4dac4df",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "How CodeRabbit, Power Digital, and ThoughtSpot scale with Snowflake and Vercel on Claude Marketplace",
+   "link": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxORm5iUUVUMzYtRmMwdnh0Y1V3SGNvRFRQaVJnODN4eXJ0ZS1yZFljUExuclQ4VEVtRnBURWtYbzNLRERTaEE5LXNQLWFGM3dnRjdmM3duMFJfeWlHT0dfejNnQzllLU95Z3lSWGlzY2U0Z0piTWFyREo0aktfS0dmdUZRTHY3QTc5bExWNzd3NXI5YkZROENOdklnQU1KcWw4RE9oYmQtZk1vNlZsc0p3MnY4U3YzTFR2RVJmQUVSZTNTRkJscU9zX2pOQWhBbTctTEoxcThTWTh3RWY2b185Z29pNVM1WkFWLXBVVGQwMXdiOHluUDNPZmFxbjFzaWs0Vi1pLV9fczMxRHh4WUl1aS1MdGNzZFo3X0VaQ0hGV1BsVHpUUDR6MHBpczRtSks1bU94ckt0UTZTNDZhMkt3cFpsYUtlYk5UbG5kN0RTWTFUSmJtMU9BdXBFVTZvdXNfcXh4b0hTS1U5Zw?oc=5",
+   "snippet": "",
+   "published": "2026-10-11T21:33:45+00:00"
+  },
+  {
+   "id": "c5e04c5ddcb5",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Centrally manage authorization for MCP connectors",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9aa3JnYVBzbEpoNWRabVJraXBVSE11V3haTHhtZkNzUVpIdE9WNzJmTUcxSHIwQlh1TjFFYjRvMlJUUk5WcE5oNVpZQ1dUYVJleWFMWDVYUUFwekgwUmFPQkp4SDdvR01reFI5X3FOOVpoQQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-11T23:38:04+00:00"
+  },
+  {
+   "id": "71687b8095f3",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Function and workflow use cases",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQcnFkb0NFNjZEOXZOYzJHSHpGRk10MmdkcVc0X0hCRC13ZWh2RzRXNGw5NnpzSm5Ob3BzcWNQdnNGTDdHQzB3V3JjUEQxSVlqQTVqakJEMDI2M294VzJ2Z082VFZNdmM5eXVKc3lPVVlHd28xbUhKX0hld1NTX0o5c3d0T09TYThZNGQwSTVhNko5QXVWbHRSVnVoT3ZQTUxk?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T01:43:57+00:00"
+  },
+  {
+   "id": "0fd263bf60a1",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Product overview",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNeEtIS2VGNVlHalB3UkFfNHJ2MGR6cVFya0twU0gwZkE4QlV3bGN4QzNhYjU4MTBFQ1pXa3l0VDBkMW05c0ozcFY3amdEZkhQRmItbG9aS1lzQzFuTjdYbHY2MzlzazRYdkRySDZ6NFlvS0plWHQ3c0ktazRnNnM5bjdrVGRUQ2ZHaTJrbWNLeG4zUnFaSDR6RnlSblV4cWM3Y3N0WGI2ckRCSzdlVndiaHFfcE84VWVrT19lLWFQdlUxQnZkTEVBUENR?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T01:11:04+00:00"
+  },
+  {
+   "id": "682047a9d6ff",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Front office: Research and diligence",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMFdzdHhhUUtVZWVCd21iUlFSSmJleGlhSmhiQXczTmMzcDE4RElsejc4eEJaNlJqdnJGYklTZm9tNUlCZjNqZzdxbzVDa25KSVY5ejhabGtOSlVPWnRJbzdhYWhFTkFKVVZXbW10T1M2SlM5d1UwS1hmRk82RXFYaHVWamRJWXhtaHh5U212MlhXb19CLWNGSkh2V2s2UQ?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T10:11:06+00:00"
+  },
+  {
+   "id": "a759121402b4",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Claude Security is now in public beta",
+   "link": "https://news.google.com/rss/articles/CBMitAJBVV95cUxNdFNubE1Qb1UyVkJ5OFpDYjhyVkdRMzJtUnpDNjZPNTdjMG10cEhqSkFSQkVBU2E1X3J4OElTdFd4dmZUaVdXVmFIQ2JHLTFnMEcyQUo1c3YwT0ZDVmRSMl9nUkJFMHBFejV5RGE0b2NkeGpaZlBjd3FIbEJlc0pUdGpvSWNodE9Ucjg4R2RTdGZvNHRJaHdpb1AyekplTGpnUEgxTjVvV2x4a2VfQXJWMTZBUWVKay1DclcxNl9ETTlvczZvUV9HckxWVnJsZkg3ZlRNT3RLSExzZjROYTdLeEhLWWlJcnNHMFJjeUNVTXI4UndWSXQ4dkhZNkdHQXhVY2lQQzdIOG9DbjFYcVdXNzl5T3Ffc0RMUG5ibWtNM3J6cHBES09pODNnYWU3TTZfdkY3Vg?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T09:33:45+00:00"
+  },
+  {
+   "id": "175f7c0998dd",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Financial Advisors",
+   "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOODgxcVZ6cTdveHIyTlh5Qzd0TE8wSG9wYXVMLVJlVThpSV8xanpvOGdMQzI1SXhpV1BZeGxVZUM5T3RhLU15bEZiUXpOandrZkNGUlptWXJoeDJMNGp2bi1nWUhXVHJjMzdHdTRwcUVKbVpfQVlxZWltVkJzY3prekhYM012R2RpNVFjUDd2QnpJdTRDbEsxMzJ4ZDgtQjJUNTQ4U3FCOVBMV0ZXaVhWRjZERnlvaUQ0dEFocC1ZdmNKSVd0YS1LYmpfM1E3eUJoeE83alZ6ZmpEVThTbnNPVHRKTFJDTUQy?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T03:26:42+00:00"
+  },
+  {
+   "id": "15fa09d388d8",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Building commerce agents with Claude",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOb1l5Z3hORTlCUzNza2F1S0VzUi0ydHVTRG5MeFFYaW90Mkk4R2ltSW5HMXNFQ2x0UTJQWnUtaWx3UVp4U2p5dXM1aWFJWkdTendlSE5DUllMUEJiaHFFTVU4RVZMV01zWU9iWkd4Y2tqTW9EVU9NNzhBQWs5Z2h6Q1BLZ1Fadm1MZUFQaUV4czQzUktwTDBnWTRSeWU?oc=5",
+   "snippet": "",
+   "published": "2026-10-11T20:22:54+00:00"
+  },
+  {
+   "id": "a8d9005acb89",
+   "region": "intl",
+   "feed": "Anthropic",
+   "source": "claude.com",
+   "title": "Claude, el asistente de IA para el trabajo",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPcmctSGM4b0VadVZReEtMLUxKelRCMkNjaEdDWHdobE1KMWVsdWUtR3NUNHNNUTNrT3JGQ3gxVWt1UkJkTVNuSWxXcm4wSGxGbkg4eHl3ek13WTZOLTk4RC1IMGNuQ25KSENjdjhxbm1LdlN1R3lyS0RXX3NleVhKVmotVUJBTzVqeF94MVF3SEhlUVpVMmtlRlZDZVpfVlVKU2Zfa1hFY0x1empWUUdBNzM2a2ZtZUd2Vko4aEp3?oc=5",
+   "snippet": "",
+   "published": "2026-10-12T03:28:55+00:00"
+  }
+ ]
+}
