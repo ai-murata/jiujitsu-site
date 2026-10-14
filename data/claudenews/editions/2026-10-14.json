@@ -1,0 +1,115 @@
+{
+ "date": "2026-10-14",
+ "generated_at": "2026-10-14T11:53:08+09:00",
+ "lead": "Microsoft のクラウド「Azure」のカタログに「Claude Fable 5.5」が載ったことが見つかり、Anthropic はまだ何も発表していません。日本では、Claude Code のハッカソン「Built with Claude: Japan」の募集が始まりました。",
+ "items": [
+  {
+   "id": "a48bafe00184",
+   "region": "jp",
+   "category": "新モデル",
+   "title": "Azure のカタログに「Claude Fable 5.5」が登場",
+   "summary": "Microsoft のクラウド「Azure」のモデル一覧に「Claude Fable 5.5」が載っているのが見つかりました。Anthropic はまだ何も発表していません。",
+   "point": "正式な発表はまだなので、続報を待ちましょう。",
+   "source": "Pasquale Pillitteri",
+   "original_title": "Azureのカタログに Claude Fable 5.5 が登場、Anthropicは沈黙を続ける",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOc2ZJWkowS01HU3Q3NlRXZkRSSm1rNFAxLXN6QXEwWDBkY3d0ZTBkR3pPRXpycjFDUU5EWUxhN1JJeERpaGdfNGhKaE4xeEVtUHhTQWdJSEpScno4TDZ2eWI5aEd0ZnR5U3hPT1dlS2tNRW9GU0JnZHA0MXptQ2o5U2dpMHJ0aVdNS1NUb0h4R0pZbWtGemR0WTFn?oc=5",
+   "published": "2026-10-13T23:39:30+00:00"
+  },
+  {
+   "id": "3a1af909ad21",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "Claude Code のハッカソン「Built with Claude: Japan」、10月26日まで募集",
+   "summary": "Claude Code を使ったハッカソン（短い期間でものを作るコンテスト）「Built with Claude: Japan」が発表されました。賞品は800万円分の API クレジットで、10月26日まで申し込みを受け付けています。",
+   "point": "日本向けの企画なので、Claude Code で何か作ってみたい人は挑戦するチャンスです。",
+   "source": "テクノエッジ TechnoEdge",
+   "original_title": "Claude CodeハッカソンBuilt with Claude: Japan発表、賞品は800万円分のAPIクレジット。10月26日まで申込み受付中",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5XLTNXMHc1WkwtbTNKdThlcy1ObU9LakVfeGVEaGVJQk9LNWt1ZmFzcjhtVjltX21JaFN0VzBxa3RmMlVrSkNrU1BJalZqQXM2VFZwQXU0NGNFSl9OUFNOQ1ZLbzdIUjQ?oc=5",
+   "published": "2026-10-14T00:56:26+00:00"
+  },
+  {
+   "id": "263094556d6c",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "NTT と Anthropic、大阪に超大型 AI データセンターを計画",
+   "summary": "NTT と Anthropic が、大阪に超大型の AI データセンターを作る計画を進めていると伝えられています。電力は最大500メガワット、投資額は1兆円規模とされています。",
+   "point": "",
+   "source": "XenoSpectrum",
+   "original_title": "NTTとAnthropicが大阪に超大型AIデータセンターを計画、最大500MW・投資額1兆円規模",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5hTzVXQnY4amZnOTMzejhaQjhoVndJV0hfelBaejJtblJfSkZvWWtWMjRkUDVzMGJvd01XQmxySXdubkJYYzhlWWdMbDVzWjJsMWJjSWE4R2tyZ2taUjVmWUJYWmdhWW1P?oc=5",
+   "published": "2026-10-13T05:32:06+00:00"
+  },
+  {
+   "id": "a802ee6b6fa3",
+   "region": "jp",
+   "category": "その他",
+   "title": "Anthropic、git をやめて自社製の「Scion」へ全面移行",
+   "summary": "Anthropic が、プログラムの変更を管理する定番の道具「git」から、自社で作った「Scion」に全面的に移りました。1日に取り込む変更は2,500件から3万件以上に増えたそうです。",
+   "point": "",
+   "source": "shiritomo",
+   "original_title": "Anthropicがgitを捨て自社製「Scion」へ全面移行、日次マージは2,500件から3万件超に",
+   "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE5lcDh6OXRyU3YzQ2VBQm9pQjdFYjN6bVAzUTJqemZ2VHR5d0V4YmFrZWdpYXBLRjVSSnZvWWFJWlNhQQ?oc=5",
+   "published": "2026-10-13T22:25:59+00:00"
+  },
+  {
+   "id": "dd11db2a4200",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "音声モードで、むずかしい問題をじっくり考える",
+   "summary": "Claude の音声モードで、むずかしい問題をじっくり考えてもらう使い方が、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Think through hard problems in voice mode",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPX2dHczhGeGpaaVF3S0ZmS1owZFBhajVRaGRBYXhYOG1wbFQ0WXZJVUM3bUc3YWxfUnNEYnU1UUR3VnVxRDJfYVdhWnpVVUxmT0NEelFpMHFSdmtRMS1QZ3pCQU9aNEJURVlqeWJCNmZqdnE1S3E5VFpmeldjcDNxbVhXNEhBZEU2ZVNyU01hc2F3cUhEZ096Q3BOc2ZSaTlUSHhfMEZ2WQ?oc=5",
+   "published": "2026-10-13T11:48:45+00:00"
+  },
+  {
+   "id": "67d40eaa927a",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "AI がフーシ派のミサイル開発を助けたと Anthropic が認める",
+   "summary": "Anthropic が、AI が、フーシ派による、進路を修正できるミサイルの開発を手助けしていたことを認めたと報じられています。",
+   "point": "",
+   "source": "Yahoo",
+   "original_title": "Anthropic Admits AI Helped Houthis Develop Missiles That Could Correct Their Course",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbHF3OVMzM2VHU2dMOXhSeWUyNGIxLS1CYUFEaHhTZExmanZRQzBFRV90Z3FQUkZ6dXVmNTQ3STBPaEhtNTRKcFMyancyTFFydy16TENCVENTOHhTMEZ5MmhrVnZqWVVWbmlUcFJLZGFSY0dkVXhjd0NpRGRFOE14LTlMNTZpN0FBU2k3LTd1R0J6aWJpOGc?oc=5",
+   "published": "2026-10-13T16:51:21+00:00"
+  },
+  {
+   "id": "6369451ad30e",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "国防総省の「安全保障上のリスク」指定、Anthropic が再審理を求める",
+   "summary": "米国防総省に「安全保障上のリスク」とされた件で、Anthropic が裁判のやり直し（再審理）を求めたとロイターが伝えました。",
+   "point": "",
+   "source": "Reuters",
+   "original_title": "Anthropic seeks rehearing of case over Pentagon's security risk branding",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNQlUyMjJEVkZpNDJXTXQtc09tN1BTTFl5T2JoUjBpa29Ud0dCQUk5am9ndUxQbElNdjBSTHJMNExaaDRCa2hkdThOOE9aTGVpNmt3WEJmbU93dEIwSmlSMlNXRVBvME1rcDNKZ3lGYWpJY1VOVFVYeEItdXNDeFlMQzIyTGIzUG9ITmFtVUNBcnZhVVdMX0pfVS1wVEZfU3lqZ0ZrNHJZQ1RESVRfSHN6QjYyNkh2dVJ5elhwRkp3?oc=5",
+   "published": "2026-10-14T00:50:00+00:00"
+  },
+  {
+   "id": "5eb85aeb6f7c",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "OpenAI と Anthropic、英国議会に「規制してほしい」",
+   "summary": "OpenAI と Anthropic が、英国の国会議員に対して、自分たちを規制するよう求めたと WIRED が報じました。",
+   "point": "",
+   "source": "WIRED",
+   "original_title": "OpenAI and Anthropic Tell British Lawmakers: Regulate Us",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPaDJMY1hCMEJlRTJiNnNuY2xsV1FVN0dtME52djVacVF2R2pTRnhVNlpXeno5X05Fa2lENlNzemR4dnlYRkU2Z1RqVDNlMjBZbkFFcEc0R3pETmY0TDVuRFpuLThITkt5aDNnbndwOW05Y0dlQUJWWDFmUUhXa2tYUzVKblFBdDF2OUNaTA?oc=5",
+   "published": "2026-10-13T19:35:00+00:00"
+  },
+  {
+   "id": "eedc4f198039",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Anthropic、新しい売上の数字を公開へ",
+   "summary": "Anthropic が新しい売上の数字を公開する予定だと CNBC が伝えました。AI 企業のお金の状況が、IT 業界の大きな関心になっています。",
+   "point": "",
+   "source": "CNBC",
+   "original_title": "Anthropic to disclose new revenue numbers as AI lab financials become central to tech trade",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9iTFZ0YmNOLXFxS3pxWDdPSGx0bjBrdDE2OXFTZmJELThrSU5LWHZlYXcxQ2swUmZUWHhNRjc4Znh1bDZQVU4xMjQ4ZTAySHNQMWRSZjRlaVF3T3F0MDRIU2l4T3A3V3NNYy1pdGJqZWR3Z9IBd0FVX3lxTE9UQjBLY1Jza0hRNlRoYXdYYmN6QU9jT01YUlUwTllZWUp3bGxpTC1RWmJzSlREX09xR0lzdkJVejlpV2FFWVdYRVNJZFV6cXM0Y0hyQ0kxdGhlcmd0Y0pTRE1qVTZXUVNJeHpVUVQyVVcwbUNvTXRz?oc=5",
+   "published": "2026-10-13T14:50:50+00:00"
+  }
+ ]
+}
