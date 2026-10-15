@@ -1,0 +1,127 @@
+{
+ "date": "2026-10-15",
+ "generated_at": "2026-10-15T11:53:09+09:00",
+ "lead": "デスクトップ版の Claude Code が、いくつものエージェントを同時に動かせるように作り直されました。国内では、デジタルハリウッド大学が国内の大学で初めて Claude を全学で導入し、Anthropic は日本を「最も成長が早い市場」と位置づけています。",
+ "items": [
+  {
+   "id": "f00548e9616c",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "デジハリ大、Claude を全学生に無料提供　国内大学で初の全学導入",
+   "summary": "デジタルハリウッド大学が、Anthropic の Claude を全学生に無料で提供します。大学全体での導入は国内の大学で初めてだそうです。",
+   "point": "",
+   "source": "ASCII.jp",
+   "original_title": "デジハリ大、Anthropic「Claude」を全学生に無料提供 国内大学で初の全学導入",
+   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5aX3VjNWNXellrQzFhcXZZd21uR3BjWVJpZ2E1OEdLaUJ1RXB1NGtNazEzMjkzRk00NlQxOGdOaGRIMHJ4RHJLeUhXcUxYY2RHcWNzZlBGSWRIcXc0ZTFn?oc=5",
+   "published": "2026-10-14T05:00:00+00:00"
+  },
+  {
+   "id": "3f3928cfea31",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "国内初ハッカソン、参加者全員に Max 5x プランと500ドル",
+   "summary": "Anthropic が日本で初めて開くハッカソンでは、参加者全員に Max 5x プランと500ドル分が提供されます。",
+   "point": "参加するだけでも上位プランを試せるので、気になる人は申し込みを考えてみては。",
+   "source": "PC Watch",
+   "original_title": "参加者全員にMax 5x Planと500ドル。Anthropic初の国内ハッカソン",
+   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBleW1EQk1NWEYwSml0aGNhNjhScGtqcEN2dXpKQXNOc3IybnRuSDRtWU9uellCaXctX29BRllrM3dvSTZzUmkxcmUzWk1YQ2ZnTHJ6UEpTemF1NmNBSnNGbThIUQ?oc=5",
+   "published": "2026-10-14T05:45:31+00:00"
+  },
+  {
+   "id": "3af50fc7d750",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "Anthropic「日本は最も成長が早い市場」、データセンターにも意欲",
+   "summary": "Anthropic が、日本は最も成長の早い市場だと話し、日本でのデータセンターづくりにも前向きな姿勢を示しました。",
+   "point": "",
+   "source": "Impress Watch",
+   "original_title": "アンソロピック、日本は「最も成長が早い市場」 データセンター構築にも意欲",
+   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA1UGZHVjFKbTVVTGRiV1BQTmZZZkRJSEh3QjhTX0VqR1lscW5EaEliWWdtM2NkV1g0LTBZX1pXVW1hWE1yNWRTNmNQdlFoNlpsNHdfeXJjV1JBMk5zOTJNRVJJdTM?oc=5",
+   "published": "2026-10-14T04:52:31+00:00"
+  },
+  {
+   "id": "1ede2b1207a9",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "共同創業者「AI が AI を作れる確率は2027年に50%超」",
+   "summary": "Anthropic の共同創業者が、AI が自分で AI を作れるようになる確率は2027年に50%を超えると、予測を前倒ししました。ただし、実際にそれをおこなうのは「片道切符」だとも話しています。",
+   "point": "",
+   "source": "ITmedia",
+   "original_title": "「AIがAIを作れるようになる確率は2027年に50%超」 Anthropic共同創業者が予測を前倒し、「ただし実行は“片道切符",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9KazdicUdqWlN0STZNNzc3WXczU1c2bFZibFNoSEVMYjNUNmVpbzJyZWpnRDVyODYzQ0QwZVA1dGhEcWVreGZXYWNDLUh0ajlyaEhBZFZmNTlvNC1xakZpNlVDN2tIUGFicmFKZA?oc=5",
+   "published": "2026-10-14T07:53:35+00:00"
+  },
+  {
+   "id": "bd1f62153b4b",
+   "region": "intl",
+   "category": "Claude Code",
+   "title": "デスクトップ版 Claude Code、複数のエージェントを並行して動かせる形に",
+   "summary": "デスクトップ版の Claude Code が、いくつものエージェントを同時に動かせるようにデザインし直されたと、Claude の公式サイトで紹介されました。",
+   "point": "いくつかの作業を同時に任せたい人には便利になりそうです。",
+   "source": "claude.com",
+   "original_title": "Redesigning Claude Code on desktop for parallel agents",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB2Zlp1ZjFNWjFZRXBybkMzeFFWVFA0YzBTZ2tWRXZaeDg1ZFIxQlhybHdZVXFJamxlOVIzd1NiV3lqc3RnRUduV2FqZ2hUa3E1a2NLam53Mmt5c3dvY3VYYUZWaWFDbXVoLXBsQ1dnTi1fcW9kR2s1Yw?oc=5",
+   "published": "2026-10-13T23:59:10+00:00"
+  },
+  {
+   "id": "2788fc37f9b5",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Cowork で、くり返しの作業を予約できる",
+   "summary": "Claude Cowork で、くり返しおこなう作業を予約して自動で動かす方法の案内が、ヘルプセンターに載りました。",
+   "point": "毎日・毎週の決まった作業を Cowork に任せられます。",
+   "source": "Claude Help Center",
+   "original_title": "Schedule recurring tasks in Claude Cowork",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQb1BGZE52X2toWmJHM3dCWHFIVmZCTExhLW9LVXdRTnFCby1yaFc2ZUhFYTZONGI2eXUxZGRSTHhfbUVFSGhlTHBxMERJa0lJeGJnVWhxZ2hORF9mMXRpQ0l2LVdfTWREeWZGaGthaUFOVzJFMmU3WHJucXJRZjRzVXJhdjhwNk1YbU85Y0xNZmJkT2s?oc=5",
+   "published": "2026-10-14T20:37:11+00:00"
+  },
+  {
+   "id": "8caec9de1803",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Platform で、エージェントの動きを記録・追跡",
+   "summary": "Claude Platform で、OpenTelemetry（動きを記録して見える化するしくみ）を使ってエージェントの動きを追えるようになったと、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Trace agents with OpenTelemetry on the Claude Platform",
+   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSlg0SEFpd2lxclBIemhxUXpSSDQ1LVdQeGZEaFRUQXlwcmRMUWRvWXVKMmFhSGJQTXNxcFNvSm9ZNDhMcHFTTWhYbXdfSS1ncHhYNzlYUnNNNmpIbGE0T2VPcHRMbFBDckhwbmhTT2pTZHY2bGJYSllJMlBHMnRYaHdDRjNZUWc?oc=5",
+   "published": "2026-10-14T17:34:09+00:00"
+  },
+  {
+   "id": "491630de6f36",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Anthropic の7〜9月の売上、45%増の約170億ドル",
+   "summary": "Anthropic の第3四半期（7〜9月）の売上が45%増えて、約170億ドルになったとロイターが伝えました。",
+   "point": "",
+   "source": "Reuters",
+   "original_title": "Anthropic's Q3 revenue surges 45% to nearly $17 billion",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPRHl4NDlfRl9CaVdHZzdFMUYzM3Rka2RvbXlYcXR4ZGEwWGt5LS1rSlZmUkx0SFhxMnlCb1AtSElVcWJoT29UX19jcnRlMFpQOW0zOXQ1cXd0eHNpeFZKdkdxM2JCMjZrOXRXTmhWRExOZHY5OGpxcmY1MHJ5QlVRc2hDejdubVcydi1oYmJRc2RKaWRBOWFLbFREY2VEblZ4SVRpdQ?oc=5",
+   "published": "2026-10-14T23:02:55+00:00"
+  },
+  {
+   "id": "0b23e7213f50",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "米中間選挙を前に、Claude に投票の情報を追加へ",
+   "summary": "Anthropic が、アメリカの中間選挙を前に、Claude に投票についての情報を加えるとロイターが伝えました。",
+   "point": "",
+   "source": "Reuters",
+   "original_title": "Anthropic to add US voting information to Claude before midterms",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPVDFNaU9UVC05ZVJoREFVemFrck5lenlVUnZoOWlOeWRJYlFmMTVPTm1vLUhWUXd3eENSUFczUnR3b01ReW04NU0xaVpmZ2dZcVVOZDhIZDduYk40RWJFSENHdjZ6SDZoRXRwQ0NXcVhwb1lQeHpkOWYySDdhSWwtdlplRlRnc2ZjVWFWeUZqSnFYRGZidlFyM1dZSENhWEhiOW9pVnVn?oc=5",
+   "published": "2026-10-14T21:05:02+00:00"
+  },
+  {
+   "id": "9fb1ab05bf49",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "シンガポールに新オフィス、政府と覚書を結ぶ",
+   "summary": "Anthropic がシンガポールにオフィスを開き、シンガポール政府と覚書（協力の約束）を結びました。",
+   "point": "",
+   "source": "Anthropic",
+   "original_title": "Singapore office and government MOU",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5yTTM0YUphdFBiUjFDcnlZTy1lVklPbGp4ZTczUHJkZjgxSjBkckJSMDg2MHZwYUI5SkFGWlZlNHN4NFVQN3hDdERZSTFfVS1wNlZQRXV2YWE0ZnktZDFIZ3d0NEZLQQ?oc=5",
+   "published": "2026-10-14T08:30:00+00:00"
+  }
+ ]
+}
