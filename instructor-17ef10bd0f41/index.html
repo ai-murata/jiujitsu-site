@@ -141,6 +141,27 @@
   .dates .t { display: block; font-size: 13px; color: var(--body-c); margin-top: 4px; font-variant-numeric: tabular-nums; }
   @media (max-width: 640px) { .dates { grid-template-columns: repeat(2, 1fr); } .dates .d { font-size: 17px; } }
 
+  /* 特別講座 */
+  .special { background: var(--panel); border: 1px solid var(--gold-lo); padding: 28px 26px 24px; }
+  .special .badge { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .2em; color: var(--bg); background: linear-gradient(180deg, var(--gold-hi), var(--gold)); padding: 3px 12px; margin: 0 0 12px; }
+  .special h3 { font-family: var(--mincho); font-size: clamp(19px, 3.6vw, 24px); color: var(--ink); letter-spacing: .1em; margin: 0 0 10px; line-height: 1.5; }
+  .special .when { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--gold-hi); margin: 0 0 18px; }
+  .halves { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 0 0 20px; }
+  .halves > div { background: var(--bg); padding: 18px 18px 14px; }
+  .halves .slot { font-family: var(--latin); font-size: 12px; letter-spacing: .24em; color: var(--gold); margin: 0; }
+  .halves .tm { font-size: 13px; color: var(--faint); margin: 2px 0 8px; font-variant-numeric: tabular-nums; }
+  .halves h4 { font-family: var(--mincho); font-size: 17px; color: var(--ink); margin: 0 0 4px; letter-spacing: .08em; }
+  .halves .by { font-size: 13px; color: var(--gold-hi); margin: 0 0 8px; }
+  .halves p { font-size: 13.5px; margin: 0; }
+  .prices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .prices > div { border: 1px solid var(--line); padding: 14px 12px 12px; text-align: center; }
+  .prices .lb { font-size: 12.5px; color: var(--faint); letter-spacing: .1em; margin: 0; }
+  .prices .yen { font-family: var(--mincho); font-weight: 700; font-size: 22px; color: var(--ink); margin: 2px 0 0; line-height: 1.4; }
+  .prices .yen small { font-family: var(--gothic); font-size: 12px; font-weight: 500; color: var(--body-c); }
+  .prices .free { border-color: var(--gold); }
+  .prices .free .yen { color: var(--gold-hi); }
+  @media (max-width: 640px) { .halves, .prices { grid-template-columns: 1fr; } .special { padding: 22px 16px 18px; } }
+
   /* 評価 */
   .score { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .score > div { border: 1px solid var(--line); background: var(--panel); padding: 22px 20px; }
@@ -341,6 +362,42 @@
   </section>
 
   <section>
+    <p class="eyebrow">SPECIAL CLASS</p>
+    <h2>特別講座　からだの講座</h2>
+    <p>第3期から、<b>解剖学・栄養学・ヨガを1日で学ぶ特別講座</b>を加えました。体の仕組みを知り、太陽礼拝を自分で教えられるようになる講座です。<b>養成講座の受講生は無料</b>で受けられます。この講座だけの単発受講もできます。</p>
+    <div class="special">
+      <span class="badge">1DAY・8時間</span>
+      <h3>体のことが分かる。<br>太陽礼拝を教えられる。</h3>
+      <p class="when">2027.1.17（日）9:00〜18:00<small style="font-family:var(--gothic);font-weight:500;font-size:13px;color:var(--body-c)">　昼休憩1時間・会場 SWEEP</small></p>
+      <div class="halves">
+        <div>
+          <p class="slot">MORNING</p>
+          <p class="tm">9:00〜13:00（4時間）</p>
+          <h4>解剖学</h4>
+          <p class="by">講師　河野 裕也</p>
+          <p>骨・関節・筋肉のつながりなど、体の仕組みの基本を学びます。動きを「なぜそうなるか」で説明できるようになり、ケガをさせない指導につながります。</p>
+        </div>
+        <div>
+          <p class="slot">AFTERNOON</p>
+          <p class="tm">14:00〜15:00（1時間）</p>
+          <h4>栄養学</h4>
+          <p class="by">講師　村田 良蔵</p>
+          <p>練習と回復を支える食事の基本を学びます。</p>
+          <p class="tm" style="margin-top:14px">15:00〜18:00（3時間）</p>
+          <h4>ヨガ</h4>
+          <p class="by">講師　村田 良蔵</p>
+          <p>太陽礼拝の一つひとつの動きと呼吸を、教える側の目線で学びます。講座を終えるころには、太陽礼拝をクラスで教えられるようになります。</p>
+        </div>
+      </div>
+      <div class="prices">
+        <div class="free"><p class="lb">養成講座の受講生</p><p class="yen">無料</p></div>
+        <div><p class="lb">単発・早割（10/31まで）</p><p class="yen">55,000円<small>（税込）</small></p></div>
+        <div><p class="lb">単発・通常（11/1から）</p><p class="yen">77,000円<small>（税込）</small></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <p class="eyebrow">EVALUATION</p>
     <h2>評価の基準</h2>
     <p>講座の途中で、実技の<b>中間試験</b>を行います。受講生一人ずつ、次の3項目を講師が採点します。</p>
@@ -417,6 +474,7 @@
       <tr><th>会場</th><td>YAWARA</td></tr>
       <tr><th>定員</th><td>15名</td></tr>
       <tr><th>受講料</th><td>早割　400,000円＋税（税込 440,000円）<br>通常　500,000円＋税（税込 550,000円）<small>早割は2026年10月31日（土）まで</small></td></tr>
+      <tr><th>特別講座</th><td>からだの講座（解剖学・栄養学・ヨガ）　2027年1月17日（日）9:00〜18:00・会場 SWEEP<small>養成講座の受講生は無料。単発受講は 早割55,000円（税込・10/31まで）／通常77,000円（税込）</small></td></tr>
       <tr><th>お申込み</th><td>村田良蔵のLINEまでご連絡ください。<small>お申込み・ご質問どちらも、こちらで受け付けています。</small></td></tr>
     </table>
   </section>
