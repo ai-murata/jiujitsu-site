@@ -130,7 +130,7 @@
   .flowline .n1 { background: #2a2418; } .flowline .n2 { background: #3a311c; } .flowline .n3 { background: #4f421f; } .flowline .n4 { background: #6b5821; } .flowline .n5 { background: var(--gold); color: var(--bg); }
   .slides-note { font-size: 13px; color: var(--faint); margin-top: 14px; }
   @media (max-width: 720px) { .slides { grid-template-columns: 1fr; } }
-  @media (max-width: 520px) { .flowline { flex-wrap: wrap; justify-content: center; gap: 6px; } .flowline .tap { display: none; } .flowline .node { flex: 0 0 auto; aspect-ratio: auto; border-radius: 999px; padding: 4px 12px; } .flowline .node br { display: none; } }
+  @media (max-width: 520px) { .slide { padding-left: 14px; padding-right: 14px; } .slide .st { margin-left: -14px; margin-right: -14px; } .flowline { gap: 3px; } .flowline .tap { display: none; } .flowline .node { aspect-ratio: auto; min-height: 58px; border-radius: 10px; padding: 6px 1px; letter-spacing: 0; } }
 
   /* 日程 */
   .dates { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
