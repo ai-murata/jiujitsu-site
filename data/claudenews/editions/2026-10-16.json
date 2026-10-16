@@ -1,0 +1,115 @@
+{
+ "date": "2026-10-16",
+ "generated_at": "2026-10-16T11:53:29+09:00",
+ "lead": "Claude Code のコードレビュー機能が正式に提供され、放置した会話を自動で要約する新機能も加わりました。安全面では、外部の評価機関 METR に社員と同じくらいの権限で Claude を調べてもらう取り組みが始まっています。",
+ "items": [
+  {
+   "id": "e752da02d31a",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code のコードレビュー機能が正式提供",
+   "summary": "Claude Code 向けのコードレビュー機能が、一般提供（だれでも使える正式版）になりました。",
+   "point": "",
+   "source": "Unite.AI",
+   "original_title": "Claude Code向けコードレビューが一般提供開始",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOMHZHa3JseDdGNk5iVkt5eTZVNUt3MllrQnZ3YTd1MUphUlRNUUlFdFlCTTJCNnlXRlc1X0hjZURrZWstTGh2WkprVXRQWFpGN1dvd2pNbFlyQVBiYi1oYmxYQ1hRcFVVQnlJTUl5c2lJcGs4d3FIbThBZWVDSU9jNEI3WnBDdVRJWGFOQkRYakMzZw?oc=5",
+   "published": "2026-10-15T22:17:48+00:00"
+  },
+  {
+   "id": "998ca1db5b6e",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "放置した会話を、キャッシュが切れる前に自動で要約",
+   "summary": "Claude Code の190件の変更の中に、しばらく放っておいた会話を、キャッシュ（一時保存）が切れる直前に自動でまとめる新機能が入っていたそうです。",
+   "point": "長い作業の途中で手を離しても、続きを始めやすくなりそうです。",
+   "source": "shiritomo",
+   "original_title": "Claude Code、190件の変更点に紛れた新機能――放置した会話をキャッシュ切れ直前に自動要約",
+   "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTFB4d3dvcXQ0U2wxRVdzMWVHTmtQbEo0MUFkREJoTEd2S3RQVTNSRm5qaG5PQUpzcWV5aEkyMnRCQ28tUQ?oc=5",
+   "published": "2026-10-15T22:37:49+00:00"
+  },
+  {
+   "id": "f559bc5bc773",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "Anthropic Japan、開設1年で Claude 導入企業が10倍以上に",
+   "summary": "Anthropic の日本法人 Anthropic Japan が開設から1年を迎え、Claude を導入した企業は10倍以上に増えたそうです。サイバー防御では速さを重視しているとも話しています。",
+   "point": "",
+   "source": "日経クロステック",
+   "original_title": "Anthropic Japan、開設1年でClaude導入企業10倍超 サイバー防御は速度重視",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBia3czRkpJeTRUMkN6aWFLT3FrSV9GWkx4bF9tVzlmd2xvUHlMbEdlQ3Z4aEhaV3ljMURxVlBZM0thZVpMZFU5ZDZydEZwbmt0TGZzbUZiclo0Z1liLVNwTTFvcUFTc3c?oc=5",
+   "published": "2026-10-15T02:30:00+00:00"
+  },
+  {
+   "id": "0adc47c878a2",
+   "region": "jp",
+   "category": "その他",
+   "title": "Anthropic の Bun、TypeScript の型チェックが3倍以上速く",
+   "summary": "Anthropic の Bun（プログラムを動かす道具）の新しい版 1.4.3 に、TypeScript 7 より3倍以上速い型チェッカーが入りました。",
+   "point": "",
+   "source": "Publickey",
+   "original_title": "AnthropicのBun、TypeScript 7よりも3倍以上高速なTypeScript型チェッカーを搭載。Bunの新バージョン1.4.3で",
+   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMlBra2pWS2ZpWTE4S3o3RWZxTW1sd1NwMGQxVkRRN0ZESXdRc0czeU1rV3J2RnFnVUxlV3UtZDdaNUdiLTV0a0lvT3VFckp0UHV6SWVIcjhCdHYtaE5vM2NyYjJTZ1pHY3V6Vjd4VFhKeGEzWlFaZXZiLVNlQy1uN1BOOGloLWc?oc=5",
+   "published": "2026-10-15T14:29:25+00:00"
+  },
+  {
+   "id": "2549f9de1701",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Cowork で「ライブアーティファクト」が使える",
+   "summary": "Claude Cowork で「ライブアーティファクト」を使う方法の案内が、ヘルプセンターに載りました。",
+   "point": "",
+   "source": "Claude Help Center",
+   "original_title": "Use live artifacts in Claude Cowork | Claude Help Center",
+   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNQnluLWV1aUQ1UVI0WDRMNlZmZVZ4VEFyS0Z2SnZQcTZTYTRfS3BfSlZCYjRnR2hBejBXRXNFN1QxN2FJX05MTE5SNUdDcnoxcmV6blh0cks4c1FiRHd2U2pjVVBmM0xPUnJ4cTRCaGxpQlhJWlRxcXBIbGl4WXNGbXpmaVYtUENPYWxj?oc=5",
+   "published": "2026-10-14T20:34:27+00:00"
+  },
+  {
+   "id": "7690c91dec63",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Cowork で、Claude にパソコンを操作してもらう",
+   "summary": "Claude Cowork で、Claude にあなたのパソコンを使ってもらう方法の案内が、ヘルプセンターに載りました。",
+   "point": "パソコンの操作を任せるときは、どこまで触ってよいかを確かめてから使いましょう。",
+   "source": "Claude Help Center",
+   "original_title": "Let Claude use your computer in Cowork | Claude Help Center",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQVnhabVBFSjdTM2FtaGxfZ2h3Q2pNcm5KdEYtNEw0ckd3UF9nQ3hDamQ5NDJpRVctOXVQOVRITHM2QkdKT2k4Sl9JV01Pc2RySUJIU29wNlNkNTlKOHRHelBRM0p6MTlNa1RHOGdmeXIxVnpDSUpBdElQRUdhYnVVR1RUR1c0N0Ztazk5Tk91bw?oc=5",
+   "published": "2026-10-14T20:37:51+00:00"
+  },
+  {
+   "id": "fd623db3cac9",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "米上院、職員の AI ツールに Claude を追加へ",
+   "summary": "アメリカの上院が、職員が使う AI ツールに Claude を加えようとしていると Politico が報じました。",
+   "point": "",
+   "source": "Politico",
+   "original_title": "Senate poised to add Claude to staffers’ AI tools",
+   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOEdYdXdudWxVSElEVjRJb1Q1T1FlQXZKNVVSUHRhS3hIeDZvNTlHSDJMNU1jSDk0SzVDWTdGd1NkX1JoMHA2bUthTkswZzdxMmxObG5vYVlQQTIwcHZEbE01dkpQOEpTOVR3ZlFQa1ZKLXpxY1M1dlN3YWVEeEpuTGtlY2I5UQ?oc=5",
+   "published": "2026-10-15T22:28:00+00:00"
+  },
+  {
+   "id": "b47eaa478c79",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "外部の評価機関 METR に、社員並みの権限で Claude を調べてもらう",
+   "summary": "Anthropic が、外部の評価機関 METR に、社員と同じレベルのアクセス権を与えたとロイターが伝えました。",
+   "point": "",
+   "source": "Reuters",
+   "original_title": "Anthropic grants outside evaluator METR employee-level access in AI safety push",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbERjb3RFVUdmYXZ6ZktrZ0tiVUlEck5vRGtxd2dXTnA4UGFoSF9QNEU5Y3FfVUxZOHp1cEt3UktQUXZicnI5UDByaW5hTDdhanhtb2JsVTZsRkxYSjRsd2VZZUx2Yy1lZzNhWGdJSWxOalZoZGJNU0g1NGFkUEFkZHNob2RXaVVqb3BxTkZGVFJaUHg4cVNTTXJMcnFtSGZTZDZ1TVVBOWxSSGhjZ0Z6SFpB?oc=5",
+   "published": "2026-10-15T19:51:22+00:00"
+  },
+  {
+   "id": "9b77f6718da8",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "米 FTC、安全上の問題で Anthropic と OpenAI に召喚状",
+   "summary": "アメリカの連邦取引委員会（FTC）が、安全に関わる出来事をめぐって、Anthropic と OpenAI に召喚状（資料の提出などを求める命令）を出したと CBS が伝えました。",
+   "point": "",
+   "source": "CBS News",
+   "original_title": "FTC issues subpoenas to Anthropic and OpenAI over safety incidents",
+   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdkhjUENoTlFhVkZ5NmN4TXRnb19CM0xaa0lkNlU3TjNtdjhuZ1Rnak1zTUhGLWtPSlJNdWVLU3BwNmd3WUFxbmdWT2NnbTdBcU5pZVpOTTdOclFMRzByMlg1RzRQWlFYR1VsLVU2THVPc3hUWFIwc3RpVW5xVjdsOTVBdnhwWW8?oc=5",
+   "published": "2026-10-15T13:15:00+00:00"
+  }
+ ]
+}
