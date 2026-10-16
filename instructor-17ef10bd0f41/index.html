@@ -105,6 +105,28 @@
   .learn li small { display: block; color: var(--faint); font-size: 12.5px; }
   @media (max-width: 720px) { .learn { grid-template-columns: 1fr; } }
 
+  /* 講義スライドの例 */
+  .slides { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .slide { position: relative; aspect-ratio: 16 / 9; max-width: 100%; background: linear-gradient(160deg, #1d1a13, #100e0a); border: 1px solid var(--gold-lo); padding: 22px 24px; display: flex; flex-direction: column; justify-content: center; gap: 12px; overflow: hidden; min-width: 0; }
+  .slide::after { content: "YAWARA"; position: absolute; right: 14px; bottom: 10px; font-family: var(--latin); font-size: 12px; letter-spacing: .3em; color: var(--gold-lo); }
+  .slide .st { position: absolute; top: 0; left: 0; right: 0; padding: 7px 16px; font-family: var(--mincho); font-weight: 700; font-size: 14px; letter-spacing: .14em; color: var(--bg); background: linear-gradient(90deg, var(--gold-hi), var(--gold)); }
+  .slide.has-t { padding-top: 48px; }
+  .slide .big-q { font-family: var(--mincho); font-weight: 800; font-size: clamp(19px, 2.6vw, 26px); color: var(--ink); line-height: 1.6; letter-spacing: .06em; text-wrap: balance; }
+  .slide .big-q em { font-style: normal; color: var(--gold-hi); border-bottom: 2px solid var(--gold); }
+  .slide p { margin: 0; font-size: 13.5px; line-height: 1.7; }
+  .slide .hl { color: var(--gold-hi); font-weight: 700; }
+  .stack { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .stack span { width: 100%; text-align: center; padding: 6px 8px; font-weight: 700; font-size: 13.5px; color: var(--ink); border: 1px solid var(--gold-lo); background: rgba(201,162,39,.08); }
+  .stack span:last-child { background: rgba(201,162,39,.2); border-color: var(--gold); }
+  .stack i { font-style: normal; color: var(--gold); font-size: 12px; line-height: 1; }
+  .flowline { display: flex; align-items: center; gap: 4px; }
+  .flowline .tap { font-size: 12px; color: var(--faint); white-space: nowrap; }
+  .flowline .node { flex: 1; min-width: 0; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; text-align: center; font-size: 12px; font-weight: 700; line-height: 1.3; color: var(--ink); border: 1px solid var(--gold-lo); }
+  .flowline .n1 { background: #2a2418; } .flowline .n2 { background: #3a311c; } .flowline .n3 { background: #4f421f; } .flowline .n4 { background: #6b5821; } .flowline .n5 { background: var(--gold); color: var(--bg); }
+  .slides-note { font-size: 13px; color: var(--faint); margin-top: 14px; }
+  @media (max-width: 720px) { .slides { grid-template-columns: 1fr; } }
+  @media (max-width: 420px) { .slide { aspect-ratio: auto; min-height: 190px; } .flowline .node { font-size: 12px; } }
+
   /* 日程 */
   .dates { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
   .dates li { background: var(--panel); padding: 18px 10px 16px; text-align: center; }
@@ -157,7 +179,7 @@
     <h1>インストラクター<span class="gold-text">養成講座</span></h1>
     <div class="rule"></div>
     <p class="catch">誰でも強くなれる柔術を、教えられる人へ。</p>
-    <p class="lede">感覚で強くなった人が、感覚のまま教える。それでは伸びる人と伸びない人の差が開くばかりです。YAWARAが積み上げてきた「柔術のセオリー」と「教え方」を体系的に学び、白帯・青帯、そして運動未経験の方まで、確実に上達へ導ける指導者を育てます。</p>
+    <p class="lede">柔術は、感覚で強くなった人が指導者をしていることが多いスポーツです。けれど柔術には、武道から取り入れた本質や、技と物事のロジックがしっかりと背景にあります。それを理解し、体現できるように指導することで、生徒の成長スピードは加速します。この講座では、<b>「誰しも強くなれる柔術プログラム」</b>を提供できるインストラクターを養成します。</p>
     <dl class="facts">
       <div><dt>開講</dt><dd>2026.12.5<br><small>土曜 14:00〜19:00</small></dd></div>
       <div><dt>日程</dt><dd>全8回<br><small>合計40時間</small></dd></div>
@@ -172,9 +194,9 @@
   <section>
     <p class="eyebrow">PHILOSOPHY</p>
     <h2>この講座が目指すもの</h2>
-    <p class="quote">柔術が強くなることで、<br>ひとりの人間としての「強さ」を手に入れる。</p>
-    <p>柔術は相手がいる相対的な攻防です。自分の都合だけでは技はかからず、相手との関係の中で「かかる・かからない」が決まります。だからこそ、パワーや体力ではなく、<b>セオリーを理解し、今の自分の位置を把握して、次にやるべきことを選べる力</b>が上達の鍵になります。</p>
-    <p>そして、その力は柔術の外でも生きます。俯瞰してものを見る目、失敗の原因を謙虚に追いかける姿勢。この講座では、技術と同じくらい、指導者としての「あり方」を大切にしています。</p>
+    <p class="quote">柔術が強く（上手に）なることで、<br>ひとりの人間としての「強さ」を手に入れる。</p>
+    <p>柔術は相手がいる相対的な攻防です。相手と自分との関係の中で、その技が掛かるか掛からないかが決まります。だからこそ、柔術は「パワー」だけでは上達しません。試合の流れの中で<b>自分が今どこにいるのか（現在地）を常に把握し、今すべきこと、目指すところを明確にして動くこと</b>。それができて初めて、成功したときも失敗したときも、その原因が明確になり成長の糧になります。</p>
+    <p>また、相対的な攻防の中で、俯瞰的にものを見る目が養われます。広い視野を持てるようになり、柔術のみならず日常においても冷静な戦略をとれるようになる。つまり、柔術を通して、その人のビジネスや日常がさらに豊かになるのです。「痩せる」「健康」「楽しむ」「ストレス発散」は、すべて副産物です。</p>
     <div class="pair">
       <img src="img/lecture.jpg" alt="スクリーンを使った座学の様子" loading="lazy">
       <img src="img/class.jpg" alt="受講生が講師の話を聞いている様子" loading="lazy">
@@ -198,7 +220,7 @@
       <div class="goal">
         <div class="no gold-text">03</div>
         <h3>運動未経験者に<br>正しく教えられる</h3>
-        <p>YAWARAの柔術とムーブメントのプログラムを、はじめての方にも安全に、確実に伝えられるようにします。</p>
+        <p>YAWARA・SWEEPの柔術とムーブメントのプログラムを、はじめての方にも安全に、確実に伝えられるようにします。</p>
       </div>
     </div>
   </section>
@@ -249,6 +271,34 @@
   </section>
 
   <section>
+    <p class="eyebrow">SLIDES</p>
+    <h2>講義スライドの一部</h2>
+    <p>毎回の講義は、スライドで理論を学んでから実技に入ります。第2期の第1回で使ったスライドから、一部を紹介します。</p>
+    <div class="slides">
+      <div class="slide has-t">
+        <div class="st">柔術の目的とは</div>
+        <div class="stack"><span>俯瞰的にモノを見る目を養う</span><i>▼</i><span>広い視野を持てるようになる</span><i>▼</i><span>柔術のみならず、日常においても冷静な戦略・戦法をとれるようになる</span></div>
+      </div>
+      <div class="slide">
+        <p class="big-q"><em>“同じ技”</em>でもかかる人と<br>かからない人がいるのは<br>なぜか？</p>
+        <p>自分の都合だけで攻防は成立せず、相手からの影響を受けるから。<span class="hl">柔術は相対的。</span></p>
+      </div>
+      <div class="slide has-t">
+        <div class="st">柔術の全体的な流れ（ガードポジションから）</div>
+        <div class="flowline"><span class="tap">タップ</span><span class="node n1">防御<br>1:9</span><span class="node n2">押さえ込み<br>から脱出</span><span class="node n3">5:5</span><span class="node n4">崩して<br>技をかける</span><span class="node n5">攻撃<br>9:1</span><span class="tap">タップ</span></div>
+        <p>流れの中で、自分がどのポジションにいるのかを常に把握する。<span class="hl">今すべきこと、目指すところを明確にして動く。</span></p>
+      </div>
+      <div class="slide has-t">
+        <div class="st">柔術がうまくいかない要因</div>
+        <p>力強さ・体力・精神面……ではなく、</p>
+        <p class="big-q" style="font-size:clamp(17px,2.2vw,22px)">失敗の原因を追求する<br><em>謙虚な意識</em></p>
+        <p>「今、自分がどこにいるのか」「ここから何を目指すか」「そのために、まずどこをアプローチするか」。</p>
+      </div>
+    </div>
+    <p class="slides-note">※ 実際のスライドを、このページ用に作り直しています。</p>
+  </section>
+
+  <section>
     <p class="eyebrow">SCHEDULE</p>
     <h2>日程</h2>
     <p>すべて土曜日の <b>14:00〜19:00</b>（1回5時間）、<span style="white-space:nowrap">全8回</span>・<span style="white-space:nowrap">合計40時間</span>です。<br>毎回の講義のあとに、<b>レポート</b>を提出していただきます。学んだことを自分の言葉でまとめることで、教えられる力につなげます。</p>
@@ -283,7 +333,7 @@
       <div>
         <h3>受講をおすすめする方</h3>
         <ul>
-          <li>YAWARAでクラスを持ちたい、指導に関わりたい方</li>
+          <li>YAWARA・SWEEPでクラスを持ちたい、指導に関わりたい方</li>
           <li>自分の道場や仲間に、柔術をきちんと教えたい方</li>
           <li>感覚ではなく、理屈で強くなりたい方</li>
           <li>帯が上がるほど、伸び悩みを感じている方</li>
@@ -292,7 +342,8 @@
       <div>
         <h3>修了すると</h3>
         <ul>
-          <li>YAWARA認定インストラクター（赤タグ）に挑戦できます</li>
+          <li>テストに合格すると修了証が授与され、YAWARA・SWEEP認定インストラクターになれます</li>
+          <li>最終日の赤タグ決定戦では、軽量級・重量級それぞれでいちばん強かった人に赤タグが贈られます</li>
           <li>白帯・青帯・未経験者への指導の型が身につきます</li>
           <li>自分の柔術を言葉で説明できるようになります</li>
           <li>養成講座の卒業生だけが入れるLINEグループに参加できます</li>
