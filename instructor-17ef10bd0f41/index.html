@@ -107,16 +107,16 @@
 
   /* 講義スライドの例 */
   .slides { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .slide { position: relative; aspect-ratio: 16 / 9; max-width: 100%; background: linear-gradient(160deg, #1d1a13, #100e0a); border: 1px solid var(--gold-lo); padding: 22px 24px; display: flex; flex-direction: column; justify-content: center; gap: 12px; overflow: hidden; min-width: 0; }
+  .slide { position: relative; aspect-ratio: 16 / 9; max-width: 100%; background: linear-gradient(160deg, #1d1a13, #100e0a); border: 1px solid var(--gold-lo); padding: 20px 22px 30px; display: flex; flex-direction: column; justify-content: center; gap: 12px; overflow: hidden; min-width: 0; }
   .slide::after { content: "YAWARA"; position: absolute; right: 14px; bottom: 10px; font-family: var(--latin); font-size: 12px; letter-spacing: .3em; color: var(--gold-lo); }
   .slide .st { position: absolute; top: 0; left: 0; right: 0; padding: 7px 16px; font-family: var(--mincho); font-weight: 700; font-size: 14px; letter-spacing: .14em; color: var(--bg); background: linear-gradient(90deg, var(--gold-hi), var(--gold)); }
-  .slide.has-t { padding-top: 48px; }
+  .slide.has-t { padding-top: 46px; }
   .slide .big-q { font-family: var(--mincho); font-weight: 800; font-size: clamp(19px, 2.6vw, 26px); color: var(--ink); line-height: 1.6; letter-spacing: .06em; text-wrap: balance; }
   .slide .big-q em { font-style: normal; color: var(--gold-hi); border-bottom: 2px solid var(--gold); }
   .slide p { margin: 0; font-size: 13.5px; line-height: 1.7; }
   .slide .hl { color: var(--gold-hi); font-weight: 700; }
   .stack { display: flex; flex-direction: column; align-items: center; gap: 4px; }
-  .stack span { width: 100%; text-align: center; padding: 6px 8px; font-weight: 700; font-size: 13.5px; color: var(--ink); border: 1px solid var(--gold-lo); background: rgba(201,162,39,.08); }
+  .stack span { width: 100%; text-align: center; padding: 4px 8px; font-weight: 700; font-size: 13px; line-height: 1.5; color: var(--ink); border: 1px solid var(--gold-lo); background: rgba(201,162,39,.08); }
   .stack span:last-child { background: rgba(201,162,39,.2); border-color: var(--gold); }
   .stack i { font-style: normal; color: var(--gold); font-size: 12px; line-height: 1; }
   .flowline { display: flex; align-items: center; gap: 4px; }
@@ -125,7 +125,8 @@
   .flowline .n1 { background: #2a2418; } .flowline .n2 { background: #3a311c; } .flowline .n3 { background: #4f421f; } .flowline .n4 { background: #6b5821; } .flowline .n5 { background: var(--gold); color: var(--bg); }
   .slides-note { font-size: 13px; color: var(--faint); margin-top: 14px; }
   @media (max-width: 720px) { .slides { grid-template-columns: 1fr; } }
-  @media (max-width: 420px) { .slide { aspect-ratio: auto; min-height: 190px; } .flowline .node { font-size: 12px; } }
+  @media (max-width: 1000px) { .slide { aspect-ratio: auto; min-height: 220px; } }
+  @media (max-width: 520px) { .flowline { flex-wrap: wrap; justify-content: center; gap: 6px; } .flowline .tap { display: none; } .flowline .node { flex: 0 0 auto; aspect-ratio: auto; border-radius: 999px; padding: 4px 12px; } .flowline .node br { display: none; } }
 
   /* 日程 */
   .dates { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
@@ -145,6 +146,11 @@
   .score p { font-size: 13px; margin: 0; }
   .total { text-align: center; margin: 22px 0 0; font-size: 13.5px; }
   @media (max-width: 720px) { .score { grid-template-columns: 1fr; } }
+
+  .redtag { margin-top: 30px; padding: 24px 24px 20px; background: var(--panel); border: 1px solid var(--line); border-left: 4px solid #b3261e; }
+  .redtag h3 { font-family: var(--mincho); font-size: 18px; color: var(--ink); margin: 0 0 10px; letter-spacing: .12em; }
+  .redtag p { font-size: 14px; margin: 0 0 10px; }
+  .redtag .redtag-note { font-size: 12.5px; color: var(--faint); margin: 0; }
 
   /* 対象 */
   .who { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -324,6 +330,12 @@
       <div><div class="pt gold-text">100<small>pt</small></div><h3>ドリルの正確性</h3><p>技の流れを正確に再現できるか。相手とのタイミング、ミスの少なさ、集中力とリズムの安定。</p></div>
     </div>
     <p class="total">3項目 合計 <b>300点満点</b>。結果をもとに、後半で一人ひとりの課題を修正していきます。</p>
+    <div class="redtag">
+      <h3>赤タグ決定戦</h3>
+      <p>講座の最終日には、軽量級・重量級に分かれたトーナメントを行い、<b>それぞれの優勝者だけに赤タグを授与</b>します。</p>
+      <p>黒帯において、赤タグは指導者の証です。YAWARA・SWEEPのインストラクターとして活躍してほしい。インストラクターには、知識やスキルはもちろん、強くあってほしい。その思いから、優勝者のみに贈ることにしています。</p>
+      <p class="redtag-note">※ 茶帯以下の方は、赤タグを付けて試合に出ることはできません。</p>
+    </div>
   </section>
 
   <section>
@@ -343,7 +355,7 @@
         <h3>修了すると</h3>
         <ul>
           <li>テストに合格すると修了証が授与され、YAWARA・SWEEP認定インストラクターになれます</li>
-          <li>最終日の赤タグ決定戦では、軽量級・重量級それぞれでいちばん強かった人に赤タグが贈られます</li>
+          <li>最終日の赤タグ決定戦で優勝すると、赤タグが授与されます（軽量級・重量級それぞれ1名）</li>
           <li>白帯・青帯・未経験者への指導の型が身につきます</li>
           <li>自分の柔術を言葉で説明できるようになります</li>
           <li>養成講座の卒業生だけが入れるLINEグループに参加できます</li>
