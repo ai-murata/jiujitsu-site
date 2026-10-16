@@ -109,8 +109,10 @@
   .slides { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .slide { position: relative; aspect-ratio: 16 / 9; max-width: 100%; background: linear-gradient(160deg, #1d1a13, #100e0a); border: 1px solid var(--gold-lo); padding: 20px 22px 30px; display: flex; flex-direction: column; justify-content: center; gap: 12px; overflow: hidden; min-width: 0; }
   .slide::after { content: "YAWARA"; position: absolute; right: 14px; bottom: 10px; font-family: var(--latin); font-size: 12px; letter-spacing: .3em; color: var(--gold-lo); }
-  .slide .st { position: absolute; top: 0; left: 0; right: 0; padding: 7px 16px; font-family: var(--mincho); font-weight: 700; font-size: 14px; letter-spacing: .14em; color: var(--bg); background: linear-gradient(90deg, var(--gold-hi), var(--gold)); }
-  .slide.has-t { padding-top: 46px; }
+  .slide .st { margin: 0 -22px auto; padding: 7px 16px; font-family: var(--mincho); font-weight: 700; font-size: 14px; letter-spacing: .14em; color: var(--bg); background: linear-gradient(90deg, var(--gold-hi), var(--gold)); }
+  .slide.has-t { padding-top: 0; }
+  .slide.has-t > .st + * { margin-top: auto; }
+  .slide.has-t > :last-child { margin-bottom: auto; }
   .slide .big-q { font-family: var(--mincho); font-weight: 800; font-size: clamp(19px, 2.6vw, 26px); color: var(--ink); line-height: 1.6; letter-spacing: .06em; text-wrap: balance; }
   .slide .big-q em { font-style: normal; color: var(--gold-hi); border-bottom: 2px solid var(--gold); }
   .slide p { margin: 0; font-size: 13.5px; line-height: 1.7; }
