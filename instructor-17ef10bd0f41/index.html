@@ -45,9 +45,10 @@
   .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line);
     background:
       radial-gradient(ellipse 70% 60% at 50% 0%, rgba(201,162,39,.22), transparent 70%),
-      linear-gradient(180deg, rgba(11,10,8,.72) 0%, rgba(11,10,8,.84) 60%, var(--bg) 100%),
-      url(img/hero.jpg) 62% 30% / cover no-repeat,
+      linear-gradient(180deg, rgba(11,10,8,.5) 0%, rgba(11,10,8,.62) 45%, rgba(11,10,8,.9) 75%, var(--bg) 100%),
+      url(img/hero.jpg) 50% 30% / cover no-repeat,
       var(--bg); }
+  .hero .wrap { text-shadow: 0 1px 12px rgba(0,0,0,.75); }
   .hero .wrap { text-align: center; padding-top: 72px; padding-bottom: 64px; }
   .brand { font-family: var(--latin); font-size: 12px; letter-spacing: .42em; color: var(--gold); margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 32px; }
   .term { display: inline-block; margin: 26px 0 0; font-family: var(--latin); font-weight: 700; font-size: 13px; letter-spacing: .3em; color: var(--bg); background: linear-gradient(180deg, var(--gold-hi), var(--gold)); padding: 6px 18px 5px 22px; }
@@ -62,7 +63,7 @@
   .facts dt { font-size: 12px; letter-spacing: .2em; color: var(--gold); margin: 0; }
   .facts dd { margin: 4px 0 0; font-family: var(--mincho); font-weight: 700; font-size: 18px; color: var(--ink); line-height: 1.5; }
   .facts dd small { font-size: 12px; font-family: var(--gothic); font-weight: 500; color: var(--body-c); }
-  @media (max-width: 640px) { .facts { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .facts { grid-template-columns: repeat(2, 1fr); } .hero { background-position: 0 0, 0 0, 38% 22%, 0 0; } }
 
   /* セクション見出し */
   section { padding: 76px 0 0; }
