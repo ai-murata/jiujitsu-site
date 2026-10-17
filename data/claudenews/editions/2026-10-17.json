@@ -1,0 +1,103 @@
+{
+ "date": "2026-10-17",
+ "generated_at": "2026-10-17T11:53:53+09:00",
+ "lead": "今日は新しいモデルや大きなサービスの発表はなく、Claude の研究成果が目立ちました。25年来の暗号の謎を30分で解き明かしたほか、量子回路の設計でもこれまでの最高水準を上回ったと Anthropic が発表しています。",
+ "items": [
+  {
+   "id": "118487efc512",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "Claude、25年来の暗号技術の謎を30分で解明",
+   "summary": "Anthropic によると、Claude が25年間解けなかった暗号技術の謎を、30分で解き明かしたそうです。",
+   "point": "",
+   "source": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+   "original_title": "AnthropicのClaude、25年来の暗号技術の謎を30分で解明 執筆",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1TQkotcW0yTGJLbE40ZnV3ZzRHMVBkQmZUZG1YMS1rbTdyLWZqZEY2aTlFVFlxYlZiNzU3SFlSMUdTdVR6WFZ1M09kNkc5XzFSdUVQQlM4OFRRWTl5SUdsc21hTE9iMGFHN2c?oc=5",
+   "published": "2026-10-16T18:53:00+00:00"
+  },
+  {
+   "id": "e2ccb5f74001",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "Claude、量子回路の設計で公開済みの最高水準を上回る",
+   "summary": "Anthropic が、Claude が設計した量子回路が、これまでに公開されていた最も優れた設計を上回ったと発表しました。",
+   "point": "",
+   "source": "Unite.AI",
+   "original_title": "Anthropic、Claudeが公開済みの最高水準の量子回路設計を上回ったと発表",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQzZ4WVlVVDJhc3VIY3R1SkF1VDlkSmp1T3A5R3lOWUU0eE14a0dVam5ldmdxOHhuV3ZOM19rbFJNZjliSm9HV1IwdWoyVXZwVHNOYkY3LWFKQm0xcWNBZ0xiaklfbnNMVXVoTHllZFRtWTFEd3FEd3RxZExjMHhUMG1adFlJWi0ydEhOd0htZlNhYWZM?oc=5",
+   "published": "2026-10-16T17:59:10+00:00"
+  },
+  {
+   "id": "0962f349c56d",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Microsoft、社内エンジニア数万人で Claude Code 導入の影響を分析",
+   "summary": "Microsoft が、社内の数万人のエンジニアを対象に、Claude Code と Copilot CLI を入れたことで生産性がどう変わったかを分析しました。",
+   "point": "",
+   "source": "ITmedia",
+   "original_title": "Microsoft、社内エンジニア数万人を対象に「Claude Code」「Copilot CLI」導入の影響を分析 生産性どう変わる",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5nRTAwNGFubHpxeHpROHdPSVBHMVI5YUxoSXA0ZjZabjJBNXR4ckZqeVRBUF9jZmd2SEJ6TFkzcUhmLWpnVzcwcXpLSXo3Q243WWZsOE5MdmJBVDNRei1jSnVDeFJ5MnZoMHc?oc=5",
+   "published": "2026-10-16T03:00:00+00:00"
+  },
+  {
+   "id": "30f370878462",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "Replit の CEO、Anthropic との協業終了を明言",
+   "summary": "Replit の CEO、マサド（Masad）氏が、Anthropic との協業を終えたとはっきり語りました。",
+   "point": "",
+   "source": "Unite.AI",
+   "original_title": "ReplitのCEO、Masad氏がAnthropicとの協業終了を明言",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaGVTTTROWms1eWR2cGQwbWZ1eEhhdm5xUzlLTjZFdHBPdks1V3IzdXRJYTdyZ2dMY3FrYUVDNDUyZ19xdnZUSUZ5YmVXQkQxeGcyRTdUeWJYdE8wYjBCejF0WHVmUjVIejR4Q0toNEFmbkdRYy10U0FNZWd6THdOZkJDbDFaZUpxZ01QV1lB?oc=5",
+   "published": "2026-10-16T23:11:03+00:00"
+  },
+  {
+   "id": "9273c0fc34d5",
+   "region": "intl",
+   "category": "その他",
+   "title": "Anthropic Japan の営業担当、Claude エージェントの「チーム」で1日を回す",
+   "summary": "Anthropic Japan の営業担当（BDR）が、たくさんの Claude エージェントを使って毎日の仕事を進めている様子が、Claude の公式サイトで紹介されました。",
+   "point": "日本の職場での具体的な使い方として、参考になりそうです。",
+   "source": "claude.com",
+   "original_title": "How an Anthropic Japan BDR runs his day with a fleet of Claude agents",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTWNwWUtaLUtoQ2g4SjNTa3k3MmR6Z1VCVTBzYXdvOENjVkFBU3VKck5NSmc0VnRDN3JEZDdJRlZyOGJzSF9hWjV3MHBZZkNhZXJBQ3NpVG9sR2dnU3VSaTlaVGJQOEl3bEpwd1B6T2x5eFNhNnJlcWxwTjFKWVJ3TFhJWjRlYTFwV0NaTG02bE00LV9Uck1TcTNFc21BS2x5R1NmV0VOZmx4Q2ZpU2c?oc=5",
+   "published": "2026-10-16T13:43:27+00:00"
+  },
+  {
+   "id": "4a721a6610aa",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Anthropic、独自の AI 安全法案を議員にひそかに提案",
+   "summary": "Anthropic が、自分たちで考えた AI の安全に関する法案を、議員たちにひそかに提案していると Politico が報じました。",
+   "point": "",
+   "source": "Politico",
+   "original_title": "Anthropic quietly pitches its own AI safety bill to lawmakers",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0ydWVrbHdHeGNraEdTSHQ5eExwZ2lLRUU1U1BoVFJUTWNLenpWTXJOMHNnWnhaa0thQXlRbk1KdEliVVVGUEJXZWwtcWtUZE9Ielo2X05DaHJKSmJpd05rRl9vMWdQQUE4ZnVRRFBLQ3hlcm9FNG12bg?oc=5",
+   "published": "2026-10-16T21:45:00+00:00"
+  },
+  {
+   "id": "fe7f4f120bc0",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "カナダで初めてのデータセンター、賃貸契約を結ぶ",
+   "summary": "Anthropic が、カナダで初めてとなるデータセンターの賃貸契約を結んだとロイターが伝えました。",
+   "point": "",
+   "source": "Reuters",
+   "original_title": "Anthropic signs lease for first Canadian data center",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQNmcyRDdMUmlLNHlsNWhYbVRfTFE1WkJIODRiQmxfOHpzM09lYS1Na0JGNG5YdXlIV09fUVZDWkpRRDFIcUlXb2VYaHhZTjM5Q1AwMnRZZjFkSjRKTTM3RHdUaDhEaEdUWnZTZmVrTUtNaHdTWnM3NVJ3WnFma1VTb09hcURCME10UmFMWXdabmxwNXk1ZUZ6emFoYmRCanEzM3FR?oc=5",
+   "published": "2026-10-16T23:05:57+00:00"
+  },
+  {
+   "id": "d62691179851",
+   "region": "intl",
+   "category": "その他",
+   "title": "Anthropic 社員1,334人に調査、「AI が仕事を担う」と強く確信",
+   "summary": "Anthropic が自社の社員1,334人に調査したところ、AI が仕事を担うようになることを、一般の人よりも強く確信していることがわかったと Business Insider が伝えました。",
+   "point": "",
+   "source": "Business Insider",
+   "original_title": "Anthropic polled 1,334 of its employees. They're more sure than most of us that AI will take over jobs.",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNTUtQVmpxb255WWNodDByNXRKVWx1VzZfQWFtUTJLeU1qZ25uLVFpVmwwZDhscnRuRjczdTZIZ1luVjRRNEI2SUpPaFZfc0pPeVRPN3otcXlfcTFoeG1vNWxxYXZOM2RhSFl5eC1LRWhaZ0xFRlNzeG9DQjVCcFpYZzNoT1NaTGpRaWUwZFB3Vy1GSV90Yi11WlpkU25RRzZwRlE?oc=5",
+   "published": "2026-10-16T22:48:00+00:00"
+  }
+ ]
+}
