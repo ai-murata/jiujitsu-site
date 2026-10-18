@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>友だちが、出産中の「引き継ぎ書」をClaudeで作ってくれた話</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="ブログを読んでくれた友だちが、出産で入院している間の家のことや子どものことを、夫に引き継ぐ書類をClaudeで作ってくれました。「自分で考えたら漏れてた項目まで入っていた」という、うれしい報告の話です。">
+<meta property="og:title" content="友だちが、出産中の「引き継ぎ書」をClaudeで作ってくれた話">
+<meta property="og:description" content="出産で入院する間の家のこと・子どものことを、夫に引き継ぐ書類をClaudeで。仕事じゃなくても、AIはちゃんと役に立ちます。">
+<meta property="og:url" content="https://jiujitsu.co.jp/blog/hikitsugi-sho/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 24px 0 32px; }
+  .stat { background: var(--k); border-top: 3px solid var(--gold-hi); padding: 16px 16px 14px; text-align: center; }
+  .stat .lbl { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold-hi); font-weight: 700; }
+  .stat b { display: block; font-family: var(--mincho); font-size: 30px; color: #f3ecd8; letter-spacing: .04em; line-height: 1.4; }
+  .stat small { display: block; font-size: 12px; color: #b0a88f; line-height: 1.6; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; font-variant-numeric: tabular-nums; }
+  .tbl th, .tbl td { border-bottom: 1px solid var(--line); padding: 9px 8px; text-align: right; }
+  .tbl th:first-child, .tbl td:first-child { text-align: left; }
+  .tbl thead th { font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; border-bottom: 2px solid var(--gold); }
+  @media (max-width: 560px) { .tbl { font-size: 13px; } .tbl th, .tbl td { padding: 8px 4px; } }
+</style>
+
+<header>
+  <p class="brand"><a href="/blog/">JIU LABO BLOG</a></p>
+  <h1>友だちが、出産中の「引き継ぎ書」をClaudeで作ってくれた話</h1>
+  <p class="meta"><time datetime="2026-10-18">2026.10.18</time>　村田亜衣（マネージャー）</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>こんにちは、村田亜衣です。</p>
+    <p>今日は、ブログを書いていていちばんうれしかった話です。</p>
+    <p>少し前に、友だちからメッセージが届きました。「ブログ面白くて、いっきに全部読んだ！」「一太郎、懐かしい」。<a href="/blog/waapuro-kara-ai/">ワープロの話</a>まで読んでくれていて、最後に「私もClaude触ってみよーって思ったわ！」と書いてありました。</p>
+    <p>それだけでも十分うれしかったのですが、続きがありました。</p>
+
+    <h2>「夫への引き継ぎ書を、Claudeで作ったの」</h2>
+    <p>しばらくして、友だちのストーリーに「ファイトー！」と返信したら、こんな返事が来ました。</p>
+    <ul class="talk">
+      <li>そういえば、Claude触ってみた！ なんなら夫に、出産中の引き継ぎ書をClaude使って作成したの</li>
+      <li>豪華なデータがあっという間にできて、もはや私が考えて作ったら漏れてただろうなみたいな項目まで網羅してて、すげーー！って感動した</li>
+      <li>家のことや子どものことを無事、滞りなく引き継げて本当にありがたい</li>
+    </ul>
+    <p>友だちは、もうすぐ3人目の赤ちゃんが生まれるところでした。家のことも子どものことも、いつもは彼女が回している。入院している間、それをご主人にまるごとお願いしないといけない。</p>
+    <p>その「引き継ぎ書」を、Claudeと一緒に作ったそうです。</p>
+
+    <h2>「漏れていたはずの項目」まで入っていた</h2>
+    <p>いちばんうれしかったのは、「自分で考えて作ったら漏れてただろうな、という項目まで網羅していた」という言葉でした。</p>
+    <p>毎日やっていることほど、書き出そうとすると抜けてしまいます。体が覚えているから、わざわざ思い出さないんですよね。ゴミの日、習いごとの送り迎え、持ち物、連絡帳、いつもの病院。本人にとっては「当たり前」でも、引き継がれる側にとっては知らないことばかりです。</p>
+    <p>Claudeは、こういう「当たり前の洗い出し」が得意です。「出産で入院する間、夫に家のことを引き継ぎたい」と伝えるだけで、「子どもの朝の流れは？」「学校や園への連絡は？」と、こちらが忘れていそうなところを一緒に拾ってくれます。</p>
+    <p>そしてもうひとつ。漏れなく引き継げたのは、友だちが自分の家のことをちゃんと伝えたからだと思います。Claudeは聞いて、整理して、形にしてくれる。でも中身を知っているのは本人だけです。だから「引き継げるクオリティ」になったんだと思います。</p>
+
+    <h2>仕事じゃなくても、ちゃんと役に立つ</h2>
+    <p>このブログでは、請求書や大会の運営など、仕事でClaudeを使う話をたくさん書いてきました。でも、<a href="/blog/shigoto-igai-de/">暮らしの中でも使える</a>ということも、ずっと伝えたかったことです。</p>
+    <p>引き継ぎ書は、まさにその代表だと思います。出産、入院、出張、帰省。家を空けるときに「誰かに頼む」場面は、だれにでもあります。</p>
+    <div class="ex">
+      <p>真似するなら、こんなふうに頼んでみてください</p>
+      <ul>
+        <li>「来週から出産で1週間入院します。その間、夫に家のことと子どものことを引き継ぎたいです」</li>
+        <li>「子どもは◯歳と◯歳。平日の1日の流れはこんな感じです（しゃべるように書けばOK）」</li>
+        <li>「抜けていそうなことがあったら、質問してください」</li>
+        <li>「最後に、夫が見てすぐわかる引き継ぎ書にまとめてください」</li>
+      </ul>
+    </div>
+    <p>ポイントは、最初から完璧に書こうとしないことです。思いつくままに話して、足りないところはClaudeに聞いてもらう。それだけで、ひとりで書くよりずっと漏れの少ないものができます。</p>
+
+    <h2>まとめ</h2>
+    <ul class="tips">
+      <li>ブログを読んだ友だちが、<b>出産中の引き継ぎ書</b>をClaudeで作ってくれた</li>
+      <li>「自分では<b>漏れていたはずの項目</b>まで入っていた」</li>
+      <li>コツは、<b>家のことをちゃんと伝えて、足りないところは聞いてもらう</b>こと</li>
+    </ul>
+    <p>書いたものが、だれかの役に立つ。しかもこんなに大事な場面で。ブログを続けてきて本当によかったと思いました。</p>
+    <blockquote><p>いつも回しているあの仕事を、<br>Claudeと一緒に書き出してみる。</p></blockquote>
+    <p>3人の母ちゃんになる友だちへ。ずっと応援してるよ。</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">うちでもAIに仕事を任せたい。</b><br>
+    毎月の作業を「係」にするお手伝いをしています。いまはお会いしたことがある方に限って、先着3名さま・道具ひとつ分まで無料です。<a href="/irai/" style="color:#a3801a;white-space:nowrap;">AIのお手伝い、承ります →</a>
+  </p>
+
+  <footer>
+    <a href="/blog/">ブログの一覧へ</a>　／　<a href="/">jiujitsu.co.jp トップへ</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}.timeline .when{font-size:12px}.stat .lbl{font-size:12px}}</style>
+
