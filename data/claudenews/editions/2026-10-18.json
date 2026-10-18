@@ -1,0 +1,103 @@
+{
+ "date": "2026-10-18",
+ "generated_at": "2026-10-18T11:53:53+09:00",
+ "lead": "Anthropic が来週にも「Claude Fable 5.5」を公開する準備をしていると伝えられています。Claude Code の新機能「ルーティン」が紹介され、クラウドでの動作も速くなりました。",
+ "items": [
+  {
+   "id": "b5bbf5af3022",
+   "region": "intl",
+   "category": "新モデル",
+   "title": "「Claude Fable 5.5」、来週にも公開へ",
+   "summary": "Anthropic が、来週にも「Claude Fable 5.5」を公開する準備を進めていると TestingCatalog が伝えました。",
+   "point": "正式な発表はまだなので、来週の続報を待ちましょう。",
+   "source": "TestingCatalog AI News",
+   "original_title": "Anthropic prepares to release Claude Fable 5.5 next week",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNTTdoZzVvZTJnVmNMLXF3cWFycWlnbHNPQ1VEamVCaHZqY1dmVXl2M182ZkRnNktmU0QxN0UxMDEtT2ZZbENuMTZqSkk3NmtSdHF5WWd0MEVZX1dVOERONk52XzhqdU5rOW93dGZITHhLU3ZRdGRxNGFRaU1GMHN0LU03T1dQUk00eVdfWnoweFQ4blR2?oc=5",
+   "published": "2026-10-17T12:57:51+00:00"
+  },
+  {
+   "id": "6bec5fe491e5",
+   "region": "intl",
+   "category": "Claude Code",
+   "title": "Claude Code に「ルーティン」が登場",
+   "summary": "Claude Code の新しい機能「ルーティン」が、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Introducing routines in Claude Code",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUjYtZUk3b3ZjRnFZcklMcVRRMG9HeHFKYjZ6emNFVXNwVHViZ2FVbGRCb1N2TTRFUllXamZWeFZjTnliVGpGTFFVZmlOb1lFeFgxV3JqLXQwbl9MQ3FMeHhGOHRPNkJJdHduamgzRzg0cGxxZUZvZF9IZVpOaTFEU1Zn?oc=5",
+   "published": "2026-10-17T02:04:03+00:00"
+  },
+  {
+   "id": "913c27041fe7",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code、データ圧縮でクラウドの作業が速く",
+   "summary": "Anthropic が、Claude Code で gzip 圧縮（データを小さくしてやり取りするしくみ）を使えるようにし、クラウドでの作業を速くしたと発表しました。",
+   "point": "",
+   "source": "Pasquale Pillitteri",
+   "original_title": "AnthropicがClaude Codeのgzip圧縮とクラウドセッション高速化を発表",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9GUzBSVXh5ZjVWQ2dQdHgxMG1IbkhhSU5LbUV3Q0hBbzBaVUlIbHdkTmYtbTZuQ3E4dnl1anJWNmVIRUZoOWNJUHhZNVdIOGxVZk5OR1pWT2FranZzbXA5RUZNd19VR19oZnFZTDJyR3BDS01SaHMzZzQ1LU9QMm8?oc=5",
+   "published": "2026-10-17T07:56:33+00:00"
+  },
+  {
+   "id": "266739fa8229",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "Anthropic の法案草案、極端な場合に限り政府が AI を止める権限",
+   "summary": "Anthropic が、極端な場合に限って、政府が AI モデルを止める権限を持てるようにする法案の草案を作ったと伝えられています。",
+   "point": "",
+   "source": "BigGo ファイナンス",
+   "original_title": "米Anthropic、極端なケースに限定したAIモデル停止権限を政府に付与する法案草案を作成",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9QQlhZanFxTmJIY2wyNHlMS1FIUGJxOFZDUTEzNFVyWDl2T3FvRzNKeTdidDNpSmxXQ3FKVTlRNXA0Vm9LYjJtOFhtVVR1dGtveVp2ZmtsUzE2Mm1jdGp6RTVSbEVkLWFtWVcwaEV1d253amo3?oc=5",
+   "published": "2026-10-17T00:25:00+00:00"
+  },
+  {
+   "id": "8e997f88e977",
+   "region": "jp",
+   "category": "その他",
+   "title": "Anthropic、若手社員の割合が下がり、会議の時間が増えた",
+   "summary": "Anthropic が、自社の社員のうち若手の割合が下がり、会議に使う時間が増えたと報告しました。",
+   "point": "",
+   "source": "Mezha.net",
+   "original_title": "Anthropic、従業員の若手比率が低下し、会議に費やす時間が増えたと報告",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQekxYNEpxS3pwempzT1R3OWJDdk5IbklJUU1MaHB3Vk1qTVQ4MVlSTlFqRUlDRHdkbEpnQy0zTHVKeFRyemhZRXl5N0VTR0s3UC13RDZJRkRnODI5Z1pnQnFsclV1eWhKTjc1RHoxc2VfSzN1X0JHMjhGSkFNQlBDYmQxeWtUMTluT0VMVXhPZGlEbHhVMXFMbUVB?oc=5",
+   "published": "2026-10-17T14:37:00+00:00"
+  },
+  {
+   "id": "a110e6288b4c",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Replit、標準の AI を Anthropic から OpenAI に切り替え",
+   "summary": "Replit が、標準で使う AI を Anthropic から OpenAI に切り替えたと、同社の CEO が語りました。",
+   "point": "",
+   "source": "TechCrunch",
+   "original_title": "Replit makes OpenAI its default over Anthropic, CEO says",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUFoxYWFYWWFqQTRraXdReXZYYmo5S0ZabG04MmlMbnp5R1VoMUsyLWpIMVg0bUhnOUNqMmxZV05BWm1DRVg4QlhONW9qbUo5UktELXhFMmc4VXhKMzhPbGxuZ2l0cjhGdE1MaEtPU0hBNzdqbTZPaEFHRENkVU9hcG9ieFhDalBPSUNZSEJGRQ?oc=5",
+   "published": "2026-10-17T18:48:08+00:00"
+  },
+  {
+   "id": "7a5445549048",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "アクセンチュア、社員の Claude 代を会社でまとめて負担へ",
+   "summary": "アクセンチュアの一部の社員は、Claude に月1,000ドルを使っていたそうです。今後は会社がまとめて費用を出すことになりました。",
+   "point": "",
+   "source": "The Times of India",
+   "original_title": "Some Accenture employees spent $1,000 a month on Anthropic’s Claude AI, company will now centrally fund $",
+   "link": "https://news.google.com/rss/articles/CBMiswJBVV95cUxOLXpERy1xQkZsdG5FbVJaVENMLVMyZXNUbWNqb2ZHb2hkUkRBdWNwclQ0LTF0RkE0V2ttUndxVXFuZVBsNk81UnlmX2tETWdaX1FaOFZRSzVuRW1MZ01WQVpqeUNLc25WOXp2bWQyV0RyOHJtbXk0UHoxeFVNaG5SYS1TaVItb0F2MklMS0hKREpvd1doUm5QS09xblZBUG95QkJCY3dOWXdTekZncVVlUjFxS3FUaHM0MGUxQWdrZ3FhVDZmYjg1bHl4Y3NuYnNkZU5hZ0JTbzh1VS1LR0tQa0I0Z2J5V1B2ckpROEtGeklYT3A0MFdQRy1hNmNrUGhYcE1UU0gzZ1NKTjBPSm5fQW5hdlZ2SVVxVzlWaEtaWTNsbmc0TFFTa0VKYll5Q2xPMGlv0gG4AkFVX3lxTE9kUzc5YnVxUEZQcDBWRlZxS0RyNTk0b1RRdFZPZm1NWV9tMjk4Wkg2bUFXeW1uQ18xcm5vaEtVZU9jNW5Ub25vN3l3OTJlbGNnZm5RUnFNWURiVThJa0NodG9DbU55bXZTNkNfTHFNaEZMUmFlY1hpWXp0MXRUa0h2ZW5HUTQxUm15NXd2YTk1SmExT3Bhb2ZkQWtfRlBCeWMtbl9lSDZ0RjNURWx2ZnNzN0NCYVVYdTM1MWVQUWo0R0otWWdPc1NfcENqWTlYbHJPX05nVGwweExrRno3MXhCNk50WVdJbzg5ejZJZ0NaSWdhV29rMW05UWlncXpHS250bFZpaHZuSzdJLS1ZQ0JjanE5Y2ZYcUd3VE5OWWdPTVBCUU1rQkFHbmJlN2dpd3h0LXRiUDM4eg?oc=5",
+   "published": "2026-10-17T08:12:00+00:00"
+  },
+  {
+   "id": "af51c30e8235",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "共同創業者クラーク氏「AI は米国の GDP を大きく押し上げる」",
+   "summary": "Anthropic の共同創業者ジャック・クラーク氏が、政策担当者に向けて、AI は急速に進歩しており、米国の GDP（国全体の生産）を大きく増やす可能性があると話しました。",
+   "point": "",
+   "source": "CNBC",
+   "original_title": "AI rapidly improving, could vastly boost U.S. GDP, Anthropic's Clark tells policymakers",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9BOXg1cnVLam5kdlRzekpwZ2ppalNIaHlYU1poOW9IQlJUMDlOc09zX2RZU2NtckE0bE9KWW1hQ3VGS185MTdSaHNFYnBlYTg0UVY2V2xKWEZUbWlTLTJlX0tFU053c05kaW1heTNxT2nSAXZBVV95cUxNMjJTd05DdHhXYVlhNDdrTWdhTk5XYkpYbEFORE9QeFJZLXhIU21ISjV4akVoVUt4b0w3VHZuUzBnQ3gyQm5Ec2swaGJKMFlqbkRkcm5KcjI3QkFlR04tVHJSalZDQUl2WFJHSDhyUVVGeWpMT1NR?oc=5",
+   "published": "2026-10-17T23:04:00+00:00"
+  }
+ ]
+}
