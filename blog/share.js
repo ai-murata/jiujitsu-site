@@ -73,3 +73,57 @@
     }
   });
 })();
+
+// 記事の下に「前の記事・次の記事」を出す。
+// 並び順はブログ一覧（/blog/）の <li> から読むので、一覧に記事を足すだけで自動でつながる。
+(function () {
+  var article = document.querySelector('article');
+  if (!article || !window.fetch || !window.DOMParser) return;
+  var here = location.pathname.replace(/index\.html$/, '');
+
+  fetch('/blog/').then(function (r) { return r.text(); }).then(function (html) {
+    var doc = new DOMParser().parseFromString(html, 'text/html');
+    var items = Array.prototype.map.call(doc.querySelectorAll('.posts li'), function (li, i) {
+      var a = li.querySelector('a'), t = li.querySelector('time'), h = li.querySelector('h2');
+      return {
+        href: a ? a.getAttribute('href') : '',
+        title: h ? h.textContent.trim() : '',
+        date: t ? t.getAttribute('datetime') : '',
+        label: t ? t.textContent.trim() : '',
+        nikki: li.classList.contains('is-nikki'),
+        i: i
+      };
+    });
+    // 一覧と同じ並び（新しい順・同じ日ならふつうの記事が先）
+    items.sort(function (a, b) {
+      return (a.date < b.date ? 1 : a.date > b.date ? -1 : 0) || (a.nikki - b.nikki) || (a.i - b.i);
+    });
+    var at = -1;
+    items.forEach(function (it, i) { if (it.href === here) at = i; });
+    if (at < 0) return;
+    var older = items[at + 1], newer = items[at - 1];
+    if (!older && !newer) return;
+
+    var css = document.createElement('style');
+    css.textContent =
+      '.post-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 48px 0 0; }' +
+      '.post-nav a { display: block; padding: 14px 16px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); text-decoration: none; transition: border-color .15s; }' +
+      '.post-nav a:hover { border-color: var(--gold); }' +
+      '.post-nav a.newer { grid-column: 2; text-align: right; }' +
+      '.post-nav .dir { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }' +
+      '.post-nav b { display: block; font-family: var(--mincho); font-size: 15px; line-height: 1.6; margin: 4px 0 2px; }' +
+      '.post-nav time { font-size: 12px; color: var(--faint); }' +
+      '@media (max-width: 560px) { .post-nav { grid-template-columns: 1fr; } .post-nav a.newer { grid-column: auto; text-align: left; } }';
+    document.head.appendChild(css);
+
+    function card(it, cls, dir) {
+      return '<a class="' + cls + '" href="' + it.href + '"><span class="dir">' + dir + '</span>' +
+        '<b>' + it.title.replace(/</g, '&lt;') + '</b><time>' + it.label + '</time></a>';
+    }
+    var nav = document.createElement('nav');
+    nav.className = 'post-nav';
+    nav.setAttribute('aria-label', '前の記事・次の記事');
+    nav.innerHTML = (older ? card(older, 'older', '← 前の記事') : '') + (newer ? card(newer, 'newer', '次の記事 →') : '');
+    article.after(nav);
+  }).catch(function () {});
+})();
