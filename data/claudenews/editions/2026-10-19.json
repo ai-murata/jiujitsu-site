@@ -1,0 +1,103 @@
+{
+ "date": "2026-10-19",
+ "generated_at": "2026-10-19T11:53:56+09:00",
+ "lead": "Anthropic が、自社の株式の5%を新しい「公益基金」に出すと発表しました。社内では AI エージェントの稼働時間が人間の6倍になり、若手の技術職の採用が大きく減ったという報告も話題です。",
+ "items": [
+  {
+   "id": "382f73c16b19",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Anthropic、株式の5%を新しい「公益基金」に",
+   "summary": "Anthropic が、自社の株式の5%を新しくつくる公益基金に出すと発表しました。この基金は、AI によって仕事が失われる問題への対策にも使われる可能性があると CNBC が伝えています。",
+   "point": "",
+   "source": "CNBC",
+   "original_title": "Anthropic commits 5% of shares to new public benefit fund that could address AI job disruption",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9YejV2dXEyYXpFUWJkMzZlMmVTczlHREhYdW5yT2dhbEplTFpBRnlvamlEaEFqWVJzdXhMOEdsVWx3OHhVU0d5dVVLckVtRl9FOHBzSzhKOE1oeGc4bVlsaDYzVzE1UUFHYlI2SHNEYzVXWUllSjV1MtIBfkFVX3lxTE5YWlRXWDhCbm01QjlQVHZKb21HV1FlZGNyQzlRVVV5MUFEal9jLXlwbFVJYU5CajJVcGwzQ0NxeWVXMl8yX0pqbENNQ3RmbU92VWpSTl9KeDFKNHdTa3VaX3BEVl92WTdiczlURW9WWmZZbm81ZDFlWnRoZXdoQQ?oc=5",
+   "published": "2026-10-18T22:55:48+00:00"
+  },
+  {
+   "id": "7316043ba18c",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Enterprise に、情報もれを防ぐ「推論フック」",
+   "summary": "Claude Enterprise で、やり取りの途中で大事な情報がもれるのを防ぐ「推論フック（Inference hooks）」が、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Inference hooks: inline data loss prevention for Claude Enterprise",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1IWTJQX1JxTGRLblhOWVlqUDBNNXgtTGN5M0F1LU5TVU54dlRMWFo2cjZORUE1RzdIN2tRNV9QSkpkRjJlblFOYVA1TWJ5V1ZucllnTHI3QkdvVU5ZMDJlR19GVnQ4czU4Z1lKbndMQVhrR1ZCSWZNWDExcERKZTQ?oc=5",
+   "published": "2026-10-17T23:46:47+00:00"
+  },
+  {
+   "id": "997fe6f53879",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code で3時間で作った熊本地震の掲示板、累計60万人が利用",
+   "summary": "Claude Code を使って3時間で作られた熊本地震の掲示板サイトが、累計60万人に使われたそうです。日経クロステックの「20代以下の注目トップ10」で2位に選ばれました。",
+   "point": "Claude Code が、災害のときに人の役に立つものをすばやく作るのにも使われています。",
+   "source": "日経クロステック",
+   "original_title": "2位は「Claude Codeを使い3時間で開発、熊本地震で累計60万人が利用の掲示板サイト」20代以下の注目トップ10",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9TMXROYXRnZmtXbDlmMHVzSGZIZDh4ZjFIWUFCR1lLdUM2Uk95T3RMcVFlNHFncWRMYjZyX3piX24yX3F5bHNhMFpYNFExZ09MbHpFRWN1T3JWT1JSaTZZeG9wWW9rUjRISE5vSw?oc=5",
+   "published": "2026-10-18T20:00:00+00:00"
+  },
+  {
+   "id": "168133879305",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "「全部まねして大丈夫」、Claude Code の自動化リストが話題に",
+   "summary": "Claude Code でできる自動化をまとめたリストが、1,500いいねを集めて話題になっています。",
+   "point": "",
+   "source": "shiritomo",
+   "original_title": "「全部パクって大丈夫です」――Claude Codeの自動化リストが1500いいね集めた中身",
+   "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTFBQZ3NSZDNQN091ZmdxOTZqWTc4WWhWdTkzaEFWb05XclNtUlZfNzZ2Y1ptZXRzLTA0bXlIbHhxUENhUQ?oc=5",
+   "published": "2026-10-18T22:34:42+00:00"
+  },
+  {
+   "id": "a277d45a6608",
+   "region": "jp",
+   "category": "その他",
+   "title": "Anthropic 社内、AI エージェントの稼働は人間の6倍、若手採用は27%から9%に",
+   "summary": "Anthropic の社内では、AI エージェントが働く時間が人間の6倍になり、技術系の初級職の採用の割合は27%から9%に大きく減ったそうです。",
+   "point": "",
+   "source": "ITmedia",
+   "original_title": "Anthropic、社内でAIエージェントの稼働時間が人間の6倍に 技術系初級職の採用比率は27％→9％に激減",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9TQ0F0UlZSSEt5NEpjSmE2OFpSSDBuOWwxaW9vb3NOVWZRd3NjaFRyVTVhMFBFME5YMlQ0WngzekhfVTJydjBraTI2X0tReEhmZzlEdEFYTTJQMmZ4cWJSa1FDM2daZU1xOWc?oc=5",
+   "published": "2026-10-18T23:02:13+00:00"
+  },
+  {
+   "id": "e4bfb74a5752",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Claude の「価値観」に外の意見を、でも最後に決めるのは？",
+   "summary": "Anthropic が Claude の価値観について外部から意見を集めようとしていることについて、最終的にだれが決めるのかを NBC ニュースが取り上げました。",
+   "point": "",
+   "source": "NBC News",
+   "original_title": "Anthropic wants outside input on Claude’s values. But who gets the final say?",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZDdLdlFXTmVsa1pVT2o5MU5hbF9nR0pqbl9CZWUyWnZ4cTFXN0VzM1Rld0FuUk8xdmZkZHNTTkpKX0pVdk1ZOXBwaW5MdDlsLWkyRXhTcXliTlRFRHhwaER6STVRSWZMSEVmb0NBVkN0NFJFNHFaQ1dsNHFzWXdVUTU4V2MwZldsOHZnbkZpd1EwNjlwVlNQOGNiWnl3SnhXSVJHMg?oc=5",
+   "published": "2026-10-18T09:30:40+00:00"
+  },
+  {
+   "id": "857ca3e039ee",
+   "region": "intl",
+   "category": "その他",
+   "title": "Meta「Instagram のアカウント停止は Claude のツールが原因」",
+   "summary": "Meta が、Instagram で「No Kings」のアカウントが停止されたのは、Claude の AI ツールがきっかけだったと説明したと Bloomberg が伝えました。",
+   "point": "",
+   "source": "Bloomberg.com",
+   "original_title": "Meta Says Claude AI Tool Triggered No Kings Instagram Suspension",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOcTV3dGctX3h6dXhJSHd3ek12THZiQk43SEZPTnlWZENOYUlQMHRMNzg5ZW5jVTQ0TGtzMEtiQjJsUjlXOXlTV05jdzlFNmtWWUVBQXYwRk8zSHIxZHd6WGFQcHB5TVExdFBQamtSdU1hQVQ1V053dmY2ZmZCYjVMME04YWFSRzFZNHJyZHg0bFhSQ054UldlVHphamU3ZDdPaWRRTmMxZWpMWk1lM1VXTFNmMUNDUQ?oc=5",
+   "published": "2026-10-18T23:59:54+00:00"
+  },
+  {
+   "id": "8442731f0698",
+   "region": "intl",
+   "category": "Claude Code",
+   "title": "Claude Code にファイルの地図を作らせたら、探す時間が96%短く",
+   "summary": "Claude Code にパソコンのファイルの「地図」を作らせたところ、ファイルを探す時間が96%短くなったという体験記事です。",
+   "point": "ファイルが散らかって探しにくい人は、まねしてみる価値がありそうです。",
+   "source": "XDA",
+   "original_title": "I made Claude Code build a map of my files, and it cut search times by 96%",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1Ga3k1ODlwQzZSTFZHQXNUSzZGdDJVNkgtMFJZUVRYWFVFd3QwVkd2T3hCSTlKb3c1QzZMdDV1cmZXaWdnX3ZtQndHRHV5X3hhZlRWTXJkV0g1NlZaaVI1RkRuWmZkNjZudFZ2VzE4OVQ0amVfSno0MDJB?oc=5",
+   "published": "2026-10-18T20:00:19+00:00"
+  }
+ ]
+}
