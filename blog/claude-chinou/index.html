@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>Claudeは「ハーバード主席レベル」？ 教授たちの超難問テストで、1年8か月で4%→61%</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="「人類最後の試験」という、世界の教授約1,000人が作った超難問テストで、Claudeの正答率は1年8か月で4%から約6割に。例題と、残り4割が解けない理由、実際に一緒に働いて感じた「主席の新入社員」ぶりを書きました。">
+<meta property="og:title" content="Claudeは「ハーバード主席レベル」？ 教授たちの超難問テストで、1年8か月で4%→61%">
+<meta property="og:description" content="教授たちが「AIには解けない」と出し合った2,500問。Claudeの正答率は4%から約6割へ。">
+<meta property="og:url" content="https://jiujitsu.co.jp/blog/claude-chinou/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://jiujitsu.co.jp/blog/claude-chinou/hle-chart.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 24px 0 32px; }
+  .stat { background: var(--k); border-top: 3px solid var(--gold-hi); padding: 16px 16px 14px; text-align: center; }
+  .stat .lbl { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold-hi); font-weight: 700; }
+  .stat b { display: block; font-family: var(--mincho); font-size: 30px; color: #f3ecd8; letter-spacing: .04em; line-height: 1.4; }
+  .stat small { display: block; font-size: 12px; color: #b0a88f; line-height: 1.6; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; font-variant-numeric: tabular-nums; }
+  .tbl th, .tbl td { border-bottom: 1px solid var(--line); padding: 9px 8px; text-align: right; }
+  .tbl th:first-child, .tbl td:first-child { text-align: left; }
+  .tbl thead th { font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; border-bottom: 2px solid var(--gold); }
+  @media (max-width: 560px) { .tbl { font-size: 13px; } .tbl th, .tbl td { padding: 8px 4px; } }
+  .doc { margin: 24px 0 32px; border: 1px solid var(--line); background: #fff; box-shadow: 0 2px 10px rgba(23,20,13,.06); font-size: 13px; line-height: 1.75; }
+  .doc .dh { padding: 12px 16px; border-bottom: 1px solid var(--line); background: var(--panel); font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; }
+  .doc table { width: 100%; border-collapse: collapse; }
+  .doc th, .doc td { border-bottom: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; color: var(--ink); }
+  .doc thead th { font-size: 12px; color: var(--faint); font-weight: 700; }
+  .doc td:first-child { white-space: nowrap; color: var(--body-c); }
+  .sumi { display: inline-block; background: var(--k); color: transparent; border-radius: 2px; height: 1.05em; vertical-align: -.15em; user-select: none; }
+  .note { font-size: 12px; color: var(--faint); margin: -20px 0 28px; }
+  .toc { list-style: none; counter-reset: t; margin: 20px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+  .toc li { counter-increment: t; background: var(--panel); border: 1px solid var(--line); padding: 10px 14px; font-size: 14px; color: var(--ink); line-height: 1.6; }
+  .toc li::before { content: counter(t, decimal-leading-zero); display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .toc li small { display: block; font-size: 12px; color: var(--faint); }
+  @media (max-width: 560px) { .toc { grid-template-columns: 1fr; } .doc { font-size: 12.5px; } .doc th, .doc td { padding: 7px 6px; } }
+  .fig { margin: 28px 0 12px; }
+  .fig img { display: block; width: 100%; height: auto; border-radius: 4px; }
+  .fig figcaption { font-size: 12px; color: var(--faint); margin-top: 8px; line-height: 1.7; }
+</style>
+
+<header>
+  <p class="brand"><a href="/blog/">JIU LABO BLOG</a></p>
+  <h1>Claudeは「ハーバード主席レベル」？<br>教授たちの超難問テストで、1年8か月で4%→61%</h1>
+  <p class="meta"><time datetime="2026-10-20">2026.10.20</time>　村田亜衣（マネージャー）</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>毎日、事務の仕事をClaudeに手伝ってもらっています。使い始める前に聞いたのが「Claudeって<b>ハーバード主席レベル</b>らしいよ」という話でした。</p>
+    <p>本当なのか、気になって調べてみました。結論から言うと、Anthropic（Claudeを作っている会社）が公式にそう言っているわけではありません。でも、<b>あながち大げさでもない</b>数字が出てきました。</p>
+
+    <h2>「人類最後の試験」という超難問テスト</h2>
+    <p>AIの賢さを測るテストに、<b>「人類最後の試験」</b>というものがあります。世界50か国、約1,000人の大学教授や研究者が「これならAIには解けないだろう」という問題を出し合って作った、<b>2,500問</b>の試験です。分野は100以上。</p>
+    <p>公開されている例題は、こんな感じです。</p>
+    <div class="ex">
+      <p>例題1　生き物</p>
+      <ul><li>ハチドリの体の中にある小さな骨は、何対の腱（すじ）を支えているか。数字で答えなさい。</li></ul>
+    </div>
+    <div class="ex">
+      <p>例題2　古代の言葉</p>
+      <ul><li>古代ローマ時代のお墓に刻まれた、古代シリアの文字（パルミラ文字）を訳しなさい。</li></ul>
+    </div>
+    <p>1問目は鳥の体の専門家でないと無理ですし、2問目は古代文字の研究者でないと手が出ません。こういう問題が、あらゆる分野から出ます。<b>どんな天才でも、自分の専門以外はほとんど解けない</b>試験です。</p>
+
+    <h2>1年8か月で、4%→61%</h2>
+    <p>おもしろいのは、点数の伸び方です。</p>
+    <figure class="fig">
+      <img src="hle-chart.png" alt="人類最後の試験でのClaudeの正答率。2025年1月4.1%、2025年11月25.2%、2026年2月34.4%、2026年9月61.4%。ネットで調べながらなら67.7%。" width="1200" height="675">
+      <figcaption>何も見ずに解いた場合の正答率。出典：Scale AI、Artificial Analysis、Anthropic公式発表。集計するところによって数%の差があります。</figcaption>
+    </figure>
+    <p>試験ができた2025年1月、Claudeの点数は<b>わずか4%</b>。100問中4問しか解けませんでした。当時いちばん成績のよかったAIでも8%です。</p>
+    <p>それが2026年9月には<b>約6割</b>。1年8か月で15倍です。ネットで調べながら解いてよいルールなら、<b>約7割</b>に届きます。</p>
+
+    <h2>残りの4割は、なぜ解けないのか</h2>
+    <p>ここまで来ても、まだ全部は解けません。理由は大きく3つあるそうです。</p>
+    <ul class="tips">
+      <li><b>どこにも載っていない知識が要る</b>　ネットにも本にもほとんど書かれていない、ごく狭い専門の知識</li>
+      <li><b>写真や図の細かい読み取り</b>　かすれた石の文字のような画像を、正確に読むのはまだ苦手</li>
+      <li><b>長い推理の途中でつまずく</b>　10段階の計算のうち1か所でも間違えると、答えは外れる</li>
+    </ul>
+    <p>それから、<b>問題のほうが間違っているかもしれない</b>、という話もありました。化学と生物の問題のうち約3割は「正解とされている答え自体があやしい」と、外部の研究者が指摘しています。教授が作った問題でも完璧ではないので、100点はそもそも取れないのかもしれません。</p>
+
+    <h2>でも、一緒に働くと「主席で入った新入社員」</h2>
+    <p>テストでは主席級。では毎日一緒に働いてどうかというと、いちばん近いのは<b>「主席で入った新入社員」</b>だと思っています。</p>
+    <ul class="tips">
+      <li>税金や契約、印刷の入稿ルールのような一般知識は、私よりずっと詳しい</li>
+      <li>何百行もあるExcelを数分で照らし合わせて、合わない1行を見つけてくる</li>
+      <li>でも「この取引先はこう呼ぶ」「この人の分は毎月確認が要る」といった、<b>うちだけのルールは教えないと知らない</b></li>
+    </ul>
+    <p>そのかわり、一度教えたことはメモに残して、次からちゃんと守ってくれます。ここが、ふつうの道具と違うところです。</p>
+    <p>反対に、まだ人がやるべきだと感じるところもあります。社外の方へのメールの下書きで、まだお願いしていないことを「ご依頼しております」と書いてきたことがありました。言葉はとても上手。でも、相手との関係や「まだ言っていないこと」までは分かりません。<b>送る前に読むのは、人の仕事</b>です。</p>
+
+    <h2>まとめ</h2>
+    <ul class="tips">
+      <li>教授たちの超難問テストで、Claudeの正答率は<b>1年8か月で4%→約6割</b>（調べながらなら約7割）</li>
+      <li>「ハーバード主席」は公式の言い方ではないけれど、<b>頭のよさだけなら大げさではない</b></li>
+      <li>一緒に働くと<b>「主席で入った新入社員」</b>。うちのルールは教える、送る前は人が読む</li>
+    </ul>
+    <p>1年8か月前は100問中4問だったものが、いまは6割。この先1年で、どこまで行くのか。毎日使っている身としては、楽しみでもあり、ちょっとこわくもあります。</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">うちでもAIに仕事を任せたい。</b><br>
+    毎月の作業を「係」にするお手伝いをしています。いまはお会いしたことがある方に限って、先着3名さま・道具ひとつ分まで無料です。<a href="/irai/" style="color:#a3801a;white-space:nowrap;">AIのお手伝い、承ります →</a>
+  </p>
+
+  <footer>
+    <a href="/blog/">ブログの一覧へ</a>　／　<a href="/">jiujitsu.co.jp トップへ</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}.timeline .when{font-size:12px}.stat .lbl{font-size:12px}}</style>
