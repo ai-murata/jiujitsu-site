@@ -1,0 +1,103 @@
+{
+ "date": "2026-10-20",
+ "generated_at": "2026-10-20T11:53:37+09:00",
+ "lead": "Anthropic が、使う人の意図をよりよく読み取る新しいモデルを準備していると伝えられています。国内では NEC が約3万人体制で Claude Code を全社に広げている取り組みが紹介されました。",
+ "items": [
+  {
+   "id": "0c7930ddfc2e",
+   "region": "intl",
+   "category": "新モデル",
+   "title": "使う人の意図をよりよく読み取る新モデルを準備中",
+   "summary": "Anthropic が、使う人の意図をこれまでよりよく読み取れる新しいモデルを準備していると The Information が報じました。",
+   "point": "正式な発表はまだなので、続報を待ちましょう。",
+   "source": "The Information",
+   "original_title": "Anthropic Readies Model That Reads Users' Intentions Better",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUUI1LVFnVzE0bmNHTjRZSGJMRUhueTNjT1JzSFU5eDhHeFQtNlFYalF6eE9wU2FEelA3dHpXY2xGSW1NbVppT3NMcnlYaHk5alZCVnhoMFIzeHpRUXM1akVfeGJBZG54VWE5X0xZX3hUN21xd2xRQkxMQ0FhckVpOW9GLXRkUDJKYVk0Q1FEbUJkeGFMUmlRLXhUc0g5Zzg5SXlRRTNmQWgyQQ?oc=5",
+   "published": "2026-10-19T14:00:00+00:00"
+  },
+  {
+   "id": "ad49d4c30d67",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude がより多くのセキュリティ・コンプライアンスの道具と連携",
+   "summary": "Claude が、より多くのセキュリティやコンプライアンス（決まりを守るための管理）の道具と連携できるようになったと、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Claude now works with more security and compliance tools",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1CQ3FnT1BBSFNZZXFIUE1OeHktSUFYSjhDcUZvSVFfempIU28tZDBvVW4zMmxkYng3Z3VESGUzbVl6RUFYMV9YclBSMDF4WUtZaTV2M0dheFY0ZU5RaXVzeV90MTd5bkRwRjdpZmhDWWd2S1k?oc=5",
+   "published": "2026-10-19T02:37:05+00:00"
+  },
+  {
+   "id": "80fbccdecd6c",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Amazon Bedrock の Claude で「構造化出力」",
+   "summary": "Amazon のクラウドサービス「Amazon Bedrock」で、Claude のモデルが決まった形式で答えを返す「構造化出力」を使えるようになったと AWS が紹介しました。",
+   "point": "",
+   "source": "Amazon Web Services (AWS)",
+   "original_title": "Structured outputs for Anthropic Claude models on Amazon Bedrock",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeGtQZ3VDNTRrRVNBTDA4ak5mUlBKUG1kdWpwWDJxQUx2UWxFMGw3Sk85MllYN1gyTENSZEcxa0RwZ2RXLTk5WlE0ejZPZWU0UzI5RVRmUnlLdXgwcjZBUUhEUnI5enprM2NPZVlhbXl6ZUhTVU4wZEpwMjc0SHlQME54Ri1NMk40UmF5bDBReHdEV0V6OWxXVnJVSl9nUkpsTGFQejBtU2tFeEliQXpvZw?oc=5",
+   "published": "2026-10-19T23:32:19+00:00"
+  },
+  {
+   "id": "a173b5ed1cb6",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "NEC、約3万人の「AI ネイティブエンジニア」体制へ Claude Code を全社展開",
+   "summary": "NEC が、約3万人の AI ネイティブなエンジニア体制をめざして、Claude Code を全社に広げている取り組みを AWS が紹介しました。専門チーム（CoE）や「チャンピオン制度」で進めているそうです。",
+   "point": "会社全体で Claude Code を広げるときの進め方として参考になります。",
+   "source": "Amazon Web Services (AWS)",
+   "original_title": "約 3 万人のAIネイティブエンジニア体制へ ― NEC は Claude Code をどう全社展開しているのか？ CoE・チャンピオン制度による取り組み",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQU01aT1RIRFZvVC0zV3pSM3JlYW5UaUdrSVM2MnFoTEt6QXNKUklBbnhIZVNmcEo1c2ZOZWFKUmQzc1lVVW10SmVwVFgzM01GMVRvaUVVZm4xbVQtaktMZTR1ZDR1YVpJVE1pLUllOVhFMlZtRU5IenRQZ2NVVHVzdw?oc=5",
+   "published": "2026-10-20T00:21:57+00:00"
+  },
+  {
+   "id": "2533fe123dac",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "Claude Code Desktop の HTML プレビューに脆弱性、8月に修正済み",
+   "summary": "Claude Code Desktop の HTML プレビューに「SneakPeek」という脆弱性（弱点）があり、秘密鍵や API キーが盗まれるおそれがあったそうです。この問題は8月に修正されています。",
+   "point": "念のため、アプリを最新版に更新しておくと安心です。",
+   "source": "合同会社ロケットボーイズ",
+   "original_title": "Claude Code DesktopのHTMLプレビューに脆弱性「SneakPeek」―秘密鍵・APIキー窃取の危険、8月に修正済み",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPN3U5Q2Z4cVh0MWx0ejJyLXhKVUh4X1hSVDZKRWVMYTM5T1BUbF9QczFWOURJTEY3RHZ6UXNwZHBQY3NsM0lpRDJncVhFaHZ6dFdpWThoUUJxY0lOYzlPNmtybDNUc1hSekhhbkw3eDlWMkVsUFB3TlhvMFltQmRaVWdRa1Z6dGxMcGFQaDVpQ09aQjhKb05jczl1cjVXNnJuREN4TzFYOTZaUjlmSnk4ZGZIU3RFaUZU?oc=5",
+   "published": "2026-10-19T21:30:46+00:00"
+  },
+  {
+   "id": "50410c98f078",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code に丸投げの代償、新人育成の壁",
+   "summary": "Claude Code に仕事を丸投げしていると1〜2か月後に大変なことになる、という声と、Anthropic も認める新人育成のむずかしさを取り上げた記事です。",
+   "point": "",
+   "source": "shiritomo",
+   "original_title": "「1〜2ヶ月後、ガチで地獄ですよ」――Claude Code丸投げの代償、Anthropicも認める新人育成の壁",
+   "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE81MTV4bFJlQjBSWE5IbXk0MjBHRDE4RXAyNWdudERDN3NFRTVJdWQyUWllLUJYQ212bXRpNDM5OFVmZw?oc=5",
+   "published": "2026-10-19T22:33:28+00:00"
+  },
+  {
+   "id": "3023c9c0cad2",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Nscale と Anthropic、450億ドルの新しいクラウド契約を協議",
+   "summary": "Nvidia が支援する Nscale と Anthropic が、450億ドル規模の新しい AI クラウド契約について話し合っているとロイターが伝えました。",
+   "point": "",
+   "source": "Reuters",
+   "original_title": "Nvidia-backed Nscale, Anthropic in talks for new $45 billion AI cloud deal, source says",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcGMyclR5X0JrXzBKem90Uk1sZnBQNkcyRnlyc3ZnWTM4Q0ZoUWtKUzRrd1Y3aHlqaDRjT1pfaFdmV0pHYUFROFI3TFhTWVhtczJsM01PSF8tSEtXejB4emlhVjZGMmQzeWh0RXJoaS0tNDQ1SDhlZDRJZU5hZG5ibE85N3dxU21DS2ZKYm1NV2pVUUF4ZjF3XzQ1ZncwaHVMdXlWZ2FsWjRtQ1d0eFN2YUVQc2x4cTd6YjNwSTVuVUFQZw?oc=5",
+   "published": "2026-10-19T23:21:01+00:00"
+  },
+  {
+   "id": "82565f6364c1",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "米エモリー大学、大学の関係者が Claude を使えるように",
+   "summary": "アメリカのエモリー大学で、大学の関係者が Claude を使えるようになりました。",
+   "point": "",
+   "source": "Emory News",
+   "original_title": "Claude AI now available to Emory University community",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPcmdDc2hZWjl5c3N0X3FuX1doZHNxT1NTMm9MdzFzOGx0QUk3Y3dJX2tuTFJyM0N3WnZXUFBzbnNIY3VtOW9pRV9qaHYxelhGczl6ZE1MVVVWYms1ZlJ0dk85T2laUnVzUThGMFRFa2NOdGVWUmtpSTFCS1U0Znp4MVhTWVhKNWVrbjlySFRB?oc=5",
+   "published": "2026-10-19T19:35:45+00:00"
+  }
+ ]
+}
