@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>前世診断</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="名前と生年月日、5つの質問から、あなたの前世を読み解きます。時代・土地・生業、今世に残った癖、持ち越した課題、そして前世からの伝言。">
+<meta property="og:title" content="前世診断">
+<meta property="og:description" content="名前と生年月日、5つの質問から、あなたの前世を読み解きます。">
+<meta property="og:url" content="https://jiujitsu.co.jp/zense/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --night: #141a2e; --night-2: #1d2540; --night-line: #2e3858; --moon: #efe6c8;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 80px; }
+
+  header { text-align: center; padding: 64px 20px 36px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(32px, 7vw, 46px); color: var(--ink); letter-spacing: .2em; line-height: 1.4; margin: 10px 0 12px; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; letter-spacing: .06em; }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .24em; margin: 48px 0 18px; display: flex; align-items: center; gap: 16px; }
+  h2 small { font-family: var(--gothic); font-size: 10px; letter-spacing: .26em; color: var(--faint); font-weight: 500; flex: none; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  /* 入力 */
+  .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 560px) { .fields { grid-template-columns: 1fr; } }
+  label.f { display: block; font-size: 12px; letter-spacing: .12em; color: var(--faint); }
+  label.f input { display: block; width: 100%; margin-top: 6px; padding: 12px 14px; font: 16px var(--gothic); color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 0; }
+  label.f input:focus { outline: 2px solid var(--gold-hi); outline-offset: -1px; }
+
+  .q { margin: 0 0 26px; }
+  .q p { font-family: var(--mincho); font-size: 15.5px; color: var(--ink); margin: 0 0 10px; letter-spacing: .06em; }
+  .q p b { color: var(--gold); margin-right: 8px; }
+  .opts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  @media (max-width: 560px) { .opts { grid-template-columns: 1fr 1fr; } }
+  .opts input { position: absolute; opacity: 0; pointer-events: none; }
+  .opts label { display: block; text-align: center; padding: 11px 6px; font-size: 13px; border: 1px solid var(--line); background: var(--panel); cursor: pointer; transition: background .15s, color .15s, border-color .15s; }
+  .opts label:hover { border-color: var(--gold-hi); }
+  .opts input:checked + label { background: var(--ink); color: var(--moon); border-color: var(--ink); }
+  .opts input:focus-visible + label { outline: 2px solid var(--gold-hi); outline-offset: 2px; }
+
+  .go { display: block; width: 100%; margin-top: 34px; padding: 18px; font: 700 16px var(--mincho); letter-spacing: .4em; color: var(--moon); background: var(--ink); border: 0; cursor: pointer; }
+  .go:hover { background: #2a2418; }
+  .err { color: #9a3b2a; font-size: 13px; text-align: center; margin: 12px 0 0; min-height: 1.5em; }
+
+  /* 読み解き中 */
+  .reading { display: none; text-align: center; padding: 70px 0; }
+  .reading.on { display: block; }
+  .orb { width: 92px; height: 92px; margin: 0 auto 26px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff8dc, var(--gold-hi) 45%, #5a4410 100%); box-shadow: 0 0 40px rgba(201,162,39,.45); animation: pulse 1.4s ease-in-out infinite; }
+  @keyframes pulse { 50% { transform: scale(.9); box-shadow: 0 0 70px rgba(201,162,39,.7); } }
+  .reading p { font-family: var(--mincho); color: var(--ink); letter-spacing: .14em; margin: 0; }
+  @media (prefers-reduced-motion: reduce) { .orb { animation: none; } }
+
+  /* 結果 */
+  #result { display: none; }
+  #result.on { display: block; }
+  .card { background: var(--night); color: #cfd3e3; padding: 44px 30px 38px; position: relative; overflow: hidden; margin-top: 40px; }
+  .card::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 78% 12%, #fff 50%, transparent 51%), radial-gradient(1.5px 1.5px at 88% 46%, #ffe9a8 50%, transparent 51%), radial-gradient(1px 1px at 32% 8%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 60% 30%, #cfd8ff 50%, transparent 51%), radial-gradient(1px 1px at 6% 62%, #fff 50%, transparent 51%); opacity: .7; pointer-events: none; }
+  .card > * { position: relative; }
+  .card .who { font-size: 11px; letter-spacing: .3em; color: var(--gold-hi); text-align: center; margin: 0; }
+  .card .era { text-align: center; font-size: 13px; letter-spacing: .14em; color: #9aa2c0; margin: 18px 0 4px; }
+  .card .role { font-family: var(--mincho); font-weight: 700; font-size: clamp(26px, 6vw, 36px); color: var(--moon); text-align: center; letter-spacing: .14em; line-height: 1.5; margin: 0; }
+  .card .pname { text-align: center; font-family: var(--mincho); font-size: 15px; color: #c8cde0; margin: 8px 0 0; letter-spacing: .1em; }
+  .card .story { font-family: var(--mincho); font-size: 15px; line-height: 2.1; color: #dfe2ee; margin: 30px 0 0; padding-top: 26px; border-top: 1px solid var(--night-line); }
+  .meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 28px; }
+  .meta div { background: var(--night-2); border: 1px solid var(--night-line); padding: 12px 8px; text-align: center; }
+  .meta small { display: block; font-size: 10.5px; letter-spacing: .18em; color: #8890b0; }
+  .meta b { font-family: var(--mincho); font-size: 17px; color: var(--moon); font-weight: 600; }
+
+  .reads { display: grid; gap: 14px; margin-top: 26px; }
+  .read { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold); padding: 18px 22px 20px; }
+  .read b { display: block; font-family: var(--mincho); font-size: 14px; color: var(--ink); letter-spacing: .16em; margin-bottom: 4px; }
+  .read p { margin: 0; font-size: 14px; }
+  .read.msg { background: var(--ink); border-color: var(--ink); border-left-color: var(--gold-hi); }
+  .read.msg b { color: var(--gold-hi); }
+  .read.msg p { color: var(--moon); font-family: var(--mincho); font-size: 16px; line-height: 2; }
+
+  .others { margin-top: 10px; }
+  .bar { display: grid; grid-template-columns: 9.5em 1fr 3em; align-items: center; gap: 12px; font-size: 13px; margin: 0 0 10px; }
+  .bar .t { height: 6px; background: var(--line); }
+  .bar .t i { display: block; height: 100%; background: var(--gold-hi); }
+  .bar.top .t i { background: var(--ink); }
+  .bar .n { text-align: right; font-variant-numeric: tabular-nums; color: var(--faint); }
+  .bar.top { color: var(--ink); font-weight: 700; }
+  @media (max-width: 480px) { .bar { grid-template-columns: 9em 1fr 2.6em; font-size: 12px; gap: 8px; } }
+
+  .acts { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 30px; }
+  @media (max-width: 480px) { .acts { grid-template-columns: 1fr; } }
+  .acts button, .acts a { display: block; text-align: center; padding: 14px 8px; font: 500 13.5px var(--gothic); letter-spacing: .12em; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); cursor: pointer; text-decoration: none; }
+  .acts .x { background: var(--ink); color: var(--moon); }
+
+  .note { font-size: 11.5px; color: var(--faint); text-align: center; margin: 40px 0 0; line-height: 1.8; }
+  footer { text-align: center; font-size: 12px; color: var(--faint); margin-top: 60px; padding-top: 28px; border-top: 1px solid var(--line); line-height: 2; }
+  footer a { color: var(--gold); }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <div class="brand">ZENSE SHINDAN</div>
+    <h1>前世診断</h1>
+    <p class="lede">名前と生年月日、5つの質問から、あなたの前世を読み解きます。</p>
+  </header>
+
+  <form id="form" novalidate>
+    <h2>あなたのこと<small>PROFILE</small></h2>
+    <div class="fields">
+      <label class="f">お名前（ニックネーム可）<input id="name" autocomplete="nickname" maxlength="30" placeholder="例：むらた"></label>
+      <label class="f">生年月日<input id="birth" type="date" min="1900-01-01" max="2026-12-31"></label>
+    </div>
+
+    <h2>魂の記憶<small>QUESTIONS</small></h2>
+    <div id="qs"></div>
+
+    <button class="go" type="submit">前世を読み解く</button>
+    <p class="err" id="err" role="alert"></p>
+  </form>
+
+  <div class="reading" id="reading" aria-live="polite">
+    <div class="orb"></div>
+    <p id="readingText">魂の記憶をたどっています…</p>
+  </div>
+
+  <section id="result" aria-live="polite"></section>
+
+  <p class="note">※ 前世診断はお遊びです。同じ名前・生年月日・答えなら、何度やっても同じ前世が出ます。</p>
+
+  <footer>
+    <a href="/">← jiujitsu.co.jp トップへ</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+
+</div>
+
+<script>
+(() => {
+  // 質問ごとに4択。選んだ答えのタグが、前世ごとのタグと何個重なるかで決まる。
+  const QUESTIONS = [
+    { q: "ふと惹かれる景色は？", a: [["海と水平線", "海"], ["山と森", "山"], ["古い町並み", "町"], ["満天の星", "星"]] },
+    { q: "いちばん落ち着く時間は？", a: [["夜明け", "朝"], ["昼下がり", "昼"], ["夕暮れ", "夕"], ["真夜中", "夜"]] },
+    { q: "気づくと手が伸びているのは？", a: [["本や文字", "言葉"], ["道具や手仕事", "手"], ["体を動かすこと", "体"], ["おいしいもの", "食"]] },
+    { q: "理由もなく苦手なのは？", a: [["高いところ", "高"], ["狭くて暗い場所", "闇"], ["深い水", "水"], ["大勢の人ごみ", "群"]] },
+    { q: "人からよく言われるのは？", a: [["落ち着いてるね", "静"], ["面倒見がいいね", "世話"], ["負けず嫌いだね", "闘"], ["自由な人だね", "旅"]] },
+  ];
+
+  const LIVES = [
+    { id: "heian", era: "平安時代", years: [950, 1150], place: "平安京", role: "宮仕えの歌詠み", names: ["小式部", "宰相の君", "少納言の君", "伊勢の君"],
+      tags: ["町", "夜", "言葉", "群", "静"],
+      story: "月の出る夜にだけ、筆が進んだ。宮中の几帳の陰で、誰にも言えない想いを三十一文字に畳んでいた。返歌を待つ数日のあいだ、あなたは息をひそめるように暮らしていた。",
+      trait: "言いたいことほど遠回しになる。話すより、文章のほうが本音が出る。",
+      karma: "待つだけで終わった恋がひとつある。今世は、自分から先に送る番。",
+      msg: "既読を待たなくていい。言葉は、送った時点でもう役目を果たしている。" },
+    { id: "sengoku", era: "戦国時代", years: [1540, 1600], place: "尾張国", role: "足軽大将", names: ["権兵衛", "弥助", "又左衛門", "源八"],
+      tags: ["山", "朝", "体", "群", "闘"],
+      story: "槍一本で出世した。勝ち戦の手柄よりも、負け戦で味方を一人でも多く連れ帰ったことを、生涯の誇りにしていた。",
+      trait: "集団の中で、自然とまとめ役になる。引き際の判断が早い。",
+      karma: "部下を一人、守りきれなかった。その悔いが、今の面倒見のよさになっている。",
+      msg: "全員を救わなくていい。あなたが倒れないことが、いちばんの守りになる。" },
+    { id: "hikyaku", era: "江戸時代", years: [1720, 1850], place: "江戸・日本橋", role: "飛脚", names: ["六助", "早太", "千吉", "宗八"],
+      tags: ["町", "朝", "体", "群", "旅"],
+      story: "江戸から大坂まで、手紙を抱えて走った。中身は知らない。けれど、届けた先で泣き崩れる人の姿を、何度も見てきた。",
+      trait: "じっとしていると落ち着かない。用事はその日のうちに片づけたい。",
+      karma: "一通だけ、届けられなかった手紙がある。",
+      msg: "急がなくても、ちゃんと届く。たまには歩いて、道ばたの景色を見て。" },
+    { id: "tempura", era: "江戸時代", years: [1780, 1860], place: "江戸・両国", role: "屋台の天ぷら職人", names: ["甚五郎", "長次", "留吉", "お美代"],
+      tags: ["町", "夕", "食", "群", "世話"],
+      story: "夕暮れの両国橋のたもとで、揚げたての天ぷらを串に刺して売った。腹を空かせた子どもには、いつも一本おまけをつけた。",
+      trait: "人にご飯を食べさせると機嫌がいい。味見がやたらと正確。",
+      karma: "店を継ぐ者がいないまま、暖簾を下ろした。",
+      msg: "あなたの「おいしい」は人を生かす。自分の分も、ちゃんと食べて。" },
+    { id: "ryukyu", era: "琉球王国", years: [1500, 1700], place: "那覇の港", role: "海人（うみんちゅ）", names: ["加那", "思亀", "真牛", "樽金"],
+      tags: ["海", "昼", "食", "水", "世話"],
+      story: "サバニ一艘で外海に出た。潮と風を読む勘は、誰にも負けなかった。ある嵐の日を境に、二度と深い海には出なくなった。",
+      trait: "水の近くにいると呼吸が深くなる。でも、足のつかない水は少し怖い。",
+      karma: "海に置いてきた約束がある。",
+      msg: "怖さは、あなたが生き延びた証。恥じることはひとつもない。" },
+    { id: "egypt", era: "古代エジプト", years: [-1400, -1150], place: "テーベ", role: "神殿の書記", names: ["セティ", "メリト", "ネフェルカ", "ホルエム"],
+      tags: ["町", "昼", "言葉", "闇", "静"],
+      story: "パピルスに、税の記録と神々への祈りを書き写す毎日。一文字の誤りも許されない仕事を、四十年続けた。",
+      trait: "誤字がやたらと目につく。几帳面と言われるが、本人はそう思っていない。",
+      karma: "人の言葉は山ほど写したのに、自分の言葉を一行も残さなかった。",
+      msg: "正しさより、あなた自身の声を。今世は自分の名前で書いていい。" },
+    { id: "venice", era: "ルネサンス期", years: [1450, 1550], place: "ヴェネツィア・ムラーノ島", role: "ガラス職人", names: ["マルコ", "ジョヴァンナ", "ルカ", "アンジェロ"],
+      tags: ["海", "昼", "手", "高", "静"],
+      story: "技を守るため、島から出ることを禁じられた職人だった。炉の前で、誰も見たことのない青を吹き出した。その技法は、あなたと一緒に島に眠っている。",
+      trait: "色や光のわずかな違いに敏感。ものづくりを始めると時間を忘れる。",
+      karma: "技を、誰にも渡さなかった。",
+      msg: "惜しまず教えていい。あなたの技は、渡しても減らない。" },
+    { id: "silkroad", era: "唐代", years: [680, 820], place: "敦煌からサマルカンドへ", role: "隊商の通訳", names: ["アルスラン", "安延", "ナナイ", "石亀"],
+      tags: ["星", "夕", "言葉", "群", "旅"],
+      story: "五つの言葉を操り、砂漠をゆく隊商と隊商のあいだを取り持った。どの国の人間でもなく、どこへ行っても歓迎された。",
+      trait: "初対面の人とすぐ打ち解ける。「地元」という感覚がうすい。",
+      karma: "帰る場所を、最後まで決めなかった。",
+      msg: "どこにいても、あなたが居場所になれる。それでも、帰る港をひとつ。" },
+    { id: "scriptor", era: "中世ヨーロッパ", years: [780, 900], place: "アイルランドの修道院", role: "写本師", names: ["ブレンダン", "コルム", "エイダン", "ブリギッド"],
+      tags: ["山", "夜", "言葉", "闇", "静"],
+      story: "ろうそく一本の灯りで、聖書の頭文字に金の渦巻きを描いた。一冊に十年かかった。窓の外は、いつも雨だった。",
+      trait: "ひとりの時間がないと消耗する。細かい作業がまったく苦にならない。",
+      karma: "外の世界を見ないまま、一生を終えた。",
+      msg: "完成させなくても、外に出ていい。続きは帰ってきてからでいい。" },
+    { id: "gladiator", era: "古代ローマ", years: [60, 200], place: "ローマ・コロッセウム", role: "剣闘士", names: ["マクシムス", "フラマ", "スピクルス", "カルプス"],
+      tags: ["町", "昼", "体", "群", "闘"],
+      story: "奴隷の身から、五万の歓声を浴びる剣闘士になった。勝つたびに自由が近づいた。最後の試合のあと木剣を授かり、自由の身になった。",
+      trait: "本番に強い。見られているほうが力が出る。",
+      karma: "戦うことでしか、自分を証明できなかった。",
+      msg: "勝たなくても、あなたには価値がある。" },
+    { id: "jujutsu", era: "明治〜大正", years: [1880, 1925], place: "東京から、地球の裏側へ", role: "海を渡った柔術家", names: ["栄太郎", "茂", "三郎", "常次郎"],
+      tags: ["海", "夕", "体", "高", "世話"],
+      story: "柔の道を極めようと、海を渡った。異国の地で道場を開き、言葉の通じない若者たちに、力に頼らず勝つ方法を教えた。その教えは、いまも地球の裏側で受け継がれている。",
+      trait: "体を動かしながら考えるタイプ。気づけば、誰かに何かを教えている。",
+      karma: "故郷の土を、ついに二度と踏めなかった。",
+      msg: "遠回りに見える道ほど、遠くまで届く。" },
+    { id: "jomon", era: "縄文時代", years: [-3500, -2500], place: "三内丸山の集落", role: "土器づくり", names: ["ヒノテ", "ヒスイ", "クリモリ", "ツチノコエ"],
+      tags: ["山", "昼", "手", "食", "世話"],
+      story: "栗の木に囲まれた集落で、炎のような縁取りの土器をこしらえた。煮炊きの湯気の向こうには、いつもみんなの笑い声があった。",
+      trait: "季節の移り変わりに敏感。土や木に触れると、すっと落ち着く。",
+      karma: "とくになし。とても満ち足りた一生だった。",
+      msg: "今世も、あの頃のように素朴でいい。それがいちばんの贅沢。" },
+    { id: "viking", era: "ヴァイキング時代", years: [850, 1050], place: "ノルウェーのフィヨルド", role: "航海者", names: ["ビョルン", "ソルヴェイグ", "エイリーク", "ラグナ"],
+      tags: ["海", "朝", "体", "水", "闘"],
+      story: "竜頭の船で、まだ誰も知らない西の海へ漕ぎ出した。凍える海でも、仲間と歌えば寒さを忘れた。",
+      trait: "寒さに強い。新しい場所には一番乗りしたがる。",
+      karma: "故郷に残した家族に、行き先を告げなかった。",
+      msg: "冒険に出ていい。ただ、行き先だけは伝えておこう。" },
+    { id: "astronomer", era: "唐代", years: [700, 760], place: "長安の観星台", role: "天文官", names: ["李淳", "王希明", "瞿曇", "南宮説"],
+      tags: ["星", "夜", "言葉", "高", "静"],
+      story: "毎晩、長安の観星台で星の位置を記した。星の乱れは国の乱れ。皇帝に凶兆を告げるのが、あなたの仕事だった。",
+      trait: "夜更かしが得意。物事の流れや兆しを読むのがうまい。",
+      karma: "真実を告げて、疎まれた。",
+      msg: "言いにくいことを言えるのは才能。言い方だけ、少しやわらかく。" },
+    { id: "polynesia", era: "古代ポリネシア", years: [900, 1200], place: "タヒチの浜", role: "星読みの航海士", names: ["マウ", "ヒナ", "タネ", "ルア"],
+      tags: ["星", "夕", "体", "水", "旅"],
+      story: "海図も羅針盤もない時代、星と波のうねりだけを頼りに、千キロ先の島へ人々を導いた。",
+      trait: "方向感覚がいい。迷っても、なぜか目的地にたどり着く。",
+      karma: "導いた島に、自分は住まなかった。",
+      msg: "人を運ぶだけでなく、あなたも船を降りていい。" },
+    { id: "ukiyoe", era: "江戸時代", years: [1790, 1850], place: "江戸・浅草", role: "浮世絵師", names: ["春暁", "芳月", "北嶺", "夕斎"],
+      tags: ["町", "夕", "手", "群", "闘"],
+      story: "版元に急かされながら、町の暮らしを描きつづけた。人気役者の顔より、名もない人の横顔を描くのが好きだった。",
+      trait: "人間観察が趣味。締め切りの直前に本気を出す。",
+      karma: "本当に描きたかった一枚を、描かずに終わった。",
+      msg: "頼まれていないものを、描いていい。" },
+    { id: "herbalist", era: "中世ヨーロッパ", years: [1300, 1450], place: "ドイツの黒い森", role: "薬草師", names: ["ヒルデ", "マティルデ", "ゲルトルート", "ヨハン"],
+      tags: ["山", "夜", "手", "闇", "世話"],
+      story: "森のはずれの小屋で、薬草を煎じて村人を癒やした。感謝もされたが、同じくらい恐れられもした。",
+      trait: "人の不調にすぐ気づく。お茶やハーブにこだわりがある。",
+      karma: "誤解を、解こうとしなかった。",
+      msg: "わかってもらう努力を、今世は少しだけ。" },
+    { id: "mongol", era: "モンゴル帝国", years: [1210, 1300], place: "モンゴル高原", role: "鷹匠", names: ["テムル", "ボルテ", "スブタイ", "アルタン"],
+      tags: ["山", "朝", "体", "高", "旅"],
+      story: "果てしない草原で、鷹とともに暮らした。鷹が空から見下ろす景色を、あなたも一緒に見ていた気がする。",
+      trait: "束縛が苦手。広い場所に出ると、気分が晴れる。",
+      karma: "誰かと、ひとつ屋根の下で暮らすことを避けつづけた。",
+      msg: "自由と孤独は、別のもの。並んで飛べる誰かを。" },
+  ];
+
+  const SOULS = ["若い魂", "旅慣れた魂", "古い魂", "とても古い魂"];
+  const READING = ["魂の記憶をたどっています…", "時代の層をさかのぼっています…", "土地の名前が浮かんできました…", "ひとつの生涯が見えてきました…"];
+
+  // 入力が同じなら結果も同じになるよう、乱数ではなくハッシュから値を作る。
+  function hash(str) {
+    let h = 2166136261;
+    for (const c of str) { h ^= c.codePointAt(0); h = Math.imul(h, 16777619); }
+    return h >>> 0;
+  }
+  const pick = (arr, seed) => arr[seed % arr.length];
+  const fmtYear = y => y < 0 ? `紀元前${-y}年ごろ` : `西暦${y}年ごろ`;
+  const esc = s => s.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  const qs = document.getElementById("qs");
+  qs.innerHTML = QUESTIONS.map((q, i) => `
+    <div class="q" role="radiogroup" aria-label="${q.q}">
+      <p><b>${["一", "二", "三", "四", "五"][i]}</b>${q.q}</p>
+      <div class="opts">${q.a.map(([label, tag], j) => `
+        <input type="radio" name="q${i}" id="q${i}_${j}" value="${tag}"><label for="q${i}_${j}">${label}</label>`).join("")}
+      </div>
+    </div>`).join("");
+
+  const form = document.getElementById("form");
+  const err = document.getElementById("err");
+  const reading = document.getElementById("reading");
+  const result = document.getElementById("result");
+
+  function diagnose(name, birth, answers) {
+    const base = `${name}|${birth}`;
+    const scored = LIVES.map(l => {
+      const hits = answers.filter(t => l.tags.includes(t)).length;
+      const noise = hash(`${base}|${answers.join("")}|${l.id}`) % 9; // 0〜8
+      return { l, hits, score: hits * 10 + noise };
+    }).sort((a, b) => b.score - a.score);
+    const top = scored[0];
+    const s = hash(`${base}|${top.l.id}`);
+    const [y0, y1] = top.l.years;
+    const born = y0 + (s % (y1 - y0 + 1));
+    const age = 34 + (hash(base + "age") % 50);
+    const max = scored[0].score;
+    return {
+      life: top.l,
+      pname: pick(top.l.names, s >>> 3),
+      born,
+      age,
+      soul: SOULS[hash(base + "soul") % SOULS.length],
+      times: 3 + (hash(base + "times") % 47),
+      ranks: scored.slice(0, 4).map((r, i) => ({ l: r.l, pct: Math.min(99, Math.round(62 + (r.score / Math.max(max, 1)) * 35) - i) })),
+    };
+  }
+
+  function render(name, r) {
+    const l = r.life;
+    const shareText = `わたしの前世は「${l.era}の${l.role}」でした。\n${l.place}で生きた${r.pname}。\n#前世診断`;
+    const shareUrl = "https://jiujitsu.co.jp/zense/";
+    result.innerHTML = `
+      <div class="card">
+        <p class="who">${esc(name)} さんの前世</p>
+        <p class="era">${l.era}　${fmtYear(r.born)}　${l.place}</p>
+        <p class="role">${l.role}</p>
+        <p class="pname">名は「${r.pname}」</p>
+        <p class="story">${l.story}</p>
+        <div class="meta">
+          <div><small>享年</small><b>${r.age}歳</b></div>
+          <div><small>魂の年齢</small><b>${r.soul}</b></div>
+          <div><small>転生回数</small><b>${r.times}回目</b></div>
+        </div>
+      </div>
+      <div class="reads">
+        <div class="read"><b>今世に残った癖</b><p>${l.trait}</p></div>
+        <div class="read"><b>持ち越した課題</b><p>${l.karma}</p></div>
+        <div class="read msg"><b>前世からの伝言</b><p>${l.msg}</p></div>
+      </div>
+      <h2>ほかに見えた前世<small>RESONANCE</small></h2>
+      <div class="others">${r.ranks.map((x, i) => `
+        <div class="bar${i === 0 ? " top" : ""}"><span>${x.l.role}</span><span class="t"><i style="width:${x.pct}%"></i></span><span class="n">${x.pct}%</span></div>`).join("")}
+      </div>
+      <div class="acts">
+        <a class="x" href="https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener">Xでシェア</a>
+        <button type="button" id="copy">結果をコピー</button>
+        <button type="button" id="again">もう一度</button>
+      </div>`;
+    document.getElementById("copy").onclick = async e => {
+      try { await navigator.clipboard.writeText(`${shareText}\n${shareUrl}`); e.target.textContent = "コピーしました"; }
+      catch { e.target.textContent = "コピーできませんでした"; }
+    };
+    document.getElementById("again").onclick = () => {
+      result.classList.remove("on");
+      form.style.display = "";
+      form.scrollIntoView({ behavior: "smooth" });
+    };
+  }
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const birth = document.getElementById("birth").value;
+    const answers = QUESTIONS.map((_, i) => (form.querySelector(`input[name=q${i}]:checked`) || {}).value);
+    if (!name) { err.textContent = "お名前を入れてください。"; return; }
+    if (!birth) { err.textContent = "生年月日を入れてください。"; return; }
+    const missing = answers.findIndex(a => !a);
+    if (missing >= 0) { err.textContent = `質問${["一", "二", "三", "四", "五"][missing]}に答えてください。`; return; }
+    err.textContent = "";
+
+    const r = diagnose(name, birth, answers);
+    form.style.display = "none";
+    reading.classList.add("on");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    const text = document.getElementById("readingText");
+    let i = 0;
+    text.textContent = READING[0];
+    const timer = setInterval(() => { i++; if (i < READING.length) text.textContent = READING[i]; }, 650);
+    setTimeout(() => {
+      clearInterval(timer);
+      reading.classList.remove("on");
+      render(name, r);
+      result.classList.add("on");
+      if (window.gtag) gtag("event", "zense_result", { life: r.life.id });
+    }, 2600);
+  });
+})();
+</script>
+
+<a class="totop" href="/" style="position:fixed;right:14px;bottom:14px;z-index:99;background:#17140d;color:#e8c95e;font-size:11px;letter-spacing:.1em;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);font-family:sans-serif;">TOPへ</a>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}h2 small{font-size:12px}a[href="/"][style*="position:fixed"]{font-size:13px!important;padding:12px 18px!important}}</style>
+</html>
