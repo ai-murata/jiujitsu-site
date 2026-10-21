@@ -3,6 +3,13 @@
   "line_url": "",
   "entries": [
     {
+      "id": "blog-php-zeijakusei",
+      "date": "2026-10-22",
+      "title": "ブログ：「PHPって大丈夫？」とClaudeに聞いた日。世界中のサイトで起きていること",
+      "url": "/blog/php-zeijakusei/",
+      "summary": "ウェブサイトを動かすPHPに、危険度9.2の弱点が2つ見つかりました。うちのサイトは大丈夫だった理由と、サイトを持っている人が確認したいこと。"
+    },
+    {
       "id": "blog-ai-tsukaiwake",
       "date": "2026-10-21",
       "title": "ブログ：Claude・Gemini・ChatGPT、3つとも課金している私の使い分け",
