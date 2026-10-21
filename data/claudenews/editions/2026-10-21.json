@@ -1,0 +1,103 @@
+{
+ "date": "2026-10-21",
+ "generated_at": "2026-10-21T11:53:43+09:00",
+ "lead": "Claude API の「スキル」が CodeRabbit や JetBrains などの開発ツールで使えるようになり、Compliance API も Cowork と Claude Code に広がりました。研究では、Claude がサソリの毒に対抗するタンパク質を設計しました。",
+ "items": [
+  {
+   "id": "da1b00039207",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude API の「スキル」が CodeRabbit や JetBrains などで使えるように",
+   "summary": "Claude API のスキルが、CodeRabbit、JetBrains、Resolve AI、Warp の各ツールで使えるようになったと、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Claude API skill now in CodeRabbit, JetBrains, Resolve AI, and Warp",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB3VHNGQldCWkEyWkxwSm4ybGM2RVpRTzRwQ01XLVh4Vk44czNEWEZFelV5ci0yXzRxMkd0QTVtTXFtWWxNdmJ0RGQyOG44OEs5T192RVJobnZFUTBPYlUtRmotRXJKbE1K?oc=5",
+   "published": "2026-10-19T22:19:51+00:00"
+  },
+  {
+   "id": "82e22fd5ed9c",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Compliance API が Claude Cowork と Claude Code にも対応",
+   "summary": "会社が利用状況を確認・管理するための Compliance API が、Claude Cowork と Claude Code にも使えるようになったと、Claude の公式サイトで紹介されました。",
+   "point": "会社で Cowork や Claude Code を使うときの管理がしやすくなります。",
+   "source": "claude.com",
+   "original_title": "Compliance API coverage extends to Claude Cowork and Claude Code",
+   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNZ190NHRoVG1ZN0V1ZXllVTNsdzJCNWt3bmRVUENaNXBDMmFndkNJanRCUmVZcGxLdEpiWXVuNDkzV0gwbE4wQ3hvWVF5bUFwbHJ6bndpRzlnMktEMVdzYXJ6c1p2WXZCOUF0cW5iQ3dNWkdoampYSlRnazdWZ3RlUmlCNjA?oc=5",
+   "published": "2026-10-20T10:03:34+00:00"
+  },
+  {
+   "id": "64a28d64912f",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code の精度を上げるために CLAUDE.md で見直したこと",
+   "summary": "Claude Code の精度を上げるために、設定ファイル「CLAUDE.md」の書き方を見直した体験を紹介する記事です。",
+   "point": "Claude Code を使っている人は、自分の CLAUDE.md を見直すヒントになります。",
+   "source": "ライフハッカー",
+   "original_title": "Claude Codeの精度を上げるために、私がCLAUDE.mdで見直したこと",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPWERIUTBxQ29hSlFGQzV6UDBHdG43aVQ2U3k3c2EtUi1xR2dGZWVDRmVjbi1wSF82bG93TkI1bWc2aXg2S21uUWFIdnpvemR6RGtPeWVqNG5ZakpuUHlQNzgxclJNU2Q4eWtIbmhHM2NoaktlRG9nN2pzOEx3NFRlUWV4S1ZQOTJ4blAyX0FBazF6bVBEUDgwN093U2xydHJ3TEsyTGRfVGU?oc=5",
+   "published": "2026-10-21T00:00:00+00:00"
+  },
+  {
+   "id": "e836bbb9ac05",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "無料の「OSS Scanner」、11日間で緊急・重要880件を判定",
+   "summary": "Claude Mythos が無料で検査する「OSS Scanner」が、11日間で緊急・重要と判定した弱点が880件にのぼりました。近年最悪クラスの curl の脆弱性も見つかっています。",
+   "point": "",
+   "source": "Yahoo!ニュース",
+   "original_title": "近年最悪級のcurl脆弱性も発見 無料でClaude Mythosが検査する『OSS Scanner』、11日間で緊急・重要880件をAI判定",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4xME1kNjJ4eFlveXk3U0YzemdBOXZsbk9PdzkwZTdCcFd1TVNoLVdkRTRQVUtwdHRWenJyWGtoYTVlQm1vVGN2ZDdHdXByS2N4Mm5FNENjNVkxcjlTQXJHWWxaVElZOWxYdTVIM0FYVl9jajhhZ2NJeFVjblJLcGs?oc=5",
+   "published": "2026-10-20T02:30:03+00:00"
+  },
+  {
+   "id": "9a4a18c03991",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "Anthropic、Web・Claude Code・Cowork での Claude の封じ込め方を詳しく説明",
+   "summary": "Anthropic が、Web 版、Claude Code、Cowork のそれぞれで、Claude が決められた範囲の外で動かないようにするしくみを詳しく説明しました。",
+   "point": "",
+   "source": "infoq.com",
+   "original_title": "AnthropicがClaude封じ込め法を詳説、Web・Claude Code・Coworkに対して",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5fdllURmJLdUdrTUhqUWJaUWhpcnVqZXM2S0ZHdlBBWVExY3ByWmlOd3VGYk44U2tJTUJ4WW4zSDA4MWtaT0V5aWxIREJrd0RwTktmdnBJWEJSU1hJN0VMSlRYWmRVWlp0Y0ZTUmxfVTNSWWo4S0E?oc=5",
+   "published": "2026-10-20T07:31:37+00:00"
+  },
+  {
+   "id": "25bbcf8ef0cc",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Claude がサソリの神経毒に対抗するタンパク質を設計",
+   "summary": "Anthropic が、Claude がサソリの神経毒にくっついてはたらきを止めるタンパク質を設計した方法を紹介しました。",
+   "point": "",
+   "source": "Anthropic",
+   "original_title": "How Claude designed protein binders against scorpion neurotoxins",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9VNkRtQVc2UUZVVmgyWUJOQU5RSjdCMjQ0V1JuczVKVmxoME1pQ295LWZ5a3J1M21SWk1yWUtGQ01pbTN3bFVldVVmc01QLXNYYlBqRi04UnZ4VWR5NzU1dTZuYzFxRVA5enZObVVFeE1sVURIVFp1NGVn?oc=5",
+   "published": "2026-10-20T17:03:55+00:00"
+  },
+  {
+   "id": "69f645647c27",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Anthropic の2026年上半期の売上は163億ドル",
+   "summary": "Anthropic の2026年上半期（1〜6月）の売上が163億ドルだったと、ウォール・ストリート・ジャーナルの報道をもとに CNBC が伝えました。",
+   "point": "",
+   "source": "CNBC",
+   "original_title": "Anthropic had $16.3 billion in revenue during first half of 2026: WSJ",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZUhvSE55TG9UNnhIY2FfRTNHWFhUNC0xU3pReEdrUWg5VmctM3VrTGpfNEZJT004VVpvdWE2WVBKTDVpMWtQZl9pX0JBZEI1QWY0VGtEN1FoLWNPMXpoaHdFYWlEMXItVWI2YzdFRHJaRnB5QUV4bHMtbHBJQ3h0dDdVXy1EcTN5TW54YmF0eG1iSnNMaUZpUkFUMXBQY2tuSUNROVk1eWdsZlpiSFJnakdDNzNTWXM?oc=5",
+   "published": "2026-10-20T19:54:00+00:00"
+  },
+  {
+   "id": "d417c130eede",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "米保健福祉省、Anthropic と競争入札なしで契約へ",
+   "summary": "アメリカの保健福祉省（HHS）が、より広い AI の競争入札に先立って、Anthropic と競争入札なしの契約を結ぶ予定だと FedScoop が伝えました。",
+   "point": "",
+   "source": "FedScoop",
+   "original_title": "HHS to make sole-source award to Anthropic ahead of broader AI competition",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9sUW41dkF1aFFTbHotcmJualhBVnlNWmhfY2oxMnpVNFYwTFlXa2MtWmp5N3BydWVDb2owRmliTVpSU3hiYVhVdF96TWtZSm1KQkUtWnlhRUVPWnhmWUlUSlpKYUtsUy1TZ3JHYXF3czc?oc=5",
+   "published": "2026-10-20T23:12:13+00:00"
+  }
+ ]
+}
