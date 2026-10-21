@@ -3,6 +3,13 @@
   "line_url": "",
   "entries": [
     {
+      "id": "blog-ai-tsukaiwake",
+      "date": "2026-10-21",
+      "title": "ブログ：Claude・Gemini・ChatGPT、3つとも課金している私の使い分け",
+      "url": "/blog/ai-tsukaiwake/",
+      "summary": "GeminiはYouTubeの動画を見られる、ChatGPTは画像づくり、Claudeは仕事そのものをまかせる。3つ課金している私のいまの使い分けと、「アシスタント」と「エージェント」の違い。"
+    },
+    {
       "id": "blog-claude-chinou",
       "date": "2026-10-20",
       "title": "ブログ：Claudeは「ハーバード主席レベル」？ 超難問テストで1年8か月で4%→61%",

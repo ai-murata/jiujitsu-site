@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<title>Claude・Gemini・ChatGPT、3つとも課金している私の使い分け</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="GeminiはYouTubeの動画を見られる、ChatGPTは画像づくり、Claudeは仕事そのものをまかせる。3つとも課金しているマネージャーの、いまの使い分けと「アシスタント」と「エージェント」の違い。">
+<meta property="og:title" content="Claude・Gemini・ChatGPT、3つとも課金している私の使い分け">
+<meta property="og:description" content="Geminiは見る、ChatGPTは描く、Claudeはやる。3つ課金している私の使い分け。">
+<meta property="og:url" content="https://jiujitsu.co.jp/blog/ai-tsukaiwake/">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 24px 0 32px; }
+  .stat { background: var(--k); border-top: 3px solid var(--gold-hi); padding: 16px 16px 14px; text-align: center; }
+  .stat .lbl { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold-hi); font-weight: 700; }
+  .stat b { display: block; font-family: var(--mincho); font-size: 30px; color: #f3ecd8; letter-spacing: .04em; line-height: 1.4; }
+  .stat small { display: block; font-size: 12px; color: #b0a88f; line-height: 1.6; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; font-variant-numeric: tabular-nums; }
+  .tbl th, .tbl td { border-bottom: 1px solid var(--line); padding: 9px 8px; text-align: right; }
+  .tbl th:first-child, .tbl td:first-child { text-align: left; }
+  .tbl thead th { font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; border-bottom: 2px solid var(--gold); }
+  @media (max-width: 560px) { .tbl { font-size: 13px; } .tbl th, .tbl td { padding: 8px 4px; } }
+  .doc { margin: 24px 0 32px; border: 1px solid var(--line); background: #fff; box-shadow: 0 2px 10px rgba(23,20,13,.06); font-size: 13px; line-height: 1.75; }
+  .doc .dh { padding: 12px 16px; border-bottom: 1px solid var(--line); background: var(--panel); font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; }
+  .doc table { width: 100%; border-collapse: collapse; }
+  .doc th, .doc td { border-bottom: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; color: var(--ink); }
+  .doc thead th { font-size: 12px; color: var(--faint); font-weight: 700; }
+  .doc td:first-child { white-space: nowrap; color: var(--body-c); }
+  .sumi { display: inline-block; background: var(--k); color: transparent; border-radius: 2px; height: 1.05em; vertical-align: -.15em; user-select: none; }
+  .note { font-size: 12px; color: var(--faint); margin: -20px 0 28px; }
+  .toc { list-style: none; counter-reset: t; margin: 20px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+  .toc li { counter-increment: t; background: var(--panel); border: 1px solid var(--line); padding: 10px 14px; font-size: 14px; color: var(--ink); line-height: 1.6; }
+  .toc li::before { content: counter(t, decimal-leading-zero); display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .toc li small { display: block; font-size: 12px; color: var(--faint); }
+  @media (max-width: 560px) { .toc { grid-template-columns: 1fr; } .doc { font-size: 12.5px; } .doc th, .doc td { padding: 7px 6px; } }
+  .fig { margin: 28px 0 12px; }
+  .fig img { display: block; width: 100%; height: auto; border-radius: 4px; }
+  .fig figcaption { font-size: 12px; color: var(--faint); margin-top: 8px; line-height: 1.7; }
+</style>
+
+<header>
+  <p class="brand"><a href="/blog/">JIU LABO BLOG</a></p>
+  <h1>Claude・Gemini・ChatGPT、<br>3つとも課金している私の使い分け</h1>
+  <p class="meta"><time datetime="2026-10-21">2026.10.21</time>　村田亜衣（マネージャー）</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>AIは、Claude（クロード）、Gemini（ジェミニ）、ChatGPT（チャットGPT）の3つを契約しています。GeminiとChatGPTは、どちらも<b>月3,000円くらい</b>の有料プランです。</p>
+    <p>でも、正直に言うと、いま毎日使っているのはClaudeだけ。今日は、3つをどう使い分けているか（というか、どう使わなくなってきたか）を書きます。</p>
+
+    <div class="three">
+      <div class="tool"><span class="want">見てほしい</span><b>Gemini</b><span>YouTubeの動画を<br>URLで渡せる</span></div>
+      <div class="tool"><span class="want">絵がほしい</span><b>ChatGPT</b><span>画像づくりを<br>たまに</span></div>
+      <div class="tool code"><span class="want">やってほしい</span><b>Claude</b><span>仕事そのものを<br>毎日まかせる</span></div>
+    </div>
+
+    <h2>Geminiは、YouTubeを「見られる」</h2>
+    <p>Geminiのいちばんの違いは、<b>YouTubeの動画を見てくれる</b>ことです。動画のURLを貼って「この動画、何を言ってる？」と聞くと、中身をまとめてくれます。</p>
+    <p>私が知っている範囲では、ClaudeとChatGPTは、URLを貼っても動画そのものは見られません。GeminiはGoogleの会社が作っていて、YouTubeもGoogleのものなので、相性がいいのだと思います。</p>
+    <p>長いセミナー動画を「結局なにが言いたいの？」と知りたいときは便利。ただ、私の使い道はほぼそれだけで、<b>最近はあまり開いていません</b>。</p>
+
+    <h2>ChatGPTは、画像づくりをたまに</h2>
+    <p>ChatGPTは、ときどき<b>画像を作ってもらう</b>のに使っています。</p>
+    <p>ただ、出来上がる絵が、どうしても<b>「AIが描きました」感がすごい</b>んです。つるっとしていて、どこかで見たような感じ。チラシやインスタに使うと、見た人に「あ、AIだ」とすぐ分かってしまいます。なので、ここも使う回数が減ってきていて、契約をどうするか考え中です。</p>
+    <p>ChatGPTからは新しく「ドット」というものも出たらしいのですが、私はまだ触っていません。</p>
+
+    <h2>「アシスタント」と「エージェント」の違い</h2>
+    <p>よく、Geminiは<b>AIアシスタント</b>、ClaudeやChatGPTは<b>AIエージェント</b>、という分け方を聞きます。正直、私もよく分かっていなかったので、Claudeに聞いて整理してもらいました。</p>
+    <ul class="talk">
+      <li><b>アシスタント</b>＝聞いたことに答えてくれる<small>「これってどういう意味？」「この動画まとめて」→ 答えが返ってくる。そのあと手を動かすのは自分。</small></li>
+      <li><b>エージェント</b>＝頼んだ仕事を、自分で手を動かして終わらせる<small>「今月の振込リスト作って」→ 必要なファイルを開いて、数字を写して、表を仕上げるところまでやってくれる。</small></li>
+    </ul>
+    <p>たとえるなら、アシスタントは<b>何でも答えてくれる物知りな人</b>、エージェントは<b>仕事を渡せる部下</b>です。</p>
+    <p>ただ、最近はどのAIも「答える」と「やる」の両方ができるようになってきていて、<b>境目はかなりあいまい</b>だそうです。なので「Geminiはエージェントじゃない」と言い切るより、「私の使い方だと、Geminiには聞くだけ、Claudeには仕事を渡している」というのが正確かもしれません。</p>
+
+    <h2>いまはClaude Codeを、ガンガン使いこなしたい</h2>
+    <p>私がいちばん使っているのは、Claudeの<b>Claude Code（クロードコード）</b>です。名前に「コード」と付いていますが、プログラミングだけの道具ではありません。私はパソコンの中のファイルを読んで、Excelを直して、請求書や振込リストの下書きまで作ってもらっています。まさに「部下」のほうです。</p>
+    <p>新しいAIや新しい機能は、毎月のように出てきます。全部を追いかけていたらきりがないので、<b>一旦はClaude Codeを使いこなすことに集中</b>しようと決めました。GeminiとChatGPTは、必要になったら開く、くらいの距離感です。</p>
+
+    <h2>まとめ</h2>
+    <ul class="tips">
+      <li><b>Gemini</b>　YouTubeの動画を見てまとめてくれる。私の使い道はほぼこれだけ</li>
+      <li><b>ChatGPT</b>　画像づくりにたまに使う。でもAI感が強くて、使い方を考え中</li>
+      <li><b>Claude（Claude Code）</b>　仕事をそのまま渡せる。いまはこれ一本に集中</li>
+    </ul>
+    <p>3つ全部に課金しているのは、ちょっともったいないかもしれません。来月あたり、どれかの契約を見直すかも。そのときはまたここに書きます。</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">うちでもAIに仕事を任せたい。</b><br>
+    毎月の作業を「係」にするお手伝いをしています。いまはお会いしたことがある方に限って、先着3名さま・道具ひとつ分まで無料です。<a href="/irai/" style="color:#a3801a;white-space:nowrap;">AIのお手伝い、承ります →</a>
+  </p>
+
+  <footer>
+    <a href="/blog/">ブログの一覧へ</a>　／　<a href="/">jiujitsu.co.jp トップへ</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}.timeline .when{font-size:12px}.stat .lbl{font-size:12px}}</style>
