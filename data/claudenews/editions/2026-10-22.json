@@ -1,0 +1,103 @@
+{
+ "date": "2026-10-22",
+ "generated_at": "2026-10-22T11:52:54+09:00",
+ "lead": "Anthropic が、自分から動いて連絡してくれる新しい AI エージェント「Claude Duet」を発表しました。Claude Security も、続けて弱点を探し、修正の進み具合を追えるようになりました。",
+ "items": [
+  {
+   "id": "a82e3a06b062",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "新しい AI エージェント「Claude Duet」公開、送信や支払いは承認制",
+   "summary": "Anthropic が「Claude Duet」を公開しました。Claude のほうから連絡してくれる AI エージェントで、メッセージの送信や支払いは、使う人が承認してからおこなうしくみです。",
+   "point": "頼まれる前に動いてくれる、新しいタイプの Claude です。大事な操作は必ず確認が入るので安心です。",
+   "source": "innovaTopia",
+   "original_title": "Anthropic「Claude Duet」公開、自分から連絡し送信や支払いは承認制のAIエージェント",
+   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE43aTQ3dlRZOTZObVRHTGkzM2xVSFBBZE5XdWpRMlRHUUdTTWlDSkwyc1ZMdTFXek5qbzUzMVBSOFZMTU9Zd19vQ1dTNE1mZC1QY3lV?oc=5",
+   "published": "2026-10-21T22:15:18+00:00"
+  },
+  {
+   "id": "40e835e29481",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "Claude Security、続けてスキャンし修正を追跡",
+   "summary": "Anthropic が、Claude Security に、続けて弱点を探す「継続スキャン」と、修正の進み具合を追う機能を加えました。",
+   "point": "",
+   "source": "Unite.AI",
+   "original_title": "Anthropic、Claude Securityに継続スキャンと修正追跡機能を追加",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSE15RGtpNU81Sk5oV1RBVkl6dFh5azd5NUJXcExRRmxyeFQtWnFLdzJfMUNmREN2RF9zanhrUXJfdnBuakxXTEVVR3hwcmtpVHNQX3JxNHF3Sy1MaGpiTGZfQ1dOR2luYWhvYjFEN05abGpuQ19RRHRnRzFPVFE5bmJoRk1pR1IxQUhfU3pmZVFncnBTd0lMRmlIYw?oc=5",
+   "published": "2026-10-21T18:04:18+00:00"
+  },
+  {
+   "id": "2031fa886c5c",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude API の新しいバージョン「2026-10-21」",
+   "summary": "Claude API の新しいバージョン「2026-10-21」への移行ガイドが、開発者向けサイトで公開されました。",
+   "point": "API を使ってしくみを作っている人は、移行ガイドを確認しておきましょう。",
+   "source": "Claude Platform",
+   "original_title": "Migrating to API version 2026-10-21",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA0a0t3T2dHQ2E1bm92RnNfc2Z5Z0lmQkpIeDVwX01jRkZPbjJGZmlhTXIwdEZfdnl1TmNtUWo3U1BxTjlmTGFCOU0tUmZ5ZFNrS3ZKSC1rbkVYVnQ1THU2Q3hXLUtuQzhkNG1CZw?oc=5",
+   "published": "2026-10-21T17:53:02+00:00"
+  },
+  {
+   "id": "3e081500ed2b",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "「物理 AI 版 MCP」を量子コンピューターの QuEra が実証",
+   "summary": "Anthropic の「物理 AI 版 MCP」を、アメリカの量子コンピューター企業 QuEra が実際に試し、エラーからの復旧に99%成功したそうです。",
+   "point": "",
+   "source": "日経クロステック",
+   "original_title": "Anthropic「物理AI版MCP」を米量子QuEraが実証、エラーの復旧成功率99％",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQSDM5MkczX0tZOGNtS3BEOVMxckdPelNvZ2hxbXhqVDlISElKY1hmeXoxdXZ6TXhfS2VvU0luUjF0X2E5MUIwQ241bVExZmpsMlNVM2lqN2E5NjFpSkVqUDRxTDZ6YTZ6SGhlVWQ5T3lIYkdrQTdjUXBvN1ZxRlc1aUtSd3AyWkpMb2l1UnpwU0s?oc=5",
+   "published": "2026-10-21T20:00:00+00:00"
+  },
+  {
+   "id": "9f810faaff0f",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "Anthropic、2026年上半期は売上163億ドル、赤字は807億ドル",
+   "summary": "Anthropic の2026年上半期の売上は約163億ドルに急増しましたが、807億ドルという大きな赤字も計上したそうです。",
+   "point": "",
+   "source": "ビジネス+IT",
+   "original_title": "米Anthropic、2026年上半期の売上高は約163億ドルに急増も、807億ドルの巨額赤字計上",
+   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBSakdzc0h1RzVoTF9QM2h3NndtVGhMVkxPOHN4TTlGNjNVZjRReHBrNHcyQnFRSEJnT0VhdTNZY0ZxYXAxUE9zUFVhZUpIdmZ1TU1z?oc=5",
+   "published": "2026-10-21T10:00:00+00:00"
+  },
+  {
+   "id": "e8e71f0dd389",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Anthropic、早ければ金曜日に上場の書類を公開へ",
+   "summary": "Anthropic が、早ければ金曜日にも、株式上場（IPO）のための書類を公開する見通しだと伝えられています。",
+   "point": "",
+   "source": "Yahoo Finance",
+   "original_title": "Anthropic to publicly file for IPO as early as Friday, sources say",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPREpSeVQzcmx3WVBKdmRna3pObmZqMEpoN3hvcGpid1JuZEJRODNnZUg5X19DQmJDT2E5YnRqQTNwbWJwMjVPVXQ2MDBLRmNXd1VMOGFScHl6cE9GWUp3LWc0UTAzcGJtRnJiR1ZqdjNWWkZwVV9OX0Y5WkVER2RMMHhmZVBjYVR5aVN2ME1nd3BNNWdQNTFGOTMtM245MGpEOGhRTFNqSlZ0bnBwQmRHZVlLeXJOVFhCZDd3TEpnNA?oc=5",
+   "published": "2026-10-21T13:53:43+00:00"
+  },
+  {
+   "id": "192b52b4ee7c",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "物理学者クリストファー・スタッブス氏、Anthropic の監督機関に",
+   "summary": "物理学者のクリストファー・スタッブス氏が、Anthropic の「長期利益信託（Long-Term Benefit Trust）」に加わりました。",
+   "point": "",
+   "source": "Anthropic",
+   "original_title": "Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust",
+   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQbHVFZTRuSG1Cam5rQllpVVRvVkItRnZwVVlWODVDWU54Vm5jMzA0M1dza09rT1kxbFNTbGVYWWtmdmVGdzQxUjJ0SkczUWFBd3l5MUFWSlN4dWc4Y0FDc1F4S2c0TGNyUGVESUo1MGJpR0VfVXdDYXhDUXNadkRob0ZuVkotUQ?oc=5",
+   "published": "2026-10-21T17:25:01+00:00"
+  },
+  {
+   "id": "51eb44695674",
+   "region": "intl",
+   "category": "その他",
+   "title": "Anthropic と音楽出版社、AI 学習の「フェアユース」で対立",
+   "summary": "AI の学習をめぐる著作権の裁判で、Anthropic と音楽出版社が「フェアユース（公正な利用）」にあたるかどうかで争っているとロイターが伝えました。",
+   "point": "",
+   "source": "Reuters",
+   "original_title": "Anthropic, music publishers square off on 'fair use' defense in AI copyright case",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNT3pZQUU3NTI4WFhrZkxldDBxUTRpT20za0J4X2JkYTUxdExnbFdaUEoyam5PWmFTa2xNWHpTTGZqdTl6SWhuOW4tcXMyNE9uOHNqcHlIRGhHendlM2JyYkJVRjE1RnNSUDhpVjFZNEY3Vy1kamtSVTJXaFdiWE1oYXlxS2Q1Ylg4NV9kNmhLMElBOTAxdXJVa0E1eEt6NUkxWU9UcTU1MGIyeDdBUy1jcXFvR04?oc=5",
+   "published": "2026-10-21T21:17:07+00:00"
+  }
+ ]
+}
