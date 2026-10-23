@@ -1,0 +1,115 @@
+{
+ "date": "2026-10-23",
+ "generated_at": "2026-10-23T11:52:55+09:00",
+ "lead": "昨日発表された「Claude Duet」は、Claude Opus 5.5 をもとに作られ、Pro・Max プランで提供されることがわかりました。Google Cloud で Claude Platform が使えるようになったほか、国内ではソニー銀行が Claude Code を勘定系の開発に使っている事例が紹介されました。",
+ "items": [
+  {
+   "id": "2b483749a3cc",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "常時稼働エージェント「Claude Duet」、Opus 5.5 ベースで Pro・Max に",
+   "summary": "Anthropic の、ずっと動き続けるエージェント「Claude Duet」は、Claude Opus 5.5 をもとに設計されていて、Pro プランと Max プランで提供されます。",
+   "point": "Pro か Max プランを使っている人は、試せる対象になります。",
+   "source": "ITmedia",
+   "original_title": "Anthropic版常時稼働エージェント「Claude Duet」発表 Opus 5.5ベースで設計 Pro／Maxプランで提供（1/2 ページ）",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5rck9nNWVDYWNRcGRRLVRxOTNGQzJZX0V0ZXlKOUdtSUtVTFpTY3pJX3hpZlRQbF9UdkliOHplZy11VDNxYWVpQ01uY3d1TE84VFVuSFNwYnR5cXV5MEpxQlBqZ204Ul9tWTBCdw?oc=5",
+   "published": "2026-10-22T01:09:23+00:00"
+  },
+  {
+   "id": "270931bcc9f5",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Platform が Google Cloud で使えるように",
+   "summary": "Claude Platform が Google Cloud で使えるようになったと、Claude の公式サイトで発表されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Claude Platform is now available on Google Cloud",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZzNtTHlTTTNYdS1MNzNVQWJ3RnhtTWN6Vi1fYmpRT0gzenRJTm5rVFdPSkgySmxCNU1VYzNqNmpJZXhWakdudWIwQ0ExZ0sxWGxUUVEyeW9uWnBzTTY3b3pWMk9TNHJKd2tlek5iYlNSWnBfcmRVOEI5MnZvYVJnVTlDa3VOaHhsanZfSk13?oc=5",
+   "published": "2026-10-22T21:22:20+00:00"
+  },
+  {
+   "id": "98bda4a5a7af",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Cowork とチャットが「ひとつの Claude」に",
+   "summary": "Claude Cowork とチャットがひとつにまとまったことを説明する案内が、ヘルプセンターに載りました。",
+   "point": "",
+   "source": "Claude Help Center",
+   "original_title": "Claude Cowork and chat are one Claude",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPck1wOUpPNGlZX0lJYzcySkZGYm45bk1XRkNaZ0dQQ0pTRDRwUWFEMlZZRE5MaEpURE8wclgzSFV2eWUxV09BdXFsaV9ULVY0Wk82ejkxMlFneXU4QjN4UDdpS1hreW4tRTZfVEVwZWxRb1RNd0JlSTY5MVNvRXNHWHlSeWtxdkJqYkVxMWhn?oc=5",
+   "published": "2026-10-22T20:00:50+00:00"
+  },
+  {
+   "id": "ed7dcdab1e53",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "スキルとプラグインの安全チェック機能",
+   "summary": "Claude のスキルやプラグインをスキャン（安全チェック）する機能の使い方が、ヘルプセンターで案内されました。",
+   "point": "",
+   "source": "Claude Help Center",
+   "original_title": "Get started with skill and plugin scanning",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPNFJ0NlNvaTVBZTQ2SHh0OHJ2M0h4S2dPR2tEYWFJUllXXzMzWHVsaDFSWjFHcWRTY1VDYVpUdXQ2dUdmeko0Y1NfWUR4cm9ZQVlVOU5ySzFIOGx5Z0hkeFZ0ZEZHRVdlRDVnUjV3Sk9DaDY5MXljVDFBeUxVdWZIZnV4QkNLckpYYkk4NzBvNjdwWDY2?oc=5",
+   "published": "2026-10-21T21:46:24+00:00"
+  },
+  {
+   "id": "912f210af0c3",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "ソニー銀行、勘定系の開発に Claude Code、本番コードの99%を AI が生成",
+   "summary": "ソニー銀行が、お金の出し入れを管理する勘定系システムの開発に Claude Code を使い、本番のプログラムの99%を AI が書いているそうです。",
+   "point": "銀行の大事なシステムにも Claude Code が使われ始めています。",
+   "source": "ITmedia",
+   "original_title": "本番コードのAI生成率99％ ソニー銀行は「勘定系開発にClaude Code適用」をどう実現？",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBCZ3BVZDFBTFZZdGdJTEpYYUx0cmpobWN0TFNOTjcwR3FSeTlMVUtEdXNEWHhCU3U3bng0bnVlSWxaNjREVWZ1LUVEbERjeWlkMjZ3OC1VWnhQRGpQVnpMNGVVRmJ3cTJQZm5PUmhQZW11dw?oc=5",
+   "published": "2026-10-21T23:00:00+00:00"
+  },
+  {
+   "id": "1bf166cb03d3",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "Claude でソフトの「攻められやすい部分」を減らす研究、OpenSSH の修正にも",
+   "summary": "Anthropic が、Claude を使ってソフトウェアの攻撃されうる部分（アタックサーフェス）を洗い出して減らす研究を公開しました。OpenSSH の修正にも役立ったそうです。",
+   "point": "",
+   "source": "ITmedia",
+   "original_title": "Anthropic、Claudeでソフトウェアのアタックサーフェスを洗い出し・縮小する研究を公開 OpenSSHの修正にも貢献",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5wdlY0eXR2SGRxU19QazhSUU9KQ3k2WGxlSFgtSVBsbmd4aE9Pd3RmNy1KRXRIdU1FSXRRZlZ4dmVEYVVIYjg3U1RIa1FpM3E5N1hkZDJLSF84U2xZUzNUZWZKdmsxQnJWX2c?oc=5",
+   "published": "2026-10-22T02:48:47+00:00"
+  },
+  {
+   "id": "7d415a2ade6b",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "Anthropic、Opaque Systems の技術と人材を獲得",
+   "summary": "Anthropic が、AI の機密を守る技術をもつ Opaque Systems の技術と人材を獲得しました。AI エージェントのセキュリティを強めるためです。",
+   "point": "",
+   "source": "合同会社ロケットボーイズ",
+   "original_title": "Anthropic、機密AI企業Opaque Systemsの技術・人材を獲得―AIエージェントのセキュリティ強化へ",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNNy1fcFV3ckluS3Y0dGdCNHdMNEkyNDU5NFhwWmt0SzllZE9ubi1lZDhOX3FSZGxTNGdxUnlSMzZlTE5ZbXc3OGd1N1hXSHZQS2lQQ2VUVElOM181dWNxbnZfR0djTEhxdUlQSmJmNEhldlR5U1ZlWlo1UXNIUDNuMlQ0SDZra1ZsTlZOeHFZcktiYVk4V3JJbjZlRnJxTlk?oc=5",
+   "published": "2026-10-22T05:00:13+00:00"
+  },
+  {
+   "id": "d0c7c3932d4e",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Anthropic、「Agent Skills」を Agentic AI Foundation に寄贈",
+   "summary": "Anthropic が、「Agent Skills」を Agentic AI Foundation に寄贈すると発表しました。",
+   "point": "",
+   "source": "Anthropic",
+   "original_title": "Donating Agent Skills to the Agentic AI Foundation",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOOEZpcUwyanBJN3AtN3hwdGdNeS1obVZxc1c5c2lWZ3ZZUWFWM2M2SHFKNHB2Z3ZlQndXWUNMU3NGU3g1NElZeEw1M1pHaUJOZzZqeWsxSlFDSzUwcGFVUmxOUDhuZklpeDZ1ODVQc2dHNnZkUnVSTjE1dzU5R1ZVcjJURHl6RW1z?oc=5",
+   "published": "2026-10-22T18:25:44+00:00"
+  },
+  {
+   "id": "574dbe9d4a3b",
+   "region": "intl",
+   "category": "その他",
+   "title": "音楽会社 Reservoir、Suno と Anthropic を提訴",
+   "summary": "音楽会社の Reservoir が、AI 音楽をめぐって Suno と Anthropic を訴えたと Billboard が伝えました。「アーティストに取って代わるためのもの」だと主張しています。",
+   "point": "",
+   "source": "Billboard",
+   "original_title": "Reservoir Sues Suno & Anthropic in Latest Lawsuits Over AI Music: ‘Meant to Replace the Artists’",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVDE5V3NNUV9BRGdBQkNJYVRybEtyQXZMbEE1VXVrZEV3V0xNaVZqdXBadDlwbzZyMGF5TW1JejdseXEyMjBTdF8yQlBOZS1vY2RxQXliWExoMG9yR0dqcFgyUVR4bkRuWWdwVTU2eWV5UjJyN2QtdlZFTGZCdGlwSUgzZw?oc=5",
+   "published": "2026-10-22T18:10:53+00:00"
+  }
+ ]
+}
