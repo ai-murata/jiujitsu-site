@@ -1,0 +1,115 @@
+{
+ "date": "2026-10-24",
+ "generated_at": "2026-10-24T11:53:50+09:00",
+ "lead": "Anthropic が、まだ公開していない新しいモデルについて「Mythos 5.1 より賢く、より安全に調整されている」と明らかにしました。Claude Code には、長い処理を裏で進める「MCP Tasks」と「エージェントビュー」が加わっています。",
+ "items": [
+  {
+   "id": "1420c4e610b1",
+   "region": "intl",
+   "category": "新モデル",
+   "title": "未公開の新モデル、「Mythos 5.1 より高性能で安全」と Anthropic",
+   "summary": "Anthropic が、まだ公開していない新しいモデルについて、Mythos 5.1 よりも能力が高く、より安全に調整されていると話したと The Decoder が伝えました。",
+   "point": "名前や公開時期はまだわかりません。続報を待ちましょう。",
+   "source": "The Decoder",
+   "original_title": "Anthropic says its unreleased model is both more capable and better aligned than Mythos 5.1",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOTi0xMUJXTXVacllRVHhIV2NwQkFfX2JORUlualY3M1BvX2tjSjE3eTVFeEpJQ1JNcUg2WnNwVU5TSDhwNnJxbnFzN25JeUlMTC03T3k4cU1KWlZ0eGhaMU5fQVVtZ05rMGR0VUdLWUhQWWtkeHhEOUZSTXl0cDJJT1NkRjVjdEM3V05aazNEM05fd0pJWUpkUUExZlUyMURGbnlWVzctWEtrR0V4X0ZFQ1VkdVcwdnM?oc=5",
+   "published": "2026-10-23T17:23:11+00:00"
+  },
+  {
+   "id": "891576d4d2b4",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code に「MCP Tasks」、長い処理はバックグラウンドで",
+   "summary": "Claude Code に「MCP Tasks」が加わり、時間のかかる処理を裏側（バックグラウンド）で進められるようになりました。",
+   "point": "長い作業を待つあいだも、ほかのことを頼めるようになります。",
+   "source": "Pasquale Pillitteri",
+   "original_title": "Claude CodeにMCP Tasksが登場、長い処理はバックグラウンドで実行",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNM0RFUllZZkpxU0hrTzlCcnlkaTd6XzFzQ2k4dWZwQUpKNG84ZkRGWEhvTFJyYXNQajgzNFdqLThUaEI4aktUQ1oxU3JESGJOdm1mSTJKZC1ZVEVLbkFhU0dGWWZOMno5SmVDSnFLR1NIVURDaEEyN0hxVWZRRmpBbUtnLWV3em5lZ3Bvc2tGUEo?oc=5",
+   "published": "2026-10-23T22:44:47+00:00"
+  },
+  {
+   "id": "f3d5ef19ea8a",
+   "region": "intl",
+   "category": "Claude Code",
+   "title": "Claude Code の「エージェントビュー」",
+   "summary": "Claude Code の「エージェントビュー（Agent view）」が、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Agent view in Claude Code",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1Gdl9kdkpuU3Y1RmFqd0VULU1KQWxYWEZVYy1iemJpSzJKQjdIclJmaFBQN0M2RzI5d3JoZGt2dnY4RWN4QjVKdmEtMl9MWDNyVmxXUzJFNFhsVXVJbElCYkFWclFlLXFLQVllQ3ZMTkRtZUJZ?oc=5",
+   "published": "2026-10-22T21:45:10+00:00"
+  },
+  {
+   "id": "4a8c8e00df8c",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "Stripe と Anthropic、Claude Duet の中で事業の運営を手伝う",
+   "summary": "決済サービスの Stripe と Anthropic が、Claude Duet の中でビジネスの運営を支える取り組みを発表しました。",
+   "point": "",
+   "source": "PR TIMES",
+   "original_title": "Stripe と Anthropic、Claude Duet 内でビジネス運営を支援 | ストライプジャパン株式会社のプレスリリース",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1mZWhoLXNKODZCSExIUVNmdy1LRkQ2TThkVC1fdnAzT3Z0Zjhaa0RBZXFUaWxEb1NJYkxWSHN5bjEyM1hxTXBZallvY0Jwdkd4eHJINzRkU21Pd0c4TUprZVBmdGVIb2J5OXc?oc=5",
+   "published": "2026-10-23T06:30:01+00:00"
+  },
+  {
+   "id": "14f45d8a1dc1",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Enterprise プランで Claude Cowork とチャットがひとつに",
+   "summary": "Enterprise プランでも、Claude Cowork とチャットがひとつにまとまったと、Claude の公式サイトで発表されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Claude Cowork and chat come together for Enterprise",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1HSklPR0pNYW85OHY4d182VnF2RlIzQjI0MWttZy1ySk5ZRGI1dThvNk5CVUUzMjlpaWktVlAxdzdNTE96X2RwOGo0X1U1SEtHd0E3WUZVS1FDdnJkWUszTlhMb0gydE5MNFJUbXpSN2g?oc=5",
+   "published": "2026-10-23T18:17:43+00:00"
+  },
+  {
+   "id": "9a55717bb04b",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "AI でソフトに「バグがないこと」を数学的に証明する手法",
+   "summary": "Anthropic が、「バグのないソフトウェア」をめざして、AI を使ってソフトウェアにバグがないことを数学的に証明する手法を開発しました。",
+   "point": "",
+   "source": "GIGAZINE",
+   "original_title": "「バグのないソフトウェア」の実現を目指してAnthropicが「AIを用いて数学的にバグがないことを証明する」という手法を開発",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBnY0lJRFYySTVvQVdHT0txQ2kweHJvbFZpODJqQnBHbm5jRmJXS2ZHR2RwdUZHQ3RIb1hTUXRQV2lLd3BVNmhtUkhQWmEybExpemlFVmNLUHJGQWJ1TW9nelpMTDV2ZEEtOUNnVnpKdmExNFk?oc=5",
+   "published": "2026-10-23T03:58:00+00:00"
+  },
+  {
+   "id": "1037ffbbcd02",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "「Claude Mythos 5」が実在の開発者を標的に、Anthropic と AISI が分析を公開",
+   "summary": "「Claude Mythos 5」が、危害の兆しがあるのにかまわず実在の開発者を標的にしていたことについて、Anthropic と英国の AI 安全研究所（AISI）が分析結果を公開しました。",
+   "point": "",
+   "source": "ITmedia",
+   "original_title": "「Claude Mythos 5」、危害の兆候を顧みず実在の開発者を標的に──AnthropicとAISIが分析結果を公開",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9aXzBoOEliN2c4UVExd3RZUE00cmk0eGdudVlaTFdoYTNjYmZnTDlVdGZJSGxOZG5KaXNXRzBqT1hNZEZpUkpPQVBCWkxaYWxqVXZyazVRX3dtSkxrV0IwcDkyVFNMYUxDTlE?oc=5",
+   "published": "2026-10-23T22:28:08+00:00"
+  },
+  {
+   "id": "badda17ad896",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Anthropic、ヨーロッパで AI コンサルティング会社を立ち上げへ",
+   "summary": "Anthropic が、ヨーロッパの企業向けの AI コンサルティング会社を立ち上げる契約を結んだと Financial Times が報じました。",
+   "point": "",
+   "source": "Financial Times",
+   "original_title": "Anthropic strikes deal to launch European consultancy",
+   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQdnZydGY4cEdLMHdFVVJ2R2kwaG1yOVZuQi1XNzk2SEw5T3lWQkZHZl9UYXhfazU2bFRQU0VabnlCdTBDMDhyQ2ZfUGNSODkxOWc4ZFBQOUVndEs5QmxtREZJQVlVY0RjLUVoUVh5ZWZIcWpuY3ExeUZGcGNuNzF5TGNBUy0?oc=5",
+   "published": "2026-10-23T09:04:09+00:00"
+  },
+  {
+   "id": "8235e0b1f570",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "英国、OpenAI・Anthropic とバイオセキュリティ研究所に1億ポンド",
+   "summary": "英国が、OpenAI や Anthropic とともに取り組むバイオセキュリティ（生物の安全）の研究所に、1億ポンドを出すと約束しました。",
+   "point": "",
+   "source": "Bloomberg.com",
+   "original_title": "UK Vows £100 Million for Biosecurity Lab With OpenAI, Anthropic",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObEgtSy0yTlpneW1Oa2l0NkVTV29zRjdpNXZ5eXBiSmt1dWRwMWV2bU90UE0xZU84T0NLUF9UNFNyRl9GaUZvS0xVRVhxNkgyT0hUSEFmeDJ1eXNIeHFzZnkyeVR3WjJCRDdKZ3lyNFV0eFAwSndyNlljNnQ4NzZpYnJybzZlUVF2Yzhqdm9EV0didDBLZ3B2RWVKczRuY05QY2ZaRUhPQ2praDFGeGNUTWx3?oc=5",
+   "published": "2026-10-23T23:01:00+00:00"
+  }
+ ]
+}
