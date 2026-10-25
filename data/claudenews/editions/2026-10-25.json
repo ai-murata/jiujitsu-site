@@ -1,0 +1,103 @@
+{
+ "date": "2026-10-25",
+ "generated_at": "2026-10-25T11:53:31+09:00",
+ "lead": "Claude Duet はパソコンを閉じても動き続けますが、そのぶんプランの使用枠を使うことがわかりました。Claude Code では、自前の環境で動かすしくみが紹介され、生みの親が「ループエンジニアリング」という新しい使い方を語っています。",
+ "items": [
+  {
+   "id": "7368d5f0aa09",
+   "region": "intl",
+   "category": "料金・プラン",
+   "title": "Claude Duet、パソコンを閉じても動くが、プランの使用枠を使う",
+   "summary": "Claude Duet は、ノートパソコンの電源を切っていても作業を続けてくれますが、そのぶん契約しているプランの使用枠を使うと MIXED が伝えました。",
+   "point": "Duet に長い作業を任せると、ふだんのチャットで使える量が減ることがあるので気をつけましょう。",
+   "source": "MIXED Reality News",
+   "original_title": "Claude Duet keeps working when your laptop is off, but uses your plan's limits",
+   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5KR1lVTVhRM0xJamFELVV5THBNeEhKNDk2U2dLX1RCNGdUZFpZc2FyTjRkNkpxLVQ3MGRNU0hLSjBaYUFUa1p1Rl9EOG1UeU1GbElINmg1Sks2VXF3UVRuelhNQ09VeHdBYzZKaTZNczZQdDlqdXlrV3ZmTQ?oc=5",
+   "published": "2026-10-24T23:19:08+00:00"
+  },
+  {
+   "id": "7c11e7ce552b",
+   "region": "intl",
+   "category": "Claude Code",
+   "title": "Claude Code を自前の環境で動かす「セルフホスト環境」",
+   "summary": "Claude Code を自分たちで用意した環境で動かす「セルフホスト環境」が、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Self-hosted environments for Claude Code",
+   "link": "https://news.google.com/rss/articles/CBMiuANBVV95cUxNUHExcUh5bXR4ZGY3NlU3QUJ5VWszbGNoVlFrNUFzYzdkOXVRSExScUxqemU5bTRnZDF3bDg3dUcyc0F0TkN1UkZ1ZUFTRk91TkxlazBwNHRpYXZTUF95YV9JTmNlQ1AtV29jLXFQQmRyOGV6UVFlWDk1VU5mVzlrdF9zSkg3MklzTm5LbE1OdkdEbTVRb1g4bGozZ25pUDhRY3llbjBCOVFyV2lpSzdGM24wcm43TUVValNpLVNKMi13bnF6elMwZnhWMWZsTEpLdWJoMTFBM2QwZWc3Yk04VGV0ZTBrcmxNa055bHcxaEt3SG1CUHJDcndObElsTklkTllhd0FKSzBMdEFGWjMxOGI1Uk8xQWtuVGV6aDFGeGVJdFVxVlBzeXpvSmVJRmRFbFRULU03RUloVnJSX0xxWlhaYi1VUmVYNnVqWnB1eDNqLU9aVktOMGRBbVkwY0NYUXM2R1cyY2Z5OGNWQnZkYl9zaU9yU0pyQmJCWEdXSlZlblF3OXQ3MEVVUE5qMjV4UV9RU2NvWEcwLWg5MmRDaURoWHpDU05JWDh2eHRoNS1qSlV1cjFfRw?oc=5",
+   "published": "2026-10-23T21:00:14+00:00"
+  },
+  {
+   "id": "a0ccc2a15fcf",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Enterprise の Claude にエージェント機能、料金のふくらみを防ぐ4つの管理",
+   "summary": "Anthropic が、会社向けの Enterprise 版 Claude にエージェントの機能を組み込み、料金がふくらみすぎるのを防ぐための4つの管理機能を用意したと伝えられています。",
+   "point": "",
+   "source": "BigGo Finance",
+   "original_title": "Anthropic Integrates Agent Capabilities into Enterprise Claude, Offering Four Controls to Prevent Billing Bloat",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBZNW1RSlhSZmd0SXBWZW9PdF9DcUl6OHg3YkptY3Bzci15ZnJhV1ZOVTNhcEhKeW5SRENvdktjb0tQNzhIV3h3cS1aZzhGcWhROXByd204SklqREZXT1NlQkxGYnA3OE81Zi1McU05Q2tuTjlMNEE?oc=5",
+   "published": "2026-10-24T19:35:00+00:00"
+  },
+  {
+   "id": "dc3c03187672",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code 生みの親「もうプロンプトは書かない」、ループエンジニアリングとは",
+   "summary": "Claude Code の生みの親が、もうプロンプト（指示文）を書かないという「ループエンジニアリング」という考え方を明かしました。",
+   "point": "Claude Code の使い方が、これからどう変わっていくかのヒントになります。",
+   "source": "ITmedia",
+   "original_title": "「もうプロンプトは書かない」 Claude Code生みの親が明かす“ループエンジニアリング”の衝撃（1/4 ページ）",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE83NmZMWF8yZlBPUkxUMHNndXowekowSHNsQ0dac0k1eTZuSnktV3puR3JwdlE5ckpqZ216cE5udmQ5QVdTMXJGbVhmZ2F2OFFGMEgyb0hJbEJ2bzUxeWRsc1dwdDdUbHdrVGtCSjZLZzZHdw?oc=5",
+   "published": "2026-10-24T01:00:00+00:00"
+  },
+  {
+   "id": "b22c2052bccd",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "サブエージェントを増やすと性能が落ちる？ Anthropic はメイン1体を推奨",
+   "summary": "サブエージェント（手伝い役の AI）を増やすとかえって性能が落ちることがあり、Anthropic はメインの AI 1体を中心にした設計をすすめているそうです。",
+   "point": "",
+   "source": "shiritomo",
+   "original_title": "サブエージェントを増やすと性能が落ちる逆説、Anthropicはメイン1体のAI設計を推奨",
+   "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1nRXJ2bzJOeHpOY1JsbVJWQTFzenJMZldzZmxpUUdlNzhEaXlKS1FRWndSTnRPRks5YUo4R3p3OWl2dw?oc=5",
+   "published": "2026-10-24T22:35:55+00:00"
+  },
+  {
+   "id": "801f419e1362",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "生命科学の研究者と Claude で共同研究、参加者を募集",
+   "summary": "Anthropic が、生命科学の研究者を対象に、Claude を使ったプロジェクトの共同研究者を募集するプログラムを始めました。",
+   "point": "",
+   "source": "crisp_bio",
+   "original_title": "【AI x バイオ】Anthropic社、生命科学分野の研究者を対象に、Claudeを活用したプロジェクトの共同研究者を募集するプログラムを開始",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE51N0xTd2ZPa2t5MkQyS0V3Q1BWQ1pkQUlFQ09tVFdoX0V3aUJkTXlPdGlIMEtVbEVDRHpmdHVvc3FJXzVHZFpZWkZVNkF2N2g2azEydDBNQlMwd3My?oc=5",
+   "published": "2026-10-23T23:44:25+00:00"
+  },
+  {
+   "id": "29c982716c54",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "Claude Code の開発者タリク・シヒパル氏、Anthropic を退社",
+   "summary": "Claude Code の開発に携わってきたタリク・シヒパル氏が、Anthropic を退社すると発表しました。",
+   "point": "",
+   "source": "Mezha.net",
+   "original_title": "Claude Codeの開発者タリク・シヒパルが、Anthropicを退社すると発表した。",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE05Z2R5alF2TkZJMUJ6d0dYQ2lROFZ4eEctMDUwbVFYTXROdHNiNmVqa2cwMzhiMFlfNG16TnJfZGZ5bG4zbkxmYjhKWUF2NlpZc0lxSlpzcjZzeFBzbmtOM1o3eVBkbFFQUGlYVUxKOGs?oc=5",
+   "published": "2026-10-24T06:22:00+00:00"
+  },
+  {
+   "id": "4b605f4438bd",
+   "region": "intl",
+   "category": "その他",
+   "title": "エルヴィス・プレスリーの権利者、274曲の無断学習で Anthropic を提訴",
+   "summary": "エルヴィス・プレスリーの楽曲の権利をもつ人たちが、274曲を許可なく AI の学習に使ったとして Anthropic を訴えたと Rolling Stone が伝えました。",
+   "point": "",
+   "source": "Rolling Stone",
+   "original_title": "Elvis Presley Rightsholders Sue Anthropic for Training on 274 Songs Without Permission",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWTh5TVotQUREU29MT1BHc3JwV0p6X2FiUjlIbllhX3hkaWpxZnNMUzkyMHU0elBhRFBlUmJKWTE1X1k3VmhFQ056RFZ2cHV3ZS1jcW1hQXN6djRLcFNjNmdIeEFpY3FZU1RFVkZPM296WDNwOEM1S3R3WU9kSGhJeVFqRUhpVG1NWWZlczdYWW5veElSaG9SM1JGeGpRUUZ5bUNQMHpKOU9udVpISzdCUjFPNkRIWFk?oc=5",
+   "published": "2026-10-24T18:28:26+00:00"
+  }
+ ]
+}
