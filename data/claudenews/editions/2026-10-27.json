@@ -1,0 +1,79 @@
+{
+ "date": "2026-10-27",
+ "generated_at": "2026-10-27T11:53:56+09:00",
+ "lead": "Anthropic が、株式上場（IPO）を正式に申請し、その書類を公開しました。上半期の売上は約14倍に増えた一方、807億ドルの赤字も明らかになっています。サービス面では、非営利団体向けの Claude が広がりました。",
+ "items": [
+  {
+   "id": "958b6f232e4d",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "Anthropic、IPO を正式に申請　上半期の売上は約14倍、赤字は807億ドル",
+   "summary": "Anthropic が株式上場（IPO）を正式に申請しました。上半期の売上は約14倍に増えましたが、純損失は807億ドルにのぼっています。",
+   "point": "",
+   "source": "ITmedia",
+   "original_title": "Anthropic、IPOを正式申請 上半期売上高は約14倍、純損失807億ドル",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE4yT1ZKLTNyemNUeHBrMFpjb0xGcURwaHZEekhLZVFoVGc5NVhQN3pKbEVwZFJlZmxZa3RQN0d2d21QTVh0X3U2SThtYTZiai1kZHFVQS11RlUxNDUxcVNrQmtyNWFUTUFxbkE?oc=5",
+   "published": "2026-10-26T21:28:38+00:00"
+  },
+  {
+   "id": "f30b4b07dbe9",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "上場書類で、1か月の学習停止とセキュリティ侵害を明らかに",
+   "summary": "Anthropic が IPO の書類の中で、AI の学習を1か月止めていたことや、AI のセキュリティ侵害があったことを明らかにしたとロイターが伝えました。",
+   "point": "",
+   "source": "Reuters",
+   "original_title": "Anthropic discloses month-long training pause, AI security breaches in IPO filing",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQWUlrWDlwMnBvb2RvQ1ZTVHpNdEFETnkycHVyVnlJNDVqdnNJRVo3MTZEZGxfbHFjczk2YmJVc2lqb25kZnZtcDhObmFYZ3BoMmtZUi02ZkNBTFZLMEE1VHE4clRXbWJSQTE3MWNMRFNSNDQ3c0tZeWRTdUZDODEyQWFnRlgwLVdkVnctalBhTEE1SjNQRk04REtWQ2VNOGk0c0ZnS2JvZkNjX3VfSWFaZjNBbExVOEYxS0dSRzc5azFFR3ltb2hqOHNn?oc=5",
+   "published": "2026-10-26T20:38:29+00:00"
+  },
+  {
+   "id": "80f889d81a66",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "非営利団体向けの Claude を拡大",
+   "summary": "Anthropic が、非営利団体向けの「Claude for Nonprofits」を広げると、Claude の公式サイトで発表しました。",
+   "point": "NPO や地域の団体で Claude を使いたい人は、チェックしてみる価値があります。",
+   "source": "claude.com",
+   "original_title": "Expanding Claude for Nonprofits",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFByMGpJdVJsVGNtOC15RkxtU1pfMEpEdmRCZDNSYVFqa0Z2bFprSE9qTGtVZmFTYk54UzZVTC1kQVBBM2N0Y2pMUnVRMmxtUHpoOWtCODdFQ3RpeWxPOWJJdS1JWDI2U3FUV1pUTHptYkdOOTFpNjV6aw?oc=5",
+   "published": "2026-10-26T18:00:26+00:00"
+  },
+  {
+   "id": "ff60d208e895",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Sonnet に Opus の知恵を借りる「アドバイザー戦略」",
+   "summary": "Sonnet に Opus をアドバイザー（相談役）としてつけて、Sonnet の賢さを底上げする使い方が、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "The advisor strategy: Give Sonnet an intelligence boost with Opus",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB0dzRvYkJfNXY0MngyNFkzVTVaMjlubEpOQUQ1QkRZdmJSN2M2Um91TnhWV2k1b19nQnEzV05BbGgzWlkxOENYN1ZNQ1FCaUNKbm5QRzV5V3Y1alJYaHpZV0hKZ3h2akZDQ3BCRHJ3?oc=5",
+   "published": "2026-10-26T03:11:33+00:00"
+  },
+  {
+   "id": "fe8abc7718c7",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "米 FTC、Anthropic の幹部に証言を要求",
+   "summary": "アメリカの連邦取引委員会（FTC）が、広がる AI 安全性の調査の中で、Anthropic の幹部に証言するよう求めていると Axios が報じました。",
+   "point": "",
+   "source": "Axios",
+   "original_title": "Scoop: The FTC is demanding Anthropic execs testify in expanding AI safety probe",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5TSU12YjBVSEl2R0ZuM2lEWEUzWXZfdzRtaWRkT2NEM21hcUFPSzJqLXY5VTlxWGE4N3VVYWVQemt4SVdJMHVQY3BfNjgteURQYkFNcFdUaU9wd255MXhucjg1Q0dOdnhWTmhPRkZDM05tcnNGX2ZKRQ?oc=5",
+   "published": "2026-10-26T18:29:47+00:00"
+  },
+  {
+   "id": "5363cc78b6ea",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "ウォール街の銀行など、Anthropic 向けチップに630億ドルの資金",
+   "summary": "ウォール街の銀行と Blackstone が、Anthropic 向けの Broadcom の AI チップのために630億ドルの資金を用意したとロイターが伝えました。",
+   "point": "",
+   "source": "Reuters",
+   "original_title": "Wall Street banks, Blackstone line up $63 billion to finance Broadcom AI chips for Anthropic",
+   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQZU9zQUUycTh6SXBkQ25GQUJKTWJabmR3Q1gtYXlZWDJSUWk2cmxGWWRsUlZlSTdVNEtsdDY5d0hVakZ1ZkVDMDFiV2NrdjFaQnNVZUxRMjNESzluZFVBc0s3YU9pZjNZMVR1WEdIOVFrc2phbnRZYWpuYnRXY29Rd0FiVnItWTR1akVvNXhfWDAyNHJId040M2R0Q29HZTAwVzYxUl9OVy0wNWFrV2M3ME1Td25NUGI5cnhOY2JyQUVFS3ZOUGdEZVh1X2pQZWp4NGc?oc=5",
+   "published": "2026-10-26T23:56:37+00:00"
+  }
+ ]
+}
