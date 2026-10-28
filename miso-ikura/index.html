@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+<title>味噌いくら完全版ガイド</title>
+<meta name="description" content="鮭20匹ぶんの筋子を、味噌いくらと醤油いくらに仕込むまで。準備物の数、51℃洗い、餅布巾で挟む味噌漬けの重ね方、いちばん美味しかった醤油の配合。">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --ikura: #d2461f;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 0 20px 80px; }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(26px, 6vw, 38px); color: var(--ink); letter-spacing: .1em; line-height: 1.4; margin: 10px 0 12px; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; letter-spacing: .04em; }
+
+  .roe { display: flex; justify-content: center; gap: 6px; margin-top: 22px; }
+  .roe span { width: 10px; height: 10px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #ffb08a, var(--ikura) 60%, #8f2a0e); }
+
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 8px 0 0; }
+  .facts div { text-align: center; padding: 16px 4px; }
+  .facts div + div { border-left: 1px solid var(--line); }
+  .facts b { display: block; font-family: var(--mincho); font-size: 24px; color: var(--ink); line-height: 1.3; }
+  .facts span { font-size: 11.5px; color: var(--faint); letter-spacing: .08em; }
+
+  .intro { margin: 32px 0 0; font-size: 13.5px; color: var(--body-c); }
+
+  nav.toc { margin: 28px 0 0; background: var(--panel); border: 1px solid var(--line); padding: 14px 18px; font-size: 13px; }
+  nav.toc a { color: var(--ink); text-decoration: none; display: block; padding: 3px 0; }
+  nav.toc a::before { content: "— "; color: var(--gold); }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: .2em; margin: 64px 0 6px; display: flex; align-items: center; gap: 16px; scroll-margin-top: 16px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h2 small { font-size: 10.5px; letter-spacing: .22em; color: var(--gold); font-family: var(--gothic); font-weight: 700; }
+  h3 { font-family: var(--mincho); font-size: 16px; color: var(--ink); letter-spacing: .12em; margin: 36px 0 4px; }
+
+  .row { display: flex; gap: 18px; align-items: center; padding: 16px 4px; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; transition: background .15s; }
+  a.row:hover { background: var(--panel); }
+  a.row:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .ph { width: 86px; height: 86px; flex: none; border: 1px solid var(--line); background: #fff; display: flex; align-items: center; justify-content: center; }
+  .ph img { max-width: 88%; max-height: 88%; object-fit: contain; }
+  .ph.none { background: var(--panel); font-family: var(--mincho); font-size: 12px; color: var(--faint); letter-spacing: .1em; text-align: center; line-height: 1.5; }
+  .rinfo { flex: 1; min-width: 0; }
+  .rcat { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .16em; color: var(--gold); border: 1px solid rgba(163,128,26,.4); border-radius: 3px; padding: 1px 8px; margin-bottom: 5px; }
+  .pname { font-family: var(--mincho); font-weight: 700; font-size: 15.5px; color: var(--ink); line-height: 1.6; letter-spacing: .02em; display: block; }
+  .maker { font-size: 11.5px; color: var(--faint); letter-spacing: .06em; display: block; margin-top: 2px; }
+  .qty { flex: none; text-align: right; font-family: var(--mincho); font-weight: 700; font-size: 15px; color: var(--ink); white-space: nowrap; }
+  .qty small { display: block; font-family: var(--gothic); font-weight: 500; font-size: 10.5px; color: var(--gold); letter-spacing: .1em; }
+
+  ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 12px 0 0; }
+  ol.steps li { counter-increment: s; position: relative; padding: 14px 0 14px 46px; border-bottom: 1px solid var(--line); font-size: 14px; }
+  ol.steps li::before { content: counter(s); position: absolute; left: 0; top: 13px; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #e8c95e; font-family: var(--mincho); font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+  ol.steps b { color: var(--ink); }
+  ol.steps img.ill { display: block; width: 100%; max-width: 360px; height: auto; margin: 12px 0 2px; border: 1px solid var(--line); }
+
+  .layers { margin: 18px 0 0; border: 1px solid var(--line); }
+  .layers div { display: flex; align-items: center; gap: 12px; padding: 8px 14px; font-size: 13.5px; border-top: 1px solid var(--line); }
+  .layers div:first-child { border-top: 0; }
+  .layers i { flex: none; width: 54px; height: 14px; border-radius: 2px; }
+  .layers .miso i { background: #a8743a; }
+  .layers .paper i { background: #fff; border: 1px solid #d9d3c3; }
+  .layers .cloth i { background: repeating-linear-gradient(45deg, #f1ede2 0 3px, #fff 3px 6px); border: 1px solid #d9d3c3; }
+  .layers .egg i { background: radial-gradient(circle, var(--ikura) 3px, transparent 3.5px) 0 0 / 9px 9px, #fde6dc; }
+  .layers small { margin-left: auto; color: var(--faint); font-size: 11.5px; }
+  .caption { font-size: 12px; color: var(--faint); margin: 6px 0 0; }
+
+  table.mix { width: 100%; border-collapse: collapse; margin: 14px 0 0; font-size: 14px; }
+  table.mix td { padding: 10px 6px; border-bottom: 1px solid var(--line); }
+  table.mix td:last-child { text-align: right; font-family: var(--mincho); font-weight: 700; color: var(--ink); }
+
+  .note { margin: 20px 0 0; background: var(--panel); border-left: 3px solid var(--gold); padding: 14px 18px; font-size: 13.5px; }
+  .note b { color: var(--ink); }
+  ul.tips { padding-left: 1.2em; margin: 12px 0 0; font-size: 14px; }
+  ul.tips li { margin: 6px 0; }
+
+  footer { margin-top: 64px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 11.5px; color: var(--faint); text-align: center; letter-spacing: .04em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+
+<header>
+  <p class="brand">MURATA FAMILY ・ MISO IKURA</p>
+  <h1>味噌いくら完全版ガイド</h1>
+  <p class="lede">鮭20匹ぶんを、一年に一度。来年の自分のための段取り帳。</p>
+  <div class="roe" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+</header>
+
+<div class="wrap">
+  <div class="facts">
+    <div><b>20匹</b><span>鮭の数</span></div>
+    <div><b>12時間</b><span>味噌に漬ける</span></div>
+    <div><b>40本</b><span>瓶に詰める</span></div>
+  </div>
+
+  <p class="intro">毎年秋、鮭20匹ぶんの筋子をほぐして、味噌いくらと醤油いくらを仕込んでいます。一年たつと細かいところを忘れてしまうので、準備物の数と、うまくいったやり方をここにまとめました。商品をタップするとAmazonの商品ページが開きます。</p>
+
+  <nav class="toc" aria-label="もくじ">
+    <a href="#junbi">準備物</a>
+    <a href="#hogusu">筋子をほぐして洗う</a>
+    <a href="#miso">味噌漬け</a>
+    <a href="#shoyu">醤油漬け</a>
+    <a href="#tsumeru">瓶に詰める</a>
+    <a href="#rainen">来年への申し送り</a>
+  </nav>
+
+  <h2 id="junbi">準備物<small>PREP</small></h2>
+
+  <h3>場所をつくる</h3>
+  <a class="row" href="https://www.amazon.co.jp/dp/B00TI45TVY?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B00TI45TVY.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">床</span><span class="pname">ブルーシート 2畳用 約180×180cm</span><span class="maker">オカザキ</span></span><span class="qty">4枚</span></a>
+  <a class="row" href="https://www.amazon.co.jp/dp/B08GFB63JH?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B08GFB63JH.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">養生</span><span class="pname">マスキングマスカー 幅2100mm×長さ20m</span><span class="maker">和気産業 ・ CM-034 ・ 上がテープ、下のビニールを広げて床や壁を覆う</span></span><span class="qty">3本</span></a>
+  <a class="row" href="https://www.amazon.co.jp/dp/B0F7XHCLX9?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B0F7XHCLX9.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">養生</span><span class="pname">貼ってはがせる養生テープ 50mm×25m</span><span class="maker">APMジャパン ・ 5個セット ・ シートの端やすき間をとめる</span></span><span class="qty">1セット</span></a>
+  <div class="row"><span class="ph none">100均</span><span class="rinfo"><span class="rcat">テーブル</span><span class="pname">透明のテーブルクロス</span><span class="maker">100円ショップで</span></span><span class="qty">適量</span></div>
+  <a class="row" href="https://www.amazon.co.jp/dp/B0BQQLD68Y?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B0BQQLD68Y.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">除菌</span><span class="pname">パストリーゼ77 500ml（ヘッド付き＋詰め替え）</span><span class="maker">ドーバー ・ 食品にも使えるアルコール</span></span><span class="qty">2本</span></a>
+  <a class="row" href="https://www.amazon.co.jp/dp/B0GY4M142M?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B0GY4M142M.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">消臭</span><span class="pname">超強力消臭スプレー 300ml 無香料</span><span class="maker">プロ使用実績あり ・ 魚のにおいに</span></span><span class="qty">2本</span></a>
+
+  <h3>ゴミをまとめる</h3>
+  <div class="row"><span class="ph none">段ボール</span><span class="rinfo"><span class="rcat">ゴミ箱</span><span class="pname">段ボール箱（丈夫なもの）</span><span class="maker">ゴミ袋をかぶせてゴミ箱にする</span></span><span class="qty">3箱</span></div>
+  <a class="row" href="https://www.amazon.co.jp/dp/B0DX555GLN?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B0DX555GLN.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">ゴミ袋</span><span class="pname">ゴミ袋 90L 厚くて丈夫 HD-900</span><span class="maker">ケミカルジャパン ・ 40枚入り（20枚×2）・ 半透明</span></span><span class="qty">100枚<small>40枚入りを3つ</small></span></a>
+
+  <h3>さばく・切る</h3>
+  <div class="row"><span class="ph none">手袋</span><span class="rinfo"><span class="rcat">手袋</span><span class="pname">ビニール手袋（使い捨て）</span><span class="maker">魚や筋子をさわるときに</span></span><span class="qty">1箱</span></div>
+  <div class="row"><span class="ph none">まな板</span><span class="rinfo"><span class="rcat">まな板</span><span class="pname">まな板</span><span class="maker">鮭をさばく</span></span><span class="qty">手持ちで</span></div>
+  <div class="row"><span class="ph none">包丁</span><span class="rinfo"><span class="rcat">包丁</span><span class="pname">包丁</span><span class="maker">切り身にする</span></span><span class="qty">手持ちで</span></div>
+  <div class="row"><span class="ph none">ハサミ</span><span class="rinfo"><span class="rcat">ハサミ</span><span class="pname">キッチンバサミ</span><span class="maker">あると便利</span></span><span class="qty">手持ちで</span></div>
+
+  <h3>ほぐす・洗う</h3>
+  <a class="row" href="https://www.amazon.co.jp/dp/B003VUPH90?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B003VUPH90.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">ほぐし網</span><span class="pname">木製砂フルイ 丸型 φ35cm 9.0mm目</span><span class="maker">千吉（藤原産業）・ ヒノキ枠 ・ 品番689227</span></span><span class="qty">1個</span></a>
+  <a class="row" href="https://www.amazon.co.jp/dp/B071HB5CVN?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B071HB5CVN.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">鱗取り</span><span class="pname">ステンレスたわし 2個組</span><span class="maker">下村企販</span></span><span class="qty">1個</span></a>
+  <div class="row"><span class="ph none">IKEA</span><span class="rinfo"><span class="rcat">ボウル</span><span class="pname">いちばん大きいボウル</span><span class="maker">IKEA ・ 手持ち3つ＋もう1つあると楽</span></span><span class="qty">4個</span></div>
+  <div class="row"><span class="ph none">大きめ</span><span class="rinfo"><span class="rcat">ザル</span><span class="pname">大きいザル</span><span class="maker">洗ったいくらの水気を切る</span></span><span class="qty">3〜4個</span></div>
+  <a class="row" href="https://www.amazon.co.jp/dp/B0BWLTP83L?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B0BWLTP83L.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">使い捨て</span><span class="pname">バガスプレート 平皿 大</span><span class="maker">50枚入り ・ 通常ゴミで捨てられる</span></span><span class="qty">30枚</span></a>
+  <div class="row"><span class="ph none">割り箸</span><span class="rinfo"><span class="rcat">試食</span><span class="pname">割り箸</span><span class="maker">みんなで試食する用。どれでもOK</span></span><span class="qty">人数分</span></div>
+  <a class="row" href="https://www.amazon.co.jp/dp/B0GCHVJ9N2?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B0GCHVJ9N2.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">使い捨て</span><span class="pname">カウンター用クロス 不織布ふきん</span><span class="maker">by Amazon ・ 100枚入り ・ 厚手</span></span><span class="qty">30〜40枚</span></a>
+
+  <h3>漬ける</h3>
+  <a class="row" href="https://www.amazon.co.jp/dp/B08SQNGSGK?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B08SQNGSGK.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">バット</span><span class="pname">燕三条 角バット XXLサイズ 35cm</span><span class="maker">ナガオ ・ A4より少し大きい・深さ約5cm</span></span><span class="qty">4〜5枚</span></a>
+  <a class="row" href="https://www.amazon.co.jp/dp/B08SQR9NQM?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B08SQR9NQM.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">蓋</span><span class="pname">角バット XXLサイズ用 蓋</span><span class="maker">ナガオ ・ <b style="color:var(--ikura)">蓋は絶対にあったほうがいい</b></span></span><span class="qty">4〜5枚</span></a>
+  <a class="row" href="https://www.amazon.co.jp/dp/B001UJCW42?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B001UJCW42.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">布</span><span class="pname">業務用 モチフキン 670×670mm</span><span class="maker">遠藤商事 ・ WMT04001 ・ 小さいサイズはない</span></span><span class="qty">16〜20枚</span></a>
+  <div class="row"><span class="ph none">コストコ</span><span class="rinfo"><span class="rcat">紙</span><span class="pname">キッチンペーパー</span><span class="maker">コストコのものがお気に入り</span></span><span class="qty">適量</span></div>
+
+  <h3>詰める・しまう</h3>
+  <a class="row" href="https://www.amazon.co.jp/dp/B00OH96EX2?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B00OH96EX2.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">瓶</span><span class="pname">ジャム瓶 S150-6角ST 150ml 金ふた</span><span class="maker">ガラスビン.com ・ 10本セット</span></span><span class="qty">20本<small>2セット</small></span></a>
+  <a class="row" href="https://www.amazon.co.jp/dp/B00RB4CNO4?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B00RB4CNO4.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">瓶</span><span class="pname">ジャム瓶 TF-200 200ml 金ふた</span><span class="maker">ガラスビン.com ・ 10本セット</span></span><span class="qty">20本<small>2セット</small></span></a>
+  <a class="row" href="https://www.amazon.co.jp/dp/B092MCP5ZV?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B092MCP5ZV.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">真空パック</span><span class="pname">真空パック袋 20×25cm</span><span class="maker">Gokilife ・ 100枚入り ・ 鮭の切り身を2〜3匹ぶんずつ</span></span><span class="qty">200枚<small>使うのは100枚ちょっと</small></span></a>
+  <a class="row" href="https://www.amazon.co.jp/dp/B0CBLM1FNS?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B0CBLM1FNS.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">真空パック</span><span class="pname">真空パック機 フードシーラー VPF-M60</span><span class="maker">アイリスオーヤマ ・ チャコールグレー</span></span><span class="qty">1台</span></a>
+
+  <h3>調味料</h3>
+  <a class="row" href="https://www.amazon.co.jp/dp/B0DHP7SZ92?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B0DHP7SZ92.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">日本酒</span><span class="pname">一生青春 亀の尾100% 無濾過純米生酒 720ml</span><span class="maker">曙酒造（福島県会津）・ 味噌床にも醤油漬けにも、煮切ってこのお酒を使う</span></span><span class="qty">2本</span></a>
+  <a class="row" href="https://www.amazon.co.jp/dp/B085PYBX2W?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B085PYBX2W.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">味噌</span><span class="pname">甘口みそ だし入り カップ 650g</span><span class="maker">かねさ（青森）・ バット1枚につき1箱</span></span><span class="qty">バットの数</span></a>
+  <a class="row" href="https://www.amazon.co.jp/dp/B000V2F8MW?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B000V2F8MW.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">醤油</span><span class="pname">寺岡家の有機醤油 淡口</span><span class="maker">寺岡有機醸造 ・ 醤油漬けに</span></span><span class="qty">1本</span></a>
+  <a class="row" href="https://www.amazon.co.jp/dp/B004J2WQ2K?tag=bijiri05-22" target="_blank" rel="noopener"><span class="ph"><img src="/assets/goods/B004J2WQ2K.jpg" alt="" loading="lazy"></span><span class="rinfo"><span class="rcat">みりん</span><span class="pname">有機三州味醂 500ml</span><span class="maker">角谷文治郎商店 ・ 無添加・有機JAS</span></span><span class="qty">1本</span></a>
+  <div class="row"><span class="ph none">塩</span><span class="rinfo"><span class="rcat">塩</span><span class="pname">塩</span><span class="maker">洗ったあとにふたつまみ〜みつまみ</span></span><span class="qty">少し</span></div>
+
+  <h2 id="hogusu">ほぐして洗う<small>PREP</small></h2>
+  <ol class="steps">
+    <li>鮭の<b>鱗はステンレスたわしでこすって取る</b>。切り身は<b>水気をしっかり拭き取って</b>から、<b>冷凍庫で1〜2時間ちょっと凍らせて</b>、2〜3匹ぶんずつ真空パックする（少し凍らせてからのほうが、汁が出にくく真空しやすいらしい）。</li>
+    <li>筋子を<b>ほぐし網（9.0mm目のふるい）</b>にこすりつけて、粒をばらす。<img class="ill" src="img/1-hogusu.svg" alt="ほぐし網に筋子をこすりつけて粒を落とすイラスト" width="320" height="200" loading="lazy"></li>
+    <li><b>51℃のお湯</b>で洗う。浮いてくる膜やゴミを、きれいになるまで取る。このとき<b>いくらは白っぽくなる</b>けれど、大丈夫。<img class="ill" src="img/2-arau.svg" alt="51℃のお湯でいくらを洗うイラスト" width="320" height="200" loading="lazy"></li>
+    <li>洗い終わったら<b>塩をふたつまみ〜みつまみ</b>（いくらの量で加減する）。これで色がきれいに戻る。<img class="ill" src="img/3-shio.svg" alt="塩を入れると色が戻るイラスト" width="320" height="200" loading="lazy"></li>
+    <li><b>必ずザルにあげて、水気を全部切る。</b>ここが甘いと味がぼやける。<img class="ill" src="img/4-zaru.svg" alt="ザルで水気を切るイラスト" width="320" height="200" loading="lazy"></li>
+  </ol>
+
+  <h2 id="miso">味噌漬け<small>MISO</small></h2>
+  <h3>味噌床をつくる</h3>
+  <ol class="steps">
+    <li>日本酒を<b>強火で1分くらい</b>煮切る。<img class="ill" src="img/5-nikiri.svg" alt="酒を強火で煮切るイラスト" width="320" height="200" loading="lazy"></li>
+    <li>だし入りの味噌（かねさ・バット1枚につき1箱650g）に、煮切った酒を<b>約70ml</b>、少しずつ入れながら溶く。<b>塗りやすいペースト</b>になればOK。</li>
+  </ol>
+
+  <h3>バットに重ねる</h3>
+  <div class="layers" aria-label="バットの重ね方。上から順に">
+    <div class="miso"><i></i>味噌<small>いちばん上</small></div>
+    <div class="paper"><i></i>キッチンペーパー</div>
+    <div class="cloth"><i></i>餅布巾</div>
+    <div class="egg"><i></i>いくら（1段だけ）<small>2段目</small></div>
+    <div class="cloth"><i></i>餅布巾</div>
+    <div class="paper"><i></i>キッチンペーパー</div>
+    <div class="miso"><i></i>味噌</div>
+    <div class="paper"><i></i>キッチンペーパー</div>
+    <div class="cloth"><i></i>餅布巾</div>
+    <div class="egg"><i></i>いくら（1段だけ）<small>1段目</small></div>
+    <div class="cloth"><i></i>餅布巾</div>
+    <div class="paper"><i></i>キッチンペーパー</div>
+    <div class="miso"><i></i>味噌<small>バットの底</small></div>
+  </div>
+  <p class="caption">下から順に重ねていきます。深さ5cmくらいのバットで2段まで。</p>
+  <ul class="tips">
+    <li>底の味噌は<b>均等に</b>のばす。<b>端っこは塗りにくくて忘れがち</b>なので気をつける。</li>
+    <li>いくらは<b>1段だけ</b>、薄く広げる。重ねすぎると下のいくらが潰れる。</li>
+    <li>漬ける時間は<b>12時間</b>。</li>
+  </ul>
+
+  <h2 id="shoyu">醤油漬け<small>SHOYU</small></h2>
+  <p class="intro" style="margin-top:12px">いろいろ試した中で、いちばん美味しかった配合です。</p>
+  <table class="mix">
+    <tr><td>薄口醤油（寺岡家の淡口）</td><td>大さじ3</td></tr>
+    <tr><td>酒（一生青春）</td><td>大さじ3</td></tr>
+    <tr><td>みりん（有機三州味醂）</td><td>大さじ2</td></tr>
+    <tr><td>水</td><td>大さじ1</td></tr>
+    <tr><td>いくら</td><td>250〜300g</td></tr>
+  </table>
+  <ol class="steps">
+    <li><b>酒とみりんを先に強火で煮切る。</b></li>
+    <li>そこに<b>醤油と水</b>を入れて冷ます。</li>
+    <li>水気を切ったいくらを漬ける。味が足りなければ、<b>醤油をほんの少し</b>足す。</li>
+  </ol>
+  <div class="note">この配合でたれは約120mlできます。いくら250〜300gがひたひたに浸かるくらいの量です。たくさん仕込むときは、いくらの重さに合わせて倍にしてください。</div>
+
+  <h2 id="tsumeru">瓶に詰める<small>JAR</small></h2>
+  <div class="note"><b>瓶は必ず煮沸してから使う。</b>ここは絶対に飛ばさない。</div>
+  <ol class="steps">
+    <li>瓶とふたを鍋に入れて、<b>煮沸する</b>。</li>
+    <li>清潔なふきんの上に逆さに置いて、<b>中までしっかり乾かす</b>。</li>
+    <li>漬け終わったいくらを詰めて、ふたを閉める。</li>
+  </ol>
+
+  <h2 id="rainen">来年への申し送り<small>NOTE</small></h2>
+  <ul class="tips">
+    <li><b>魚のアラは1袋にまとめない。</b>今年は1袋に入れたら重すぎた。何袋かに分けて出す。</li>
+    <li><b>ボウルはもう1つあると楽。</b>IKEAのいちばん大きいものを4つに。</li>
+    <li>味噌は1箱を1枚のバットに使い切ったけれど、<b>少し塗りすぎだったかもしれない</b>。来年は少し減らして試す。</li>
+    <li>餅布巾は20枚あるといちばん楽。最低でも16枚。</li>
+    <li>真空パック袋は200枚用意して、実際に使ったのは100枚ちょっと。</li>
+    <li><b>味噌は無添加に挑戦したい。</b>今回のかねさのだし入りに近い味で、無添加のだし入り味噌を探して試す。</li>
+    <li><b>醤油漬けは2つに分けて食べ比べる。</b>①今の配合（いちばん美味しかったもの）と、②今の配合のたれに昆布をひと切れ入れたもの、または無添加のだし醤油で作ったもの。だし醤油は甘めで塩気も商品ごとに違うので、味を見ながら加減する。</li>
+  </ul>
+
+  <footer>
+    掲載商品は、実際に仕込みで使ったもの・買ったものです（2025〜2026年）。価格・仕様は各商品ページでご確認ください。<br>
+    Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。<br>
+    <a href="/muratake/">村田家のAmazon履歴</a> ・ <a href="/">← jiujitsu.co.jp トップへ</a><br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+
+<a href="/" style="position:fixed;right:14px;bottom:14px;z-index:99;background:#17140d;color:#e8c95e;font-size:11px;letter-spacing:.1em;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);font-family:sans-serif;">TOPへ</a>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}h2 small{font-size:12px}.rcat{font-size:12px}.maker{font-size:12.5px}.qty small{font-size:12px}.facts span{font-size:12px}.ph.none{font-size:12px}.caption{font-size:12.5px}.layers small{font-size:12px}footer{font-size:12.5px}a[href="/"][style*="position:fixed"]{font-size:13px!important;padding:12px 18px!important}}</style>
+</html>
