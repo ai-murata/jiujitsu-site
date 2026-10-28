@@ -1,0 +1,91 @@
+{
+ "date": "2026-10-28",
+ "generated_at": "2026-10-28T11:53:29+09:00",
+ "lead": "上場の書類からは「コードの9割は Claude 製」といった、Anthropic の見立てが見えてきました。研究面では、Claude を使った新薬づくりの初期の成果も報告されています。",
+ "items": [
+  {
+   "id": "bb65574d3d03",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "上場書類に「AI は人類の存亡リスク」「コードの9割は Claude 製」",
+   "summary": "Anthropic の IPO の書類には、AI が人類の存亡にかかわるリスクだという見方や、コードの9割は Claude 製だといった、ふつうの会社にはない見立てが書かれていました。",
+   "point": "",
+   "source": "ITmedia",
+   "original_title": "IPO目論見書に「AIは人類の存亡リスク」「コードの9割はClaude製」 Anthropicが示した規格外の見立て（1/2 ページ）",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5hR3FFZ3BrcWdHbUhRSWluMG4wWFg2WlJ3TWJLM0cyYzZLcHhQWGhmNkw4Yk1PNkxoWjU2bkNpdWxibXRLZHVhQ2dzTEtxVUJReE5wMkFLZlg2amUxMTNaVk5uejQ3YU1LM2c?oc=5",
+   "published": "2026-10-27T11:30:12+00:00"
+  },
+  {
+   "id": "f8e21f6df1f3",
+   "region": "jp",
+   "category": "料金・プラン",
+   "title": "米 GSA、政府向けに Claude を40%割引で提供",
+   "summary": "アメリカの政府調達を担う GSA が、Anthropic との「OneGov」契約を広げ、Claude を40%割引で提供します。",
+   "point": "",
+   "source": "Unite.AI",
+   "original_title": "GSA、AnthropicとのOneGov契約を拡大し、Claudeを40％割引",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPVVFXQVlvNG9YSEhpZ0N2WFEtcDZ5aTlnRmlZRHdNTmxRcGJCd1dDUmZYNWdxTjEtbHF1VEJmM25rUmJUZDcwZVdxQnJrNWtqY2J6MnVVWGNGdzdydktFU0NjZmotRlNnYmx1a1RmaGJ5Y0JLVm9vSnVKbzMwYmNkWERfWGhGVXI0Tkp1d1Z4cXI?oc=5",
+   "published": "2026-10-27T22:40:13+00:00"
+  },
+  {
+   "id": "9dc630ed92f9",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "Invesco と Anthropic、Claude 上でアドバイザー向けポートフォリオツールを連携",
+   "summary": "資産運用会社の Invesco と Anthropic が、金融アドバイザー向けのポートフォリオ（資産の組み合わせ）ツールを Claude の上で使えるように連携させました。",
+   "point": "",
+   "source": "Unite.AI",
+   "original_title": "InvescoとAnthropic、Claude上でアドバイザー向けポートフォリオツールを連携",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOZDlmY01VenQ3UEhDUFBLanotUWdKdXFTdFBBdXNHZW5pdmgzcVIxTVVuVEZuTkV6RUhLSS04YmV0S1hsMmU0Q2NlVmdVckZBYi11a19ZOHktS3JDUmx4OS1fbU9KUVoyWlp4eUxrRWFJdndKYWk2M3I2N3c5R3FLT2tScUc2LWM0M3htUGxCZzQ2aU1odVlWZA?oc=5",
+   "published": "2026-10-27T17:06:01+00:00"
+  },
+  {
+   "id": "851ab2c12c7c",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Claude で新薬づくりを速める、初期の成果を報告",
+   "summary": "Anthropic が、Claude を使って新しい薬の開発を速める取り組みについて、初期の成果を報告しました。",
+   "point": "",
+   "source": "Anthropic",
+   "original_title": "Early progress on accelerating drug development with Claude",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5IbmplZ01nQUt5R0hldklCR3FRMlVWZy1RcFZlc1VpRDhVNk00Vzd0Mm5QdlNXb1NncmxTX1ZFZTl4Xzl5bkpqUU56OGVxWjlZWmN6SjM4cVFLX3dkU0RUNWJVQ1JZTUswTk1iSzJ1MGwyUldn?oc=5",
+   "published": "2026-10-27T20:20:53+00:00"
+  },
+  {
+   "id": "66f6e1e9018b",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "AI エージェントは専門家の判断にどう影響するか",
+   "summary": "Anthropic が、判断が必要な仕事で、専門家が AI エージェントにどのように判断をまかせているかを調べた研究を公開しました。",
+   "point": "AI に任せる場面と、自分で判断する場面を考えるヒントになりそうです。",
+   "source": "Anthropic",
+   "original_title": "How AI agents shape experts’ judgment calls",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1IaTRIX2lBc1kwcDRXenZsRXRxcy1vZWVQVlBGdlJsS1p1bkpOQzBpblRRU0l6elhUa0Z3a0RmOVlaV1NmUlgxU3pQWjE2UTVNcEdMdDBBQ0VobFBMS2k5MS1yQ3dQMzQ?oc=5",
+   "published": "2026-10-27T18:50:53+00:00"
+  },
+  {
+   "id": "d69697bc8857",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Claude で重要なソフトウェアの弱点を見つけて検証",
+   "summary": "Anthropic が、Claude を使って、現実に使われている重要なソフトウェアの弱点（脆弱性）を見つけ、実際に悪用できるかを確かめた研究を公開しました。",
+   "point": "",
+   "source": "Anthropic",
+   "original_title": "Discovering and exploiting vulnerabilities in critical, real-world software with Claude",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBMTTViWmp6TE1SU3lNQjd6aWozb0Rhd0VjSVlMOThjRXpFRjBvN1lZdVRreFg3UWRGNjNqRkViU3lQbFJuaHRIMXBJUHFHSXhpbTZSTGhybUxOdTU3bEFDMUIzd0NmcWRHRk1CckVLV2FIT1ZDb1ZMZHJ0WWhxSE0?oc=5",
+   "published": "2026-10-27T18:20:51+00:00"
+  },
+  {
+   "id": "68403036b114",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Claude で11の研究所をまとめた「1人バイオ企業」を Anthropic が買収",
+   "summary": "Claude を使って11の研究所の作業をまとめていた、1人で運営するバイオ企業を Anthropic が買収したと R&D World が伝えました。",
+   "point": "",
+   "source": "R&D World",
+   "original_title": "Anthropic acquires a one-person biotech that used Claude to coordinate 11 labs",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaG5QVkVkdXoyQ0N3eEFmbjBtdGtNNC1jalU4ck1HZ25Ea011cWw0Y2VIY2k0RkhORWppN21pV0Jwd1Q1ZHpYOGNNTTVnM0RpYllJZG9wTS0xczNhMWt4ZE5QcnFVa3FjM0F5dnhYczQtSS1SOXdpU2dlUVhyQVNBd2phbUhOQzZOVktnQjlB?oc=5",
+   "published": "2026-10-27T23:10:01+00:00"
+  }
+ ]
+}
