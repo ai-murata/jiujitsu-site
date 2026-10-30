@@ -1,0 +1,115 @@
+{
+ "date": "2026-10-30",
+ "generated_at": "2026-10-30T11:54:05+09:00",
+ "lead": "プラグイン・スキル・コネクタを1つのページでまとめて管理できるようになり、Salesforce も Claude の中で使えるようになりました。安全面では、「ダウンロード」フォルダに置いた指示書ファイルで Claude Code などを操る攻撃に注意が呼びかけられています。",
+ "items": [
+  {
+   "id": "0e5eaa74c7c5",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "プラグイン・スキル・コネクタを1つのページで管理",
+   "summary": "Claude のプラグイン、スキル、コネクタを、ひとつの「プラグイン」ページからまとめて管理できるようになったことが、ヘルプセンターで案内されました。",
+   "point": "あちこちの設定画面を行き来せずに、追加した機能をまとめて確認できます。",
+   "source": "Claude Help Center",
+   "original_title": "Manage plugins, skills, and connectors from one Plugins page",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNRkdLZS1MX3U3XzJrdFc1cWFQWld1SEZFOWRPZm5lQmRHU3lQRk8wa2JjVjdRS1NhcUtKVEZxM280VGN3eDh2al9xdVFpcWJ2Mmk2NlBqUEZNdUJQUlFxcWRodFd1a052RWthaU14MU9nZFFERGgyRE1tN1BUNkhIR3k2YlVsbTRiZzhFeWhTYUo2VHFQbGRUcWVyWXdFbUdRRDhpRzVHY3VpQQ?oc=5",
+   "published": "2026-10-28T15:30:58+00:00"
+  },
+  {
+   "id": "9c8b4dba6a40",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Salesforce を Claude の中へ",
+   "summary": "Salesforce を Claude の中で使えるようにする取り組みが、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Bringing Salesforce into Claude",
+   "link": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPYkN6aW9rOWJ1bHFVMjZvOC1hN3lFYkE2M096SWkxRVJCOXdYVE9YQVRseGs1VFNfa3NxeUU0VFJlb2hMMEx2OEVPMDRUa3JwUGdpd2x6VGVMalNmc3lxZ19fRWVGS19sQ1hBUDliUFFmS1FSZkZPQXk5ZUpCRFVYU040Mmx4V0RkNFFPbE5aNmkwRmFwTWxfdU01c0hKOXp1TVY2TVhvaWMzdEhvajJDZ3ZNbmhOSHp4TWd4UVN1ODdvQ3RkN1hEY0JCTVBQWWNHcWNzZkZxTHJaSThxQlZ4UXVTM0NPVTJ5bWJXdDd2ZFZVRjhvV0p0OFBKbUNPWGk4S1dyY1RwcWZ4QUF1dDNCVlE2R1I4R25qNXc?oc=5",
+   "published": "2026-10-28T21:22:04+00:00"
+  },
+  {
+   "id": "3e9c42624863",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude の「スマートレポート」、仕事と関係ない使い方も上司に",
+   "summary": "Claude の新しいスマートレポートでは、社員が仕事と関係のない話題に Claude を使っていることも、管理者に伝わると Mashable が報じました。",
+   "point": "会社のアカウントで Claude を使うときは、使い方が管理者に見えることがあると知っておきましょう。",
+   "source": "Mashable",
+   "original_title": "Claude's new smart reports tell bosses when workers are 'off-topic'",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNSHNYSEJlZEQtclhFUk1CZjRKWkFhVk1SM1pmcEJkajl5LWgtSHVfaDNkWUtKazRRUUh2YjZ1UVB0M1owMEdOdnlLc0FOdmdDbWdQanZqUjdELS1lVHFHMktfcHVXbXRaZmUtcXdaTncyTlBrdU5MVEN3NURjR1c4Mg?oc=5",
+   "published": "2026-10-30T00:11:48+00:00"
+  },
+  {
+   "id": "02f689315140",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "「ダウンロード」フォルダに AI 指示書（.md）を置かないで",
+   "summary": "「ダウンロード」フォルダに置かれた AI 向けの指示書ファイル（.md）を使って、Codex や Claude Code を操る攻撃に注意するよう呼びかけられています。",
+   "point": "ネットから落としたファイルが入ったフォルダで、Claude Code をそのまま動かさないようにしましょう。",
+   "source": "CNET Japan",
+   "original_title": "「ダウンロード」フォルダに「AI指示書」（.md）を置かないで--CodexやClaude Codeを操る攻撃",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBral9jTzJxT1hSTzdSQTlrQlNfVF9XVWtCdENQS0d3VEJZR1NDYXhTUWxrWUhOODNWaTN0MTBsMHFMY3BIcG9wOF9ZZ1Iwd2RfVkE?oc=5",
+   "published": "2026-10-29T08:45:00+00:00"
+  },
+  {
+   "id": "fade302efc27",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "「この PC、感染してない？」を Claude Code に聞ける無料スキル",
+   "summary": "パソコンがウイルスなどに感染していないかを、Claude Code や Codex に聞ける無料のスキルが GitHub で公開されました。",
+   "point": "",
+   "source": "キーマンズネット",
+   "original_title": "「このPC、感染してない？」Claude Code、Codexなどに聞ける無料スキル GitHubで公開",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5zZ1RuOGZVZUVDVzl5TldMWnU0WDRVZXB1QVRzQ01iSjV6RjdkVmozTm0zbU5XZGVkdkYwWXJCU3pVNU1CdVVvbEFOSHh6Vm9iWjJraXhkaEJXUDNPMkJXMjFCU0E4dw?oc=5",
+   "published": "2026-10-29T22:00:00+00:00"
+  },
+  {
+   "id": "fe6b66208c13",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Anthropic 幹部エンジニア「チームのコードはすべて Claude が書いている」",
+   "summary": "Anthropic の幹部エンジニアが、自分のチームでは人がコードを書く作業はもうなく、すべて Claude が書いていると明かしました。",
+   "point": "",
+   "source": "Business Insider Japan",
+   "original_title": "「人間のコーディング作業は、もはや存在しない」…アンソロピック幹部エンジニアが、自身のチームではすべてClaudeが書いていることを明かす",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPMFZ2VGViU0JNNTdxeW1jbE1JMkk0WkZsMVFhY00zd1Bpd3BidHFjd19UYnIwWW1La0xYSXRuY3B4LUV3REFfMW1ZdGYyNFZsb2hlQzRYZldyOXA1bHI5Wk42ejBQeElrcEdrWnZoanJvZkY4NHdMT2Z0ZmZkSHEtdzJmY0ZqMEpTSGZDa2N1akkwZw?oc=5",
+   "published": "2026-10-29T10:00:00+00:00"
+  },
+  {
+   "id": "7539fd6abfcf",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "AI チェックツール「トラスクエタ」に Claude を搭載",
+   "summary": "AI チェックツール「トラスクエタ」に、Anthropic の Claude が組み込まれました。",
+   "point": "",
+   "source": "ニコニコニュース",
+   "original_title": "AIチェックツール「トラスクエタ」に、Anthropic社のAI「Claude」を搭載",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB2RkduSUhaRGFHekx5XzY3cTNua0F0MlBBOTEyNk4yYUxINE9PNG0tQUdXenZEYjZobHgyaTUxb0F5Mm1ManRBMzFQbTFvT2ZIZGh6R1lkLU5CS1ozQWhpSlc4cUFCdw?oc=5",
+   "published": "2026-10-29T12:00:27+00:00"
+  },
+  {
+   "id": "4a0a759c59fd",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Anthropic をかたるフィッシングメールが、セキュリティ製品をすり抜け",
+   "summary": "Anthropic をよそおったフィッシングメール（だましのメール）が、主なセキュリティ製品の検査をすり抜けていると Dark Reading が伝えました。",
+   "point": "Anthropic や Claude を名乗るメールのリンクは、すぐに押さずに確認しましょう。",
+   "source": "Dark Reading",
+   "original_title": "Anthropic-Themed Phishing Emails Bypass Top Security Tools",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNaUdrSjBtRmhSbVZHWDBCREw2RkdGQmVvYThia1o3T0NmUVBxRktMVlh3UG9Pb1A1bW1rV0hqS0swdThZQ2VHbnJ2MlVVNTZjRHJkalBVeU16dWhQRzVIWGN5MXNER0I5QmtBSzVUajdVT3Z5TmdBXzVCbUYtVnllcy1zeVY2MGpya1hYUkVnQXFiODRES2NEX18tdUU1ZHZONVpQaQ?oc=5",
+   "published": "2026-10-29T21:53:25+00:00"
+  },
+  {
+   "id": "0bf5ea7e815b",
+   "region": "intl",
+   "category": "その他",
+   "title": "Anthropic の AI 活用講座、受講者が110万人に",
+   "summary": "Anthropic の AI を使いこなすための講座の利用者が、110万人に達しました。",
+   "point": "",
+   "source": "EdTech Innovation Hub",
+   "original_title": "Anthropic AI fluency courses reach 1.1m users | ETIH EdTech News",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQYWdYN0d0ZUlIQldGb2NPdXpKM3BUQmJXS09pTEhsa1BaZ3RYMmhjSTdCUmQtNFU1Q3R0bkdnRTdFQ0gzMy1sbXB1ZGNxY3ZpU0NuLWYzQTJFb1hacDltYVdUY0pheElpWDM3S2hZTWF6dzE2MU81RFAyODVDekgtOHhSWURPZ1BJVXR3WFpYSFhWYlktMUxlbU9oUDFVUHNtSV9xRDFpT3JOa3RaVzFUclJYYnFOX0ZCOWxpeU9mNXBJR0o1bl93?oc=5",
+   "published": "2026-10-30T00:21:06+00:00"
+  }
+ ]
+}
