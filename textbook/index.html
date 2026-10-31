@@ -67,15 +67,15 @@
   .get svg { width:24px; height:24px; flex:none; }
   .gift small { display:block; margin-top:8px; color:var(--faint); font-size:13px; }
 
-  .photo { position:relative; left:50%; margin-left:-50vw; width:100vw; height:clamp(220px,34vw,420px); background:url(img/lecture.jpg) center 42%/cover; }
   .sec-label { font-family:var(--mincho); font-size:15px; letter-spacing:.3em; color:var(--gold); font-weight:700; display:flex; align-items:center; gap:16px; margin:80px 0 26px; }
   .sec-label::after { content:""; flex:1; height:1px; background:var(--line); }
   .sec-head { font-family:var(--mincho); font-size:clamp(25px,3.6vw,34px); font-weight:700; color:var(--ink); line-height:1.4; letter-spacing:.04em; margin:-8px 0 30px; }
 
   .teachs { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
-  .teach { background:var(--panel); border:1px solid var(--line); border-top:3px solid var(--gold-hi); padding:24px 26px 26px; }
-  .teach .no { font-family:var(--mincho); font-weight:700; color:var(--gold-hi); font-size:30px; line-height:1.2; }
-  .teach h3 { font-family:var(--mincho); font-size:24px; line-height:1.45; color:var(--ink); letter-spacing:.03em; margin:2px 0 8px; font-weight:700; }
+  .teach { display:grid; grid-template-columns:150px 1fr; gap:18px; align-items:start; background:var(--panel); border:1px solid var(--line); padding:18px; }
+  .teach img { display:block; width:100%; aspect-ratio:1; object-fit:cover; }
+  .teach .no { font-family:var(--mincho); font-weight:700; color:var(--gold-hi); font-size:17px; }
+  .teach h3 { font-family:var(--mincho); font-size:21px; line-height:1.45; color:var(--ink); letter-spacing:.03em; margin:2px 0 8px; font-weight:700; }
   .teach p { font-size:14.5px; line-height:1.85; }
   .flow { display:flex; flex-wrap:wrap; align-items:center; gap:4px 7px; margin-bottom:8px; font-weight:700; color:var(--gold); font-size:13.5px !important; }
   .flow i { font-style:normal; color:var(--gold-hi); }
@@ -130,8 +130,8 @@
     .notice span { margin:0 7px; }
     .lead { font-size:15.5px; margin-top:10px; line-height:1.75; }
     .sec-label { margin-top:60px; }
-    .teach { padding:20px 20px 22px; }
-    .teach h3 { font-size:22px; }
+    .teach { grid-template-columns:96px 1fr; gap:14px; padding:14px; }
+    .teach h3 { font-size:19px; }
     .message { margin-top:60px; padding:56px 20px; }
     .books { grid-template-columns:1fr; gap:12px; }
     .book { display:grid; grid-template-columns:96px 1fr; column-gap:16px; padding:14px; }
@@ -184,27 +184,31 @@
     </div>
   </section>
 
-  <div class="photo" role="img" aria-label="インストラクター養成講座の座学の様子"></div>
-
   <h2 class="sec-label">WHAT RYOZO TEACHES</h2>
   <p class="sec-head"><span data-l="ja">村田良蔵が教えていること</span><span data-l="ko">무라타 료조가 가르치는 것</span><span data-l="en">What Ryozo Murata teaches</span><span data-l="pt">O que Ryozo Murata ensina</span></p>
   <div class="teachs">
     <article class="teach">
+      <img src="img/t1.jpg" alt="" loading="lazy">
       <div><span class="no">1</span><h3><span data-l="ja">柔術は、ディフェンスから。</span><span data-l="ko">주짓수는 디펜스부터.</span><span data-l="en">Jiu-jitsu starts with defense.</span><span data-l="pt">O jiu-jitsu começa pela defesa.</span></h3><p class="flow"><span data-l="ja">ディフェンス</span><span data-l="ko">디펜스</span><span data-l="en">Defense</span><span data-l="pt">Defesa</span><i>→</i><span data-l="ja">コントロール</span><span data-l="ko">컨트롤</span><span data-l="en">Control</span><span data-l="pt">Controle</span><i>→</i><span data-l="ja">サブミッション</span><span data-l="ko">서브미션</span><span data-l="en">Submission</span><span data-l="pt">Finalização</span></p><p><span data-l="ja">ディフェンスをしながら相手をコントロールし、コントロールした状態を作ってからサブミッションにいく。これが柔術の構造です。</span><span data-l="ko">디펜스를 하면서 상대를 컨트롤하고, 컨트롤한 상태를 만든 뒤에 서브미션으로 간다. 이것이 주짓수의 구조입니다.</span><span data-l="en">Control your opponent while you defend, and go for the submission only once you have that control. This is the structure of jiu-jitsu.</span><span data-l="pt">Controle o oponente enquanto defende e só vá para a finalização depois de ter esse controle. Essa é a estrutura do jiu-jitsu.</span></p></div>
     </article>
     <article class="teach">
+      <img src="img/t2.jpg" alt="" loading="lazy">
       <div><span class="no">2</span><h3><span data-l="ja">今、自分はどこにいるのか。</span><span data-l="ko">지금 나는 어디에 있는가.</span><span data-l="en">Where are you right now?</span><span data-l="pt">Onde você está agora?</span></h3><p><span data-l="ja">現在地を常に把握する。それができて初めて、成功したときも失敗したときも原因が明確になり、成長の糧になります。</span><span data-l="ko">현재 위치를 항상 파악한다. 그것이 되어야 비로소 성공했을 때도 실패했을 때도 원인이 명확해지고 성장의 양식이 됩니다.</span><span data-l="en">Always know where you are. Only then do the causes of your successes and failures become clear, and turn into growth.</span><span data-l="pt">Saiba sempre onde você está. Só assim as causas dos acertos e dos erros ficam claras e viram crescimento.</span></p></div>
     </article>
     <article class="teach">
+      <img src="img/t3.jpg" alt="" loading="lazy">
       <div><span class="no">3</span><h3><span data-l="ja">力ではなく、構造で。</span><span data-l="ko">힘이 아니라 구조로.</span><span data-l="en">Structure, not strength.</span><span data-l="pt">Estrutura, não força.</span></h3><p><span data-l="ja">力で押さえ込もうとしても、必ず限界があります。アーチなどの構造を使えば、疲れずに強いプレッシャーをかけられます。</span><span data-l="ko">힘으로 누르려 해도 반드시 한계가 있습니다. 아치 같은 구조를 쓰면 지치지 않고 강한 압박을 줄 수 있습니다.</span><span data-l="en">Force always has a limit. Use structure, such as an arch, and you can apply strong pressure without tiring.</span><span data-l="pt">A força sempre tem limite. Com a estrutura, como o arco, você aplica pressão forte sem se cansar.</span></p></div>
     </article>
     <article class="teach">
+      <img src="img/t4.jpg" alt="" loading="lazy">
       <div><span class="no">4</span><h3><span data-l="ja">膠着は技術。</span><span data-l="ko">교착은 기술.</span><span data-l="en">A stalemate is a skill.</span><span data-l="pt">A amarração é técnica.</span></h3><p><span data-l="ja">やられない状態を作るのも技術です。やられないという余裕があるから、その中でパスガードを考えられます。</span><span data-l="ko">당하지 않는 상태를 만드는 것도 기술입니다. 당하지 않는다는 여유가 있기에 그 안에서 가드 패스를 생각할 수 있습니다.</span><span data-l="en">Creating a position where you can't be beaten takes skill. That comfort is what lets you start thinking about passing.</span><span data-l="pt">Criar uma situação em que você não é pego também é técnica. É essa tranquilidade que permite pensar na passagem de guarda.</span></p></div>
     </article>
     <article class="teach">
+      <img src="img/t5.jpg" alt="" loading="lazy">
       <div><span class="no">5</span><h3><span data-l="ja">失敗の原因を、謙虚に追求する。</span><span data-l="ko">실패의 원인을 겸허하게 추구한다.</span><span data-l="en">Pursue the cause of your failures, humbly.</span><span data-l="pt">Vá atrás da causa dos seus erros, com humildade.</span></h3><p><span data-l="ja">うまくいかない最大の要因は、力でも体力でも精神面でもありません。極められたら、その二手、三手前に何があったのかを確認します。</span><span data-l="ko">잘 안 되는 가장 큰 요인은 힘도, 체력도, 정신력도 아닙니다. 당했다면 그 두세 수 앞에 무슨 일이 있었는지 확인합니다.</span><span data-l="en">The biggest obstacle isn't strength, stamina or mental toughness. When you get caught, look at what happened two or three moves earlier.</span><span data-l="pt">O maior obstáculo não é força, preparo físico nem o lado mental. Quando for finalizado, veja o que aconteceu dois ou três movimentos antes.</span></p></div>
     </article>
     <article class="teach">
+      <img src="img/t6.jpg" alt="" loading="lazy">
       <div><span class="no">6</span><h3><span data-l="ja">修正と褒めることは、必ずセット。</span><span data-l="ko">수정과 칭찬은 반드시 세트.</span><span data-l="en">Correction and praise always go together.</span><span data-l="pt">Correção e elogio sempre juntos.</span></h3><p><span data-l="ja">教える人は、修正だけで終わらせません。生徒をよく見て、できたことをしっかり伝えます。</span><span data-l="ko">가르치는 사람은 수정만으로 끝내지 않습니다. 학생을 잘 보고, 해낸 것을 제대로 전합니다.</span><span data-l="en">A teacher never stops at the correction. Watch your students closely, and tell them clearly when they get it right.</span><span data-l="pt">Quem ensina não termina na correção. Observe bem o aluno e diga com clareza quando ele acertar.</span></p></div>
     </article>
   </div>
