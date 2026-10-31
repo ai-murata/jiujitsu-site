@@ -49,8 +49,9 @@
   .top { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:8px 0; }
   .site { font-family:var(--mincho); font-weight:600; letter-spacing:.06em; color:var(--gold); text-decoration:none; font-size:15px; }
   .langs { display:flex; gap:2px; }
-  .langs button { font:500 13px var(--gothic); color:var(--faint); background:none; border:0; border-bottom:2px solid transparent; min-height:40px; padding:0 9px; cursor:pointer; }
-  .langs button[aria-pressed="true"] { color:var(--ink); border-color:var(--gold-hi); }
+  .langs button { display:inline-flex; align-items:center; gap:5px; font:500 13px var(--gothic); color:var(--faint); background:none; border:1px solid transparent; border-radius:999px; min-height:40px; padding:0 11px; cursor:pointer; }
+  .langs button .fl { font-size:18px; line-height:1; }
+  .langs button[aria-pressed="true"] { color:var(--ink); font-weight:700; background:var(--panel); border-color:var(--gold-hi); }
 
   .hero { position:relative; display:grid; grid-template-columns:1.25fr .85fr; gap:44px; align-items:center; padding:34px 0 60px; }
   .hero::before { content:""; position:absolute; inset:-40px 0 0; background:radial-gradient(ellipse 60% 70% at 72% 45%, rgba(201,162,39,.13), transparent 70%); pointer-events:none; }
@@ -138,7 +139,10 @@
     .book img { grid-row:1 / span 3; }
     .book b { margin-top:0; }
     .book em { margin-top:8px; padding:11px 0; }
-    .langs button { padding:0 7px; }
+    .top { flex-wrap:wrap; gap:0 12px; }
+    .site { font-size:13px; }
+    .langs { width:100%; justify-content:space-between; }
+    .langs button { padding:0 9px; gap:4px; }
   }
 </style>
 <body>
@@ -150,7 +154,7 @@
   <div class="top">
     <a class="site" href="/">jiujitsu.co.jp</a>
     <div class="langs" role="group" aria-label="Language">
-      <button type="button" data-set="ja">日本語</button><button type="button" data-set="ko">한국어</button><button type="button" data-set="en">EN</button><button type="button" data-set="pt">PT</button>
+      <button type="button" data-set="ja"><span class="fl">🇯🇵</span>日本語</button><button type="button" data-set="ko"><span class="fl">🇰🇷</span>한국어</button><button type="button" data-set="en"><span class="fl">🇺🇸</span>EN</button><button type="button" data-set="pt"><span class="fl">🇧🇷</span>PT</button>
     </div>
   </div>
 
@@ -240,19 +244,19 @@
   <div class="books">
     <a class="book" href="yawara-sweep-textbook-ja.pdf" lang="ja">
       <img src="img/cover-ja.jpg" alt="日本語版の表紙" loading="lazy">
-      <b>日本語</b><small>PDF 12MB・55ページ</small><em>PDFを開く</em>
+      <b>🇯🇵 日本語</b><small>PDF 12MB・55ページ</small><em>PDFを開く</em>
     </a>
     <a class="book" href="yawara-sweep-textbook-ko.pdf" lang="ko">
       <img src="img/cover-ko.jpg" alt="한국어판 표지" loading="lazy">
-      <b>한국어</b><small>PDF 12MB・54쪽</small><em>PDF 열기</em>
+      <b>🇰🇷 한국어</b><small>PDF 12MB・54쪽</small><em>PDF 열기</em>
     </a>
     <a class="book" href="yawara-sweep-textbook-en.pdf" lang="en">
       <img src="img/cover-en.jpg" alt="English edition cover" loading="lazy">
-      <b>English</b><small>PDF 11MB, 58 pages</small><em>Open PDF</em>
+      <b>🇺🇸 English</b><small>PDF 11MB, 58 pages</small><em>Open PDF</em>
     </a>
     <a class="book" href="yawara-sweep-textbook-pt.pdf" lang="pt">
       <img src="img/cover-pt.jpg" alt="Capa da edição em português" loading="lazy">
-      <b>Português</b><small>PDF 11MB, 58 páginas</small><em>Abrir PDF</em>
+      <b>🇧🇷 Português</b><small>PDF 11MB, 58 páginas</small><em>Abrir PDF</em>
     </a>
   </div>
 
