@@ -1,0 +1,127 @@
+{
+ "date": "2026-10-31",
+ "generated_at": "2026-10-31T11:53:44+09:00",
+ "lead": "Claude に新しい「Ultra プラン」や、使用量を追加で買える「使用量バンドル」の案内が登場しました。一方、Cursor のマーケットプレイスで Claude Code の拡張機能が改ざんされ、最大5,000人に影響したおそれがあります。",
+ "items": [
+  {
+   "id": "4811ed5a117c",
+   "region": "intl",
+   "category": "料金・プラン",
+   "title": "新しい「Ultra プラン」の案内が登場",
+   "summary": "Claude の「Ultra プラン」とは何かを説明する案内が、ヘルプセンターに載りました。",
+   "point": "新しいプランの名前です。料金や中身は公式の案内で確かめましょう。",
+   "source": "Claude Help Center",
+   "original_title": "What is the Ultra plan? | Claude Help Center",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE41Tk5TbGYtQ0ZWT2VDd1NQekNSNklMNGYzNjBFbWFMc0UzeEd2ZGhuMmx6QlcxZk8ydEo5d05HVGNiWmstYTFBaXBORWFVRWtfTGZSWThnR2tURi1zZE9BWWlnVlhSQ0l2N2ZrVldaNHpsMHprZ3Y5OHNB?oc=5",
+   "published": "2026-10-30T17:11:53+00:00"
+  },
+  {
+   "id": "362c9fd915c1",
+   "region": "intl",
+   "category": "料金・プラン",
+   "title": "使用量を追加で買える「使用量バンドル」",
+   "summary": "Claude で使える量をまとめて追加購入する「使用量バンドル」の買い方が、ヘルプセンターで案内されました。",
+   "point": "使用上限にすぐ届いてしまう人には、選択肢がひとつ増えます。",
+   "source": "Claude Help Center",
+   "original_title": "Buy usage bundles | Claude Help Center",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBaTU5wWklwT01YUGw5d2NZSWhsYXRMOS1iRmY1eFBGRHoxcGp4MV9RcTR2VjlHMXcwSHpTZjBHMFYxUXFPR1otaF9HRUdoR19VSW9sVHZacWVOdXNYSEtxc3lHRXh0ZjJxdHh2SWMwd0NuZ3M?oc=5",
+   "published": "2026-10-30T17:08:23+00:00"
+  },
+  {
+   "id": "b57cab4f6d3f",
+   "region": "intl",
+   "category": "料金・プラン",
+   "title": "Claude の大きな使用上限のひとつを撤廃、ただし全員ではない",
+   "summary": "Anthropic が Claude の大きな使用上限のひとつを取りはらいましたが、すべての利用者が対象ではないと The New Stack が伝えました。",
+   "point": "",
+   "source": "The New Stack",
+   "original_title": "Anthropic just removed one of Claude’s biggest usage limits — but not for everyone",
+   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA2WWg2bVhLZjRZVDBxMExxSjVlY1U4ZGJyVFlxT0xNTXhxd1prSlZYV2JsQlM5NzBnLWVPcjExQlVjRV9lY3Q1VUJGVEJKX0lMZ000RUJlR25QZllZeGNr?oc=5",
+   "published": "2026-10-30T20:15:41+00:00"
+  },
+  {
+   "id": "80c258686446",
+   "region": "intl",
+   "category": "新モデル",
+   "title": "あなたのプランで使える Claude Fable モデル",
+   "summary": "どのプランでどの Claude Fable モデルが使えるのかを説明する案内が、ヘルプセンターに載りました。",
+   "point": "Fable を使いたい人は、自分のプランで使えるかを確認してみましょう。",
+   "source": "Claude Help Center",
+   "original_title": "Claude Fable models on your plan | Claude Help Center",
+   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOa256aGFaVDgwYU94ck1UTTJHWXdQUk8ySFNfaHlER0Rmb2xDQUROMW9rUFhWR0J2NHlqbHNHRlhnTHVZajlPNi1tb1Z6WTI1VFNUUzJWU0JEYTdudm16a0ZsWC1zYUdLdzZxV1I0ZmE0UzhNMl94TnlPa1BYTHNwU0pRUWY1V3M?oc=5",
+   "published": "2026-10-30T17:08:22+00:00"
+  },
+  {
+   "id": "c97a527de3f0",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "Cursor の「Claude Code」拡張機能が改ざん、最大5,000人が被害か",
+   "summary": "開発ツール Cursor で配られていた「Claude Code」の拡張機能が改ざんされ、最大5,000人が被害を受けたおそれがあると伝えられています。",
+   "point": "Cursor で Claude Code の拡張機能を入れている人は、公式の案内を確認しましょう。",
+   "source": "TradingView",
+   "original_title": "最大5000人が被害か、Cursor「Claude Code」拡張機能改ざんで",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE10OG80dW5jcTRfMTAzb19aYzZ0RmJVRmgxM1FVczBPaVRrR1g0NVdhRS14VXRkXzNDVm9jeXQ0TWwzOHExaE5XS1ZmQmNVQ0dXOVl2em9hS2h3VndQQnZDcnd6a0hvZURweGFNTXUtVFlVRXZfUEpV?oc=5",
+   "published": "2026-10-30T08:30:21+00:00"
+  },
+  {
+   "id": "ac516df6f9a5",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Rubrik、Claude Code 向けの AI エージェント安全基盤を発表",
+   "summary": "Rubrik が、Anthropic の Claude Code 向けに、AI エージェントの安全を守るしくみ「Rubrik Agent Cloud」を発表しました。",
+   "point": "",
+   "source": "ThinkIT",
+   "original_title": "Rubrik、Anthropic「Claude Code」向けにAIエージェントのセキュリティ基盤「Rubrik Agent Cloud」を発表",
+   "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBuR3BjT083RktwYVhyLUNteG9PTjNoVHBIVXBfaDRJbkRjMnVzWU5vYzRYcTF0LXJPZFhJMmJFWXBtcnkzMEhYQTNQaw?oc=5",
+   "published": "2026-10-29T16:15:49+00:00"
+  },
+  {
+   "id": "488dafb7f8a1",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "計画する AI と実行する AI、Claude Code を役割分担させたら仕事がはかどった",
+   "summary": "Claude Code を「計画する役」と「実行する役」に分けて使ったところ、仕事がはかどったという体験記事です。",
+   "point": "Claude Code をもっと上手に使いたい人のヒントになります。",
+   "source": "Yahoo!ニュース",
+   "original_title": "計画するAI、実行するAI。Claude Codeを役割分担させたら仕事がはかどった (ライフハッカー・ジャパン)",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVjVZcWZZSWh6TnBHemlxTGVPc2hGLUZFQ1hlU2M1bnhYaXZ0TVlZV29yZHVDUnVvYzZndlUzUmpWWnVhNER3REJYQlo0TTF3bEtoeFlqWkxZY2xqajl1b1pfSU13VmpZZ1oyNVlmOUNqR25WU1pHbXYtemlpSEdVVHd2TmpWRGpCNUtULWlB?oc=5",
+   "published": "2026-10-30T00:01:02+00:00"
+  },
+  {
+   "id": "82b944c7d1ae",
+   "region": "jp",
+   "category": "その他",
+   "title": "AI の巡回ロボットを断る共通のしくみ、OpenAI・Google・Microsoft・Anthropic が支持",
+   "summary": "OpenAI、Google、Microsoft、Anthropic が、AI が情報を集めるために巡回するロボット（クローラー）を断るための共通のしくみを支持しました。",
+   "point": "",
+   "source": "BigGo ファイナンス",
+   "original_title": "OpenAI、Google、Microsoft、AnthropicがAIクローラー向け共通オプトアウトトークンを支持",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA5VV9ETjVyZHpFVGtUZUdtTW1vb0FTTkFlLXZFT2Jvc2J2NldEZ1lKZm81WmZ3YXZPLVlGYy1taE9EZTRpby1IaXoyMzVXVU5pRGpITTF6SmdhLXNjYlprVThybHQ4Rlpwd1Q5RHg1TzNjYVZW?oc=5",
+   "published": "2026-10-30T22:25:00+00:00"
+  },
+  {
+   "id": "686d3fffad21",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Anthropic の AI、Linux カーネルの重大なバグを発見",
+   "summary": "Anthropic の AI モデルが、外から管理者の権限を奪えてしまう Linux カーネルのバグを見つけたと CSO Online が伝えました。",
+   "point": "",
+   "source": "CSO Online",
+   "original_title": "Anthropic AI model finds Linux kernel bug that leads to remote root access",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNV0I1UVQxSWpUXzlZWGNaZ19IZEEweHYzQUdhNUhBdENhUWRsNGdBcmI3NlFGbmI0N2hEU2toOU50ZEZ0aTBwN1hvdEdqX3F1dFFJbTJZUUFDRzBESjBwamJ2SzZQVDVrZUt6SXRXSjZqZUJvRUc4c1lzamFTQXVIdTQxbGlRWWozLUVFMjVPM2dBYW9URC1kbTdGYjBLSDRrMENTV3NuQkZCNUxWSTFhdDRoQlRVRzZmOGZodTFn?oc=5",
+   "published": "2026-10-30T12:29:06+00:00"
+  },
+  {
+   "id": "62c2eea9fffd",
+   "region": "intl",
+   "category": "その他",
+   "title": "Anthropic、Claude にビデオゲームを作り直させないように",
+   "summary": "Anthropic が、Claude がビデオゲームを作り直すことをやめさせたと Game Developer が報じました。",
+   "point": "",
+   "source": "Game Developer",
+   "original_title": "Anthropic orders AI tool Claude to stop remaking video games",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbkRTbnBaVVk2ZEkzamZJZXpfMWlpWDJuRXJLa3RnUEI2SGJvYVJrd3dhUWhsRUh0Qi1NS0x1ZnJDTUNsY0FpUkVOaGpraTRzXy1ZV2g1bFhMemdEeWUwZzI1QkxRNExMSmxKUzYyeEEtUzJqTG1nS1NrcGRrWTRuMHhrcHJQQ1B6OFlwbXVjVXoxQjYzUTdJb0NCRFF4Q0lfUmRrd2ZMSXdtS25YR25HVjN2OU52SEp3Sncw?oc=5",
+   "published": "2026-10-30T22:21:36+00:00"
+  }
+ ]
+}
