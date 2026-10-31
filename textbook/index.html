@@ -15,81 +15,203 @@
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="YAWARA・SWEEP インストラクター養成講座の教科書（旧版）。日本語・韓国語・英語のPDFを無料でダウンロードできます。">
+<meta name="description" content="YAWARA・SWEEP インストラクター養成講座の教科書（旧版）。日本語・韓国語・英語・ポルトガル語のPDFを無料でダウンロードできます。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jiujitsu.co.jp/textbook/">
 <meta property="og:title" content="インストラクター養成講座 教科書（旧版）">
-<meta property="og:description" content="Japanese / 한국어 / English PDF. Free download.">
+<meta property="og:description" content="日本語 / 한국어 / English / Português PDF. Free download.">
 <meta property="og:image" content="https://jiujitsu.co.jp/textbook/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Noto+Serif+KR:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
 <style>
-  :root { --bg:#0b0a08; --panel:#15130f; --line:#2e2a21; --gold:#c9a227; --gold-hi:#e8cf7a; --text:#f2eee3; --sub:#b3ab98; }
+  :root {
+    --paper:#fff; --panel:#faf8f2; --line:#e7e1d1; --gold:#8a6c12; --gold-hi:#c9a227; --ink:#17140d; --body-c:#4d4838; --faint:#736b55;
+    --mincho:"Shippori Mincho","Noto Serif KR","Hiragino Mincho ProN",serif;
+    --gothic:"Zen Kaku Gothic New","Noto Sans KR","Hiragino Kaku Gothic ProN",sans-serif;
+  }
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { background:var(--bg); color:var(--text); font-family:"Hiragino Sans","Apple SD Gothic Neo","Noto Sans JP","Noto Sans KR",sans-serif; line-height:1.75; font-size:15px; -webkit-text-size-adjust:100%; }
-  .wrap { max-width:880px; margin:0 auto; padding:56px 16px 72px; }
-  .eyebrow { color:var(--gold); font-size:12px; letter-spacing:.24em; font-weight:600; }
-  h1 { font-size:clamp(26px,6vw,38px); line-height:1.35; margin-top:12px; color:var(--gold-hi); font-weight:700; }
-  .sub { color:var(--sub); margin-top:8px; }
-  .books { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:36px; }
-  .book { display:flex; flex-direction:column; background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden; color:inherit; text-decoration:none; transition:border-color .15s; }
-  .book:hover { border-color:var(--gold); }
-  .book img { display:block; width:100%; aspect-ratio:210/297; object-fit:cover; background:#fff; }
-  .book div { padding:14px 14px 16px; }
-  .book b { display:block; font-size:17px; }
-  .book span { display:block; color:var(--sub); font-size:13px; }
-  .book em { display:block; margin-top:10px; padding:10px 0; min-height:44px; text-align:center; font-style:normal; font-weight:700; font-size:14px; background:var(--gold); color:#1a1505; border-radius:6px; }
-  .note { margin-top:44px; display:grid; gap:0; border-top:1px solid var(--line); }
-  .note section { padding:18px 0; border-bottom:1px solid var(--line); }
-  .note h2 { color:var(--gold); font-size:12px; letter-spacing:.16em; font-weight:600; margin-bottom:4px; }
-  .foot { margin-top:32px; color:var(--sub); font-size:13px; }
+  html { -webkit-text-size-adjust:100%; }
+  body { background:var(--paper); color:var(--body-c); font-family:var(--gothic); line-height:1.9; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  a { color:inherit; }
+  .rank { display:flex; height:4px; }
+  .rank span { flex:1; }
+  .rank .w { background:#eceadf; } .rank .b { background:#274a7a; } .rank .p { background:#4d3070; } .rank .br { background:#5a3c22; } .rank .k { background:#17140d; }
+  .wrap { max-width:1040px; margin:0 auto; padding:0 24px; }
+
+  /* 言語の切り替え：JSがなければ日本語のまま */
+  [data-l] { display:none; }
+  html[data-lang="ja"] [data-l="ja"], html[data-lang="ko"] [data-l="ko"], html[data-lang="en"] [data-l="en"], html[data-lang="pt"] [data-l="pt"] { display:revert; }
+
+  .top { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:18px 0; }
+  .site { font-family:var(--mincho); font-weight:600; letter-spacing:.06em; color:var(--gold); text-decoration:none; font-size:15px; }
+  .langs { display:flex; gap:2px; }
+  .langs button { font:500 13px var(--gothic); color:var(--faint); background:none; border:0; border-bottom:2px solid transparent; min-height:40px; padding:0 9px; cursor:pointer; }
+  .langs button[aria-pressed="true"] { color:var(--ink); border-color:var(--gold-hi); }
+
+  .hero { position:relative; display:grid; grid-template-columns:1.05fr 1fr; gap:32px; align-items:center; padding:56px 0 84px; }
+  .hero::before { content:""; position:absolute; inset:-40px 0 0; background:radial-gradient(ellipse 60% 70% at 70% 45%, rgba(201,162,39,.11), transparent 70%); pointer-events:none; }
+  .hero > * { position:relative; }
+  .eyebrow { font-family:var(--mincho); font-size:13px; letter-spacing:.28em; color:var(--gold); font-weight:700; }
+  h1 { font-family:var(--mincho); font-weight:700; font-size:clamp(36px,5.4vw,60px); line-height:1.25; letter-spacing:.03em; margin-top:18px; padding-bottom:.08em; background:linear-gradient(115deg,#8a6c12 10%,#c9a227 45%,#6d550d 90%); -webkit-background-clip:text; background-clip:text; color:transparent; text-wrap:balance; }
+  .edition { display:inline-block; margin-top:18px; font-size:13px; font-weight:700; letter-spacing:.14em; color:var(--gold); border:1px solid rgba(138,108,18,.45); padding:2px 14px; }
+  .lead { margin-top:18px; font-size:16px; max-width:30em; }
+  .jump { display:inline-block; margin-top:26px; background:var(--ink); color:#fff; text-decoration:none; font-weight:700; font-size:15px; letter-spacing:.06em; padding:13px 30px; transition:background .15s; }
+  .jump:hover { background:var(--gold); }
+
+  .fan { position:relative; aspect-ratio:1/1; max-width:480px; width:100%; justify-self:center; }
+  .fan img { position:absolute; width:50%; left:25%; top:12%; aspect-ratio:210/297; object-fit:cover; background:#fff; border:1px solid var(--line); box-shadow:0 14px 34px rgba(60,45,10,.22); transform-origin:50% 120%; }
+  .fan img:nth-child(1) { transform:rotate(-21deg); } .fan img:nth-child(2) { transform:rotate(-7deg); } .fan img:nth-child(3) { transform:rotate(7deg); } .fan img:nth-child(4) { transform:rotate(21deg); }
+
+  .quote { background:var(--ink); color:#f4efe0; position:relative; left:50%; margin-left:-50vw; width:100vw; padding:84px 24px; text-align:center; }
+  .quote p { max-width:760px; margin:0 auto; font-family:var(--mincho); font-weight:600; font-size:clamp(20px,3.1vw,29px); line-height:1.8; letter-spacing:.05em; text-wrap:balance; }
+  .quote p + p { margin-top:18px; color:#e8cf7a; }
+
+  .sec-label { font-family:var(--mincho); font-size:15px; letter-spacing:.3em; color:var(--gold); font-weight:700; display:flex; align-items:center; gap:16px; margin:84px 0 28px; }
+  .sec-label::after { content:""; flex:1; height:1px; background:var(--line); }
+
+  .books { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  .book { display:flex; flex-direction:column; background:var(--panel); border:1px solid var(--line); border-top:3px solid var(--gold); padding:18px 18px 20px; text-decoration:none; transition:border-color .15s,transform .15s; }
+  .book:hover { border-color:var(--gold); transform:translateY(-3px); }
+  .book img { display:block; width:100%; aspect-ratio:210/297; object-fit:cover; background:#fff; border:1px solid var(--line); box-shadow:0 8px 20px rgba(60,45,10,.14); }
+  .book b { display:block; margin-top:16px; font-family:var(--mincho); font-size:21px; color:var(--ink); letter-spacing:.05em; line-height:1.4; }
+  .book small { display:block; color:var(--faint); font-size:13px; }
+  .book em { display:block; margin-top:14px; padding:9px 0; text-align:center; font-style:normal; font-weight:700; font-size:14px; letter-spacing:.06em; color:#fff; background:var(--gold); transition:background .15s; }
+  .book:hover em { background:var(--ink); }
+
+  .chapters { list-style:none; display:grid; grid-template-columns:repeat(4,1fr); gap:0 28px; counter-reset:c; }
+  .chapters li { counter-increment:c; display:flex; align-items:baseline; gap:12px; padding:13px 0; border-bottom:1px solid var(--line); font-family:var(--mincho); font-weight:600; color:var(--ink); letter-spacing:.14em; font-size:14px; }
+  .chapters li::before { content:counter(c,decimal-leading-zero); color:var(--gold-hi); font-size:13px; letter-spacing:.04em; }
+
+  .samples { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+  .samples img { display:block; width:100%; aspect-ratio:210/297; object-fit:cover; object-position:top; border:1px solid var(--line); box-shadow:0 6px 16px rgba(60,45,10,.1); }
+
+  .notice { color:#d0121b; font-weight:700; font-size:14px; letter-spacing:.06em; text-align:center; padding:9px 16px; line-height:1.5; }
+  .coming { margin:0 0 26px; border-left:2px solid var(--gold); padding:4px 0 4px 22px; font-size:16px; max-width:44em; }
+  footer { margin-top:84px; border-top:1px solid var(--line); padding:26px 0 40px; color:var(--faint); font-size:13px; letter-spacing:.06em; }
+
+  @media (max-width:820px) {
+    .hero { grid-template-columns:1fr; padding:30px 0 60px; gap:20px; text-align:center; }
+    .fan { order:-1; max-width:340px; }
+    .lead { margin-left:auto; margin-right:auto; }
+    .books, .chapters { grid-template-columns:1fr 1fr; }
+    .samples { grid-template-columns:1fr 1fr; }
+  }
   @media (max-width:640px) {
-    .wrap { padding-top:40px; }
-    .books { grid-template-columns:1fr; }
-    .book { flex-direction:row; align-items:stretch; }
-    .book img { width:104px; flex:none; }
-    .book div { flex:1; display:flex; flex-direction:column; justify-content:center; }
+    .wrap { padding:0 16px; }
+    .sec-label { margin-top:60px; }
+    .quote { padding:60px 20px; }
+    .books { grid-template-columns:1fr; gap:12px; }
+    .book { display:grid; grid-template-columns:96px 1fr; column-gap:16px; padding:14px; }
+    .book img { grid-row:1 / span 3; }
+    .book b { margin-top:0; }
+    .book em { margin-top:8px; padding:11px 0; }
+    .langs button { padding:0 7px; }
   }
 </style>
 <body>
-<main class="wrap">
-  <p class="eyebrow">YAWARA &amp; SWEEP — INSTRUCTOR COURSE</p>
-  <h1>インストラクター養成講座<br>教科書（旧版）</h1>
-  <p class="sub">Instructor Course Textbook (Previous Edition)</p>
+<p class="notice">
+  <span data-l="ja">無断転載・無断複製を禁じます</span><span data-l="ko">무단 전재 및 복제를 금합니다</span><span data-l="en">Unauthorized reproduction or redistribution is prohibited</span><span data-l="pt">Proibida a reprodução ou redistribuição sem autorização</span>
+</p>
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+<div class="wrap">
+  <div class="top">
+    <a class="site" href="/">jiujitsu.co.jp</a>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" data-set="ja">日本語</button><button type="button" data-set="ko">한국어</button><button type="button" data-set="en">EN</button><button type="button" data-set="pt">PT</button>
+    </div>
+  </div>
 
+  <section class="hero">
+    <div>
+      <p class="eyebrow">YAWARA &amp; SWEEP</p>
+      <h1>
+        <span data-l="ja">インストラクター<br>養成講座 教科書</span>
+        <span data-l="ko">인스트럭터<br>양성 과정 교재</span>
+        <span data-l="en">Instructor Course<br>Textbook</span>
+        <span data-l="pt">Apostila do Curso<br>de Instrutores</span>
+      </h1>
+      <p class="edition"><span data-l="ja">旧版</span><span data-l="ko">구판</span><span data-l="en">PREVIOUS EDITION</span><span data-l="pt">EDIÇÃO ANTERIOR</span></p>
+      <p class="lead">
+        <span data-l="ja">誰でも強くなれる柔術を、教えられる人へ。理論・指導法・技術・ドリルを、1冊にまとめました。</span>
+        <span data-l="ko">누구나 강해질 수 있는 주짓수를 가르칠 수 있는 사람에게. 이론, 지도법, 기술, 드릴을 한 권에 담았습니다.</span>
+        <span data-l="en">For those who want to teach a jiu-jitsu that makes anyone stronger. Theory, coaching, technique and drills in one book.</span>
+        <span data-l="pt">Para quem quer ensinar um jiu-jitsu que deixa qualquer pessoa mais forte. Teoria, didática, técnica e drills em um só livro.</span>
+      </p>
+      <a class="jump" href="#download"><span data-l="ja">無料でダウンロード</span><span data-l="ko">무료 다운로드</span><span data-l="en">Free download</span><span data-l="pt">Baixar grátis</span></a>
+    </div>
+    <div class="fan" aria-hidden="true">
+      <img src="img/cover-pt.jpg" alt=""><img src="img/cover-en.jpg" alt=""><img src="img/cover-ko.jpg" alt=""><img src="img/cover-ja.jpg" alt="">
+    </div>
+  </section>
+
+  <section class="quote">
+    <p data-l="ja">「これで完成だ」と思った瞬間、人は考えることをやめ、工夫する理由を失う。</p>
+    <p data-l="ko">"이걸로 완성이다"라고 생각하는 순간, 사람은 생각을 멈추고 궁리할 이유를 잃는다.</p>
+    <p data-l="en">The moment you think "this is finished," you stop thinking and lose your reason to improve.</p>
+    <p data-l="pt">No instante em que você pensa "agora está pronto", para de pensar e perde o motivo para melhorar.</p>
+    <p data-l="ja">私たちが伝えている柔術も、今なお進化の途中にあります。</p>
+    <p data-l="ko">우리가 전하는 주짓수 역시 지금도 진화하는 중입니다.</p>
+    <p data-l="en">The jiu-jitsu we teach is still evolving, too.</p>
+    <p data-l="pt">O jiu-jitsu que ensinamos também continua evoluindo.</p>
+  </section>
+
+  <h2 class="sec-label" id="download">DOWNLOAD</h2>
+  <div class="coming">
+    <p data-l="ja">これは旧版です。最新版は現在作成中で、養成講座を受講された方・これから受講される方に共有します。</p>
+    <p data-l="ko">이 교재는 구판입니다. 최신판은 현재 제작 중이며, 양성 과정을 수강하신 분과 앞으로 수강하실 분께 공유할 예정입니다.</p>
+    <p data-l="en">This is the previous edition. A new edition is in the works and will be shared with those who have taken, or will take, the Instructor Course.</p>
+    <p data-l="pt">Esta é a edição anterior. Uma nova edição está em preparação e será compartilhada com quem já fez ou vai fazer o Curso de Instrutores.</p>
+  </div>
   <div class="books">
-    <a class="book" href="yawara-sweep-textbook-ja.pdf">
+    <a class="book" href="yawara-sweep-textbook-ja.pdf" lang="ja">
       <img src="img/cover-ja.jpg" alt="日本語版の表紙" loading="lazy">
-      <div><b>日本語</b><span>PDF 12MB・55ページ</span><em>PDFを開く</em></div>
+      <b>日本語</b><small>PDF 12MB・55ページ</small><em>PDFを開く</em>
     </a>
     <a class="book" href="yawara-sweep-textbook-ko.pdf" lang="ko">
       <img src="img/cover-ko.jpg" alt="한국어판 표지" loading="lazy">
-      <div><b>한국어</b><span>PDF 12MB・54쪽</span><em>PDF 열기</em></div>
+      <b>한국어</b><small>PDF 12MB・54쪽</small><em>PDF 열기</em>
     </a>
     <a class="book" href="yawara-sweep-textbook-en.pdf" lang="en">
       <img src="img/cover-en.jpg" alt="English edition cover" loading="lazy">
-      <div><b>English</b><span>PDF 11MB, 58 pages</span><em>Open PDF</em></div>
+      <b>English</b><small>PDF 11MB, 58 pages</small><em>Open PDF</em>
+    </a>
+    <a class="book" href="yawara-sweep-textbook-pt.pdf" lang="pt">
+      <img src="img/cover-pt.jpg" alt="Capa da edição em português" loading="lazy">
+      <b>Português</b><small>PDF 11MB, 58 páginas</small><em>Abrir PDF</em>
     </a>
   </div>
 
-  <div class="note">
-    <section>
-      <h2>日本語</h2>
-      <p>これは旧版です。最新版は現在作成中で、養成講座を受講された方・これから受講される方に共有します。</p>
-    </section>
-    <section lang="ko">
-      <h2>한국어</h2>
-      <p>이 교재는 구판입니다. 최신판은 현재 제작 중이며, 양성 과정을 수강하신 분과 앞으로 수강하실 분께 공유할 예정입니다.</p>
-    </section>
-    <section lang="en">
-      <h2>English</h2>
-      <p>This is the previous edition. A new edition is in the works and will be shared with those who have taken, or will take, the Instructor Course.</p>
-    </section>
-    <section lang="pt">
-      <h2>Português</h2>
-      <p>Esta é a edição anterior, disponível em japonês, coreano e inglês. Uma nova edição está em preparação e será compartilhada com quem já fez ou vai fazer o Curso de Instrutores.</p>
-    </section>
+  <h2 class="sec-label">CONTENTS</h2>
+  <ol class="chapters">
+    <li>PHILOSOPHY</li><li>COACHING</li><li>THEORY</li><li>PASSING</li><li>GUARD</li><li>SUBMISSION</li><li>MOVEMENT</li><li>DRILLS</li>
+  </ol>
+
+  <h2 class="sec-label">SAMPLE</h2>
+  <div class="samples">
+    <img src="img/sample-1.jpg" alt="" loading="lazy"><img src="img/sample-2.jpg" alt="" loading="lazy"><img src="img/sample-3.jpg" alt="" loading="lazy"><img src="img/sample-4.jpg" alt="" loading="lazy">
   </div>
-  <p class="foot">© YAWARA &amp; SWEEP</p>
-</main>
+
+  <footer>© YAWARA &amp; SWEEP</footer>
+</div>
+<script>
+(function () {
+  var langs = ['ja', 'ko', 'en', 'pt'], root = document.documentElement, l = null;
+  try { l = localStorage.getItem('textbook-lang'); } catch (e) {}
+  if (langs.indexOf(l) < 0) {
+    var n = (navigator.language || 'ja').slice(0, 2);
+    l = langs.indexOf(n) >= 0 ? n : (n === 'es' ? 'pt' : 'en');
+  }
+  function set(v) {
+    l = v; root.setAttribute('data-lang', v); root.lang = v;
+    document.querySelectorAll('[data-set]').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.set === v ? 'true' : 'false'); });
+    try { localStorage.setItem('textbook-lang', v); } catch (e) {}
+  }
+  document.querySelectorAll('[data-set]').forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.set); }); });
+  set(l);
+})();
+</script>
+<noscript><style>[data-l="ja"]{display:revert}</style></noscript>
 </body>
 </html>
