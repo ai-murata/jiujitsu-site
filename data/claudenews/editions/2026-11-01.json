@@ -1,0 +1,115 @@
+{
+ "date": "2026-11-01",
+ "generated_at": "2026-11-01T11:53:44+09:00",
+ "lead": "Claude Code で既存のゲームをそっくり作り直すことが制限されたと、エンジニアが認めました。1Password が Claude と連携し、Max・Ultra・Team プランの毎月の API クレジットの案内も更新されています。",
+ "items": [
+  {
+   "id": "2b2fdee68e84",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code で「既存ゲームの再現」を制限、オリジナル作品は引き続き OK",
+   "summary": "Claude Code で既存のゲームをそっくり作り直すことを制限したと、エンジニアが認めました。オリジナルの作品を作ることは、これまでどおりできる想定です。",
+   "point": "自分で考えたゲームを作る分には、これまでどおり使えます。",
+   "source": "Game*Spark",
+   "original_title": "Claude Codeによる「既存ゲーム再現」を制限したとエンジニアが認める―オリジナル作品生成は引き続き動作する想定。“AIクローンゲーム”の抑止につながるか",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5CVjVnRk8takx4SmRsUFNjNlNyLWZraHVOU2ZWUi1NRk9mWGpDQ2VfVW9XSE5OVHM2S1lKNDJ0WFIza1RFNkFvR25ycmgtaE5mTEUxQ29McFlyTFhOa1JDaEM3bkxUZw?oc=5",
+   "published": "2026-10-31T08:45:35+00:00"
+  },
+  {
+   "id": "a642589adbf6",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "改ざん版 Claude Code に「SSH の裏口」、謎の鍵がないか確認を",
+   "summary": "Cursor で11時間にわたって配られた改ざん版の Claude Code 拡張機能に、外からパソコンに入れる「SSH の裏口」が仕込まれていました。見覚えのない「鍵」が登録されていないか確かめるよう呼びかけられています。",
+   "point": "Cursor で Claude Code の拡張機能を入れた人は、記事の手順で確認しましょう。",
+   "source": "Yahoo!ニュース",
+   "original_title": "Claude Code改ざん版に「SSHバックドア」…Cursorで11時間配布、「謎の鍵」はないか？（ビジネス＋IT）",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5KX2FOWVAzMFBXX0ZSU2V3UVJQQ2xmbFdNWEF4aDZlS0s0dlB6aWxuaVg5dHdmYXFRQVIwRmozaUJDalVqTDhpYXphV3ltc0ZLcmplRS1IYlQ3WkNYMkJ4eHZMSEx0bWg0R2FwYVF6YTduSnVYcHhZT2JuLW5UZnM?oc=5",
+   "published": "2026-10-31T05:55:06+00:00"
+  },
+  {
+   "id": "f802c5e2ec11",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code、サブエージェントの頑張り具合を設定できるように",
+   "summary": "Claude Code に、サブエージェント（手伝い役の AI）がどのくらい考えるかを決める設定「CLAUDE_CODE_SUBAGENT_EFFORT」が加わりました。",
+   "point": "",
+   "source": "Pasquale Pillitteri",
+   "original_title": "Claude Code、サブエージェント向けにCLAUDE_CODE_SUBAGENT_EFFORTが登場",
+   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPYTd0SnBHVVF1MTIxaVRkODhNQnVoZmxlcEtTaHhyOG84QUZFZXo1aVlRZTRWQklwTUVxRzJyNkhsRU9ERTJrUThxLWRBQmlScGw0dVVKQWdmaGtvM0hHRXdMdUc5Q0VqVzdYWXJtREJ2UTZjMm1uNUNscG5jUk9HcDllUTdUSUUyeUE?oc=5",
+   "published": "2026-10-31T08:37:15+00:00"
+  },
+  {
+   "id": "9e8cd822cfc2",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "「AI に専門家の役を設定するのはもう古い」、スキルは減らした方がよいことも",
+   "summary": "Anthropic のエンジニア責任者が、AI に「あなたは専門家です」と役を与えるやり方はもう古く、一部のスキルは削除した方が効果的だと提言しました。",
+   "point": "指示を盛りすぎず、シンプルにするのがコツかもしれません。",
+   "source": "BigGo ファイナンス",
+   "original_title": "Anthropicのエンジニア責任者が提言：AIに専門家役を設定するのはもう古い、一部のSkillは削除した方が効果的",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBTV25LS1VtWlAxZ1VPMUhUVi1TQ2FndFlBYzlTbWYwbjdRZXVIVVNYbGpwV1hhbXlKalh5NmQwaGkyWTJJNm9YX0hYZTRZS0lnQjVMcXpOZ3dONjVBYW01ZXN6OFpBYjlNNzdKT2hfYThESE9K?oc=5",
+   "published": "2026-10-31T09:25:00+00:00"
+  },
+  {
+   "id": "9dee3fa62c05",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Duet が使えるようになったら、こう使う",
+   "summary": "Claude Duet が自分のアカウントで使えるようになったときの使い方を、Engadget がまとめました。",
+   "point": "",
+   "source": "Engadget",
+   "original_title": "How To Use Claude Duet When It Rolls Out To You",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE84cHZlMURNNDdZcjg1STBlNU1WMHA4YmlWMFM4RzExMGx6aDYxeHR1T252MG1OVmdySXdGMERHTTAwejBrMzIycFJ4MzR2UGFFVTlRX2w3eFRBVWZNdE5BZVI0d1YxTWM?oc=5",
+   "published": "2026-10-31T18:30:00+00:00"
+  },
+  {
+   "id": "f1e32efebb58",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "1Password が Claude と連携",
+   "summary": "パスワード管理サービスの 1Password を Claude で使うための案内が、ヘルプセンターに載りました。",
+   "point": "",
+   "source": "Claude Help Center",
+   "original_title": "Get started with 1Password for Claude | Claude Help Center",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOMV9JRHV0aW5PaHNzcm5UZVRBLUtjRkEzMmJfUmpWYWlKNDRybEN3SXl0NEJ6SEFTa0FISFRBUFJadmVtcWNoWXhQcDMtaDdrdVNOYjd4NHNoZlJTdHhsSi1mWDlCTTRmODRoS2hVSVowUEdobkRscUwzLWNSUTNWalVLQlZUWkk0c1VHeXB3?oc=5",
+   "published": "2026-10-30T17:08:35+00:00"
+  },
+  {
+   "id": "bdce3d039b5a",
+   "region": "intl",
+   "category": "料金・プラン",
+   "title": "Max・Ultra・Team プランに毎月の API クレジット",
+   "summary": "Max、Ultra、Team の各プランで毎月もらえる API クレジットについての案内が、ヘルプセンターに載りました。",
+   "point": "これらのプランを使っている人は、API も試せるか確認してみましょう。",
+   "source": "Claude Help Center",
+   "original_title": "Monthly API credits for Max, Ultra, and Team plans",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPc242QTlNazdJcFdtWWlUS0kxaXVwa24wS20zRk9iMTktNDc5czBYSG5YOFhSVEhreGxGbEhicE1zeEVmVmh3dnloc05QQjFIUlVnMkRRZ2IxaHhQVmxNS3A3QTFOekN1WWxBa3F4TmRPUGFhMExja1BJRjhCMkxlRzRyUkl5RTJGbmtMSEZtaEtqQndZelp1bVVTLWk?oc=5",
+   "published": "2026-10-30T17:08:22+00:00"
+  },
+  {
+   "id": "b0ea1cf1f211",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Claude の「透かし」、古い2つのモデルに抜け穴",
+   "summary": "Anthropic が進める AI 生成文の「透かし」の導入で、古い2つの Claude モデルに抜け穴が残っていると The Decoder が伝えました。",
+   "point": "",
+   "source": "The Decoder",
+   "original_title": "Anthropic's watermark rollout leaves a loophole on two older Claude models",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxObWRRVDc2NW4xb3Vod21YR3hORTRGNjlONHFUc3ozSWx0SGZ2ZnpGd1NoUnRXSFlXcUoxOUZEcXJHVkhQVHc1ei01VHpaMWJXZUJZVEFjTXpoVm5oMnlaOW9KZ3BPQXBBMzVRaEVva3p3eFMteHFjdnltQmozZnZqNXFDTVVRME9ONXZ5YXdCRDV5U2FiTzFmRmtKa2c3ams?oc=5",
+   "published": "2026-10-31T19:24:37+00:00"
+  },
+  {
+   "id": "ebefed38fcb3",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Anthropic の次の大きな事業は「ライフサイエンス」",
+   "summary": "Anthropic の次の大きなビジネスは、バイオ研究から新薬づくりまでのライフサイエンス（生命科学）分野だと Business Insider が伝えました。",
+   "point": "",
+   "source": "Business Insider",
+   "original_title": "Anthropic's next big AI business is life sciences, from biotech research to drug discovery",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNNFJmNElsa1htSEJ3bTFzb1VTZEZoYXFsU2FuVm45cC1KQy1DQXVyekNGZ0tKUjlMd3Q5ZGxFaGpNOVU0QXpBSFQ4eTRnOFVaU2RsQW9DalBTbER3WWpCUGoya1JCVHB1MXIyOHNmQ3duTTN1VHl4U3VETElMUEFWZGNIdkhKbUp5R2NtWkhsOA?oc=5",
+   "published": "2026-10-31T11:10:00+00:00"
+  }
+ ]
+}
