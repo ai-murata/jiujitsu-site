@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/kuruma-15fun/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/kuruma-15fun/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/kuruma-15fun/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/kuruma-15fun/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/kuruma-15fun/">
+<link rel="canonical" href="https://jiujitsu.co.jp/en/blog/kuruma-15fun/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Planning with Claude during a 15-minute drive home from the gym</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="I found out I can talk to Claude by voice alone in the car, so on my way home from the gym I talked through what I needed to do that night. In 15 minutes my to-do list was settled, and once I got home I knocked it all out.">
+<meta property="og:title" content="Planning with Claude during a 15-minute drive home from the gym">
+<meta property="og:description" content="How 15 minutes of driving became planning time.">
+<meta property="og:url" content="https://jiujitsu.co.jp/en/blog/kuruma-15fun/">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 24px 0 32px; }
+  .stat { background: var(--k); border-top: 3px solid var(--gold-hi); padding: 16px 16px 14px; text-align: center; }
+  .stat .lbl { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold-hi); font-weight: 700; }
+  .stat b { display: block; font-family: var(--mincho); font-size: 30px; color: #f3ecd8; letter-spacing: .04em; line-height: 1.4; }
+  .stat small { display: block; font-size: 12px; color: #b0a88f; line-height: 1.6; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; font-variant-numeric: tabular-nums; }
+  .tbl th, .tbl td { border-bottom: 1px solid var(--line); padding: 9px 8px; text-align: right; }
+  .tbl th:first-child, .tbl td:first-child { text-align: left; }
+  .tbl thead th { font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; border-bottom: 2px solid var(--gold); }
+  @media (max-width: 560px) { .tbl { font-size: 13px; } .tbl th, .tbl td { padding: 8px 4px; } }
+  .doc { margin: 24px 0 32px; border: 1px solid var(--line); background: #fff; box-shadow: 0 2px 10px rgba(23,20,13,.06); font-size: 13px; line-height: 1.75; }
+  .doc .dh { padding: 12px 16px; border-bottom: 1px solid var(--line); background: var(--panel); font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; }
+  .doc table { width: 100%; border-collapse: collapse; }
+  .doc th, .doc td { border-bottom: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; color: var(--ink); }
+  .doc thead th { font-size: 12px; color: var(--faint); font-weight: 700; }
+  .doc td:first-child { white-space: nowrap; color: var(--body-c); }
+  .sumi { display: inline-block; background: var(--k); color: transparent; border-radius: 2px; height: 1.05em; vertical-align: -.15em; user-select: none; }
+  .note { font-size: 12px; color: var(--faint); margin: -20px 0 28px; }
+  .toc { list-style: none; counter-reset: t; margin: 20px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+  .toc li { counter-increment: t; background: var(--panel); border: 1px solid var(--line); padding: 10px 14px; font-size: 14px; color: var(--ink); line-height: 1.6; }
+  .toc li::before { content: counter(t, decimal-leading-zero); display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .toc li small { display: block; font-size: 12px; color: var(--faint); }
+  @media (max-width: 560px) { .toc { grid-template-columns: 1fr; } .doc { font-size: 12.5px; } .doc th, .doc td { padding: 7px 6px; } }
+  .fig { margin: 28px 0 12px; }
+  .fig img { display: block; width: 100%; height: auto; border-radius: 4px; }
+  .fig figcaption { font-size: 12px; color: var(--faint); margin-top: 8px; line-height: 1.7; }
+</style>
+
+<header>
+  <p class="brand"><a href="/en/blog/">JIU LABO BLOG</a></p>
+  <h1>Planning with Claude on the<br>15-minute drive home from the gym</h1>
+  <p class="meta"><time datetime="2026-10-24">2026.10.24</time> Ai Murata (Manager)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>Just the other day, I realized <b>I can talk to Claude in the car</b>. With the Claude app on my phone, I can talk using just my voice, no hands.</p>
+    <p>The first thing out of my mouth was, "Whoa, so I can Claude hands-free. I had no idea." So I decided to try it out on my way home from the gym.</p>
+    <ul class="talk">
+      <li>So, I want to talk now about what I need to do when I get home today.</li>
+    </ul>
+
+    <h2>The to-do list takes shape as you talk</h2>
+    <p>I'm driving, so there's no way I can speak neatly. "So first I send the contract, right? And then after that I have to get in touch with that person too. And there's probably more to do, huh." It's just me muttering things in whatever order they come to mind.</p>
+    <p>Even so, Claude picked it all up and organized it. Then it came back with this.</p>
+    <ul class="talk">
+      <li>There's also the sponsor check that's been sitting from before. Is that still open?<small>Claude</small></li>
+      <li>Oh, that's fine, Ryozo's going to talk to them.</li>
+      <li>Got it. So the sponsor matter is with Ryozo. What do you need to tell that person?<small>Claude</small></li>
+    </ul>
+    <p>What surprised me was that <b>Claude itself brought up an old to-do I'd forgotten about</b>. And when I said "Ryozo's handling that," it took it right off my list.</p>
+    <p>It asked what I needed to tell that person, and as I went back and forth talking it through, I realized there were 3 things. By the end, it had even turned those 3 into <b>a draft of a single message</b>.</p>
+    <p>By the end of the 15-minute drive, my to-do list had come down to 5 or 6 items.</p>
+
+    <h2>No more dithering once I'm home</h2>
+    <p>That night I had about 4 hours of small jobs: replying on LINE, sending invoices and contracts, and so on. All of it unglamorous.</p>
+    <p>But <b>what to do had already been decided before I got home.</b> When I opened my laptop, I didn't have to think, "Okay, where do I start?" The drafts were ready, so all that was left was to knock it out.</p>
+    <blockquote><p>Those 15 minutes of driving used to be just travel time.<br>Now they've become planning time.</p></blockquote>
+
+    <h2>What worked well</h2>
+    <ul class="tips">
+      <li><b>It doesn't have to be organized.</b> Just talk in whatever order things come to you, and Claude sorts it out</li>
+      <li><b>It asks about what you've forgotten.</b> It remembers what you talked about before and asks, "What happened with that?"</li>
+      <li><b>It separates out what's someone else's job.</b> Say "that's Ryozo's" and it comes off your list</li>
+      <li><b>You can have the wording ready.</b> If the message drafts are done, all you do at home is send them</li>
+    </ul>
+    <p>Just getting rid of the time spent thinking once I sat down at my desk made my evening work so much lighter. I think I'll keep doing this on the way home from the gym for a while.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">I want to hand work to AI too.</b><br>
+    I help turn monthly work into “roles.” For now, it’s free for the first 3 people, limited to people I’ve met, for up to one tool each. <a href="/en/irai/" style="color:#a3801a;white-space:nowrap;">Get help with AI →</a>
+  </p>
+
+  <footer>
+    <a href="/en/blog/">All blog posts</a> / <a href="/en/">Back to jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}.timeline .when{font-size:12px}.stat .lbl{font-size:12px}}</style>

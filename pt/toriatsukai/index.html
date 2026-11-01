@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/toriatsukai/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/toriatsukai/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/toriatsukai/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/toriatsukai/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/toriatsukai/">
+<link rel="canonical" href="https://jiujitsu.co.jp/pt/toriatsukai/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Manual de Instruções do Ryozo</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Começou no jiu-jitsu aos 26 anos e foi campeão mundial aos 38. Reuni, em formato de manual de instruções, um guia para conviver todo dia com essa pessoa chamada Ryozo Murata.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 22px 80px; }
+
+  header { text-align: center; padding: 64px 20px 36px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(30px, 6vw, 44px); color: var(--ink); letter-spacing: .16em; line-height: 1.4; margin: 10px 0 12px; }
+  .model { font-size: 12px; letter-spacing: .22em; color: var(--faint); margin: 0; }
+  .lede { font-size: 13px; color: var(--faint); margin: 14px 0 0; letter-spacing: .06em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  .notice { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 22px 26px; margin: 40px 0 0; }
+  .notice p { margin: 0; font-size: 13.5px; }
+  .notice p + p { margin-top: 10px; }
+  .notice b { color: var(--ink); font-family: var(--mincho); letter-spacing: .06em; }
+
+  .toc { margin: 36px 0 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 18px 0; }
+  .toc ol { list-style: none; margin: 0; padding: 0; columns: 2 260px; column-gap: 36px; }
+  .toc li { font-size: 13px; margin: 0 0 6px; break-inside: avoid; }
+  .toc a { color: var(--body-c); text-decoration: none; }
+  .toc a:hover { color: var(--gold); }
+  .toc .no { font-family: var(--mincho); color: var(--gold); letter-spacing: .1em; margin-right: 10px; }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: .2em; margin: 76px 0 6px; display: flex; align-items: baseline; gap: 16px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); align-self: center; }
+  h2 .no { font-size: 12px; letter-spacing: .18em; color: var(--gold); font-family: var(--gothic); font-weight: 700; flex: none; }
+  .sub { font-size: 12px; color: var(--faint); letter-spacing: .12em; margin: 0 0 22px; }
+
+  p.body { font-size: 14px; margin: 0 0 16px; max-width: 42em; }
+  .em { color: var(--ink); font-weight: 700; }
+
+  table.spec { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 13.5px; }
+  table.spec th, table.spec td { border-bottom: 1px solid var(--line); padding: 11px 6px; text-align: left; vertical-align: top; }
+  table.spec th { width: 34%; font-weight: 500; color: var(--faint); letter-spacing: .08em; white-space: nowrap; }
+  table.spec td { color: var(--ink); }
+  table.spec td small { display: block; color: var(--faint); font-size: 12px; letter-spacing: 0; }
+
+  .steps { list-style: none; margin: 8px 0 0; padding: 0; counter-reset: st; }
+  .steps li { position: relative; padding: 0 0 0 46px; margin: 0 0 24px; font-size: 14px; }
+  .steps li::before { counter-increment: st; content: counter(st, decimal-leading-zero); position: absolute; left: 0; top: 2px; font-family: var(--mincho); font-size: 13px; color: var(--gold); letter-spacing: .08em; border: 1px solid var(--line); padding: 2px 7px; }
+  .steps b { display: block; font-family: var(--mincho); font-weight: 700; font-size: 15.5px; color: var(--ink); letter-spacing: .06em; margin-bottom: 4px; }
+
+  .ng { margin: 22px 0 0; display: grid; gap: 14px; }
+  .ng div { border-left: 2px solid var(--line); padding: 2px 0 2px 18px; font-size: 13.5px; }
+  .ng .x { color: var(--faint); }
+  .ng .o { color: var(--ink); font-weight: 500; }
+  .ng .x::before { content: "×　"; color: #b34a4a; font-weight: 700; }
+  .ng .o::before { content: "○　"; color: var(--gold); font-weight: 700; }
+
+  .warn { background: var(--panel); border: 1px solid var(--line); padding: 20px 24px; margin: 26px 0 0; }
+  .warn p.h { font-family: var(--mincho); font-weight: 700; font-size: 14px; color: var(--ink); letter-spacing: .16em; margin: 0 0 8px; }
+  .warn p { font-size: 13.5px; margin: 0; }
+
+  table.tr { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13.5px; }
+  table.tr th { text-align: left; font-size: 11px; letter-spacing: .18em; color: var(--gold); font-weight: 700; border-bottom: 1px solid var(--line); padding: 0 8px 8px 0; }
+  table.tr td { border-bottom: 1px solid var(--line); padding: 14px 8px 14px 0; vertical-align: top; }
+  table.tr td:first-child { color: var(--ink); font-weight: 500; width: 32%; }
+  table.tr td:last-child { padding-right: 0; }
+  @media (max-width: 620px) {
+    table.tr, table.tr tbody, table.tr tr, table.tr td { display: block; width: 100%; }
+    table.tr thead { display: none; }
+    table.tr tr { border-bottom: 1px solid var(--line); padding: 14px 0; }
+    table.tr td { border: 0; padding: 0; }
+    table.tr td:first-child { width: auto; margin-bottom: 4px; }
+    table.spec th, table.spec td { display: block; width: 100%; }
+    table.spec th { border: 0; padding-bottom: 0; }
+  }
+
+  .closing { margin-top: 84px; text-align: center; }
+  .closing p.t { font-family: var(--mincho); font-weight: 600; font-size: 18px; color: var(--ink); letter-spacing: .08em; margin: 0; line-height: 2; }
+  .closing p.by { font-size: 12px; color: var(--gold); letter-spacing: .14em; margin: 14px 0 0; }
+
+  footer { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+
+<header>
+  <p class="brand">INSTRUCTION MANUAL</p>
+  <h1>Manual de Instruções do Ryozo</h1>
+  <p class="model">Modelo RYOZO-1980 / Ryozo Murata</p>
+  <p class="lede">Começou no jiu-jitsu aos 26 anos e, aos 31, virou o primeiro faixa preta de Hokkaido com linhagem direta Gracie.<br>Este é um guia para conviver todo dia com quem foi campeão mundial aos 38.</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <div class="notice">
+    <p><b>Introdução</b></p>
+    <p>É professor de jiu-jitsu, dono de empresa e ainda compete na ativa. Que é uma pessoa incrível, não há dúvida, mas conviver de perto pede alguns macetes.</p>
+    <p>Quem escreve é a esposa, que observa tudo de perto há muitos anos, contando o que sabe. Aqui e ali, também entra a versão dele.</p>
+  </div>
+
+  <nav class="toc">
+    <ol>
+      <li><a href="#s1"><span class="no">01</span>Sobre ele</a></li>
+      <li><a href="#s2"><span class="no">02</span>As manhãs</a></li>
+      <li><a href="#s3"><span class="no">03</span>Quando ele está mais forte</a></li>
+      <li><a href="#s4"><span class="no">04</span>Como pedir ajuda</a></li>
+      <li><a href="#s5"><span class="no">05</span>O que é melhor não fazer</a></li>
+      <li><a href="#s6"><span class="no">06</span>Parece com defeito?</a></li>
+      <li><a href="#s7"><span class="no">07</span>Comida</a></li>
+      <li><a href="#s8"><span class="no">08</span>Dias de folga</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="s1"><span class="no">01</span>Sobre ele</h2>
+  <p class="sub">PROFILE</p>
+  <table class="spec">
+    <tr><th>Nome</th><td>Ryozo Murata</td></tr>
+    <tr><th>Nascimento</th><td>24 de abril de 1980, em Abashiri, Hokkaido</td></tr>
+    <tr><th>Físico</th><td>177 cm, 74 kg<small>Para competir, baixa para 68 kg.</small></td></tr>
+    <tr><th>Começou no jiu-jitsu</th><td>Em 2006, aos 26 anos</td></tr>
+    <tr><th>Faixa preta</th><td>Outubro de 2011, por Cristiano Carioca<small>É o primeiro faixa preta de Hokkaido com linhagem direta Gracie.</small></td></tr>
+    <tr><th>Maior conquista</th><td>Mundial SJJIF, Master 2 Faixa Preta Pena: campeão (2018, 2019)<small>O título de 2018 foi o primeiro de um japonês.</small></td></tr>
+    <tr><th>Hoje</th><td>Na ativa. 3º lugar no IBJJF World Master 2025, Faixa Preta Master 3 Pena</td></tr>
+    <tr><th>Trabalho</th><td>Diretor-presidente da BUTTI ON LINE Inc.<small>Presidente da Sports Jiu-Jitsu Japan Federation (SJJJF). São 3 academias: Harajuku, Kitasando, Sapporo.</small></td></tr>
+  </table>
+
+  <h2 id="s2"><span class="no">02</span>As manhãs</h2>
+  <p class="sub">MORNING</p>
+  <p class="body">As manhãs dele são lentas. Apressar não adianta.</p>
+  <p class="body">Ao acordar, a primeira coisa é o café. Ultimamente, <span class="em">o favorito é com leite</span>. Até ele terminar, o melhor é deixá-lo quieto.</p>
+  <p class="body">À noite, deu sono, acabou. Sem aviso prévio.</p>
+
+  <h2 id="s3"><span class="no">03</span>Quando ele está mais forte</h2>
+  <p class="sub">UNDER PRESSURE</p>
+  <p class="body">Sob pressão. <span class="em">Quanto mais apertado, mais forte ele fica.</span></p>
+  <p class="body">Em lugar tranquilo, sobra energia. Palcos grandes, momentos decisivos, situações sem saída: é aí que você pode confiar nele sem cerimônia.</p>
+  <div class="warn">
+    <p class="h">Nas palavras dele</p>
+    <p>Não é “faço porque parece que vai dar certo”, é “faço até dar certo”.</p>
+  </div>
+
+  <h2 id="s4"><span class="no">04</span>Como pedir ajuda</h2>
+  <p class="sub">HOW TO ASK</p>
+  <p class="body">Ele se move por pessoas. Se você chega com um assunto do tipo “qualquer um resolve”, a reação é fraca.</p>
+  <ol class="steps">
+    <li><b>Chegue dizendo “só você resolve isso”</b>“Acho que só o professor Ryozo consegue resolver isso. O que eu faço?” Com ou sem essa frase, a reação muda completamente.</li>
+    <li><b>No dia a dia, venha já com a sua resposta</b>Não jogue tudo no colo dele. Pense até chegar em “A, B ou C, qual é melhor?”.</li>
+    <li><b>Se não conseguiu, traga uma alternativa junto</b>Não pare no aviso de que travou. Chegue já com o próximo passo, e a conversa anda rápido.</li>
+  </ol>
+  <div class="ng">
+    <div><p class="x">Não consegui a reserva.</p><p class="o">Não consegui a reserva. Que tal esta outra opção?</p></div>
+    <div><p class="x">Não tinha durex.</p><p class="o">Não tinha durex, mas tem fita larga. Quer que eu vá até a loja ao lado?</p></div>
+  </div>
+  <div class="warn">
+    <p class="h">Às vezes vem uma resposta que não é nem A, nem B, nem C</p>
+    <p>Às vezes ele traz uma solução completamente diferente, de fora das opções que você colocou. Em geral, essa é a resposta certa.</p>
+  </div>
+
+  <h2 id="s5"><span class="no">05</span>O que é melhor não fazer</h2>
+  <p class="sub">CAUTION</p>
+  <div class="warn">
+    <p class="h">O que não faz sentido</p>
+    <p>Isso, com ele, não passa. Conversa só de ganho e perda, história que não fecha, assunto entregue sem pensar. É aí que ele para.</p>
+  </div>
+  <div class="warn">
+    <p class="h">Tentar mudar de fora o que ele já decidiu</p>
+    <p>Ele não gosta muito que mudem o que ele decidiu. Se quiser que mude, comece pelo motivo. Se fizer sentido, ele mesmo muda.</p>
+  </div>
+
+  <h2 id="s6"><span class="no">06</span>Parece com defeito?</h2>
+  <p class="sub">TROUBLESHOOTING</p>
+  <table class="tr">
+    <thead><tr><th>Quando parece que</th><th>O motivo, quase sempre</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Parece bravo</td>
+        <td><span class="em">É de propósito.</span> Ele só está mostrando de um jeito que chegue em quem precisa ouvir, então pode receber do jeito que veio.</td>
+      </tr>
+      <tr>
+        <td>Parece de mau humor</td>
+        <td>Ele quase não tem altos e baixos de humor. Como ele mesmo diz: “humor nem precisa ter”. Em geral, não está acontecendo nada que justifique a preocupação.</td>
+      </tr>
+      <tr>
+        <td>Fica calado de repente / demora para responder</td>
+        <td>É raríssimo. Se acontecer, está com sono ou com fome. Veja as seções 02 e 07.</td>
+      </tr>
+      <tr>
+        <td>Pedi ajuda e ele não se mexeu</td>
+        <td>Pode ser o jeito de pedir (seção 04). Jogou tudo no colo dele, veio sem alternativa, é assunto que qualquer um resolve. Costuma ser um desses.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="s7"><span class="no">07</span>Comida</h2>
+  <p class="sub">MEALS</p>
+  <p class="body">Comida gostosa. Mas <span class="em">depende da qualidade</span>. Quantidade não dá energia.</p>
+  <p class="body">O que funciona melhor é a comida de casa.</p>
+
+  <h2 id="s8"><span class="no">08</span>Dias de folga</h2>
+  <p class="sub">DAY OFF</p>
+  <p class="body">Vai lavar o carro, almoça por lá e volta. Nada de especial. Carro limpo e comida gostosa já bastam.</p>
+
+  <div class="closing">
+    <p class="t">Se fizer sentido, ele quase sempre se move.</p>
+    <p class="by">Ouvido e escrito por: Ai Murata</p>
+  </div>
+
+  <footer>
+    <a href="/pt/">jiujitsu.co.jp</a> / <a href="/pt/goroku/">Frases do Ryozo</a><br>
+    O conteúdo pode crescer ou mudar conforme eu for percebendo coisas novas.
+  </footer>
+
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}}</style>
+

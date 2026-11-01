@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/claudecode/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/claudecode/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/claudecode/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/claudecode/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/claudecode/">
+<link rel="canonical" href="https://jiujitsu.co.jp/en/claudecode/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Claude Code at a Jiu-Jitsu Gym</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Membership fee tallies, invoices, shift schedules, live tournament results. A record of the behind-the-scenes gym work we’ve handed to Claude Code, laid out from White belt to Black belt.">
+<meta property="og:title" content="Claude Code at a Jiu-Jitsu Gym">
+<meta property="og:description" content="A record of handing gym back-office work to AI, from White belt to Black belt.">
+<meta property="og:url" content="https://jiujitsu.co.jp/en/claudecode/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(28px, 6vw, 42px); color: var(--ink); letter-spacing: .12em; line-height: 1.4; margin: 10px 0 12px; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; letter-spacing: .06em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  .intro { font-size: 14px; max-width: 40em; margin: 48px auto 0; }
+  .intro b { color: var(--ink); }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 21px; color: var(--ink); letter-spacing: .2em; margin: 72px 0 8px; display: flex; align-items: center; gap: 16px; }
+  h2 small { font-family: var(--gothic); font-size: 10px; letter-spacing: .26em; color: var(--faint); font-weight: 500; flex: none; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .lead { font-size: 13.5px; margin: 0 0 28px; max-width: 42em; }
+
+  /* できること */
+  .rules { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .rule { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 20px 20px 22px; }
+  .rule b { display: block; font-family: var(--mincho); font-size: 15px; color: var(--ink); letter-spacing: .1em; margin-bottom: 6px; }
+  .rule span { font-size: 13px; line-height: 1.8; }
+  @media (max-width: 660px) { .rules { grid-template-columns: 1fr; } }
+
+  /* 帯 */
+  .belts { display: grid; gap: 16px; }
+  .belt { border: 1px solid var(--line); background: var(--panel); display: grid; grid-template-columns: 140px 1fr; }
+  .bside { background: var(--bc); color: var(--bi); padding: 20px 18px; position: relative; display: flex; flex-direction: column; justify-content: center; }
+  .bside::after { content: ""; position: absolute; right: 14px; top: 0; bottom: 0; width: 30px; background: var(--bar);
+    background-image: repeating-linear-gradient(90deg, transparent 0 6px, rgba(255,255,255,.9) 6px 8px); }
+  .bside .en { font-size: 10px; letter-spacing: .26em; opacity: .8; position: relative; z-index: 1; }
+  .bside .jp { font-family: var(--mincho); font-weight: 700; font-size: 22px; letter-spacing: .14em; position: relative; z-index: 1; }
+  .bbody { padding: 20px 24px 22px; }
+  .bbody h3 { font-family: var(--mincho); font-weight: 700; font-size: 18px; color: var(--ink); letter-spacing: .08em; margin: 0 0 2px; }
+  .bbody > p { font-size: 13px; color: var(--faint); margin: 0 0 12px; }
+  .menu { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .menu li { font-size: 13.5px; padding-left: 16px; position: relative; line-height: 1.8; }
+  .menu li::before { content: ""; position: absolute; left: 0; top: .9em; width: 6px; height: 1px; background: var(--gold); }
+  .menu li b { font-weight: 700; color: var(--ink); }
+  .menu li a { font-size: 12px; margin-left: 4px; }
+  .x-w  { --bc: var(--w);  --bi: var(--ink); --bar: var(--k); }
+  .x-b  { --bc: var(--b);  --bi: #fff;       --bar: var(--k); }
+  .x-p  { --bc: var(--p);  --bi: #fff;       --bar: var(--k); }
+  .x-br { --bc: var(--br); --bi: #fff;       --bar: var(--k); }
+  .x-k  { --bc: var(--k);  --bi: #f3ecd8;    --bar: #a8322a; }
+  @media (max-width: 660px) {
+    .belt { grid-template-columns: 1fr; }
+    .bside { flex-direction: row; align-items: baseline; gap: 12px; padding: 14px 18px; }
+    .bbody { padding: 18px 18px 20px; }
+  }
+
+  /* 1か月 */
+  .days { display: grid; gap: 0; border-top: 1px solid var(--line); }
+  .day { display: grid; grid-template-columns: 90px 1fr; gap: 20px; padding: 16px 4px; border-bottom: 1px solid var(--line); }
+  .dnum { font-family: var(--mincho); font-size: 26px; font-weight: 700; color: var(--gold); line-height: 1.2; font-variant-numeric: tabular-nums; }
+  .dnum small { display: block; font-family: var(--gothic); font-size: 10.5px; letter-spacing: .2em; color: var(--faint); font-weight: 500; margin-top: 2px; }
+  .day b { font-family: var(--mincho); font-weight: 700; color: var(--ink); font-size: 15.5px; letter-spacing: .06em; display: block; }
+  .day span { font-size: 13px; }
+  @media (max-width: 560px) { .day { grid-template-columns: 64px 1fr; gap: 12px; } .dnum { font-size: 22px; } }
+
+  /* 1日 */
+  .daybox { background: var(--k); color: #b0a88f; padding: 34px 36px 38px; position: relative; overflow: hidden; }
+  .daybox::before { content: ""; position: absolute; inset: 0; background: radial-gradient(120% 60% at 100% 0%, rgba(201,162,39,.16), transparent 60%); pointer-events: none; }
+  .dayhead { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-bottom: 1px solid rgba(201,162,39,.35); padding-bottom: 14px; margin-bottom: 26px; position: relative; }
+  .dayhead .dl { font-size: 10.5px; letter-spacing: .32em; color: var(--gold-hi); font-weight: 700; }
+  .dayhead .dr { font-family: var(--mincho); font-weight: 700; font-size: 13px; letter-spacing: .14em; color: #f3ecd8; font-variant-numeric: tabular-nums; }
+  .today { list-style: none; margin: 0; padding: 0; position: relative; }
+  .today::before { content: ""; position: absolute; left: 121px; top: 14px; bottom: 14px; width: 2px; background: linear-gradient(#c9a227, #7a6118 70%, #2e2a20); }
+  .today li { display: grid; grid-template-columns: 98px 1fr; gap: 46px; padding: 0 0 26px; position: relative; }
+  .today li:last-child { padding-bottom: 0; }
+  .today li::before { content: ""; position: absolute; left: 116px; top: 11px; width: 12px; height: 12px; border-radius: 50%; background: var(--k); border: 2px solid var(--gold-hi); box-shadow: 0 0 0 4px rgba(201,162,39,.14); }
+  .today time { font-family: var(--mincho); font-weight: 700; font-size: 28px; line-height: 1.1; color: var(--gold-hi); white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+  .today .tt { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .today b { font-family: var(--mincho); font-weight: 700; color: #f3ecd8; font-size: 17px; letter-spacing: .08em; }
+  .today em { font-style: normal; font-size: 10px; letter-spacing: .2em; font-weight: 700; color: var(--k); background: var(--gold-hi); padding: 1px 8px 0; }
+  .today q { quotes: "「" "」"; display: block; margin: 10px 0 8px; padding: 9px 14px; font-size: 13.5px; color: #f3ecd8; background: rgba(255,255,255,.05); border-left: 2px solid var(--gold-hi); line-height: 1.7; }
+  .today p { margin: 6px 0 0; font-size: 13px; line-height: 1.85; color: #b0a88f; }
+  .today li.night time { color: #8d8570; }
+  .today li.night::before { border-color: #8d8570; box-shadow: none; }
+  .js .today li { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .js .today li.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .js .today li { opacity: 1; transform: none; transition: none; } }
+  @media (max-width: 560px) {
+    .daybox { margin: 0 -22px; padding: 26px 20px 30px; }
+    .today::before { left: 73px; }
+    .today li { grid-template-columns: 58px 1fr; gap: 32px; }
+    .today li::before { left: 68px; top: 8px; }
+    .today time { font-size: 21px; }
+    .today b { font-size: 15.5px; }
+  }
+
+  /* 数字 */
+  .nums { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .num { border-top: 1px solid var(--gold); padding-top: 12px; }
+  .num b { font-family: var(--mincho); font-weight: 700; font-size: 40px; color: var(--ink); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .num b small { font-size: 14px; margin-left: 4px; color: var(--body-c); }
+  .num p { font-size: 12.5px; margin: 6px 0 0; }
+  @media (max-width: 660px) { .nums { grid-template-columns: 1fr; } }
+
+  /* 頼み方 */
+  .asks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .ask { border: 1px solid var(--line); padding: 18px 20px 14px; display: grid; grid-template-rows: auto 1fr auto; gap: 8px; }
+  .ask .t { font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .ask q { quotes: "「" "」"; font-size: 14px; color: var(--ink); line-height: 1.85; }
+  .copy { justify-self: start; font: inherit; font-size: 11.5px; letter-spacing: .08em; color: var(--gold); background: var(--paper); border: 1px solid var(--line); padding: 2px 12px; cursor: pointer; }
+  .copy:hover { border-color: var(--gold); }
+  @media (max-width: 660px) { .asks { grid-template-columns: 1fr; } }
+
+  /* 約束 */
+  .dark { background: var(--k); padding: 26px 28px 28px; }
+  .dark .rlabel { font-size: 10.5px; letter-spacing: .3em; color: var(--gold-hi); font-weight: 700; margin: 0 0 14px; }
+  .dark .ri { margin: 0 0 16px; }
+  .dark .ri:last-child { margin-bottom: 0; }
+  .dark b { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: #f3ecd8; letter-spacing: .06em; display: block; margin-bottom: 2px; }
+  .dark p { margin: 0; font-size: 13px; color: #b0a88f; line-height: 1.9; }
+
+  /* はじめ方 */
+  .steps { counter-reset: s; list-style: none; margin: 0; padding: 0; }
+  .steps li { counter-increment: s; position: relative; padding: 0 0 20px 46px; }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: 2px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-family: var(--mincho); font-weight: 700; font-size: 15px; color: var(--gold); border: 1.5px solid var(--gold); border-radius: 50%; }
+  .steps b { font-family: var(--mincho); font-weight: 700; color: var(--ink); font-size: 15.5px; }
+  .steps p { margin: 2px 0 0; font-size: 13.5px; line-height: 1.9; }
+
+  footer { margin-top: 84px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+
+<header>
+  <p class="brand">JIUJITSU.CO.JP</p>
+  <h1>Claude Code at a Jiu-Jitsu Gym</h1>
+  <p class="lede">How we handed our gym’s back-office work to AI.</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <p class="intro">
+    Membership fee tallies, invoices, shift schedules, live tournament results, video subtitles. Running a gym means a lot of work off the mat.
+    Claude Code is <b>an AI that does the work on your computer when you just talk to it</b>.
+    Here’s what we’ve actually used it for, laid out from White belt to Black belt. Every page on this site was made with Claude Code too.
+  </p>
+
+  <h2>How it helps<small>WHAT IT DOES</small></h2>
+  <p class="lead">Unlike an AI that only answers in chat, it actually does the hands-on work.</p>
+  <div class="rules">
+    <div class="rule"><b>Reads and makes files</b><span>It opens Excel files, PDFs, photos, and videos, reads what’s inside, then creates new spreadsheets and documents and saves them to a folder.</span></div>
+    <div class="rule"><b>Checks the web</b><span>It reads booking systems and tournament results pages and pulls out just the numbers you need.</span></div>
+    <div class="rule"><b>Remembers the steps</b><span>Save your monthly routine as a “skill,” and next month a quick “Same as usual, please” runs the same steps.</span></div>
+    <div class="rule"><b>A person presses the last button</b><span>It stops and checks before sending, paying, or deleting. You never hand over the final call.</span></div>
+  </div>
+
+  <h2>Belt by belt<small>BELTS</small></h2>
+  <p class="lead">You can’t land Black belt moves on day one. We recommend starting at White belt and building up from there.</p>
+  <div class="belts">
+    <article class="belt x-w">
+      <div class="bside"><span class="en">WHITE</span><span class="jp">White belt</span></div>
+      <div class="bbody">
+        <h3>Ask and draft</h3>
+        <p>Use it as someone to bounce your writing off. You can do this from day one.</p>
+        <ul class="menu">
+          <li><b>Draft announcements</b> — Closed days, membership fee changes, tournament sign-up deadlines</li>
+          <li><b>Reply to trial class inquiries</b> — A polite message on what to bring, gi rental, and how the first class works</li>
+          <li><b>Talk with teachers overseas</b> — Translate messages in Portuguese and English, and write the replies too</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="belt x-b">
+      <div class="bside"><span class="en">BLUE</span><span class="jp">Blue belt</span></div>
+      <div class="bbody">
+        <h3>Clear out Excel and paper</h3>
+        <p>Hand over your files and let it do the tallying and tidying.</p>
+        <ul class="menu">
+          <li><b>Private lesson tallies</b> — Monthly counts, rates, and commissions by instructor</li>
+          <li><b>Reading receipts</b> — Scan a stack of paper, and you get a list of dates, amounts, and purposes <a href="/ryoshusho/">Example →</a></li>
+          <li><b>Tournament and event budgets</b> — Match ticket sales against expenses, on a single A4 report</li>
+          <li><b>Contract templates</b> — Rework contractor or sponsorship agreements from the last terms</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="belt x-p">
+      <div class="bside"><span class="en">PURPLE</span><span class="jp">Purple belt</span></div>
+      <div class="bbody">
+        <h3>Connect the booking system</h3>
+        <p>Have it read your member management screens and pull data that would take a person half a day.</p>
+        <ul class="menu">
+          <li><b>Unpaid fee checks</b> — List only the people whose payment failed, leaving out brand-new members</li>
+          <li><b>Attendance and commission tallies</b> — Build payroll sheets from clock-in data and class records</li>
+          <li><b>Draft invoices and receipts</b> — It fills in the draft in the invoicing service, and a person presses the issue button</li>
+          <li><b>Matching against the calendar</b> — Compare the shared calendar with expenses to find which trip each cost belongs to</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="belt x-br">
+      <div class="bside"><span class="en">BROWN</span><span class="jp">Brown belt</span></div>
+      <div class="bbody">
+        <h3>Turn it into a monthly routine</h3>
+        <p>Save the steps that worked as “skills” and run them automatically on set days.</p>
+        <ul class="menu">
+          <li><b>Monthly routines as skills</b> — Run invoices, transfer lists, and attendance with one “This month’s, please”</li>
+          <li><b>Automatic on set days</b> — Run the unpaid fee check every month on the 25th and leave the results in a folder</li>
+          <li><b>Shift schedules on your phone</b> — Turn the Excel shift schedule into a page staff can view on their phones <a href="/shift/">Example →</a></li>
+          <li><b>Daily subsidy checks</b> — A list of subsidies the gym can use, updated automatically every morning <a href="/hojokin/">Example →</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="belt x-k">
+      <div class="bside"><span class="en">BLACK</span><span class="jp">Black belt</span></div>
+      <div class="bbody">
+        <h3>Build your own gym tools</h3>
+        <p>This is where you build jiu-jitsu tools that no off-the-shelf service offers.</p>
+        <ul class="menu">
+          <li><b>Live tournament results</b> — Follow only your gym’s athletes in the bracket, with match order and results updated automatically <a href="/en/tournament/">Example →</a></li>
+          <li><b>Nationwide gym guide</b> — Member gyms of 2 federations gathered into a site you can search by region <a href="/dojo/">Example →</a></li>
+          <li><b>First tournament guide</b> — A page on the day’s flow and etiquette for members competing for the first time <a href="/en/hajimete/">Example →</a></li>
+          <li><b>Weight cut log</b> — Count back from weigh-in day and manage each athlete’s plan, up to 500 g a day</li>
+          <li><b>Video subtitles and photo picks</b> — Make subtitles from match video transcripts, and pick tournament photos evenly across the day</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+
+  <h2>A typical day<small>EVERY DAY</small></h2>
+  <p class="lead">I use it more for small daily errands than for big monthly jobs. Here’s how one day goes.</p>
+  <div class="daybox">
+    <div class="dayhead"><span class="dl">A DAY AT THE DOJO</span><span class="dr">9:00 — 23:00</span></div>
+    <ol class="today">
+      <li><time>9:00</time><div><div class="tt"><b>Ask what’s on for today</b><em>Prep</em></div><q>Show me what I need to do today, closest deadlines first.</q><p>By morning, today’s to-do list is ready, pulled from my calendar, email, and working folders. I plan my day from there.</p></div></li>
+      <li><time>9:30</time><div><div class="tt"><b>Start the unfinished work</b></div><q>Pick up where we left off yesterday.</q><p>I set the half-done tallies and documents running. From here, Claude keeps going in the background.</p></div></li>
+      <li><time>10:00</time><div><div class="tt"><b>Ryozo’s meals and housework</b></div><p>Meanwhile, I make lunch and clean the house. All the housework gets done this morning. Even when my hands are full, the work doesn’t stop.</p></div></li>
+      <li><time>11:30</time><div><div class="tt"><b>Check Ryozo’s schedule</b></div><q>Tell me Ryozo’s schedule for today and what time to wake him.</q><p>I check today’s plan on the calendar and decide when to wake him. That’s my prep time for getting through the day.</p></div></li>
+      <li><time>13:00</time><div><div class="tt"><b>Go to the gym</b><em>Training</em></div><p>A fighter’s wife can’t let herself go soft, so I go to the gym every day. Just like in jiu-jitsu, I’m away from my phone for over an hour while I train. Time away from screens turns into time for sorting out my head. I think through what has to get done today and plan the hands-on work ahead. All the while, Claude keeps working on this morning’s jobs in the background.</p></div></li>
+      <li><time>14:30</time><div><div class="tt"><b>Go through the LINE groups</b></div><q>Check LINE and show me what I need to reply to.</q><p>Private lesson scheduling, running tournaments, gym back office. Dozens of groups are active on LINE (Japan’s everyday messaging app), with members, instructors, staff, and business partners. From all that, it picks out only the “What should we do about this date?” and “Please check this” messages, and even drafts replies. I do the sending myself.</p></div></li>
+      <li><time>15:30</time><div><div class="tt"><b>Accounting and bank transfers</b></div><q>Make this month’s transfer list.</q><p>Transfers for each gym, contractor fees, back-and-forth with the accounting office. It works out the amounts from timesheets and statements, and gets everything ready right up to the transfer itself.</p></div></li>
+      <li><time>16:30</time><div><div class="tt"><b>Social media and printed items</b></div><q>Pick 10 photos from this tournament for Instagram.</q><p>Choosing photos to post, subtitles for Reels, exporting flyers and T-shirts to the print shop’s specs.</p></div></li>
+      <li><time>18:00</time><div><div class="tt"><b>Money stuff</b></div><q>Put today’s receipts in a table by date and amount.</q><p>Sorting receipts, preparing requested receipts up to the point of issuing them, checking expense categories.</p></div></li>
+      <li><time>20:00</time><div><div class="tt"><b>Evening paperwork</b><em>Till 11 p.m.</em></div><q>Draft this month’s invoices.</q><p>Now it’s time for the detailed paperwork. Starting with invoices, I work through the tasks I picked up during the day, one at a time. It takes about 2 to 3 hours, and I finish around 11 p.m.</p></div></li>
+      <li class="night"><time>23:00</time><div><div class="tt"><b>While I sleep</b><em>Away</em></div><p>Jobs that take over the screen don’t happen during the day. They get done in one go while I’m away from my computer. On tournament weekends, the live results page updates every time a match result comes in.</p></div></li>
+    </ol>
+  </div>
+
+  <h2>A month at the gym<small>MONTHLY</small></h2>
+  <p class="lead">These are the monthly jobs we really run. Each one starts with a simple “Do the ___.”</p>
+  <div class="days">
+    <div class="day"><div class="dnum">1<small>Start</small></div><div><b>Invoices to business partners</b><span>Work out the amounts from last month’s private lessons and headcount, then draft them in the invoicing service</span></div></div>
+    <div class="day"><div class="dnum">10<small>Transfers</small></div><div><b>The 10th’s transfer list</b><span>Put together contractor fees for instructors and payments to the federation</span></div></div>
+    <div class="day"><div class="dnum">15<small>Cutoff</small></div><div><b>Attendance and commission tallies</b><span>Tally from clock-in data and class records, up to a draft for the accounting office</span></div></div>
+    <div class="day"><div class="dnum">25<small>Auto</small></div><div><b>Unpaid fee check</b><span>Runs automatically on a set day and saves a list. Staff look it over and reach out to members</span></div></div>
+    <div class="day"><div class="dnum">25<small>Transfers</small></div><div><b>Payroll transfer list</b><span>Copy pay amounts over from pay slips and timesheets</span></div></div>
+    <div class="day"><div class="dnum">Comps<small>Weekends</small></div><div><b>Live results and budget</b><span>Follow our athletes’ matches on the day, then close the budget with ticket sales and expenses afterward</span></div></div>
+  </div>
+
+  <h2>So far<small>NUMBERS</small></h2>
+  <p class="lead">Here’s how much one gym has gotten done with Claude Code.</p>
+  <div class="nums">
+    <div class="num"><b>432<small>sheets</small></b><p>Paper receipts from 2 organizations, scanned, read, matched against the calendar, and sorted into 311 entries</p></div>
+    <div class="num"><b>560<small>gyms</small></b><p>A search site of member gyms from 2 federations</p></div>
+    <div class="num"><b>6<small>skills</small></b><p>Monthly jobs like invoices, transfers, and attendance turned into skills that run with one line</p></div>
+    <div class="num"><b>Daily<small>9 a.m.</small></b><p>Each morning’s to-do list arrives automatically, built from calendar and email</p></div>
+  </div>
+
+  <h2>What to say<small>HOW TO ASK</small></h2>
+  <p class="lead">No technical terms needed. Just ask the way you’d ask your gym staff.</p>
+  <div class="asks">
+    <div class="ask"><span class="t">Morning</span><q>Show me what I need to do today, starting with the closest deadlines.</q><button class="copy" type="button">Copy</button></div>
+    <div class="ask"><span class="t">Inquiries</span><q>Draft a reply to this trial class inquiry. Include what to bring, and that we can lend a gi.</q><button class="copy" type="button">Copy</button></div>
+    <div class="ask"><span class="t">Private</span><q>Give me possible dates next week for [name]’s private lesson that fit the instructor’s schedule.</q><button class="copy" type="button">Copy</button></div>
+    <div class="ask"><span class="t">LINE</span><q>Check the LINE groups and list what I haven’t replied to yet.</q><button class="copy" type="button">Copy</button></div>
+    <div class="ask"><span class="t">Photos</span><q>Pick 10 photos from this tournament for Instagram. Make sure lots of different athletes are in them.</q><button class="copy" type="button">Copy</button></div>
+    <div class="ask"><span class="t">Fees</span><q>List everyone whose membership fee payment failed this month. Leave out people who just joined.</q><button class="copy" type="button">Copy</button></div>
+    <div class="ask"><span class="t">Tournaments</span><q>From this tournament’s bracket, list only our gym’s athletes’ matches in time order.</q><button class="copy" type="button">Copy</button></div>
+    <div class="ask"><span class="t">Expenses</span><q>Put these receipt photos in a table with the date, amount, and what each payment was for. Remove any that are duplicated by a card slip.</q><button class="copy" type="button">Copy</button></div>
+    <div class="ask"><span class="t">Video</span><q>Add Japanese subtitles to this match video. Match the athletes’ names to their tournament registration.</q><button class="copy" type="button">Copy</button></div>
+    <div class="ask"><span class="t">Weight cut</span><q>I want to lose 4 kg in the 3 weeks before weigh-in. Make a plan with no water cutting and no more than 500 g a day.</q><button class="copy" type="button">Copy</button></div>
+    <div class="ask"><span class="t">Routines</span><q>Turn the unpaid fee check we just did into a skill, and make it run automatically every month on the 25th.</q><button class="copy" type="button">Copy</button></div>
+    <div class="ask"><span class="t">Contracts</span><q>Tell me only what changed in this sponsorship contract compared with last year’s.</q><button class="copy" type="button">Copy</button></div>
+  </div>
+
+  <h2>Gym ground rules<small>RULES</small></h2>
+  <p class="lead">You’ll be handling members’ money and personal information, so decide these from the start.</p>
+  <div class="dark">
+    <p class="rlabel">4 RULES</p>
+    <div class="ri"><b>A person presses send, pay, and delete</b><p>Issuing invoices, making transfers, sending messages: Claude gets everything ready and stops. Staff press the final button.</p></div>
+    <div class="ri"><b>Keep members’ names private</b><p>When publishing shift schedules or live results pages, replace staff and member names with aliases. Check the content with your own eyes before it goes public.</p></div>
+    <div class="ri"><b>Don’t hand over passwords</b><p>Staff log in themselves. Claude only reads screens that are already logged in.</p></div>
+    <div class="ri"><b>Keep one home for files</b><p>Save what you make in the shared folder under “year-month + project name.” Keep your desktop from getting cluttered.</p></div>
+  </div>
+
+  <h2>How to start<small>START</small></h2>
+  <p class="lead">You can start even if nobody at your gym is good with computers. I wrote up the path I took and where I got stuck in <a href="/hajimekata/">How to Start with Claude</a>.</p>
+  <ol class="steps">
+    <li><b>Install the Claude app on your gym’s computer</b><p>Claude Code comes in the Mac and Windows desktop apps. If all your staff will use it, a team plan makes it easier to manage.</p></li>
+    <li><b>Try handing it one Excel file</b><p>Start with “Look at this file and give me this month’s total.” The first time, check for yourself that the answer is right.</p></li>
+    <li><b>Pick one monthly job and make it a routine</b><p>If it goes well, say “Turn these steps into a skill.” From next month on, one line runs the same job.</p></li>
+    <li><b>Once you’re used to it, try booking systems and tournament pages</b><p>From Purple belt on, you move to having it read screens you’re already logged in to.</p></li>
+  </ol>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">I’d like to try this where I work.</b><br>
+    I help gyms, organizations, and shops hand their back-office work to AI. For now, it’s free for the first 3 people, limited to people I’ve met, for up to one tool each. <a href="/en/irai/" style="color:#a3801a;white-space:nowrap;">Get help with AI →</a>
+  </p>
+
+  <footer>
+    Prices and plans can change. Please check the official site before signing up.<br>
+    <a href="/en/">← Back to jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+
+<script>
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var q = btn.parentElement.querySelector('q');
+      var text = q.textContent.trim();
+      function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); }
+      function fallback() {
+        var r = document.createRange(); r.selectNodeContents(q);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      }
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+    });
+  });
+</script>
+<script>
+(function(){ if(!('IntersectionObserver' in window)) return; document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -10% 0px'});
+  document.querySelectorAll('.today li').forEach(function(li,i){li.style.transitionDelay=(i%3)*80+'ms';io.observe(li);});
+})();
+</script>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}h2 small{font-size:12px}.bside .en{font-size:12px}.dnum small{font-size:12px}.dayhead .dl{font-size:12px}.today em{font-size:12px}.ask .t{font-size:12px}.copy{font-size:12.5px}.dark .rlabel{font-size:12px}.copy{padding-top:8px;padding-bottom:8px}}</style>
+

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/">
+<link rel="canonical" href="https://jiujitsu.co.jp/en/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Jiu Labo｜jiujitsu.co.jp</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Leading Japan at the crossroads of jiu-jitsu and AI. Turning &quot;wouldn't it be nice if...&quot; into real things. Here you'll find the tools we built because life on the mat demanded them.">
+<link rel="alternate" type="application/atom+xml" title="New at Jiu Labo" href="/feed.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff;
+    --panel: #faf8f2;
+    --line: #e7e1d1;
+    --gold: #8a6c12;
+    --gold-hi: #c9a227;
+    --ink: #17140d;
+    --body-c: #4d4838;
+    --faint: #736b55;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  header { text-align: center; padding: 88px 24px 56px; position: relative; }
+  header::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 30%, rgba(201,162,39,.08), transparent 70%); pointer-events: none; }
+  .wordmark { font-family: var(--mincho); font-weight: 600; font-size: clamp(44px, 9vw, 84px); line-height: 1.1; letter-spacing: .02em; margin: 0; padding: .05em .12em .24em; background: linear-gradient(175deg, var(--gold-hi) 10%, var(--gold) 50%, #6f5610 95%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .domain { margin-top: 2px; }
+  .domain { font-size: 12.5px; letter-spacing: .28em; color: var(--faint); margin: 14px 0 0; }
+  .tagline { font-family: var(--mincho); font-weight: 600; font-size: clamp(16px, 3vw, 21px); color: var(--ink); letter-spacing: .12em; margin: 34px 0 0; text-wrap: balance; }
+  .tagline ruby { ruby-align: center; }
+  .tagline rt { font-size: .5em; font-weight: 500; letter-spacing: .04em; color: var(--ink); opacity: .75; }
+  .subline { font-size: clamp(14px, 2.4vw, 15.5px); color: var(--body-c); letter-spacing: .08em; margin: 10px 0 0; }
+
+  .hsearch { position: relative; display: flex; max-width: 420px; margin: 26px auto 0; }
+  .hsearch input { flex: 1; min-width: 0; font: inherit; font-size: 16px; color: var(--ink); background: rgba(255,255,255,.9); border: 1px solid var(--line); border-radius: 999px; padding: 8px 56px 8px 20px; outline: none; -webkit-appearance: none; appearance: none; }
+  .hsearch input::placeholder { color: var(--faint); letter-spacing: .04em; }
+  .hsearch input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,162,39,.18); }
+  .hsearch button { position: absolute; right: 4px; top: 4px; bottom: 4px; width: 44px; border: 0; border-radius: 999px; background: var(--gold); color: #fff; cursor: pointer; display: grid; place-items: center; }
+  .hsearch button:hover { background: #8d6e14; }
+  .hsearch svg { width: 17px; height: 17px; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  main { padding: 64px 0 80px; }
+  .works { display: grid; gap: 20px; }
+  .cat-label { font-family: var(--mincho); font-size: 15px; letter-spacing: .34em; color: var(--gold); font-weight: 700; margin: 28px 0 0; display: flex; align-items: center; gap: 16px; }
+  .cat-label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .cat-label:first-child { margin-top: 0; }
+  a.card { display: grid; grid-template-columns: 250px 1fr; gap: 28px; align-items: center; background: var(--panel); border: 1px solid var(--line); padding: 24px; text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+  a.card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  a.card:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  a.card.solo { grid-template-columns: 1fr; }
+  .thumb { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; border: 1px solid var(--line); background: var(--paper); display: block; }
+  .eyebrow { font-family: var(--mincho); font-size: 13px; letter-spacing: .2em; color: var(--gold); margin: 0 0 8px; }
+  .card h2 { font-family: var(--mincho); font-weight: 700; font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 0 0 8px; }
+  .card h2 .arrow { color: var(--gold); margin-left: 8px; font-weight: 500; }
+  .card p { font-size: 15px; line-height: 1.95; margin: 0; }
+  .card .note { display: inline-block; margin-top: 10px; font-size: 12px; letter-spacing: .08em; color: var(--gold); border: 1px solid rgba(138,108,18,.4); padding: 2px 10px; border-radius: 999px; }
+  @media (max-width: 660px) {
+    a.card { grid-template-columns: 1fr; gap: 16px; }
+  }
+
+  .people { margin-top: 72px; }
+  .sec-label { font-family: var(--mincho); font-size: 15px; letter-spacing: .3em; color: var(--gold); font-weight: 700; margin: 0 0 20px; }
+  .pgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 660px) { .pgrid { grid-template-columns: 1fr; } }
+  .pcard { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 26px 28px 28px; }
+  .pname { font-family: var(--mincho); font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: .08em; margin: 0 0 2px; }
+  .pname small { display: block; font-family: var(--gothic); font-size: 11px; letter-spacing: .26em; color: var(--faint); font-weight: 500; margin-top: 4px; }
+  .prole { font-size: 13px; letter-spacing: .1em; color: var(--gold); font-weight: 500; margin: 10px 0 12px; }
+  .pbio { font-size: 14.5px; line-height: 2; margin: 0; }
+  .pbio a { color: var(--gold); text-decoration: none; }
+  .pbio a:hover { text-decoration: underline; }
+  .pdata { font-size: 13px; color: var(--faint); letter-spacing: .04em; margin: -4px 0 12px; }
+  .pinsta { margin: 18px 0 0; font-size: 13px; letter-spacing: .06em; }
+  .pinsta a { color: var(--gold); text-decoration: none; }
+  .pinsta a:hover { text-decoration: underline; }
+  .rec-label { font-family: var(--mincho); font-size: 13px; letter-spacing: .26em; color: var(--gold); font-weight: 700; margin: 18px 0 8px; }
+  .record { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 13.5px; line-height: 1.75; }
+  .record .ry { font-family: var(--mincho); font-weight: 500; color: var(--gold); margin-right: 10px; letter-spacing: .04em; }
+  .record .fst { font-size: 11px; font-weight: 700; letter-spacing: .1em; color: var(--paper); background: var(--gold); border-radius: 3px; padding: 1px 7px; margin-left: 8px; vertical-align: 1px; }
+
+  .coming { margin-top: 56px; border-left: 2px solid var(--gold); padding: 4px 0 4px 26px; }
+  .coming h3 { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .08em; margin: 0 0 8px; }
+  .coming p { font-size: 15px; margin: 0; max-width: 40em; }
+  .soon { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .soon li { font-size: 15px; }
+  .soon b { font-family: var(--mincho); font-weight: 700; color: var(--ink); letter-spacing: .04em; margin-right: 10px; }
+  .soon span { color: var(--body-c); }
+
+  .news { padding: 40px 0 0; }
+  .newslist { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .newslist li { border-bottom: 1px solid var(--line); }
+  .newslist a { display: flex; align-items: baseline; gap: 18px; padding: 13px 4px; text-decoration: none; color: inherit; transition: color .15s; }
+  .newslist a:hover { color: var(--gold); }
+  .newslist a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .newslist time { font-family: var(--mincho); font-size: 13px; letter-spacing: .1em; color: var(--faint); flex: none; }
+  .newslist b { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: .04em; }
+  .newslist a:hover b { color: var(--gold); }
+  .newslist .arrow { color: var(--gold); margin-left: auto; flex: none; }
+  .newsfoot { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 18px 0 0; }
+  .linebtn { font-size: 13.5px; font-weight: 700; letter-spacing: .08em; text-decoration: none; color: #fff; background: #06c755; border-radius: 999px; padding: 8px 20px; }
+  .linebtn:hover { filter: brightness(.93); }
+  .feedlink { font-size: 13px; letter-spacing: .1em; color: var(--faint); text-decoration: none; }
+  .feedlink:hover { color: var(--gold); text-decoration: underline; }
+
+  .newslist .tag { flex: none; font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: var(--gold); border: 1px solid rgba(138,108,18,.45); border-radius: 3px; padding: 0 6px; line-height: 1.7; }
+  .newslist b { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  /* 一番新しいお知らせを大きく */
+  .newslist li.is-latest a { flex-wrap: wrap; gap: 4px 12px; align-items: center; background: var(--panel); border-top: 3px solid var(--gold); padding: 20px 20px 22px; }
+  .newslist li.is-latest b { flex-basis: 100%; font-size: 21px; line-height: 1.6; white-space: normal; }
+  .newslist li.is-latest .arrow { display: none; }
+  .newslist .sum { flex-basis: 100%; font-size: 14.5px; line-height: 1.8; color: var(--body-c); }
+  .newslist .new-badge { flex: none; font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: var(--paper); background: var(--gold); border-radius: 3px; padding: 0 7px; line-height: 1.7; }
+  .newslist li.is-hidden { display: none; }
+  .more-btn { background: none; border: 1px solid var(--gold); color: var(--gold); border-radius: 999px; padding: 8px 24px; font: inherit; font-size: 13.5px; letter-spacing: .1em; cursor: pointer; transition: background .15s, color .15s; }
+  .more-btn:hover { background: var(--gold); color: var(--paper); }
+  .more-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+  /* ブログ欄：いちばん上。最新記事は書き出しを抜粋して見せる */
+  .bfeat { margin-top: 18px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 26px 28px 24px; }
+  .bfeat .eyebrow { display: flex; align-items: center; gap: 12px; letter-spacing: .12em; }
+  .blabel { font-family: var(--gothic); font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: var(--paper); background: var(--gold); border-radius: 3px; padding: 0 8px; line-height: 1.8; }
+  .bfeat time { color: var(--faint); }
+  .bfeat h2 { font-family: var(--mincho); font-weight: 700; font-size: clamp(21px, 4vw, 27px); line-height: 1.55; letter-spacing: .05em; margin: 0 0 14px; word-break: auto-phrase; text-wrap: pretty; }
+  .bfeat h2 a { color: var(--ink); text-decoration: none; }
+  .bfeat h2 a:hover { color: var(--gold); }
+  .bexcerpt { position: relative; max-height: 13.5em; overflow: hidden; }
+  .bexcerpt::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4.5em; background: linear-gradient(rgba(250,248,242,0), var(--panel)); pointer-events: none; }
+  .bexcerpt p { font-size: 15.5px; line-height: 2; margin: 0 0 .8em; }
+  .bread { display: inline-block; margin-top: 10px; background: var(--gold); color: var(--paper); border-radius: 999px; padding: 10px 30px; font-size: 14.5px; font-weight: 700; letter-spacing: .1em; text-decoration: none; transition: background .15s; }
+  .bread:hover { background: #6f5610; }
+  .bread:focus-visible, .bfeat h2 a:focus-visible, .bmore a:focus-visible, .ball a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .bmore { list-style: none; margin: 18px 0 0; padding: 0; border-top: 1px solid var(--line); }
+  .bmore li { border-bottom: 1px solid var(--line); }
+  .bmore a { display: flex; align-items: baseline; gap: 16px; padding: 12px 4px; text-decoration: none; color: inherit; }
+  .bmore time { flex: none; font-family: var(--mincho); font-size: 13px; letter-spacing: .1em; color: var(--faint); }
+  .bmore b { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: .04em; }
+  .bmore a:hover b { color: var(--gold); }
+  .ball { margin: 14px 0 0; text-align: right; font-size: 14px; letter-spacing: .08em; }
+  .ball a { color: var(--gold); text-decoration: none; font-weight: 700; }
+  .ball a:hover { text-decoration: underline; }
+  .dailynews { margin-top: 72px; scroll-margin-top: 20px; }
+  .dailynews .works { margin-top: 20px; }
+
+  .pick { padding: 36px 0 0; }
+  .menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 28px 0 0; }
+  .menu a { display: inline-flex; align-items: center; gap: 4px; padding: 8px 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 999px; font-size: 14.5px; font-weight: 500; color: var(--ink); text-decoration: none; white-space: nowrap; transition: border-color .15s, color .15s; }
+  .menu a:hover { border-color: var(--gold); color: var(--gold); }
+  .menu a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .menu .ic { font-style: normal; }
+  .cat-label, .people, .coming { scroll-margin-top: 20px; }
+
+  @media (max-width: 660px) {
+    header { padding: 30px 16px 22px; }
+    .wordmark { font-size: 44px; }
+    .domain { margin-top: 4px; font-size: 11px; }
+    .tagline { margin-top: 12px; font-size: 15.5px; letter-spacing: .06em; line-height: 1.7; }
+    .subline { margin-top: 4px; font-size: 13.5px; }
+    .hsearch { margin-top: 16px; }
+    .wrap { padding: 0 16px; }
+    .pick { padding-top: 16px; }
+    .menu { gap: 6px; padding-top: 20px; }
+    .menu a { font-size: 13.5px; padding: 7px 11px; }
+    .news { padding-top: 28px; }
+    .sec-label { margin-bottom: 10px; }
+    .newslist a { flex-wrap: wrap; gap: 0 8px; padding: 9px 2px; align-items: center; }
+    .newslist time { font-size: 12.5px; }
+    .newslist b { flex-basis: 100%; font-size: 15.5px; letter-spacing: .02em; line-height: 1.6; }
+    .newslist .arrow { display: none; }
+    .newslist li.is-latest a { gap: 2px 8px; padding: 14px 14px 16px; }
+    .newslist li.is-latest b { font-size: 18px; }
+    .newslist .sum { font-size: 14px; line-height: 1.8; }
+    main { padding-top: 40px; }
+    .bfeat { padding: 20px 18px 20px; margin-top: 12px; }
+    .bexcerpt { max-height: 12em; }
+    .bexcerpt p { font-size: 14.5px; line-height: 1.9; }
+    .bread { display: block; text-align: center; }
+    .bmore a { flex-wrap: wrap; gap: 0 8px; padding: 10px 2px; }
+    .bmore time { font-size: 12.5px; }
+    .bmore b { flex-basis: 100%; font-size: 15px; line-height: 1.6; }
+    .dailynews { margin-top: 48px; }
+  }
+
+  footer { border-top: 1px solid var(--line); padding: 34px 24px 46px; text-align: center; font-size: 13px; letter-spacing: .12em; color: var(--faint); }
+  footer b { color: var(--body-c); font-weight: 700; }
+  footer a { color: var(--faint); }
+
+  .rise { opacity: 0; transform: translateY(12px); animation: rise .8s cubic-bezier(.2,.7,.2,1) forwards; }
+  .d1 { animation-delay: .05s; } .d2 { animation-delay: .18s; } .d3 { animation-delay: .3s; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .rise { animation: none; opacity: 1; transform: none; } }
+</style>
+
+<header>
+  <h1 class="wordmark rise d1">Jiu Labo</h1>
+  <p class="domain rise d1">JIUJITSU.CO.JP</p>
+  <p class="tagline rise d2">An AI lab, run by Ai.</p>
+  <p class="subline rise d2">Turning "wouldn't it be nice if..." into real things.</p>
+  
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <nav class="menu rise d2" aria-label="Menu">
+    <a href="#cat-jiujitsu"><span class="ic" aria-hidden="true">🥋</span>Jiu-jitsu</a>
+    <a href="#cat-shigoto"><span class="ic" aria-hidden="true">🗂️</span>Gym Work</a>
+    <a href="#cat-irai"><span class="ic" aria-hidden="true">🤝</span>Made on Request</a>
+    <a href="#cat-muratake"><span class="ic" aria-hidden="true">🏠</span>The Muratas</a>
+    <a href="/en/blog/"><span class="ic" aria-hidden="true">✏️</span>Blog</a>
+  </nav>
+</div>
+
+<div class="wrap">
+  <section class="pick blogtop rise d2" id="cat-blog">
+    <p class="cat-label">The Manager's Blog</p>
+
+    <!-- 最新記事。/blog/ に記事が増えると、下のスクリプトが自動で差し替えます -->
+    <article class="bfeat">
+      <p class="eyebrow"><span class="blabel">Latest post</span><time datetime="2026-09-29">2026.09.29</time></p>
+      <h2><a href="/en/blog/ai-shain/">Our company already had 6 AI staff</a></h2>
+      <div class="bexcerpt">
+        <p>Hi, it's Ai Murata. For post number 6, I want to talk about AI staff.</p>
+        <p>You've probably been hearing the term "AI agent" a lot lately. It means giving AI work the way you would an employee. Honestly, my first motivation was just "that sounds cool, we should do it too."</p>
+        <p>So I asked Claude, "What do you think about creating AI staff?" The answer was not what I expected.</p>
+      </div>
+      <a class="bread" href="/en/blog/ai-shain/">Read more →</a>
+    </article>
+
+    <ul class="bmore">
+      <li><a href="/en/blog/shigoto-igai-de/"><time datetime="2026-09-28">2026.09.28</time><b>If you can't use it at work, use it at home</b></a></li>
+      <li><a href="/en/blog/seikyusho-claude/"><time datetime="2026-09-28">2026.09.28</time><b>Having Claude review a year of invoices</b></a></li>
+      <li><a href="/en/blog/waapuro-kara-ai/"><time datetime="2026-09-27">2026.09.27</time><b>How a word processor fan like me fell for Claude Code</b></a></li>
+    </ul>
+    <p class="ball"><a href="/en/blog/">See all blog posts →</a></p>
+  </section>
+</div>
+<script>
+// トップのブログ欄：/blog/ の一覧から最新記事を拾い、本文の書き出しを抜粋して出す
+(function () {
+  var box = document.querySelector('.blogtop');
+  if (!box || !window.fetch || !window.DOMParser) return;
+  function doc(t) { return new DOMParser().parseFromString(t, 'text/html'); }
+  function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+  function get(u) { return fetch(u).then(function (r) { if (!r.ok) throw r; return r.text(); }).then(doc); }
+  get('/en/blog/').then(function (d) {
+    var posts = Array.prototype.map.call(d.querySelectorAll('.posts li a'), function (a) {
+      var t = a.querySelector('time'), h = a.querySelector('h2');
+      return { url: a.getAttribute('href'), date: t ? t.getAttribute('datetime') : '', label: t ? t.textContent : '', title: h ? h.textContent.trim() : '' };
+    }).filter(function (p) { return p.url && p.title; });
+    if (!posts.length) return;
+    posts.sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
+    var top = posts[0];
+    box.querySelector('.bmore').innerHTML = posts.slice(1, 4).map(function (p) {
+      return '<li><a href="' + esc(p.url) + '"><time datetime="' + esc(p.date) + '">' + esc(p.label) + '</time><b>' + esc(p.title) + '</b></a></li>';
+    }).join('');
+    if (box.querySelector('.bfeat h2 a').getAttribute('href') === top.url) return;
+    return get(top.url).then(function (a) {
+      var ps = Array.prototype.filter.call(a.querySelectorAll('article > p'), function (p) {
+        return p.textContent.trim().length > 0;
+      }).slice(0, 3);
+      if (!ps.length) return;
+      var f = box.querySelector('.bfeat');
+      f.querySelector('time').setAttribute('datetime', top.date);
+      f.querySelector('time').textContent = top.label;
+      f.querySelector('h2 a').textContent = top.title;
+      f.querySelector('h2 a').href = top.url;
+      f.querySelector('.bread').href = top.url;
+      f.querySelector('.bexcerpt').innerHTML = ps.map(function (p) { return '<p>' + esc(p.textContent.trim()) + '</p>'; }).join('');
+    });
+  }).catch(function () {});
+})();
+</script>
+
+
+<script>
+// 新着欄：3日以内にNEW、最初は data-show 件だけ見せて残りは「もっと見る」
+(function () {
+  var NEW_DAYS = 3;
+  var list = document.querySelector('.newslist');
+  if (!list) return;
+  var show = +list.getAttribute('data-show') || 5;
+  var items = Array.prototype.slice.call(list.children);
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  items.forEach(function (li, i) {
+    var t = li.querySelector('time');
+    var d = new Date((t ? t.getAttribute('datetime') : '') + 'T00:00:00');
+    var days = (today - d) / 86400000;
+    if (days >= 0 && days < NEW_DAYS) {
+      var b = document.createElement('span');
+      b.className = 'new-badge'; b.textContent = 'NEW';
+      (li.querySelector('.tag') || t).after(b);
+    }
+    if (i >= show) li.classList.add('is-hidden');
+  });
+  if (items.length > show) {
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'more-btn'; btn.textContent = 'See more';
+    btn.onclick = function () {
+      items.forEach(function (li) { li.classList.remove('is-hidden'); });
+      btn.remove();
+    };
+    var foot = document.querySelector('.newsfoot');
+    foot ? foot.prepend(btn) : list.after(btn);
+  }
+})();
+</script>
+
+<main>
+  <div class="wrap">
+    <div class="works rise d3">
+
+      <p class="cat-label" id="cat-jiujitsu">Jiu-jitsu</p>
+
+      <a class="card" href="/en/tournament/">
+        <img class="thumb" src="/assets/taikai.jpg" alt="Tournament schedule screen: a list of match numbers, mats and results for each competitor">
+        <span>
+          <p class="eyebrow">01 · TOURNAMENT</p>
+          <h2>Tournament Schedule<span class="arrow">→</span></h2>
+        </span>
+      </a>
+
+      <a class="card" href="/en/hajimete/">
+        <img class="thumb" src="/assets/hajimete.jpg" alt="First tournament guide screen: a timeline of how the tournament goes">
+        <span>
+          <p class="eyebrow">02 · FIRST TIMERS</p>
+          <h2>Your First Tournament Guide<span class="arrow">→</span></h2>
+          <p>Everything we tell first-time competitors, every time, all on one page. From signing up to the day before, weigh-in on the day and match etiquette. It's packed with things only experienced competitors know, like "you weigh in with your gi on."</p>
+        </span>
+      </a>
+
+      <a class="card" href="/dojo/">
+        <img class="thumb" src="/assets/dojo.jpg" alt="Japan jiu-jitsu gym guide screen: a map of Japan and gym search filters">
+        <span>
+          <p class="eyebrow">03 · DOJO</p>
+          <h2>Japan Jiu-Jitsu Gym Guide<span class="arrow">→</span></h2>
+          <p>A database of 548 jiu-jitsu gyms across Japan that you can browse by map or search. We collected it from federation public info and tournament entry records, and added class schedules and whether each gym welcomes people visiting from other gyms to train.</p>
+          <span class="note">Work in progress (still collecting data)</span>
+        </span>
+      </a>
+
+      <a class="card" href="/en/kenkyu/">
+        <img class="thumb" src="/assets/kenkyu.jpg" alt="Jiu-jitsu research guide screen: paper summaries sorted by topic">
+        <span>
+          <p class="eyebrow">04 · RESEARCH</p>
+          <h2>Jiu-Jitsu Research Guide<span class="arrow">→</span></h2>
+          <p>How much does science really know about jiu-jitsu? Injuries, the safety of chokes, match fitness, weight cuts, the mental side, even health in older adults. These are summaries of 17 academic papers from overseas.</p>
+        </span>
+      </a>
+
+      <a class="card" href="/textbook/?lang=en">
+        <img class="thumb" src="/assets/textbook.jpg" alt="Covers of the Instructor Course textbook: four books in Japanese, Korean, English and Portuguese">
+        <span>
+          <p class="eyebrow">05 · TEXTBOOK</p>
+          <h2>Instructor Course Textbook<span class="arrow">→</span></h2>
+          <p>How to think about jiu-jitsu, how to teach it, theory, technique, drills. The Instructor Course textbook (previous edition) is free to read as a PDF in Japanese, Korean, English and Portuguese.</p>
+        </span>
+      </a>
+
+      <p class="cat-label" id="cat-shigoto">Gym Work</p>
+
+
+
+
+      <a class="card" href="/en/claudecode/">
+        <img class="thumb" src="/assets/claudecode.jpg" alt="Claude Code at a Jiu-Jitsu Gym page: ways to use it, laid out by belt from white to black">
+        <span>
+          <p class="eyebrow">06 · CLAUDE CODE</p>
+          <h2>Claude Code at a Jiu-Jitsu Gym<span class="arrow">→</span></h2>
+          <p>From the morning to-do list to answering inquiries, adding up membership fees and posting live results. This is how we hand the behind-the-scenes gym work, every day, to the AI that built this site. It's laid out in stages from White belt to Black belt, with requests you can copy and use as they are.</p>
+        </span>
+      </a>
+
+
+      <a class="card" href="/en/claude-nyumon/">
+        <img class="thumb" src="/assets/claude-nyumon.jpg" alt="From Computer Beginner to Claude Pro page: five stages by belt color, from choosing a computer to mastering Claude">
+        <span>
+          <p class="eyebrow">07 · GETTING STARTED</p>
+          <h2>From Computer Beginner to Claude Pro<span class="arrow">→</span></h2>
+          <p>Choosing a computer, signing up for Claude, connecting your phone, good first things to ask for, and tips for really getting the hang of it. Even if you've barely touched a computer, you can move up one step at a time, like jiu-jitsu belts.</p>
+        </span>
+      </a>
+
+      <p class="cat-label" id="cat-irai">Made on Request</p>
+
+
+
+
+      <a class="card solo" href="/en/irai/">
+        <span>
+          <p class="eyebrow">WORK WITH US · Free for the first 3 people</p>
+          <h2>Need a Hand with AI?<span class="arrow">→</span></h2>
+          <p>I'm not an engineer, so I'll be right there at your level. I can help you build small tools, get started with Claude side by side, and automate your monthly tasks. For now, this is only for people I've met in person: free for the first 3 people, up to one tool each.</p>
+        </span>
+      </a>
+
+      <p class="cat-label" id="cat-muratake">The Muratas</p>
+
+      <a class="card" href="/en/goroku/">
+        <img class="thumb" src="/assets/goroku.jpg" alt="Ryozo's Sayings page: words in an elegant serif type, lined up along a gold line">
+        <span>
+          <p class="eyebrow">08 · SAYINGS</p>
+          <h2>Ryozo's Sayings<span class="arrow">→</span></h2>
+          <p>Words that slipped out on the mat and in everyday conversation, collected by someone right beside him. "The word for going all out, hisshi, is written 'certain death.'" "If it doesn't exist, make it." More are added little by little.</p>
+        </span>
+      </a>
+
+      <a class="card" href="/en/toriatsukai/">
+        <img class="thumb" src="/assets/toriatsukai.jpg" alt="The Ryozo User Manual page: a table of contents and product specs, like a home appliance manual">
+        <span>
+          <p class="eyebrow">09 · USER MANUAL</p>
+          <h2>The Ryozo User Manual<span class="arrow">→</span></h2>
+          <p>He started jiu-jitsu at 26 and was a world champion at 38. This is a guide to spending every day with a man like that, written like an appliance manual. In the morning, it's best to leave him alone until he finishes his coffee. You can also make a user manual of your own in the same style.</p>
+        </span>
+      </a>
+
+
+
+
+
+    </div>
+
+    
+
+    <section class="people" id="people">
+      <p class="sec-label">The People Behind It</p>
+      <div class="pgrid">
+        <div class="pcard">
+          <p class="pname">Ryozo Murata<small></small></p>
+          <p class="prole">CEO, BUTTI ON LINE Inc.<br>President, SJJJF Sports Jiu-Jitsu Japan Federation (nonprofit)</p>
+          <p class="pdata">Born April 24, 1980, blood type O / From Abashiri, Hokkaido / 177 cm, 74 kg (68 kg at competition)</p>
+          <p class="pbio">He started Brazilian jiu-jitsu at 26 and trained under Cristiano Carioca, a black belt from the Royler Gracie line (Carioca was in Japan at the time as KID Yamamoto's jiu-jitsu coach). At 31 he became Hokkaido's first black belt in a direct Gracie lineage. In 2018 he founded the nonprofit Sports Jiu-Jitsu Japan Federation (SJJJF) and became its president. Today, as both a competitor and an instructor, he works to spread and grow jiu-jitsu in Japan and around the world.</p>
+          <p class="rec-label">Competition Record</p>
+          <ul class="record">
+            <li><span class="ry">2006</span>Started Brazilian jiu-jitsu</li>
+            <li><span class="ry">2007.5</span>Promoted to Blue belt</li>
+            <li><span class="ry">2008</span>9th All Japan Brazilian Jiu-Jitsu Championship, Blue Belt Leve: Champion</li>
+            <li><span class="ry">2008.7</span>Promoted to Purple belt</li>
+            <li><span class="ry">2009</span>1st Tokyo International Jiu-Jitsu Open, Purple Belt Leve: Champion</li>
+            <li><span class="ry">2009.7</span>Promoted to Brown belt</li>
+            <li><span class="ry">2011</span>Tokyo International Open, Brown Belt Absolute: Champion</li>
+            <li><span class="ry">2011.10</span>Awarded Black belt by Cristiano Carioca</li>
+            <li><span class="ry">2013</span>Abu Dhabi World Pro Jiu-Jitsu Japan Trials, Black Belt Pena: Champion</li>
+            <li><span class="ry">2015</span>Nagoya International IBJJF, Master 1 Black Belt Feather: Champion</li>
+            <li><span class="ry">2018</span>SJJJF All Japan Championship, Black Belt Feather: Champion</li>
+            <li class="win"><span class="ry">2018</span>SJJIF World Championship, Master 2 Black Belt Feather: Champion<span class="fst">First from Japan</span></li>
+            <li class="win"><span class="ry">2019</span>SJJIF World Championship, Master 2 Black Belt Feather: Champion</li>
+            <li><span class="ry">2019</span>2nd SJJJF All Japan Championship, Master 2 Black Belt Feather: Champion</li>
+            <li><span class="ry">2023</span>Cebu International Open, Black Belt Master 3 Light: Champion</li>
+            <li><span class="ry">2023</span>Tokyo International Winter, Black Belt Master 3 Feather: Champion</li>
+            <li><span class="ry">2025</span>ASJJF KITA KANTO OPEN, Master 41 Black Belt Light: Champion</li>
+            <li><span class="ry">2025</span>IBJJF World Master, Master 3 Black Belt Feather: 3rd place</li>
+            <li><span class="ry">PRO</span>5 pro matches (multiple submission wins)</li>
+          </ul>
+          <p class="pinsta"><a href="https://www.instagram.com/ryozomurata/" target="_blank" rel="noopener">Instagram @ryozomurata</a></p>
+        </div>
+        <div class="pcard">
+          <p class="pname">Ai Murata<small></small></p>
+          <p class="pbio" style="margin-top: 14px;">Ryozo Murata's manager and wife, and the person who runs three jiu-jitsu academies (Harajuku, Kitasando, Sapporo). Using the negotiating and office skills she built up over her career, she takes care of the entire back office for the gyms and the Sports Jiu-Jitsu Japan Federation: accounting, PR, HR and all the day-to-day admin. With the latest AI as her partner, she turns real problems into tools and opens the way to a new era. Her hobby is watching combat sports.</p>
+          <p class="rec-label">Background</p>
+          <ul class="record">
+            <li><span class="ry">2012</span>Graduated from Chuo University, Faculty of Economics</li>
+            <li><span class="ry">2012</span>Joined a private school corporation. In the general affairs section, handled subsidies, negotiating with government offices and coordinating with senior management</li>
+            <li><span class="ry">2018</span>Completed Waseda University Graduate School of Sport Sciences</li>
+            <li><span class="ry">2018</span>Won the top prize in a public contest held by the Japan Sports Agency</li>
+            <li><span class="ry">2024</span>Left the school corporation</li>
+            <li><span class="ry">2026</span>Joined BUTTI ON LINE Inc.</li>
+          </ul>
+          <p class="pinsta"><a href="https://www.instagram.com/ryozo.jiujitsu/" target="_blank" rel="noopener">Instagram @ryozo.jiujitsu</a> ／ <a href="https://www.instagram.com/aiai0729/" target="_blank" rel="noopener">@aiai0729</a></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="coming" id="coming">
+      <h3>What We're Building Next</h3>
+      <ul class="soon">
+        <li><b>Gym Management System</b><span>Members, monthly fees, bookings, belt promotions, even tournament finances. Everything for running a jiu-jitsu gym, all in one place.</span></li>
+        <li><b>Face Search for Tournament Photos</b><span>With just one photo of your face, find the shots you're in among thousands of tournament photos.</span></li>
+        <li><b>Weight Cut System</b><span>A tool that gets you through your pre-competition weight cut with tracking and a plan.</span></li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer>
+  Run by <b>BUTTI ON LINE</b> | YAWARA / SWEEP / OVER LIMIT SAPPORO / Jiu Fight<br>
+  <a href="/en/company/">Company Profile</a><br>
+  © 2026 BUTTI ON LINE Inc.
+</footer>
+<style id="sp-readable">@media (max-width:640px){.domain{font-size:12px}.pname small{font-size:12px}.record .fst{font-size:12px}.newslist .new-badge{font-size:12.5px}.blabel{font-size:12.5px}}</style>
+</html>

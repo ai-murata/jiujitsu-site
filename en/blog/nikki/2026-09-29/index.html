@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/nikki/2026-09-29/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/nikki/2026-09-29/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/nikki/2026-09-29/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/nikki/2026-09-29/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/nikki/2026-09-29/">
+<link rel="canonical" href="https://jiujitsu.co.jp/en/blog/nikki/2026-09-29/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Finding 684 jiu-jitsu gyms across Japan on the map with Claude | Jiu Labo Blog</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Today’s biggest “Wait, what?” was going through Google Maps for all 47 prefectures and adding 133 new gyms to the gym guide. I also built 2 systems in one day that automatically sum up the morning news.">
+<meta property="og:title" content="Finding 684 jiu-jitsu gyms across Japan on the map with Claude | Jiu Labo Blog">
+<meta property="og:description" content="Today’s biggest “Wait, what?” was going through Google Maps for all 47 prefectures and adding 133 new gyms to the gym guide. I also built 2 systems in one day that automatically sum up the morning news.">
+<meta property="og:url" content="https://jiujitsu.co.jp/en/blog/nikki/2026-09-29/">
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/atom+xml" title="New at Jiu Labo" href="/feed.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.95; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { color: inherit; text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; word-break: auto-phrase; text-wrap: balance; }
+  .meta, .lede { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 40px; }
+  article p { margin: 0 0 1.4em; }
+  .did { list-style: none; margin: 8px 0 32px; padding: 0; counter-reset: did; border-top: 1px solid var(--line); }
+  .did li { counter-increment: did; padding: 18px 0 16px 44px; border-bottom: 1px solid var(--line); position: relative; }
+  .did li::before { content: counter(did); position: absolute; left: 4px; top: 20px; width: 26px; height: 26px; border-radius: 50%; background: var(--panel); border: 1px solid var(--gold); color: var(--gold); font-size: 12.5px; font-weight: 700; text-align: center; line-height: 24px; }
+  .did h2 { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .04em; line-height: 1.6; margin: 0 0 4px; word-break: auto-phrase; text-wrap: pretty; }
+  .did p { margin: 0; font-size: 14.5px; }
+  .ask { margin: 12px 0 0; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 10px 14px; }
+  .ask span { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; color: var(--gold); }
+  .did .ask p { font-size: 14.5px; color: var(--ink); }
+  .did .ask p::before { content: "「"; } .did .ask p::after { content: "」"; }
+  .did .tip { margin: 10px 0 0; font-size: 13.5px; }
+  .tip b { color: var(--gold); margin-right: 8px; font-size: 12px; letter-spacing: .08em; }
+  .did .see { margin: 8px 0 0; font-size: 13.5px; font-weight: 700; }
+  .did .see a { text-decoration: none; }
+  .closing { background: var(--panel); border-left: 3px solid var(--gold); padding: 14px 18px; }
+  .auto { font-size: 12.5px; color: var(--faint); }
+  .note { font-size: 12px; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 40px; }
+
+  .pager { display: flex; justify-content: space-between; gap: 12px; margin: 36px 0 0; font-size: 13.5px; }
+  .pager a { text-decoration: none; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+    article { font-size: 15px; }
+    .did li { padding-left: 38px; }
+    .did h2 { font-size: 16px; }
+  }
+  /* スマホで小さい字を底上げ（~/.claude/scripts/sp_readable.py と同じ値） */
+  @media (max-width:640px){.brand{font-size:12px}.ask span{font-size:12.5px}}
+</style>
+
+<header>
+  <p class="brand"><a href="/en/blog/">JIU LABO BLOG</a> · Diary</p>
+  <h1>Claude and I collected 684 jiu-jitsu gyms across Japan from the map</h1>
+  <p class="meta"><time datetime="2026-09-29">2026.09.29 (Tue)</time> Ai Murata (Manager)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>Today’s biggest “Wait, what?” was going through Google Maps for all 47 prefectures and adding 133 new gyms to the gym guide. I also built 2 systems in one day that automatically sum up the morning news.</p>
+    <ol class="did">
+      <li><h2>Going through maps of all 47 prefectures: 684 gyms</h2><p>To add more gyms to the gym guide, I had Claude go through Google Maps for all 47 prefectures of Japan. It found 133 new gyms, bringing the total to 684. After that, I had it look up each gym's website, Instagram, and training schedule and add those too, so the guide now has 508 websites, 307 Instagram accounts, and 312 schedules.</p>
+        <div class="ask"><span>If you want to copy this, ask like this</span><p>Starting with [prefecture], go through the map one area at a time, search for "[type of school]," and add any that aren't on the list yet, with their name and location</p></div>
+        <p class="tip"><b>Discovery</b> Some gyms turned up on the map but couldn't be pinned to an exact spot. Out of the 684, 562 got a pin on the map. When you have Claude leave the numbers behind, you can see where the gaps are.</p>
+        <p class="see"><a href="/dojo/">See what we made →</a></p>
+      </li>
+      <li><h2>Copying one system to make a second news page</h2><p>"Today's Jiu-Jitsu News," which I built in the morning, is a system that gathers the news every morning and summarizes only the relevant articles in Japanese. In the evening, I copied that exact system to make "Today's Claude News" too. The only change is how it picks stories: it now favors things like new model announcements and new service launches.</p>
+        <div class="ask"><span>If you want to copy this, ask like this</span><p>Using the same system as the jiu-jitsu news, also make a page that summarizes [topic] news every morning. When choosing stories, prioritize [criteria]</p></div>
+        <p class="tip"><b>Discovery</b> Instead of explaining from scratch, I just said "use the same system as that one." The news-reading bug I'd fixed that morning came along in its fixed state too.</p>
+        <p class="see"><a href="/claudenews/">See what we made →</a></p>
+      </li>
+      <li><h2>Summarizing 17 papers, and rewriting one spot</h2><p>I made a page that summarizes 17 academic papers on jiu-jitsu in plain Japanese, sorted by themes like injuries, fitness, match analysis, weight cuts, and mental game. Every paper was checked against a paper database to confirm it really exists before going on the page.</p>
+        <div class="ask"><span>If you want to copy this, ask like this</span><p>Find research papers on [topic] and summarize them briefly in Japanese, sorted by theme. Before adding each one, confirm that the paper really exists</p></div>
+        <p class="tip"><b>Discovery</b> After publishing, I noticed that a one-line note about injuries said "the authors conclude this" about something the paper doesn't actually say. I changed it to "this is a common claim, not this paper's conclusion." With AI summaries, it's important to check even who's being credited with saying what.</p>
+        <p class="see"><a href="/en/kenkyu/">See what we made →</a></p>
+      </li>
+    </ol>
+    <p class="closing">Going through every map and hunting down papers are both things I could never get to alone. The more you think "this has got to be too much," the more you should try asking once.</p>
+    <p class="auto">Automatic updates also ran today (8 for search, 3 for jiu-jitsu news, 1 for the subsidy list).</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+    <p class="pager"><span></span><a href="/en/blog/nikki/2026-09-30/">Next diary entry (2026.09.30 (Wed)) →</a></p>
+    <p class="note">Claude drafts this diary from the record of changes made to this site that day, and Murata reads it before it goes up.</p>
+  </article>
+
+  <footer>
+    <a href="/en/blog/">All blog posts</a> / <a href="/en/">Back to jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>

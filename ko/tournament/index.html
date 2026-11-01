@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/tournament/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/tournament/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/tournament/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/tournament/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/tournament/">
+<link rel="canonical" href="https://jiujitsu.co.jp/ko/tournament/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>대회 실시간 결과 페이지 — jiujitsu.co.jp</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="YAWARA / SWEEP 선수가 출전하는 대회의 실시간 결과 페이지 안내입니다.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff;
+    --panel: #faf8f2;
+    --line: #e7e1d1;
+    --gold: #a3801a;
+    --gold-hi: #c9a227;
+    --ink: #17140d;
+    --body-c: #5d5745;
+    --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  .home { position: absolute; top: 26px; left: 0; right: 0; text-align: center; font-size: 12px; letter-spacing: .16em; }
+  .home a { color: var(--faint); text-decoration: none; }
+  .home a:hover { color: var(--gold); }
+
+  header { text-align: center; padding: 78px 24px 50px; position: relative; }
+  header::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 30%, rgba(201,162,39,.08), transparent 70%); pointer-events: none; }
+  .eyebrow-top { font-family: var(--mincho); font-size: 12px; letter-spacing: .3em; color: var(--gold); margin: 0 0 14px; }
+  h1 { font-family: var(--mincho); font-weight: 600; font-size: clamp(28px, 6vw, 44px); line-height: 1.25; letter-spacing: .06em; color: var(--ink); margin: 0; }
+  .tagline { font-size: 13.5px; letter-spacing: .06em; margin: 20px 0 0; text-wrap: balance; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  main { padding: 56px 0 72px; }
+  section + section { margin-top: 56px; }
+  .sec-label { font-family: var(--mincho); font-size: 13px; letter-spacing: .3em; color: var(--gold); font-weight: 700; margin: 0 0 20px; }
+
+  .list { display: grid; gap: 18px; }
+  a.tcard { display: block; background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--line); padding: 24px 26px; text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+  a.tcard:hover { border-color: var(--gold); border-left-color: var(--gold); transform: translateY(-2px); }
+  a.tcard:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  a.tcard.live { border-left-color: var(--gold); }
+
+  .head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .badge { font-size: 11px; letter-spacing: .14em; padding: 2px 10px; border-radius: 999px; border: 1px solid rgba(163,128,26,.4); color: var(--gold); white-space: nowrap; }
+  .badge.done { color: var(--faint); border-color: var(--line); }
+  .date { font-size: 12px; letter-spacing: .1em; color: var(--faint); }
+  .tcard h2 { font-family: var(--mincho); font-weight: 700; font-size: 21px; color: var(--ink); letter-spacing: .05em; margin: 10px 0 0; }
+  .tcard h2 .arrow { color: var(--gold); margin-left: 8px; font-weight: 500; }
+  .venue { font-size: 13px; margin: 6px 0 0; color: var(--body-c); }
+  .meta { font-size: 12.5px; margin: 14px 0 0; padding-top: 14px; border-top: 1px solid var(--line); color: var(--faint); letter-spacing: .04em; }
+  .meta b { color: var(--ink); font-weight: 700; }
+  .win { display: grid; gap: 4px; margin: 12px 0 0; }
+  .win li { list-style: none; font-size: 13px; }
+  .win .medal { color: var(--gold); margin-right: 8px; }
+  .win b { font-family: var(--mincho); color: var(--ink); font-weight: 700; letter-spacing: .04em; }
+  .win span { color: var(--faint); font-size: 11.5px; margin-left: 8px; }
+
+  .note { margin-top: 48px; border-left: 2px solid var(--gold); padding: 4px 0 4px 22px; }
+  .note h3 { font-family: var(--mincho); font-weight: 700; font-size: 15px; color: var(--ink); letter-spacing: .08em; margin: 0 0 6px; }
+  .note p { font-size: 13px; margin: 0; max-width: 42em; }
+
+  footer { border-top: 1px solid var(--line); padding: 34px 24px 46px; text-align: center; font-size: 12px; letter-spacing: .12em; color: var(--faint); }
+  footer b { color: var(--body-c); font-weight: 700; }
+</style>
+
+<p class="home"><a href="/ko/">← jiujitsu.co.jp</a></p>
+
+<header>
+  <p class="eyebrow-top">TOURNAMENT</p>
+  <h1>대회 실시간 결과 페이지</h1>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<main>
+  <div class="wrap">
+    <section>
+      <p class="sec-label">대회 실시간 결과 페이지 안내</p>
+      <div class="list">
+        <div class="tcard" style="cursor:default;">
+          <h2>대회 전과 대회 중의 페이지는 출전 선수와 세컨드, 응원하는 분들께만 보내 드립니다</h2>
+          <p class="venue">YAWARA / SWEEP 선수가 대회에 나갈 때는 선수별 경기 번호, 매트, 시작 시각, 결과를 한 페이지에 정리하고, 대회 중에는 자동으로 업데이트합니다.</p>
+        </div>
+        <a class="tcard" href="/tournament/sample/">
+          <div class="head"><span class="badge done">샘플</span></div>
+          <h2>실시간 결과 페이지 샘플<span class="arrow">→</span></h2>
+          <p class="venue">이름, 소속, 결과는 모두 가상입니다. 시간순·선수별 전환과 토너먼트 진출 표시를 체험해 볼 수 있습니다.</p>
+        </a>
+      </div>
+    </section>
+    <section>
+      <p class="sec-label">종료된 대회</p>
+      <div class="list">
+        <a class="tcard" href="/tournament/reversal-sapporo-2026/">
+          <div class="head">
+            <span class="badge done">종료</span>
+            <span class="date">2026년 10월 4일(일)</span>
+          </div>
+          <h2>제6회 리버설 주짓수 컵 삿포로<span class="arrow">→</span></h2>
+          <p class="venue">기타가스 아레나 삿포로 46 (삿포로시 중앙체육관) / ASJJF</p>
+          <ul class="win">
+            <li><span class="medal">우승</span><b>조타 마사유키</b><span>YAWARA  화이트 벨트 마스터46 미들급</span></li>
+            <li><span class="medal">우승</span><b>OVER LIMIT 14개 엔트리</b><span>스기타 유스케 2관왕</span></li>
+          </ul>
+          <p class="meta">출전 <b>OVER LIMIT 48명</b> / <b>YAWARA 2명</b> / <b>SWEEP 1명</b>  총 70개 엔트리 (GI, NOGI)</p>
+        </a>
+        <a class="tcard" href="/tournament/sjjif-world-2026-01d875d1c2/">
+          <div class="head">
+            <span class="badge done">종료</span>
+            <span class="date">2026년 9월 3일(목) — 6일(일)</span>
+          </div>
+          <h2>SJJIF 세계 주짓수 선수권 2026<span class="arrow">→</span></h2>
+          <p class="venue">도쿄 국립 요요기 경기장 제1체육관 / 2026 SJJIF World Championship</p>
+          <ul class="win">
+            <li><span class="medal">우승</span><b>크리스치아누 카리오카</b><span>블랙 벨트 마스터46 울트라헤비급  GI, NOGI 2관왕</span></li>
+            <li><span class="medal">우승</span><b>노지마 시게아키</b><span>퍼플 벨트 마스터36 루스터급</span></li>
+            <li><span class="medal">우승</span><b>다치바나 지하루</b><span>여자 퍼플 벨트 마스터30 무차별급</span></li>
+            <li><span class="medal">우승</span><b>아베 다케조</b><span>파라 주짓수 시팅 클래스</span></li>
+          </ul>
+          <p class="meta">출전 <b>YAWARA 43명</b> / <b>SWEEP 9명</b>  총 67개 엔트리 (GI, NOGI)</p>
+        </a>
+        <a class="tcard" href="/tournament/kinnikuman-2026-4e179b1bc1/">
+          <div class="head">
+            <span class="badge done">종료</span>
+            <span class="date">2026년 8월 15일(토), 16일(일)</span>
+          </div>
+          <h2>ASJJF 근육맨 컵 2026<span class="arrow">→</span></h2>
+          <p class="venue">스미다구 종합체육관</p>
+          <ul class="win">
+            <li><span class="medal">우승</span><b>에가시라 슌</b><span>화이트 벨트 어덜트 라이트급</span></li>
+            <li><span class="medal">우승</span><b>히로하타 야스히로</b><span>블랙 벨트 마스터30 루스터급</span></li>
+          </ul>
+          <p class="meta">출전 <b>YAWARA 22명</b> / <b>SWEEP 3명</b>  총 27개 엔트리</p>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer><a href="/ko/" style="color:inherit;">← jiujitsu.co.jp 홈으로</a><br>운영 <b>BUTTI ON LINE</b> | YAWARA / SWEEP / OVER LIMIT SAPPORO / Jiu Fight<br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+
+<a href="/ko/" style="position:fixed;right:14px;bottom:14px;z-index:99;background:#17140d;color:#e8c95e;font-size:11px;letter-spacing:.1em;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);font-family:sans-serif;">홈으로</a>
+<style id="sp-readable">@media (max-width:640px){.badge{font-size:12px}.win span{font-size:12.5px}a[href="/"][style*="position:fixed"]{font-size:13px!important;padding:12px 18px!important}}</style>
+</html>

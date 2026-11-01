@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/claude-code-hajimari/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/claude-code-hajimari/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/claude-code-hajimari/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/claude-code-hajimari/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/claude-code-hajimari/">
+<link rel="canonical" href="https://jiujitsu.co.jp/pt/blog/claude-code-hajimari/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Não sou engenheira, e faz um mês que venho “insistindo” com o Claude Code</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Eu tropecei na instalação, e uma frase do Hamada mudou tudo: “a IA diz que não consegue, mas consegue sim”. Primeiro texto do blog, pelo olhar da gerente.">
+<meta property="og:title" content="Não sou engenheira, e faz um mês que venho “insistindo” com o Claude Code">
+<meta property="og:description" content="“A IA diz que não consegue, mas consegue sim.” Pouco mais de um mês que começou com essa frase.">
+<meta property="og:url" content="https://jiujitsu.co.jp/pt/blog/claude-code-hajimari/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+  blockquote cite { display: block; margin-top: 8px; font-family: var(--gothic); font-style: normal; font-size: 12px; font-weight: 500; color: var(--faint); letter-spacing: .08em; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+</style>
+
+<header>
+  <p class="brand"><a href="/pt/blog/">JIU LABO BLOG</a></p>
+  <h1>Não sou engenheira, e faz um mês que venho “insistindo” com o Claude Code</h1>
+  <p class="meta"><time datetime="2026-09-27">2026.09.27</time>  Ai Murata (gerente)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>Oi. Eu sou a Ai Murata, gerente na BUTTI ON LINE Inc.</p>
+    <p>Neste blog, vou escrever sem muita pretensão, pelo olhar de gerente, sobre gestão de academia de jiu-jitsu e o dia a dia em volta do Ryozo. O primeiro texto é sobre o Claude Code, que virou de cabeça para baixo o meu jeito de trabalhar neste último mês e pouco.</p>
+
+    <h2>Tropecei na instalação e só usava o chat</h2>
+    <p>Quando ouvem “Claude Code”, parece que muita gente pensa “deve ser difícil” ou “é ferramenta de engenheiro”. No começo eu achava exatamente a mesma coisa.</p>
+    <p>Para ser sincera, tropecei já na instalação. Por isso, no início, só usava o chat normal do Claude para fazer perguntas.</p>
+
+    <h2>“Consegue sim, insiste com ele”</h2>
+    <p>O que mudou tudo foi o Hamada ter me ensinado por umas 5 horas. O conselho que mais ficou comigo foi este.</p>
+    <blockquote>
+      <p>A IA vive dizendo “não consigo”, mas consegue sim. O negócio é insistir, “faz, faz”, e brigar com ela.</p>
+      <cite>— Hamada</cite>
+    </blockquote>
+    <p>Acreditei nessas palavras e passei umas 5 horas lutando com a IA no meu primeiro trabalho. Mesmo quando ela respondia “não consigo”, eu mudava a forma de pedir, pedia de outro jeito, e simplesmente não desisti.</p>
+    <p>E não é que deu certo? E, quando terminei, já tinha pegado mais ou menos o jeito: <b>“ah, então é assim que se fala com ela”</b>.</p>
+
+    <h2>Peguei o jeito, e as ideias não pararam mais</h2>
+    <p>Depois que peguei o jeito, começaram a vir uma atrás da outra: “então isso também dá?”, “quero pedir aquilo também”.</p>
+    <p>Hoje, faço boa parte do meu trabalho de gerente junto com o Claude Code: trabalhos administrativos como as faturas e a lista de transferências do mês, resultados ao vivo de campeonatos, até vídeos e design. As páginas deste site também foram todas feitas com o Claude Code. Vou contar cada história aqui no blog.</p>
+
+    <h2>As “reuniões de novidades” com o Hamada</h2>
+    <p>Ultimamente, toda vez que encontro o Hamada, contamos um ao outro as novidades.</p>
+    <ul class="talk">
+      <li>“Olha o que eu fiz desta vez.”</li>
+      <li>“Um conhecido que trabalha com vendas pediu para o Claude analisar dados e fazer até a proposta, e parece que fechou um cliente novo.”</li>
+    </ul>
+    <p>Ouvindo essas histórias, surgem novas ideias como “então no meu trabalho dá para usar assim”, e consigo melhorar mais um pouco o que fiz.</p>
+    <p>Claro que também tenho dificuldades. A que mais me incomoda agora é quando estou mexendo no computador e uma tarefa que pedi ao Claude começa a rodar e muda a tela. Solto um “aaah!” e as duas coisas param. Fora isso, vou consultando o Hamada aqui e ali sobre GitHub (onde você guarda e publica o que criou) e MCP (um jeito de conectar a IA a outros serviços).</p>
+
+    <h2>O Claude Code não é nada difícil</h2>
+    <p>O que senti neste mês e pouco é que <b>o Claude Code não é uma ferramenta difícil</b>. Mesmo sem conhecimento técnico, basta ter uma ideia do que você quer fazer, e as coisas vão tomando forma. E quanto mais você usa, mais consegue fazer.</p>
+    <p>Ultimamente tenho visto muitos cursos de Claude Code. Mas o que quero escrever aqui não é para “ensinar”.</p>
+    <p>Para quem toca uma academia de jiu-jitsu, ou para quem só quer facilitar um pouco o trabalho e a vida, quero trazer, de igual para igual, <b>um exemplo próximo de “como alguém que não é engenheira usa de verdade”</b>. Se ajudar um pouquinho quem está lendo, é o que vai me deixar mais feliz.</p>
+    <p>Vou continuar aparecendo por aqui para conversar, sempre que me vier alguma coisa. Obrigada por acompanhar!</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+
+    <div class="next">
+      <p>Como passamos os bastidores da academia para o Claude Code, reuni aqui.</p>
+      <p><a href="/pt/claudecode/">Claude Code na academia de jiu-jitsu →</a></p>
+    </div>
+  </article>
+
+  <footer>
+    <a href="/pt/blog/">Todos os textos do blog</a> / <a href="/pt/">Início do jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}}</style>
+

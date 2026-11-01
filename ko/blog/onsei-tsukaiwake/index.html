@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/onsei-tsukaiwake/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/onsei-tsukaiwake/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/onsei-tsukaiwake/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/onsei-tsukaiwake/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/onsei-tsukaiwake/">
+<link rel="canonical" href="https://jiujitsu.co.jp/ko/blog/onsei-tsukaiwake/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>타자를 멈추고 말하기 시작했어요. Chat, Cowork, Code를 나눠 쓰는 법</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Claude에게 지시하는 방법을 음성 입력으로 바꿨더니 5배 빨라진 이야기와, Chat·Cowork·Claude Code 3가지를 어떻게 나눠 쓰는지에 대한 이야기. 매니저의 눈으로 쓰는 블로그 두 번째 글입니다.">
+<meta property="og:title" content="타자를 멈추고 말하기 시작했어요. Chat, Cowork, Code를 나눠 쓰는 법">
+<meta property="og:description" content="음성 입력으로 5배 빠르게. 그리고 &quot;답·파일·구조&quot;로 고르는 Claude 3가지 활용법.">
+<meta property="og:url" content="https://jiujitsu.co.jp/ko/blog/onsei-tsukaiwake/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+</style>
+
+<header>
+  <p class="brand"><a href="/ko/blog/">JIU LABO BLOG</a></p>
+  <h1>타자를 멈추고 말하기 시작했어요. Chat, Cowork, Code를 나눠 쓰는 법</h1>
+  <p class="meta"><time datetime="2026-09-27">2026.09.27</time>　무라타 아이(매니저)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>안녕하세요, 무라타 아이입니다. 블로그 두 번째 글에서는 요즘 제가 Claude를 쓰는 방법 2가지를 이야기할게요. 하나는 <b>음성 입력</b>, 또 하나는 <b>Claude 3가지 나눠 쓰기</b>예요.</p>
+
+    <h2>타자를 그만두고 말하게 됐어요</h2>
+    <p>지금까지는 Claude Code에게 하는 부탁을 키보드로 쳤어요. 그런데 요즘은 음성 입력에 완전히 빠져 있어요.</p>
+    <p>체감으로는 <b>타자보다 5배쯤 빨라요</b>. 생각난 걸 그대로 말하기만 하면 되니까 "어떻게 써야 전해질까" 하고 손이 멈추는 일도 없어요.</p>
+
+    <h3>말을 잘못해도 제대로 전해져요</h3>
+    <p>음성 입력을 쓰면 변환 실수나 말실수가 꽤 나와요. 하지만 AI가 앞뒤 흐름에서 뜻을 읽어 주기 때문에 거의 곤란하지 않아요. 실제로 이 블로그를 만들 때도 이런 일이 있었어요.</p>
+    <ul class="talk">
+      <li>"shokai(소개)해 주세요"<small>→ 사실은 "kokai(공개)해 주세요"였어요. 일본어로 발음이 비슷한 말인데, 제대로 공개해 줬어요</small></li>
+      <li>"nihon de(일본에서) 아이디어가 떠올라서"<small>→ 사실은 "nihon-me(두 번째 글) 아이디어"였어요. 제대로 이 두 번째 글이 됐어요</small></li>
+    </ul>
+    <p>"음", "뭐" 같은 말이 들어가도 괜찮아요. 오히려 깔끔한 문장으로 만들려고 하지 않는 편이 더 잘돼요.</p>
+
+    <h3>말하면 전해지는 정보가 늘어나요</h3>
+    <p>또 하나 알게 된 건, 말을 하면 <b>"왜 그렇게 하고 싶은지"까지 자연스럽게 이야기하게 된다</b>는 거예요. 칠 때는 "○○ 해 줘"로 짧게 끝내기 쉬운데, 말로 하면 배경이나 마음까지 입에서 나와요. 그만큼 AI도 제 의도를 잡기 쉬워져서, 한 번에 생각대로 나오는 일이 늘었어요.</p>
+
+    <h2>Claude 3가지 나눠 쓰기</h2>
+    <p>또 하나 최근에 재미있었던 게 Claude를 나눠 쓰는 법이에요. Claude에는 크게 나누면 <b>Chat</b>, <b>Cowork(코워크)</b>, <b>Claude Code</b> 3가지 사용법이 있어요. 모두 같은 Claude지만 잘하는 일이 조금씩 달라요.</p>
+    <p>차이를 정리하자면 이렇게 외우는 게 가장 이해하기 쉬울 것 같아요.</p>
+
+    <blockquote><p>답이 필요하면 Chat.<br>파일이 필요하면 Cowork.<br>구조가 필요하면 Code.</p></blockquote>
+
+    <div class="three">
+      <div class="tool"><span class="want">답이 필요할 때</span><b>Chat</b><span>상담·질문·글 초안</span></div>
+      <div class="tool"><span class="want">파일이 필요할 때</span><b>Cowork</b><span>컴퓨터 속 서류 작성·정리</span></div>
+      <div class="tool code"><span class="want">구조가 필요할 때</span><b>Code</b><span>매번 돌아가는 도구·사이트·자동화</span></div>
+    </div>
+
+    <h3>Chat: 그 자리에서 답이 필요할 때</h3>
+    <p>가장 친숙한, 말을 걸면 답해 주는 사용법이에요. 스마트폰에서도 바로 쓸 수 있어요. 상담 상대나 아이디어를 주고받는 상대로서, 생각을 정리하고 싶을 때 딱이에요.</p>
+    <div class="ex">
+      <p>예를 들면</p>
+      <ul>
+        <li>LINE 답장, 이렇게 말하면 실례일까?</li>
+        <li>대회 공지문, 좀 더 알기 쉽게 고쳐 줘</li>
+        <li>이 계약서 말은 무슨 뜻이야?</li>
+      </ul>
+    </div>
+    <p>다만 Chat은 기본적으로 "그 자리에서 답하고 끝"이에요. 만들어 준 파일은 직접 내려받아서 직접 폴더에 넣어야 해요.</p>
+
+    <h3>Cowork: 파일로 완성해 줬으면 할 때</h3>
+    <p>솔직히 말하면 저는 Cowork를 아직 별로 안 써 봤어요. 그래서 여기는 "이럴 때 잘 맞는다더라" 하는 소개예요.</p>
+    <p>Cowork는 <b>컴퓨터 속 폴더를 건네고 일을 통째로 부탁하는</b> 사용법이에요. Claude가 폴더 내용을 읽고 완성된 서류를 그 폴더에 저장해 줘요. 부탁해 두면 한동안 다른 일을 하고 있어도 괜찮아요.</p>
+    <div class="ex">
+      <p>예를 들면</p>
+      <ul>
+        <li>이 폴더의 영수증 사진에서 날짜와 금액 목록표를 만들어 줘</li>
+        <li>어질러진 폴더를 내용별로 분류해 줘</li>
+        <li>이 자료를 전부 읽고 회의용으로 한 장으로 정리해 줘</li>
+      </ul>
+    </div>
+    <p>"작업은 한 번뿐이지만 제대로 파일로 받고 싶은" 일에는 Cowork가 잘 맞아요.</p>
+
+    <h3>Claude Code: 매번 쓸 수 있는 "구조"를 만들고 싶을 때</h3>
+    <p>Claude Code는 <b>도구 자체를 만드는</b> 사용법이에요. 한 번 만들면 다음부터는 같은 일이 자동으로, 또는 한마디로 돌아가게 돼요. 이름에 "코드"가 붙어서 어려워 보이지만, 하는 일은 "이런 게 있으면 좋겠어" 하고 말하는 것뿐이에요.</p>
+    <div class="ex">
+      <p>예를 들면</p>
+      <ul>
+        <li>매달 청구서 만드는 절차를 기억해서, 다음 달부터는 "이번 달도 부탁해"로 끝나게 해 줘</li>
+        <li>대회 결과를 자동으로 모아서 실시간 결과 페이지에 올려 줘</li>
+        <li>이 블로그와 사이트의 페이지를 만들어서 공개해 줘</li>
+      </ul>
+    </div>
+    <p>"매달 하고 있네", "같은 일을 몇 번이나 하고 있네" 싶을 때가 Claude Code가 나설 때예요.</p>
+
+    <h2>헷갈리면 뭘 써도 괜찮아요</h2>
+    <p>그렇다고 딱 나누지 않아도 괜찮아요. Chat으로 상담하다가 "이거 매달 하겠네" 싶으면 Claude Code로 가져가면 되고, Cowork로 만든 서류가 좋았으면 "이걸 매달 만드는 구조로 해 줘"라고 부탁하면 돼요.</p>
+    <p>저는 구조를 만드는 게 재밌어져서, 결국 Claude Code를 열어 두는 시간이 가장 길어요. 그리고 요즘은 거기에 대고 하염없이 말하고 있어요.</p>
+    <p>우선 음성 입력으로, 생각난 걸 그대로 Claude에게 말해 보세요. 타자보다 가볍게 시작할 수 있을 거예요.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+
+    <div class="next">
+      <p>지난 글은 여기예요.</p>
+      <p><a href="/ko/blog/claude-code-hajimari/">엔지니어가 아닌 제가 Claude Code와 "끈질기게" 함께한 1개월 →</a></p>
+    </div>
+  </article>
+
+  <footer>
+    <a href="/ko/blog/">블로그 목록으로</a>　/　<a href="/ko/">jiujitsu.co.jp 홈으로</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.tool .want{font-size:12px}.ex p{font-size:12px}}</style>
+

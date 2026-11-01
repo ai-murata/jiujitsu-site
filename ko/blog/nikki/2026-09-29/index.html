@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/nikki/2026-09-29/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/nikki/2026-09-29/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/nikki/2026-09-29/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/nikki/2026-09-29/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/nikki/2026-09-29/">
+<link rel="canonical" href="https://jiujitsu.co.jp/ko/blog/nikki/2026-09-29/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>전국 주짓수 도장 684곳을 Claude와 지도에서 모았어요｜Jiu Labo 블로그</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="오늘 가장 놀라웠던 일은 Google 지도를 47개 도도부현(일본의 광역 행정 구역) 전부 돌아보고 도장 가이드에 새로 133곳을 추가한 거예요. 그 밖에도 매일 아침 뉴스를 자동으로 정리하는 구조를 하루에 2개 만들었어요.">
+<meta property="og:title" content="전국 주짓수 도장 684곳을 Claude와 지도에서 모았어요｜Jiu Labo 블로그">
+<meta property="og:description" content="오늘 가장 놀라웠던 일은 Google 지도를 47개 도도부현(일본의 광역 행정 구역) 전부 돌아보고 도장 가이드에 새로 133곳을 추가한 거예요. 그 밖에도 매일 아침 뉴스를 자동으로 정리하는 구조를 하루에 2개 만들었어요.">
+<meta property="og:url" content="https://jiujitsu.co.jp/ko/blog/nikki/2026-09-29/">
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/atom+xml" title="Jiu Labo 새 소식" href="/feed.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.95; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { color: inherit; text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; word-break: auto-phrase; text-wrap: balance; }
+  .meta, .lede { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 40px; }
+  article p { margin: 0 0 1.4em; }
+  .did { list-style: none; margin: 8px 0 32px; padding: 0; counter-reset: did; border-top: 1px solid var(--line); }
+  .did li { counter-increment: did; padding: 18px 0 16px 44px; border-bottom: 1px solid var(--line); position: relative; }
+  .did li::before { content: counter(did); position: absolute; left: 4px; top: 20px; width: 26px; height: 26px; border-radius: 50%; background: var(--panel); border: 1px solid var(--gold); color: var(--gold); font-size: 12.5px; font-weight: 700; text-align: center; line-height: 24px; }
+  .did h2 { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .04em; line-height: 1.6; margin: 0 0 4px; word-break: auto-phrase; text-wrap: pretty; }
+  .did p { margin: 0; font-size: 14.5px; }
+  .ask { margin: 12px 0 0; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 10px 14px; }
+  .ask span { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; color: var(--gold); }
+  .did .ask p { font-size: 14.5px; color: var(--ink); }
+  .did .ask p::before { content: "「"; } .did .ask p::after { content: "」"; }
+  .did .tip { margin: 10px 0 0; font-size: 13.5px; }
+  .tip b { color: var(--gold); margin-right: 8px; font-size: 12px; letter-spacing: .08em; }
+  .did .see { margin: 8px 0 0; font-size: 13.5px; font-weight: 700; }
+  .did .see a { text-decoration: none; }
+  .closing { background: var(--panel); border-left: 3px solid var(--gold); padding: 14px 18px; }
+  .auto { font-size: 12.5px; color: var(--faint); }
+  .note { font-size: 12px; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 40px; }
+
+  .pager { display: flex; justify-content: space-between; gap: 12px; margin: 36px 0 0; font-size: 13.5px; }
+  .pager a { text-decoration: none; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+    article { font-size: 15px; }
+    .did li { padding-left: 38px; }
+    .did h2 { font-size: 16px; }
+  }
+  /* スマホで小さい字を底上げ（~/.claude/scripts/sp_readable.py と同じ値） */
+  @media (max-width:640px){.brand{font-size:12px}.ask span{font-size:12.5px}}
+</style>
+
+<header>
+  <p class="brand"><a href="/ko/blog/">JIU LABO BLOG</a>　·　일기</p>
+  <h1>일본 전국의 주짓수 도장 684곳을 Claude와 지도에서 모았어요</h1>
+  <p class="meta"><time datetime="2026-09-29">2026.09.29 (화)</time>　무라타 아이 (매니저)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>오늘 가장 놀라웠던 일은 Google 지도를 47개 도도부현(일본의 광역 행정 구역) 전부 돌아보고 도장 가이드에 새로 133곳을 추가한 거예요. 그 밖에도 매일 아침 뉴스를 자동으로 정리하는 구조를 하루에 2개 만들었어요.</p>
+    <ol class="did">
+      <li><h2>47개 도도부현의 지도를 살펴서 도장이 684곳으로</h2><p>도장 가이드에 실린 도장을 늘리려고, Claude에게 일본 47개 도도부현의 Google 지도를 전부 살펴봐 달라고 했어요. 새로 찾은 도장은 133곳이고, 전체는 684곳이 됐어요. 그다음 찾은 도장의 홈페이지, 인스타그램, 연습 시간표도 조사해서 넣어 달라고 했더니 홈페이지는 508곳, 인스타는 307곳, 시간표는 312곳까지 실렸어요.</p>
+        <div class="ask"><span>따라 한다면 이렇게 부탁해요</span><p>○○현부터 차례대로 지도에서 "○○ 교실"을 찾아서, 아직 목록에 없는 곳을 이름과 위치까지 넣어서 추가해 줘</p></div>
+        <p class="tip"><b>발견</b>지도에서 찾아도 위치를 핀으로 표시하지 못한 도장도 있었어요. 684곳 중 지도에 핀을 꽂을 수 있었던 곳은 562곳이에요. 숫자로 남겨 달라고 하면 어디가 부족한지 보여요.</p>
+        <p class="see"><a href="/dojo/">완성된 걸 보기 →</a></p>
+      </li>
+      <li><h2>만들어 둔 구조를 복사해서 뉴스를 하나 더</h2><p>아침에 만든 "오늘의 주짓수 뉴스"는 매일 아침 뉴스를 모아서 관련 있는 기사만 일본어로 정리하는 구조예요. 저녁에는 이 구조를 그대로 복사해서 "오늘의 Claude 뉴스"도 만들었어요. 새 모델 발표나 새 서비스 시작을 우선해서 고르도록 고르는 기준만 바꿨고요.</p>
+        <div class="ask"><span>따라 한다면 이렇게 부탁해요</span><p>주짓수 뉴스와 같은 구조로, ○○ 뉴스를 매일 아침 정리하는 페이지도 만들어 줘. 고르는 기준은 ○○를 우선으로 해 줘</p></div>
+        <p class="tip"><b>발견</b>처음부터 설명하지 않고 "그거랑 같은 구조로"라고 부탁했어요. 아침에 고친 뉴스 읽기 오류도 고쳐진 상태 그대로 복사됐어요.</p>
+        <p class="see"><a href="/claudenews/">완성된 걸 보기 →</a></p>
+      </li>
+      <li><h2>논문 17편을 요약하고, 한 군데만 다시 썼어요</h2><p>주짓수를 다룬 학술 논문 17편을 부상·체력·경기 분석·체중 감량·멘탈 같은 주제별로 일본어로 쉽게 요약한 페이지를 만들었어요. 논문은 모두 논문 데이터베이스에서 실제로 있는 논문인지 확인한 뒤에 실었어요.</p>
+        <div class="ask"><span>따라 한다면 이렇게 부탁해요</span><p>○○에 관한 연구 논문을 찾아서 주제별로 일본어로 짧게 요약해 줘. 실제로 있는 논문인지 한 편씩 확인하고 나서 실어 줘</p></div>
+        <p class="tip"><b>발견</b>공개한 뒤에 부상에 관한 "한마디"가 논문에 없는 내용을 "저자는 이렇게 정리했습니다"라고 적은 걸 발견해서, "흔히 하는 이야기이고, 이 논문의 결론은 아닙니다"로 고쳤어요. AI 요약은 누가 한 말로 되어 있는지까지 확인하는 게 중요해요.</p>
+        <p class="see"><a href="/ko/kenkyu/">완성된 걸 보기 →</a></p>
+      </li>
+    </ol>
+    <p class="closing">지도를 살피는 것도 논문을 찾는 것도 혼자서는 도저히 손이 안 가는 일이에요. "이건 아무래도 무리겠지" 싶은 일일수록 한번 부탁해 보세요.</p>
+    <p class="auto">이 밖에 자동 업데이트가 돌아갔어요 (search 8건, 주짓수 뉴스 3건, 보조금 목록 1건).</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+    <p class="pager"><span></span><a href="/ko/blog/nikki/2026-09-30/">다음 일기 (2026.09.30 (수)) →</a></p>
+    <p class="note">이 일기는 그날 이 사이트에 들어간 변경 기록을 바탕으로 Claude가 초안을 쓰고, 무라타가 읽어 본 뒤에 올리고 있어요.</p>
+  </article>
+
+  <footer>
+    <a href="/ko/blog/">블로그 목록으로</a>　/　<a href="/ko/">jiujitsu.co.jp 홈으로</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>

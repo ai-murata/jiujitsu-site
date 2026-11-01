@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/claudecode/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/claudecode/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/claudecode/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/claudecode/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/claudecode/">
+<link rel="canonical" href="https://jiujitsu.co.jp/pt/claudecode/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Claude Code na academia de jiu-jitsu</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Controle de mensalidades, faturas, escalas, resultados ao vivo de campeonatos. O registro de como passamos os bastidores de uma academia de jiu-jitsu para o Claude Code, organizado em etapas da faixa branca à faixa preta.">
+<meta property="og:title" content="Claude Code na academia de jiu-jitsu">
+<meta property="og:description" content="Como passamos os bastidores da academia para a IA, da faixa branca à faixa preta.">
+<meta property="og:url" content="https://jiujitsu.co.jp/pt/claudecode/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(28px, 6vw, 42px); color: var(--ink); letter-spacing: .12em; line-height: 1.4; margin: 10px 0 12px; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; letter-spacing: .06em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  .intro { font-size: 14px; max-width: 40em; margin: 48px auto 0; }
+  .intro b { color: var(--ink); }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 21px; color: var(--ink); letter-spacing: .2em; margin: 72px 0 8px; display: flex; align-items: center; gap: 16px; }
+  h2 small { font-family: var(--gothic); font-size: 10px; letter-spacing: .26em; color: var(--faint); font-weight: 500; flex: none; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .lead { font-size: 13.5px; margin: 0 0 28px; max-width: 42em; }
+
+  /* できること */
+  .rules { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .rule { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 20px 20px 22px; }
+  .rule b { display: block; font-family: var(--mincho); font-size: 15px; color: var(--ink); letter-spacing: .1em; margin-bottom: 6px; }
+  .rule span { font-size: 13px; line-height: 1.8; }
+  @media (max-width: 660px) { .rules { grid-template-columns: 1fr; } }
+
+  /* 帯 */
+  .belts { display: grid; gap: 16px; }
+  .belt { border: 1px solid var(--line); background: var(--panel); display: grid; grid-template-columns: 140px 1fr; }
+  .bside { background: var(--bc); color: var(--bi); padding: 20px 18px; position: relative; display: flex; flex-direction: column; justify-content: center; }
+  .bside::after { content: ""; position: absolute; right: 14px; top: 0; bottom: 0; width: 30px; background: var(--bar);
+    background-image: repeating-linear-gradient(90deg, transparent 0 6px, rgba(255,255,255,.9) 6px 8px); }
+  .bside .en { font-size: 10px; letter-spacing: .26em; opacity: .8; position: relative; z-index: 1; }
+  .bside .jp { font-family: var(--mincho); font-weight: 700; font-size: 22px; letter-spacing: .14em; position: relative; z-index: 1; }
+  .bbody { padding: 20px 24px 22px; }
+  .bbody h3 { font-family: var(--mincho); font-weight: 700; font-size: 18px; color: var(--ink); letter-spacing: .08em; margin: 0 0 2px; }
+  .bbody > p { font-size: 13px; color: var(--faint); margin: 0 0 12px; }
+  .menu { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .menu li { font-size: 13.5px; padding-left: 16px; position: relative; line-height: 1.8; }
+  .menu li::before { content: ""; position: absolute; left: 0; top: .9em; width: 6px; height: 1px; background: var(--gold); }
+  .menu li b { font-weight: 700; color: var(--ink); }
+  .menu li a { font-size: 12px; margin-left: 4px; }
+  .x-w  { --bc: var(--w);  --bi: var(--ink); --bar: var(--k); }
+  .x-b  { --bc: var(--b);  --bi: #fff;       --bar: var(--k); }
+  .x-p  { --bc: var(--p);  --bi: #fff;       --bar: var(--k); }
+  .x-br { --bc: var(--br); --bi: #fff;       --bar: var(--k); }
+  .x-k  { --bc: var(--k);  --bi: #f3ecd8;    --bar: #a8322a; }
+  @media (max-width: 660px) {
+    .belt { grid-template-columns: 1fr; }
+    .bside { flex-direction: row; align-items: baseline; gap: 12px; padding: 14px 18px; }
+    .bbody { padding: 18px 18px 20px; }
+  }
+
+  /* 1か月 */
+  .days { display: grid; gap: 0; border-top: 1px solid var(--line); }
+  .day { display: grid; grid-template-columns: 90px 1fr; gap: 20px; padding: 16px 4px; border-bottom: 1px solid var(--line); }
+  .dnum { font-family: var(--mincho); font-size: 26px; font-weight: 700; color: var(--gold); line-height: 1.2; font-variant-numeric: tabular-nums; }
+  .dnum small { display: block; font-family: var(--gothic); font-size: 10.5px; letter-spacing: .2em; color: var(--faint); font-weight: 500; margin-top: 2px; }
+  .day b { font-family: var(--mincho); font-weight: 700; color: var(--ink); font-size: 15.5px; letter-spacing: .06em; display: block; }
+  .day span { font-size: 13px; }
+  @media (max-width: 560px) { .day { grid-template-columns: 64px 1fr; gap: 12px; } .dnum { font-size: 22px; } }
+
+  /* 1日 */
+  .daybox { background: var(--k); color: #b0a88f; padding: 34px 36px 38px; position: relative; overflow: hidden; }
+  .daybox::before { content: ""; position: absolute; inset: 0; background: radial-gradient(120% 60% at 100% 0%, rgba(201,162,39,.16), transparent 60%); pointer-events: none; }
+  .dayhead { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-bottom: 1px solid rgba(201,162,39,.35); padding-bottom: 14px; margin-bottom: 26px; position: relative; }
+  .dayhead .dl { font-size: 10.5px; letter-spacing: .32em; color: var(--gold-hi); font-weight: 700; }
+  .dayhead .dr { font-family: var(--mincho); font-weight: 700; font-size: 13px; letter-spacing: .14em; color: #f3ecd8; font-variant-numeric: tabular-nums; }
+  .today { list-style: none; margin: 0; padding: 0; position: relative; }
+  .today::before { content: ""; position: absolute; left: 121px; top: 14px; bottom: 14px; width: 2px; background: linear-gradient(#c9a227, #7a6118 70%, #2e2a20); }
+  .today li { display: grid; grid-template-columns: 98px 1fr; gap: 46px; padding: 0 0 26px; position: relative; }
+  .today li:last-child { padding-bottom: 0; }
+  .today li::before { content: ""; position: absolute; left: 116px; top: 11px; width: 12px; height: 12px; border-radius: 50%; background: var(--k); border: 2px solid var(--gold-hi); box-shadow: 0 0 0 4px rgba(201,162,39,.14); }
+  .today time { font-family: var(--mincho); font-weight: 700; font-size: 28px; line-height: 1.1; color: var(--gold-hi); white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+  .today .tt { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .today b { font-family: var(--mincho); font-weight: 700; color: #f3ecd8; font-size: 17px; letter-spacing: .08em; }
+  .today em { font-style: normal; font-size: 10px; letter-spacing: .2em; font-weight: 700; color: var(--k); background: var(--gold-hi); padding: 1px 8px 0; }
+  .today q { quotes: "「" "」"; display: block; margin: 10px 0 8px; padding: 9px 14px; font-size: 13.5px; color: #f3ecd8; background: rgba(255,255,255,.05); border-left: 2px solid var(--gold-hi); line-height: 1.7; }
+  .today p { margin: 6px 0 0; font-size: 13px; line-height: 1.85; color: #b0a88f; }
+  .today li.night time { color: #8d8570; }
+  .today li.night::before { border-color: #8d8570; box-shadow: none; }
+  .js .today li { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .js .today li.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .js .today li { opacity: 1; transform: none; transition: none; } }
+  @media (max-width: 560px) {
+    .daybox { margin: 0 -22px; padding: 26px 20px 30px; }
+    .today::before { left: 73px; }
+    .today li { grid-template-columns: 58px 1fr; gap: 32px; }
+    .today li::before { left: 68px; top: 8px; }
+    .today time { font-size: 21px; }
+    .today b { font-size: 15.5px; }
+  }
+
+  /* 数字 */
+  .nums { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .num { border-top: 1px solid var(--gold); padding-top: 12px; }
+  .num b { font-family: var(--mincho); font-weight: 700; font-size: 40px; color: var(--ink); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .num b small { font-size: 14px; margin-left: 4px; color: var(--body-c); }
+  .num p { font-size: 12.5px; margin: 6px 0 0; }
+  @media (max-width: 660px) { .nums { grid-template-columns: 1fr; } }
+
+  /* 頼み方 */
+  .asks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .ask { border: 1px solid var(--line); padding: 18px 20px 14px; display: grid; grid-template-rows: auto 1fr auto; gap: 8px; }
+  .ask .t { font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .ask q { quotes: "「" "」"; font-size: 14px; color: var(--ink); line-height: 1.85; }
+  .copy { justify-self: start; font: inherit; font-size: 11.5px; letter-spacing: .08em; color: var(--gold); background: var(--paper); border: 1px solid var(--line); padding: 2px 12px; cursor: pointer; }
+  .copy:hover { border-color: var(--gold); }
+  @media (max-width: 660px) { .asks { grid-template-columns: 1fr; } }
+
+  /* 約束 */
+  .dark { background: var(--k); padding: 26px 28px 28px; }
+  .dark .rlabel { font-size: 10.5px; letter-spacing: .3em; color: var(--gold-hi); font-weight: 700; margin: 0 0 14px; }
+  .dark .ri { margin: 0 0 16px; }
+  .dark .ri:last-child { margin-bottom: 0; }
+  .dark b { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: #f3ecd8; letter-spacing: .06em; display: block; margin-bottom: 2px; }
+  .dark p { margin: 0; font-size: 13px; color: #b0a88f; line-height: 1.9; }
+
+  /* はじめ方 */
+  .steps { counter-reset: s; list-style: none; margin: 0; padding: 0; }
+  .steps li { counter-increment: s; position: relative; padding: 0 0 20px 46px; }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: 2px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-family: var(--mincho); font-weight: 700; font-size: 15px; color: var(--gold); border: 1.5px solid var(--gold); border-radius: 50%; }
+  .steps b { font-family: var(--mincho); font-weight: 700; color: var(--ink); font-size: 15.5px; }
+  .steps p { margin: 2px 0 0; font-size: 13.5px; line-height: 1.9; }
+
+  footer { margin-top: 84px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+
+<header>
+  <p class="brand">JIUJITSU.CO.JP</p>
+  <h1>Claude Code na academia de jiu-jitsu</h1>
+  <p class="lede">Como passamos os bastidores da academia para a IA.</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <p class="intro">
+    Controle de mensalidades, faturas, escalas, resultados ao vivo de campeonatos, legendas de vídeo. Tocar uma academia envolve muito trabalho fora do tatame.
+    O Claude Code é <b>uma IA que faz as tarefas no seu computador só de você pedir</b>.
+    Organizamos o que usamos de verdade em etapas, da faixa branca à faixa preta. Todas as páginas deste site também foram feitas com o Claude Code.
+  </p>
+
+  <h2>O que ele faz<small>WHAT IT DOES</small></h2>
+  <p class="lead">A diferença para uma IA que só responde no chat é que ele vai até o fim e põe a mão na massa.</p>
+  <div class="rules">
+    <div class="rule"><b>Lê e cria arquivos</b><span>Abre Excel, PDF, fotos e vídeos, lê o conteúdo e cria planilhas e documentos novos na pasta.</span></div>
+    <div class="rule"><b>Consulta a web</b><span>Lê sistemas de reservas e páginas de resultados de campeonatos e tira só os números que você precisa.</span></div>
+    <div class="rule"><b>Lembra os procedimentos</b><span>Salve um trabalho mensal como “skill”, e no mês seguinte é só dizer “faz o deste mês” para repetir o mesmo procedimento.</span></div>
+    <div class="rule"><b>O último clique é humano</b><span>Ele para e confirma antes de enviar, pagar ou apagar. Foi feito para você não largar tudo na mão dele.</span></div>
+  </div>
+
+  <h2>Uso por faixa<small>BELTS</small></h2>
+  <p class="lead">Ninguém acerta uma técnica de faixa preta logo de cara. O melhor é começar na faixa branca e ir aumentando aos poucos o que você faz.</p>
+  <div class="belts">
+    <article class="belt x-w">
+      <div class="bside"><span class="en">WHITE</span><span class="jp">Faixa branca</span></div>
+      <div class="bbody">
+        <h3>Perguntar e pedir textos</h3>
+        <p>Como parceiro para escrever. Dá para fazer desde o primeiro dia.</p>
+        <ul class="menu">
+          <li><b>Rascunho de avisos</b>  dias sem aula, reajuste de mensalidade, prazo de inscrição em campeonatos</li>
+          <li><b>Resposta a quem quer fazer aula experimental</b>  o que trazer, aluguel de kimono e como é a primeira aula, em um texto bem-educado</li>
+          <li><b>Conversa com professores do exterior</b>  traduz mensagens em português e inglês e prepara a resposta</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="belt x-b">
+      <div class="bside"><span class="en">BLUE</span><span class="jp">Faixa azul</span></div>
+      <div class="bbody">
+        <h3>Organizar Excel e papel</h3>
+        <p>Passe os arquivos que você tem e deixe os totais e a versão final com ele.</p>
+        <ul class="menu">
+          <li><b>Controle das aulas particulares</b>  quantidade, preço e comissão por instrutor, organizados mês a mês</li>
+          <li><b>Leitura de recibos</b>  escaneie o bolo de papel e receba uma lista com data, valor e finalidade<a href="/ryoshusho/">Exemplo →</a></li>
+          <li><b>Balanço de campeonatos e eventos</b>  cruza as vendas de ingressos com as despesas e monta um relatório de uma folha A4</li>
+          <li><b>Modelos de contrato</b>  refaz contratos de prestação de serviço e patrocínio a partir das condições anteriores</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="belt x-p">
+      <div class="bside"><span class="en">PURPLE</span><span class="jp">Faixa roxa</span></div>
+      <div class="bbody">
+        <h3>Conectar ao sistema de reservas</h3>
+        <p>Peça para ele ler a tela de gestão de alunos e deixe com ele a extração que levaria meio dia para uma pessoa.</p>
+        <ul class="menu">
+          <li><b>Mensalidades em atraso</b>  lista só quem teve o débito recusado, sem contar quem acabou de entrar</li>
+          <li><b>Ponto e comissões</b>  monta a tabela da folha de pagamento a partir dos registros de ponto e das aulas dadas</li>
+          <li><b>Rascunho de faturas e recibos</b>  deixa o rascunho no serviço de faturas, e o botão de emitir fica com uma pessoa</li>
+          <li><b>Cruzar com a agenda</b>  compara a agenda compartilhada com as despesas para descobrir de qual viagem é cada gasto</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="belt x-br">
+      <div class="bside"><span class="en">BROWN</span><span class="jp">Faixa marrom</span></div>
+      <div class="bbody">
+        <h3>Virar rotina mensal</h3>
+        <p>Guarde o que deu certo como “skill” e deixe rodar sozinho em dias fixos.</p>
+        <ul class="menu">
+          <li><b>Transformar tarefas mensais em skills</b>  faturas, lista de transferências e ponto saem com um “faz o deste mês”</li>
+          <li><b>Automático em dias fixos</b>  todo dia 25 roda a verificação de atrasos e deixa o resultado na pasta</li>
+          <li><b>Escala no celular</b>  transforma a escala do Excel em uma página que a equipe abre no celular<a href="/shift/">Exemplo →</a></li>
+          <li><b>Subsídios verificados todo dia</b>  a lista de subsídios que a academia pode usar é atualizada sozinha toda manhã<a href="/hojokin/">Exemplo →</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="belt x-k">
+      <div class="bside"><span class="en">BLACK</span><span class="jp">Faixa preta</span></div>
+      <div class="bbody">
+        <h3>Criar as próprias ferramentas</h3>
+        <p>A etapa em que você cria ferramentas próprias do jiu-jitsu, que não existem nos serviços do mercado.</p>
+        <ul class="menu">
+          <li><b>Resultados ao vivo de campeonatos</b>  acompanha na chave só os atletas da sua academia e atualiza sozinho a ordem das lutas e os resultados<a href="/pt/tournament/">Exemplo →</a></li>
+          <li><b>Guia nacional de academias</b>  reúne as academias filiadas a 2 federações em um site de busca por região<a href="/dojo/">Exemplo →</a></li>
+          <li><b>Guia do primeiro campeonato</b>  página para alunos estreantes com o passo a passo do dia e a etiqueta<a href="/pt/hajimete/">Exemplo →</a></li>
+          <li><b>Diário do corte de peso</b>  conta os dias até a pesagem e acompanha cada atleta, com limite de 500 g por dia</li>
+          <li><b>Legendas e seleção de fotos</b>  cria legendas a partir da transcrição das lutas e escolhe fotos do campeonato de todos os horários</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+
+  <h2>No dia a dia<small>EVERY DAY</small></h2>
+  <p class="lead">Uso muito mais nas pequenas tarefas de todo dia do que nos grandes trabalhos do mês. Este é um dia típico.</p>
+  <div class="daybox">
+    <div class="dayhead"><span class="dl">A DAY AT THE DOJO</span><span class="dr">9:00 — 23:00</span></div>
+    <ol class="today">
+      <li><time>9:00</time><div><div class="tt"><b>Perguntar o que fazer hoje</b><em>preparo</em></div><q>Me dá o que tenho pra fazer hoje, do prazo mais próximo ao mais distante.</q><p>Com a agenda, os e-mails e as pastas de trabalho, a “lista do que fazer” do dia já está pronta de manhã. A partir dela eu monto o dia.</p></div></li>
+      <li><time>9:30</time><div><div class="tt"><b>Colocar o que está pela metade para rodar</b></div><q>Continua o que paramos ontem.</q><p>Deixo rodando os controles e materiais pela metade. Daqui em diante, o Claude vai tocando nos bastidores.</p></div></li>
+      <li><time>10:00</time><div><div class="tt"><b>Comida do Ryozo e tarefas de casa</b></div><p>Enquanto isso, faço o almoço e limpo a casa. Termino todo o trabalho doméstico nessa manhã. Mesmo quando estou com as mãos ocupadas, o trabalho não para.</p></div></li>
+      <li><time>11:30</time><div><div class="tt"><b>Ver a agenda do Ryozo</b></div><q>Me diz a agenda do Ryozo de hoje e a que horas devo acordá-lo.</q><p>Vejo na agenda como vai ser o dia e decido a hora de acordá-lo. Até aqui é a preparação para o dia andar.</p></div></li>
+      <li><time>13:00</time><div><div class="tt"><b>Ir à academia</b><em>treino</em></div><p>Esposa de lutador não pode se dar ao luxo de ficar fora de forma. Vou à academia todo dia. Como no jiu-jitsu, durante o treino fico mais de 1 hora longe do celular. O tempo sem olhar para a tela vira tempo de organizar a cabeça. Penso no que preciso fazer hoje e planejo o trabalho que vem depois. Enquanto isso, o Claude continua nos bastidores o que começou de manhã.</p></div></li>
+      <li><time>14:30</time><div><div class="tt"><b>Dar conta dos grupos do LINE</b></div><q>Olha o LINE e me mostra o que eu preciso responder.</q><p>Agendamento de aulas particulares, organização de campeonatos, administrativo da academia. São dezenas de grupos ativos no LINE (o aplicativo de mensagens mais usado no Japão), com alunos, instrutores, equipe e fornecedores. Dali ele pega só os “o que fazemos com esse horário?” e “pode confirmar isso?” e prepara até o rascunho da resposta. Quem envia sou eu.</p></div></li>
+      <li><time>15:30</time><div><div class="tt"><b>Contabilidade e transferências</b></div><q>Faz a lista de transferências deste mês.</q><p>Transferências de cada academia, pagamentos a prestadores de serviço, contato com o escritório de contabilidade. Ele calcula os valores a partir das escalas e dos extratos e deixa tudo pronto até o momento da transferência.</p></div></li>
+      <li><time>16:30</time><div><div class="tt"><b>Redes sociais e materiais</b></div><q>Escolhe 10 fotos deste campeonato para o Instagram.</q><p>Seleção de fotos para postar, legendas de reels, exportação de panfletos e camisetas nas especificações da gráfica.</p></div></li>
+      <li><time>18:00</time><div><div class="tt"><b>Coisas de dinheiro</b></div><q>Faz uma tabela com data e valor dos comprovantes de hoje.</q><p>Organizar comprovantes, preparar recibos solicitados até o ponto de emitir, conferir as categorias de despesa.</p></div></li>
+      <li><time>20:00</time><div><div class="tt"><b>Trabalho administrativo à noite</b><em>até 23h</em></div><q>Faz as faturas deste mês até o rascunho.</q><p>Aqui começa a hora do trabalho administrativo miúdo. Começando pelas faturas, vou resolvendo uma a uma as pendências que peguei durante o dia. São umas 2 a 3 horas, e termino lá pelas 23h.</p></div></li>
+      <li class="night"><time>23:00</time><div><div class="tt"><b>Enquanto durmo</b><em>na ausência</em></div><p>As tarefas que usam a tela não ficam para o dia: deixo tudo para ele fazer de uma vez quando saio de perto do computador. Nos fins de semana de campeonato, a página de resultados ao vivo é atualizada a cada resultado.</p></div></li>
+    </ol>
+  </div>
+
+  <h2>O mês da academia<small>MONTHLY</small></h2>
+  <p class="lead">Estes são os trabalhos mensais que fazemos de verdade. Todos começam com um simples “faz tal coisa”.</p>
+  <div class="days">
+    <div class="day"><div class="dnum">1<small>início do mês</small></div><div><b>Faturas para clientes</b><span>Calcula o valor pela quantidade de aulas particulares do mês anterior e pelo número de filiados, e deixa o rascunho no serviço de faturas</span></div></div>
+    <div class="day"><div class="dnum">10<small>pagamento</small></div><div><b>Lista de transferências do dia 10</b><span>Reúne os pagamentos a instrutores prestadores de serviço e às federações</span></div></div>
+    <div class="day"><div class="dnum">15<small>fechamento</small></div><div><b>Ponto e comissões</b><span>Soma os registros de ponto e as aulas dadas, e prepara o rascunho para o escritório de contabilidade</span></div></div>
+    <div class="day"><div class="dnum">25<small>automático</small></div><div><b>Mensalidades em atraso</b><span>Roda sozinho em dia fixo e salva a lista. A equipe olha e fala com os alunos</span></div></div>
+    <div class="day"><div class="dnum">25<small>pagamento</small></div><div><b>Lista de transferências dos salários</b><span>Copia os valores dos holerites e das escalas</span></div></div>
+    <div class="day"><div class="dnum">Camp.<small>fim de semana</small></div><div><b>Resultados ao vivo e balanço</b><span>No dia, acompanha as lutas dos atletas; depois, fecha o balanço com a venda de ingressos e as despesas</span></div></div>
+  </div>
+
+  <h2>O volume até agora<small>NUMBERS</small></h2>
+  <p class="lead">O quanto uma única academia já resolveu com o Claude Code.</p>
+  <div class="nums">
+    <div class="num"><b>432<small>folhas</small></b><p>Recibos em papel de 2 organizações, escaneados, lidos e cruzados com a agenda, organizados em 311 registros</p></div>
+    <div class="num"><b>560<small>academias</small></b><p>Site de busca com as academias filiadas a 2 federações</p></div>
+    <div class="num"><b>6<small>skills</small></b><p>Faturas, transferências, ponto e outros trabalhos mensais viraram skills que rodam com um pedido</p></div>
+    <div class="num"><b>Às 9h<small>toda manhã</small></b><p>A lista do que fazer no dia chega sozinha, montada a partir da agenda e dos e-mails</p></div>
+  </div>
+
+  <h2>Peça assim<small>HOW TO ASK</small></h2>
+  <p class="lead">Não precisa de termo técnico. Fale do mesmo jeito que você pediria para alguém da equipe da academia.</p>
+  <div class="asks">
+    <div class="ask"><span class="t">Manhã</span><q>Me dá o que tenho pra fazer hoje, começando pelo prazo mais próximo.</q><button class="copy" type="button">Copiar</button></div>
+    <div class="ask"><span class="t">Contato</span><q>Faz um rascunho de resposta para este pedido de aula experimental. Diz o que trazer e que podemos emprestar o kimono.</q><button class="copy" type="button">Copiar</button></div>
+    <div class="ask"><span class="t">Particular</span><q>Me dá opções de data para a aula particular de fulano semana que vem, batendo com a agenda do instrutor.</q><button class="copy" type="button">Copiar</button></div>
+    <div class="ask"><span class="t">LINE</span><q>Olha os grupos do LINE e lista o que eu ainda não respondi.</q><button class="copy" type="button">Copiar</button></div>
+    <div class="ask"><span class="t">Fotos</span><q>Escolhe 10 fotos deste campeonato para o Instagram, com atletas variados.</q><button class="copy" type="button">Copiar</button></div>
+    <div class="ask"><span class="t">Mensalidade</span><q>Lista quem teve o débito da mensalidade recusado este mês, sem contar quem acabou de entrar.</q><button class="copy" type="button">Copiar</button></div>
+    <div class="ask"><span class="t">Campeonato</span><q>Pega a chave deste campeonato e coloca só as lutas dos atletas da nossa academia, em ordem de horário.</q><button class="copy" type="button">Copiar</button></div>
+    <div class="ask"><span class="t">Despesas</span><q>Faz uma tabela destas fotos de comprovantes com data, valor e o que foi pago. Tira o que está duplicado com o comprovante do cartão.</q><button class="copy" type="button">Copiar</button></div>
+    <div class="ask"><span class="t">Vídeo</span><q>Coloca legendas em japonês neste vídeo de luta. Usa os nomes dos atletas como estão na inscrição do campeonato.</q><button class="copy" type="button">Copiar</button></div>
+    <div class="ask"><span class="t">Corte</span><q>Faltam 3 semanas para a pesagem e quero perder 4 kg. Faz um plano sem desidratação, sem passar de 500 g por dia.</q><button class="copy" type="button">Copiar</button></div>
+    <div class="ask"><span class="t">Rotina</span><q>Transforma o que acabamos de fazer na verificação de atrasos em uma skill e deixa rodando sozinha todo dia 25.</q><button class="copy" type="button">Copiar</button></div>
+    <div class="ask"><span class="t">Contrato</span><q>Me diz só o que mudou neste contrato de patrocínio em relação ao do ano passado.</q><button class="copy" type="button">Copiar</button></div>
+  </div>
+
+  <h2>Regras para usar na academia<small>RULES</small></h2>
+  <p class="lead">Como mexe com dinheiro e dados pessoais dos alunos, deixamos estas regras definidas desde o início.</p>
+  <div class="dark">
+    <p class="rlabel">4 RULES</p>
+    <div class="ri"><b>Enviar, pagar e apagar é com uma pessoa</b><p>Emissão de faturas, transferências e envio de mensagens: o Claude prepara tudo e para logo antes. O último botão quem aperta é alguém da equipe.</p></div>
+    <div class="ri"><b>Nomes de alunos não saem daqui</b><p>Ao publicar escalas ou páginas de resultados, usamos nomes fictícios para a equipe e os alunos. Antes de publicar, conferimos o conteúdo com os próprios olhos.</p></div>
+    <div class="ri"><b>Senha não se passa</b><p>Quem faz o login é a própria pessoa da equipe. O Claude só lê a tela já logada.</p></div>
+    <div class="ri"><b>Um lugar só para guardar tudo</b><p>Os arquivos criados vão para a pasta compartilhada, em “ano-mês + nome do projeto”. Assim nada fica espalhado pela área de trabalho.</p></div>
+  </div>
+
+  <h2>Como começar<small>START</small></h2>
+  <p class="lead">Dá para começar mesmo sem ninguém que entenda muito de computador. O caminho que eu fiz de verdade, e onde tropecei, está em <a href="/hajimekata/">Como começar com o Claude</a>.</p>
+  <ol class="steps">
+    <li><b>Instale o app do Claude no computador da academia</b><p>O Claude Code vem no aplicativo para Mac ou Windows. Se toda a equipe for usar, um plano de equipe facilita a administração.</p></li>
+    <li><b>Passe um arquivo do Excel para ele</b><p>Comece com “olha este arquivo e me dá o total do mês”. Na primeira vez, confira você também se a resposta está certa.</p></li>
+    <li><b>Escolha uma tarefa mensal e vire rotina</b><p>Deu certo? Peça: “transforma o que fizemos em uma skill”. A partir do mês seguinte, o mesmo trabalho roda com um pedido.</p></li>
+    <li><b>Quando pegar o jeito, vá para o sistema de reservas e os campeonatos</b><p>Da faixa roxa em diante, você passa a pedir para ele ler telas já logadas.</p></li>
+  </ol>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">Quero fazer isso aqui também.</b><br>
+    Ajudo academias, organizações e lojas a passar os bastidores para a IA. No momento, para quem já me conhece pessoalmente, é grátis para as 3 primeiras pessoas, limitado a uma ferramenta.<a href="/pt/irai/" style="color:#a3801a;white-space:nowrap;">Ajuda com IA: fale comigo →</a>
+  </p>
+
+  <footer>
+    Preços e planos podem mudar. Confira no site oficial antes de contratar.<br>
+    <a href="/pt/">← Início do jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+
+<script>
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var q = btn.parentElement.querySelector('q');
+      var text = q.textContent.trim();
+      function done() { btn.textContent = 'Copiado'; setTimeout(function () { btn.textContent = 'Copiar'; }, 1600); }
+      function fallback() {
+        var r = document.createRange(); r.selectNodeContents(q);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      }
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+    });
+  });
+</script>
+<script>
+(function(){ if(!('IntersectionObserver' in window)) return; document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -10% 0px'});
+  document.querySelectorAll('.today li').forEach(function(li,i){li.style.transitionDelay=(i%3)*80+'ms';io.observe(li);});
+})();
+</script>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}h2 small{font-size:12px}.bside .en{font-size:12px}.dnum small{font-size:12px}.dayhead .dl{font-size:12px}.today em{font-size:12px}.ask .t{font-size:12px}.copy{font-size:12.5px}.dark .rlabel{font-size:12px}.copy{padding-top:8px;padding-bottom:8px}}</style>
+

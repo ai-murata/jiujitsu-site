@@ -8,6 +8,7 @@
   - <meta name="robots" content="noindex"> があるページ（スタッフ用・非公開のページ）
   - <meta http-equiv="refresh"> で別のページへ飛ばすだけのページ
   - 名前が _ で始まるファイル・フォルダ、search/ 自身
+  - 外国語版の /en/ /ko/ /pt/（検索は日本語のページだけを探す）
 """
 import json
 import re
@@ -115,7 +116,7 @@ def page_url(path):
 def candidates():
     for path in sorted(ROOT.rglob("*.html")):
         parts = path.relative_to(ROOT).parts
-        if any(p.startswith((".", "_")) for p in parts):
+        if any(p.startswith((".", "_")) for p in parts) or parts[0] in ("en", "ko", "pt"):
             continue
         if parts[0] in ("search", "tools", "node_modules"):
             continue

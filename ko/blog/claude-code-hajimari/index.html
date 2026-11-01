@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/claude-code-hajimari/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/claude-code-hajimari/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/claude-code-hajimari/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/claude-code-hajimari/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/claude-code-hajimari/">
+<link rel="canonical" href="https://jiujitsu.co.jp/ko/blog/claude-code-hajimari/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>엔지니어가 아닌 제가 Claude Code와 “끈질기게” 지낸 한 달</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="설치에서 막혔던 제가 하마다 씨의 “AI는 못 한다고 하지만, 무조건 할 수 있어”라는 한마디로 바뀐 이야기. 매니저의 눈으로 쓰는 블로그 첫 번째 글이에요.">
+<meta property="og:title" content="엔지니어가 아닌 제가 Claude Code와 “끈질기게” 지낸 한 달">
+<meta property="og:description" content="“AI는 못 한다고 하지만, 무조건 할 수 있어.” 그 한마디에서 시작된 한 달 남짓의 이야기.">
+<meta property="og:url" content="https://jiujitsu.co.jp/ko/blog/claude-code-hajimari/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+  blockquote cite { display: block; margin-top: 8px; font-family: var(--gothic); font-style: normal; font-size: 12px; font-weight: 500; color: var(--faint); letter-spacing: .08em; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+</style>
+
+<header>
+  <p class="brand"><a href="/ko/blog/">JIU LABO BLOG</a></p>
+  <h1>엔지니어가 아닌 제가 Claude Code와 “끈질기게” 지낸 한 달</h1>
+  <p class="meta"><time datetime="2026-09-27">2026.09.27</time>　무라타 아이(매니저)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>안녕하세요. BUTTI ON LINE Inc.에서 매니저를 맡고 있는 무라타 아이예요.</p>
+    <p>이 블로그에서는 주짓수 도장 운영 이야기와 료조 씨 주변 이야기를 매니저의 눈으로 편하게 써 나갈게요. 첫 번째 글은 최근 한 달 남짓 사이에 제 일하는 방식을 확 바꾼 “Claude Code(클로드 코드)” 이야기예요.</p>
+
+    <h2>설치에서 막혀서 채팅만 쓰고 있었어요</h2>
+    <p>Claude Code라고 하면 “어려울 것 같아”, “엔지니어 도구잖아”라고 느끼는 분이 많은 것 같아요. 저도 처음에는 완전히 똑같았어요.</p>
+    <p>솔직히 설치 단계에서 막혔어요. 그래서 처음에는 일반 Claude 채팅으로 질문하는 정도로만 쓰고 있었어요.</p>
+
+    <h2>“무조건 할 수 있으니까, 끈질기게 시켜”</h2>
+    <p>바뀐 계기는 하마다 씨에게 5시간 정도 배운 일이에요. 그때 가장 마음에 남은 게 이 조언이었어요.</p>
+    <blockquote>
+      <p>AI는 “못 합니다”라고 자주 말하지만, 무조건 할 수 있어. 끈질기게 “해 줘, 해 줘” 하고 싸우는 게 좋아.</p>
+      <cite>― 하마다 씨</cite>
+    </blockquote>
+    <p>그 말을 믿고 첫 번째 일에 5시간 정도 들여서 AI와 씨름했어요. “못 합니다”라는 답이 와도 말을 바꿔 보거나 다른 방법을 부탁하면서 어쨌든 버텼어요.</p>
+    <p>그랬더니 정말로 됐어요. 게다가 끝날 즈음에는 <b>“아, 이렇게 말하면 되는구나”</b> 하는 요령이 어렴풋이 잡혀 있었어요.</p>
+
+    <h2>요령을 잡고 나니 하고 싶은 일이 멈추지 않아요</h2>
+    <p>한번 요령을 잡으니 “그럼 이것도 돼?”, “저것도 부탁하고 싶어” 하고 하고 싶은 일이 계속 나왔어요.</p>
+    <p>지금은 매달의 청구서나 이체 목록 같은 사무 작업, 대회 실시간 결과, 영상과 디자인 제작까지 매니저 업무의 상당 부분을 Claude Code와 함께 하고 있어요. 이 사이트의 페이지도 전부 Claude Code로 만들었어요. 하나하나의 이야기는 앞으로 이 블로그에서 소개할게요.</p>
+
+    <h2>하마다 씨와의 “근황 보고회”</h2>
+    <p>요즘은 하마다 씨를 만날 때마다 서로의 근황을 보고해요.</p>
+    <ul class="talk">
+      <li>“이번에 이런 거 만들었어”</li>
+      <li>“영업 일을 하는 지인이 Claude에게 데이터를 분석시켜서 기획서까지 만들었더니 새 고객을 땄대”</li>
+    </ul>
+    <p>이런 이야기를 들으면 “그럼 내 일이라면 이렇게 쓸 수 있겠다” 하고 또 아이디어가 솟아서, 만든 것을 한 단계 더 좋게 만들 수 있어요.</p>
+    <p>물론 고민도 있어요. 요즘 가장 곤란한 건 제가 직접 컴퓨터를 쓰는 도중에 Claude에게 부탁해 둔 작업이 움직이기 시작해서 화면이 바뀌어 버리는 거예요. “으악” 하게 되고, 양쪽 작업이 다 멈춰 버려요. 그 밖에도 GitHub(만든 것을 저장하고 공개하는 곳)나 MCP(AI와 다른 서비스를 연결하는 구조) 같은 것들을 틈틈이 하마다 씨에게 상담하면서 진행하고 있어요.</p>
+
+    <h2>Claude Code는 전혀 어렵지 않아요</h2>
+    <p>이 한 달 남짓 동안 실감한 건 <b>Claude Code는 어려운 도구가 아니라는</b> 거예요. 전문 지식이 없어도 “이런 걸 하고 싶어”라는 아이디어만 있으면 술술 형태가 되어 가요. 그리고 쓰면 쓸수록 할 수 있는 일이 늘어나요.</p>
+    <p>요즘은 Claude Code 강좌도 많이 보이게 됐어요. 하지만 제가 여기서 쓰고 싶은 건 “가르치기” 위한 글이 아니에요.</p>
+    <p>주짓수 도장을 운영하는 분에게도, 평소의 일과 생활을 조금 편하게 만들고 싶은 분에게도, <b>“엔지니어가 아닌 사람이 실제로 이렇게 쓰고 있어요”라는 가까운 한 가지 예</b>를 같은 눈높이에서 전해 드리고 싶어요. 읽어 주신 분께 조금이라도 도움이 된다면 그게 가장 기쁠 거예요.</p>
+    <p>앞으로도 생각날 때마다 편하게 이야기하러 올게요. 잘 부탁드려요.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+
+    <div class="next">
+      <p>도장의 뒷일을 Claude Code에 어떻게 맡기고 있는지는 여기에 정리해 두었어요.</p>
+      <p><a href="/ko/claudecode/">주짓수 도장의 Claude Code →</a></p>
+    </div>
+  </article>
+
+  <footer>
+    <a href="/ko/blog/">블로그 목록으로</a>　/　<a href="/ko/">jiujitsu.co.jp 홈으로</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}}</style>
+

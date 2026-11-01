@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/prompt-jidai/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/prompt-jidai/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/prompt-jidai/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/prompt-jidai/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/prompt-jidai/">
+<link rel="canonical" href="https://jiujitsu.co.jp/en/blog/prompt-jidai/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>The prompt era is over</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="You don't need &quot;magic spells&quot; to use AI well anymore. What matters now is handing over context, making judgment calls, and knowing how to delegate. That's what I've found as a manager running a jiu-jitsu gym's back office almost single-handedly.">
+<meta property="og:title" content="The prompt era is over">
+<meta property="og:description" content="What you need isn't &quot;writing skill&quot; but &quot;handing-over skill.&quot; What I've learned in a jiu-jitsu gym's back office.">
+<meta property="og:url" content="https://jiujitsu.co.jp/en/blog/prompt-jidai/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+</style>
+
+<header>
+  <p class="brand"><a href="/en/blog/">JIU LABO BLOG</a></p>
+  <h1>The prompt era is over</h1>
+  <p class="meta"><time datetime="2026-10-05">2026.10.05</time> Ai Murata (Manager)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <h2>There was a time for memorizing "spells"</h2>
+    <p>To use AI well, you need the skill of writing good prompts. Until recently, people really did say that.</p>
+    <p>Start with "You are an excellent [role]." List the steps in detail as bullet points. Show the output format with an example. Collections of these templates were sold, and there was even a job title: prompt engineer.</p>
+    <p>But working with AI every day now, I realize I hardly chant those spells anymore.</p>
+
+    <h2>AI learned to read between the lines</h2>
+    <p>The reason is simple: AI got smarter.</p>
+    <p>AI used to do only exactly what it was told. So humans had to build instructions that left no room for misunderstanding. You could say prompt skill was really <b>the skill of making up for how little AI understood</b>.</p>
+    <p>Not anymore. Even if I casually say, "The announcement for next month's event, the usual style," it picks up what I mean and gives it shape. If information is missing, it asks me. It feels less like writing instructions and more like talking to the coworker next to you.</p>
+
+    <h2>3 things that matter now instead</h2>
+    <p>So does that mean you don't have to think at all? No. What's being asked of you has just changed.</p>
+    <ul class="tips">
+      <li><b>Handing over context.</b> AI may be smart, but it doesn't know your company's situation. Who the writing is for, what's happened before. Whether you can share that background decides the quality of what comes out.</li>
+      <li><b>Making judgment calls.</b> AI will give you as many options as you like. But choosing one, and deciding where to stop, is the human's job.</li>
+      <li><b>Knowing how to delegate.</b> Rather than asking for everything at once, get a first version and fix it as you look at it. Growing it through back-and-forth is far faster than writing perfect instructions in one shot.</li>
+    </ul>
+    <blockquote><p>What you need isn't "writing skill"<br>but "handing-over skill."</p></blockquote>
+    <p>It's the same skill as giving work to your staff or to an outside vendor.</p>
+
+    <h2>What I've learned in a jiu-jitsu gym's back office</h2>
+    <p>At a company that runs jiu-jitsu gyms, I handle accounting, HR, general affairs, PR, and event operations almost single-handedly. Sorting receipts, paying salaries, posters and pamphlets, press releases. Honestly, it wouldn't work without AI.</p>
+    <p>In all that, I haven't really felt that fine-tuning my prompts improved the results. What worked was <b>properly explaining the background of the company and the gym</b>, and <b>being able to look at what came out and say "this part is wrong."</b></p>
+    <p>In jiu-jitsu, too, knowing the names of techniques won't win you matches. It's about whether you can feel your opponent's movement and decide in the moment. I think working with AI is the same.</p>
+
+    <h2>Why I can do this much</h2>
+    <p>People often ask me, "How do you run all that by yourself?" The answer isn't just that AI is amazing. I think it's that I happened to already have a foundation I could hand over to AI.</p>
+    <p>Right after graduating I worked for many years as university staff, seeing firsthand how an organization's back office runs. In the Faculty of Economics at Chuo University, I used Excel to death and wrote mountains of essays. Thanks to that, I think I got fast at building logic in my head. Being able to sort out in an instant what to ask AI and how is probably thanks to that training. Later, I studied sports organizations at Waseda University's Graduate School of Sport Sciences. And above all, I love the world of jiu-jitsu. I'm not a competitor. But I love my husband Ryozo and everyone who gathers at the gym, and before I knew it, I was in this world up to my neck.</p>
+    <p>AI fills in what I don't know. But the yardstick for judging what's right and what's wrong exists only in my experience. <b>Because I have experience, I can delegate precisely to AI, and because I have AI, I can reach several people's worth of work alone.</b> That multiplication is how I work today.</p>
+
+    <h2>The question is "What do you want to do?"</h2>
+    <p>The age of prompts is over. From here on, the strong ones won't be the people who know how to ask, but the people who are clear on what they want to achieve.</p>
+    <p>If you have time to hunt for template collections, spend it on being able to say the purpose of your work in one line. That'll make AI a far better partner.</p>
+    <p>By the way, I wrote this post with Claude too. I didn't use a single fancy prompt. I just said, "I want to write a blog post saying the age of prompts is over," and after that it was all back-and-forth: "that's not right," "put this in too."</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">I want AI staff too.</b><br>
+    I help turn monthly work into “roles.” For now, it’s free for the first 3 people, limited to people I’ve met, for up to one tool each. <a href="/en/irai/" style="color:#a3801a;white-space:nowrap;">Get help with AI →</a>
+  </p>
+
+  <footer>
+    <a href="/en/blog/">All blog posts</a> / <a href="/en/">Back to jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}}</style>
+

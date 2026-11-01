@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/claude-nyumon/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/claude-nyumon/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/claude-nyumon/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/claude-nyumon/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/claude-nyumon/">
+<link rel="canonical" href="https://jiujitsu.co.jp/en/claude-nyumon/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>From Computer Beginner to Claude Pro | jiujitsu.co.jp</title>
+<meta name="description" content="From picking a computer to signing up for Claude, connecting your phone, and using it in daily work: a step-by-step guide by the person who runs the office at a jiu-jitsu gym.">
+<meta property="og:title" content="From Computer Beginner to Claude Pro">
+<meta property="og:description" content="Picking a computer, signing up for Claude, connecting your phone, and tips for getting good at it.">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥋</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#ffffff; --panel:#faf8f2; --line:#e7e1d1;
+  --gold:#a3801a; --gold-hi:#c9a227;
+  --ink:#17140d; --body-c:#4d4737; --faint:#948c74;
+  --b-white:#eceadf; --b-blue:#274a7a; --b-purple:#4d3070; --b-brown:#5a3c22; --b-black:#17140d;
+  --serif:"Shippori Mincho","Hiragino Mincho ProN",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--body-c);font-family:var(--sans);font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:var(--gold)}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+.wrap{max-width:720px;margin:0 auto;padding:0 22px}
+
+/* hero */
+header.hero{padding:64px 0 40px;text-align:center}
+.site{font-size:12px;letter-spacing:.3em;color:var(--gold);margin:0 0 14px;font-weight:500;text-transform:uppercase}
+.site a{color:inherit;text-decoration:none}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(28px,6vw,42px);line-height:1.45;margin:0 0 16px;letter-spacing:.1em;color:var(--ink)}
+.lead{color:var(--faint);margin:0 auto 36px;max-width:36em;font-size:14px;letter-spacing:.04em}
+.belt{display:flex;height:6px;overflow:hidden}
+.belt span{flex:1}
+.belt .w{background:var(--b-white)} .belt .bl{background:var(--b-blue)} .belt .p{background:var(--b-purple)}
+.belt .br{background:var(--b-brown)} .belt .bk{background:var(--b-black);position:relative}
+.belt .bk::after{content:"";position:absolute;right:14%;top:0;bottom:0;width:22%;background:var(--gold-hi)}
+.belt-legend{display:flex;font-size:12px;color:var(--faint);margin-top:8px;letter-spacing:.06em}
+.belt-legend span{flex:1}
+.byline{font-size:12px;color:var(--faint);margin-top:24px;letter-spacing:.08em}
+
+/* sections */
+section{padding:48px 0;border-top:1px solid var(--line)}
+.stage{display:flex;align-items:center;gap:12px;margin-bottom:10px;font-size:12px;letter-spacing:.2em;color:var(--gold);font-weight:700}
+.stage i{display:block;width:44px;height:8px;border:1px solid var(--line)}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(21px,4vw,26px);line-height:1.5;margin:0 0 18px;color:var(--ink);letter-spacing:.12em}
+p{margin:0 0 1.1em}
+ol,ul{padding-left:1.4em;margin:0 0 1.2em}
+li{margin-bottom:.4em}
+li::marker{color:var(--gold)}
+strong{font-weight:700;color:var(--ink)}
+
+.table{overflow-x:auto;margin:8px 0 22px;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.7;background:var(--paper)}
+th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+th{font-weight:700;background:var(--panel);color:var(--ink);border-bottom:2px solid var(--gold);font-size:13px;letter-spacing:.08em}
+td:first-child{font-weight:700;white-space:nowrap;color:var(--ink)}
+@media (max-width:640px){table{font-size:13.5px}th,td{padding:10px 8px}td:first-child{white-space:nowrap}th{white-space:nowrap;letter-spacing:.02em}}
+
+.note{background:var(--panel);border-left:2px solid var(--gold);padding:14px 18px;margin:20px 0;font-size:15px}
+
+footer{border-top:1px solid var(--line);padding:36px 0 56px;font-size:13px;color:var(--faint);text-align:center}
+footer a{color:inherit}
+</style>
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <p class="site"><a href="/en/">jiujitsu.co.jp</a></p>
+  <h1>From Computer Beginner<br>to Claude Pro</h1>
+  <p class="lead">From picking a computer and signing up to connecting your phone and making Claude your go-to partner for daily work. Like belts in jiu-jitsu, you’ll be fine if you go one step at a time.</p>
+  <div class="belt" role="img" aria-label="5 stages, from White belt to Black belt">
+    <span class="w"></span><span class="bl"></span><span class="p"></span><span class="br"></span><span class="bk"></span>
+  </div>
+  <div class="belt-legend" aria-hidden="true"><span>Computer</span><span>Sign up</span><span>Connect</span><span>Try</span><span>Master</span></div>
+  <p class="byline">Ai Murata | October 2026</p>
+</header>
+
+<section>
+  <h2>Introduction</h2>
+  <p>Even if you’ve barely touched a computer, Claude becomes your work partner “just by talking to it.” I handle accounting, PR, and event prep for a jiu-jitsu gym all by myself, and starting to use Claude changed how I work in a big way.</p>
+  <p>This page walks you through it in order: buying a computer, signing up for Claude, connecting your phone, and getting good at using it in daily work.</p>
+</section>
+
+<section>
+  <div class="stage"><i style="background:var(--b-white)"></i>White belt: Pick a computer</div>
+  <h2>Picking a computer</h2>
+  <p>Claude runs in a browser or an app, so you don’t need a powerful computer. If you’re not sure, a portable laptop with 16 GB of memory or more is plenty.</p>
+  <div class="table"><table>
+    <thead><tr><th>What to check</th><th>Target</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Type</td><td>Laptop</td><td>Work at cafes or on the go</td></tr>
+      <tr><td>OS</td><td>Mac or Windows</td><td>Both work with the Claude desktop app</td></tr>
+      <tr><td>Memory</td><td>16 GB or more</td><td>Stays smooth with lots of browser tabs open</td></tr>
+      <tr><td>Storage</td><td>256 GB or more</td><td>Plenty of room as documents and images pile up</td></tr>
+      <tr><td>Screen</td><td>13–14 inches</td><td>A good balance of portable and easy to see</td></tr>
+    </tbody>
+  </table></div>
+  <p>If your phone is an iPhone, go with a Mac. If it’s Android, go with Windows. Moving photos and files around gets a little easier.</p>
+</section>
+
+<section>
+  <div class="stage"><i style="background:var(--b-blue)"></i>Blue belt: Create an account</div>
+  <h2>Creating a Claude account</h2>
+  <p>All you need is an email address or a Google account, and signing up takes about 5 minutes. We recommend trying the free plan first and switching to a paid plan when it starts to feel limiting.</p>
+  <ol>
+    <li>Open <a href="https://claude.ai">claude.ai</a> in your browser</li>
+    <li>Choose “Continue with Google” or sign up with your email address</li>
+    <li>Enter your name and what you’d like Claude to call you</li>
+    <li>Try typing “Hi, what can you do?” in the input box</li>
+  </ol>
+  <p>Plans can change, so check the <a href="https://claude.com/pricing">official pricing page</a> for the latest details.</p>
+</section>
+
+<section>
+  <div class="stage"><i style="background:var(--b-purple)"></i>Purple belt: Connect your phone</div>
+  <h2>See the same chats on computer and phone</h2>
+  <p>Just log in to the same account on your computer and phone, and your chats show up on both automatically. No special setup needed.</p>
+  <ol>
+    <li>Computer: Download the desktop app from claude.ai and install it (you can also just use the browser)</li>
+    <li>Phone: Search for “Claude” on the App Store or Google Play and install it</li>
+    <li>Log in on both with the same email address (or Google account)</li>
+    <li>Check that what you said on your computer shows up in the phone app too</li>
+  </ol>
+  <p class="note">Here’s how I use it: when something occurs to me on the go, I talk it through on my phone. Then when I get to the office, I pick up the same chat on my computer and turn it into a document. The phone app also takes voice input, so it works like a notepad even while I’m walking.</p>
+</section>
+
+<section>
+  <div class="stage"><i style="background:var(--b-brown)"></i>Brown belt: Try it out</div>
+  <h2>Good things to try first</h2>
+  <p>The quickest way in is to hand over one “small job you always do yourself.”</p>
+  <div class="table"><table>
+    <thead><tr><th>What you want</th><th>What to say</th></tr></thead>
+    <tbody>
+      <tr><td>Draft an email</td><td>“Write an email apologizing to a client for sending an invoice late. Don’t make it too formal.”</td></tr>
+      <tr><td>Social media post</td><td>“Make 3 versions of an Instagram post announcing next week’s jiu-jitsu tournament.”</td></tr>
+      <tr><td>Summarize a document</td><td>Attach a PDF and say “Sum up the important parts of this contract in 5 lines.”</td></tr>
+      <tr><td>Organize a spreadsheet</td><td>Attach an Excel file and say “Tally each member’s monthly visits.”</td></tr>
+      <tr><td>Look something up</td><td>“Give me a rough idea of how a nonprofit becomes a public interest foundation.”</td></tr>
+    </tbody>
+  </table></div>
+  <p>When the answer is close but not quite there, just add “shorter” or “more casual,” and it’ll fix it.</p>
+</section>
+
+<section>
+  <div class="stage"><i style="background:linear-gradient(90deg,var(--b-black) 64%,var(--gold-hi) 64%,var(--gold-hi) 86%,var(--b-black) 86%)"></i>Black belt: Master it</div>
+  <h2>Tips for mastering it</h2>
+  <p>The keys are these three: “give background,” “keep a separate room for each job,” and “connect your everyday tools.”</p>
+  <ul>
+    <li><strong>How to ask</strong>: Add a few words on who it’s for, what it’s for, and how long it should be, and the answers get better.</li>
+    <li><strong>Projects</strong>: Make a project for each job, like “payroll transfers” or “event announcements,” and put your go-to documents in it. Then you don’t have to explain everything each time.</li>
+    <li><strong>Memory</strong>: Turn on memory in the settings, and Claude will remember your work and preferences and use them in future chats.</li>
+    <li><strong>Connectors</strong>: Connect Gmail, Google Calendar, and Google Drive, and you can ask directly, like “What’s on tomorrow?” or “Summarize last week’s emails.”</li>
+    <li><strong>Making files</strong>: Say “Turn this into slides” or “Put this in Excel,” and it makes a file you can use right away.</li>
+  </ul>
+  <p>You don’t need to write the perfect instructions from the start. Just ask, then keep saying “Fix this part” on what comes back. That’s the fastest way to get better.</p>
+</section>
+
+<section>
+  <h2>Summary</h2>
+  <p>Buy a laptop, sign up at claude.ai, and put the app on your phone. You can do all that in one day. After that, just ask Claude to do one of your jobs each day. A month from now, “I’ll just ask Claude” should come naturally.</p>
+</section>
+
+<footer>
+  <p>© 2026 jiujitsu.co.jp | <a href="/en/">Back to top</a></p>
+</footer>
+
+</div>
+</body>
+</html>

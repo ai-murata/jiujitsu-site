@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/">
+<link rel="canonical" href="https://jiujitsu.co.jp/pt/blog/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Blog do Jiu Labo</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Gestão de academia de jiu-jitsu, o dia a dia em volta do Ryozo e o Claude Code. Um blog escrito pelo olhar da gerente Ai Murata.">
+<meta property="og:title" content="Blog do Jiu Labo">
+<meta property="og:description" content="Gestão de academia de jiu-jitsu, o dia a dia em volta do Ryozo e o Claude Code. Um blog pelo olhar da gerente.">
+<meta property="og:url" content="https://jiujitsu.co.jp/pt/blog/">
+<link rel="alternate" type="application/atom+xml" title="Novidades do Jiu Labo" href="/feed.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(28px, 6vw, 40px); color: var(--ink); letter-spacing: .14em; margin: 10px 0 12px; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; letter-spacing: .06em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  .posts { list-style: none; margin: 40px 0 0; padding: 0; border-top: 1px solid var(--line); }
+  .posts a { display: block; padding: 22px 4px; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; }
+  .posts a:hover h2 { color: var(--gold); }
+  .posts time { font-size: 12px; color: var(--faint); letter-spacing: .1em; font-variant-numeric: tabular-nums; }
+  .posts h2 { font-family: var(--mincho); font-weight: 700; font-size: 18px; color: var(--ink); letter-spacing: .06em; line-height: 1.6; margin: 4px 0 6px; }
+  .posts p { font-size: 13.5px; margin: 0; }
+  .posts h2 { word-break: auto-phrase; text-wrap: pretty; }
+  /* 一番新しい記事を大きく */
+  .posts li.is-latest a { background: var(--panel); border-top: 3px solid var(--gold); padding: 28px 24px; }
+  .posts li.is-latest h2 { font-size: 22px; }
+  .posts li.is-latest p { font-size: 14px; }
+  .new-badge { display: inline-block; margin-left: 10px; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: var(--paper); background: var(--gold); border-radius: 3px; padding: 0 7px; line-height: 1.7; vertical-align: 1px; }
+  .posts li.is-hidden { display: none; }
+  .more-btn { display: block; margin: 28px auto 0; background: none; border: 1px solid var(--gold); color: var(--gold); border-radius: 999px; padding: 10px 32px; font: inherit; font-size: 13px; letter-spacing: .1em; cursor: pointer; transition: background .15s, color .15s; }
+  .more-btn:hover { background: var(--gold); color: var(--paper); }
+  .more-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    .posts { margin-top: 20px; }
+    .posts a { padding: 16px 2px; }
+    .posts h2 { font-size: 16px; letter-spacing: .02em; line-height: 1.55; margin: 2px 0 4px; }
+    .posts p { font-size: 12.5px; line-height: 1.75; }
+    .posts li.is-latest a { padding: 22px 16px; }
+    .posts li.is-latest h2 { font-size: 18px; }
+    .posts li.is-latest p { font-size: 13px; }
+  }
+
+  .tag { display: inline-block; margin-left: 10px; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: var(--gold); border: 1px solid var(--gold); border-radius: 3px; padding: 0 6px; line-height: 1.6; vertical-align: 1px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+
+<header>
+  <p class="brand">JIUJITSU.CO.JP</p>
+  <h1>Blog</h1>
+  <p class="lede">Jiu-jitsu, o Ryozo e IA, pelo olhar da gerente.</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <ul class="posts">
+    <!-- nikki:start -->
+    <li class="is-nikki">
+      <a href="/pt/blog/nikki/2026-10-04/">
+        <time datetime="2026-10-04">2026.10.04</time><span class="tag">Diário</span>
+        <h2>3 coisas que pedi à IA enquanto organizava um campeonato</h2>
+        <p>Hoje foi o dia do campeonato “Reversal Cup Sapporo”, da SJJJF Hokkaido. Num dia em que eu estava com as mãos cheias organizando o evento, consegui terminar um aviso de desculpas, uma análise de campeonatos anteriores e até o planejamento do próximo. Deixei tudo organizado para quem organiza campeonatos poder copiar do jeito que está.</p>
+      </a>
+    </li>
+    <li class="is-nikki">
+      <a href="/pt/blog/nikki/2026-10-01/">
+        <time datetime="2026-10-01">2026.10.01</time><span class="tag">Diário</span>
+        <h2>Como mostrar como exemplo uma ferramenta feita para um cliente</h2>
+        <p>O maior “hein?!” de hoje foi conseguir apresentar o sistema de reservas que fiz para um cliente como uma “demonstração que funciona”, sem tocar em nada do sistema real. Conto aqui os cuidados que tomei ao mostrar algo feito a pedido de alguém.</p>
+      </a>
+    </li>
+    <li class="is-nikki">
+      <a href="/pt/blog/nikki/2026-09-30/">
+        <time datetime="2026-09-30">2026.09.30</time><span class="tag">Diário</span>
+        <h2>O dia em que liguei a página de reservas ao Google Sheets</h2>
+        <p>O maior “hein?!” de hoje foi ligar a página de reservas de um workshop ao “Apps Script” do Google (um programinha que roda por trás da planilha), para as pessoas se inscreverem vendo as vagas disponíveis. Tropecei em algumas coisas até conseguir.</p>
+      </a>
+    </li>
+    <li class="is-nikki">
+      <a href="/pt/blog/nikki/2026-09-29/">
+        <time datetime="2026-09-29">2026.09.29</time><span class="tag">Diário</span>
+        <h2>684 academias de jiu-jitsu do Japão inteiro, coletadas do mapa com o Claude</h2>
+        <p>O maior “hein?!” de hoje foi percorrer o Google Maps nas 47 províncias do Japão e adicionar 133 academias novas ao guia. Além disso, em um só dia criei 2 sistemas que resumem as notícias da manhã automaticamente.</p>
+      </a>
+    </li>
+    <!-- nikki:end -->
+    <li>
+      <a href="/pt/blog/ikura-te-de/">
+        <time datetime="2026-10-28">2026.10.28</time>
+        <h2>Mesmo na era da IA, o ikura se tempera à mão</h2>
+        <p>Ontem preparamos ikura (ovas de salmão) em conserva, todo mundo junto. O Claude me ajudou com a ordem de camadas de missô e pano, e também a consertar quando o pano grudou. Mas quem põe a mão na massa e decide se ficou gostoso é o ser humano.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/kuruma-15fun/">
+        <time datetime="2026-10-24">2026.10.24</time>
+        <h2>Na volta da academia, 15 minutos no carro para planejar com o Claude</h2>
+        <p>Descobri que dava para falar com o Claude só por voz, até no carro, e na volta da academia conversei com ele sobre o que fazer ao chegar em casa. Em 15 minutos estava tudo decidido, e cheguei e resolvi tudo rapidinho.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/php-zeijakusei/">
+        <time datetime="2026-10-22">2026.10.22</time>
+        <h2>O dia em que perguntei ao Claude: “O PHP está seguro?” O que está acontecendo em sites do mundo todo</h2>
+        <p>Foram encontradas 2 falhas de gravidade 9,2 no PHP, que faz sites funcionarem. Conto por que o nosso site estava fora de perigo e o que quem tem site precisa verificar.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/ai-tsukaiwake/">
+        <time datetime="2026-10-21">2026.10.21</time>
+        <h2>Claude, Gemini e ChatGPT: pago os três, e é assim que uso cada um</h2>
+        <p>O Gemini consegue ver vídeos do YouTube, o ChatGPT é para imagens, o Claude é para entregar o trabalho inteiro. Também pedi ao Claude para organizar a diferença entre “assistente” e “agente”.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/claude-chinou/">
+        <time datetime="2026-10-20">2026.10.20</time>
+        <h2>O Claude é “nível primeiro da turma de Harvard”? De 4% a 61% em 1 ano e 8 meses, na prova dificílima dos professores</h2>
+        <p>2.500 questões que cerca de 1.000 professores do mundo todo criaram dizendo “isso a IA não resolve”. Escrevi sobre como o acerto do Claude cresceu, alguns exemplos, por que os 40% restantes ficam sem resposta e o que senti trabalhando com ele.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/hikitsugi-jitsubutsu/">
+        <time datetime="2026-10-20">2026.10.20</time>
+        <h2>Vi de verdade o “guia de passagem de tarefas” para o parto</h2>
+        <p>O documento de passagem de responsabilidades que uma amiga fez com o Claude tem 9 páginas de caderno e mais 2 com os remédios. Da casa aos sentimentos, mostro os 12 itens, com os detalhes escondidos.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/hikitsugi-sho/">
+        <time datetime="2026-10-18">2026.10.18</time>
+        <h2>A amiga que fez com o Claude um “guia de passagem de tarefas” para o parto</h2>
+        <p>Uma amiga que lê o blog fez com o Claude um documento para passar ao marido as coisas da casa e dos filhos enquanto ficava internada. Uma notícia que me deixou feliz: “Tinha até itens que eu teria esquecido”.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/heikou-shigoto/">
+        <time datetime="2026-10-17">2026.10.17</time>
+        <h2>10 pedidos por dia, 2 a 3 por hora: contei quantas tarefas o Claude toca ao mesmo tempo para mim</h2>
+        <p>Contando os registros de 65 dias, peço em média 10 trabalhos por dia, 28 nos dias mais cheios. Só de pedir o próximo enquanto espero, naturalmente vários passaram a rodar ao mesmo tempo.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/oboesasekata/">
+        <time datetime="2026-10-08">2026.10.08</time>
+        <h2>Mais do que saber pedir, ensinar a lembrar. 57 dias com o Claude agindo 20 mil vezes</h2>
+        <p>Pedi 2.072 vezes e o Claude agiu 21.696 vezes. O motivo de ele agir umas 10 vezes a cada pedido não é saber pedir bem, e sim o que eu fui ensinando ele a lembrar.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/prompt-jidai/">
+        <time datetime="2026-10-05">2026.10.05</time>
+        <h2>A era do prompt acabou</h2>
+        <p>Para usar bem a IA, não precisa mais de “palavras mágicas”. O que importa agora é passar o contexto, decidir e saber delegar. O que falta é a “habilidade de entregar trabalho”.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/shabetta-6pun/">
+        <time datetime="2026-10-01">2026.10.01</time>
+        <h2>Falei por 6 minutos. Os 14 trabalhos que pedi ao Claude em um dia</h2>
+        <p>Testei com o registro de um dia a história de que “a voz é 5 vezes mais rápida”. Mesmo cheio de erros de fala, 14 coisas foram resolvidas, e à noite eu tinha 6 rodando ao mesmo tempo.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/benkyou-shinai/">
+        <time datetime="2026-09-30">2026.09.30</time>
+        <h2>Domine o Claude Code sem estudar</h2>
+        <p>O que você não sabe, é só perguntar ao Claude. Sobre ir pegando todo dia os “isso aqui dá para facilitar” e procurar estacionamento para um carro grande.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/ai-shain/">
+        <time datetime="2026-09-29">2026.09.29</time>
+        <h2>Descobri que a nossa empresa já tinha 6 funcionários de IA</h2>
+        <p>Começou com “funcionários de IA, que legal” e, quando fiz a lista, já eram 6. Por que vale a pena dividir a IA por função.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/shigoto-igai-de/">
+        <time datetime="2026-09-28">2026.09.28</time>
+        <h2>Se não pode usar no trabalho, use na vida</h2>
+        <p>Para quem não pode usar IA por regra da empresa. A história de transformar em site as receitas em papel de 4 anos de aulas de culinária.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/seikyusho-claude/">
+        <time datetime="2026-09-28">2026.09.28</time>
+        <h2>Pedi ao Claude para revisar um ano de faturas</h2>
+        <p>As faturas de prestação de serviço que faço sozinha todo mês. Pedi ao Claude para voltar no tempo, e ele encontrou erros.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/waapuro-kara-ai/">
+        <time datetime="2026-09-27">2026.09.27</time>
+        <h2>Eu amava processador de texto. Por que me viciei no Claude Code</h2>
+        <p>Da máquina de processamento de texto para o Excel e o PowerPoint, e daí para a IA. Aprendi a cada troca de ferramenta, e conto por que estou viciada em IA agora.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/onsei-tsukaiwake/">
+        <time datetime="2026-09-27">2026.09.27</time>
+        <h2>Parei de digitar e comecei a falar. Como escolher entre Chat, Cowork e Code</h2>
+        <p>5 vezes mais rápido com a voz. E os 3 usos do Claude, escolhendo entre “resposta, arquivo ou sistema”.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/pt/blog/claude-code-hajimari/">
+        <time datetime="2026-09-27">2026.09.27</time>
+        <h2>Não sou engenheira, e faz um mês que venho “insistindo” com o Claude Code</h2>
+        <p>Eu tropecei na instalação, e uma frase mudou tudo: “a IA diz que não consegue, mas consegue sim”.</p>
+      </a>
+    </li>
+  </ul>
+
+<script>
+// 記事の並べ替え・最新を大きく・NEWバッジ・「もっと見る」
+// 記事は <li> を足すだけでOK（日付は <time datetime="YYYY-MM-DD"> から読む）
+// 日記（nikki:start〜end のあいだ）は tools/nikki/build.py が自動で入れるので手で触らない
+(function () {
+  var NEW_DAYS = 3;  // 何日間NEWを出すか
+  var SHOW_MAX = 5;  // 最初に見せる件数（それ以上は「もっと見る」）
+  var list = document.querySelector('.posts');
+  if (!list) return;
+  var items = Array.prototype.slice.call(list.children);
+  function toDate(li) {
+    var t = li.querySelector('time');
+    var p = new Date((t ? t.getAttribute('datetime') : '') + 'T00:00:00');
+    return isNaN(p) ? new Date(0) : p;
+  }
+  // 同じ日なら、ふつうの記事を日記より上に
+  items.sort(function (a, b) { return (toDate(b) - toDate(a)) || (a.classList.contains('is-nikki') - b.classList.contains('is-nikki')); });
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  items.forEach(function (li, i) {
+    list.appendChild(li);
+    if (i === 0) li.classList.add('is-latest');
+    var days = (today - toDate(li)) / 86400000;
+    if (days >= 0 && days < NEW_DAYS) {
+      var b = document.createElement('span');
+      b.className = 'new-badge'; b.textContent = 'NEW';
+      li.querySelector('time').after(b);
+    }
+    if (i >= SHOW_MAX) li.classList.add('is-hidden');
+  });
+  if (items.length > SHOW_MAX) {
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'more-btn'; btn.textContent = 'Ver mais';
+    btn.onclick = function () {
+      items.forEach(function (li) { li.classList.remove('is-hidden'); });
+      btn.remove();
+    };
+    list.after(btn);
+  }
+})();
+</script>
+
+  <footer>
+    <a href="/feed.xml">Receber por RSS</a> / <a href="/pt/">Início do jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.new-badge{font-size:12px}.tag{font-size:12px}}</style>
+

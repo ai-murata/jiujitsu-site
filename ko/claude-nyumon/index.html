@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/claude-nyumon/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/claude-nyumon/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/claude-nyumon/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/claude-nyumon/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/claude-nyumon/">
+<link rel="canonical" href="https://jiujitsu.co.jp/ko/claude-nyumon/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>컴퓨터 초보가 Claude를 잘 쓰게 되기까지 | jiujitsu.co.jp</title>
+<meta name="description" content="컴퓨터 고르기부터 Claude 가입, 스마트폰 연동, 일상 업무에서 잘 쓰기까지. 주짓수 도장의 사무를 맡고 있는 필자가 순서대로 소개합니다.">
+<meta property="og:title" content="컴퓨터 초보가 Claude를 잘 쓰게 되기까지">
+<meta property="og:description" content="컴퓨터 고르기부터 Claude 가입, 스마트폰 연동, 활용 요령까지.">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥋</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#ffffff; --panel:#faf8f2; --line:#e7e1d1;
+  --gold:#a3801a; --gold-hi:#c9a227;
+  --ink:#17140d; --body-c:#4d4737; --faint:#948c74;
+  --b-white:#eceadf; --b-blue:#274a7a; --b-purple:#4d3070; --b-brown:#5a3c22; --b-black:#17140d;
+  --serif:"Shippori Mincho","Hiragino Mincho ProN",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--body-c);font-family:var(--sans);font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:var(--gold)}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+.wrap{max-width:720px;margin:0 auto;padding:0 22px}
+
+/* hero */
+header.hero{padding:64px 0 40px;text-align:center}
+.site{font-size:12px;letter-spacing:.3em;color:var(--gold);margin:0 0 14px;font-weight:500;text-transform:uppercase}
+.site a{color:inherit;text-decoration:none}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(28px,6vw,42px);line-height:1.45;margin:0 0 16px;letter-spacing:.1em;color:var(--ink)}
+.lead{color:var(--faint);margin:0 auto 36px;max-width:36em;font-size:14px;letter-spacing:.04em}
+.belt{display:flex;height:6px;overflow:hidden}
+.belt span{flex:1}
+.belt .w{background:var(--b-white)} .belt .bl{background:var(--b-blue)} .belt .p{background:var(--b-purple)}
+.belt .br{background:var(--b-brown)} .belt .bk{background:var(--b-black);position:relative}
+.belt .bk::after{content:"";position:absolute;right:14%;top:0;bottom:0;width:22%;background:var(--gold-hi)}
+.belt-legend{display:flex;font-size:12px;color:var(--faint);margin-top:8px;letter-spacing:.06em}
+.belt-legend span{flex:1}
+.byline{font-size:12px;color:var(--faint);margin-top:24px;letter-spacing:.08em}
+
+/* sections */
+section{padding:48px 0;border-top:1px solid var(--line)}
+.stage{display:flex;align-items:center;gap:12px;margin-bottom:10px;font-size:12px;letter-spacing:.2em;color:var(--gold);font-weight:700}
+.stage i{display:block;width:44px;height:8px;border:1px solid var(--line)}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(21px,4vw,26px);line-height:1.5;margin:0 0 18px;color:var(--ink);letter-spacing:.12em}
+p{margin:0 0 1.1em}
+ol,ul{padding-left:1.4em;margin:0 0 1.2em}
+li{margin-bottom:.4em}
+li::marker{color:var(--gold)}
+strong{font-weight:700;color:var(--ink)}
+
+.table{overflow-x:auto;margin:8px 0 22px;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.7;background:var(--paper)}
+th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+th{font-weight:700;background:var(--panel);color:var(--ink);border-bottom:2px solid var(--gold);font-size:13px;letter-spacing:.08em}
+td:first-child{font-weight:700;white-space:nowrap;color:var(--ink)}
+@media (max-width:640px){table{font-size:13.5px}th,td{padding:10px 8px}td:first-child{white-space:nowrap}th{white-space:nowrap;letter-spacing:.02em}}
+
+.note{background:var(--panel);border-left:2px solid var(--gold);padding:14px 18px;margin:20px 0;font-size:15px}
+
+footer{border-top:1px solid var(--line);padding:36px 0 56px;font-size:13px;color:var(--faint);text-align:center}
+footer a{color:inherit}
+</style>
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <p class="site"><a href="/ko/">jiujitsu.co.jp</a></p>
+  <h1>컴퓨터 초보가<br>Claude를 잘 쓰게 되기까지</h1>
+  <p class="lead">컴퓨터 고르기부터 가입, 스마트폰 연동, 매일의 일에서 든든한 파트너가 되기까지. 주짓수 벨트처럼 한 단계씩 나아가면 됩니다.</p>
+  <div class="belt" role="img" aria-label="화이트 벨트부터 블랙 벨트까지 5단계">
+    <span class="w"></span><span class="bl"></span><span class="p"></span><span class="br"></span><span class="bk"></span>
+  </div>
+  <div class="belt-legend" aria-hidden="true"><span>PC 고르기</span><span>가입</span><span>연동</span><span>써 보기</span><span>활용</span></div>
+  <p class="byline">무라타 아이 | 2026년 10월</p>
+</header>
+
+<section>
+  <h2>시작하며</h2>
+  <p>컴퓨터를 거의 만져 본 적이 없어도 Claude는 “말만 걸면” 일의 파트너가 되어 줍니다. 저 역시 주짓수 도장의 경리, 홍보, 이벤트 준비를 혼자 떠안고 있다가 Claude를 쓰기 시작하면서 일하는 방식이 크게 바뀌었습니다.</p>
+  <p>이 페이지에서는 컴퓨터 구입부터 Claude 가입, 스마트폰 연동, 그리고 일상 업무에서 잘 쓰기까지를 순서대로 소개합니다.</p>
+</section>
+
+<section>
+  <div class="stage"><i style="background:var(--b-white)"></i>화이트 벨트: 컴퓨터 고르기</div>
+  <h2>컴퓨터 고르기</h2>
+  <p>Claude는 브라우저에서도 앱에서도 작동하기 때문에 고성능 컴퓨터는 필요 없습니다. 고민된다면 “들고 다닐 수 있는 노트북, 메모리 16GB 이상”을 고르면 충분합니다.</p>
+  <div class="table"><table>
+    <thead><tr><th>확인 항목</th><th>기준</th><th>이유</th></tr></thead>
+    <tbody>
+      <tr><td>종류</td><td>노트북</td><td>카페나 외출지에서도 작업 가능</td></tr>
+      <tr><td>OS</td><td>Mac 또는 Windows</td><td>둘 다 Claude 데스크톱 앱 지원</td></tr>
+      <tr><td>메모리</td><td>16GB 이상</td><td>브라우저 탭을 많이 열어도 느려지지 않음</td></tr>
+      <tr><td>저장 용량</td><td>256GB 이상</td><td>자료와 이미지가 쌓여도 안심</td></tr>
+      <tr><td>화면</td><td>13~14인치</td><td>휴대성과 보기 편함의 균형이 좋음</td></tr>
+    </tbody>
+  </table></div>
+  <p>스마트폰이 iPhone이면 Mac, Android면 Windows를 고르면 사진이나 파일을 주고받기가 조금 더 편합니다.</p>
+</section>
+
+<section>
+  <div class="stage"><i style="background:var(--b-blue)"></i>블루 벨트: 계정 만들기</div>
+  <h2>Claude 계정 만들기</h2>
+  <p>가입은 이메일 주소나 Google 계정만 있으면 5분 정도면 끝납니다. 먼저 무료 플랜으로 써 보고, 부족하다고 느껴지면 유료 플랜으로 바꾸는 것을 추천합니다.</p>
+  <ol>
+    <li>브라우저에서 <a href="https://claude.ai">claude.ai</a>를 엽니다</li>
+    <li>“Google로 계속하기” 또는 이메일 주소로 가입합니다</li>
+    <li>이름과 Claude가 나를 어떻게 부르면 좋을지를 입력합니다</li>
+    <li>입력란에 “안녕, 뭘 할 수 있어?”라고 쳐 봅니다</li>
+  </ol>
+  <p>요금제는 바뀔 수 있으니 최신 내용은 <a href="https://claude.com/pricing">공식 요금 페이지</a>에서 확인해 주세요.</p>
+</section>
+
+<section>
+  <div class="stage"><i style="background:var(--b-purple)"></i>퍼플 벨트: 스마트폰 연동</div>
+  <h2>컴퓨터와 스마트폰에서 같은 대화 보기</h2>
+  <p>컴퓨터와 스마트폰에서 같은 계정으로 로그인하기만 하면 대화가 자동으로 양쪽에 표시됩니다. 특별한 연동 설정은 필요 없습니다.</p>
+  <ol>
+    <li>컴퓨터: claude.ai에서 데스크톱 앱을 내려받아 설치(브라우저 그대로도 쓸 수 있습니다)</li>
+    <li>스마트폰: App Store 또는 Google Play에서 “Claude”를 검색해 설치</li>
+    <li>양쪽에서 같은 이메일 주소(또는 Google 계정)로 로그인</li>
+    <li>컴퓨터에서 말한 내용이 스마트폰 앱에도 그대로 나오는지 확인</li>
+  </ol>
+  <p class="note">저는 이동 중에 스마트폰으로 떠오른 생각을 상담하고, 사무실에 도착하면 컴퓨터에서 같은 대화를 이어 가며 자료로 완성합니다. 스마트폰은 음성 입력도 쓸 수 있어서 걸으면서 메모 대신 쓰기에도 좋습니다.</p>
+</section>
+
+<section>
+  <div class="stage"><i style="background:var(--b-brown)"></i>브라운 벨트: 먼저 써 보기</div>
+  <h2>처음에 써 보면 좋은 사용법</h2>
+  <p>처음에는 “평소 직접 하던 작은 일” 하나를 맡겨 보는 것이 지름길입니다.</p>
+  <div class="table"><table>
+    <thead><tr><th>하고 싶은 일</th><th>말 거는 방법의 예</th></tr></thead>
+    <tbody>
+      <tr><td>메일 초안</td><td>“거래처에 청구서 발송이 늦어져 죄송하다는 메일을, 너무 딱딱하지 않게 써 줘”</td></tr>
+      <tr><td>SNS 게시물</td><td>“다음 주 주짓수 대회 안내를 인스타용으로 3가지 만들어 줘”</td></tr>
+      <tr><td>서류 요약</td><td>PDF를 첨부하고 “이 계약서의 중요한 부분을 5줄로 정리해 줘”</td></tr>
+      <tr><td>표 정리</td><td>Excel을 첨부하고 “회원별 월별 방문 횟수를 집계해 줘”</td></tr>
+      <tr><td>조사</td><td>“NPO 법인이 공익재단법인이 되는 과정을 대략 알려 줘”</td></tr>
+    </tbody>
+  </table></div>
+  <p>돌아온 답이 조금 아쉬울 때는 “더 짧게”, “더 편하게”라고 덧붙이기만 해도 고쳐 줍니다.</p>
+</section>
+
+<section>
+  <div class="stage"><i style="background:linear-gradient(90deg,var(--b-black) 64%,var(--gold-hi) 64%,var(--gold-hi) 86%,var(--b-black) 86%)"></i>블랙 벨트: 잘 쓰기</div>
+  <h2>잘 쓰는 요령</h2>
+  <p>잘 쓰는 열쇠는 “배경을 전하기”, “일마다 방을 나누기”, “평소 쓰는 도구와 연결하기” 세 가지입니다.</p>
+  <ul>
+    <li><strong>부탁하는 법</strong>: 누구를 위해, 무엇 때문에, 어느 정도 길이로를 한마디 덧붙이기만 해도 답의 질이 올라갑니다.</li>
+    <li><strong>프로젝트</strong>: “급여 이체”, “이벤트 공지”처럼 일마다 프로젝트를 만들고 자주 쓰는 자료를 넣어 두면 매번 다시 설명하지 않아도 됩니다.</li>
+    <li><strong>메모리</strong>: 설정에서 메모리를 켜면 내 일과 취향을 기억해서 다음 대화부터 활용해 줍니다.</li>
+    <li><strong>커넥터</strong>: Gmail, Google 캘린더, Google 드라이브와 연결하면 “내일 일정은?”, “지난주 메일을 요약해 줘”처럼 바로 부탁할 수 있습니다.</li>
+    <li><strong>파일 만들기</strong>: “슬라이드로 만들어 줘”, “Excel로 정리해 줘”라고 말하면 바로 쓸 수 있는 파일을 만들어 줍니다.</li>
+  </ul>
+  <p>처음부터 완벽한 지시를 쓸 필요는 없습니다. 일단 부탁해 보고, 나온 결과에 “여기를 고쳐 줘”를 쌓아 가는 것이 실력이 가장 빨리 느는 방법입니다.</p>
+</section>
+
+<section>
+  <h2>정리</h2>
+  <p>노트북을 한 대 사고, claude.ai에 가입하고, 스마트폰에도 앱을 설치합니다. 여기까지는 하루면 끝납니다. 그다음에는 매일 하나씩 내 일을 Claude에게 부탁해 보세요. 한 달 뒤에는 “이것도 Claude에게 물어보면 되겠네”가 자연스럽게 나올 것입니다.</p>
+</section>
+
+<footer>
+  <p>© 2026 jiujitsu.co.jp | <a href="/ko/">홈으로 돌아가기</a></p>
+</footer>
+
+</div>
+</body>
+</html>

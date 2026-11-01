@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/waapuro-kara-ai/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/waapuro-kara-ai/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/waapuro-kara-ai/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/waapuro-kara-ai/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/waapuro-kara-ai/">
+<link rel="canonical" href="https://jiujitsu.co.jp/ko/blog/waapuro-kara-ai/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>워드프로세서를 좋아하던 제가 Claude Code에 빠진 이유</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="워드프로세서, Excel, Word, PowerPoint. 도구가 바뀔 때마다 필사적으로 익혀 온 제가, 다음은 AI라고 생각해서 Claude Code에 빠져든 이야기. 매니저의 눈으로 쓰는 블로그 세 번째 글입니다.">
+<meta property="og:title" content="워드프로세서를 좋아하던 제가 Claude Code에 빠진 이유">
+<meta property="og:description" content="워드프로세서 → Excel, PowerPoint → AI. 도구가 바뀔 때마다 익혀 온 제가 지금 AI에 빠져 있는 이유.">
+<meta property="og:url" content="https://jiujitsu.co.jp/ko/blog/waapuro-kara-ai/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+</style>
+
+<header>
+  <p class="brand"><a href="/ko/blog/">JIU LABO BLOG</a></p>
+  <h1>워드프로세서를 좋아하던 제가 Claude Code에 빠진 이유</h1>
+  <p class="meta"><time datetime="2026-09-27">2026.09.27</time>　무라타 아이(매니저)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>안녕하세요, 무라타 아이입니다. 세 번째 글에서는 옛날이야기를 조금 해 볼게요.</p>
+    <p>주짓수 도장 매니저인 제가 왜 이렇게 Claude Code에 빠져 있을까요. 곰곰이 생각해 보니 어제오늘 일이 아니었어요. 저는 옛날부터 <b>그때그때의 "새로운 도구"를 익히는 걸 좋아했어요</b>.</p>
+
+    <h2>시작은 초등학생 때의 워드프로세서</h2>
+    <p>워드프로세서(문서 작성 전용 기기)를 만지기 시작한 건 초등학생 때예요. 친 글은 <b>플로피 디스크</b>에 저장하고 <b>감열지</b>에 인쇄했어요. 그 매끈매끈한 종이, 정말 그리워요.</p>
+    <p>쓰던 건 친구에게 보내는 편지나 제 생각을 주저리주저리 적은 글이었어요. 아무튼 치는 게 즐거워서 떠오르는 대로 계속 썼어요.</p>
+    <p>컴퓨터에서는 <b>Ichitaro</b>(일본의 워드 프로그램)도 쓰고, 할아버지와 메일도 주고받았어요. 지금 생각하면 초등학생 나름대로 <b>그 시대의 최첨단</b>을 달리고 있었던 것 같아요.</p>
+    <p>지금은 그때만큼 푹 빠지는 일은 없어졌지만, "기계 앞에서 뭔가 만드는 걸 좋아한다"는 마음은 줄곧 뿌리에 남아 있었던 것 같아요.</p>
+
+    <h2>중학생 때 내 홈페이지를 만들었어요</h2>
+    <p>중학생이 되자 이번에는 <b>내 홈페이지</b>를 만드는 법을 익혔어요. 무료 홈페이지 서비스를 쓰면서 HTML(홈페이지 내용을 짜는 표기법)도 직접 썼어요.</p>
+    <p>마침 중학교에서 자기 홈페이지를 만드는 수업이 있었어요. 거기서 저는 어마어마하게 공들인 페이지를 만들어 버려서 선생님과 주변 친구들이 꽤 놀랐어요. 이건 지금도 또렷이 기억해요.</p>
+    <p>돌아보면 저는 옛날부터 <b>짜 맞춰서 만드는 일</b>을 잘했던 것 같아요.</p>
+
+    <h2>대학에서 Excel과 PowerPoint에 내몰리다</h2>
+    <p>다음 전환점은 대학이에요. 경제학부에 들어가니 <b>Excel과 PowerPoint를 어떻게든 써야 하는</b> 상황이 계속 생겼어요.</p>
+    <p>못 쓰면 과제가 안 끝나요. 그래서 일단 찾아봤어요. 모르는 게 있을 때마다 찾아보고, 해 보고, 또 찾아보고. 좋아서 시작했다기보다 필요에 쫓겨서 익혔다는 게 솔직한 이야기예요.</p>
+
+    <h2>대학 직원이 되어 "숙련"됐어요</h2>
+    <p>졸업하고 대학 직원이 되니 이번에는 일로 매일 Excel, Word, PowerPoint를 쓰게 됐어요. 표를 만들고, 문서를 만들고, 자료를 만들고. 매일 반복하는 사이에 어느새 완전히 손에 익었어요.</p>
+    <p>"숙련됐다"고 말해도 될 만큼은 다룰 수 있게 된 것 같아요.</p>
+
+    <ol class="timeline">
+      <li><span class="when">초등학생</span><b>워드프로세서·컴퓨터</b><span class="d">워드프로세서로 편지를 써서 플로피에 저장. 컴퓨터로는 Ichitaro, 할아버지와 메일도</span></li>
+      <li><span class="when">중학생</span><b>홈페이지·HTML</b><span class="d">수업에서 너무 공들여 만들어 선생님이 놀람</span></li>
+      <li><span class="when">대학 (경제학부)</span><b>Excel·PowerPoint</b><span class="d">안 쓰면 과제가 안 끝남. 마구 찾아보며 익힘</span></li>
+      <li><span class="when">대학 직원</span><b>Excel·Word·PowerPoint</b><span class="d">매일 업무에서 쓰며 숙련</span></li>
+      <li><span class="when">지금</span><b>AI (Claude Code)</b><span class="d">다음 "새로운 도구"는 이거라고 생각함</span></li>
+    </ol>
+
+    <h2>그 시대가 끝나고, 다음은 AI</h2>
+    <p>그런데 최근 들어 분위기가 달라졌다고 느껴요. Excel이나 Word를 잘 쓰는 게 강점이던 시대는 한 단락을 지은 걸지도 몰라요.</p>
+
+    <blockquote><p>워드프로세서 다음이 Excel이었듯이,<br>Excel 다음은 AI라고 생각해요.</p></blockquote>
+
+    <p>그렇게 느꼈을 때 "아, 또 그 느낌이다" 싶었어요. 대학에서 Excel에 내몰려 찾아보며 익히던 그때와 같아요. 다만 이번에는 내몰렸다기보다 <b>제 발로 뛰어든</b> 느낌에 가까워요.</p>
+
+    <h2>빠진 이유는 아마 "옛날과 똑같아서"</h2>
+    <p>돌아보면 워드프로세서도 Excel도 AI도, 저에게는 하는 일이 똑같았어요.</p>
+    <ul class="tips">
+      <li>새로운 도구가 나온다</li>
+      <li>모르는 부분을 찾아보고, 해 보고, 익힌다</li>
+      <li>쓸 수 있게 되면 일이 확 편해지고, 만들 수 있는 게 늘어난다</li>
+    </ul>
+    <p>다른 점은 AI는 <b>내 말로 부탁하면 도구 쪽이 다가와 준다</b>는 거예요. Excel 함수를 외우지 않아도 "이런 표가 필요해"라고 말하면 만들어 줘요. 예전에 몇 시간씩 찾아보던 일이 대화 한 번으로 끝나 버려요.</p>
+    <p>그래도 예전 경험이 헛됐다고는 생각하지 않아요. Excel과 Word로 "이런 자료가 있으면 도움이 된다", "여기는 손으로 하면 힘들다"는 걸 알고 있으니까 AI에게 뭘 부탁하면 될지 바로 떠올라요. <b>도구를 익혀 온 시간이 지금은 "부탁하는 법"으로 살아나고 있다</b>고 느껴요.</p>
+
+    <h2>새로운 도구를 또 익혀 나가요</h2>
+    <p>워드프로세서로 편지를 쓰던 초등학생이, Excel에 내몰린 대학생이 되고, Word, Excel, PowerPoint를 쓰는 대학 직원이 되어, 지금은 주짓수 도장 매니저로서 AI와 일하고 있어요.</p>
+    <p>도구는 바뀌어도 "새로운 걸 익혀서 일을 조금 편하게 만드는" 걸 좋아하는 건 변하지 않아요. 다음에 어떤 도구가 나와도 아마 저는 또 찾아보고, 해 보고, 빠질 거예요.</p>
+    <p>"컴퓨터는 좋아하지만 AI는 아직 좀……"이라는 분이 계시다면 꼭 한번 만져 보세요. Excel과 Word를 익혀 온 그 경험, 분명히 AI에서도 살아날 거예요.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+
+  </article>
+
+  <footer>
+    <a href="/ko/blog/">블로그 목록으로</a>　/　<a href="/ko/">jiujitsu.co.jp 홈으로</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.timeline .when{font-size:12px}}</style>
+

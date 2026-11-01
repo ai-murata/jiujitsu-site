@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/kenkyu/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/kenkyu/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/kenkyu/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/kenkyu/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/kenkyu/">
+<link rel="canonical" href="https://jiujitsu.co.jp/pt/kenkyu/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Guia de pesquisas sobre jiu-jitsu</title>
+<meta name="description" content="Artigos científicos sobre jiu-jitsu brasileiro, resumidos e organizados por tema: lesões, preparo físico, análise de lutas, corte de peso e saúde mental.">
+<meta property="og:title" content="Guia de pesquisas sobre jiu-jitsu">
+<meta property="og:description" content="O que a ciência já sabe sobre o jiu-jitsu? 17 artigos resumidos.">
+<meta property="og:url" content="https://jiujitsu.co.jp/pt/kenkyu/">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --ok: #3f6b3a; --ok-bg: #edf3ea;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; font-size: 14.5px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 80px; }
+
+  header { text-align: center; padding: 64px 20px 36px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 700; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(26px, 6vw, 38px); color: var(--ink); letter-spacing: .08em; line-height: 1.5; margin: 10px 0 8px; text-wrap: balance; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  .intro { margin: 40px 0 0; font-size: 14px; }
+  .intro p { margin: 0 0 12px; }
+
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; padding: 0; list-style: none; }
+  .toc a { display: inline-block; font-size: 12.5px; color: var(--ink); text-decoration: none; border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 4px 14px; letter-spacing: .04em; }
+  .toc a:hover { border-color: var(--gold); color: var(--gold); }
+  .toc .n { color: var(--faint); margin-left: 4px; font-size: 11px; }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 21px; color: var(--ink); letter-spacing: .08em; margin: 64px 0 6px; display: flex; align-items: center; gap: 12px; scroll-margin-top: 16px; }
+  h2::before { content: "▼"; color: var(--gold); font-size: 14px; }
+  .h2sub { font-size: 12.5px; color: var(--faint); margin: 0 0 20px; letter-spacing: .04em; line-height: 1.9; }
+
+  .paper { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold); padding: 20px 22px 18px; margin: 16px 0; }
+  .paper .ja { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: .03em; line-height: 1.7; margin: 0 0 4px; }
+  .paper .en { font-size: 12px; color: var(--faint); line-height: 1.7; margin: 0 0 10px; font-style: italic; }
+  .paper .meta { font-size: 12px; color: var(--body-c); line-height: 1.8; margin: 0 0 10px; }
+  .paper .meta b { color: var(--ink); font-weight: 700; }
+  .paper ul { margin: 0 0 12px; padding-left: 1.2em; font-size: 13.5px; line-height: 1.9; }
+  .paper li { margin: 0 0 4px; }
+  .paper .memo { font-size: 13px; background: var(--paper); border: 1px dashed var(--line); padding: 8px 12px; margin: 0 0 12px; line-height: 1.85; }
+  .paper .memo b { color: var(--gold); font-weight: 700; margin-right: 6px; }
+  .links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 12px; }
+  .links a { color: var(--gold); text-decoration: none; font-weight: 700; letter-spacing: .04em; }
+  .links a:hover { text-decoration: underline; }
+  .badge { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; border-radius: 3px; padding: 1px 8px; }
+  .badge.oa { color: var(--ok); background: var(--ok-bg); }
+  .badge.pay { color: var(--faint); background: #f1eee6; }
+  .badge.kind { color: var(--gold); background: #f6efd9; }
+
+  .note { font-size: 12.5px; color: var(--faint); background: var(--panel); border: 1px solid var(--line); padding: 16px 20px; margin: 64px 0 0; line-height: 1.9; }
+  .note b { color: var(--ink); }
+  .note p { margin: 0 0 8px; }
+  .note p:last-child { margin: 0; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 22px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+
+<header>
+  <p class="brand">JIU LABO ／ KENKYU</p>
+  <h1>Guia de pesquisas sobre jiu-jitsu</h1>
+  <p class="lede">O que a ciência já sabe sobre o jiu-jitsu?</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <div class="intro">
+    <p>Reunimos artigos científicos sobre jiu-jitsu brasileiro e fizemos um resumo de cada um, por tema. Escolhemos os que têm a ver com dúvidas que sempre aparecem na academia, como “Estrangulamento não é perigoso?”, “Como o corte de peso antes do campeonato afeta o corpo?” e “Ainda faz efeito se eu começar mais velho?”.</p>
+    <p>Só incluímos artigos cuja existência confirmamos no PubMed ou no site oficial da revista científica. Os artigos com o selo <span class="badge oa">Leitura gratuita</span> podem ser lidos na íntegra pelo link.</p>
+  </div>
+
+  <ul class="toc" aria-label="Temas">
+    <li><a href="#injury">Lesões e segurança<span class="n">5</span></a></li>
+    <li><a href="#physiology">Físico e fisiologia<span class="n">3</span></a></li>
+    <li><a href="#match">Análise de lutas<span class="n">3</span></a></li>
+    <li><a href="#weight">Corte de peso e nutrição<span class="n">2</span></a></li>
+    <li><a href="#health">Saúde e mente<span class="n">3</span></a></li>
+    <li><a href="#japanese">Literatura em japonês<span class="n">1</span></a></li>
+  </ul>
+
+  <!-- ========== 怪我・安全 ========== -->
+  <h2 id="injury">Lesões e segurança</h2>
+  <p class="h2sub">Onde e em que situações a gente mais se machuca. Aqui também estão os estudos sobre a segurança dos estrangulamentos.</p>
+
+  <article class="paper">
+    <p class="ja">Levantamento das lesões em campeonatos de jiu-jitsu</p>
+    <p class="en">Assessment of Injuries During Brazilian Jiu-Jitsu Competition</p>
+    <p class="meta"><b>Scoggin JF, et al.（2014）</b> ／ Orthopaedic Journal of Sports Medicine 2(2)</p>
+    <ul>
+      <li>Análise dos registros médicos de 8 campeonatos de jiu-jitsu realizados no Havaí (2005 a 2011). Em 5.022 lutas houve 46 lesões, o que dá <b>cerca de 9,2 lesões</b> a cada 1.000 lutas.</li>
+      <li>78% das lesões foram ortopédicas, em ossos e articulações. A região mais atingida foi o <b>cotovelo</b>, e a técnica que mais causou lesões foi o <b>armlock</b>.</li>
+      <li>É um dos primeiros artigos a estudar do ponto de vista médico as lesões durante lutas de jiu-jitsu.</li>
+    </ul>
+    <p class="memo"><b>Comentário</b>Costuma-se dizer por aí que o jiu-jitsu machuca menos do que outras artes marciais (essa não é a conclusão deste artigo). Mesmo assim, cuidado com o cotovelo. Bata cedo.</p>
+    <p class="links"><span class="badge oa">Leitura gratuita</span><a href="https://doi.org/10.1177/2325967114522184" target="_blank" rel="noopener">Ler o original →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">1.140 praticantes de jiu-jitsu: padrões de lesão, riscos e volta ao esporte</p>
+    <p class="en">Injury Patterns, Risk Factors, and Return to Sport in Brazilian Jiu Jitsu: A Cross-sectional Survey of 1140 Athletes</p>
+    <p class="meta"><b>Hinz M, et al.（2021）</b> ／ Orthopaedic Journal of Sports Medicine 9(12)</p>
+    <ul>
+      <li>Em um questionário com 1.140 pessoas, <b>69%</b> disseram ter se lesionado nos últimos 3 anos.</li>
+      <li>A região mais atingida foi o <b>joelho</b> (20,8%). Cerca de 30% das lesões aconteceram enquanto o adversário tentava uma finalização.</li>
+      <li>O estudo também analisa os fatores ligados ao risco de lesão e o caminho até a volta ao esporte.</li>
+    </ul>
+    <p class="links"><span class="badge oa">Leitura gratuita</span><a href="https://doi.org/10.1177/23259671211062568" target="_blank" rel="noopener">Ler o original →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">Levantamento das lesões mais comuns nos treinos de jiu-jitsu</p>
+    <p class="en">Prevalence of Injuries during Brazilian Jiu-Jitsu Training</p>
+    <p class="meta"><b>McDonald AR, et al.（2017）</b> ／ Sports 5(2)</p>
+    <ul>
+      <li>Aqui o foco não são as lutas, e sim as lesões nos <b>treinos do dia a dia</b>, com um questionário enviado a 166 academias nos Estados Unidos.</li>
+      <li>Entre os diagnósticos feitos por médicos, o mais comum foram as <b>infecções de pele</b>, seguidas de lesões no joelho e no pé e dedos do pé.</li>
+      <li>Nas lesões relatadas pelos próprios atletas, lideraram mãos e dedos, braços e cotovelos, e pés e dedos do pé.</li>
+    </ul>
+    <p class="memo"><b>Comentário</b>O fato de o primeiro lugar ser “infecção” mostra como a higiene da academia é importante. Lave o kimono toda vez, mantenha as unhas curtas e cubra os machucados.</p>
+    <p class="links"><span class="badge oa">Leitura gratuita</span><a href="https://doi.org/10.3390/sports5020039" target="_blank" rel="noopener">Ler o original →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">O estrangulamento esportivo é seguro? Estudo transversal por questionário</p>
+    <p class="en">The safety of sportive chokes: a cross-sectional survey-based study</p>
+    <p class="meta"><b>Stellpflug SJ, et al.（2020）</b> ／ The Physician and Sportsmedicine 48(4)</p>
+    <ul>
+      <li>4.307 atletas de grappling responderam sobre sua experiência com estrangulamentos (técnicas que comprimem os vasos do pescoço). Mais de 70% já tinham sido estrangulados <b>mais de 100 vezes</b>.</li>
+      <li>Apagar por estrangulamento também não foi raro: cerca de 28% já tinham passado por isso.</li>
+      <li>Só <b>0,05%</b> relataram sequelas persistentes, e mesmo essas não pareciam vir da falta de sangue no cérebro. Os autores concluem que o estrangulamento esportivo é “de modo geral seguro”.</li>
+    </ul>
+    <p class="links"><span class="badge pay">Pago</span><a href="https://doi.org/10.1080/00913847.2020.1754734" target="_blank" rel="noopener">Ler o original →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">Relato de casos de lesão da artéria carótida e AVC isquêmico ligados a estrangulamentos</p>
+    <p class="en">Cervical Artery Dissections and Ischemic Strokes Associated with Vascular Neck Compression Techniques (Sportive Chokes)</p>
+    <p class="meta"><b>Stellpflug SJ, et al.（2022）</b> ／ Journal of Emergency Medicine 63</p>
+    <ul>
+      <li>Relato de <b>10 casos</b> de atletas que tiveram problemas vasculares graves depois de um estrangulamento: 5 dissecções da carótida, 3 dissecções da artéria vertebral e 2 AVCs isquêmicos sem dissecção.</li>
+      <li>É da mesma equipe do artigo anterior e foi escrito para alertar médicos de emergência de que, “mesmo sendo seguro no geral, acidentes graves podem acontecer em casos raros”.</li>
+    </ul>
+    <p class="memo"><b>Comentário</b>Vale a pena ler os dois artigos juntos. Se depois do treino aparecer dor no pescoço, dor de cabeça forte, dormência ou fala enrolada, vá ao hospital imediatamente.</p>
+    <p class="links"><span class="badge pay">Pago</span><a href="https://doi.org/10.1016/j.jemermed.2022.04.015" target="_blank" rel="noopener">Ler o original →</a></p>
+  </article>
+
+  <!-- ========== 体力・生理学 ========== -->
+  <h2 id="physiology">Físico e fisiologia</h2>
+  <p class="h2sub">Como é o corpo de quem compete no jiu-jitsu, e o que acontece dentro dele durante uma luta.</p>
+
+  <article class="paper">
+    <p class="ja">Físico e aptidão de atletas de jiu-jitsu: revisão sistemática</p>
+    <p class="en">Physical and Physiological Profiles of Brazilian Jiu-Jitsu Athletes: a Systematic Review</p>
+    <p class="meta"><b>Andreato LV, et al.（2017）</b> ／ Sports Medicine – Open 3</p>
+    <ul>
+      <li>Reúne estudos publicados até janeiro de 2016 e organiza os dados sobre composição corporal, tipo físico, capacidade aeróbica e anaeróbica, força e potência.</li>
+      <li>No geral, os atletas de jiu-jitsu têm pouca gordura corporal e predomina o <b>tipo físico musculoso</b>.</li>
+      <li>A capacidade aeróbica (resistência) parece ter pouca relação com a diferença de nível competitivo.</li>
+    </ul>
+    <p class="memo"><b>Comentário</b>Como reúne as pesquisas feitas até então, é um bom primeiro artigo para ter uma visão geral.</p>
+    <p class="links"><span class="badge oa">Leitura gratuita</span><a href="https://doi.org/10.1186/s40798-016-0069-5" target="_blank" rel="noopener">Ler o original →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">Características fisiológicas, nutricionais e de desempenho de atletas de jiu-jitsu</p>
+    <p class="en">Physiological, Nutritional and Performance Profiles of Brazilian Jiu-Jitsu Athletes</p>
+    <p class="meta"><b>Andreato LV, et al.（2016）</b> ／ Journal of Human Kinetics 53</p>
+    <ul>
+      <li>Foram medidos 15 atletas faixa marrom e faixa preta. A média de gordura corporal foi de <b>12,7%</b>, com tipo físico musculoso.</li>
+      <li>A alimentação era desequilibrada, com <b>poucos carboidratos e muita proteína</b>, e no geral não era de boa qualidade.</li>
+      <li>A flexibilidade também ficou abaixo do esperado, e o estudo conclui que há espaço para melhorar a nutrição e o condicionamento.</li>
+    </ul>
+    <p class="links"><span class="badge oa">Leitura gratuita</span><a href="https://doi.org/10.1515/hukin-2016-0029" target="_blank" rel="noopener">Ler o original →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">Estudo de um campeonato simulado, parte 1: respostas metabólicas, hormonais, de dano muscular e cardíacas</p>
+    <p class="en">Brazilian Jiu-Jitsu Simulated Competition Part I: Metabolic, Hormonal, Cellular Damage, and Heart Rate Responses</p>
+    <p class="meta"><b>Andreato LV, et al.（2015）</b> ／ Journal of Strength and Conditioning Research 29(9)</p>
+    <ul>
+      <li>10 atletas experientes disputaram um campeonato simulado de <b>4 lutas de 10 minutos</b>, com medições de sangue e frequência cardíaca.</li>
+      <li>A cada luta houve respostas claras no metabolismo energético do açúcar, nos hormônios e no dano muscular.</li>
+      <li>Nas últimas lutas, os valores de lactato, adrenalina e outros marcadores estavam mais baixos.</li>
+    </ul>
+    <p class="links"><span class="badge pay">Pago</span><a href="https://doi.org/10.1519/JSC.0000000000000918" target="_blank" rel="noopener">Ler o original →</a></p>
+  </article>
+
+  <!-- ========== 試合分析 ========== -->
+  <h2 id="match">Análise de lutas</h2>
+  <p class="h2sub">Como o tempo de luta é usado e com quais técnicas as lutas são decididas.</p>
+
+  <article class="paper">
+    <p class="ja">Estudo de um campeonato simulado, parte 2: aptidão, estrutura de tempo, técnica e esforço percebido</p>
+    <p class="en">Brazilian Jiu-Jitsu Simulated Competition Part II: Physical Performance, Time-Motion, Technical-Tactical Analyses, and Perceptual Responses</p>
+    <p class="meta"><b>Andreato LV, et al.（2015）</b> ／ Journal of Strength and Conditioning Research 29(7)</p>
+    <ul>
+      <li>No mesmo campeonato simulado da “parte 1”, foram analisados a estrutura de tempo das lutas, as técnicas usadas e o cansaço sentido pelos atletas.</li>
+      <li>A <b>força de pegada</b> caiu depois da 3ª e da 4ª luta.</li>
+      <li>Já a proporção entre tempo em movimento e tempo parado não mudou ao longo das lutas: mesmo cansados, os atletas mantiveram o ritmo.</li>
+    </ul>
+    <p class="memo"><b>Comentário</b>Quanto mais você avança na chave, primeiro cai a pegada. Em campeonatos com várias lutas seguidas, talvez a duração da pegada faça a diferença.</p>
+    <p class="links"><span class="badge pay">Pago</span><a href="https://doi.org/10.1519/JSC.0000000000000819" target="_blank" rel="noopener">Ler o original →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">“Position before submission” é verdade? Técnica e tática no jiu-jitsu no-gi</p>
+    <p class="en">Position before submission? Techniques and tactics in competitive no-gi Brazilian jiu-jitsu</p>
+    <p class="meta"><b>Spanias C, Kirk C, Øvretveit K（2022）</b> ／ Revista de Artes Marciales Asiáticas 17(2)</p>
+    <ul>
+      <li>Comparação de lutas no-gi decididas só por finalização, em campeonatos regionais e internacionais.</li>
+      <li>A proporção entre tempo de movimento intenso e tempo de calma foi de 1:2 nos campeonatos regionais e 1:1 nos internacionais. Quanto mais alto o nível, mais intensa a luta.</li>
+      <li>Nas lutas decididas por chaves de pé (principalmente o <b>ankle hook</b>), muitas finalizações vieram sem a posição estar consolidada, o que questiona o velho ditado “primeiro a posição, depois a finalização”.</li>
+    </ul>
+    <p class="links"><span class="badge oa">Leitura gratuita</span><a href="https://doi.org/10.18002/rama.v17i2.7410" target="_blank" rel="noopener">Ler o original →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">Como as lutas das melhores atletas mudam de acordo com a categoria de peso</p>
+    <p class="en">Effects of weight divisions in time-motion of female high-level Brazilian Jiu-jitsu combat behaviors</p>
+    <p class="meta"><b>dos Santos MAF, et al.（2023）</b> ／ Frontiers in Psychology 14</p>
+    <ul>
+      <li>Foram comparadas <b>422 lutas</b> de atletas femininas de elite em um campeonato internacional de 2020, em 8 categorias de peso.</li>
+      <li>O tempo de pegada, ataque, defesa, montada, guarda, cem-quilos, finalização e outras ações foi medido em detalhes.</li>
+      <li>O conteúdo da luta muda conforme a categoria. Na categoria mais pesada, por exemplo, a disputa de pegada foi mais curta.</li>
+    </ul>
+    <p class="links"><span class="badge oa">Leitura gratuita</span><a href="https://doi.org/10.3389/fpsyg.2023.1048642" target="_blank" rel="noopener">Ler o original →</a></p>
+  </article>
+
+  <!-- ========== 減量・栄養 ========== -->
+  <h2 id="weight">Corte de peso e nutrição</h2>
+  <p class="h2sub">Quanto peso os atletas perdem para a pesagem, e como fazem isso.</p>
+
+  <article class="paper">
+    <p class="ja">Como é o corte de peso antes de campeonatos entre atletas de jiu-jitsu do Reino Unido</p>
+    <p class="en">Pre-competition body mass loss characteristics of Brazilian jiu-jitsu competitors in the United Kingdom</p>
+    <p class="meta"><b>White T, Kirk C（2021）</b> ／ Nutrition and Health</p>
+    <ul>
+      <li>Um questionário sobre corte de peso com atletas de jiu-jitsu que competem no Reino Unido.</li>
+      <li>O corte médio antes do campeonato foi de <b>cerca de 1,9 kg (2,3% do peso corporal)</b>. O início mais comum foi de 3 a 7 dias antes (34%) ou de 0 a 2 dias antes (16%).</li>
+      <li>O método principal é reduzir calorias com dieta e exercício. O estudo também investiga quem influencia os atletas, como os treinadores.</li>
+    </ul>
+    <p class="links"><span class="badge pay">Pago</span><a href="https://doi.org/10.1177/0260106020983800" target="_blank" rel="noopener">Ler o original →</a><a href="https://shura.shu.ac.uk/27927/" target="_blank" rel="noopener">Versão aberta do autor →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">Como o corte rápido de peso afeta o humor e o burnout durante a temporada de competição</p>
+    <p class="en">Effect of rapid weight loss on mood states and burnout of Brazilian jiu-jitsu athletes during a competitive process</p>
+    <p class="meta"><b>Bueno JCA, et al.（2023）</b> ／ Frontiers in Psychology 14</p>
+    <ul>
+      <li>31 atletas homens foram divididos em um grupo que fez corte rápido de peso e outro que não fez. O grupo do corte perdeu em média <b>3,5 kg (4,2% do peso corporal)</b>.</li>
+      <li>No dia da pesagem, os dois grupos mostraram mais tensão e confusão mental.</li>
+      <li>O nível de burnout continuou baixo, sem diferença entre grupos ou períodos.</li>
+    </ul>
+    <p class="links"><span class="badge oa">Leitura gratuita</span><a href="https://doi.org/10.3389/fpsyg.2023.1114816" target="_blank" rel="noopener">Ler o original →</a></p>
+  </article>
+
+  <!-- ========== 健康・メンタル ========== -->
+  <h2 id="health">Saúde e mente</h2>
+  <p class="h2sub">Fora da competição, o que o jiu-jitsu traz para a mente e para o corpo.</p>
+
+  <article class="paper">
+    <p class="ja">Treino de jiu-jitsu para militares e veteranos com sintomas de TEPT</p>
+    <p class="en">Brazilian Jiu Jitsu Training for US Service Members and Veterans with Symptoms of PTSD</p>
+    <p class="meta"><b>Willing AE, et al.（2019）</b> ／ Military Medicine 184(11–12)</p>
+    <ul>
+      <li>Militares e veteranos homens de Tampa, nos Estados Unidos, participaram de um programa de jiu-jitsu de <b>5 meses, com 40 sessões no total</b>.</li>
+      <li>Os sintomas de TEPT (transtorno de estresse pós-traumático) diminuíram de forma clinicamente relevante, e a depressão, a ansiedade e o consumo de álcool também caíram.</li>
+      <li>É um estudo piloto pequeno, sem grupo de comparação, então ainda faltam pesquisas mais robustas.</li>
+    </ul>
+    <p class="links"><span class="badge pay">Pago</span><a href="https://doi.org/10.1093/milmed/usz074" target="_blank" rel="noopener">Ler o original →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">12 semanas de jiu-jitsu melhoram a aptidão funcional de homens idosos</p>
+    <p class="en">12 weeks of Brazilian jiu-jitsu training improves functional fitness in elderly men</p>
+    <p class="meta"><b>Queiroz JL, et al.（2016）</b> ／ Sport Sciences for Health 12</p>
+    <ul>
+      <li>62 homens idosos foram divididos em um grupo de jiu-jitsu (<b>2 vezes por semana, 90 minutos, 12 semanas</b>) e um grupo de comparação.</li>
+      <li>O grupo de jiu-jitsu melhorou em todos os testes de aptidão para o dia a dia. O ganho foi maior em <b>força e resistência das pernas</b>, e a agilidade e o equilíbrio também melhoraram.</li>
+      <li>Os autores sugerem o jiu-jitsu como uma opção de saúde para idosos.</li>
+    </ul>
+    <p class="memo"><b>Comentário</b>É o artigo que eu gostaria de mostrar quando alguém pergunta: “Dá para começar com a minha idade?”</p>
+    <p class="links"><span class="badge pay">Pago</span><a href="https://doi.org/10.1007/s11332-016-0287-8" target="_blank" rel="noopener">Ler o original →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">Características psicológicas dos praticantes de jiu-jitsu, por cor de faixa</p>
+    <p class="en">Rank-Based Psychological Characteristics in Brazilian Jiu-Jitsu Athletes: Mental Strength, Resilience, Grit, Self-Efficacy, Self-Control, Aggression, Life Satisfaction, and Mental Health</p>
+    <p class="meta"><b>de Lorenco-Lima L, et al.（2025）</b> ／ Journal of Functional Morphology and Kinesiology 10(2)</p>
+    <ul>
+      <li><b>420 pessoas</b> de 18 a 60 anos, da faixa branca à faixa preta, responderam a questionários psicológicos padronizados.</li>
+      <li>Em comparação com os faixas brancas, os faixas pretas tiveram mais força mental, resiliência, autoeficácia, autocontrole e satisfação com a vida, e pontuações mais baixas no rastreamento de problemas de saúde mental.</li>
+      <li>Na <b>agressividade</b>, não houve diferença entre as faixas.</li>
+    </ul>
+    <p class="memo"><b>Comentário</b>Como é uma comparação feita em um único momento, este estudo sozinho não diz se “ficaram mais fortes porque continuaram no jiu-jitsu” ou se “quem já era forte foi quem continuou”.</p>
+    <p class="links"><span class="badge oa">Leitura gratuita</span><a href="https://doi.org/10.3390/jfmk10020100" target="_blank" rel="noopener">Ler o original →</a></p>
+  </article>
+
+  <!-- ========== 日本語 ========== -->
+  <h2 id="japanese">Literatura em japonês</h2>
+  <p class="h2sub">Procuramos na J-STAGE e na CiNii (bases de artigos do Japão), mas ainda não encontramos estudos empíricos em japonês focados diretamente no jiu-jitsu (lesões, preparo físico, corte de peso etc.).</p>
+
+  <article class="paper">
+    <p class="ja">As artes marciais no Brasil de hoje: judô, jiu-jitsu brasileiro e MMA</p>
+    <p class="meta"><b>Hishida Keibun, Nakajima Tetsuya, Hosoya Yoko (2022)</b> / Supotsu Jinruigaku Kenkyu (Estudos de Antropologia do Esporte) 24</p>
+    <ul>
+      <li>Relatório de campo de um projeto de pesquisa (com financiamento público japonês, o Kakenhi) que investiga o significado das artes marciais no Brasil.</li>
+      <li>Trata do judô, do jiu-jitsu brasileiro e do MMA no Brasil de hoje, e também toca em como o judô do Kodokan passou de Mitsuyo Maeda para a família Gracie, dando origem ao jiu-jitsu.</li>
+    </ul>
+    <p class="links"><span class="badge kind">Relatório de campo</span><span class="badge oa">Leitura gratuita</span><a href="https://doi.org/10.7192/santhropology.2022.24_41" target="_blank" rel="noopener">Ler na J-STAGE →</a></p>
+  </article>
+
+  <div class="note">
+    <p><b>Sobre esta página</b></p>
+    <p>Os resumos foram escritos em japonês pela equipe do Jiu Labo com base no abstract de cada artigo, e depois traduzidos para o português. Os títulos dos artigos também são traduções nossas, não títulos oficiais. Para números e conclusões exatos, consulte sempre o original. Os trechos “Comentário” são impressões da nossa equipe.</p>
+    <p>O conteúdo desta página não é aconselhamento médico. Em caso de lesão ou preocupação com a saúde, procure um médico.</p>
+    <p>Se você conhece um artigo que vale a pena ou alguma pesquisa sobre jiu-jitsu escrita em japonês, conta pra gente. Vamos adicionando aos poucos.</p>
+  </div>
+
+  <footer>
+    Criado em 29 de setembro de 2026<br>
+    <a href="/pt/">← Início do jiujitsu.co.jp</a>
+  <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+
+<a href="/pt/" style="position:fixed;right:14px;bottom:14px;z-index:99;background:#17140d;color:#e8c95e;font-size:11px;letter-spacing:.1em;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);font-family:sans-serif;">INÍCIO</a>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.toc .n{font-size:12px}.badge{font-size:12px}.toc a{padding-top:6.5px;padding-bottom:6.5px}a[href="/"][style*="position:fixed"]{font-size:13px!important;padding:12px 18px!important}}</style>
+</html>

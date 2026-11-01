@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/">
+<link rel="canonical" href="https://jiujitsu.co.jp/en/blog/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Jiu Labo Blog</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Running a jiu-jitsu gym, life around Ryozo, and Claude Code. A blog from the point of view of manager Ai Murata.">
+<meta property="og:title" content="Jiu Labo Blog">
+<meta property="og:description" content="Running a jiu-jitsu gym, life around Ryozo, and Claude Code. A blog from a manager’s point of view.">
+<meta property="og:url" content="https://jiujitsu.co.jp/en/blog/">
+<link rel="alternate" type="application/atom+xml" title="New at Jiu Labo" href="/feed.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(28px, 6vw, 40px); color: var(--ink); letter-spacing: .14em; margin: 10px 0 12px; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; letter-spacing: .06em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  .posts { list-style: none; margin: 40px 0 0; padding: 0; border-top: 1px solid var(--line); }
+  .posts a { display: block; padding: 22px 4px; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; }
+  .posts a:hover h2 { color: var(--gold); }
+  .posts time { font-size: 12px; color: var(--faint); letter-spacing: .1em; font-variant-numeric: tabular-nums; }
+  .posts h2 { font-family: var(--mincho); font-weight: 700; font-size: 18px; color: var(--ink); letter-spacing: .06em; line-height: 1.6; margin: 4px 0 6px; }
+  .posts p { font-size: 13.5px; margin: 0; }
+  .posts h2 { word-break: auto-phrase; text-wrap: pretty; }
+  /* 一番新しい記事を大きく */
+  .posts li.is-latest a { background: var(--panel); border-top: 3px solid var(--gold); padding: 28px 24px; }
+  .posts li.is-latest h2 { font-size: 22px; }
+  .posts li.is-latest p { font-size: 14px; }
+  .new-badge { display: inline-block; margin-left: 10px; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: var(--paper); background: var(--gold); border-radius: 3px; padding: 0 7px; line-height: 1.7; vertical-align: 1px; }
+  .posts li.is-hidden { display: none; }
+  .more-btn { display: block; margin: 28px auto 0; background: none; border: 1px solid var(--gold); color: var(--gold); border-radius: 999px; padding: 10px 32px; font: inherit; font-size: 13px; letter-spacing: .1em; cursor: pointer; transition: background .15s, color .15s; }
+  .more-btn:hover { background: var(--gold); color: var(--paper); }
+  .more-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    .posts { margin-top: 20px; }
+    .posts a { padding: 16px 2px; }
+    .posts h2 { font-size: 16px; letter-spacing: .02em; line-height: 1.55; margin: 2px 0 4px; }
+    .posts p { font-size: 12.5px; line-height: 1.75; }
+    .posts li.is-latest a { padding: 22px 16px; }
+    .posts li.is-latest h2 { font-size: 18px; }
+    .posts li.is-latest p { font-size: 13px; }
+  }
+
+  .tag { display: inline-block; margin-left: 10px; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: var(--gold); border: 1px solid var(--gold); border-radius: 3px; padding: 0 6px; line-height: 1.6; vertical-align: 1px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+
+<header>
+  <p class="brand">JIUJITSU.CO.JP</p>
+  <h1>Blog</h1>
+  <p class="lede">Jiu-jitsu, Ryozo, and AI, from a manager’s point of view.</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <ul class="posts">
+    <!-- nikki:start -->
+    <li class="is-nikki">
+      <a href="/en/blog/nikki/2026-10-04/">
+        <time datetime="2026-10-04">2026.10.04</time><span class="tag">Diary</span>
+        <h2>3 things I asked AI to do while running a tournament</h2>
+        <p>Today was the day of Reversal Cup Sapporo, an SJJJF Hokkaido jiu-jitsu tournament. On a day when running the venue took everything I had, I still finished an apology notice, an analysis of past tournaments, and planning for the next tournament, all the same day. I’ve written it up so anyone running tournaments can copy it as is.</p>
+      </a>
+    </li>
+    <li class="is-nikki">
+      <a href="/en/blog/nikki/2026-10-01/">
+        <time datetime="2026-10-01">2026.10.01</time><span class="tag">Diary</span>
+        <h2>How to show off a tool you built for someone else</h2>
+        <p>Today’s biggest “Wait, what?” was that I could present a booking system I built for a client as a “working sample,” without touching the real thing at all. Here’s what I was careful about when showing something I made at someone’s request.</p>
+      </a>
+    </li>
+    <li class="is-nikki">
+      <a href="/en/blog/nikki/2026-09-30/">
+        <time datetime="2026-09-30">2026.09.30</time><span class="tag">Diary</span>
+        <h2>The day I connected a booking page to Google Sheets</h2>
+        <p>Today’s biggest “Wait, what?” was connecting an event’s workshop booking page to Google “Apps Script” (small programs that run behind a spreadsheet), so people can sign up while seeing what’s open. I hit a few snags getting it connected.</p>
+      </a>
+    </li>
+    <li class="is-nikki">
+      <a href="/en/blog/nikki/2026-09-29/">
+        <time datetime="2026-09-29">2026.09.29</time><span class="tag">Diary</span>
+        <h2>Claude and I collected 684 jiu-jitsu gyms across Japan from the map</h2>
+        <p>Today’s biggest “Wait, what?” was going through Google Maps for all 47 prefectures and adding 133 new gyms to the gym guide. I also built 2 systems in one day that automatically sum up the morning news.</p>
+      </a>
+    </li>
+    <!-- nikki:end -->
+    <li>
+      <a href="/en/blog/ikura-te-de/">
+        <time datetime="2026-10-28">2026.10.28</time>
+        <h2>Even in the age of AI, ikura gets cured by hand</h2>
+        <p>Yesterday we all made marinated ikura (salmon roe) together. Claude helped with how to layer the miso and cloth, and how to fix things when the cloth stuck. But it’s people who do the handiwork and decide whether it tastes good.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/kuruma-15fun/">
+        <time datetime="2026-10-24">2026.10.24</time>
+        <h2>Planning with Claude during a 15-minute drive home from the gym</h2>
+        <p>I found out I can talk to Claude by voice alone in the car, so on my way home from the gym I talked through what to do when I got back. In 15 minutes my to-do list was set, and once I got home I knocked it out in no time.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/php-zeijakusei/">
+        <time datetime="2026-10-22">2026.10.22</time>
+        <h2>The day I asked Claude, “Is PHP okay?” What’s happening to websites around the world</h2>
+        <p>Two weaknesses with a severity score of 9.2 were found in PHP, which runs many websites. Here’s why our site was fine, and what site owners should check.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/ai-tsukaiwake/">
+        <time datetime="2026-10-21">2026.10.21</time>
+        <h2>Claude, Gemini, ChatGPT: how I use the 3 AIs I pay for</h2>
+        <p>Gemini can watch YouTube videos, ChatGPT makes images, and Claude takes on the work itself. I also had Claude sort out the difference between an “assistant” and an “agent.”</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/claude-chinou/">
+        <time datetime="2026-10-20">2026.10.20</time>
+        <h2>Is Claude at “Harvard valedictorian level”? On professors’ toughest test, 4% to 61% in 1 year 8 months</h2>
+        <p>About 1,000 professors worldwide wrote 2,500 questions they said “AI can’t solve.” I wrote about how Claude’s score has climbed, some sample questions, why it still misses the other 40%, and what it’s like to work with it.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/hikitsugi-jitsubutsu/">
+        <time datetime="2026-10-20">2026.10.20</time>
+        <h2>My friend showed me the real birth-leave handover guide</h2>
+        <p>The handover document a friend made with Claude: 9 notebook pages plus 2 pages of medication notes. I’ll share the 12 items in it, from housework to feelings, with details hidden.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/hikitsugi-sho/">
+        <time datetime="2026-10-18">2026.10.18</time>
+        <h2>My friend made a birth-leave handover guide with Claude</h2>
+        <p>A friend who read this blog used Claude to make a document handing over the house and the kids to her husband while she’s in the hospital. It was a happy report: “It even had things I would have missed.”</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/heikou-shigoto/">
+        <time datetime="2026-10-17">2026.10.17</time>
+        <h2>10 tasks a day, 2-3 an hour: I counted how much I give Claude at once</h2>
+        <p>I counted 65 days of records: an average of 10 jobs a day, up to 28 on busy days. Just by asking for the next thing while waiting, several jobs started running at once on their own.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/oboesasekata/">
+        <time datetime="2026-10-08">2026.10.08</time>
+        <h2>Teach it, don’t just ask it: 57 days and 20,000 Claude actions</h2>
+        <p>I asked 2,072 times, and Claude acted 21,696 times. The reason it does about 10 actions per request wasn’t clever asking. It was what I’d taught it.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/prompt-jidai/">
+        <time datetime="2026-10-05">2026.10.05</time>
+        <h2>The prompt era is over</h2>
+        <p>You no longer need “magic words” to use AI well. What matters now is giving context, making judgment calls, and knowing how to delegate. What you need is “the skill of handing off work.”</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/shabetta-6pun/">
+        <time datetime="2026-10-01">2026.10.01</time>
+        <h2>6 minutes of talking: the 14 jobs I gave Claude today</h2>
+        <p>I checked “voice input is 5 times faster” against one day’s records. Even full of slips of the tongue, 14 jobs got done, and at night I had 6 running at once.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/benkyou-shinai/">
+        <time datetime="2026-09-30">2026.09.30</time>
+        <h2>Get good at Claude Code without studying</h2>
+        <p>If you don’t know something, just ask Claude. About picking up everyday “this could be easier” moments, and finding coin parking for a big car.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/ai-shain/">
+        <time datetime="2026-09-29">2026.09.29</time>
+        <h2>Our company already had 6 AI staff</h2>
+        <p>It started with “AI staff sound cool,” and when I made a roster, there were 6 of them. Why it’s good to split AI into separate roles.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/shigoto-igai-de/">
+        <time datetime="2026-09-28">2026.09.28</time>
+        <h2>If you can’t use it at work, use it at home</h2>
+        <p>For people whose company rules ban AI: turning 4 years of paper cooking class recipes into a website.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/seikyusho-claude/">
+        <time datetime="2026-09-28">2026.09.28</time>
+        <h2>Having Claude review a year of invoices</h2>
+        <p>The contractor invoices I’d been making alone every month. I had Claude go back through them, and it found mistakes.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/waapuro-kara-ai/">
+        <time datetime="2026-09-27">2026.09.27</time>
+        <h2>How a word processor fan like me fell for Claude Code</h2>
+        <p>Dedicated word processors → Excel and PowerPoint → AI. I’ve learned each new tool as it came along. Here’s why I’m hooked on AI now.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/onsei-tsukaiwake/">
+        <time datetime="2026-09-27">2026.09.27</time>
+        <h2>I stopped typing and started talking: when to use Chat, Cowork, and Code</h2>
+        <p>5 times faster with voice input. And 3 ways to use Claude, chosen by “answers, files, or systems.”</p>
+      </a>
+    </li>
+    <li>
+      <a href="/en/blog/claude-code-hajimari/">
+        <time datetime="2026-09-27">2026.09.27</time>
+        <h2>Not an engineer: my first month of “stubbornly” sticking with Claude Code</h2>
+        <p>I got stuck at installation, and then one line changed everything: “AI will say it can’t, but it definitely can.”</p>
+      </a>
+    </li>
+  </ul>
+
+<script>
+// 記事の並べ替え・最新を大きく・NEWバッジ・「もっと見る」
+// 記事は <li> を足すだけでOK（日付は <time datetime="YYYY-MM-DD"> から読む）
+// 日記（nikki:start〜end のあいだ）は tools/nikki/build.py が自動で入れるので手で触らない
+(function () {
+  var NEW_DAYS = 3;  // 何日間NEWを出すか
+  var SHOW_MAX = 5;  // 最初に見せる件数（それ以上は「もっと見る」）
+  var list = document.querySelector('.posts');
+  if (!list) return;
+  var items = Array.prototype.slice.call(list.children);
+  function toDate(li) {
+    var t = li.querySelector('time');
+    var p = new Date((t ? t.getAttribute('datetime') : '') + 'T00:00:00');
+    return isNaN(p) ? new Date(0) : p;
+  }
+  // 同じ日なら、ふつうの記事を日記より上に
+  items.sort(function (a, b) { return (toDate(b) - toDate(a)) || (a.classList.contains('is-nikki') - b.classList.contains('is-nikki')); });
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  items.forEach(function (li, i) {
+    list.appendChild(li);
+    if (i === 0) li.classList.add('is-latest');
+    var days = (today - toDate(li)) / 86400000;
+    if (days >= 0 && days < NEW_DAYS) {
+      var b = document.createElement('span');
+      b.className = 'new-badge'; b.textContent = 'NEW';
+      li.querySelector('time').after(b);
+    }
+    if (i >= SHOW_MAX) li.classList.add('is-hidden');
+  });
+  if (items.length > SHOW_MAX) {
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'more-btn'; btn.textContent = 'See more';
+    btn.onclick = function () {
+      items.forEach(function (li) { li.classList.remove('is-hidden'); });
+      btn.remove();
+    };
+    list.after(btn);
+  }
+})();
+</script>
+
+  <footer>
+    <a href="/feed.xml">Subscribe via RSS</a> / <a href="/en/">Back to jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.new-badge{font-size:12px}.tag{font-size:12px}}</style>
+

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/benkyou-shinai/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/benkyou-shinai/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/benkyou-shinai/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/benkyou-shinai/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/benkyou-shinai/">
+<link rel="canonical" href="https://jiujitsu.co.jp/en/blog/benkyou-shinai/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Get good at Claude Code without studying</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The people who use it best probably don’t study. If you don’t know something, just ask Claude. About picking up the “this could be easier” moments in work and life every day: post number 7 of this blog from a manager’s point of view.">
+<meta property="og:title" content="Get good at Claude Code without studying">
+<meta property="og:description" content="Don’t study first. Learn by using it every day. Plus, turning the hunt for coin parking into a system.">
+<meta property="og:url" content="https://jiujitsu.co.jp/en/blog/benkyou-shinai/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+</style>
+
+<header>
+  <p class="brand"><a href="/en/blog/">JIU LABO BLOG</a></p>
+  <h1>Get good at Claude Code without studying</h1>
+  <p class="meta"><time datetime="2026-09-30">2026.09.30</time> · Ai Murata (Manager)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>Hi, it’s Ai Murata. For post number 7, I want to talk about <b>how I get along with Claude Code</b>.</p>
+
+    <h2>The people who use it best don’t study</h2>
+    <p>I’ll say it up front: the better people are at Claude Code, the less they’ve probably studied. They just keep doing it. That’s all.</p>
+    <p>If there’s something you don’t know, Claude will teach you all of it. So I hardly ever “study” anything.</p>
+
+    <blockquote><p>Don’t study first and then start.<br>Learn as you use it.</p></blockquote>
+
+    <h2>YouTube, like the radio</h2>
+    <p>Still, I do want hints like “Oh, it can do that too,” so I watch quite a lot of Claude Code videos on YouTube.</p>
+    <p>Well, not so much watch as <b>listen while driving, like the radio</b>. As I half-listen, something catches: “Oh, we could use that.” That level of attention feels just right.</p>
+
+    <h2>Picking up “this could be easier” moments</h2>
+    <p>I don’t really rack my brain over what to use it for. My basic rule is this: <b>when I’m working and notice “Oh, Claude could make this easier too,” I try it</b>.</p>
+    <p>Keep doing that, and you start finding it outside work too, in everyday life: “Wouldn’t this be so much easier if I did it this way?”</p>
+
+    <h2>What I’m building next: a coin parking finder</h2>
+    <p>For example, here’s something I want to make but haven’t yet.</p>
+    <p>Our car is a Mercedes GLE, which is on the big side. That means <b>it won’t fit in mechanical coin parking lots</b> (Japan’s automated pay-parking machines). When I’m going somewhere new, I look up the size limits of nearby lots before I leave. Doing that every time was a real pain.</p>
+    <p>So I’m planning to build a system like this.</p>
+    <div class="ex">
+      <p>The system I’m planning</p>
+      <ul>
+        <li>Register your car’s size first</li>
+        <li>Enter where you’re going</li>
+        <li>It finds nearby coin parking <b>big enough for your car</b></li>
+        <li>It also tells you which ones have a daily maximum rate</li>
+      </ul>
+    </div>
+    <p>It’s no great invention. But it <b>gets rid of one “small hassle every time.”</b> For me, Claude Code has been that, over and over.</p>
+
+    <h2>Talking to my computer from wake-up to bedtime</h2>
+    <p>These days I open Claude as soon as I wake up and keep going back and forth with it until right before bed. I’m always talking to my computer, so Ryozo just goes “heh” and laughs at me.</p>
+    <p>But I really do feel it’s changed how I live and how I relate to work. And I think it’ll probably change even more over the next few months.</p>
+
+    <h2>Your first step doesn’t have to be studying</h2>
+    <p>If you’re thinking “To use this well, I need to study properly first,” I want to tell you there’s no need.</p>
+    <p>In today’s work or daily life, find <b>one thing that makes you think “this is a small hassle every time,”</b> and just tell Claude about it. Whatever you don’t understand, Claude will teach you.</p>
+    <p>I’ll keep writing about things I think will help you. Thanks for reading.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">I want AI staff too.</b><br>
+    I help turn monthly work into “roles.” For now, it’s free for the first 3 people, limited to people I’ve met, for up to one tool each. <a href="/en/irai/" style="color:#a3801a;white-space:nowrap;">Get help with AI →</a>
+  </p>
+
+  <footer>
+    <a href="/en/blog/">All blog posts</a> / <a href="/en/">Back to jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}}</style>
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/nikki/2026-10-01/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/nikki/2026-10-01/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/nikki/2026-10-01/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/nikki/2026-10-01/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/nikki/2026-10-01/">
+<link rel="canonical" href="https://jiujitsu.co.jp/en/blog/nikki/2026-10-01/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>How to show off a tool you built for a client as a sample | Jiu Labo Blog</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Today’s biggest “Wait, what?” was that I could present a booking system I built for a client as a “working sample,” without touching the real thing at all. Here’s what I was careful about when showing something I made at someone’s request.">
+<meta property="og:title" content="How to show off a tool you built for a client as a sample | Jiu Labo Blog">
+<meta property="og:description" content="Today’s biggest “Wait, what?” was that I could present a booking system I built for a client as a “working sample,” without touching the real thing at all. Here’s what I was careful about when showing something I made at someone’s request.">
+<meta property="og:url" content="https://jiujitsu.co.jp/en/blog/nikki/2026-10-01/">
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/atom+xml" title="New at Jiu Labo" href="/feed.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.95; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { color: inherit; text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; word-break: auto-phrase; text-wrap: balance; }
+  .meta, .lede { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 40px; }
+  article p { margin: 0 0 1.4em; }
+  .did { list-style: none; margin: 8px 0 32px; padding: 0; counter-reset: did; border-top: 1px solid var(--line); }
+  .did li { counter-increment: did; padding: 18px 0 16px 44px; border-bottom: 1px solid var(--line); position: relative; }
+  .did li::before { content: counter(did); position: absolute; left: 4px; top: 20px; width: 26px; height: 26px; border-radius: 50%; background: var(--panel); border: 1px solid var(--gold); color: var(--gold); font-size: 12.5px; font-weight: 700; text-align: center; line-height: 24px; }
+  .did h2 { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .04em; line-height: 1.6; margin: 0 0 4px; word-break: auto-phrase; text-wrap: pretty; }
+  .did p { margin: 0; font-size: 14.5px; }
+  .ask { margin: 12px 0 0; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 10px 14px; }
+  .ask span { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; color: var(--gold); }
+  .did .ask p { font-size: 14.5px; color: var(--ink); }
+  .did .ask p::before { content: "「"; } .did .ask p::after { content: "」"; }
+  .did .tip { margin: 10px 0 0; font-size: 13.5px; }
+  .tip b { color: var(--gold); margin-right: 8px; font-size: 12px; letter-spacing: .08em; }
+  .did .see { margin: 8px 0 0; font-size: 13.5px; font-weight: 700; }
+  .did .see a { text-decoration: none; }
+  .closing { background: var(--panel); border-left: 3px solid var(--gold); padding: 14px 18px; }
+  .auto { font-size: 12.5px; color: var(--faint); }
+  .note { font-size: 12px; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 40px; }
+
+  .pager { display: flex; justify-content: space-between; gap: 12px; margin: 36px 0 0; font-size: 13.5px; }
+  .pager a { text-decoration: none; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+    article { font-size: 15px; }
+    .did li { padding-left: 38px; }
+    .did h2 { font-size: 16px; }
+  }
+  /* スマホで小さい字を底上げ（~/.claude/scripts/sp_readable.py と同じ値） */
+  @media (max-width:640px){.brand{font-size:12px}.ask span{font-size:12.5px}}
+</style>
+
+<header>
+  <p class="brand"><a href="/en/blog/">JIU LABO BLOG</a> · Diary</p>
+  <h1>How to show off a tool you built for someone else</h1>
+  <p class="meta"><time datetime="2026-10-01">2026.10.01 (Thu)</time> Ai Murata (Manager)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>Today’s biggest “Wait, what?” was that I could present a booking system I built for a client as a “working sample,” without touching the real thing at all. Here’s what I was careful about when showing something I made at someone’s request.</p>
+    <ol class="did">
+      <li><h2>Making a demo that isn't connected to the real thing</h2><p>I made a page presenting yesterday's workshop sign-up system as a portfolio piece. It covers what I was asked for, what the screens look like, what it can do, and how it protects personal information. I also set up a demo version that runs on sample data. The demo isn't connected to the real front desk, so no matter who plays with it, no real sign-ups come in.</p>
+        <div class="ask"><span>If you want to copy this, ask like this</span><p>Make a page presenting this sign-up page. Also set up a demo version that runs on sample data, and don't connect it to the real sign-up system</p></div>
+        <p class="tip"><b>Discovery</b> I took the client's name and logo off the presentation page and the demo. The real sign-up page that participants use stays as it is. What's okay to show differs between the version for showing and the version for using.</p>
+        <p class="see"><a href="/yoyaku/">See what we made →</a></p>
+      </li>
+      <li><h2>I replaced the screenshot, but the old one still shows</h2><p>Even after you update a screenshot, the browser can keep showing the old one. So I had Claude add a "version number" after the image's name, so the browser knows it's a new image.</p>
+        <div class="ask"><span>If you want to copy this, ask like this</span><p>I replaced the image but the old one keeps showing, so make sure the new one always appears</p></div>
+        <p class="tip"><b>Discovery</b> You don't touch the image file itself. Just adding a number on the side that calls up the image fixes it. Apparently you only need to raise the number by 1 each time you replace it.</p>
+      </li>
+      <li><h2>If you can't show the real thing, show a dummy</h2><p>The recipe book I made from a cooking class's paper recipes hasn't been released anywhere yet. So for my portfolio I put in a dummy recipe book with 12 home-style dishes. The food photos were made with AI, and the card says so: "Photos were created by AI." The price isn't decided yet, so I took that off too.</p>
+        <div class="ask"><span>If you want to copy this, ask like this</span><p>Make a sample version of this recipe book. Fill it with 12 made-up home-style dishes, make the photos with AI, and say so on it</p></div>
+        <p class="tip"><b>Discovery</b> Even when you can't show the real thing, a dummy still gets across what can be made. Leave undecided things (like price) out of the sample too, and nobody gets the wrong idea.</p>
+        <p class="see"><a href="/recipe/">See what we made →</a></p>
+      </li>
+    </ol>
+    <p class="closing">The more something is client work, the harder it is to know how to show it. By asking "run it on sample data" and "take the name off," I got versions I could present with peace of mind.</p>
+    <p class="auto">Automatic updates also ran today (11 for search, 2 for announcements, 1 for claudenews, 1 for the subsidy list, 1 for jiu-jitsu news).</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+    <p class="pager"><a href="/en/blog/nikki/2026-09-30/">← Previous diary entry (2026.09.30 (Wed))</a><a href="/en/blog/nikki/2026-10-04/">Next diary entry (2026.10.04 (Sun)) →</a></p>
+    <p class="note">Claude drafts this diary from the record of changes made to this site that day, and Murata reads it before it goes up.</p>
+  </article>
+
+  <footer>
+    <a href="/en/blog/">All blog posts</a> / <a href="/en/">Back to jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>

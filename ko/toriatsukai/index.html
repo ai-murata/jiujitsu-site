@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/toriatsukai/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/toriatsukai/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/toriatsukai/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/toriatsukai/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/toriatsukai/">
+<link rel="canonical" href="https://jiujitsu.co.jp/ko/toriatsukai/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>료조 사용 설명서</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="26세에 주짓수를 시작해 38세에 세계 1위. 무라타 료조라는 사람과 매일을 보내기 위한 안내서를 사용 설명서 형식으로 정리했어요.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 22px 80px; }
+
+  header { text-align: center; padding: 64px 20px 36px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(30px, 6vw, 44px); color: var(--ink); letter-spacing: .16em; line-height: 1.4; margin: 10px 0 12px; }
+  .model { font-size: 12px; letter-spacing: .22em; color: var(--faint); margin: 0; }
+  .lede { font-size: 13px; color: var(--faint); margin: 14px 0 0; letter-spacing: .06em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  .notice { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 22px 26px; margin: 40px 0 0; }
+  .notice p { margin: 0; font-size: 13.5px; }
+  .notice p + p { margin-top: 10px; }
+  .notice b { color: var(--ink); font-family: var(--mincho); letter-spacing: .06em; }
+
+  .toc { margin: 36px 0 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 18px 0; }
+  .toc ol { list-style: none; margin: 0; padding: 0; columns: 2 260px; column-gap: 36px; }
+  .toc li { font-size: 13px; margin: 0 0 6px; break-inside: avoid; }
+  .toc a { color: var(--body-c); text-decoration: none; }
+  .toc a:hover { color: var(--gold); }
+  .toc .no { font-family: var(--mincho); color: var(--gold); letter-spacing: .1em; margin-right: 10px; }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: .2em; margin: 76px 0 6px; display: flex; align-items: baseline; gap: 16px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); align-self: center; }
+  h2 .no { font-size: 12px; letter-spacing: .18em; color: var(--gold); font-family: var(--gothic); font-weight: 700; flex: none; }
+  .sub { font-size: 12px; color: var(--faint); letter-spacing: .12em; margin: 0 0 22px; }
+
+  p.body { font-size: 14px; margin: 0 0 16px; max-width: 42em; }
+  .em { color: var(--ink); font-weight: 700; }
+
+  table.spec { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 13.5px; }
+  table.spec th, table.spec td { border-bottom: 1px solid var(--line); padding: 11px 6px; text-align: left; vertical-align: top; }
+  table.spec th { width: 34%; font-weight: 500; color: var(--faint); letter-spacing: .08em; white-space: nowrap; }
+  table.spec td { color: var(--ink); }
+  table.spec td small { display: block; color: var(--faint); font-size: 12px; letter-spacing: 0; }
+
+  .steps { list-style: none; margin: 8px 0 0; padding: 0; counter-reset: st; }
+  .steps li { position: relative; padding: 0 0 0 46px; margin: 0 0 24px; font-size: 14px; }
+  .steps li::before { counter-increment: st; content: counter(st, decimal-leading-zero); position: absolute; left: 0; top: 2px; font-family: var(--mincho); font-size: 13px; color: var(--gold); letter-spacing: .08em; border: 1px solid var(--line); padding: 2px 7px; }
+  .steps b { display: block; font-family: var(--mincho); font-weight: 700; font-size: 15.5px; color: var(--ink); letter-spacing: .06em; margin-bottom: 4px; }
+
+  .ng { margin: 22px 0 0; display: grid; gap: 14px; }
+  .ng div { border-left: 2px solid var(--line); padding: 2px 0 2px 18px; font-size: 13.5px; }
+  .ng .x { color: var(--faint); }
+  .ng .o { color: var(--ink); font-weight: 500; }
+  .ng .x::before { content: "×　"; color: #b34a4a; font-weight: 700; }
+  .ng .o::before { content: "○　"; color: var(--gold); font-weight: 700; }
+
+  .warn { background: var(--panel); border: 1px solid var(--line); padding: 20px 24px; margin: 26px 0 0; }
+  .warn p.h { font-family: var(--mincho); font-weight: 700; font-size: 14px; color: var(--ink); letter-spacing: .16em; margin: 0 0 8px; }
+  .warn p { font-size: 13.5px; margin: 0; }
+
+  table.tr { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13.5px; }
+  table.tr th { text-align: left; font-size: 11px; letter-spacing: .18em; color: var(--gold); font-weight: 700; border-bottom: 1px solid var(--line); padding: 0 8px 8px 0; }
+  table.tr td { border-bottom: 1px solid var(--line); padding: 14px 8px 14px 0; vertical-align: top; }
+  table.tr td:first-child { color: var(--ink); font-weight: 500; width: 32%; }
+  table.tr td:last-child { padding-right: 0; }
+  @media (max-width: 620px) {
+    table.tr, table.tr tbody, table.tr tr, table.tr td { display: block; width: 100%; }
+    table.tr thead { display: none; }
+    table.tr tr { border-bottom: 1px solid var(--line); padding: 14px 0; }
+    table.tr td { border: 0; padding: 0; }
+    table.tr td:first-child { width: auto; margin-bottom: 4px; }
+    table.spec th, table.spec td { display: block; width: 100%; }
+    table.spec th { border: 0; padding-bottom: 0; }
+  }
+
+  .closing { margin-top: 84px; text-align: center; }
+  .closing p.t { font-family: var(--mincho); font-weight: 600; font-size: 18px; color: var(--ink); letter-spacing: .08em; margin: 0; line-height: 2; }
+  .closing p.by { font-size: 12px; color: var(--gold); letter-spacing: .14em; margin: 14px 0 0; }
+
+  footer { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+
+<header>
+  <p class="brand">INSTRUCTION MANUAL</p>
+  <h1>료조 사용 설명서</h1>
+  <p class="model">모델명 RYOZO-1980 / 무라타 료조</p>
+  <p class="lede">26세에 주짓수를 시작해, 31세에 홋카이도 최초의 그레이시 직계 블랙 벨트.<br>38세에 세계 1위가 된 사람과 매일을 보내기 위한 안내서예요.</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <div class="notice">
+    <p><b>시작하며</b></p>
+    <p>주짓수 선생님이고, 회사 대표이고, 지금도 현역으로 시합에 나가요. 대단한 사람인 건 틀림없지만, 곁에서 지내려면 약간의 요령이 필요해요.</p>
+    <p>오랫동안 옆에서 지켜본 아내가 아는 것을 적었어요. 군데군데 본인의 주장도 섞여 있어요.</p>
+  </div>
+
+  <nav class="toc">
+    <ol>
+      <li><a href="#s1"><span class="no">01</span>이 사람에 대하여</a></li>
+      <li><a href="#s2"><span class="no">02</span>아침</a></li>
+      <li><a href="#s3"><span class="no">03</span>가장 강할 때</a></li>
+      <li><a href="#s4"><span class="no">04</span>상담하는 법</a></li>
+      <li><a href="#s5"><span class="no">05</span>하지 않는 게 좋은 일</a></li>
+      <li><a href="#s6"><span class="no">06</span>고장인가 싶을 때</a></li>
+      <li><a href="#s7"><span class="no">07</span>식사</a></li>
+      <li><a href="#s8"><span class="no">08</span>쉬는 날</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="s1"><span class="no">01</span>이 사람에 대하여</h2>
+  <p class="sub">PROFILE</p>
+  <table class="spec">
+    <tr><th>이름</th><td>무라타 료조 (Ryozo Murata)</td></tr>
+    <tr><th>출생</th><td>1980년 4월 24일, 홋카이도 아바시리시</td></tr>
+    <tr><th>체격</th><td>177cm, 74kg<small>시합 때는 68kg까지 뺍니다.</small></td></tr>
+    <tr><th>주짓수를 시작한 때</th><td>2006년, 26세</td></tr>
+    <tr><th>블랙 벨트</th><td>2011년 10월, 크리스치아누 카리오카에게서<small>홋카이도 최초의 그레이시 직계 블랙 벨트입니다.</small></td></tr>
+    <tr><th>대표 실적</th><td>SJJIF 세계 선수권 마스터2 블랙 벨트 페더급 우승 (2018, 2019)<small>2018년 우승은 일본인 최초였습니다.</small></td></tr>
+    <tr><th>지금도</th><td>현역. 2025년 IBJJF World Master 블랙 벨트 마스터3 페더급 3위</td></tr>
+    <tr><th>직업</th><td>BUTTI ON LINE Inc. 대표이사<small>일본 스포츠 주짓수 연맹(SJJJF) 대표이사. 도장은 하라주쿠, 기타산도, 삿포로 3곳.</small></td></tr>
+  </table>
+
+  <h2 id="s2"><span class="no">02</span>아침</h2>
+  <p class="sub">MORNING</p>
+  <p class="body">아침은 느긋해요. 재촉해도 빨라지지 않아요.</p>
+  <p class="body">일어나면 먼저 커피를 마셔요. 요즘은 <span class="em">우유를 넣는 걸 좋아해요</span>. 그걸 다 마실 때까지는 가만히 두는 게 가장 좋아요.</p>
+  <p class="body">밤에는 졸리면 그걸로 끝이에요. 예고는 없어요.</p>
+
+  <h2 id="s3"><span class="no">03</span>가장 강할 때</h2>
+  <p class="sub">UNDER PRESSURE</p>
+  <p class="body">압박을 받을 때예요. <span class="em">몰릴수록 강해져요.</span></p>
+  <p class="body">편한 곳에 두면 힘이 남아돌아요. 큰 무대, 중요한 순간, 도망칠 곳 없는 상황. 그런 곳일수록 마음 놓고 맡겨도 되는 사람이에요.</p>
+  <div class="warn">
+    <p class="h">본인의 말</p>
+    <p>‘잘될 것 같아서 한다’가 아니라 ‘잘될 때까지 한다’.</p>
+  </div>
+
+  <h2 id="s4"><span class="no">04</span>상담하는 법</h2>
+  <p class="sub">HOW TO ASK</p>
+  <p class="body">사람을 보고 움직이는 사람이에요. '누구에게 부탁해도 되는 일'로 가져가면 반응이 시원찮아요.</p>
+  <ol class="steps">
+    <li><b>“당신만 해결할 수 있어요”라고 말하며 가져간다</b>“료조 선생님만 해결하실 수 있을 것 같은데, 이건 어떻게 하면 좋을까요?” 이 한마디가 있느냐 없느냐로 움직임이 완전히 달라져요.</li>
+    <li><b>일상적인 일은 자기 답을 정한 뒤에</b>통째로 던지지 마세요. 'A, B, C 중 어느 게 좋을까요?' 정도까지 생각하고 나서 가져가세요.</li>
+    <li><b>못 했을 때는 대안과 함께</b>막혔다는 보고만으로 끝내지 마세요. 다음 수까지 가져가면 이야기가 빨라요.</li>
+  </ol>
+  <div class="ng">
+    <div><p class="x">예약을 못 잡았습니다.</p><p class="o">예약을 못 잡아서요, 여기는 어떠세요?</p></div>
+    <div><p class="x">스카치테이프가 없었습니다.</p><p class="o">스카치테이프는 없었는데 박스테이프는 있어요. 옆 가게에 다녀올까요?</p></div>
+  </div>
+  <div class="warn">
+    <p class="h">가끔 A, B, C 어느 것도 아닌 답이 돌아와요</p>
+    <p>이쪽에서 늘어놓은 선택지 밖에서 전혀 다른 해법을 내놓을 때가 있어요. 대개 그게 정답이에요.</p>
+  </div>
+
+  <h2 id="s5"><span class="no">05</span>하지 않는 게 좋은 일</h2>
+  <p class="sub">CAUTION</p>
+  <div class="warn">
+    <p class="h">앞뒤가 안 맞는 일</p>
+    <p>이것만은 통하지 않아요. 손익뿐인 이야기, 앞뒤가 안 맞는 이야기, 생각 없이 넘기는 이야기. 여기서 멈춰요.</p>
+  </div>
+  <div class="warn">
+    <p class="h">한번 정한 일을 밖에서 바꾸려 하는 것</p>
+    <p>자기가 정한 일을 남이 바꾸는 걸 별로 좋아하지 않아요. 바꿔 주길 바랄 때는 이유부터 이야기해 주세요. 앞뒤가 맞으면 스스로 바꿔요.</p>
+  </div>
+
+  <h2 id="s6"><span class="no">06</span>고장인가 싶을 때</h2>
+  <p class="sub">TROUBLESHOOTING</p>
+  <table class="tr">
+    <thead><tr><th>이렇게 보일 때</th><th>대개의 이유</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>화난 것처럼 보인다</td>
+        <td><span class="em">일부러 그러는 거예요.</span> 전해야 할 상대에게 전해지는 방식으로 내보일 뿐이니, 그대로 받아들여도 괜찮아요.</td>
+      </tr>
+      <tr>
+        <td>기분이 나빠 보인다</td>
+        <td>기분의 파도가 거의 없는 사람이에요. 본인 말로는 “기분은 없어도 된다”. 주변이 걱정할 만한 일은 대개 일어나지 않아요.</td>
+      </tr>
+      <tr>
+        <td>갑자기 말이 없어진다 / 답이 늦다</td>
+        <td>좀처럼 없는 일이에요. 있다면 졸리거나 배가 고픈 거예요. 02번과 07번을 참고해 주세요.</td>
+      </tr>
+      <tr>
+        <td>상담했는데 움직여 주지 않는다</td>
+        <td>부탁하는 방식 때문일 수 있어요(04번). 통째로 맡기기, 대안 없음, 누구에게 해도 되는 일. 이 중 하나에 해당하는 경우가 많아요.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="s7"><span class="no">07</span>식사</h2>
+  <p class="sub">MEALS</p>
+  <p class="body">맛있는 밥이에요. 단, <span class="em">퀄리티에 따라 달라요</span>. 양으로는 기운이 나지 않아요.</p>
+  <p class="body">가장 잘 듣는 건 집밥이에요.</p>
+
+  <h2 id="s8"><span class="no">08</span>쉬는 날</h2>
+  <p class="sub">DAY OFF</p>
+  <p class="body">세차하러 가서 그대로 점심을 먹고 돌아와요. 특별한 건 필요 없어요. 차가 깨끗해지고 밥이 맛있으면 그걸로 충분해요.</p>
+
+  <div class="closing">
+    <p class="t">앞뒤만 맞으면 대개 움직여요.</p>
+    <p class="by">받아 적은 사람: 무라타 아이</p>
+  </div>
+
+  <footer>
+    <a href="/ko/">jiujitsu.co.jp</a> / <a href="/ko/goroku/">료조 어록</a><br>
+    적힌 내용은 생각날 때마다 늘어나거나 바뀌어요.
+  </footer>
+
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}}</style>
+

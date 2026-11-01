@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/claude-chinou/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/claude-chinou/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/claude-chinou/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/claude-chinou/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/claude-chinou/">
+<link rel="canonical" href="https://jiujitsu.co.jp/ko/blog/claude-chinou/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Claude는 “하버드 수석 수준”? 교수들의 초난도 시험에서 1년 8개월 만에 4% → 61%</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="“인류 최후의 시험”이라는, 전 세계 교수 약 1,000명이 만든 초난도 시험에서 Claude의 정답률은 1년 8개월 만에 4%에서 약 60%로 올랐어요. 예제와 나머지 40%를 못 푸는 이유, 실제로 함께 일하며 느낀 “수석 신입 사원”다운 모습을 썼어요.">
+<meta property="og:title" content="Claude는 “하버드 수석 수준”? 교수들의 초난도 시험에서 1년 8개월 만에 4% → 61%">
+<meta property="og:description" content="교수들이 “AI는 못 푼다”며 낸 2,500문제. Claude의 정답률은 4%에서 약 60%로.">
+<meta property="og:url" content="https://jiujitsu.co.jp/ko/blog/claude-chinou/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://jiujitsu.co.jp/blog/claude-chinou/hle-chart.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 24px 0 32px; }
+  .stat { background: var(--k); border-top: 3px solid var(--gold-hi); padding: 16px 16px 14px; text-align: center; }
+  .stat .lbl { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold-hi); font-weight: 700; }
+  .stat b { display: block; font-family: var(--mincho); font-size: 30px; color: #f3ecd8; letter-spacing: .04em; line-height: 1.4; }
+  .stat small { display: block; font-size: 12px; color: #b0a88f; line-height: 1.6; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; font-variant-numeric: tabular-nums; }
+  .tbl th, .tbl td { border-bottom: 1px solid var(--line); padding: 9px 8px; text-align: right; }
+  .tbl th:first-child, .tbl td:first-child { text-align: left; }
+  .tbl thead th { font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; border-bottom: 2px solid var(--gold); }
+  @media (max-width: 560px) { .tbl { font-size: 13px; } .tbl th, .tbl td { padding: 8px 4px; } }
+  .doc { margin: 24px 0 32px; border: 1px solid var(--line); background: #fff; box-shadow: 0 2px 10px rgba(23,20,13,.06); font-size: 13px; line-height: 1.75; }
+  .doc .dh { padding: 12px 16px; border-bottom: 1px solid var(--line); background: var(--panel); font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; }
+  .doc table { width: 100%; border-collapse: collapse; }
+  .doc th, .doc td { border-bottom: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; color: var(--ink); }
+  .doc thead th { font-size: 12px; color: var(--faint); font-weight: 700; }
+  .doc td:first-child { white-space: nowrap; color: var(--body-c); }
+  .sumi { display: inline-block; background: var(--k); color: transparent; border-radius: 2px; height: 1.05em; vertical-align: -.15em; user-select: none; }
+  .note { font-size: 12px; color: var(--faint); margin: -20px 0 28px; }
+  .toc { list-style: none; counter-reset: t; margin: 20px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+  .toc li { counter-increment: t; background: var(--panel); border: 1px solid var(--line); padding: 10px 14px; font-size: 14px; color: var(--ink); line-height: 1.6; }
+  .toc li::before { content: counter(t, decimal-leading-zero); display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .toc li small { display: block; font-size: 12px; color: var(--faint); }
+  @media (max-width: 560px) { .toc { grid-template-columns: 1fr; } .doc { font-size: 12.5px; } .doc th, .doc td { padding: 7px 6px; } }
+  .fig { margin: 28px 0 12px; }
+  .fig img { display: block; width: 100%; height: auto; border-radius: 4px; }
+  .fig figcaption { font-size: 12px; color: var(--faint); margin-top: 8px; line-height: 1.7; }
+</style>
+
+<header>
+  <p class="brand"><a href="/ko/blog/">JIU LABO BLOG</a></p>
+  <h1>Claude는 “하버드 수석 수준”?<br>교수들의 초난도 시험에서 1년 8개월 만에 4% → 61%</h1>
+  <p class="meta"><time datetime="2026-10-20">2026.10.20</time>　무라타 아이(매니저)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>매일 사무 일을 Claude에게 도움받고 있어요. 쓰기 전에 들었던 말이 “Claude가 <b>하버드 수석 수준</b>이래”라는 이야기였어요.</p>
+    <p>정말인지 궁금해서 찾아봤어요. 결론부터 말하면 Anthropic(Claude를 만드는 회사)이 공식적으로 그렇게 말한 건 아니에요. 하지만 <b>꼭 과장이라고만 할 수도 없는</b> 숫자가 나왔어요.</p>
+
+    <h2>“인류 최후의 시험”이라는 초난도 시험</h2>
+    <p>AI의 똑똑함을 재는 시험 중에 <b>“인류 최후의 시험”</b>이라는 게 있어요. 전 세계 50개국, 약 1,000명의 대학 교수와 연구자가 “이거라면 AI는 못 풀겠지” 하는 문제를 내서 만든 <b>2,500문제</b>의 시험이에요. 분야는 100개 이상이에요.</p>
+    <p>공개된 예제는 이런 느낌이에요.</p>
+    <div class="ex">
+      <p>예제 1　생물</p>
+      <ul><li>벌새 몸속에 있는 작은 뼈는 몇 쌍의 힘줄을 지탱하고 있는가. 숫자로 답하시오.</li></ul>
+    </div>
+    <div class="ex">
+      <p>예제 2　고대 언어</p>
+      <ul><li>고대 로마 시대의 무덤에 새겨진 고대 시리아의 문자(팔미라 문자)를 번역하시오.</li></ul>
+    </div>
+    <p>1번은 새의 몸을 연구하는 전문가가 아니면 무리고, 2번은 고대 문자 연구자가 아니면 손도 못 대요. 이런 문제가 모든 분야에서 나와요. <b>아무리 천재라도 자기 전공 밖은 거의 못 푸는</b> 시험이에요.</p>
+
+    <h2>1년 8개월 만에 4% → 61%</h2>
+    <p>재미있는 건 점수가 오르는 속도예요.</p>
+    <figure class="fig">
+      <img src="/blog/claude-chinou/hle-chart.png" alt="인류 최후의 시험에서의 Claude 정답률. 2025년 1월 4.1%, 2025년 11월 25.2%, 2026년 2월 34.4%, 2026년 9월 61.4%. 인터넷을 찾아보면서 풀면 67.7%." width="1200" height="675">
+      <figcaption>아무것도 보지 않고 풀었을 때의 정답률. 출처: Scale AI, Artificial Analysis, Anthropic 공식 발표. 집계하는 곳에 따라 몇 퍼센트 차이가 있어요.</figcaption>
+    </figure>
+    <p>시험이 만들어진 2025년 1월, Claude의 점수는 <b>겨우 4%</b>. 100문제 중 4문제밖에 못 풀었어요. 당시 가장 성적이 좋았던 AI도 8%였어요.</p>
+    <p>그게 2026년 9월에는 <b>약 60%</b>. 1년 8개월 만에 15배예요. 인터넷을 찾아보면서 풀어도 되는 규칙이라면 <b>약 70%</b>에 닿아요.</p>
+
+    <h2>나머지 40%는 왜 못 풀까요</h2>
+    <p>여기까지 와도 아직 전부는 못 풀어요. 이유는 크게 3가지라고 해요.</p>
+    <ul class="tips">
+      <li><b>어디에도 나와 있지 않은 지식이 필요해요</b>　인터넷에도 책에도 거의 쓰여 있지 않은 아주 좁은 전문 지식</li>
+      <li><b>사진이나 그림의 세밀한 판독</b>　희미해진 돌 위의 글자 같은 이미지를 정확히 읽는 건 아직 서툴러요</li>
+      <li><b>긴 추론 도중에 넘어져요</b>　10단계 계산 중 한 곳만 틀려도 답은 빗나가요</li>
+    </ul>
+    <p>그리고 <b>문제 쪽이 틀렸을지도 모른다</b>는 이야기도 있었어요. 화학과 생물 문제 중 약 30%는 “정답이라는 답 자체가 의심스럽다”고 외부 연구자가 지적했어요. 교수가 만든 문제라도 완벽하지는 않으니, 100점은 애초에 못 받을지도 몰라요.</p>
+
+    <h2>하지만 함께 일해 보면 “수석으로 들어온 신입 사원”</h2>
+    <p>시험에서는 수석급이에요. 그럼 매일 함께 일해 보면 어떨까요? 가장 가까운 건 <b>“수석으로 들어온 신입 사원”</b>이라고 생각해요.</p>
+    <ul class="tips">
+      <li>세금이나 계약, 인쇄 입고 규칙 같은 일반 지식은 저보다 훨씬 잘 알아요</li>
+      <li>수백 줄짜리 Excel을 몇 분 만에 대조해서 안 맞는 한 줄을 찾아내요</li>
+      <li>하지만 “이 거래처는 이렇게 부른다”, “이 사람 몫은 매달 확인이 필요하다” 같은 <b>저희만의 규칙은 알려 주지 않으면 몰라요</b></li>
+    </ul>
+    <p>그 대신 한 번 알려 준 건 메모에 남겨서 다음부터 잘 지켜요. 여기가 보통 도구와 다른 점이에요.</p>
+    <p>반대로 아직 사람이 해야 한다고 느끼는 부분도 있어요. 외부 분께 보내는 메일 초안에서, 아직 부탁하지도 않은 일을 “의뢰드리고 있습니다”라고 쓴 적이 있었어요. 말은 정말 잘해요. 하지만 상대와의 관계나 “아직 말하지 않은 것”까지는 몰라요. <b>보내기 전에 읽는 건 사람의 일</b>이에요.</p>
+
+    <h2>정리</h2>
+    <ul class="tips">
+      <li>교수들의 초난도 시험에서 Claude의 정답률은 <b>1년 8개월 만에 4% → 약 60%</b>(찾아보면서 풀면 약 70%)</li>
+      <li>“하버드 수석”은 공식 표현이 아니지만, <b>머리 좋은 것만 보면 과장이 아니에요</b></li>
+      <li>함께 일해 보면 <b>“수석으로 들어온 신입 사원”</b>. 저희 규칙은 알려 주고, 보내기 전에는 사람이 읽어요</li>
+    </ul>
+    <p>1년 8개월 전에는 100문제 중 4문제였던 게 지금은 60%. 앞으로 1년 동안 어디까지 갈까요? 매일 쓰는 입장에서는 기대되기도 하고, 조금 무섭기도 해요.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">우리도 AI에게 일을 맡기고 싶다.</b><br>
+    매달 하는 작업을 “담당”으로 만드는 일을 도와드리고 있어요. 지금은 직접 만나 뵌 적이 있는 분에 한해, 선착순 3분께 도구 하나까지 무료로 해 드려요.<a href="/ko/irai/" style="color:#a3801a;white-space:nowrap;">AI 도입을 도와드립니다 →</a>
+  </p>
+
+  <footer>
+    <a href="/ko/blog/">블로그 목록으로</a>　/　<a href="/ko/">jiujitsu.co.jp 홈으로</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}.timeline .when{font-size:12px}.stat .lbl{font-size:12px}}</style>

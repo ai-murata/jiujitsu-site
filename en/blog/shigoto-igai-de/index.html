@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/shigoto-igai-de/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/shigoto-igai-de/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/shigoto-igai-de/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/shigoto-igai-de/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/shigoto-igai-de/">
+<link rel="canonical" href="https://jiujitsu.co.jp/en/blog/shigoto-igai-de/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>If you can’t use it at work, use it at home</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="For people who can't use Claude at work because of company rules: why not try it in your life outside work? I'm planning to turn 4 years' worth of paper recipes from my cooking class into a website. My fifth post, from a manager's point of view.">
+<meta property="og:title" content="If you can’t use it at work, use it at home">
+<meta property="og:description" content="Can't use AI at work? Try it in your daily life. Turning 4 years of cooking class recipes into a site.">
+<meta property="og:url" content="https://jiujitsu.co.jp/en/blog/shigoto-igai-de/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+</style>
+
+<header>
+  <p class="brand"><a href="/en/blog/">JIU LABO BLOG</a></p>
+  <h1>If you can’t use it at work, use it at home</h1>
+  <p class="meta"><time datetime="2026-09-28">2026.09.28</time> Ai Murata (Manager)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>Hi, this is Ai Murata. Post number 5 is <b>for people who aren't using Claude Code</b>.</p>
+
+    <h2>"Company rules say I can't use it"</h2>
+    <p>Every so often I hear this from people who work at big companies.</p>
+    <blockquote><p>I want to use Claude, but I can't,<br>because our internal rules aren't in place yet.</p></blockquote>
+    <p>I understand this feeling so well. I used to work as university staff myself, so I know firsthand what it's like inside an organization.</p>
+    <p><b>Security</b> really is a big issue. When you handle company and customer information, one employee can't just start using something because it looks handy. I completely understand <b>being stuck inside that "you can't" limit</b>.</p>
+
+    <h2>So try it outside of work</h2>
+    <p>Still, I think it's a waste not to touch it at all just because you can't use it at work.</p>
+    <p>If you can't use it at work, <b>try something outside of work</b>. If you look, I'm sure there's something in your life where you think, "Couldn't this be a bit easier?"</p>
+
+    <h2>My case: 4 years of paper recipes</h2>
+    <p>For example, what came to me today was my <b>cooking class recipes</b>.</p>
+    <p>I've been going to a cooking class for about 4 years now. The recipes we get each time are on paper, and before I knew it I had <b>probably hundreds of sheets</b>.</p>
+    <p>There are still dishes I remember and want to make again, but finding and looking through those papers is such a hassle.</p>
+    <p>So here's what I'm planning to try.</p>
+
+    <ul class="timeline">
+      <li><span class="when">STEP 1</span><b>Scan the paper recipes</b><span class="d">Even with hundreds of sheets, it starts with turning them into data.</span></li>
+      <li><span class="when">STEP 2</span><b>Put them all on one site</b><span class="d">Searchable by dish name, easy to look up right away.</span></li>
+      <li><span class="when">STEP 3</span><b>Talk to my teacher</b><span class="d">Could we set it up so she can sell her recipes and earn income from them?</span></li>
+    </ul>
+
+    <p>Of course, the recipes belong to my teacher, so <b>first I'll talk it over with her properly</b>.</p>
+
+    <h2>I want "my teacher's flavors"</h2>
+    <p>There are endless recipe sites now, Cookpad and many others. But what I want to see isn't "some recipe from somewhere."</p>
+    <ul class="tips">
+      <li><b>I love my teacher's flavors</b>, so I want to see her recipes</li>
+      <li>People in the class can <b>review, like "what was that dish again?"</b></li>
+      <li>If the recipes sell, <b>my teacher properly earns income too</b></li>
+    </ul>
+    <p>I'd love for it to become that kind of place, so I'm starting on it now. When it's done, I'll report back here.</p>
+
+    <h2>Ideas come when I'm spacing out</h2>
+    <p>What I'm trying to say is: <b>if you can't use it at work, look for ways to make your own life easier</b>.</p>
+    <p>By the way, I think about these things while spacing out during <b>time away from my phone</b>, like when I'm at the gym. It's when there's no screen in my hands that things like "that's a pain" and "can't something be done about this?" come to mind.</p>
+
+    <blockquote><p>While you can't use it at work,<br>it's your chance to practice in daily life.</p></blockquote>
+
+    <p>When your company's rules are finally in place, you'll be in a strong spot if it already feels natural in your hands. Start by finding one small hassle around you.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+
+    <div class="next">
+      <p>Here's my previous post.</p>
+      <p><a href="/en/blog/seikyusho-claude/">How Claude reviewed a year of my invoices →</a></p>
+    </div>
+  </article>
+
+  <footer>
+    <a href="/en/blog/">All blog posts</a> / <a href="/en/">Back to jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.timeline .when{font-size:12px}}</style>
+

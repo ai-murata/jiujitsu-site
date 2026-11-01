@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/hajimete/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/hajimete/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/hajimete/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/hajimete/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/hajimete/">
+<link rel="canonical" href="https://jiujitsu.co.jp/pt/hajimete/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Guia do primeiro campeonato de jiu-jitsu</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --warn: #a8432f; --warn-bg: #faeee9;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; font-size: 14.5px; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 20px 80px; }
+
+  header { text-align: center; padding: 64px 20px 36px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 700; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(26px, 6vw, 38px); color: var(--ink); letter-spacing: .08em; line-height: 1.5; margin: 10px 0 8px; text-wrap: balance; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 21px; color: var(--ink); letter-spacing: .08em; margin: 64px 0 6px; display: flex; align-items: center; gap: 12px; }
+  h2::before { content: "▼"; color: var(--gold); font-size: 14px; }
+  .h2sub { font-size: 12px; color: var(--faint); margin: 0 0 20px; letter-spacing: .06em; }
+
+  /* 流れタイムライン */
+  .flow { list-style: none; margin: 24px 0 0; padding: 0; position: relative; }
+  .flow::before { content: ""; position: absolute; left: 15px; top: 10px; bottom: 10px; width: 2px; background: var(--line); }
+  .flow li { position: relative; padding: 0 0 22px 48px; }
+  .flow li::before { content: ""; position: absolute; left: 8px; top: 7px; width: 16px; height: 16px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .flow li:last-child { padding-bottom: 0; }
+  .flow b { font-family: var(--mincho); font-weight: 700; font-size: 15.5px; color: var(--ink); letter-spacing: .04em; display: block; }
+  .flow .fnote { font-size: 13px; line-height: 1.9; }
+
+  /* 項目カード */
+  .tip { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold); padding: 18px 22px; margin: 14px 0; }
+  .tip b.t { font-family: var(--mincho); font-weight: 700; font-size: 15.5px; color: var(--ink); letter-spacing: .03em; display: block; margin-bottom: 4px; }
+  .tip p { margin: 0; font-size: 13.5px; }
+  .tip .imp { color: var(--warn); font-weight: 700; }
+  .tag { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: .12em; color: var(--warn); background: var(--warn-bg); border-radius: 3px; padding: 1px 8px; margin-left: 8px; vertical-align: 2px; }
+
+  /* マナー手順 */
+  .steps { counter-reset: s; list-style: none; margin: 20px 0 0; padding: 0; }
+  .steps li { counter-increment: s; position: relative; padding: 0 0 18px 46px; }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: 2px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-family: var(--mincho); font-weight: 700; font-size: 15px; color: var(--gold); border: 1.5px solid var(--gold); border-radius: 50%; }
+  .steps b { font-family: var(--mincho); font-weight: 700; color: var(--ink); }
+  .steps p { margin: 2px 0 0; font-size: 13.5px; line-height: 1.9; }
+
+  /* 良蔵メソッド */
+  .ryozo { background: #17140d; border: 1px solid #17140d; padding: 24px 26px 26px; margin: 28px 0; }
+  .ryozo .rlabel { font-size: 10.5px; letter-spacing: .3em; color: var(--gold-hi); font-weight: 700; margin: 0 0 12px; }
+  .ryozo .ritem { margin: 0 0 14px; }
+  .ryozo .ritem:last-child { margin-bottom: 0; }
+  .ryozo b { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: #f3ecd8; letter-spacing: .04em; display: block; margin-bottom: 2px; }
+  .ryozo p { margin: 0; font-size: 13px; color: #b0a88f; line-height: 1.9; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 22px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+
+<div style="border-bottom:1px solid var(--line);background:#faf8f2;padding:10px 16px;text-align:center;font-size:12px;letter-spacing:.12em;">
+  <a href="/pt/tournament/" style="color:var(--gold);text-decoration:none;">Campeonatos</a>
+</div>
+
+<header>
+  <p class="brand">YAWARA ／ SWEEP</p>
+  <h1>Guia do primeiro campeonato de jiu-jitsu</h1>
+  <p class="lede">Tudo o que sempre digo a quem vai competir pela primeira vez.</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <h2>O campeonato, em linhas gerais</h2>
+  <ol class="flow">
+    <li><b>Fim das inscrições</b><span class="fnote">Alguns campeonatos encerram antes do prazo, então fique de olho.</span></li>
+    <li><b>Período de alteração da inscrição (só para quem ficou sem adversário)</b><span class="fnote">Em geral, até uns 2 dias depois do fim das inscrições, você escolhe entre mudar de peso/categoria ou desistir. O campeonato deve entrar em contato, então confira seus e-mails.</span></li>
+    <li><b>Divulgação das chaves</b><span class="fnote">Muitas vezes saem uns 2 a 3 dias antes das lutas. Quando saírem, confira você mesmo, sem falta.</span></li>
+    <li><b>Tabela de lutas da academia</b><span class="fnote">Depois da divulgação das chaves, a tabela com número da luta, tatame e horário do pessoal da academia é compartilhada no grupo do campeonato. Atenção: mesmo assim, confira sempre as chaves no site oficial por conta própria!</span></li>
+    <li><b>Dia do campeonato</b></li>
+  </ol>
+
+  <h2>De 3 a 1 semana antes</h2>
+  <div class="tip">
+    <b class="t">Confira se o kimono está dentro das regras do campeonato<span class="tag">Importante</span></b>
+    <p>As regras de kimono estão cada vez mais rígidas. A checagem é uns 20 minutos antes da luta, então <span class="imp">se reprovar, na prática você não luta</span> (já teve gente que ficou de fora...). Confirme antes com um instrutor. Em geral não vai ter problema, mas é só por garantia.</p>
+  </div>
+  <div class="tip">
+    <b class="t">(Se vai cortar peso) Reduza o sal o máximo que puder desde cerca de 1 semana antes</b>
+    <p>Beber bastante água ajuda a acelerar o metabolismo.</p>
+  </div>
+  <div class="tip">
+    <b class="t">Se você sente que seu condicionamento caiu...</b>
+    <p>Ajuste o volume de treino desde cerca de 1 semana antes. Se o peso não for problema, pode pensar em “descansar!” mesmo, sem culpa.</p>
+  </div>
+
+  <div class="ryozo">
+    <p class="rlabel">RYOZO'S METHOD — Os ensinamentos do campeão mundial Ryozo Murata</p>
+    <div class="ritem">
+      <b>O período de “não fazer nada” antes da luta depende da idade.</b>
+      <p>Na casa dos 30, 3 dias sem fazer nada; na casa dos 40, 5 dias. Ou então só um sparring bem leve ou drills, o suficiente para suar.</p>
+    </div>
+    <div class="ritem">
+      <b>Cortar o sal, só quando estiver baixando peso.</b>
+      <p>Se você não precisa perder peso, pode comer sal normalmente.</p>
+    </div>
+  </div>
+
+  <h2>Até a véspera da luta</h2>
+  <div class="tip">
+    <b class="t">Uns 2 dias antes, pare de treinar com força total</b>
+    <p>Fica difícil se recuperar do cansaço. E cuidado com lesões.</p>
+  </div>
+  <div class="tip">
+    <b class="t">Na véspera, evite a sauna (o máximo possível)</b>
+    <p>Pode prejudicar os pulmões e deixar você sem fôlego mais rápido. Se for para baixar peso, é melhor um banho de imersão até a cintura.</p>
+  </div>
+  <div class="tip">
+    <b class="t">Na véspera (e no dia), ajuste o peso com carboidratos (açúcares)</b>
+    <p>Proteína e fibras não funcionam como energia. <b>Antes da luta, arroz branco é melhor que arroz integral</b>. É melhor não exagerar no trigo.</p>
+  </div>
+  <div class="tip">
+    <b class="t">Cuidado com intoxicação alimentar<span class="tag">Importante</span></b>
+    <p>Comida crua (ostras, por exemplo), no pior caso, pode tirar você do campeonato. Evite principalmente na véspera.</p>
+  </div>
+  <div class="tip">
+    <b class="t">Confira de novo o horário da luta do dia seguinte</b>
+    <p>Já aconteceu de verdade: “achei que era às 17h, mas era às 10h...” (a pessoa ficou de fora). Deve ser raro, mas é só por garantia.</p>
+  </div>
+
+  <div class="ryozo">
+    <p class="rlabel">RYOZO'S METHOD — Os ensinamentos do campeão mundial Ryozo Murata</p>
+    <div class="ritem">
+      <b>Leve dois kimonos.</b>
+      <p>Mesmo se reprovar na checagem, com um reserva você troca na hora e luta.</p>
+    </div>
+  </div>
+
+  <h2>No dia</h2>
+  <div class="tip">
+    <b class="t">Coma algo de fácil digestão</b>
+    <p>Principalmente 1 a 2 horas antes, o ideal é o que vira energia rápido, como gel energético Weider ou yokan (doce japonês de feijão). Carboidratos como onigiri (bolinho de arroz) e pão levam mais de 3 horas para digerir...</p>
+  </div>
+  <div class="tip">
+    <b class="t">Chegue ao local pelo menos 1,5 a 1 hora antes do início da luta</b>
+    <p>Se acostumar com o clima do lugar ajuda a soltar o nervosismo. Alguém pode ter guardado lugares para o grupo, então, assim que chegar, olhe o grupo do campeonato no LINE (app de mensagens). Em geral há uma balança de uso livre no local; se pesar, você fica mais tranquilo.</p>
+  </div>
+  <div class="tip">
+    <b class="t">Aqueça uns 30 minutos antes, só até suar de leve</b>
+    <p>Os exercícios básicos de sempre. Sua técnica favorita, não: o adversário pode descobrir (risos)</p>
+  </div>
+  <div class="tip">
+    <b class="t">Você é chamado para a pesagem uns 10 a 20 minutos antes da luta, ao lado do tatame</b>
+    <p>Passou na pesagem, vai direto para a checagem do kimono. Se estiver tudo OK, já segue para a área de espera, então <b>leve bebida e celular (e, se quiser, um lanche leve)</b>. Quem vence luta de novo em intervalos de uns 15 minutos, então é bom levar bastante água.</p>
+  </div>
+  <div class="tip">
+    <b class="t">Se tiver muitas lutas, leve também Pocari Sweat (isotônico), não só água</b>
+    <p>Serve de energia. É bom para repor entre uma luta e outra.</p>
+  </div>
+  <div class="tip">
+    <b class="t">(Principalmente quem veio do judô) O peso é COM kimono<span class="tag">Atenção</span></b>
+    <p>Já teve gente que só percebeu isso no dia e correu para a sauna 😅 Quem veio do judô, onde o costume é pesar SEM kimono, tome cuidado redobrado!</p>
+  </div>
+  <div class="tip">
+    <b class="t">(Só homens) Rashguard é opcional</b>
+    <p></p>
+  </div>
+  <div class="tip">
+    <b class="t">Peça a alguém da academia: “Pode fazer meu córner?”</b>
+    <p>Vão escalar a pessoa certa (quem concluiu o curso de córner e não tem luta própria naquele momento). Atenção: ter ou não córner muda de campeonato para campeonato, então confira as regras.</p>
+  </div>
+  <div class="tip">
+    <b class="t">Para rever depois, entregue o celular a alguém e peça para filmar</b>
+    <p>Pode ser o seu córner ou alguém assistindo por perto. Muitas vezes o campeonato publica os vídeos depois, mas nunca se sabe quando.</p>
+  </div>
+
+  <h2>Como é a luta e a etiqueta</h2>
+  <ol class="steps">
+    <li><b>Espere até o árbitro chamar</b><p>Quando os dois atletas estão ao lado do tatame e o responsável pelo cronômetro está pronto, o árbitro abre os braços e faz o gesto de chamar.</p></li>
+    <li><b>Chamou, faça o cumprimento de entrada</b><p>(1) Faça uma reverência ao tatame → (2) vá correndo até o árbitro → (3) aperte a mão do árbitro e cumprimente → (4) aperte a mão do adversário e cumprimente. Dizem que é bom cumprimentar antes do adversário (causa boa impressão, talvez?).</p></li>
+    <li><b>A luta começa com “Combate!”</b><p>A maioria bate as mãos, como num sparring normal... mas cuidado: tem quem ignore o seu gesto e já venha para cima (esse cumprimento depois do “Combate!” é etiqueta, não regra).</p></li>
+    <li><b>Ouviu “Parou!”, pare</b><p>Congele na posição, com as pegadas e os pés como estão. O árbitro vai dar instruções como “os dois na mesma posição, para o centro do tatame” ou “recomeça em pé”.</p></li>
+    <li><b>Quando a luta acabar</b><p>Arrume o kimono e a mão do vencedor é levantada. Depois: (1) aperte a mão do árbitro e cumprimente → (2) aperte a mão do adversário → (3) aperte a mão do córner do adversário, se houver → (4) volte ao lugar por onde entrou e faça uma reverência ao tatame → (5) aperte a mão do seu córner → (6) (se venceu) diga seu nome ao responsável pelo cronômetro.</p></li>
+  </ol>
+
+  <footer>
+    Ideia original: Noji / Acréscimos e edição: Sugawara, Kumon (reorganizado a partir da versão de 4 de setembro de 2024)<br>
+    <a href="/pt/">← Início do jiujitsu.co.jp</a>
+  <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+
+<a href="/pt/" style="position:fixed;right:14px;bottom:14px;z-index:99;background:#17140d;color:#e8c95e;font-size:11px;letter-spacing:.1em;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);font-family:sans-serif;">INÍCIO</a>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.tag{font-size:12px}.ryozo .rlabel{font-size:12px}a[href="/"][style*="position:fixed"]{font-size:13px!important;padding:12px 18px!important}}</style>
+</html>

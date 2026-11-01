@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/prompt-jidai/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/prompt-jidai/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/prompt-jidai/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/prompt-jidai/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/prompt-jidai/">
+<link rel="canonical" href="https://jiujitsu.co.jp/ko/blog/prompt-jidai/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>프롬프트의 시대는 끝났다</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="AI를 잘 쓰는 데 &quot;주문&quot;은 이제 필요 없어요. 중요해진 건 문맥을 건네는 것, 판단하는 것, 맡기는 법을 아는 것. 주짓수 도장의 백오피스를 거의 혼자 돌리는 매니저의 실감입니다.">
+<meta property="og:title" content="프롬프트의 시대는 끝났다">
+<meta property="og:description" content="필요한 건 &quot;쓰는 기술&quot;이 아니라 &quot;일을 건네는 기술&quot;. 주짓수 도장 백오피스에서 실감하고 있는 것.">
+<meta property="og:url" content="https://jiujitsu.co.jp/ko/blog/prompt-jidai/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+</style>
+
+<header>
+  <p class="brand"><a href="/ko/blog/">JIU LABO BLOG</a></p>
+  <h1>프롬프트의 시대는 끝났다</h1>
+  <p class="meta"><time datetime="2026-10-05">2026.10.05</time>　무라타 아이 (매니저)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <h2>"주문"을 외우던 시대가 있었어요</h2>
+    <p>AI를 잘 쓰려면 프롬프트를 잘 쓰는 기술이 필요하다. 얼마 전까지만 해도 다들 진지하게 그렇게 말했어요.</p>
+    <p>"당신은 뛰어난 ○○입니다"로 시작한다. 절차를 항목별로 세세하게 지정한다. 출력 형식을 예시로 보여 준다. 이런 "틀"을 모은 템플릿집이 팔리고, 프롬프트 엔지니어라는 직함까지 생겼죠.</p>
+    <p>하지만 지금 매일 AI와 일하면서 생각해요. 그 주문, 이제 거의 안 외우고 있구나 하고요.</p>
+
+    <h2>AI가 "눈치껏" 알아듣게 됐어요</h2>
+    <p>이유는 간단해요. AI가 똑똑해졌기 때문이에요.</p>
+    <p>예전 AI는 시킨 일을 시킨 대로밖에 못 했어요. 그래서 사람이 오해의 여지가 없도록 지시를 짜야 했죠. 프롬프트 기술이란 말하자면 <b>AI의 낮은 이해력을 메우는 기술</b>이었던 거예요.</p>
+    <p>지금은 달라요. "다음 달 이벤트 공지문, 늘 하던 느낌으로"라고 대충 부탁해도 의도를 읽고 형태로 만들어 와요. 부족한 정보가 있으면 그쪽에서 물어봐요. 지시서를 쓴다기보다 옆자리 동료에게 말을 거는 느낌에 가까워졌어요.</p>
+
+    <h2>대신 중요해진 3가지</h2>
+    <p>그럼 이제 아무 생각 안 해도 될까요? 그렇지 않아요. 요구되는 것이 바뀌었을 뿐이에요.</p>
+    <ul class="tips">
+      <li><b>문맥을 건네는 것.</b> AI가 똑똑해도 우리 회사 사정은 몰라요. 누구를 향한 글인지, 과거에 무슨 일이 있었는지. 이 배경을 공유할 수 있느냐에 따라 나오는 결과물의 질이 정해져요.</li>
+      <li><b>판단하는 것.</b> AI는 몇 가지 안이든 내줘요. 하지만 어떤 걸 고를지, 어디서 멈출지는 사람의 일이에요.</li>
+      <li><b>맡기는 법을 아는 것.</b> 전부를 한 번에 부탁하기보다, 일단 형태를 만들어 달라고 하고 보면서 고쳐 가는 거예요. 완벽한 지시를 한 번에 쓰는 것보다 주고받으며 키워 가는 쪽이 훨씬 빨라요.</li>
+    </ul>
+    <blockquote><p>필요한 건 "쓰는 기술"이 아니라<br>"일을 건네는 기술".</p></blockquote>
+    <p>부하 직원이나 외주처에 일을 맡길 때와 같은 기술이에요.</p>
+
+    <h2>주짓수 도장 백오피스에서 실감하고 있는 것</h2>
+    <p>저는 주짓수 도장을 운영하는 회사에서 경리, 인사, 총무, 홍보, 이벤트 운영까지 거의 혼자 돌리고 있어요. 영수증 정리, 급여 이체, 포스터와 팸플릿, 보도자료. 솔직히 AI 없이는 안 돌아가요.</p>
+    <p>그중에서 프롬프트를 궁리해서 성과가 올랐다는 실감은 별로 없어요. 효과가 있었던 건 <b>회사와 도장의 전제를 제대로 전한 것</b>과 <b>나온 결과물을 보고 "여기는 달라"라고 말할 수 있었던 것</b>이에요.</p>
+    <p>주짓수도 기술 이름만 안다고 이길 수 있는 건 아니죠. 상대의 움직임을 느끼고 그 자리에서 판단할 수 있느냐가 중요해요. AI와 하는 일도 똑같다고 생각해요.</p>
+
+    <h2>제가 왜 이렇게까지 할 수 있느냐면</h2>
+    <p>"혼자서 어떻게 다 돌려요?"라는 질문을 자주 받아요. 답은 AI가 대단해서만은 아니에요. AI에게 건넬 수 있는 "토대"가 우연히 제 안에 있었기 때문이라고 생각해요.</p>
+    <p>저는 대학을 졸업하고 바로 대학 직원으로 오래 일하면서 조직의 백오피스가 어떻게 돌아가는지 현장에서 봐 왔어요. 주오대학교 경제학부에서는 엑셀을 실컷 쓰고, 논술을 산더미처럼 썼어요. 덕분에 머릿속에서 논리를 짜는 속도가 빨라진 것 같아요. AI에게 무엇을 어떻게 부탁할지 순식간에 정리할 수 있는 건 아마 그때의 훈련 덕분일 거예요. 그 뒤 와세다대학교 대학원 스포츠과학연구과에서 스포츠 조직에 대해 배웠어요. 그리고 무엇보다 주짓수 세계를 좋아해요. 저는 선수는 아니에요. 하지만 남편인 료조 씨와 도장에 모이는 분들이 좋아서, 정신을 차려 보니 이 세계에 푹 빠져 있었어요.</p>
+    <p>AI는 제가 모르는 걸 메워 줘요. 하지만 뭐가 맞고 뭐가 틀린지 판단하는 잣대는 제 경험 속에만 있어요. <b>경험이 있으니까 AI에게 정확하게 맡길 수 있고, AI가 있으니까 혼자서 몇 사람 몫의 일에 손이 닿아요.</b> 그 곱셈이 지금 제가 일하는 방식이에요.</p>
+
+    <h2>요구되는 건 "무엇을 하고 싶은가"</h2>
+    <p>프롬프트의 시대는 끝났어요. 앞으로는 어떻게 묻느냐보다, 무엇을 이루고 싶은지가 분명한 사람이 강해요.</p>
+    <p>템플릿집을 찾을 시간이 있다면 자기 일의 목적을 한마디로 말할 수 있게 해 두세요. 그러는 편이 AI는 훨씬 좋은 파트너가 되어 줘요.</p>
+    <p>참고로 이 블로그도 Claude와 함께 썼어요. 공들인 프롬프트는 하나도 안 썼고요. "프롬프트의 시대는 끝났다는 블로그를 쓰고 싶어"라고 말을 건 뒤에 "거기 아니야", "이것도 넣어 줘" 하고 주고받았을 뿐이에요.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">우리 회사에도 AI 직원이 있으면 좋겠다.</b><br>
+    매달 하는 작업을 “담당”으로 만드는 일을 도와드리고 있어요. 지금은 직접 만나 뵌 적이 있는 분에 한해, 선착순 3분께 도구 하나까지 무료로 해 드려요.<a href="/ko/irai/" style="color:#a3801a;white-space:nowrap;">AI 도입을 도와드립니다 →</a>
+  </p>
+
+  <footer>
+    <a href="/ko/blog/">블로그 목록으로</a>　/　<a href="/ko/">jiujitsu.co.jp 홈으로</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}}</style>
+

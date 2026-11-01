@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/irai/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/irai/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/irai/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/irai/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/irai/">
+<link rel="canonical" href="https://jiujitsu.co.jp/pt/irai/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Ajuda com IA | Jiu Labo</title>
+<meta name="description" content="Uma gerente de academia que não é engenheira ajuda você a adotar a IA, de igual para igual. Pequenas ferramentas, acompanhamento nos primeiros passos com o Claude e automação de tarefas mensais. Por enquanto, só para quem já me conhece pessoalmente: grátis para as 3 primeiras pessoas, com limite de uma ferramenta.">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.95; margin: 0; -webkit-font-smoothing: antialiased; font-size: 15px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 22px 80px; }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 700; margin: 0; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(28px, 6vw, 40px); color: var(--ink); letter-spacing: .12em; line-height: 1.5; margin: 10px 0 14px; text-wrap: balance; }
+  .lede { font-size: 14px; color: var(--body-c); margin: 0 auto; max-width: 32em; letter-spacing: .04em; text-wrap: balance; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 21px; color: var(--ink); letter-spacing: .08em; margin: 64px 0 18px; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  h2 small { font-family: var(--gothic); font-size: 11px; letter-spacing: .28em; color: var(--gold); font-weight: 700; }
+  p { margin: 0 0 1em; }
+  b { color: var(--ink); }
+  a { color: var(--gold); }
+
+  .intro { margin-top: 48px; }
+
+  .menu { display: grid; gap: 16px; }
+  .item { background: var(--panel); border: 1px solid var(--line); padding: 22px 24px; }
+  .item .no { font-family: var(--mincho); font-size: 13px; letter-spacing: .2em; color: var(--gold); margin: 0 0 4px; }
+  .item h3 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .06em; margin: 0 0 8px; }
+  .item p { font-size: 14.5px; margin: 0; }
+  .item .ex { margin-top: 12px; font-size: 13px; color: var(--faint); }
+  .item .ex a { text-decoration: none; border-bottom: 1px solid rgba(163,128,26,.35); }
+
+  .who { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .who li { padding-left: 1.4em; position: relative; }
+  .who li::before { content: "・"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+
+  .honest { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .honest > div { border: 1px solid var(--line); padding: 18px 20px; }
+  .honest h3 { font-family: var(--mincho); font-size: 16px; color: var(--ink); margin: 0 0 8px; letter-spacing: .08em; }
+  .honest ul { margin: 0; padding-left: 1.2em; font-size: 14px; }
+  .honest .no-go { background: var(--panel); }
+  @media (max-width: 620px) { .honest { grid-template-columns: 1fr; } }
+
+  ol.flow { list-style: none; margin: 0; padding: 0; counter-reset: f; }
+  ol.flow li { counter-increment: f; position: relative; padding: 0 0 18px 48px; }
+  ol.flow li::before { content: counter(f); position: absolute; left: 0; top: 2px; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--gold); color: var(--gold); font-family: var(--mincho); font-weight: 700; display: grid; place-items: center; font-size: 14px; line-height: 1; }
+  ol.flow b { display: block; }
+  ol.flow span { font-size: 14px; }
+
+  .monitor { margin-top: 36px; border: 1px solid var(--gold); background: #fffaf0; padding: 22px 24px; font-size: 14.5px; }
+  .monitor .tag { display: inline-block; font-family: var(--mincho); font-weight: 700; color: #fff; background: var(--gold); font-size: 13px; letter-spacing: .12em; padding: 3px 14px; border-radius: 999px; margin: 0 0 12px; }
+
+  .price { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 18px 4px; font-size: 14.5px; }
+
+  .cta { margin-top: 64px; background: #17140d; color: #eee6cf; text-align: center; padding: 40px 24px 36px; }
+  .cta .t { font-family: var(--mincho); font-weight: 700; font-size: clamp(19px, 4.4vw, 23px); letter-spacing: .08em; color: #fff; margin: 0 0 10px; text-wrap: balance; }
+  .cta p { font-size: 14px; margin: 0 0 22px; color: #d8cfb5; }
+  .cta a.btn { display: inline-block; background: var(--gold-hi); color: #17140d; font-weight: 700; text-decoration: none; padding: 13px 28px; border-radius: 999px; letter-spacing: .08em; font-size: 15px; }
+  .cta a.btn:hover { background: #e0b93a; }
+  .cta .mail { display: block; margin-top: 14px; font-size: 12.5px; color: #b9ae8e; letter-spacing: .06em; }
+  .cta .mail a { color: #e8c95e; }
+
+  .closing { text-align: center; margin-top: 56px; }
+  .closing .t { font-family: var(--mincho); font-weight: 700; font-size: 18px; color: var(--ink); letter-spacing: .08em; margin: 0 0 6px; }
+  .closing .by { font-size: 13px; color: var(--faint); margin: 0; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+
+<header>
+  <p class="brand">WORK WITH US</p>
+  <h1>Precisa de ajuda com IA?<br>Pode contar comigo.</h1>
+  <p class="lede">Uma gerente de academia que não é engenheira, de igual para igual. De pequenas ferramentas ao acompanhamento nos primeiros passos com o Claude e à automação de tarefas mensais.</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <section class="intro">
+    <p>Muito prazer, eu sou a Ai Murata. Cuido da gestão de academias de jiu-jitsu e da parte administrativa de uma federação esportiva.</p>
+    <p>Não sou engenheira. Comecei a usar o Claude há pouco tempo e já tropecei na instalação. Mesmo assim, fechamento de mensalidades, revisão de faturas, organização de recibos, escalas de trabalho, resultados ao vivo de campeonatos e até este site: <b>fui resolvendo com IA um problema de cada vez</b>.</p>
+    <p>“Sei que a IA é útil, mas não sei por onde começar.” Se você se sente assim, fico ao seu lado e ajudo fazendo exatamente o que eu mesma fiz.</p>
+  </section>
+
+  <div class="monitor">
+    <p class="tag">Quem já me conhece: grátis para as 3 primeiras pessoas</p>
+    <p>Essa ajuda é bem recente. Por isso, por enquanto, só aceito pedidos de <b>quem já me conheceu pessoalmente</b>.</p>
+    <p>Em troca, <b>peço para mostrar neste site, como caso real, o que fizemos juntos</b>. Com essa condição, para <b>as 3 primeiras pessoas, com limite de uma ferramenta</b>, não cobro nada.</p>
+    <p style="margin:0;">Você escolhe se quer mostrar ou não seu nome e o nome do seu negócio. Como na <a href="/salon/">gestão de clientes de um salão</a>, as telas aparecem com dados de exemplo.</p>
+  </div>
+
+  <h2>O que posso fazer<small>MENU</small></h2>
+  <div class="menu">
+    <div class="item">
+      <p class="no">01</p>
+      <h3>Crio pequenas ferramentas</h3>
+      <p>“Quero lançar pelo celular as vendas que anoto todo dia.” “Todo mês faço as somas do Excel na mão.” Para problemas que não justificam um sistema grande, crio uma ferramenta só para aquele trabalho.</p>
+      <p class="ex">Exemplos até agora: <a href="/salon/">gestão de clientes de um salão</a>, <a href="/ryoshusho/">digitalização de recibos</a>, <a href="/shift/">escala mensal</a>, <a href="/pt/tournament/">resultados ao vivo de campeonatos</a></p>
+    </div>
+    <div class="item">
+      <p class="no">02</p>
+      <h3>Começamos juntos, lado a lado</h3>
+      <p>Da instalação do Claude ao primeiro “faça isso”. Vamos olhando a tela e avançando juntos, usando o seu trabalho de verdade. Não é aula: é sentar do seu lado e pôr a mão na massa.</p>
+      <p class="ex">A ordem que eu segui: <a href="/hajimekata/">Como começar com o Claude</a>, <a href="/pt/claudecode/">Claude Code na academia de jiu-jitsu</a></p>
+    </div>
+    <div class="item">
+      <p class="no">03</p>
+      <h3>Transformo tarefas mensais em rotina automática</h3>
+      <p>Preparar a folha de pagamento, conferir mensalidades pagas, vigiar prazos. Trabalhos que seguem o mesmo passo a passo em dias fixos viram um “responsável” que a IA faz funcionar sozinho. O envio final e os pagamentos continuam sendo clicados por uma pessoa.</p>
+      <p class="ex">No nosso caso: <a href="/pt/blog/ai-shain/">Descobri: nossa empresa tinha 6 funcionários de IA</a></p>
+    </div>
+  </div>
+
+  <h2>Para quem é<small>FOR YOU</small></h2>
+  <ul class="who">
+    <li>Quem toca sozinho sua loja, escola ou empresa</li>
+    <li>Quem vive correndo com as mesmas somas e os mesmos documentos todo mês na empresa</li>
+    <li>Autônomos que vivem deixando faturas e despesas para depois</li>
+    <li>Quem não é bom de computador, mas quer reduzir o trabalho manual</li>
+  </ul>
+
+  <h2>Falando com sinceridade<small>HONESTLY</small></h2>
+  <div class="honest">
+    <div>
+      <h3>No que sou boa</h3>
+      <ul>
+        <li>Entender onde trava quem não se dá bem com computador</li>
+        <li>O fluxo real do administrativo, do financeiro e dos serviços gerais</li>
+        <li>Começar pequeno e ir ajustando enquanto usa</li>
+      </ul>
+    </div>
+    <div class="no-go">
+      <h3>O que não faço</h3>
+      <ul>
+        <li>Desenvolvimento de grandes sistemas corporativos</li>
+        <li>Coisas que exigem manutenção e suporte 24 horas</li>
+        <li>Sistemas que reúnem dados pessoais em servidores externos</li>
+      </ul>
+    </div>
+  </div>
+  <p style="margin-top:16px;font-size:14px;">Se o pedido for grande demais para mim, eu digo com sinceridade.</p>
+
+  <h2>Como funciona<small>FLOW</small></h2>
+  <ol class="flow">
+    <li><b>Uma mensagem no LINE</b><span>Conte seu problema, nem que seja em uma frase. Pode até ser “não sei o que dá para fazer”.</span></li>
+    <li><b>Decidimos conversando pelo LINE</b><span>Pergunto como você trabalha hoje e o que gostaria de fazer, e decidimos o que criar e como avançar. Se quiser parar aqui, tudo bem.</span></li>
+    <li><b>Criamos ou começamos juntos</b><span>Você usa de verdade o que ficou pronto, e eu ajusto o que estiver difícil de usar.</span></li>
+    <li><b>Entrega</b><span>Mostro como usar e como ajustar, para você seguir usando por conta própria.</span></li>
+    <li><b>Publicação como caso real</b><span>Resumo o que fizemos e só publico depois que você conferir o conteúdo.</span></li>
+  </ol>
+
+  <h2>Preço<small>PRICE</small></h2>
+  <div class="price">
+    <b>Grátis para as 3 primeiras pessoas, com limite de uma ferramenta</b>. Em troca, peço para publicar o que fizemos como caso real.<br>
+    A partir da 4ª pessoa e da 2ª ferramenta, é pago. O valor combinamos conversando pelo LINE.<br>
+    <small style="color:var(--faint);">Atenção: as taxas de uso do Claude e de outros serviços de IA ficam por sua conta, no seu próprio plano.</small>
+  </div>
+
+  <div class="cta">
+    <p class="t">Para começar, conte seu problema<br>em uma frase.</p>
+    <p>Pode ser só uma perguntinha, tipo “dá para fazer isso com IA?”.<br>Mande uma mensagem no LINE de sempre.</p>
+    <span class="mail">Se ainda não temos contato pelo LINE, mande um e-mail.</span>
+    <a class="btn" id="irai-mail" href="mailto:info@jiujitsu.co.jp?subject=%5BAjuda%20com%20IA%5D&amp;body=Seu%20nome%3A%0A%0AO%20que%20est%C3%A1%20dif%C3%ADcil%20ou%20o%20que%20voc%C3%AA%20quer%20tentar%3A%0A%0AComo%20falar%20com%20voc%C3%AA%20%28avise%20se%20preferir%20o%20LINE%29%3A%0A%0ASe%20usarmos%20como%20exemplo%2C%20seu%20nome%20e%20o%20do%20seu%20neg%C3%B3cio%20podem%20ser%3A%20mostrados%20/%20ocultados%0A">Falar por e-mail</a>
+    <span class="mail">Para: <a href="mailto:info@jiujitsu.co.jp">info@jiujitsu.co.jp</a> (BUTTI ON LINE Inc.)</span>
+  </div>
+
+  <div class="closing">
+    <p class="t">Se eu consegui, provavelmente você também consegue.</p>
+    <p class="by">— Ai Murata</p>
+  </div>
+
+  <footer>
+    <a href="/pt/company/">Sobre a empresa</a><br>
+    <a href="/pt/">← Início do jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+
+<script>
+  // 「メールで相談する」が押された回数を Google アナリティクスで数える
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (window.gtag) gtag('event', 'irai_contact', { link_id: a.id || 'mail' });
+    });
+  });
+</script>
+
+<a href="/pt/" style="position:fixed;right:14px;bottom:14px;z-index:99;background:#17140d;color:#e8c95e;font-size:11px;letter-spacing:.1em;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);font-family:sans-serif;">INÍCIO</a>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}h2 small{font-size:12px}a[href="/"][style*="position:fixed"]{font-size:13px!important;padding:12px 18px!important}}</style>
+</html>

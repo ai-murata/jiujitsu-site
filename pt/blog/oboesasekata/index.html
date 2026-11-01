@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/oboesasekata/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/oboesasekata/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/oboesasekata/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/oboesasekata/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/oboesasekata/">
+<link rel="canonical" href="https://jiujitsu.co.jp/pt/blog/oboesasekata/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Mais do que saber pedir, ensinar a lembrar. 57 dias com o Claude agindo 20 mil vezes</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="57 dias desde que comecei a usar o Claude Code. Fiz 2.072 pedidos, e o Claude agiu 21.696 vezes. A cada pedido, ele age umas 10 vezes. O que cria essa diferença não é saber pedir bem, e sim o que fui fazendo ele memorizar.">
+<meta property="og:title" content="Mais do que saber pedir, ensinar a lembrar. 57 dias com o Claude agindo 20 mil vezes">
+<meta property="og:description" content="2.072 pedidos, 21.696 ações do Claude. O motivo de ele agir 10 vezes a cada pedido está no jeito de fazê-lo memorizar.">
+<meta property="og:url" content="https://jiujitsu.co.jp/pt/blog/oboesasekata/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 24px 0 32px; }
+  .stat { background: var(--k); border-top: 3px solid var(--gold-hi); padding: 16px 16px 14px; text-align: center; }
+  .stat .lbl { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold-hi); font-weight: 700; }
+  .stat b { display: block; font-family: var(--mincho); font-size: 30px; color: #f3ecd8; letter-spacing: .04em; line-height: 1.4; }
+  .stat small { display: block; font-size: 12px; color: #b0a88f; line-height: 1.6; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; font-variant-numeric: tabular-nums; }
+  .tbl th, .tbl td { border-bottom: 1px solid var(--line); padding: 9px 8px; text-align: right; }
+  .tbl th:first-child, .tbl td:first-child { text-align: left; }
+  .tbl thead th { font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; border-bottom: 2px solid var(--gold); }
+  @media (max-width: 560px) { .tbl { font-size: 13px; } .tbl th, .tbl td { padding: 8px 4px; } }
+</style>
+
+<header>
+  <p class="brand"><a href="/pt/blog/">JIU LABO BLOG</a></p>
+  <h1>Mais do que saber pedir, ensinar a lembrar. 57 dias com o Claude agindo 20 mil vezes</h1>
+  <p class="meta"><time datetime="2026-10-08">2026.10.08</time> Ai Murata (gerente)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>Oi, aqui é a Ai Murata.</p>
+    <p>Depois de escrever o diário de ontem, bateu a curiosidade e perguntei ao Claude: “Com ele fazendo tanta coisa, será que eu sei usar bem?”. Então pedi que ele contasse todos os registros, desde 12 de agosto, quando comecei a usar o Claude Code, até ontem.</p>
+
+    <h2>O boletim de 57 dias</h2>
+    <div class="stats">
+      <div class="stat"><span class="lbl">Vezes que falei</span><b>2.072</b><small>usei em 54 dos 57 dias</small></div>
+      <div class="stat"><span class="lbl">Ações do Claude</span><b>21.696</b><small>pesquisar, abrir, corrigir, criar</small></div>
+      <div class="stat"><span class="lbl">A cada pedido</span><b>cerca de 10</b><small>ações do Claude por conta própria</small></div>
+      <div class="stat"><span class="lbl">Dia com mais ações</span><b>1.209</b><small>16 de setembro; falei 100 vezes</small></div>
+    </div>
+    <p>Fora isso, em trabalhos grandes, os “ajudantes” que o Claude chama agiram 6.249 vezes. Somando tudo, são cerca de 28 mil vezes.</p>
+
+    <h2>Um pedido, 10 ações</h2>
+    <p>“Ações” são cada um dos passos do Claude: abrir um arquivo, calcular, ler uma página, escrever em uma tabela. A cada vez que falo com ele, o Claude faz em média umas 10 coisas por conta própria.</p>
+    <p>Por exemplo, ontem de manhã foi assim.</p>
+    <ul class="talk">
+      <li>“Faz aquela do dia 10”<small>→ A lista de transferências que pago todo dia 10. Falei 2 vezes, e o Claude agiu 30 vezes</small></li>
+      <li>“Quero fazer certificados para os premiados do Jiu-Jitsu Koshien. A4 com o logo do Jiu-Jitsu Koshien”<small>→ Falei 14 vezes, e o Claude agiu 127 vezes. Foi até o pedido de impressão</small></li>
+    </ul>
+    <p>“Aquela do dia 10” funciona porque o Claude já sabe onde está a lista mensal, quem recebe quanto e de onde vêm os valores. Se eu tivesse que explicar tudo do zero toda vez, não terminaria em um pedido.</p>
+
+    <h2>O que faço ele memorizar: 3 camadas</h2>
+    <p>Escrevi antes o post <a href="/pt/blog/prompt-jidai/">“A era do prompt acabou”</a>. A ideia é que passar contexto importa mais do que saber pedir bem (as “palavras mágicas”). Contando, ficou claro o que é esse “contexto”. O que faço o Claude memorizar são estas 3 coisas.</p>
+    <div class="three">
+      <div class="tool"><span class="want">Regras</span><b>34 linhas</b><span>o que vale em todo trabalho</span></div>
+      <div class="tool"><span class="want">Notas</span><b>104</b><span>sobre trabalhos, pessoas e ferramentas</span></div>
+      <div class="tool code"><span class="want">Manuais</span><b>6</b><span>como fazer as tarefas mensais</span></div>
+    </div>
+    <h3>Regras: o que vale em todo trabalho</h3>
+    <p>São os combinados que formam a base de tudo. Por exemplo, tem coisas assim.</p>
+    <ul class="tips">
+      <li>Colocar os arquivos prontos em uma pasta definida, não na área de trabalho</li>
+      <li>Pagamentos, envios e exclusões: preparar até o último passo e, no fim, confirmar comigo</li>
+      <li>Não mexer por conta própria na tela que estou usando</li>
+      <li>Responder sem termos técnicos e com números exatos</li>
+    </ul>
+    <h3>Notas: sobre trabalhos, pessoas e ferramentas</h3>
+    <p>“Os documentos deste cliente estão aqui.” “Este site é atualizado assim.” “Na parte de design, gosto de preto com dourado, tons pastel não.” O que descobrimos no trabalho, peço para ele guardar em notas, uma por tema. Hoje são 104.</p>
+    <h3>Manuais: como fazer as tarefas mensais</h3>
+    <p>Lista de transferências, faturas, controle de ponto e comissões, recibos, balanço de eventos, contagem de treinos particulares. As 6 tarefas que existem todo mês viraram manuais. É graças a eles que ele entende só com “aquela do dia 10”.</p>
+
+    <h2>Como os números mudaram</h2>
+    <p>Dividindo de 2 em 2 semanas, ficou assim. O número de notas é o do fim de cada período.</p>
+    <table class="tbl">
+      <thead><tr><th>Período</th><th>Falei</th><th>Claude agiu</th><th>Por pedido</th><th>Observação</th></tr></thead>
+      <tbody>
+        <tr><td>12/8 a 25/8</td><td>764</td><td>7.084</td><td>9,3</td><td>43 notas</td></tr>
+        <tr><td>26/8 a 8/9</td><td>434</td><td>5.271</td><td>12,1</td><td>55 notas</td></tr>
+        <tr><td>9/9 a 22/9</td><td>308</td><td>4.524</td><td>14,7</td><td>81 notas</td></tr>
+        <tr><td>23/9 a 6/10</td><td>487</td><td>4.320</td><td>8,9</td><td>100 notas</td></tr>
+      </tbody>
+    </table>
+    <p>Nas 2 primeiras semanas, falei 764 vezes. É o maior número. Foi a fase em que eu explicava tudo: o que ficava onde, quem era quem.</p>
+    <p>Depois, com o aumento das notas, as vezes que falei caíram para a faixa de 300 a 400, e as ações por pedido foram subindo. Em 15 de setembro fiz 3 manuais de uma vez, e os dois dias seguintes foram os dois de maior movimento nos 57 dias.</p>
+    <p>Nas 2 últimas semanas, a média por pedido caiu para 8,9. Acho que é porque aumentaram trabalhos como o blog e o design, em que vou olhando e pedindo ajustes curtos, “aqui um pouco mais”, várias vezes. Olhando só o número, caiu, mas a sensação que tenho é que o tipo de trabalho mudou.</p>
+
+    <h2>Dicas para fazer ele memorizar</h2>
+    <p>Depois de 57 dias, vi que existe um jeito certo de fazer isso.</p>
+    <ul class="tips">
+      <li><b>Errou? Na hora: “guarde isso”.</b> Se você explicou a mesma coisa 2 vezes, é sinal de que está na hora de mandar memorizar</li>
+      <li><b>Faça a tarefa mensal inteira junto uma vez e só depois transforme em manual.</b> Não precisa escrever o passo a passo desde o início. Ele registra até as armadilhas que apareceram no caminho</li>
+      <li><b>Ficou velho? Reescreva.</b> Se a regra mudou, peça para corrigir a nota também. A regra de chamar o Ryozo de “o presidente” no blog também virou o nome verdadeiro, depois que ele autorizou</li>
+      <li><b>Defina onde ele deve parar.</b> Quanto mais você delega, mais importante fica a linha do “isso aqui quem aperta sou eu”</li>
+    </ul>
+
+    <h2>Mais ações não quer dizer melhor</h2>
+    <p>Mas não é porque o Claude agiu muitas vezes que eu uso bem. Às vezes o número sobe porque ele refez o mesmo erro.</p>
+    <p>Sinto que estou usando bem, não pelo número, mas quando <b>uma frase curta leva a coisa até onde eu imaginava</b>. Ontem, por exemplo, “essa placa parece coisa de IA, não gostei” bastou para ela voltar corrigida. E, antes de pagamentos e envios, ele parou e esperou direitinho.</p>
+    <blockquote><p>Em vez de tentar pedir bem,<br>fazer memorizar uma vez é muito mais rápido.</p></blockquote>
+    <p>Comece assim: pegue uma coisa que você explicou 2 vezes esta semana e diga ao Claude “guarde isso”. O seu eu da semana que vem vai agradecer.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">Também quero deixar trabalho com a IA.</b><br>
+    Ajudo a transformar trabalhos mensais em “funções”. No momento, para quem já me conhece pessoalmente, é grátis para as 3 primeiras pessoas, limitado a uma ferramenta.<a href="/pt/irai/" style="color:#a3801a;white-space:nowrap;">Ajuda com IA: fale comigo →</a>
+  </p>
+
+  <footer>
+    <a href="/pt/blog/">Todos os textos do blog</a> / <a href="/pt/">Início do jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}.timeline .when{font-size:12px}.stat .lbl{font-size:12px}}</style>
+

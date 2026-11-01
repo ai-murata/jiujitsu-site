@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/">
+<link rel="canonical" href="https://jiujitsu.co.jp/ko/blog/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Jiu Labo 블로그</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="주짓수 도장 운영, 료조 씨 주변 이야기, Claude Code 이야기. 매니저 무라타 아이의 눈으로 쓰는 블로그예요.">
+<meta property="og:title" content="Jiu Labo 블로그">
+<meta property="og:description" content="주짓수 도장 운영, 료조 씨 주변 이야기, Claude Code 이야기. 매니저의 눈으로 쓰는 블로그예요.">
+<meta property="og:url" content="https://jiujitsu.co.jp/ko/blog/">
+<link rel="alternate" type="application/atom+xml" title="Jiu Labo 새 소식" href="/feed.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.9; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(28px, 6vw, 40px); color: var(--ink); letter-spacing: .14em; margin: 10px 0 12px; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; letter-spacing: .06em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  .posts { list-style: none; margin: 40px 0 0; padding: 0; border-top: 1px solid var(--line); }
+  .posts a { display: block; padding: 22px 4px; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; }
+  .posts a:hover h2 { color: var(--gold); }
+  .posts time { font-size: 12px; color: var(--faint); letter-spacing: .1em; font-variant-numeric: tabular-nums; }
+  .posts h2 { font-family: var(--mincho); font-weight: 700; font-size: 18px; color: var(--ink); letter-spacing: .06em; line-height: 1.6; margin: 4px 0 6px; }
+  .posts p { font-size: 13.5px; margin: 0; }
+  .posts h2 { word-break: auto-phrase; text-wrap: pretty; }
+  /* 一番新しい記事を大きく */
+  .posts li.is-latest a { background: var(--panel); border-top: 3px solid var(--gold); padding: 28px 24px; }
+  .posts li.is-latest h2 { font-size: 22px; }
+  .posts li.is-latest p { font-size: 14px; }
+  .new-badge { display: inline-block; margin-left: 10px; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: var(--paper); background: var(--gold); border-radius: 3px; padding: 0 7px; line-height: 1.7; vertical-align: 1px; }
+  .posts li.is-hidden { display: none; }
+  .more-btn { display: block; margin: 28px auto 0; background: none; border: 1px solid var(--gold); color: var(--gold); border-radius: 999px; padding: 10px 32px; font: inherit; font-size: 13px; letter-spacing: .1em; cursor: pointer; transition: background .15s, color .15s; }
+  .more-btn:hover { background: var(--gold); color: var(--paper); }
+  .more-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    .posts { margin-top: 20px; }
+    .posts a { padding: 16px 2px; }
+    .posts h2 { font-size: 16px; letter-spacing: .02em; line-height: 1.55; margin: 2px 0 4px; }
+    .posts p { font-size: 12.5px; line-height: 1.75; }
+    .posts li.is-latest a { padding: 22px 16px; }
+    .posts li.is-latest h2 { font-size: 18px; }
+    .posts li.is-latest p { font-size: 13px; }
+  }
+
+  .tag { display: inline-block; margin-left: 10px; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: var(--gold); border: 1px solid var(--gold); border-radius: 3px; padding: 0 6px; line-height: 1.6; vertical-align: 1px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+
+<header>
+  <p class="brand">JIUJITSU.CO.JP</p>
+  <h1>블로그</h1>
+  <p class="lede">매니저의 눈으로 쓰는 주짓수와 료조 씨와 AI 이야기.</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <ul class="posts">
+    <!-- nikki:start -->
+    <li class="is-nikki">
+      <a href="/ko/blog/nikki/2026-10-04/">
+        <time datetime="2026-10-04">2026.10.04</time><span class="tag">일기</span>
+        <h2>대회 당일, 운영하면서 AI에게 부탁한 3가지</h2>
+        <p>오늘은 SJJJF 홋카이도의 주짓수 대회 “리버설 컵 삿포로” 당일이었어요. 대회장 운영으로 정신없는 날에 사과 공지, 지난 대회 분석, 다음 대회 기획까지 그날 안에 끝낼 수 있었어요. 대회를 운영하는 분들이 그대로 따라 할 수 있게 정리해 볼게요.</p>
+      </a>
+    </li>
+    <li class="is-nikki">
+      <a href="/ko/blog/nikki/2026-10-01/">
+        <time datetime="2026-10-01">2026.10.01</time><span class="tag">일기</span>
+        <h2>부탁받아 만든 도구를 견본으로 보여 주려면</h2>
+        <p>오늘 가장 놀라웠던 일은 손님을 위해 만든 예약 접수 화면을, 실제 시스템은 전혀 건드리지 않고 “움직이는 견본”으로 소개할 수 있었다는 거예요. 남의 부탁으로 만든 것을 보여 줄 때 신경 쓴 점을 정리해 볼게요.</p>
+      </a>
+    </li>
+    <li class="is-nikki">
+      <a href="/ko/blog/nikki/2026-09-30/">
+        <time datetime="2026-09-30">2026.09.30</time><span class="tag">일기</span>
+        <h2>예약 페이지와 Google 스프레드시트를 연결한 날</h2>
+        <p>오늘 가장 놀라웠던 일은 이벤트 워크숍 예약 페이지를 Google의 “Apps Script”(스프레드시트 뒤에서 돌아가는 작은 프로그램)에 연결해서, 빈자리를 보면서 신청할 수 있게 만든 거예요. 연결하기까지 몇 번 막혔어요.</p>
+      </a>
+    </li>
+    <li class="is-nikki">
+      <a href="/ko/blog/nikki/2026-09-29/">
+        <time datetime="2026-09-29">2026.09.29</time><span class="tag">일기</span>
+        <h2>일본 전국의 주짓수 도장 684곳을 Claude와 지도에서 모았어요</h2>
+        <p>오늘 가장 놀라웠던 일은 Google 지도를 47개 도도부현(일본의 광역 행정 구역) 전부 돌아보고 도장 가이드에 새로 133곳을 추가한 거예요. 그 밖에도 매일 아침 뉴스를 자동으로 정리하는 구조를 하루에 2개 만들었어요.</p>
+      </a>
+    </li>
+    <!-- nikki:end -->
+    <li>
+      <a href="/ko/blog/ikura-te-de/">
+        <time datetime="2026-10-28">2026.10.28</time>
+        <h2>AI 시대에도 이쿠라는 사람 손으로 절여요</h2>
+        <p>어제 다 같이 연어알을 담갔어요. 된장과 천을 겹치는 방법도, 천이 달라붙었을 때 고치는 방법도 Claude에게 도움을 받았어요. 하지만 손을 움직이고 “맛있다”를 판단하는 건 사람이에요.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/kuruma-15fun/">
+        <time datetime="2026-10-24">2026.10.24</time>
+        <h2>체육관에서 돌아오는 길, 차 안의 15분에 Claude와 순서를 잡아요</h2>
+        <p>차 안에서도 Claude와 목소리만으로 대화할 수 있다는 걸 알고, 체육관에서 돌아오는 길에 “오늘 집에 가면 할 일”을 이야기해 봤어요. 15분 만에 할 일이 정해져서 집에 도착하자마자 착착 끝낼 수 있었던 이야기예요.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/php-zeijakusei/">
+        <time datetime="2026-10-22">2026.10.22</time>
+        <h2>“PHP 괜찮아?”라고 Claude에게 물어본 날. 전 세계 사이트에서 일어나고 있는 일</h2>
+        <p>웹사이트를 움직이는 PHP에서 위험도 9.2의 약점이 2개 발견됐어요. 저희 사이트는 괜찮았던 이유와 사이트를 가진 분들이 확인해 볼 점을 정리했어요.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/ai-tsukaiwake/">
+        <time datetime="2026-10-21">2026.10.21</time>
+        <h2>Claude, Gemini, ChatGPT 3개 다 결제하는 제가 나눠 쓰는 법</h2>
+        <p>Gemini는 YouTube 영상을 볼 수 있고, ChatGPT는 이미지 만들기, Claude는 일 자체를 맡겨요. “어시스턴트”와 “에이전트”의 차이도 Claude에게 정리를 부탁했어요.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/claude-chinou/">
+        <time datetime="2026-10-20">2026.10.20</time>
+        <h2>Claude는 “하버드 수석 수준”? 교수들의 초난도 시험에서 1년 8개월 만에 4% → 61%</h2>
+        <p>전 세계 교수 약 1,000명이 “AI는 못 푼다”며 낸 2,500문제. Claude의 정답률이 오른 과정과 예제, 나머지 40%를 못 푸는 이유, 함께 일하며 느낀 점을 썼어요.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/hikitsugi-jitsubutsu/">
+        <time datetime="2026-10-20">2026.10.20</time>
+        <h2>출산 중 "인수인계서", 실물을 보여 줬어요</h2>
+        <p>친구가 Claude로 만든 인수인계서는 노트 9쪽 + 약 정리 2쪽. 집안일부터 마음에 관한 것까지, 들어 있던 12개 항목을 일부 가려서 소개해요.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/hikitsugi-sho/">
+        <time datetime="2026-10-18">2026.10.18</time>
+        <h2>친구가 출산 중 "인수인계서"를 Claude로 만든 이야기</h2>
+        <p>블로그를 읽어 준 친구가 입원 중의 집안일과 아이들 일을 남편에게 넘기는 서류를 Claude로 만들었어요. “나였으면 빠뜨렸을 항목까지 들어 있었어”라는 기쁜 소식이에요.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/heikou-shigoto/">
+        <time datetime="2026-10-17">2026.10.17</time>
+        <h2>하루 10건, 1시간에 2~3건. Claude에게 동시에 맡기는 일을 세어 봤어요</h2>
+        <p>65일분의 기록을 세어 보니 하루에 맡기는 일은 평균 10건, 많은 날은 28건. 기다리는 동안 다음 일을 맡기기만 해도 자연스럽게 여러 개가 동시에 돌아가게 됐어요.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/oboesasekata/">
+        <time datetime="2026-10-08">2026.10.08</time>
+        <h2>부탁하는 법보다 기억시키는 법. Claude가 2만 번 움직인 57일</h2>
+        <p>제가 부탁한 건 2,072번, Claude가 움직인 건 21,696번. 한 번 부탁하면 약 10번 움직여 주는 이유는 잘 부탁하는 법이 아니라, 지금까지 기억시켜 온 것에 있었어요.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/prompt-jidai/">
+        <time datetime="2026-10-05">2026.10.05</time>
+        <h2>프롬프트의 시대는 끝났다</h2>
+        <p>AI를 잘 쓰는 데 “주문”은 이제 필요 없어요. 중요해진 건 맥락을 건네는 것, 판단하는 것, 맡기는 법을 아는 것. 필요한 건 “일을 넘기는 기술”이에요.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/shabetta-6pun/">
+        <time datetime="2026-10-01">2026.10.01</time>
+        <h2>말한 건 6분. 오늘 하루 Claude에게 맡긴 14가지 일</h2>
+        <p>“음성 입력은 5배 빠르다”를 하루 기록으로 확인한 이야기. 말실수투성이여도 14건이 끝났고, 밤에는 6건을 동시에 돌리고 있었어요.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/benkyou-shinai/">
+        <time datetime="2026-09-30">2026.09.30</time>
+        <h2>Claude Code는 공부하지 않고 잘 쓴다</h2>
+        <p>모르는 건 Claude에게 물어보면 돼요. 매일의 “이거 편해질 것 같은데”를 줍는 이야기와, 큰 차를 위한 유료 주차장 찾기.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/ai-shain/">
+        <time datetime="2026-09-29">2026.09.29</time>
+        <h2>우리 회사에 AI 직원이 6명 있었어요</h2>
+        <p>“AI 직원 멋있다”에서 시작해서, 명단으로 만들어 보니 6명이 있었던 이야기. AI를 담당별로 나누면 좋은 이유.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/shigoto-igai-de/">
+        <time datetime="2026-09-28">2026.09.28</time>
+        <h2>일에 쓸 수 없다면 생활에 써 봐요</h2>
+        <p>회사 규정으로 AI를 쓸 수 없는 분께. 4년간 쌓인 요리 교실의 종이 레시피를 사이트로 만들어 보는 이야기.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/seikyusho-claude/">
+        <time datetime="2026-09-28">2026.09.28</time>
+        <h2>청구서 1년 치를 Claude에게 다시 봐 달라고 한 이야기</h2>
+        <p>매달 혼자 만들어 온 업무 위탁 청구서. Claude에게 거슬러 올라가 보게 했더니 실수가 발견된 이야기.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/waapuro-kara-ai/">
+        <time datetime="2026-09-27">2026.09.27</time>
+        <h2>워드프로세서를 좋아하던 제가 Claude Code에 빠진 이유</h2>
+        <p>워드프로세서 → Excel, PowerPoint → AI. 도구가 바뀔 때마다 익혀 온 제가 지금 AI에 빠져 있는 이유.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/onsei-tsukaiwake/">
+        <time datetime="2026-09-27">2026.09.27</time>
+        <h2>타자를 멈추고 말하기 시작했어요. Chat, Cowork, Code를 나눠 쓰는 법</h2>
+        <p>음성 입력으로 5배 빠르게. 그리고 “답, 파일, 구조”로 고르는 Claude의 세 가지 사용법.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/ko/blog/claude-code-hajimari/">
+        <time datetime="2026-09-27">2026.09.27</time>
+        <h2>엔지니어가 아닌 제가 Claude Code와 “끈질기게” 지낸 한 달</h2>
+        <p>설치에서 막혔던 제가 “AI는 못 한다고 하지만, 무조건 할 수 있어”라는 한마디로 바뀐 이야기.</p>
+      </a>
+    </li>
+  </ul>
+
+<script>
+// 記事の並べ替え・最新を大きく・NEWバッジ・「もっと見る」
+// 記事は <li> を足すだけでOK（日付は <time datetime="YYYY-MM-DD"> から読む）
+// 日記（nikki:start〜end のあいだ）は tools/nikki/build.py が自動で入れるので手で触らない
+(function () {
+  var NEW_DAYS = 3;  // 何日間NEWを出すか
+  var SHOW_MAX = 5;  // 最初に見せる件数（それ以上は「もっと見る」）
+  var list = document.querySelector('.posts');
+  if (!list) return;
+  var items = Array.prototype.slice.call(list.children);
+  function toDate(li) {
+    var t = li.querySelector('time');
+    var p = new Date((t ? t.getAttribute('datetime') : '') + 'T00:00:00');
+    return isNaN(p) ? new Date(0) : p;
+  }
+  // 同じ日なら、ふつうの記事を日記より上に
+  items.sort(function (a, b) { return (toDate(b) - toDate(a)) || (a.classList.contains('is-nikki') - b.classList.contains('is-nikki')); });
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  items.forEach(function (li, i) {
+    list.appendChild(li);
+    if (i === 0) li.classList.add('is-latest');
+    var days = (today - toDate(li)) / 86400000;
+    if (days >= 0 && days < NEW_DAYS) {
+      var b = document.createElement('span');
+      b.className = 'new-badge'; b.textContent = 'NEW';
+      li.querySelector('time').after(b);
+    }
+    if (i >= SHOW_MAX) li.classList.add('is-hidden');
+  });
+  if (items.length > SHOW_MAX) {
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'more-btn'; btn.textContent = '더 보기';
+    btn.onclick = function () {
+      items.forEach(function (li) { li.classList.remove('is-hidden'); });
+      btn.remove();
+    };
+    list.after(btn);
+  }
+})();
+</script>
+
+  <footer>
+    <a href="/feed.xml">RSS로 받기</a>　/　<a href="/ko/">jiujitsu.co.jp 홈으로</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.new-badge{font-size:12px}.tag{font-size:12px}}</style>
+

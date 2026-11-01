@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/php-zeijakusei/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/php-zeijakusei/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/php-zeijakusei/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/php-zeijakusei/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/php-zeijakusei/">
+<link rel="canonical" href="https://jiujitsu.co.jp/en/blog/php-zeijakusei/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>The day I asked Claude, “Is PHP okay?” What’s happening to websites around the world</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="In October 2026, two vulnerabilities with a severity of 9.2 were found in PHP, the software that runs websites. Here's what I learned when I asked Claude if our site was okay, and what site owners should check.">
+<meta property="og:title" content="The day I asked Claude, “Is PHP okay?” What’s happening to websites around the world">
+<meta property="og:description" content="Two 9.2-severity vulnerabilities in PHP. What I learned by asking if our site was okay.">
+<meta property="og:url" content="https://jiujitsu.co.jp/en/blog/php-zeijakusei/">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 24px 0 32px; }
+  .stat { background: var(--k); border-top: 3px solid var(--gold-hi); padding: 16px 16px 14px; text-align: center; }
+  .stat .lbl { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold-hi); font-weight: 700; }
+  .stat b { display: block; font-family: var(--mincho); font-size: 30px; color: #f3ecd8; letter-spacing: .04em; line-height: 1.4; }
+  .stat small { display: block; font-size: 12px; color: #b0a88f; line-height: 1.6; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; font-variant-numeric: tabular-nums; }
+  .tbl th, .tbl td { border-bottom: 1px solid var(--line); padding: 9px 8px; text-align: right; }
+  .tbl th:first-child, .tbl td:first-child { text-align: left; }
+  .tbl thead th { font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; border-bottom: 2px solid var(--gold); }
+  @media (max-width: 560px) { .tbl { font-size: 13px; } .tbl th, .tbl td { padding: 8px 4px; } }
+  .doc { margin: 24px 0 32px; border: 1px solid var(--line); background: #fff; box-shadow: 0 2px 10px rgba(23,20,13,.06); font-size: 13px; line-height: 1.75; }
+  .doc .dh { padding: 12px 16px; border-bottom: 1px solid var(--line); background: var(--panel); font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; }
+  .doc table { width: 100%; border-collapse: collapse; }
+  .doc th, .doc td { border-bottom: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; color: var(--ink); }
+  .doc thead th { font-size: 12px; color: var(--faint); font-weight: 700; }
+  .doc td:first-child { white-space: nowrap; color: var(--body-c); }
+  .sumi { display: inline-block; background: var(--k); color: transparent; border-radius: 2px; height: 1.05em; vertical-align: -.15em; user-select: none; }
+  .note { font-size: 12px; color: var(--faint); margin: -20px 0 28px; }
+  .toc { list-style: none; counter-reset: t; margin: 20px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+  .toc li { counter-increment: t; background: var(--panel); border: 1px solid var(--line); padding: 10px 14px; font-size: 14px; color: var(--ink); line-height: 1.6; }
+  .toc li::before { content: counter(t, decimal-leading-zero); display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .toc li small { display: block; font-size: 12px; color: var(--faint); }
+  @media (max-width: 560px) { .toc { grid-template-columns: 1fr; } .doc { font-size: 12.5px; } .doc th, .doc td { padding: 7px 6px; } }
+  .fig { margin: 28px 0 12px; }
+  .fig img { display: block; width: 100%; height: auto; border-radius: 4px; }
+  .fig figcaption { font-size: 12px; color: var(--faint); margin-top: 8px; line-height: 1.7; }
+</style>
+
+<header>
+  <p class="brand"><a href="/en/blog/">JIU LABO BLOG</a></p>
+  <h1>The day I asked Claude, "Is PHP okay?"<br>What's happening to sites worldwide</h1>
+  <p class="meta"><time datetime="2026-10-22">2026.10.22</time> Ai Murata (Manager)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>Last night I saw a headline in the news: "Serious vulnerabilities in PHP." I don't really even know what PHP is, but it made me uneasy, so I asked Claude <b>just one short question</b>.</p>
+    <ul class="talk">
+      <li>is php ok?</li>
+    </ul>
+    <p>Claude then checked all the files on this site (jiujitsu.co.jp) and answered like this.</p>
+    <blockquote><p>This site doesn't use PHP at all, so you're fine.</p></blockquote>
+    <p>Relieved, I went on to ask, "what's going on out there?" Today I'll sum up what it told me, in my own words.</p>
+
+    <h2>So what is PHP, anyway?</h2>
+    <p>PHP is <b>a programming language for running websites</b>. WordPress, which is common for blogs and shop sites, runs on PHP too. Apparently a huge number of sites around the world use PHP behind the scenes.</p>
+    <p>That means a weakness in PHP <b>puts sites all over the world at risk at the same time</b>.</p>
+
+    <h2>What happened</h2>
+    <p>Two vulnerabilities were found. Together they're called "<b>PHP2Shell</b>."</p>
+    <div class="stats">
+      <div class="stat"><span class="lbl">Severity</span><b>9.2</b><small>Out of 10</small></div>
+      <div class="stat"><span class="lbl">Vulnerabilities found</span><b>2</b><small>Together, "PHP2Shell"</small></div>
+    </div>
+    <p>If abused, <b>a stranger who hasn't even logged in can run any program they like on someone else's server</b>. In shop terms, it's like someone with no key coming in through the back door and operating the register.</p>
+    <ol class="timeline">
+      <li><span class="when">October 20</span><b>The PHP development team announces a "serious vulnerability"</b><span class="d">Details were kept under wraps until a fix was ready. But that same day, the details leaked.</span></li>
+      <li><span class="when">October 21</span><b>Companies in Japan rush to respond</b><span class="d">Sakura Internet shut off features of some services, and Cygames, pixiv, and others announced emergency maintenance.</span></li>
+      <li><span class="when">October 21, night</span><b>The fixed versions are released</b><span class="d">Because of the leak, they came out one day earlier than planned, at around 22:40 Japan time.</span></li>
+    </ol>
+    <p>There are also reports of attack attempts starting to appear. But as of the morning of October 22, it seems no successful takeovers have been confirmed yet. The explanations differ a little depending on the company researching it, so I'll keep watching for updates too.</p>
+
+    <h2>Why our site was okay</h2>
+    <p>This site is built to <b>simply show pages that are already finished</b> (apparently that's called a "static site"). It doesn't run a program on a server every time someone visits. So it had nothing to do with the PHP vulnerabilities.</p>
+    <p>According to Claude, the letters "php" do appear on the site. But only in <b>link addresses</b>, like the Facebook share button and the links to each gym's site in the gym guide. Any PHP running there is on their servers, not on our site.</p>
+    <p>The automatic news and search updates also run on a different system, not PHP, so they weren't affected either.</p>
+
+    <h2>What site owners should check</h2>
+    <p>We were okay, but I'm sure lots of gyms and shops have their own sites. Here's what to check, as far as I was told.</p>
+    <ul class="tips">
+      <li><b>Do you use WordPress?</b> If you do, you're using PHP too</li>
+      <li><b>Has your hosting or web company sent a notice?</b> In most cases, they're the ones who fix the PHP on the server. Check your email and your admin panel notices</li>
+      <li><b>If you manage your own server, upgrade PHP to a fixed version.</b> The fixed versions are 8.5.12, 8.4.27, 8.3.36, and 8.2.35</li>
+      <li><b>Updating WordPress or plugins alone won't fix it.</b> This is the most important point. What needs fixing is PHP itself, running underneath</li>
+    </ul>
+    <p>If you don't know whether your site uses PHP, the quickest way is to ask whoever built it or your hosting company. Asking Claude like I did is another option.</p>
+
+    <h2>Summary</h2>
+    <ul class="tips">
+      <li>Two 9.2-severity vulnerabilities were found in PHP, which runs websites</li>
+      <li>Fixed versions are already out. The only fix is upgrading PHP itself</li>
+      <li>jiujitsu.co.jp doesn't use PHP, so it's not affected</li>
+    </ul>
+    <p>All I did was type one simple line, "is php ok?", and Claude checked the whole site and even told me what was going on in the world. It's reassuring to have someone I can ask about things I don't understand, without having to understand them first.</p>
+
+    <p class="note" style="margin:32px 0 0;">Sources: <a href="https://www.itmedia.co.jp/news/article/2610/21/2000002446/">ITmedia NEWS</a>, <a href="https://xtech.nikkei.com/atcl/nxt/column/18/00001/12112/">Nikkei xTECH</a>, <a href="https://piyolog.hatenadiary.jp/entry/2026/10/21/174516">piyolog</a>, <a href="https://blog.flatt.tech/entry/php2shell">GMO Flatt Security Blog</a>, <a href="https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html">The Hacker News</a> (all October 2026)</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">I want to hand work to AI too.</b><br>
+    I help turn monthly work into “roles.” For now, it’s free for the first 3 people, limited to people I’ve met, for up to one tool each. <a href="/en/irai/" style="color:#a3801a;white-space:nowrap;">Get help with AI →</a>
+  </p>
+
+  <footer>
+    <a href="/en/blog/">All blog posts</a> / <a href="/en/">Back to jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}.timeline .when{font-size:12px}.stat .lbl{font-size:12px}}</style>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/onsei-tsukaiwake/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/onsei-tsukaiwake/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/onsei-tsukaiwake/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/onsei-tsukaiwake/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/onsei-tsukaiwake/">
+<link rel="canonical" href="https://jiujitsu.co.jp/en/blog/onsei-tsukaiwake/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>I stopped typing and started talking: when to use Chat, Cowork, and Code</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="How switching to voice input made my Claude instructions 5 times faster, and how I choose between Chat, Cowork, and Claude Code. My second post, from a manager's point of view.">
+<meta property="og:title" content="I stopped typing and started talking: when to use Chat, Cowork, and Code">
+<meta property="og:description" content="5 times faster with voice input. And how to choose between Claude's 3 options: answers, files, or systems.">
+<meta property="og:url" content="https://jiujitsu.co.jp/en/blog/onsei-tsukaiwake/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+</style>
+
+<header>
+  <p class="brand"><a href="/en/blog/">JIU LABO BLOG</a></p>
+  <h1>I stopped typing and started talking: when to use Chat, Cowork, and Code</h1>
+  <p class="meta"><time datetime="2026-09-27">2026.09.27</time> · Ai Murata (Manager)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>Hi, this is Ai Murata. For my second post, I'll talk about two things in how I've been using Claude lately: <b>voice input</b>, and <b>choosing between Claude's 3 options</b>.</p>
+
+    <h2>I stopped typing and started talking</h2>
+    <p>I used to type my requests to Claude Code on the keyboard. But lately I've gotten completely hooked on voice input.</p>
+    <p>It feels <b>about 5 times faster than typing</b>. I just say whatever comes to mind, so my hands never stall while I wonder how to phrase something.</p>
+
+    <h3>Even when you misspeak, it gets through</h3>
+    <p>Voice input makes a fair number of conversion errors and slips. But AI picks up the meaning from the flow around them, so it's rarely a problem. These actually happened while I was making this very blog. (The mix-ups come from similar-sounding Japanese words.)</p>
+    <ul class="talk">
+      <li>"Please introduce it" (shokai shite)<small>→ What I really said was "Please publish it" (kokai shite). It published it just fine</small></li>
+      <li>"An idea in Japan came to me" (nihon de)<small>→ What I really said was "an idea for a second post" (nihon-me). It became this second post just fine</small></li>
+    </ul>
+    <p>It's fine if your "um"s and "well"s stay in. It actually works better if you don't try to make your sentences neat.</p>
+
+    <h3>When you talk, more information gets through</h3>
+    <p>I noticed something else, too: when you talk, you <b>naturally explain why you want something</b>. When I type, I tend to keep it short, just "do X." When I talk, the background and my feelings come out as well. That makes it easier for AI to get what I'm after, and more often I get what I wanted on the first try.</p>
+
+    <h2>Claude's 3 options</h2>
+    <p>The other fun thing lately has been choosing how to use Claude. Broadly speaking, there are 3 ways to use it: <b>Chat</b>, <b>Cowork</b>, and <b>Claude Code</b>. They're all the same Claude, but each is good at slightly different things.</p>
+    <p>To sort out the differences, I think this is the easiest way to remember them.</p>
+
+    <blockquote><p>Want an answer? Chat.<br>Want a file? Cowork.<br>Want a system? Code.</p></blockquote>
+
+    <div class="three">
+      <div class="tool"><span class="want">Want an answer</span><b>Chat</b><span>Advice, questions, draft writing</span></div>
+      <div class="tool"><span class="want">Want a file</span><b>Cowork</b><span>Making and organizing documents on your computer</span></div>
+      <div class="tool code"><span class="want">Want a system</span><b>Code</b><span>Reusable tools, sites, automation</span></div>
+    </div>
+
+    <h3>Chat: when you want an answer right now</h3>
+    <p>This is the most familiar way to use it: you talk, it answers. You can use it right from your phone too. It's perfect as someone to consult or bounce ideas off when you want to sort out your thoughts.</p>
+    <div class="ex">
+      <p>For example</p>
+      <ul>
+        <li>Does this LINE reply sound rude?</li>
+        <li>Make this tournament announcement a little easier to understand</li>
+        <li>What does this wording in the contract mean?</li>
+      </ul>
+    </div>
+    <p>But Chat is basically "answer on the spot and done." Any files it makes for you, you have to download and put in a folder yourself.</p>
+
+    <h3>Cowork: when you want it finished as a file</h3>
+    <p>To be honest, I haven't used Cowork much yet. So this part is more of an intro: "apparently it's good for situations like this."</p>
+    <p>With Cowork, you <b>hand over a folder on your computer and give it the whole job</b>. Claude reads what's in the folder and saves the finished documents into that folder. Once you've asked, you can go do something else for a while.</p>
+    <div class="ex">
+      <p>For example</p>
+      <ul>
+        <li>Make a table of dates and amounts from the receipt photos in this folder</li>
+        <li>Sort this messy folder by what's inside</li>
+        <li>Read all of these materials and sum them up on one page for the meeting</li>
+      </ul>
+    </div>
+    <p>For something that's a one-time job but that you really do want as a file, Cowork is a good fit.</p>
+
+    <h3>Claude Code: when you want a reusable system</h3>
+    <p>Claude Code is for <b>making the tool itself</b>. Build it once, and from then on the same thing runs automatically or with a single line. The word "Code" in the name makes it sound hard, but all you're really doing is saying "I want something like this."</p>
+    <div class="ex">
+      <p>For example</p>
+      <ul>
+        <li>Learn the steps for my monthly invoices, so from next month I can just say "this month too, please"</li>
+        <li>Automatically collect the tournament results and post them on a live results page</li>
+        <li>Make this blog or site page and publish it</li>
+      </ul>
+    </div>
+    <p>When you notice "I do this every month" or "I keep doing the same thing," that's when Claude Code comes in.</p>
+
+    <h2>If you're not sure, any of them is fine</h2>
+    <p>That said, you don't need to keep them strictly separate. If you're talking something over in Chat and realize "I'll be doing this every month," take it to Claude Code. If you like a document you made in Cowork, ask, "Turn this into a system that makes it every month."</p>
+    <p>As for me, I've come to love building systems so much that Claude Code is where I end up spending the most time. And lately, I just sit there talking at it.</p>
+    <p>Start with voice input, and try telling Claude whatever comes to mind. I think you'll find it easier to get going than typing.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+
+    <div class="next">
+      <p>Here's my previous post.</p>
+      <p><a href="/en/blog/claude-code-hajimari/">A non-engineer's first month of "stubbornly" sticking with Claude Code →</a></p>
+    </div>
+  </article>
+
+  <footer>
+    <a href="/en/blog/">All blog posts</a> / <a href="/en/">Back to jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.tool .want{font-size:12px}.ex p{font-size:12px}}</style>
+

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/irai/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/irai/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/irai/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/irai/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/irai/">
+<link rel="canonical" href="https://jiujitsu.co.jp/en/irai/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Need a Hand with AI? | Jiu Labo</title>
+<meta name="description" content="I'm a gym manager, not an engineer, and I'll help you bring in AI from right there at your level. Small tools, hands-on help getting started with Claude, automating your monthly tasks. For now, this is only for people I've met in person: free for the first 3 people, up to one tool each.">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.95; margin: 0; -webkit-font-smoothing: antialiased; font-size: 15px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 22px 80px; }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 700; margin: 0; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(28px, 6vw, 40px); color: var(--ink); letter-spacing: .12em; line-height: 1.5; margin: 10px 0 14px; text-wrap: balance; }
+  .lede { font-size: 14px; color: var(--body-c); margin: 0 auto; max-width: 32em; letter-spacing: .04em; text-wrap: balance; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 21px; color: var(--ink); letter-spacing: .08em; margin: 64px 0 18px; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  h2 small { font-family: var(--gothic); font-size: 11px; letter-spacing: .28em; color: var(--gold); font-weight: 700; }
+  p { margin: 0 0 1em; }
+  b { color: var(--ink); }
+  a { color: var(--gold); }
+
+  .intro { margin-top: 48px; }
+
+  .menu { display: grid; gap: 16px; }
+  .item { background: var(--panel); border: 1px solid var(--line); padding: 22px 24px; }
+  .item .no { font-family: var(--mincho); font-size: 13px; letter-spacing: .2em; color: var(--gold); margin: 0 0 4px; }
+  .item h3 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .06em; margin: 0 0 8px; }
+  .item p { font-size: 14.5px; margin: 0; }
+  .item .ex { margin-top: 12px; font-size: 13px; color: var(--faint); }
+  .item .ex a { text-decoration: none; border-bottom: 1px solid rgba(163,128,26,.35); }
+
+  .who { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .who li { padding-left: 1.4em; position: relative; }
+  .who li::before { content: "・"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+
+  .honest { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .honest > div { border: 1px solid var(--line); padding: 18px 20px; }
+  .honest h3 { font-family: var(--mincho); font-size: 16px; color: var(--ink); margin: 0 0 8px; letter-spacing: .08em; }
+  .honest ul { margin: 0; padding-left: 1.2em; font-size: 14px; }
+  .honest .no-go { background: var(--panel); }
+  @media (max-width: 620px) { .honest { grid-template-columns: 1fr; } }
+
+  ol.flow { list-style: none; margin: 0; padding: 0; counter-reset: f; }
+  ol.flow li { counter-increment: f; position: relative; padding: 0 0 18px 48px; }
+  ol.flow li::before { content: counter(f); position: absolute; left: 0; top: 2px; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--gold); color: var(--gold); font-family: var(--mincho); font-weight: 700; display: grid; place-items: center; font-size: 14px; line-height: 1; }
+  ol.flow b { display: block; }
+  ol.flow span { font-size: 14px; }
+
+  .monitor { margin-top: 36px; border: 1px solid var(--gold); background: #fffaf0; padding: 22px 24px; font-size: 14.5px; }
+  .monitor .tag { display: inline-block; font-family: var(--mincho); font-weight: 700; color: #fff; background: var(--gold); font-size: 13px; letter-spacing: .12em; padding: 3px 14px; border-radius: 999px; margin: 0 0 12px; }
+
+  .price { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 18px 4px; font-size: 14.5px; }
+
+  .cta { margin-top: 64px; background: #17140d; color: #eee6cf; text-align: center; padding: 40px 24px 36px; }
+  .cta .t { font-family: var(--mincho); font-weight: 700; font-size: clamp(19px, 4.4vw, 23px); letter-spacing: .08em; color: #fff; margin: 0 0 10px; text-wrap: balance; }
+  .cta p { font-size: 14px; margin: 0 0 22px; color: #d8cfb5; }
+  .cta a.btn { display: inline-block; background: var(--gold-hi); color: #17140d; font-weight: 700; text-decoration: none; padding: 13px 28px; border-radius: 999px; letter-spacing: .08em; font-size: 15px; }
+  .cta a.btn:hover { background: #e0b93a; }
+  .cta .mail { display: block; margin-top: 14px; font-size: 12.5px; color: #b9ae8e; letter-spacing: .06em; }
+  .cta .mail a { color: #e8c95e; }
+
+  .closing { text-align: center; margin-top: 56px; }
+  .closing .t { font-family: var(--mincho); font-weight: 700; font-size: 18px; color: var(--ink); letter-spacing: .08em; margin: 0 0 6px; }
+  .closing .by { font-size: 13px; color: var(--faint); margin: 0; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+
+<header>
+  <p class="brand">WORK WITH US</p>
+  <h1>Need a hand<br>with AI?</h1>
+  <p class="lede">I'm a gym manager, not an engineer, so I'll be right there at your level. From small tools to getting started with Claude side by side to automating your monthly tasks.</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <section class="intro">
+    <p>Nice to meet you, I'm Ai Murata. I run a jiu-jitsu gym and handle the office work for a sports federation.</p>
+    <p>I'm not an engineer. I only started using Claude recently, and I got stuck at the install step. Even so, membership fee totals, invoice reviews, sorting receipts, shift schedules, live tournament results, even this site: <b>I've been solving the problems in front of me with AI, one at a time</b>.</p>
+    <p>"I get that AI is useful, but I don't know where to start." If that's how you feel, I'll sit beside you and help you do exactly what I did.</p>
+  </section>
+
+  <div class="monitor">
+    <p class="tag">Free for the first 3 people I've met in person</p>
+    <p>I've only just started offering this help. So for now, it's only for <b>people I've already met in person</b>.</p>
+    <p>In return, <b>please let me feature what we did as a case study on this site</b>. On that condition, it's free <b>for the first 3 people, up to one tool each</b>.</p>
+    <p style="margin:0;">You choose whether your name or your shop's name appears. As with the <a href="/salon/">salon customer manager</a>, I'll swap the screens to sample data before posting.</p>
+  </div>
+
+  <h2>What I Can Do<small>MENU</small></h2>
+  <div class="menu">
+    <div class="item">
+      <p class="no">01</p>
+      <h3>I'll build you a small tool</h3>
+      <p>"I want to enter my daily sales on my phone." "I add up an Excel sheet by hand every month." For problems too small for a big system, I'll build a tool made just for that one job.</p>
+      <p class="ex">Past examples: <a href="/salon/">Salon customer manager</a>, <a href="/ryoshusho/">Digitizing receipts</a>, <a href="/shift/">Monthly shift schedule</a>, <a href="/en/tournament/">Tournament live results</a></p>
+    </div>
+    <div class="item">
+      <p class="no">02</p>
+      <h3>We'll get started together, side by side</h3>
+      <p>From installing Claude to your first "please do this." We'll look at the screen together and work through your actual job. It's not a lecture. I sit beside you and we do it hands-on.</p>
+      <p class="ex">The order I took: <a href="/hajimekata/">Getting Started with Claude</a>, <a href="/en/claudecode/">Claude Code at a Jiu-Jitsu Gym</a></p>
+    </div>
+    <div class="item">
+      <p class="no">03</p>
+      <h3>I'll turn your monthly tasks into a system</h3>
+      <p>Getting payroll ready, checking fee payments, watching deadlines. Jobs that run on set days with set steps become "staff" that AI runs automatically. The final send or payment stays with a person, who presses the button.</p>
+      <p class="ex">Our case: <a href="/en/blog/ai-shain/">Our company already had 6 AI staff</a></p>
+    </div>
+  </div>
+
+  <h2>Who This Is For<small>FOR YOU</small></h2>
+  <ul class="who">
+    <li>People running their own shop, class or company</li>
+    <li>Office workers buried in the same totals and paperwork every month</li>
+    <li>Freelancers who keep putting off invoices and expenses</li>
+    <li>People who aren't good with computers but want less manual work</li>
+  </ul>
+
+  <h2>Being Honest<small>HONESTLY</small></h2>
+  <div class="honest">
+    <div>
+      <h3>What I'm good at</h3>
+      <ul>
+        <li>Knowing where people who struggle with computers get lost</li>
+        <li>How everyday office, accounting and admin work really flows</li>
+        <li>Building small, then fixing things as we use them</li>
+      </ul>
+    </div>
+    <div class="no-go">
+      <h3>What I don't take on</h3>
+      <ul>
+        <li>Building large business systems</li>
+        <li>Anything that needs 24-hour maintenance or outage support</li>
+        <li>Systems that collect personal data on outside servers</li>
+      </ul>
+    </div>
+  </div>
+  <p style="margin-top:16px;font-size:14px;">If something is more than I can handle, I'll tell you honestly.</p>
+
+  <h2>How It Works<small>FLOW</small></h2>
+  <ol class="flow">
+    <li><b>Send me a quick LINE message</b><span>Just a word about what's bugging you. "I don't even know what's possible" is fine too.</span></li>
+    <li><b>We decide together over LINE</b><span>I'll ask how you work now and what you'd like to try, then we'll decide what to make and how to go about it. It's fine to stop here.</span></li>
+    <li><b>We build it and get you started</b><span>You try out what we made for real, and I fix whatever's hard to use.</span></li>
+    <li><b>Handover</b><span>I'll show you how to use it and how to fix it, so you can keep going on your own.</span></li>
+    <li><b>Your case study</b><span>I'll write up what we did, and you check it before it goes live.</span></li>
+  </ol>
+
+  <h2>Price<small>PRICE</small></h2>
+  <div class="price">
+    It's <b>free for the first 3 people, up to one tool each</b>. In return, please let me post what we did as a case study.<br>
+    From the 4th person on, and from the 2nd tool on, it's paid. We'll talk about the price over LINE.<br>
+    <small style="color:var(--faint);">* You pay for Claude and other AI services yourself, through your own subscription.</small>
+  </div>
+
+  <div class="cta">
+    <p class="t">Just start by telling me<br>what's bugging you.</p>
+    <p>Something as casual as "Can AI do this?" is totally fine.<br>Send me a quick note on LINE, like you always do.</p>
+    <span class="mail">Not connected on LINE yet? Email me instead.</span>
+    <a class="btn" id="irai-mail" href="mailto:info@jiujitsu.co.jp?subject=%5BAI%20help%5D&amp;body=Your%20name%3A%0A%0AWhat%20you%20are%20struggling%20with%20or%20want%20to%20try%3A%0A%0AHow%20to%20reach%20you%20%28let%20us%20know%20if%20you%20prefer%20LINE%29%3A%0A%0AIf%20we%20feature%20this%20as%20an%20example%2C%20your%20name%20and%20business%20name%20may%20be%3A%20shown%20/%20hidden%0A">Email me</a>
+    <span class="mail">To: <a href="mailto:info@jiujitsu.co.jp">info@jiujitsu.co.jp</a> (BUTTI ON LINE Inc.)</span>
+  </div>
+
+  <div class="closing">
+    <p class="t">If I could do it, you probably can too.</p>
+    <p class="by">── Ai Murata</p>
+  </div>
+
+  <footer>
+    <a href="/en/company/">Company Profile</a><br>
+    <a href="/en/">← Back to jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+
+<script>
+  // 「メールで相談する」が押された回数を Google アナリティクスで数える
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (window.gtag) gtag('event', 'irai_contact', { link_id: a.id || 'mail' });
+    });
+  });
+</script>
+
+<a href="/en/" style="position:fixed;right:14px;bottom:14px;z-index:99;background:#17140d;color:#e8c95e;font-size:11px;letter-spacing:.1em;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);font-family:sans-serif;">TOP</a>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}h2 small{font-size:12px}a[href="/"][style*="position:fixed"]{font-size:13px!important;padding:12px 18px!important}}</style>
+</html>

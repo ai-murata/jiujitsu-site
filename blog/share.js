@@ -1,3 +1,17 @@
+// 外国語版（/en/ /ko/ /pt/）では、ボタンの文字と一覧の場所を切り替える。
+var blogLang = (function () {
+  var folder = (location.pathname.match(/^\/(en|ko|pt)\//) || [])[1];
+  var text = {
+    en: { copy: 'Copy link', copied: 'Link copied', ig: 'Link copied. Paste it into your Instagram story or profile.', nav: 'Previous and next posts', older: '← Previous post', newer: 'Next post →' },
+    ko: { copy: '링크 복사', copied: '링크를 복사했습니다', ig: '링크를 복사했습니다. 인스타그램 스토리나 프로필에 붙여 넣어 주세요.', nav: '이전 글과 다음 글', older: '← 이전 글', newer: '다음 글 →' },
+    pt: { copy: 'Copiar link', copied: 'Link copiado', ig: 'Link copiado. Cole nos stories ou no perfil do Instagram.', nav: 'Post anterior e próximo post', older: '← Post anterior', newer: 'Próximo post →' }
+  };
+  return {
+    list: folder ? '/' + folder + '/blog/' : '/blog/',
+    t: text[folder] || { copy: 'リンクをコピー', copied: 'リンクをコピーしました', ig: 'リンクをコピーしました。Instagramのストーリーズやプロフィールに貼ってください', nav: '前の記事・次の記事', older: '← 前の記事', newer: '次の記事 →' }
+  };
+})();
+
 // ブログ記事のシェアボタン。<div class="share"></div> の中に描画する。
 (function () {
   var box = document.querySelector('.share');
@@ -34,7 +48,7 @@
     '<a href="https://twitter.com/intent/tweet?text=' + t + '&url=' + u + '" target="_blank" rel="noopener">' + icon.x + 'X</a>' +
     '<a href="https://www.facebook.com/sharer/sharer.php?u=' + u + '" target="_blank" rel="noopener">' + icon.fb + 'Facebook</a>' +
     '<a href="https://social-plugins.line.me/lineit/share?url=' + u + '" target="_blank" rel="noopener">' + icon.line + 'LINE</a>' +
-    '<button type="button" data-act="copy">' + icon.link + 'リンクをコピー</button>' +
+    '<button type="button" data-act="copy">' + icon.link + blogLang.t.copy + '</button>' +
     '</div>' +
     '<p class="note" aria-live="polite"></p>';
 
@@ -61,14 +75,14 @@
     var b = e.target.closest('button');
     if (!b) return;
     if (b.dataset.act === 'copy') {
-      copy('リンクをコピーしました');
+      copy(blogLang.t.copied);
     } else if (b.dataset.act === 'ig') {
       // Instagram にはWebから直接シェアする仕組みがないので、
       // スマホは共有メニュー（ここからInstagramを選べる）、PCはリンクコピーにする。
       if (navigator.share) {
         navigator.share({ title: title, url: url }).catch(function () {});
       } else {
-        copy('リンクをコピーしました。Instagramのストーリーズやプロフィールに貼ってください');
+        copy(blogLang.t.ig);
       }
     }
   });
@@ -81,7 +95,7 @@
   if (!article || !window.fetch || !window.DOMParser) return;
   var here = location.pathname.replace(/index\.html$/, '');
 
-  fetch('/blog/').then(function (r) { return r.text(); }).then(function (html) {
+  fetch(blogLang.list).then(function (r) { return r.text(); }).then(function (html) {
     var doc = new DOMParser().parseFromString(html, 'text/html');
     var items = Array.prototype.map.call(doc.querySelectorAll('.posts li'), function (li, i) {
       var a = li.querySelector('a'), t = li.querySelector('time'), h = li.querySelector('h2');
@@ -122,8 +136,8 @@
     }
     var nav = document.createElement('nav');
     nav.className = 'post-nav';
-    nav.setAttribute('aria-label', '前の記事・次の記事');
-    nav.innerHTML = (older ? card(older, 'older', '← 前の記事') : '') + (newer ? card(newer, 'newer', '次の記事 →') : '');
+    nav.setAttribute('aria-label', blogLang.t.nav);
+    nav.innerHTML = (older ? card(older, 'older', blogLang.t.older) : '') + (newer ? card(newer, 'newer', blogLang.t.newer) : '');
     article.after(nav);
   }).catch(function () {});
 })();

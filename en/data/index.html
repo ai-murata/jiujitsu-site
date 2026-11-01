@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Brazilian jiu-jitsu in Japan through history and numbers: how many gyms there are over time, belt distribution, measured years to black belt, and competitor data.">
+<meta property="og:title" content="The Jiu-Jitsu Data Book">
+<meta property="og:description" content="Brazilian jiu-jitsu in Japan, through history and numbers">
+<meta property="og:url" content="https://jiujitsu.co.jp/en/data/">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/data/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/data/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/data/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/data/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/data/">
+<link rel="canonical" href="https://jiujitsu.co.jp/en/data/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>The Jiu-Jitsu Data Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Cinzel:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --ink:#faf9f5;
+    --surface:#f1eee6;
+    --card:#ffffff;
+    --line:#e4ddcc;
+    --gold:#b8912b;
+    --gold-bright:#8a6c15;
+    --text:#241e12;
+    --muted:#6f6754;
+    --faint:#a39a86;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--ink);
+    color:var(--text);
+    font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",sans-serif;
+    line-height:1.6;
+    min-height:100vh;
+  }
+  a{color:var(--gold-bright)}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+  /* ---- hero ---- */
+  header.hero{
+    padding:56px 0 36px;
+    text-align:center;
+    background:
+      radial-gradient(ellipse 90% 70% at 50% -10%, rgba(184,145,43,.12), transparent 60%),
+      var(--ink);
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    font-family:"Cinzel",serif;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:.42em;
+    color:var(--gold);
+    text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  h1{
+    font-family:"Shippori Mincho B1",serif;
+    font-weight:800;
+    font-size:clamp(30px,6vw,52px);
+    letter-spacing:.08em;
+    line-height:1.25;
+    text-wrap:balance;
+  }
+  .hero-rule{
+    width:64px;height:2px;background:var(--gold);
+    margin:22px auto 18px;
+  }
+  .hero-sub{color:var(--muted);font-size:14px;letter-spacing:.06em}
+  .hero-sub strong{color:var(--gold-bright);font-weight:700;font-variant-numeric:tabular-nums}
+
+  /* ---- toolbar ---- */
+  .toolbar{
+    position:sticky;top:0;z-index:10;
+    background:rgba(250,249,245,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+    padding:14px 0;
+  }
+  .toolbar-inner{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .search{
+    flex:1 1 240px;
+    display:flex;align-items:center;gap:8px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:9px 14px;
+  }
+  .search svg{flex:none;opacity:.55}
+  .search input{
+    flex:1;min-width:0;
+    background:transparent;border:none;outline:none;
+    color:var(--text);
+    font:inherit;font-size:15px;
+  }
+  .search input::placeholder{color:var(--faint)}
+  .search:focus-within{border-color:var(--gold)}
+  select.pref{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:4px;
+    color:var(--text);
+    font:inherit;font-size:14px;
+    padding:9px 12px;
+    max-width:200px;
+  }
+  select.pref:focus{outline:2px solid var(--gold);outline-offset:1px}
+  .count{
+    font-size:13px;color:var(--muted);
+    letter-spacing:.04em;white-space:nowrap;
+    font-variant-numeric:tabular-nums;
+  }
+  .count strong{color:var(--gold-bright);font-size:15px}
+
+  /* ---- region chips ---- */
+  .chips{
+    display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;
+    padding:12px 0 2px;
+    scrollbar-width:none;
+  }
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:none;
+    font:inherit;font-size:13px;letter-spacing:.06em;
+    color:var(--muted);
+    background:transparent;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:6px 15px;
+    cursor:pointer;
+  }
+  .chip:hover{color:var(--text);border-color:var(--faint)}
+  .chip.on{
+    color:#241e12;
+    background:#e8c95e;
+    border-color:#c9a437;
+    font-weight:700;
+  }
+  .chip:focus-visible{outline:2px solid var(--gold-bright);outline-offset:2px}
+
+  /* ---- map ---- */
+  .map-wrap{
+    position:relative;
+    background:#f2efe7;
+    border:1px solid var(--line);
+    border-radius:6px;
+    margin-bottom:22px;
+    overflow:hidden;
+  }
+  .map-wrap svg{display:block;width:100%;height:auto}
+  .map-head{
+    position:absolute;top:14px;left:18px;
+    pointer-events:none;
+  }
+  .map-head .t{
+    font-family:"Cinzel",serif;font-size:11px;font-weight:600;
+    letter-spacing:.3em;color:var(--gold);text-transform:uppercase;
+  }
+  .map-head .n{
+    font-size:12px;color:var(--muted);margin-top:4px;letter-spacing:.05em;
+  }
+  .map-head .n strong{color:var(--gold-bright);font-variant-numeric:tabular-nums}
+  .pref-shape{
+    fill:#e7e1cf;stroke:#cbc2a8;stroke-width:.7;
+    cursor:pointer;transition:fill .15s;
+  }
+  .pref-shape:hover{fill:#ddd4b8}
+  .pref-shape.active{fill:#f0e0a4;stroke:var(--gold)}
+  .pin{fill:#a5821c;stroke:#ffffff;stroke-width:.8;cursor:pointer}
+  .pin:hover{fill:#241e12}
+  .map-tip{
+    position:absolute;pointer-events:none;
+    background:rgba(255,255,255,.97);
+    border:1px solid var(--gold);
+    box-shadow:0 2px 10px rgba(36,30,18,.12);
+    border-radius:4px;
+    color:var(--text);
+    font-size:12px;letter-spacing:.04em;
+    padding:5px 10px;
+    transform:translate(-50%,-130%);
+    white-space:nowrap;
+    display:none;z-index:5;
+  }
+  .map-note{
+    position:absolute;bottom:10px;right:14px;
+    font-size:10.5px;color:var(--faint);letter-spacing:.05em;
+    pointer-events:none;
+  }
+  @media (max-width:640px){ .map-head .n{display:none} }
+
+  /* ---- grid ---- */
+  main{padding:28px 0 60px}
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(310px,1fr));
+    gap:14px;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:6px;
+    box-shadow:0 1px 3px rgba(36,30,18,.05);
+    padding:20px 20px 16px;
+    display:flex;flex-direction:column;gap:10px;
+    position:relative;
+    overflow:hidden;
+  }
+  .card::before{
+    content:"";position:absolute;inset:0 auto 0 0;width:3px;
+    background:linear-gradient(180deg,#c9a437,rgba(201,164,55,.2));
+  }
+  .card-head{padding-left:6px;padding-right:62px}
+  .card h2{
+    font-family:"Shippori Mincho B1",serif;
+    font-weight:600;
+    font-size:18px;
+    line-height:1.4;
+    letter-spacing:.02em;
+    color:var(--text);
+  }
+  .card .en{
+    font-family:"Cinzel",serif;
+    font-size:10.5px;
+    letter-spacing:.14em;
+    color:var(--faint);
+    margin-top:3px;
+    text-transform:uppercase;
+  }
+  .meta{
+    padding-left:6px;
+    display:flex;flex-direction:column;gap:5px;
+    font-size:13.5px;color:var(--muted);
+    flex:1;
+  }
+  .meta .row{display:flex;gap:9px}
+  .meta .k{
+    flex:none;color:var(--faint);font-size:12px;
+    letter-spacing:.1em;padding-top:1px;
+  }
+  .meta .v{color:var(--text);opacity:.88;word-break:break-all}
+  .meta .v.rank{color:var(--gold-bright);font-weight:700;font-variant-numeric:tabular-nums}
+  .badge{
+    position:absolute;top:16px;right:16px;
+    font-size:11px;letter-spacing:.08em;
+    color:var(--gold-bright);
+    border:1px solid rgba(184,145,43,.45);
+    border-radius:3px;
+    padding:2px 8px;
+  }
+  .badge.unknown{color:var(--faint);border-color:var(--line)}
+  .feds{
+    padding-left:6px;
+    display:flex;gap:6px;flex-wrap:wrap;margin-top:-2px;
+  }
+  .fed{
+    font-family:"Cinzel",serif;
+    font-size:10px;font-weight:600;letter-spacing:.13em;
+    padding:3px 8px;border-radius:2px;
+    border:1px solid;
+  }
+  .fed.jbjjf{color:#6f6754;border-color:#d5cdb8;background:rgba(0,0,0,.02)}
+  .fed.sjjjf{color:#8a6c15;border-color:rgba(184,145,43,.5);background:rgba(201,164,55,.1)}
+  .fed-note{
+    font-family:"Zen Kaku Gothic New",sans-serif;
+    font-size:10.5px;letter-spacing:.04em;
+    color:var(--faint);
+    align-self:center;
+  }
+  #feds{padding-top:10px;padding-bottom:0}
+  #feds .chip{font-size:12.5px}
+  .links{
+    padding-left:6px;
+    display:flex;gap:8px;margin-top:2px;align-items:center;flex-wrap:wrap;
+  }
+  .sns{display:flex;gap:6px;margin-left:auto}
+  .sns a{
+    width:28px;height:28px;padding:0;
+    display:grid;place-items:center;
+    border:1px solid var(--line);border-radius:4px;
+    color:var(--muted);
+  }
+  .sns a:hover{color:var(--gold-bright);border-color:var(--gold)}
+  .sns svg{width:14px;height:14px;fill:currentColor}
+  .tag-degeiko{
+    display:inline-flex;align-items:center;gap:5px;
+    font-size:11.5px;letter-spacing:.06em;
+    color:#2e7d43;
+    border:1px solid rgba(46,125,67,.4);
+    background:rgba(46,125,67,.07);
+    border-radius:3px;padding:3px 9px;
+  }
+  .links a{
+    font-size:12.5px;letter-spacing:.06em;
+    text-decoration:none;
+    color:var(--gold-bright);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:6px 13px;
+  }
+  .links a:hover{border-color:var(--gold);background:rgba(201,164,55,.08)}
+  .links a:focus-visible{outline:2px solid var(--gold-bright);outline-offset:2px}
+
+  .empty{
+    text-align:center;color:var(--muted);
+    padding:70px 0;font-size:15px;letter-spacing:.05em;
+  }
+
+  /* ---- growth ---- */
+  .growth{
+    border-top:1px solid var(--line);
+    padding:44px 0 52px;
+    background:radial-gradient(ellipse 80% 60% at 50% 0%, rgba(184,145,43,.06), transparent 60%);
+  }
+  .growth .eyebrow{margin-bottom:12px}
+  .growth h2{
+    font-family:"Shippori Mincho B1",serif;
+    font-weight:800;font-size:clamp(22px,4vw,32px);
+    letter-spacing:.06em;text-align:center;text-wrap:balance;
+  }
+  .growth-sub{
+    text-align:center;color:var(--muted);font-size:13.5px;
+    margin-top:10px;letter-spacing:.04em;
+  }
+  .stat-row{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:12px;margin:28px 0 24px;
+  }
+  .stat{
+    background:var(--card);border:1px solid var(--line);border-radius:6px;
+    padding:18px 20px 15px;text-align:center;
+  }
+  .stat .v{
+    font-family:"Shippori Mincho B1",serif;font-weight:800;
+    font-size:30px;color:var(--gold-bright);
+    font-variant-numeric:tabular-nums;line-height:1.2;
+  }
+  .stat .k{font-size:12px;color:var(--muted);letter-spacing:.08em;margin-top:6px}
+  .chart-box{
+    background:var(--card);border:1px solid var(--line);border-radius:6px;
+    padding:22px 18px 10px;position:relative;
+  }
+  .chart-box svg{display:block;width:100%;height:auto}
+  .chart-title{
+    font-size:13px;color:var(--text);letter-spacing:.06em;
+    padding:0 6px 12px;
+  }
+  .chart-note{
+    font-size:11px;color:var(--faint);letter-spacing:.04em;
+    padding:10px 6px 8px;line-height:1.7;
+  }
+  .gline{fill:none;stroke:#a5821c;stroke-width:2;stroke-linecap:round}
+  .garea{fill:url(#goldgrad);}
+  .ggrid{stroke:#e7e1d0;stroke-width:1}
+  .gtick{font-size:10.5px;fill:var(--faint);font-family:"Zen Kaku Gothic New",sans-serif}
+  .gpt{fill:#a5821c;stroke:#ffffff;stroke-width:1.5;cursor:pointer}
+  .glabel{font-size:11px;fill:var(--text);font-weight:700;font-family:"Zen Kaku Gothic New",sans-serif}
+
+  /* ---- belt path ---- */
+  .beltpath{
+    border-top:1px solid var(--line);
+    padding:44px 0 52px;
+  }
+  .belt-bar{
+    display:flex;height:44px;border-radius:6px;overflow:hidden;
+    border:1px solid var(--line);
+  }
+  .belt-bar .seg{
+    display:grid;place-items:center;
+    font-size:12.5px;font-weight:700;letter-spacing:.04em;
+    min-width:0;
+  }
+  .belt-legend{
+    display:flex;gap:16px;flex-wrap:wrap;justify-content:center;
+    margin-top:12px;font-size:12px;color:var(--muted);
+  }
+  .belt-legend .chip{display:inline-flex;align-items:center;gap:6px}
+  .belt-legend .sw{width:12px;height:12px;border-radius:3px;border:1px solid rgba(0,0,0,.15)}
+  .path-row{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:12px;margin:26px 0 8px;
+  }
+  .hist-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:14px;margin-top:18px;
+  }
+  .hist-box{
+    background:var(--card);border:1px solid var(--line);border-radius:6px;
+    padding:18px 18px 12px;
+  }
+  .hist-box .t{font-size:13px;color:var(--text);letter-spacing:.05em;margin-bottom:12px}
+  .hist{display:flex;align-items:flex-end;gap:8px;height:120px}
+  .hist .col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:4px;height:100%}
+  .hist .bar{width:100%;background:#c9a437;border-radius:3px 3px 0 0;min-height:2px}
+  .hist .n{font-size:10px;color:var(--faint);font-variant-numeric:tabular-nums}
+  .hist .y{font-size:11px;color:var(--muted)}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:28px 0 44px;
+    color:var(--faint);
+    font-size:12.5px;
+    line-height:1.9;
+    text-align:center;
+    letter-spacing:.04em;
+  }
+  footer a{color:var(--muted)}
+  @media (prefers-reduced-motion:no-preference){
+    .card{transition:border-color .15s}
+    .card:hover{border-color:var(--faint)}
+  }
+
+  .timeline{max-width:680px;margin:30px auto 0;position:relative;padding-left:2px}
+  .timeline::before{content:"";position:absolute;left:92px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,#c9a437,rgba(201,164,55,.25))}
+  .tl-item{display:flex;gap:26px;padding:13px 0;position:relative}
+  .tl-item::before{content:"";position:absolute;left:87px;top:22px;width:12px;height:12px;border-radius:50%;
+    background:var(--ink);border:3px solid #c9a437}
+  .tl-year{flex:0 0 74px;text-align:right;font-family:"Cinzel","Shippori Mincho B1",serif;font-weight:600;
+    font-size:14px;color:var(--gold-bright);padding-top:2px;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+  .tl-body{flex:1;font-size:13.5px;color:var(--muted);line-height:1.8;padding-left:16px}
+  .tl-body strong{color:var(--text);font-size:14.5px;letter-spacing:.03em}
+  .db-link{
+    display:block;text-align:center;padding:30px 0 10px;
+  }
+  .db-link a{
+    display:inline-block;text-decoration:none;
+    font-family:"Shippori Mincho B1",serif;font-weight:700;font-size:15px;letter-spacing:.1em;
+    color:var(--gold-bright);border:1px solid var(--gold);border-radius:4px;
+    padding:13px 34px;
+  }
+  .db-link a:hover{background:rgba(201,164,55,.08)}
+
+  .src{display:inline-block;font-size:10.5px;letter-spacing:.08em;color:var(--faint);
+    border:1px solid var(--line);border-radius:3px;padding:2px 8px;margin-left:10px;vertical-align:middle}
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Jiu-Jitsu Data Book</div>
+    <h1>The Jiu-Jitsu Data Book</h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">Brazilian jiu-jitsu in Japan, through history and numbers</p>
+  </div>
+</header>
+
+
+<section class="growth" style="border-top:none;background:none;padding-top:8px">
+  <div class="wrap">
+    <div class="eyebrow" style="text-align:center">History</div>
+    <h2 style="font-family:'Shippori Mincho B1',serif;font-weight:800;font-size:clamp(22px,4vw,32px);letter-spacing:.06em;text-align:center;text-wrap:balance">How Jiu-Jitsu Got Here</h2>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-year">1914</div><div class="tl-body"><strong>Mitsuyo Maeda goes to Brazil</strong><br>Mitsuyo Maeda (Conde Koma), a Kodokan judo man, travels the world and ends up in Brazil.</div></div>
+      <div class="tl-item"><div class="tl-year">Around 1917</div><div class="tl-body"><strong>Meeting the Gracie family</strong><br>Carlos Gracie learns jiu-jitsu from Mitsuyo Maeda. Later, together with his younger brother Helio, he develops it in his own way, and Brazilian jiu-jitsu is born.</div></div>
+      <div class="tl-item"><div class="tl-year">1925</div><div class="tl-body"><strong>The Gracie Academy opens</strong><br>A gym opens in Rio de Janeiro, and the family keeps turning the art into a system.</div></div>
+      <div class="tl-item"><div class="tl-year">1993</div><div class="tl-body"><strong>The first UFC</strong><br>An openweight, no-time-limit tournament to decide "which martial art is the strongest." Royce Gracie (180 cm, about 80 kg), small even by family standards, beat a boxer, a shootfighter and a savate world champion, all by submission, in under 5 minutes total, and won it all. "The small can beat the big with technique" became common knowledge around the world, and the jiu-jitsu boom took off.</div></div>
+      <div class="tl-item"><div class="tl-year">Mid-1990s</div><div class="tl-body"><strong>Jiu-jitsu lands in Japan</strong><br>With the vale tudo boom, excitement for jiu-jitsu grew in Japan too, and gyms started popping up around the country.</div></div>
+      <div class="tl-item"><div class="tl-year">1996</div><div class="tl-body"><strong>A national federation is born</strong><br>Japan's first Brazilian jiu-jitsu federation forms, and a national tournament structure starts to take shape.</div></div>
+      <div class="tl-item"><div class="tl-year">2013</div><div class="tl-body"><strong>The sports jiu-jitsu tournament system starts up</strong><br>The tournament system of the Asian federation (ASJJF) goes live. Tournaments under SJJJF (Sports Jiu-Jitsu Japan Federation) spread across the country.</div></div>
+      <div class="tl-item"><div class="tl-year">2018 onward</div><div class="tl-body"><strong>The number of gyms keeps climbing</strong><br>JBJJF member gyms grew from 253 in 2018 to 390 in 2026, about 1.5x in 8 years.</div></div>
+      <div class="tl-item"><div class="tl-year">2026</div><div class="tl-body"><strong>SJJIF World Championship comes to Yoyogi, Tokyo</strong><br>The world championship arrives in Japan. 1,455 entries from Japan, and 75 domestic tournaments that year.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="growth">
+  <div class="wrap">
+    <div class="eyebrow" style="text-align:center">Growth</div>
+    <h2>Jiu-Jitsu Is Growing</h2>
+    <p class="growth-sub">Japan has 684 gyms, in all 47 prefectures. Tournament competitors grew 2.7x in the 4 years after COVID and hit a new record in 2025</p>
+    <div class="stat-row">
+      <div class="stat"><div class="v">684</div><div class="k">Gyms nationwide (all 47 prefectures, our own count)</div></div>
+      <div class="stat"><div class="v">+54%</div><div class="k">Gym growth (2018→2026)</div></div>
+      <div class="stat"><div class="v">5,752<span style="font-size:14px"> people</span></div><div class="k">Tournament competitors (2025, a record high)</div></div>
+      <div class="stat"><div class="v">2.7<span style="font-size:15px">x</span></div><div class="k">Growth in tournament competitors (4 years after COVID, 2021→2025)</div></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">Federation-registered gyms over time (2018–2026, a trend based on one federation's registrations)</div>
+      <svg id="gchart" viewBox="0 0 720 260" role="img" aria-label="JBJJF加盟道場数の推移。2018年253道場から2026年390道場へ増加"></svg>
+      <div class="chart-note">
+        Source: JBJJF "Member Academies" list, from Internet Archive snapshots of each year (2018–2025) and the current page (August 2026).
+        The month captured varies by year (roughly mid-year). Registered numbers look low for a short time right after the federation's yearly renewal, so we don't use records from the start of the year.<br>
+        The gym count is our own tally: federation-registered gyms and teams seen at tournaments, plus gyms and fitness gyms with jiu-jitsu classes that we could confirm exist through Google Maps and similar (684 as of September 2026). Competitor numbers are unique competitors per year from domestic tournament entry lists (approximate, since we can't tell apart people with the same name). After dropping to 2,130 in 2021 during COVID, the number bounced back and grew 2.7x in 4 years to 5,752 (2025, a record high).
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="growth" style="background:none">
+  <div class="wrap">
+    <div class="eyebrow" style="text-align:center">Population</div>
+    <h2 style="font-family:'Shippori Mincho B1',serif;font-weight:800;font-size:clamp(22px,4vw,32px);letter-spacing:.06em;text-align:center;text-wrap:balance">Who's Training, and How Much</h2>
+    <div class="stat-row">
+      <div class="stat"><div class="v">12%</div><div class="k">Women's share among adults (23% among kids)</div></div>
+      <div class="stat"><div class="v">77%</div><div class="k">Share aged 30+ (Master class)</div></div>
+      <div class="stat"><div class="v">1,817<span style="font-size:14px"> entries</span></div><div class="k">Kids' entries (2026)</div></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">Tournament competitors by year (unique competitors per year)</div>
+      <svg id="pchart" viewBox="0 0 720 260" role="img" aria-label="JBJJF大会の年別ユニーク出場者数の推移"></svg>
+      <div class="chart-note">
+        Competitors who entered at least once that year, from domestic tournament entry lists (approximate, since we can't tell apart people with the same name). In 2020–21, tournaments dropped sharply because of COVID.
+        2025 set a record at 5,752, and 2026 stands at 5,005 as of August. The number of tournaments we could collect varies by year, so treat this as a trend.<br>
+        The women's share, kids and 30+ figures are totals from the 2026 season of sports jiu-jitsu tournaments. The 30+ figure is the share of Master class within adult belt entries.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="beltpath">
+  <div class="wrap">
+    <div class="eyebrow" style="text-align:center">Path to Black Belt</div>
+    <h2 style="font-family:'Shippori Mincho B1',serif;font-weight:800;font-size:clamp(22px,4vw,32px);letter-spacing:.06em;text-align:center;text-wrap:balance">The Road to Black Belt</h2>
+    <p class="growth-sub">The belt distribution of tournament competitors, and the years to each promotion tracked from ranking records</p>
+
+    <div class="path-row">
+      <div class="stat"><div class="v">About 2 years</div><div class="k">White belt → Blue belt (3,045 tracked)</div></div>
+      <div class="stat"><div class="v">2–3 years</div><div class="k">Blue belt → Purple belt (2,071 tracked)</div></div>
+      <div class="stat"><div class="v">2–3 years</div><div class="k">Purple belt → Brown belt (1,170 tracked)</div></div>
+      <div class="stat"><div class="v">2–3 years</div><div class="k">Brown belt → Black belt (649 tracked)</div></div>
+      <div class="stat"><div class="v">About 8 years</div><div class="k">White belt → Black belt, measured start to finish (median 7.5 years, 44 people)</div></div>
+      <div class="stat"><div class="v">42%</div><div class="k">Those who debuted at White belt and reached Blue belt or higher (4,501 tracked)</div></div>
+    </div>
+
+    <div class="chart-box" style="margin-bottom:14px">
+      <div class="chart-title">Belt distribution of tournament competitors (2026)</div>
+      <div style="font-size:11.5px;color:var(--muted);letter-spacing:.06em;padding:0 6px 6px">Domestic tournaments (39 tournaments, 5,280 entries)</div>
+      <div class="belt-bar" id="beltbar"></div>
+      <div style="font-size:11.5px;color:var(--muted);letter-spacing:.06em;padding:12px 6px 6px">SJJIF World Championship 2026 (1,977 entries from Japan)</div>
+      <div class="belt-bar" id="beltbar3"></div>
+      <div class="belt-legend" id="beltlegend"></div>
+    </div>
+
+    <div class="hist-grid">
+      <div class="hist-box">
+        <div class="t">Years from White belt to Black belt (breakdown of the 44 tracked)</div>
+        <div class="hist" id="hist-pb"></div>
+      </div>
+      <div class="hist-box">
+        <div class="t">Years from White belt to Blue belt (breakdown of the 3,045 tracked)</div>
+        <div class="hist" id="hist-bb"></div>
+      </div>
+    </div>
+
+    <div class="chart-note" style="padding-top:14px">
+      Years to promotion: we looked at 19,061 competitors who appear in domestic tournament entry lists (2016–2026, 423 tournaments, 95,527 total entries), leaving out 624 with conflicting data that seem to be different people with the same name. For each one, we took the gap between their first tournament year at one belt and their first tournament year at the next.
+      "White belt → Black belt" is measured only from the 44 people confirmed to have competed at white, at black, and at least twice at the belts in between.<br>
+      These are estimates from tournament records, not exact promotion dates, and they come from the dedicated people who keep competing. People generally say white to black takes 8 to 10 years, and the measured median of 7.5 years fits with that.
+      The belt distribution combines 2026 tournament entries from Japan's two federation systems (24 sports jiu-jitsu tournaments + 15 IBJJF-system tournaments, kids excluded). At regular tournaments, black belts make up 2 to 6% of competitors, but at the world championship level they rise to around 15% and white belts drop. The higher the level of the tournament, the more the upper belts gather, and the numbers show exactly that. "Blue belt → Black belt" had few directly tracked cases, so it's a stacked estimate adding the measured blue → purple and purple → black figures.
+    </div>
+  </div>
+</section>
+
+<div class="db-link"><a href="/dojo/">🥋 Find a gym in the Japan Jiu-Jitsu Gym Guide</a></div>
+
+<footer>
+  <div class="wrap">
+    Sources: ASJJF tournament system (SJJIF World Championship and SJJJF domestic tournaments, 2026 season) / public materials from the Japan Brazilian Jiu-Jitsu Federation (yearly archives of its member academy list, tournament entry lists 2016–2026, 423 tournaments).<br>
+    All figures are tallied from publicly available tournament records, and years to promotion are estimates based on competition records. The history timeline is based on various public sources.
+  </div>
+</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+/* ================= 推移グラフ ================= */
+const GROWTH = [[2018,253],[2019,261],[2020,270],[2021,282],[2022,302],[2023,306],[2024,331],[2025,354],[2026,390]];
+(function(){
+  const svg = document.getElementById("gchart");
+  const NS = "http://www.w3.org/2000/svg";
+  const W=720, H=260, L=46, R=24, T=18, B=34;
+  const ymax = 400;
+  const x = i => L + i*(W-L-R)/(GROWTH.length-1);
+  const y = v => T + (1 - v/ymax)*(H-T-B);
+  let defs = document.createElementNS(NS,"defs");
+  defs.innerHTML = '<linearGradient id="goldgrad" x1="0" y1="0" x2="0" y2="1">'+
+    '<stop offset="0" stop-color="#c9a437" stop-opacity="0.22"/>'+
+    '<stop offset="1" stop-color="#c9a437" stop-opacity="0.02"/></linearGradient>';
+  svg.appendChild(defs);
+  // 横グリッド＋y目盛り
+  [0,100,200,300,400].forEach(v=>{
+    const ln = document.createElementNS(NS,"line");
+    ln.setAttribute("x1",L); ln.setAttribute("x2",W-R);
+    ln.setAttribute("y1",y(v)); ln.setAttribute("y2",y(v));
+    ln.setAttribute("class","ggrid"); svg.appendChild(ln);
+    const t = document.createElementNS(NS,"text");
+    t.setAttribute("x",L-8); t.setAttribute("y",y(v)+3.5);
+    t.setAttribute("text-anchor","end"); t.setAttribute("class","gtick");
+    t.textContent = v; svg.appendChild(t);
+  });
+  // エリア＋ライン
+  const pts = GROWTH.map((d,i)=>[x(i),y(d[1])]);
+  const area = document.createElementNS(NS,"path");
+  area.setAttribute("d","M"+pts.map(p=>p[0].toFixed(1)+","+p[1].toFixed(1)).join("L")+
+    `L${(W-R).toFixed(1)},${y(0)}L${L},${y(0)}Z`);
+  area.setAttribute("class","garea"); svg.appendChild(area);
+  const line = document.createElementNS(NS,"path");
+  line.setAttribute("d","M"+pts.map(p=>p[0].toFixed(1)+","+p[1].toFixed(1)).join("L"));
+  line.setAttribute("class","gline"); svg.appendChild(line);
+  // x目盛り
+  GROWTH.forEach((d,i)=>{
+    const t = document.createElementNS(NS,"text");
+    t.setAttribute("x",x(i)); t.setAttribute("y",H-12);
+    t.setAttribute("text-anchor","middle"); t.setAttribute("class","gtick");
+    t.textContent = d[0]; svg.appendChild(t);
+  });
+  // ツールチップ（チャート専用）
+  const box = svg.closest(".chart-box");
+  const tip2 = document.createElement("div");
+  tip2.className = "map-tip";
+  box.appendChild(tip2);
+  // 点＋端点ラベル＋ホバー
+  GROWTH.forEach((d,i)=>{
+    const c = document.createElementNS(NS,"circle");
+    c.setAttribute("cx",x(i)); c.setAttribute("cy",y(d[1]));
+    c.setAttribute("r", i===GROWTH.length-1 ? 5 : 3.5);
+    c.setAttribute("class","gpt");
+    c.addEventListener("mousemove", e=>{
+      const r = box.getBoundingClientRect();
+      tip2.textContent = `${d[0]}: ${d[1]} gyms`;
+      tip2.style.left = (e.clientX - r.left) + "px";
+      tip2.style.top  = (e.clientY - r.top) + "px";
+      tip2.style.display = "block";
+    });
+    c.addEventListener("mouseleave", ()=>{ tip2.style.display = "none"; });
+    svg.appendChild(c);
+    if(i===0 || i===GROWTH.length-1){
+      const t = document.createElementNS(NS,"text");
+      t.setAttribute("x",x(i)+(i===0?2:-2)); t.setAttribute("y",y(d[1])-11);
+      t.setAttribute("text-anchor",i===0?"start":"end"); t.setAttribute("class","glabel");
+      t.textContent = d[1]; svg.appendChild(t);
+    }
+  });
+})();
+
+/* ================= 黒帯までの道のり ================= */
+(function(){
+  const BELT_STYLE = {
+    "White belt":["#ffffff","#3a352a"], "Blue belt":["#2d5fa8","#ffffff"], "Purple belt":["#6a4a9e","#ffffff"],
+    "Brown belt":["#7a4a2b","#ffffff"], "Black belt":["#26221c","#e8c95e"],
+  };
+  const SETS = {
+    beltbar:  [["White belt",1822],["Blue belt",1903],["Purple belt",756],["Brown belt",511],["Black belt",288]],
+    beltbar3: [["White belt",400],["Blue belt",697],["Purple belt",340],["Brown belt",268],["Black belt",272]],
+  };
+  for(const [elid, belts] of Object.entries(SETS)){
+    const total = belts.reduce((s,b)=>s+b[1],0);
+    const bar = document.getElementById(elid);
+    belts.forEach(([name,n])=>{
+      const [bg,fg] = BELT_STYLE[name];
+      const seg = document.createElement("div");
+      seg.className = "seg";
+      seg.style.background = bg; seg.style.color = fg;
+      seg.style.flex = String(n);
+      const pct = Math.round(n*100/total);
+      seg.textContent = pct >= 12 ? `${name.replace(" belt","")} ${pct}%` : (pct>=8 ? `${pct}%` : "");
+      seg.title = `${name} ${n.toLocaleString()} entries (${pct}%)`;
+      bar.appendChild(seg);
+    });
+  }
+  const leg = document.getElementById("beltlegend");
+  Object.entries(BELT_STYLE).forEach(([name,[bg]])=>{
+    const c = document.createElement("span");
+    c.className = "chip";
+    c.style.border = "none"; c.style.padding = "0"; c.style.cursor = "default"; c.style.background = "transparent";
+    c.innerHTML = `<span class="sw" style="background:${bg}"></span>${name}`;
+    leg.appendChild(c);
+  });
+  const HIST = {
+    "hist-pb": [[3,1],[4,2],[5,7],[6,5],[7,7],[8,15],[9,5],[10,2]],
+    "hist-bb": [[1,1434],[2,825],[3,371],[4,178],[5,111],[6,67],[7,37],[8,14],[9,5],[10,3]],
+  };
+  for(const [id, data] of Object.entries(HIST)){
+    const host = document.getElementById(id);
+    const max = Math.max(...data.map(d=>d[1]));
+    data.forEach(([y,n])=>{
+      const col = document.createElement("div"); col.className="col";
+      col.innerHTML = `<span class="n">${n}</span><div class="bar" style="height:${Math.round(n*88/max)}%"></div><span class="y">${y}</span>`;
+      host.appendChild(col);
+    });
+  }
+})();
+
+
+/* ================= 競技人口 ================= */
+(function(){
+  const P = [[2016,1934],[2017,3463],[2018,4016],[2019,4662],[2020,1951],[2021,2130],[2022,4734],[2023,5011],[2024,5727],[2025,5752],[2026,5005]];
+  const svg = document.getElementById("pchart");
+  if(!svg) return;
+  const NS = "http://www.w3.org/2000/svg";
+  const W=720, H=260, L=52, R=24, T=18, B=34, ymax=6000;
+  const x = i => L + i*(W-L-R)/(P.length-1);
+  const y = v => T + (1 - v/ymax)*(H-T-B);
+  const defs = document.createElementNS(NS,"defs");
+  defs.innerHTML = '<linearGradient id="popgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9a437" stop-opacity="0.2"/><stop offset="1" stop-color="#c9a437" stop-opacity="0.02"/></linearGradient>';
+  svg.appendChild(defs);
+  [0,2000,4000,6000].forEach(v=>{
+    const ln = document.createElementNS(NS,"line");
+    ln.setAttribute("x1",L); ln.setAttribute("x2",W-R); ln.setAttribute("y1",y(v)); ln.setAttribute("y2",y(v));
+    ln.setAttribute("class","ggrid"); svg.appendChild(ln);
+    const t = document.createElementNS(NS,"text");
+    t.setAttribute("x",L-8); t.setAttribute("y",y(v)+3.5); t.setAttribute("text-anchor","end"); t.setAttribute("class","gtick");
+    t.textContent = v.toLocaleString(); svg.appendChild(t);
+  });
+  const pts = P.map((d,i)=>[x(i),y(d[1])]);
+  const area = document.createElementNS(NS,"path");
+  area.setAttribute("d","M"+pts.map(p=>p[0].toFixed(1)+","+p[1].toFixed(1)).join("L")+`L${(W-R).toFixed(1)},${y(0)}L${L},${y(0)}Z`);
+  area.setAttribute("fill","url(#popgrad)"); svg.appendChild(area);
+  const line = document.createElementNS(NS,"path");
+  line.setAttribute("d","M"+pts.map(p=>p[0].toFixed(1)+","+p[1].toFixed(1)).join("L"));
+  line.setAttribute("class","gline"); svg.appendChild(line);
+  P.forEach((d,i)=>{
+    const t = document.createElementNS(NS,"text");
+    t.setAttribute("x",x(i)); t.setAttribute("y",H-12); t.setAttribute("text-anchor","middle"); t.setAttribute("class","gtick");
+    t.textContent = String(d[0]).slice(2); svg.appendChild(t);
+    const c = document.createElementNS(NS,"circle");
+    c.setAttribute("cx",x(i)); c.setAttribute("cy",y(d[1])); c.setAttribute("r", i===P.length-2?5:3.2);
+    c.setAttribute("class","gpt");
+    c.setAttribute("aria-label", `${d[0]}: ${d[1].toLocaleString()} people`);
+    svg.appendChild(c);
+    if(i===0 || i===P.length-2){
+      const tt = document.createElementNS(NS,"text");
+      tt.setAttribute("x",x(i)); tt.setAttribute("y",y(d[1])-11); tt.setAttribute("text-anchor","middle"); tt.setAttribute("class","glabel");
+      tt.textContent = d[1].toLocaleString(); svg.appendChild(tt);
+    }
+  });
+  // コロナ注記
+  const note = document.createElementNS(NS,"text");
+  note.setAttribute("x", x(4.5)); note.setAttribute("y", y(1400));
+  note.setAttribute("text-anchor","middle"); note.setAttribute("class","gtick");
+  note.textContent = "COVID"; svg.appendChild(note);
+})();
+</script>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/nikki/2026-10-04/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/nikki/2026-10-04/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/nikki/2026-10-04/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/nikki/2026-10-04/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/nikki/2026-10-04/">
+<link rel="canonical" href="https://jiujitsu.co.jp/ko/blog/nikki/2026-10-04/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>대회 당일, 운영하면서 AI에게 부탁한 3가지｜Jiu Labo 블로그</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="오늘은 SJJJF 홋카이도의 주짓수 대회 “리버설 컵 삿포로” 당일이었어요. 대회장 운영으로 정신없는 날에 사과 공지, 지난 대회 분석, 다음 대회 기획까지 그날 안에 끝낼 수 있었어요. 대회를 운영하는 분들이 그대로 따라 할 수 있게 정리해 볼게요.">
+<meta property="og:title" content="대회 당일, 운영하면서 AI에게 부탁한 3가지｜Jiu Labo 블로그">
+<meta property="og:description" content="오늘은 SJJJF 홋카이도의 주짓수 대회 “리버설 컵 삿포로” 당일이었어요. 대회장 운영으로 정신없는 날에 사과 공지, 지난 대회 분석, 다음 대회 기획까지 그날 안에 끝낼 수 있었어요. 대회를 운영하는 분들이 그대로 따라 할 수 있게 정리해 볼게요.">
+<meta property="og:url" content="https://jiujitsu.co.jp/ko/blog/nikki/2026-10-04/">
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/atom+xml" title="Jiu Labo 새 소식" href="/feed.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 1.95; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { color: inherit; text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; word-break: auto-phrase; text-wrap: balance; }
+  .meta, .lede { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 40px; }
+  article p { margin: 0 0 1.4em; }
+  .did { list-style: none; margin: 8px 0 32px; padding: 0; counter-reset: did; border-top: 1px solid var(--line); }
+  .did li { counter-increment: did; padding: 18px 0 16px 44px; border-bottom: 1px solid var(--line); position: relative; }
+  .did li::before { content: counter(did); position: absolute; left: 4px; top: 20px; width: 26px; height: 26px; border-radius: 50%; background: var(--panel); border: 1px solid var(--gold); color: var(--gold); font-size: 12.5px; font-weight: 700; text-align: center; line-height: 24px; }
+  .did h2 { font-family: var(--mincho); font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: .04em; line-height: 1.6; margin: 0 0 4px; word-break: auto-phrase; text-wrap: pretty; }
+  .did p { margin: 0; font-size: 14.5px; }
+  .ask { margin: 12px 0 0; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 10px 14px; }
+  .ask span { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; color: var(--gold); }
+  .did .ask p { font-size: 14.5px; color: var(--ink); }
+  .did .ask p::before { content: "「"; } .did .ask p::after { content: "」"; }
+  .did .tip { margin: 10px 0 0; font-size: 13.5px; }
+  .tip b { color: var(--gold); margin-right: 8px; font-size: 12px; letter-spacing: .08em; }
+  .did .see { margin: 8px 0 0; font-size: 13.5px; font-weight: 700; }
+  .did .see a { text-decoration: none; }
+  .closing { background: var(--panel); border-left: 3px solid var(--gold); padding: 14px 18px; }
+  .auto { font-size: 12.5px; color: var(--faint); }
+  .note { font-size: 12px; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 40px; }
+
+  .pager { display: flex; justify-content: space-between; gap: 12px; margin: 36px 0 0; font-size: 13.5px; }
+  .pager a { text-decoration: none; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+    article { font-size: 15px; }
+    .did li { padding-left: 38px; }
+    .did h2 { font-size: 16px; }
+  }
+  /* スマホで小さい字を底上げ（~/.claude/scripts/sp_readable.py と同じ値） */
+  @media (max-width:640px){.brand{font-size:12px}.ask span{font-size:12.5px}}
+</style>
+
+<header>
+  <p class="brand"><a href="/ko/blog/">JIU LABO BLOG</a>　·　일기</p>
+  <h1>대회 당일, 운영하면서 AI에게 부탁한 3가지</h1>
+  <p class="meta"><time datetime="2026-10-04">2026.10.04 (일)</time>　무라타 아이 (매니저)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>오늘은 SJJJF 홋카이도의 주짓수 대회 “리버설 컵 삿포로” 당일이었어요. 대회장 운영으로 정신없는 날에 사과 공지, 지난 대회 분석, 다음 대회 기획까지 그날 안에 끝낼 수 있었어요. 대회를 운영하는 분들이 그대로 따라 할 수 있게 정리해 볼게요.</p>
+    <ol class="did">
+      <li><h2>당일에 실수를 발견하면 사과는 바로 내기</h2><p>대회 메달의 연도를 "2026"이 아니라 "2006"으로 만들어 버렸다는 걸 당일에야 알았어요. 바로 SNS 스토리용 사과 이미지를 만들었어요. 연맹 로고를 넣고, 메달이 전부 보이게 했어요. 처음 안에는 개최지 등도 들어 있었지만, 전하고 싶은 건 "연도가 틀렸다"는 것뿐이라서 뺐어요.</p>
+        <div class="ask"><span>따라 한다면 이렇게 부탁해요</span><p>메달 연도를 잘못 만들어 버렸으니까 SNS 스토리용으로 정중한 사과문을 만들어 줘. 연맹 로고를 넣고, 메달이 전부 보이게 해 줘</p></div>
+        <p class="tip"><b>발견</b>사과는 하고 싶은 말을 더하기보다 쓸데없는 말을 줄이는 쪽이 잘 전해져요. 안이 나오면 "이건 필요 없어" 하고 빼 달라고 하기만 했는데, 짧고 솔직한 글이 됐어요.</p>
+      </li>
+      <li><h2>과거 참가자 수를 어른과 키즈로 나눠서 보기</h2><p>이 대회의 과거 신청 데이터를 Box 공유 링크째로 넘기고 분석해 달라고 했어요. 2022년부터 모으니 어른과 키즈 인원의 흐름, 2024년부터 연 2회 개최가 된 뒤의 변화가 한눈에 보여요. 결과는 PDF로 정리하고, 인스타용 참가자 수 그래프도 만들었어요. 그래프는 색을 밝게 하고 주최 단체 로고도 넣었어요.</p>
+        <div class="ask"><span>따라 한다면 이렇게 부탁해요</span><p>이 대회의 과거 데이터를 어른, 키즈, 대회별로 나눠서 분석해 줘. PDF로 정리하고 인스타용 그래프도 만들어 줘</p></div>
+        <p class="tip"><b>발견</b>처음에 "무엇과 무엇으로 나눠서 보고 싶은지"를 전하는 게 지름길이에요. 데이터가 부족한 해가 있어도 나중에 추가로 넘기면 다시 정리해 줘요.</p>
+      </li>
+      <li><h2>시니어 대회는 몇 살로 끊어야 사람이 모일까</h2><p>전일본 선수권 마스터 카테고리(30세 이상 부문) 참가자를 SJ와 JB 두 단체를 합쳐서 나이별로 뽑아 달라고 했어요. 시니어 대회를 연다면 몇 살 이상으로 해야 몇 명쯤 나올 수 있을까. 인원과 비율을 표로 만들고 가로 막대그래프로도 비교했어요.</p>
+        <div class="ask"><span>따라 한다면 이렇게 부탁해요</span><p>전일본 마스터 카테고리 참가자를 나이별 인원과 비율로 표로 만들어 줘. 시니어 대회라면 몇 살 이상으로 하는 게 가장 좋은지도 알려 줘</p></div>
+        <p class="tip"><b>발견</b>"표로 만들어 줘"로 끝내지 말고 "몇 살로 끊는 게 가장 좋은지"처럼 결정하고 싶은 걸 그대로 물으면, 표와 함께 추천까지 나와요.</p>
+      </li>
+    </ol>
+    <p class="closing">이 밖에 전일본 부스에 내놓을 어린이용 간판과 동그란 스티커도 만들었어요. 대회 날은 손이 멈추기 쉬운데, 글, 이미지, 집계를 그 자리에서 부탁할 수 있어서 반성도 다음 기획도 따끈따끈할 때 형태로 만들 수 있었어요.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+    <p class="pager"><a href="/ko/blog/nikki/2026-10-01/">← 이전 일기 (2026.10.01 (목))</a><span></span></p>
+    <p class="note">이 일기는 그날 이 사이트에 들어간 변경 기록을 바탕으로 Claude가 초안을 쓰고, 무라타가 읽어 본 뒤에 올리고 있어요.</p>
+  </article>
+
+  <footer>
+    <a href="/ko/blog/">블로그 목록으로</a>　/　<a href="/ko/">jiujitsu.co.jp 홈으로</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>

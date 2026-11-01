@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/php-zeijakusei/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/php-zeijakusei/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/php-zeijakusei/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/php-zeijakusei/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/php-zeijakusei/">
+<link rel="canonical" href="https://jiujitsu.co.jp/pt/blog/php-zeijakusei/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>O dia em que perguntei ao Claude: “O PHP está seguro?” O que está acontecendo em sites do mundo todo</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Em outubro de 2026, foram encontradas 2 falhas de gravidade 9,2 no PHP, que faz sites funcionarem. Resumo o que descobri ao perguntar ao Claude “meu site está seguro?” e o que quem tem site deve verificar.">
+<meta property="og:title" content="O dia em que perguntei ao Claude: “O PHP está seguro?” O que está acontecendo em sites do mundo todo">
+<meta property="og:description" content="2 falhas de gravidade 9,2 no PHP. O que descobri perguntando se o nosso site estava seguro.">
+<meta property="og:url" content="https://jiujitsu.co.jp/pt/blog/php-zeijakusei/">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 24px 0 32px; }
+  .stat { background: var(--k); border-top: 3px solid var(--gold-hi); padding: 16px 16px 14px; text-align: center; }
+  .stat .lbl { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold-hi); font-weight: 700; }
+  .stat b { display: block; font-family: var(--mincho); font-size: 30px; color: #f3ecd8; letter-spacing: .04em; line-height: 1.4; }
+  .stat small { display: block; font-size: 12px; color: #b0a88f; line-height: 1.6; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; font-variant-numeric: tabular-nums; }
+  .tbl th, .tbl td { border-bottom: 1px solid var(--line); padding: 9px 8px; text-align: right; }
+  .tbl th:first-child, .tbl td:first-child { text-align: left; }
+  .tbl thead th { font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; border-bottom: 2px solid var(--gold); }
+  @media (max-width: 560px) { .tbl { font-size: 13px; } .tbl th, .tbl td { padding: 8px 4px; } }
+  .doc { margin: 24px 0 32px; border: 1px solid var(--line); background: #fff; box-shadow: 0 2px 10px rgba(23,20,13,.06); font-size: 13px; line-height: 1.75; }
+  .doc .dh { padding: 12px 16px; border-bottom: 1px solid var(--line); background: var(--panel); font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; }
+  .doc table { width: 100%; border-collapse: collapse; }
+  .doc th, .doc td { border-bottom: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; color: var(--ink); }
+  .doc thead th { font-size: 12px; color: var(--faint); font-weight: 700; }
+  .doc td:first-child { white-space: nowrap; color: var(--body-c); }
+  .sumi { display: inline-block; background: var(--k); color: transparent; border-radius: 2px; height: 1.05em; vertical-align: -.15em; user-select: none; }
+  .note { font-size: 12px; color: var(--faint); margin: -20px 0 28px; }
+  .toc { list-style: none; counter-reset: t; margin: 20px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+  .toc li { counter-increment: t; background: var(--panel); border: 1px solid var(--line); padding: 10px 14px; font-size: 14px; color: var(--ink); line-height: 1.6; }
+  .toc li::before { content: counter(t, decimal-leading-zero); display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .toc li small { display: block; font-size: 12px; color: var(--faint); }
+  @media (max-width: 560px) { .toc { grid-template-columns: 1fr; } .doc { font-size: 12.5px; } .doc th, .doc td { padding: 7px 6px; } }
+  .fig { margin: 28px 0 12px; }
+  .fig img { display: block; width: 100%; height: auto; border-radius: 4px; }
+  .fig figcaption { font-size: 12px; color: var(--faint); margin-top: 8px; line-height: 1.7; }
+</style>
+
+<header>
+  <p class="brand"><a href="/pt/blog/">JIU LABO BLOG</a></p>
+  <h1>O dia em que perguntei ao Claude “o PHP está ok?”.<br>O que está acontecendo com sites do mundo todo</h1>
+  <p class="meta"><time datetime="2026-10-22">2026.10.22</time> Ai Murata (gerente)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>Ontem à noite, vi nas notícias a manchete “falha grave no PHP”. Eu nem sei direito o que é PHP, mas fiquei meio preocupada e fiz ao Claude <b>só uma perguntinha</b>.</p>
+    <ul class="talk">
+      <li>php tá tudo bem?</li>
+    </ul>
+    <p>Aí o Claude verificou todos os arquivos deste site (jiujitsu.co.jp) e me respondeu assim.</p>
+    <blockquote><p>Este site não usa PHP em nenhuma parte, então está tudo bem.</p></blockquote>
+    <p>Aliviada, continuei: “o que tá acontecendo no mundo?”. Hoje resumo, do meu jeito, o que ele me explicou.</p>
+
+    <h2>Antes de tudo, o que é PHP?</h2>
+    <p>PHP é <b>uma linguagem de programação usada para fazer sites funcionarem</b>. O WordPress, muito usado em blogs e sites de lojas, também roda em PHP. Parece que muitos sites do mundo inteiro usam PHP nos bastidores.</p>
+    <p>Ou seja, se o PHP tem uma falha, <b>sites do mundo todo ficam em perigo ao mesmo tempo</b>.</p>
+
+    <h2>O que aconteceu</h2>
+    <p>Foram encontradas 2 falhas. Juntas, elas são chamadas de “<b>PHP2Shell</b>”.</p>
+    <div class="stats">
+      <div class="stat"><span class="lbl">Gravidade</span><b>9,2</b><small>de um máximo de 10</small></div>
+      <div class="stat"><span class="lbl">Falhas encontradas</span><b>2</b><small>juntas, “PHP2Shell”</small></div>
+    </div>
+    <p>Se forem exploradas, <b>um desconhecido, sem nem fazer login, consegue rodar o programa que quiser em um servidor alheio</b>. Comparando com uma loja, é como alguém sem chave entrar pela porta dos fundos e mexer no caixa à vontade.</p>
+    <ol class="timeline">
+      <li><span class="when">20 de outubro</span><b>A equipe do PHP avisa que “há uma falha grave”</b><span class="d">Os detalhes ficaram em sigilo até a correção estar pronta. Só que, nesse mesmo dia, eles vazaram.</span></li>
+      <li><span class="when">21 de outubro</span><b>Empresas japonesas correm para reagir</b><span class="d">A Sakura Internet desligou funções de alguns serviços, e Cygames, pixiv e outras anunciaram manutenção de emergência.</span></li>
+      <li><span class="when">21 de outubro, à noite</span><b>Sai a versão corrigida</b><span class="d">Por causa do vazamento, saiu 1 dia antes do previsto, por volta das 22h40, no horário do Japão.</span></li>
+    </ol>
+    <p>Há relatos de que começaram tentativas de ataque. Mas, até a manhã de 22 de outubro, parece que ainda não se confirmou nenhum caso de invasão bem-sucedida. As explicações variam um pouco conforme a empresa que investiga, então vou continuar acompanhando as novidades.</p>
+
+    <h2>Por que o nosso site estava seguro</h2>
+    <p>Este site é feito para <b>apenas mostrar páginas já prontas</b> (parece que isso se chama “site estático”). Ele não roda um programa no servidor toda vez que alguém entra. Por isso, a falha do PHP não tem relação com ele.</p>
+    <p>Segundo o Claude, as letras “php” aparecem dentro do site. Mas eram só <b>endereços de links</b>, como o botão de compartilhar do Facebook e os sites das academias listadas no guia. Quem roda PHP é o servidor deles, não o nosso site.</p>
+    <p>As atualizações automáticas de notícias e da busca também rodam em outro sistema, sem PHP, então também não têm relação.</p>
+
+    <h2>O que quem tem site deve verificar</h2>
+    <p>O nosso estava ok, mas imagino que muitas academias e lojas tenham site. Reúno aqui o que convém verificar, até onde me explicaram.</p>
+    <ul class="tips">
+      <li><b>Você usa WordPress?</b> Se usa, também usa PHP</li>
+      <li><b>Chegou algum aviso da hospedagem ou da empresa do seu site?</b> Na maioria dos casos, é ela quem corrige o PHP do servidor. Olhe os e-mails e os avisos no painel</li>
+      <li><b>Se você mesmo administra o servidor, atualize o PHP para a versão corrigida</b> As versões corrigidas são 8.5.12, 8.4.27, 8.3.36 e 8.2.35</li>
+      <li><b>Atualizar o WordPress e os plugins não resolve</b> Isto é o mais importante. O que precisa ser corrigido é o próprio PHP, que roda por baixo</li>
+    </ul>
+    <p>Se você não sabe se o seu site usa PHP, o mais rápido é perguntar a quem fez o site ou à empresa do servidor. Perguntar ao Claude, como eu fiz, também é uma opção.</p>
+
+    <h2>Resumindo</h2>
+    <ul class="tips">
+      <li>Foram encontradas 2 falhas de gravidade 9,2 no PHP, que faz sites funcionarem</li>
+      <li>A versão corrigida já saiu. A única forma de corrigir é atualizar o próprio PHP</li>
+      <li>O jiujitsu.co.jp não usa PHP, então não foi afetado</li>
+    </ul>
+    <p>Só de mandar uma frase solta, “php tá tudo bem?”, sem nenhum capricho, ele verificou o site inteiro e ainda me explicou o que estava acontecendo no mundo. É reconfortante ter a quem perguntar o que não entendo, sem precisar entender antes.</p>
+
+    <p class="note" style="margin:32px 0 0;">Fontes: <a href="https://www.itmedia.co.jp/news/article/2610/21/2000002446/">ITmedia NEWS</a>, <a href="https://xtech.nikkei.com/atcl/nxt/column/18/00001/12112/">Nikkei xTECH</a>, <a href="https://piyolog.hatenadiary.jp/entry/2026/10/21/174516">piyolog</a>, <a href="https://blog.flatt.tech/entry/php2shell">GMO Flatt Security Blog</a>, <a href="https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html">The Hacker News</a> (todos de outubro de 2026)</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">Também quero deixar trabalho com a IA.</b><br>
+    Ajudo a transformar trabalhos mensais em “funções”. No momento, para quem já me conhece pessoalmente, é grátis para as 3 primeiras pessoas, limitado a uma ferramenta.<a href="/pt/irai/" style="color:#a3801a;white-space:nowrap;">Ajuda com IA: fale comigo →</a>
+  </p>
+
+  <footer>
+    <a href="/pt/blog/">Todos os textos do blog</a> / <a href="/pt/">Início do jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}.timeline .when{font-size:12px}.stat .lbl{font-size:12px}}</style>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/seikyusho-claude/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/seikyusho-claude/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/seikyusho-claude/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/seikyusho-claude/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/seikyusho-claude/">
+<link rel="canonical" href="https://jiujitsu.co.jp/en/blog/seikyusho-claude/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Having Claude review a year of invoices</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The contractor invoices I've been making alone every month. When I had Claude look back through a year of them, it found mistakes I'd never have noticed in my lifetime. My fourth post, from a manager's point of view.">
+<meta property="og:title" content="Having Claude review a year of invoices">
+<meta property="og:description" content="The invoices I've been making alone every month. Claude went back a year and found mistakes.">
+<meta property="og:url" content="https://jiujitsu.co.jp/en/blog/seikyusho-claude/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+</style>
+
+<header>
+  <p class="brand"><a href="/en/blog/">JIU LABO BLOG</a></p>
+  <h1>Having Claude review a year of invoices</h1>
+  <p class="meta"><time datetime="2026-09-28">2026.09.28</time> Ai Murata (Manager)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>Hi, this is Ai Murata. Post number 4 is about <b>how Claude saved me</b>. To be honest, it's also a story about my own mistake.</p>
+
+    <h2>The monthly invoices are incredibly detailed</h2>
+    <p>We run YAWARA and SWEEP under service contracts, so every month I make invoices for that contract work.</p>
+    <p>These invoices are incredibly detailed. It's not just the contract fee. They also include <b>line-by-line details of every personal lesson</b>.</p>
+    <ul class="tips">
+      <li>Who bought which personal lessons</li>
+      <li>When they first used them</li>
+      <li>How much they cost, and what percentage of that applies</li>
+    </ul>
+    <p>I add this up person by person, every month. Since it's money, <b>this is work that absolutely can't have mistakes</b>.</p>
+    <p>And lately, there's been more and more in there.</p>
+
+    <div class="ex">
+      <p>What goes into the monthly invoices</p>
+      <ul>
+        <li>Contract fee</li>
+        <li>Personal lesson details (YAWARA and SWEEP)</li>
+        <li>Ryozo Top Team plans (both YAWARA and SWEEP)</li>
+        <li>Sometimes, the Instructor Course</li>
+        <li>Things we bought and paid for up front</li>
+      </ul>
+    </div>
+
+    <p>I've been putting all these invoices together by myself every month.</p>
+
+    <h2>As long as people do it, mistakes happen</h2>
+    <p>I know I really should set things up so that it isn't all left to one person. But in reality, I've been doing it alone all this time.</p>
+    <p>So this time, <b>I had Claude look back through about a year of past invoices</b>.</p>
+    <p>And <b>it found mistakes in some of them</b>. Right now, I'm getting things in place to correct them.</p>
+
+    <blockquote><p>Without Claude,<br>I'd never have noticed these mistakes in my lifetime.</p></blockquote>
+
+    <p>That thought gave me chills. Because money is involved, I really want to get this right. I felt that more strongly than ever.</p>
+
+    <h2>Accurate, reliable, fast</h2>
+    <p>What impressed me most this time was <b>its ability to go back through all the past data in one go</b>.</p>
+    <p>Rechecking a year of invoices by eye would take days. And since I'm human too, I might miss the same spots again. Claude went through it all in no time, and lined up every little detail.</p>
+    <p>Honestly, I now think <b>Claude is more correct, more reliable, and faster than I am at this</b>.</p>
+
+    <h2>Even so, my own eyes get the last look</h2>
+    <p>That said, if I leave everything to Claude, I might not notice when something big goes wrong. So right now, <b>I always check everything Claude makes with my own eyes at the end</b>.</p>
+    <ul class="tips">
+      <li>Totals and cross-checking go to Claude</li>
+      <li>I do the final check on everything that comes out</li>
+      <li>Extra care wherever money moves</li>
+    </ul>
+    <p>Claude makes it fast and accurately, and I take responsibility for checking it. So far, this division of roles is what gives me the most peace of mind.</p>
+
+    <h2>A truly important partner</h2>
+    <p>As for my own mistake, I feel like, "Well, I really blew it." I'll correct things properly with everyone involved.</p>
+    <p>With all that said, what today taught me is that <b>Claude is a truly important partner I need to keep learning to use well</b>. The accuracy, and the power to zip back through past data. It was a day of being genuinely impressed.</p>
+    <p>If you're anxious about carrying your monthly paperwork all by yourself, try starting with <b>having your past work reviewed once</b>. I'm sure it'll catch things you couldn't have noticed yourself.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+
+  </article>
+
+  <footer>
+    <a href="/en/blog/">All blog posts</a> / <a href="/en/">Back to jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}}</style>
+

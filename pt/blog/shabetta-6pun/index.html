@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/shabetta-6pun/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/shabetta-6pun/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/shabetta-6pun/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/shabetta-6pun/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/shabetta-6pun/">
+<link rel="canonical" href="https://jiujitsu.co.jp/pt/blog/shabetta-6pun/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>Falei por 6 minutos. Os 14 trabalhos que pedi ao Claude em um dia</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Testei o “falar é 5 vezes mais rápido” com os registros de um dia. Falei cerca de 1.800 caracteres japoneses no total e resolvi 14 tarefas. À noite, em 1 hora e 40 minutos, toquei 6 tarefas ao mesmo tempo. Oitavo post do blog, do ponto de vista de uma gerente.">
+<meta property="og:title" content="Falei por 6 minutos. Os 14 trabalhos que pedi ao Claude em um dia">
+<meta property="og:description" content="Falei por 6 minutos. O registro de um dia em que toquei 6 tarefas ao mesmo tempo, em 1 hora e 40 minutos à noite.">
+<meta property="og:url" content="https://jiujitsu.co.jp/pt/blog/shabetta-6pun/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 24px 0 32px; }
+  .stat { background: var(--k); border-top: 3px solid var(--gold-hi); padding: 16px 16px 14px; text-align: center; }
+  .stat .lbl { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold-hi); font-weight: 700; }
+  .stat b { display: block; font-family: var(--mincho); font-size: 30px; color: #f3ecd8; letter-spacing: .04em; line-height: 1.4; }
+  .stat small { display: block; font-size: 12px; color: #b0a88f; line-height: 1.6; }
+</style>
+
+<header>
+  <p class="brand"><a href="/pt/blog/">JIU LABO BLOG</a></p>
+  <h1>Falei por 6 minutos. Os 14 trabalhos que pedi ao Claude em um dia</h1>
+  <p class="meta"><time datetime="2026-10-01">2026.10.01</time> Ai Murata (gerente)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>Oi, aqui é a Ai Murata. Neste oitavo post, trago <b>o registro de um dia</b>.</p>
+    <p>Já escrevi que “a entrada por voz é 5 vezes mais rápida do que digitar”. Mas aquilo era só impressão. Então hoje pedi ao Claude para contar os registros de um dia.</p>
+
+    <h2>O boletim de hoje</h2>
+    <div class="stats">
+      <div class="stat"><span class="lbl">Quanto falei</span><b>~1.800 caracteres</b><small>cerca de 4,5 folhas de 400 caracteres</small></div>
+      <div class="stat"><span class="lbl">Tempo falando</span><b>~6 minutos</b><small>a 300 caracteres por minuto</small></div>
+      <div class="stat"><span class="lbl">Ações do Claude</span><b>~300</b><small>abrir, pesquisar, corrigir, criar</small></div>
+      <div class="stat"><span class="lbl">Tarefas resolvidas</span><b>14</b><small>3 enquanto eu dormia</small></div>
+    </div>
+    <p>6 minutos falando, 14 tarefas. Em texto, é um pouco menos do que um post deste blog.</p>
+
+    <h2>E nem falei direito</h2>
+    <p>Relendo os registros, ri sozinha. O que mandei para o Claude foi mais ou menos isto.</p>
+    <ul class="talk">
+      <li>“Queria que você arrumasse a agenda do sweep dos dois Cambers”<small>→ Eram os dois quadros de horários da SWEEP (a academia) que estão no Canva</small></li>
+      <li>“Ryo Uzo, Ryo Uzo, sim, o presidente da empresa”<small>→ O Ryozo. Repeti 2 vezes e não corrigiu</small></li>
+      <li>“O denwasho, bem, essa de vender a gente conversa depois”<small>→ Era “teiansho” (proposta), que virou “denwasho”, algo como “documento de telefone”</small></li>
+      <li>“Pode salvar?, em magem, por favor. Em imagem, por favor”<small>→ Pode salvar, mande em imagem, por favor</small></li>
+    </ul>
+    <p>Tem “hã”, “é...” e “bem” aos montes. Mesmo assim, <b>as 14 tarefas foram entendidas sem ele perguntar de novo.</b> Ele pega o sentido pelo contexto.</p>
+
+    <h2>Manhã: 3 tarefas enquanto eu dormia</h2>
+    <p>Antes de eu acordar, funcionários de IA que rodam em horários fixos já tinham resolvido 3 tarefas.</p>
+    <ul class="tips">
+      <li>Montar a lista de tarefas do dia. Ele percebeu até que um pedido seria cancelado hoje. Foi por pouco</li>
+      <li>Vigiar se as tarefas mensais de rotina estavam mesmo concluídas</li>
+      <li>Conferir os preparativos para mudar a URL da escala de horários</li>
+    </ul>
+    <p>Nessas 3 tarefas, falei 0 caracteres.</p>
+
+    <h2>Fim da tarde: uma de cada vez, bem rápido</h2>
+    <ul class="timeline">
+      <li><span class="when">16:50</span><b>Voltar “matto” para “MAT” nos resultados ao vivo?</b><span class="d">Perguntei, e ele disse, com os motivos, que era melhor voltar. Corrigiu e já publicou.</span></li>
+      <li><span class="when">16:53</span><b>33 minutos de gravação totalmente mudos</b><span class="d">Passei o áudio de uma conversa com o Ryozo gravada no carro e ouvi: “o conteúdo é totalmente zero”. Talvez o Bluetooth do carro tenha roubado o microfone. Foi o maior choque do dia. Da próxima vez, desligo o Bluetooth para gravar.</span></li>
+      <li><span class="when">17:05</span><b>“Vou parar a notificação do LINE de atualização do site”</b><span class="d">Só isso. Com 15 caracteres japoneses, uma tarefa resolvida.</span></li>
+      <li><span class="when">19:41</span><b>“Quero ver os acessos”</b><span class="d">Com 9 caracteres japoneses, descobri que em setembro foram 140 pessoas e 690 visualizações.</span></li>
+    </ul>
+
+    <h2>Noite: 6 tarefas ao mesmo tempo em 1 hora e 40</h2>
+    <p>É isto que eu mais quero contar. Das 19:57 às 21:34, toquei estas 6 tarefas <b>ao mesmo tempo</b>.</p>
+    <div class="ex">
+      <p>As 6 tarefas que rodavam juntas</p>
+      <ul>
+        <li>Rascunho de e-mail de fatura para um cliente</li>
+        <li>Colocar o exemplo do livro de receitas no portfólio</li>
+        <li>Conversa sobre publicar este blog também no note (uma plataforma japonesa de blogs)</li>
+        <li>Organizar o pagamento do imposto municipal e a criação do cartaz do campeonato</li>
+        <li>Refazer no Canva o quadro de horários e o panfleto da academia</li>
+        <li>Levantar as movimentações financeiras da empresa no Box e nos e-mails</li>
+      </ul>
+    </div>
+    <p>O jeito é simples. Fez um pedido, enquanto o Claude trabalha você vai para a próxima tela e fala de novo. Quando volta, a resposta está pronta. É só ficar girando assim.</p>
+    <p>Pedindo para uma pessoa, no ciclo “pedir, esperar, conferir”, a mão para no “esperar”. Mas aqui <b>dá para começar o trabalho seguinte enquanto espera</b>, e por isso as 6 tarefas couberam em 1 hora e 40 minutos. A sensação é de passar falando com 6 subordinados, um de cada vez.</p>
+
+    <h3>O livro de receitas que não pode sair: troquei só o conteúdo para expor</h3>
+    <p>Das 6 tarefas, esta foi a mais divertida. Estou transformando as receitas em papel das aulas em um livro de receitas em que dá para buscar pelo ingrediente no celular. Mas o que fazer com ele vou decidir conversando com a professora, então o original ainda não pode sair em lugar nenhum.</p>
+    <p>Por isso, fiz uma <b>versão “de exposição”, com o mesmo sistema, mas trocando as receitas por 12 pratos caseiros comuns</b>, e coloquei no portfólio.</p>
+    <p>No começo, o espaço da foto tinha só um desenho de flor, e isso ficou mais triste do que eu esperava. Karaage, dashimaki tamago, tonjiru, nikujaga... Pedi para a IA gerar as fotos dos 12 pratos também, e aí sim ficou com cara de verdade. Mesmo em um exemplo, a foto faz diferença.</p>
+
+    <h3>O quadro de horários, corrigi 3 vezes</h3>
+    <p>Corrigi o quadro de horários da academia 3 vezes, falando. “Sabe o tamanho das letras?”, “não, assim não fica difícil de entender?”, “melhor fazer uma linha por hora”.</p>
+    <p>Se eu fizesse isso com um designer, ele provavelmente faria cara feia. O Claude corrigiu na hora, toda vez, e no fim ainda trocou a metade de cima do panfleto.</p>
+
+    <h2>Também teve o que não deu certo</h2>
+    <p>O e-mail da fatura parou no meio, porque a função que liga o Chrome ao Claude não conectou até o fim.</p>
+    <p>Mesmo assim, não foi um problema, porque o aviso de quando parou foi claro: “<b>Ainda não mudei nada</b>”, “Se for fazer você mesma, são estes 3 lugares”. Dá para ver de relance até onde foi e onde parou. Saber parar bem também é o que dá tranquilidade para delegar.</p>
+
+    <h2>No mesmo tempo, qual é a diferença?</h2>
+    <p>Se eu tivesse feito as 14 tarefas de hoje com as minhas mãos, levaria provavelmente 2 dias inteiros. Conferir a gravação, levantar movimentações, refazer quadros. Qualquer uma delas poderia facilmente tomar meio dia.</p>
+    <blockquote><p>O que fiz foi só falar por 6 minutos<br>e conferir o resultado.</p></blockquote>
+    <p>São 2 dicas.</p>
+    <ul class="tips">
+      <li><b>Não tente falar bonito.</b> Até “Ryo Uzo” ele entende</li>
+      <li><b>Não espere uma de cada vez.</b> Pediu, vá para a próxima. Confira quando voltar</li>
+    </ul>
+    <p>Comece hoje: pegue uma coisa que vier à cabeça e fale com o Claude do jeito que vier. Pode errar, sem problema. Eu errei 2 vezes o nome do presidente da empresa.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">Também quero deixar trabalho com a IA.</b><br>
+    Ajudo a transformar trabalhos mensais em “funções”. No momento, para quem já me conhece pessoalmente, é grátis para as 3 primeiras pessoas, limitado a uma ferramenta.<a href="/pt/irai/" style="color:#a3801a;white-space:nowrap;">Ajuda com IA: fale comigo →</a>
+  </p>
+
+  <footer>
+    <a href="/pt/blog/">Todos os textos do blog</a> / <a href="/pt/">Início do jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}.timeline .when{font-size:12px}.stat .lbl{font-size:12px}}</style>
+

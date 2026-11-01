@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/heikou-shigoto/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/heikou-shigoto/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/heikou-shigoto/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/heikou-shigoto/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/heikou-shigoto/">
+<link rel="canonical" href="https://jiujitsu.co.jp/pt/blog/heikou-shigoto/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>10 pedidos por dia, 2 a 3 por hora: contei quantas tarefas o Claude toca ao mesmo tempo para mim</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Contei 65 dias de registros de trabalho do Claude: em média peço 10 tarefas por dia, 28 nos dias mais cheios. Dentro de uma hora, costumo tocar umas 2 a 3 ao mesmo tempo. É a história de como, só de pedir a próxima coisa enquanto espero, várias tarefas passaram a rodar juntas naturalmente.">
+<meta property="og:title" content="10 pedidos por dia, 2 a 3 por hora: contei quantas tarefas o Claude toca ao mesmo tempo para mim">
+<meta property="og:description" content="Em média, 10 tarefas por dia e 2 a 3 ao mesmo tempo por hora. No pico, foram 11 em uma hora.">
+<meta property="og:url" content="https://jiujitsu.co.jp/pt/blog/heikou-shigoto/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 24px 0 32px; }
+  .stat { background: var(--k); border-top: 3px solid var(--gold-hi); padding: 16px 16px 14px; text-align: center; }
+  .stat .lbl { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold-hi); font-weight: 700; }
+  .stat b { display: block; font-family: var(--mincho); font-size: 30px; color: #f3ecd8; letter-spacing: .04em; line-height: 1.4; }
+  .stat small { display: block; font-size: 12px; color: #b0a88f; line-height: 1.6; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; font-variant-numeric: tabular-nums; }
+  .tbl th, .tbl td { border-bottom: 1px solid var(--line); padding: 9px 8px; text-align: right; }
+  .tbl th:first-child, .tbl td:first-child { text-align: left; }
+  .tbl thead th { font-size: 12px; letter-spacing: .1em; color: var(--gold); font-weight: 700; border-bottom: 2px solid var(--gold); }
+  @media (max-width: 560px) { .tbl { font-size: 13px; } .tbl th, .tbl td { padding: 8px 4px; } }
+</style>
+
+<header>
+  <p class="brand"><a href="/pt/blog/">JIU LABO BLOG</a></p>
+  <h1>10 pedidos por dia, 2 a 3 por hora: contei quantas tarefas o Claude toca ao mesmo tempo para mim</h1>
+  <p class="meta"><time datetime="2026-10-17">2026.10.17</time> Ai Murata (gerente)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>Oi, aqui é a Ai Murata.</p>
+    <p>Faço quase todo o trabalho administrativo junto com o Claude. Faturas, listas de transferências bancárias, páginas de resultados ao vivo dos campeonatos, arquivos para imprimir adesivos e placas, certificados refeitos. Quando vi, “pede isso também”, “pede aquilo também” e pedir várias coisas ao mesmo tempo já tinha virado rotina.</p>
+    <p>Mas, afinal, quantas tarefas eu costumo deixar rodando ao mesmo tempo? Fiquei curiosa e pedi ao próprio Claude para contar os registros de trabalho dele. O período foi de 12 de agosto a 17 de outubro, 65 dias, com 484 conversas.</p>
+
+    <h2>10 por dia, 28 nos dias mais cheios</h2>
+    <div class="stats">
+      <div class="stat"><span class="lbl">Tarefas pedidas por dia</span><b>10</b><small>média; 28 no dia mais cheio</small></div>
+      <div class="stat"><span class="lbl">Simultâneas por hora</span><b>2 a 3</b><small>média de 2,5</small></div>
+      <div class="stat"><span class="lbl">Hora mais cheia</span><b>11</b><small>13 de agosto</small></div>
+      <div class="stat"><span class="lbl">Mensagens enviadas</span><b>39 por dia</b><small>média dos 65 dias</small></div>
+    </div>
+    <p>Contando os registros do Claude, em média peço 10 tarefas por dia, e 28 nos dias mais cheios. Dentro de uma hora, costumo tocar umas 2 a 3 ao mesmo tempo, e no pico foram 11 tarefas em paralelo em uma hora.</p>
+
+    <h2>Quando vi, já tinha várias rodando</h2>
+    <p>Eu não decidi um dia “vou trabalhar em paralelo”.</p>
+    <p>Quando faço um pedido, fico um tempinho esperando enquanto o Claude trabalha. Nesse meio-tempo penso “ah, tem aquilo também” e peço a próxima coisa. Quando a resposta chega, confiro e peço mais uma. E assim, naturalmente, várias tarefas passaram a rodar ao mesmo tempo.</p>
+    <p>Com uma pessoa, eu ficaria sem graça: “já pedi aquilo agora, deixa isso para depois”. Com o Claude, não precisa disso. Posso pedir na hora em que penso, na ordem em que penso. Acho que essa é a maior diferença.</p>
+
+    <h2>“Ele faz tudo enquanto estou fora” não era bem assim</h2>
+    <p>Para falar a verdade, antes de contar, eu imaginava que o Claude resolvia tudo enquanto eu estava longe do computador.</p>
+    <p>Só que, olhando os registros, o paralelo acontecia mesmo <b>quando eu estava na frente do computador</b>. Nos períodos em que passei 30 minutos ou mais sem falar com o Claude, quase sempre só uma tarefa estava rodando. Isso porque, quando termina um trabalho, o Claude para e espera a minha conferência.</p>
+    <p>Ou seja, quem aumentava o número de tarefas simultâneas era o meu “ritmo de pedir”. Não é o Claude que multiplica as coisas sozinho: é esse jeito de usar, de pedir a próxima enquanto espero, que cria o paralelo.</p>
+
+    <h2>Resumindo</h2>
+    <ul class="tips">
+      <li>O meu ritmo normal é tocar <b>10 tarefas por dia, 2 a 3 por hora</b> ao mesmo tempo</li>
+      <li>O segredo do paralelo é só <b>pedir a próxima enquanto espera</b></li>
+      <li>Nem tudo anda enquanto você está fora. O que precisa de conferência, <b>você responde quando voltar</b></li>
+    </ul>
+    <p>Quando se fala em “pedir trabalho para a IA”, talvez você imagine entregar uma grande tarefa de uma vez. No meu caso, vou pedindo tarefinhas uma atrás da outra e deixo várias rodando ao mesmo tempo.</p>
+    <blockquote><p>Enquanto espera a resposta,<br>experimente pedir mais uma coisa.</p></blockquote>
+    <p>Se você ainda pede uma coisa de cada vez, experimente.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">Também quero deixar trabalho com a IA.</b><br>
+    Ajudo a transformar trabalhos mensais em “funções”. No momento, para quem já me conhece pessoalmente, é grátis para as 3 primeiras pessoas, limitado a uma ferramenta.<a href="/pt/irai/" style="color:#a3801a;white-space:nowrap;">Ajuda com IA: fale comigo →</a>
+  </p>
+
+  <footer>
+    <a href="/pt/blog/">Todos os textos do blog</a> / <a href="/pt/">Início do jiujitsu.co.jp</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}.timeline .when{font-size:12px}.stat .lbl{font-size:12px}}</style>
+

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/seikyusho-claude/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/seikyusho-claude/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/seikyusho-claude/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/seikyusho-claude/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/seikyusho-claude/">
+<link rel="canonical" href="https://jiujitsu.co.jp/ko/blog/seikyusho-claude/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>청구서 1년 치를 Claude에게 다시 봐 달라고 한 이야기</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="매달 혼자 만들어 온 업무 위탁 청구서. Claude에게 1년 치를 거슬러 올라가 봐 달라고 했더니, 저 혼자서는 평생 몰랐을 실수가 발견됐어요. 매니저의 눈으로 쓰는 블로그 네 번째 글입니다.">
+<meta property="og:title" content="청구서 1년 치를 Claude에게 다시 봐 달라고 한 이야기">
+<meta property="og:description" content="매달 혼자 만들어 온 청구서. Claude에게 1년 치를 거슬러 올라가 봐 달라고 했더니 실수가 발견된 이야기.">
+<meta property="og:url" content="https://jiujitsu.co.jp/ko/blog/seikyusho-claude/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+</style>
+
+<header>
+  <p class="brand"><a href="/ko/blog/">JIU LABO BLOG</a></p>
+  <h1>청구서 1년 치를 Claude에게 다시 봐 달라고 한 이야기</h1>
+  <p class="meta"><time datetime="2026-09-28">2026.09.28</time>　무라타 아이 (매니저)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>안녕하세요, 무라타 아이입니다. 네 번째 글인 오늘은 <b>Claude에게 도움받은 이야기</b>예요. 솔직히 말하면 제 실수 이야기이기도 해요.</p>
+
+    <h2>매달 청구서가 정말 복잡해요</h2>
+    <p>저희는 YAWARA와 SWEEP의 업무를 위탁받고 있어서, 저는 매달 업무 위탁 청구서를 만들고 있어요.</p>
+    <p>이 청구서가 정말 복잡해요. 업무 위탁비뿐만 아니라 <b>퍼스널 레슨 내역</b>도 전부 들어가요.</p>
+    <ul class="tips">
+      <li>누가 어떤 퍼스널을 샀는지</li>
+      <li>언제 처음 썼는지</li>
+      <li>금액이 얼마이고 그중 몇 퍼센트인지</li>
+    </ul>
+    <p>이걸 매달 한 사람씩 쌓아 가요. 돈 문제니까 <b>절대 틀리면 안 되는 작업</b>이에요.</p>
+    <p>게다가 요즘은 내용이 점점 늘어나고 있어요.</p>
+
+    <div class="ex">
+      <p>매달 청구에 들어가는 것</p>
+      <ul>
+        <li>업무 위탁비</li>
+        <li>퍼스널 레슨 내역 (YAWARA·SWEEP)</li>
+        <li>료조 톱 팀 플랜 (YAWARA·SWEEP 모두)</li>
+        <li>가끔 인스트럭터 양성 과정</li>
+        <li>저희가 대신 결제해서 구입한 것</li>
+      </ul>
+    </div>
+
+    <p>이런 청구를 매달 저 혼자 정리해 왔어요.</p>
+
+    <h2>사람이 하는 일이니 실수는 생겨요</h2>
+    <p>사실은 한 사람에게 다 맡기지 않는 체제를 만들어야 해요. 그건 알고 있어요. 하지만 실제로는 지금까지 줄곧 저 혼자 해 왔어요.</p>
+    <p>그래서 이번에 <b>Claude에게 과거 청구서를 1년 치쯤 거슬러 올라가 봐 달라고 했어요</b>.</p>
+    <p>그랬더니 <b>일부에서 실수가 발견됐어요</b>. 지금은 그걸 바로잡을 준비를 하고 있어요.</p>
+
+    <blockquote><p>Claude가 없었다면<br>저는 이 실수를 평생 몰랐을 거예요.</p></blockquote>
+
+    <p>그렇게 생각하니 오싹했어요. 돈이 걸린 일이니까 여기는 정말 제대로 해 나가고 싶어요. 다시 한번 강하게 그렇게 생각했어요.</p>
+
+    <h2>정확하고, 확실하고, 빨라요</h2>
+    <p>이번에 가장 감탄한 건 <b>과거 데이터를 전부 단숨에 거슬러 올라가는 힘</b>이에요.</p>
+    <p>1년 치 청구서를 사람 눈으로 다시 보려면 며칠이 걸려요. 게다가 다시 보는 저도 사람이니까 같은 곳에서 놓칠지도 몰라요. Claude는 그걸 순식간에, 그것도 세세한 부분까지 맞춰서 봐 줬어요.</p>
+    <p>솔직히 <b>이제는 제가 하는 것보다 Claude가 하는 쪽이 더 정확하고, 확실하고, 빠르다</b>고 생각해요.</p>
+
+    <h2>그래도 마지막은 제 눈으로</h2>
+    <p>다만 전부 맡겨 버리면 뭔가 큰 문제가 생겼을 때 알아차리지 못할지도 몰라요. 그래서 지금은 Claude가 만들어 준 것을 <b>마지막에 반드시 제 눈으로 전부 확인</b>하고 있어요.</p>
+    <ul class="tips">
+      <li>집계와 대조는 Claude에게 부탁해요</li>
+      <li>완성된 것은 제가 마지막에 전부 확인해요</li>
+      <li>돈이 움직이는 부분은 특히 신중하게</li>
+    </ul>
+    <p>Claude가 빠르고 정확하게 만들고, 제가 책임지고 확인해요. 이 역할 분담이 지금으로서는 가장 안심되는 형태예요.</p>
+
+    <h2>정말 중요한 파트너</h2>
+    <p>제 실수에 대해서는 "아, 저질러 버렸네" 하고 생각하고 있어요. 관련된 분들께는 제대로 바로잡아서 대응할게요.</p>
+    <p>그러면서 오늘 하루 실감한 건 <b>Claude는 앞으로 잘 다뤄 나가야 할 정말 중요한 파트너</b>라는 거였어요. 정확함과, 과거 데이터를 쭉 거슬러 올라가는 힘. 정말 대단하다고 감탄한 하루였어요.</p>
+    <p>"매달 사무 작업을 혼자 끌어안고 있어서 불안해요……"라는 분이 계시다면, 우선 <b>지난 것들을 한번 다시 봐 달라고 하는</b> 것부터 해 보세요. 혼자서는 알아차릴 수 없는 걸 분명히 알려 줄 거예요.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+
+  </article>
+
+  <footer>
+    <a href="/ko/blog/">블로그 목록으로</a>　/　<a href="/ko/">jiujitsu.co.jp 홈으로</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}}</style>
+

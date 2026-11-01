@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/blog/shabetta-6pun/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/blog/shabetta-6pun/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/blog/shabetta-6pun/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/blog/shabetta-6pun/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/blog/shabetta-6pun/">
+<link rel="canonical" href="https://jiujitsu.co.jp/ko/blog/shabetta-6pun/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>말한 건 6분. 오늘 하루 Claude에게 맡긴 14가지 일</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="&quot;음성 입력은 5배 빠르다&quot;를 하루 기록으로 확인해 봤어요. 말한 양은 합계 약 1,800자, 끝낸 일은 14건. 밤의 1시간 40분 동안은 6건을 동시에 돌리고 있었어요. 매니저의 눈으로 쓰는 블로그 여덟 번째 글입니다.">
+<meta property="og:title" content="말한 건 6분. 오늘 하루 Claude에게 맡긴 14가지 일">
+<meta property="og:description" content="말한 시간은 6분. 밤의 1시간 40분 동안 6건을 동시에 돌린 어느 하루의 기록.">
+<meta property="og:url" content="https://jiujitsu.co.jp/ko/blog/shabetta-6pun/">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    --w: #eceadf; --b: #274a7a; --p: #4d3070; --br: #5a3c22; --k: #17140d;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 80px; }
+  a { color: var(--gold); }
+
+  header { text-align: center; padding: 64px 20px 40px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 500; margin: 0; }
+  .brand a { text-decoration: none; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(22px, 5vw, 32px); color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 14px auto 16px; max-width: 20em; }
+  h1 { word-break: auto-phrase; text-wrap: balance; }
+  @media (max-width: 560px) {
+    header { padding: 36px 18px 26px; }
+    h1 { font-size: 20px; letter-spacing: .02em; line-height: 1.5; margin: 10px auto 10px; }
+  }
+  .meta { font-size: 12.5px; color: var(--faint); margin: 0; letter-spacing: .08em; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: var(--w); } .rank .b { background: var(--b); } .rank .p { background: var(--p); }
+  .rank .br { background: var(--br); } .rank .k { background: var(--k); }
+
+  article { font-size: 15.5px; padding-top: 44px; }
+  article p { margin: 0 0 1.4em; }
+  article b { color: var(--ink); }
+  article h2 { font-family: var(--mincho); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .08em; line-height: 1.6; margin: 56px 0 18px; padding-left: 14px; border-left: 3px solid var(--gold); }
+  article h3 { font-family: var(--mincho); font-weight: 700; font-size: 16.5px; color: var(--ink); letter-spacing: .06em; margin: 36px 0 10px; }
+
+  blockquote { margin: 28px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); font-family: var(--mincho); font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.9; }
+  blockquote p { margin: 0; }
+
+  .talk { margin: 24px 0 28px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .talk li { background: var(--panel); border: 1px solid var(--line); padding: 12px 18px; font-size: 14.5px; color: var(--ink); line-height: 1.8; }
+  .talk li small { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+  .tips { margin: 20px 0 28px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li { padding-left: 18px; position: relative; font-size: 15px; }
+  .tips li::before { content: ""; position: absolute; left: 0; top: 1em; width: 8px; height: 1px; background: var(--gold); }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 32px; }
+  .tool { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 18px 16px 16px; text-align: center; }
+  .tool .want { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .tool b { display: block; font-family: var(--mincho); font-size: 22px; color: var(--ink); letter-spacing: .06em; margin: 4px 0 2px; }
+  .tool span { display: block; font-size: 13px; line-height: 1.7; }
+  .tool.code { background: var(--k); border-color: var(--k); border-top-color: var(--gold-hi); }
+  .tool.code .want { color: var(--gold-hi); }
+  .tool.code b { color: #f3ecd8; }
+  .tool.code span { color: #b0a88f; }
+  @media (max-width: 560px) { .three { grid-template-columns: 1fr; } }
+
+  .ex { margin: 12px 0 24px; padding: 16px 20px; border: 1px solid var(--line); font-size: 14px; }
+  .ex p { margin: 0 0 4px; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .ex ul { margin: 0; padding-left: 1.2em; }
+  .ex li { margin: 2px 0; }
+
+  .next { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; }
+  .next p { margin: 0 0 6px; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding: 30px 0 0; text-align: center; font-size: 12px; letter-spacing: .1em; color: var(--faint); line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    article { font-size: 15px; }
+    blockquote { padding: 18px 18px; font-size: 16px; }
+  }
+
+  .timeline { list-style: none; margin: 28px 0 32px; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .timeline li:last-child::before { background: var(--gold); }
+  .timeline .when { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; }
+  .timeline b { display: block; font-family: var(--mincho); font-size: 17px; color: var(--ink); letter-spacing: .05em; line-height: 1.6; }
+  .timeline span.d { display: block; font-size: 13.5px; line-height: 1.8; }
+
+  .roster { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .roster li { background: var(--panel); color: var(--body-c); padding: 14px 16px 12px; border: 1px solid var(--line); border-top: 3px solid var(--gold-hi); font-size: 13px; line-height: 1.7; }
+  .roster li .no { display: block; font-size: 10.5px; letter-spacing: .24em; color: var(--gold); font-weight: 700; }
+  .roster li b { display: block; font-family: var(--mincho); font-size: 19px; color: var(--ink); letter-spacing: .08em; margin: 2px 0 2px; }
+  .roster li.off { background: var(--paper); border-style: dashed; border-top: 3px dashed var(--line); color: var(--faint); }
+  .roster li.off .no { color: var(--faint); }
+  @media (max-width: 560px) { .roster { grid-template-columns: 1fr; } }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 24px 0 32px; }
+  .stat { background: var(--k); border-top: 3px solid var(--gold-hi); padding: 16px 16px 14px; text-align: center; }
+  .stat .lbl { display: block; font-size: 11px; letter-spacing: .2em; color: var(--gold-hi); font-weight: 700; }
+  .stat b { display: block; font-family: var(--mincho); font-size: 30px; color: #f3ecd8; letter-spacing: .04em; line-height: 1.4; }
+  .stat small { display: block; font-size: 12px; color: #b0a88f; line-height: 1.6; }
+</style>
+
+<header>
+  <p class="brand"><a href="/ko/blog/">JIU LABO BLOG</a></p>
+  <h1>말한 건 6분. 오늘 하루 Claude에게 맡긴 14가지 일</h1>
+  <p class="meta"><time datetime="2026-10-01">2026.10.01</time>　무라타 아이 (매니저)</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+  <article>
+    <p>안녕하세요, 무라타 아이입니다. 여덟 번째 글인 오늘은 <b>어느 하루의 기록</b>이에요.</p>
+    <p>전에 "키보드로 치는 것보다 음성 입력이 5배 빠르다"라고 썼어요. 하지만 그건 체감이었어요. 그래서 오늘은 하루 치 기록을 Claude에게 세어 달라고 했어요.</p>
+
+    <h2>오늘의 성적표</h2>
+    <div class="stats">
+      <div class="stat"><span class="lbl">말한 양</span><b>약 1,800자</b><small>400자 원고지 4장 반쯤</small></div>
+      <div class="stat"><span class="lbl">말한 시간</span><b>약 6분</b><small>1분 300자로 계산</small></div>
+      <div class="stat"><span class="lbl">Claude가 움직인 횟수</span><b>약 300번</b><small>열기·조사·수정·만들기</small></div>
+      <div class="stat"><span class="lbl">끝낸 일</span><b>14건</b><small>그중 3건은 자는 동안</small></div>
+    </div>
+    <p>6분 말해서 14건. 글자로 치면 대략 이 블로그 글 한 편보다 조금 적은 정도예요.</p>
+
+    <h2>게다가 제대로 말하지도 않았어요</h2>
+    <p>기록을 다시 읽어 보고 혼자 웃어 버렸어요. 제가 Claude에게 보낸 말은 이런 식이에요. 일본어 음성 입력의 오변환이라 원문을 로마자로 적을게요.</p>
+    <ul class="talk">
+      <li>"kyanba futatsu(캠버 두 개)의 SWEEP 스케줄을 고쳐 줬으면 해서"<small>→ Canva에 2개 있는 SWEEP(도장) 스케줄표를 말해요</small></li>
+      <li>"Ryo-uzo, Ryo-uzo요, 회사 대표요"<small>→ 료조 씨 이름이 엉뚱한 글자로 변환됐어요. 두 번 다시 말해도 안 고쳐졌어요</small></li>
+      <li>"denwasho(전화서)는, 뭐, 파는 건 다음에 상의합시다"<small>→ teiansho(제안서)를 말해요</small></li>
+      <li>"저장해도 될까요, zo로 주세요. 이미지로 주세요"<small>→ 저장해도 돼요, 이미지로 주세요</small></li>
+    </ul>
+    <p>"음", "저기", "뭐"도 산더미처럼 들어 있어요. 그래도 <b>14건 모두 되묻지 않고 전해졌어요.</b> 앞뒤 흐름에서 제대로 뜻을 읽어 줘요.</p>
+
+    <h2>아침: 자는 동안 3건</h2>
+    <p>아침에 일어나기 전에, 정해진 시간에 움직이는 AI 직원이 3건을 끝내 뒀어요.</p>
+    <ul class="tips">
+      <li>오늘의 할 일 목록 만들기. 오늘 취소될 주문이 있다는 것까지 찾아 줬어요. 큰일 날 뻔했어요</li>
+      <li>매달 정기 작업이 제대로 끝났는지 지켜보기</li>
+      <li>시프트표 URL을 옮길 준비 확인</li>
+    </ul>
+    <p>이 3건에서 제가 말한 건 0자예요.</p>
+
+    <h2>저녁: 하나씩 척척</h2>
+    <ul class="timeline">
+      <li><span class="when">16:50</span><b>대회 실시간 결과의 "matto"를 "MAT"로 되돌릴까?</b><span class="d">상의했더니 이유까지 붙여서 "되돌리는 게 좋아요". 그대로 고치고 공개까지.</span></li>
+      <li><span class="when">16:53</span><b>33분 녹음이 통째로 무음이었어요</b><span class="d">료조 씨 이야기를 차 안에서 녹음한 파일을 건넸더니 "내용이 완전히 제로입니다". 차의 Bluetooth가 마이크를 가져갔는지도 몰라요. 오늘 가장 큰 충격이었어요. 다음부터는 Bluetooth를 끄고 녹음할 거예요.</span></li>
+      <li><span class="when">17:05</span><b>"홈페이지 업데이트 LINE 알림 그만할래"</b><span class="d">이게 전부예요. 일본어로 15글자에 1건이 끝났어요.</span></li>
+      <li><span class="when">19:41</span><b>"접속자 수 보고 싶어"</b><span class="d">일본어로 9글자에, 9월에는 140명이 690번 봤다는 걸 알았어요.</span></li>
+    </ul>
+
+    <h2>밤: 1시간 40분 동안 6건을 동시에</h2>
+    <p>가장 전하고 싶은 건 여기예요. 밤 19:57부터 21:34까지 저는 이 6건을 <b>동시에</b> 진행하고 있었어요.</p>
+    <div class="ex">
+      <p>동시에 돌아간 6건</p>
+      <ul>
+        <li>거래처에 보낼 청구서 메일 초안</li>
+        <li>레시피집 샘플을 작품집에 올리기</li>
+        <li>이 블로그를 note에도 올리는 상담</li>
+        <li>주민세 납부와 대회 포스터 제작 준비</li>
+        <li>도장 스케줄표와 전단지를 Canva로 다시 만들기</li>
+        <li>회사 돈 내역을 Box와 메일에서 찾아내기</li>
+      </ul>
+    </div>
+    <p>방법은 간단해요. 한 건 부탁하면 Claude가 작업하는 동안 다음 화면으로 넘어가서 또 말을 걸어요. 돌아오면 답이 나와 있어요. 이걸 빙글빙글 돌리기만 하면 돼요.</p>
+    <p>사람에게 부탁할 때는 "부탁하고, 기다리고, 확인한다"에서 "기다리고"에서 손이 멈춰요. 하지만 <b>기다리는 동안 다음 일을 시작할 수 있어서</b> 6건이 1시간 40분 안에 들어갔어요. 느낌으로는 부하 직원 6명에게 차례로 말을 걸며 돌아다니는 것 같아요.</p>
+
+    <h3>공개할 수 없는 레시피집은 내용만 바꿔서 전시</h3>
+    <p>6건 중 조금 재미있었던 게 이거예요. 요리 교실의 종이 레시피를 휴대폰에서 재료로 찾을 수 있는 레시피집으로 만들고 있어요. 하지만 앞으로 어떻게 할지는 선생님과 상의해서 정하기 때문에 진짜는 아직 어디에도 내놓을 수 없어요.</p>
+    <p>그래서 <b>구조는 그대로 두고 레시피만 일반적인 가정 요리 12가지로 바꾼 "전시용"</b>을 만들어서 작품집에 올렸어요.</p>
+    <p>처음에는 사진 칸에 꽃 마크만 들어 있었는데, 이게 생각보다 썰렁했어요. 가라아게, 달걀말이(다시마키), 돈지루, 니쿠자가…… 12가지 요리 사진도 AI로 만들어 달라고 해서 겨우 그럴듯해졌어요. 샘플이라도 사진은 중요해요.</p>
+
+    <h3>스케줄표는 3번 고쳤어요</h3>
+    <p>도장 스케줄표는 말하면서 3번 고쳤어요. "글자 크기가 말이야", "아니, 그러면 알아보기 어렵지 않아?", "역시 1시간마다 1줄로 하자".</p>
+    <p>디자이너에게 이렇게 했다면 아마 싫은 표정을 지었을 거예요. Claude는 매번 바로 고쳐 주고, 마지막에는 전단지 위쪽 절반까지 바꿔 줬어요.</p>
+
+    <h2>잘 안 된 일도</h2>
+    <p>청구서 메일은 Chrome과 Claude를 연결하는 기능이 끝까지 연결되지 않아서 도중에 멈췄어요.</p>
+    <p>그래도 곤란하지 않았던 건 멈췄을 때 보고가 분명했기 때문이에요. "<b>아직 아무것도 바꾸지 않았습니다</b>", "직접 하신다면 이 3군데입니다". 어디까지 했고 어디서 멈췄는지 한눈에 알 수 있어요. 잘 멈출 줄 아는 것도 안심하고 맡길 수 있는 이유라고 생각해요.</p>
+
+    <h2>같은 시간으로 얼마나 다를까</h2>
+    <p>오늘 14건을 전부 제 손으로 했다면 아마 꼬박 이틀은 걸렸을 거예요. 녹음 확인, 내역 찾아내기, 표 다시 만들기. 어느 것이든 한 건에 반나절이 날아가도 이상하지 않은 일이에요.</p>
+    <blockquote><p>제가 한 건 6분 말한 것과<br>완성된 걸 확인한 것뿐.</p></blockquote>
+    <p>요령은 2가지예요.</p>
+    <ul class="tips">
+      <li><b>깔끔하게 말하려고 하지 않기.</b> "Ryo-uzo"로 나와도 전해져요</li>
+      <li><b>한 건씩 기다리지 않기.</b> 부탁했으면 다음으로. 돌아왔을 때 확인하면 돼요</li>
+    </ul>
+    <p>우선 오늘, 생각난 걸 하나 그대로 Claude에게 말해 보세요. 말을 잘못해도 괜찮아요. 저는 회사 대표 이름을 두 번이나 틀렸는걸요.</p>
+
+    <div class="share"></div>
+    <script src="/blog/share.js"></script>
+  </article>
+
+  <p style="margin:48px 0 0;padding:18px 22px;border:1px solid #a3801a;background:#fffaf0;font-size:14px;line-height:1.9;">
+    <b style="color:#17140d;">우리도 AI에게 일을 맡기고 싶다.</b><br>
+    매달 하는 작업을 “담당”으로 만드는 일을 도와드리고 있어요. 지금은 직접 만나 뵌 적이 있는 분에 한해, 선착순 3분께 도구 하나까지 무료로 해 드려요.<a href="/ko/irai/" style="color:#a3801a;white-space:nowrap;">AI 도입을 도와드립니다 →</a>
+  </p>
+
+  <footer>
+    <a href="/ko/blog/">블로그 목록으로</a>　/　<a href="/ko/">jiujitsu.co.jp 홈으로</a>
+    <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.ex p{font-size:12px}.timeline .when{font-size:12px}.stat .lbl{font-size:12px}}</style>
+

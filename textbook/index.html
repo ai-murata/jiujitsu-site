@@ -284,7 +284,7 @@
 <script>
 (function () {
   var langs = ['ja', 'ko', 'en', 'pt'], root = document.documentElement, l = null;
-  try { l = localStorage.getItem('textbook-lang'); } catch (e) {}
+  try { l = new URLSearchParams(location.search).get('lang') || localStorage.getItem('textbook-lang'); } catch (e) {}
   if (langs.indexOf(l) < 0) {
     var n = (navigator.language || 'ja').slice(0, 2);
     l = langs.indexOf(n) >= 0 ? n : 'en';

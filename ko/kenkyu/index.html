@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/kenkyu/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/kenkyu/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/kenkyu/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/kenkyu/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/kenkyu/">
+<link rel="canonical" href="https://jiujitsu.co.jp/ko/kenkyu/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>주짓수 연구 논문 가이드</title>
+<meta name="description" content="브라질리언 주짓수를 다룬 학술 논문을 부상, 체력, 시합 분석, 체중 감량, 멘탈 등 주제별로 요약해 소개합니다.">
+<meta property="og:title" content="주짓수 연구 논문 가이드">
+<meta property="og:description" content="주짓수는 과학적으로 어디까지 밝혀졌을까요? 논문 17편을 쉽게 요약했습니다.">
+<meta property="og:url" content="https://jiujitsu.co.jp/ko/kenkyu/">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --ok: #3f6b3a; --ok-bg: #edf3ea;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; font-size: 14.5px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 80px; }
+
+  header { text-align: center; padding: 64px 20px 36px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 700; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(26px, 6vw, 38px); color: var(--ink); letter-spacing: .08em; line-height: 1.5; margin: 10px 0 8px; text-wrap: balance; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  .intro { margin: 40px 0 0; font-size: 14px; }
+  .intro p { margin: 0 0 12px; }
+
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; padding: 0; list-style: none; }
+  .toc a { display: inline-block; font-size: 12.5px; color: var(--ink); text-decoration: none; border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 4px 14px; letter-spacing: .04em; }
+  .toc a:hover { border-color: var(--gold); color: var(--gold); }
+  .toc .n { color: var(--faint); margin-left: 4px; font-size: 11px; }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 21px; color: var(--ink); letter-spacing: .08em; margin: 64px 0 6px; display: flex; align-items: center; gap: 12px; scroll-margin-top: 16px; }
+  h2::before { content: "▼"; color: var(--gold); font-size: 14px; }
+  .h2sub { font-size: 12.5px; color: var(--faint); margin: 0 0 20px; letter-spacing: .04em; line-height: 1.9; }
+
+  .paper { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold); padding: 20px 22px 18px; margin: 16px 0; }
+  .paper .ja { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: .03em; line-height: 1.7; margin: 0 0 4px; }
+  .paper .en { font-size: 12px; color: var(--faint); line-height: 1.7; margin: 0 0 10px; font-style: italic; }
+  .paper .meta { font-size: 12px; color: var(--body-c); line-height: 1.8; margin: 0 0 10px; }
+  .paper .meta b { color: var(--ink); font-weight: 700; }
+  .paper ul { margin: 0 0 12px; padding-left: 1.2em; font-size: 13.5px; line-height: 1.9; }
+  .paper li { margin: 0 0 4px; }
+  .paper .memo { font-size: 13px; background: var(--paper); border: 1px dashed var(--line); padding: 8px 12px; margin: 0 0 12px; line-height: 1.85; }
+  .paper .memo b { color: var(--gold); font-weight: 700; margin-right: 6px; }
+  .links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 12px; }
+  .links a { color: var(--gold); text-decoration: none; font-weight: 700; letter-spacing: .04em; }
+  .links a:hover { text-decoration: underline; }
+  .badge { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; border-radius: 3px; padding: 1px 8px; }
+  .badge.oa { color: var(--ok); background: var(--ok-bg); }
+  .badge.pay { color: var(--faint); background: #f1eee6; }
+  .badge.kind { color: var(--gold); background: #f6efd9; }
+
+  .note { font-size: 12.5px; color: var(--faint); background: var(--panel); border: 1px solid var(--line); padding: 16px 20px; margin: 64px 0 0; line-height: 1.9; }
+  .note b { color: var(--ink); }
+  .note p { margin: 0 0 8px; }
+  .note p:last-child { margin: 0; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 22px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+
+<header>
+  <p class="brand">JIU LABO ／ KENKYU</p>
+  <h1>주짓수 연구 논문 가이드</h1>
+  <p class="lede">주짓수는 과학적으로 어디까지 밝혀졌을까요?</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <div class="intro">
+    <p>브라질리언 주짓수를 다룬 학술 논문을 모아 주제별로 요약했습니다. “초크는 위험하지 않나요?”, “시합 전 체중 감량은 몸에 어떤 영향을 주나요?”, “나이가 들어서 시작해도 효과가 있나요?”처럼 도장에서 자주 듣는 질문과 관련된 논문을 골랐습니다.</p>
+    <p>모든 논문은 PubMed나 학술지 공식 페이지에서 실제로 존재하는지 확인한 것만 실었습니다. <span class="badge oa">무료로 읽기</span> 표시가 있는 논문은 링크에서 전문을 읽을 수 있습니다.</p>
+  </div>
+
+  <ul class="toc" aria-label="주제">
+    <li><a href="#injury">부상과 안전<span class="n">5</span></a></li>
+    <li><a href="#physiology">체력과 생리학<span class="n">3</span></a></li>
+    <li><a href="#match">시합 분석<span class="n">3</span></a></li>
+    <li><a href="#weight">체중 감량과 영양<span class="n">2</span></a></li>
+    <li><a href="#health">건강과 멘탈<span class="n">3</span></a></li>
+    <li><a href="#japanese">일본어 문헌<span class="n">1</span></a></li>
+  </ul>
+
+  <!-- ========== 怪我・安全 ========== -->
+  <h2 id="injury">부상과 안전</h2>
+  <p class="h2sub">어느 부위를, 어떤 상황에서 다치기 쉬울까요? 초크 기술의 안전성에 관한 연구도 여기에 모았습니다.</p>
+
+  <article class="paper">
+    <p class="ja">주짓수 시합 중 발생하는 부상 조사</p>
+    <p class="en">Assessment of Injuries During Brazilian Jiu-Jitsu Competition</p>
+    <p class="meta"><b>Scoggin JF, et al.（2014）</b> ／ Orthopaedic Journal of Sports Medicine 2(2)</p>
+    <ul>
+      <li>미국 하와이주에서 열린 주짓수 대회 8회분(2005~2011년)의 의무 기록을 분석했습니다. 총 5,022경기에서 46건의 부상이 있었고, 1,000경기당 발생 건수는 <b>약 9.2건</b>이었습니다.</li>
+      <li>부상의 78%는 뼈나 관절 등의 정형외과적 부상이었고, 가장 많은 부위는 <b>팔꿈치</b>였습니다. 부상의 원인이 된 기술은 <b>암바</b>가 가장 많았습니다.</li>
+      <li>주짓수 시합 중 부상을 의학적으로 조사한 초기 논문입니다.</li>
+    </ul>
+    <p class="memo"><b>한마디</b>주짓수는 다른 격투기에 비해 부상이 적은 편이라는 말을 흔히 듣습니다(이 논문의 결론은 아닙니다). 그래도 팔꿈치는 조심해야 합니다. 탭은 빠르게 하세요.</p>
+    <p class="links"><span class="badge oa">무료로 읽기</span><a href="https://doi.org/10.1177/2325967114522184" target="_blank" rel="noopener">원문 읽기 →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">주짓수 선수 1,140명에게 물은 부상 경향, 위험 요인, 복귀 과정</p>
+    <p class="en">Injury Patterns, Risk Factors, and Return to Sport in Brazilian Jiu Jitsu: A Cross-sectional Survey of 1140 Athletes</p>
+    <p class="meta"><b>Hinz M, et al.（2021）</b> ／ Orthopaedic Journal of Sports Medicine 9(12)</p>
+    <ul>
+      <li>1,140명을 대상으로 한 설문에서 최근 3년간 부상을 경험한 사람은 <b>69%</b>였습니다.</li>
+      <li>가장 많은 부위는 <b>무릎</b>(20.8%)이었습니다. 부상의 약 30%는 상대에게 서브미션을 당하는 도중에 발생했습니다.</li>
+      <li>부상 위험과 관련된 요인과 복귀까지의 과정도 분석했습니다.</li>
+    </ul>
+    <p class="links"><span class="badge oa">무료로 읽기</span><a href="https://doi.org/10.1177/23259671211062568" target="_blank" rel="noopener">원문 읽기 →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">주짓수 훈련에서 흔한 부상 조사</p>
+    <p class="en">Prevalence of Injuries during Brazilian Jiu-Jitsu Training</p>
+    <p class="meta"><b>McDonald AR, et al.（2017）</b> ／ Sports 5(2)</p>
+    <ul>
+      <li>시합이 아닌 <b>평소 훈련</b> 중 부상을 미국의 도장 166곳에 보낸 설문으로 조사했습니다.</li>
+      <li>의사에게 진단받은 것 중 가장 많았던 것은 <b>피부 감염증</b>이었고, 그다음은 무릎, 발과 발가락 부상이었습니다.</li>
+      <li>본인이 신고한 부상에서는 손과 손가락, 팔과 팔꿈치, 발과 발가락이 상위를 차지했습니다.</li>
+    </ul>
+    <p class="memo"><b>한마디</b>가장 많은 것이 “감염증”이라는 점은 도장 위생 관리가 얼마나 중요한지를 보여 줍니다. 도복은 매번 세탁하고, 손발톱은 짧게 깎고, 상처가 있으면 잘 덮어 주세요.</p>
+    <p class="links"><span class="badge oa">무료로 읽기</span><a href="https://doi.org/10.3390/sports5020039" target="_blank" rel="noopener">원문 읽기 →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">경기로서의 초크는 안전한가: 설문을 통한 횡단 연구</p>
+    <p class="en">The safety of sportive chokes: a cross-sectional survey-based study</p>
+    <p class="meta"><b>Stellpflug SJ, et al.（2020）</b> ／ The Physician and Sportsmedicine 48(4)</p>
+    <ul>
+      <li>그래플링 선수 4,307명에게 초크(목의 혈관을 압박하는 기술)를 당한 경험을 물었습니다. 70% 이상이 <b>100회 이상</b> 초크를 당한 경험이 있었습니다.</li>
+      <li>초크로 의식을 잃은 경험이 있는 사람도 약 28%로, 드문 일이 아니었습니다.</li>
+      <li>후유증이 계속된다고 답한 사람은 <b>0.05%</b>였고, 그마저도 뇌 혈류 부족 때문은 아닌 것으로 보였습니다. 저자는 “경기에서의 초크는 대체로 안전하다”고 결론지었습니다.</li>
+    </ul>
+    <p class="links"><span class="badge pay">유료</span><a href="https://doi.org/10.1080/00913847.2020.1754734" target="_blank" rel="noopener">원문 읽기 →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">초크와 관련된 경동맥 손상 및 뇌경색 증례 보고</p>
+    <p class="en">Cervical Artery Dissections and Ischemic Strokes Associated with Vascular Neck Compression Techniques (Sportive Chokes)</p>
+    <p class="meta"><b>Stellpflug SJ, et al.（2022）</b> ／ Journal of Emergency Medicine 63</p>
+    <ul>
+      <li>초크를 당한 뒤 심각한 혈관 문제가 발생한 선수 <b>10건</b>의 보고입니다. 경동맥 박리가 5건, 척추동맥 박리가 3건, 박리를 동반하지 않은 뇌경색이 2건이었습니다.</li>
+      <li>바로 앞 논문과 같은 연구팀의 논문으로, “평소에는 안전해도 드물게 중대한 사고가 일어날 수 있다”는 점을 응급의학과 의사들에게 알리기 위해 쓰였습니다.</li>
+    </ul>
+    <p class="memo"><b>한마디</b>두 편을 함께 읽기를 추천합니다. 훈련 후 목 통증, 심한 두통, 저림, 말이 어눌해지는 증상이 나타나면 바로 병원에 가세요.</p>
+    <p class="links"><span class="badge pay">유료</span><a href="https://doi.org/10.1016/j.jemermed.2022.04.015" target="_blank" rel="noopener">원문 읽기 →</a></p>
+  </article>
+
+  <!-- ========== 体力・生理学 ========== -->
+  <h2 id="physiology">체력과 생리학</h2>
+  <p class="h2sub">주짓수 선수는 어떤 몸을 가졌고, 시합 중 몸 안에서는 무슨 일이 일어날까요?</p>
+
+  <article class="paper">
+    <p class="ja">주짓수 선수의 체격과 체력: 체계적 문헌 고찰</p>
+    <p class="en">Physical and Physiological Profiles of Brazilian Jiu-Jitsu Athletes: a Systematic Review</p>
+    <p class="meta"><b>Andreato LV, et al.（2017）</b> ／ Sports Medicine – Open 3</p>
+    <ul>
+      <li>2016년 1월까지의 연구를 모아 체성분, 체형, 유산소 및 무산소 능력, 근력과 파워를 정리했습니다.</li>
+      <li>주짓수 선수는 전반적으로 체지방이 낮은 편이고, <b>근육질 체형</b>이 중심이었습니다.</li>
+      <li>유산소 능력(지구력)이 높은지는 경기 수준의 차이와 크게 관련이 없는 것으로 보였습니다.</li>
+    </ul>
+    <p class="memo"><b>한마디</b>지금까지의 연구를 정리한 논문이라, 전체 그림을 잡는 첫 번째 논문으로 좋습니다.</p>
+    <p class="links"><span class="badge oa">무료로 읽기</span><a href="https://doi.org/10.1186/s40798-016-0069-5" target="_blank" rel="noopener">원문 읽기 →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">주짓수 선수의 생리, 영양, 경기력 특징</p>
+    <p class="en">Physiological, Nutritional and Performance Profiles of Brazilian Jiu-Jitsu Athletes</p>
+    <p class="meta"><b>Andreato LV, et al.（2016）</b> ／ Journal of Human Kinetics 53</p>
+    <ul>
+      <li>브라운 벨트와 블랙 벨트 선수 15명을 측정했습니다. 평균 체지방률은 <b>12.7%</b>로 근육질 체형이었습니다.</li>
+      <li>식사는 <b>탄수화물이 적고 단백질이 많은</b> 쪽으로 치우쳐 있었고, 전체적으로 질이 높지 않았습니다.</li>
+      <li>유연성도 낮은 편이어서 영양과 컨디셔닝에 개선의 여지가 있다고 정리했습니다.</li>
+    </ul>
+    <p class="links"><span class="badge oa">무료로 읽기</span><a href="https://doi.org/10.1515/hukin-2016-0029" target="_blank" rel="noopener">원문 읽기 →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">모의 대회 연구 파트 1: 대사, 호르몬, 근손상, 심박수 반응</p>
+    <p class="en">Brazilian Jiu-Jitsu Simulated Competition Part I: Metabolic, Hormonal, Cellular Damage, and Heart Rate Responses</p>
+    <p class="meta"><b>Andreato LV, et al.（2015）</b> ／ Journal of Strength and Conditioning Research 29(9)</p>
+    <ul>
+      <li>경험이 풍부한 선수 10명이 <b>10분 × 4경기</b>의 모의 대회를 치르고 혈액과 심박수를 측정했습니다.</li>
+      <li>경기마다 당을 사용하는 에너지 대사, 호르몬, 근육 손상이 뚜렷하게 반응했습니다.</li>
+      <li>후반 경기에서는 젖산과 아드레날린 등의 수치가 낮아졌습니다.</li>
+    </ul>
+    <p class="links"><span class="badge pay">유료</span><a href="https://doi.org/10.1519/JSC.0000000000000918" target="_blank" rel="noopener">원문 읽기 →</a></p>
+  </article>
+
+  <!-- ========== 試合分析 ========== -->
+  <h2 id="match">시합 분석</h2>
+  <p class="h2sub">시합 시간은 어떻게 쓰이고, 어떤 기술로 승부가 날까요?</p>
+
+  <article class="paper">
+    <p class="ja">모의 대회 연구 파트 2: 체력, 시간 구성, 기술, 주관적 힘듦</p>
+    <p class="en">Brazilian Jiu-Jitsu Simulated Competition Part II: Physical Performance, Time-Motion, Technical-Tactical Analyses, and Perceptual Responses</p>
+    <p class="meta"><b>Andreato LV, et al.（2015）</b> ／ Journal of Strength and Conditioning Research 29(7)</p>
+    <ul>
+      <li>위의 “파트 1”과 같은 모의 대회에서 시합의 시간 구성, 사용된 기술, 선수가 느낀 힘듦을 분석했습니다.</li>
+      <li><b>악력</b>은 3경기와 4경기 후에 떨어졌습니다.</li>
+      <li>반면 움직이는 시간과 멈춰 있는 시간의 비율은 경기를 거듭해도 변하지 않아, 지쳐도 움직임의 페이스는 유지되었습니다.</li>
+    </ul>
+    <p class="memo"><b>한마디</b>이기고 올라갈수록 악력부터 떨어집니다. 연전이 있는 대회에서는 악력을 얼마나 유지하느냐가 승부를 가를지도 모릅니다.</p>
+    <p class="links"><span class="badge pay">유료</span><a href="https://doi.org/10.1519/JSC.0000000000000819" target="_blank" rel="noopener">원문 읽기 →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">“포지션 비포 서브미션”은 사실일까: 노기 주짓수의 기술과 전술</p>
+    <p class="en">Position before submission? Techniques and tactics in competitive no-gi Brazilian jiu-jitsu</p>
+    <p class="meta"><b>Spanias C, Kirk C, Øvretveit K（2022）</b> ／ Revista de Artes Marciales Asiáticas 17(2)</p>
+    <ul>
+      <li>서브미션 승만 인정하는 노기 시합을 지역 대회와 국제 대회로 나누어 비교했습니다.</li>
+      <li>격렬하게 움직이는 시간과 차분한 시간의 비율은 지역 대회가 1:2, 국제 대회가 1:1이었습니다. 국제 수준일수록 움직임이 격렬해집니다.</li>
+      <li>발목 관절기(주로 <b>앵클 훅</b>)로 끝난 시합에서는 포지션을 굳히지 않은 채 잡아낸 경우가 많아, “포지션이 먼저, 서브미션은 그다음”이라는 격언에 의문을 던지고 있습니다.</li>
+    </ul>
+    <p class="links"><span class="badge oa">무료로 읽기</span><a href="https://doi.org/10.18002/rama.v17i2.7410" target="_blank" rel="noopener">원문 읽기 →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">여자 톱 선수의 시합은 체급별로 어떻게 다를까</p>
+    <p class="en">Effects of weight divisions in time-motion of female high-level Brazilian Jiu-jitsu combat behaviors</p>
+    <p class="meta"><b>dos Santos MAF, et al.（2023）</b> ／ Frontiers in Psychology 14</p>
+    <ul>
+      <li>2020년 국제 대회에서 치러진 여자 톱 선수의 <b>422경기</b>를 8개 체급으로 나누어 비교했습니다.</li>
+      <li>그립 싸움, 공격, 방어, 마운트, 가드, 사이드 컨트롤, 서브미션 등의 시간을 세밀하게 측정했습니다.</li>
+      <li>체급에 따라 시합 내용이 달랐고, 예를 들어 최중량급은 그립 싸움 시간이 짧은 편이었습니다.</li>
+    </ul>
+    <p class="links"><span class="badge oa">무료로 읽기</span><a href="https://doi.org/10.3389/fpsyg.2023.1048642" target="_blank" rel="noopener">원문 읽기 →</a></p>
+  </article>
+
+  <!-- ========== 減量・栄養 ========== -->
+  <h2 id="weight">체중 감량과 영양</h2>
+  <p class="h2sub">계체를 앞두고 선수들은 얼마나, 어떻게 체중을 줄일까요?</p>
+
+  <article class="paper">
+    <p class="ja">영국 주짓수 선수의 시합 전 체중 감량 실태</p>
+    <p class="en">Pre-competition body mass loss characteristics of Brazilian jiu-jitsu competitors in the United Kingdom</p>
+    <p class="meta"><b>White T, Kirk C（2021）</b> ／ Nutrition and Health</p>
+    <ul>
+      <li>영국에서 시합에 나가는 주짓수 선수들에게 체중 감량에 관한 설문을 실시했습니다.</li>
+      <li>시합 전 체중 감량은 평균 <b>약 1.9kg(체중의 2.3%)</b>이었습니다. 시작 시기는 “3~7일 전”(34%)과 “0~2일 전”(16%)이 많았습니다.</li>
+      <li>방법은 식사와 운동으로 칼로리를 줄이는 것이 중심이었습니다. 코치 등 누구의 영향을 받는지도 조사했습니다.</li>
+    </ul>
+    <p class="links"><span class="badge pay">유료</span><a href="https://doi.org/10.1177/0260106020983800" target="_blank" rel="noopener">원문 읽기 →</a><a href="https://shura.shu.ac.uk/27927/" target="_blank" rel="noopener">저자 공개판 →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">급격한 체중 감량은 시합기의 기분과 번아웃에 어떤 영향을 줄까</p>
+    <p class="en">Effect of rapid weight loss on mood states and burnout of Brazilian jiu-jitsu athletes during a competitive process</p>
+    <p class="meta"><b>Bueno JCA, et al.（2023）</b> ／ Frontiers in Psychology 14</p>
+    <ul>
+      <li>남자 선수 31명을 급속 감량을 하는 그룹과 하지 않는 그룹으로 나누어 비교했습니다. 감량 그룹은 평균 <b>3.5kg(체중의 4.2%)</b>을 줄였습니다.</li>
+      <li>계체 당일에는 두 그룹 모두 긴장과 혼란의 기분이 높아졌습니다.</li>
+      <li>번아웃 정도는 낮은 상태로 유지되었고, 그룹이나 시기에 따른 차이는 없었습니다.</li>
+    </ul>
+    <p class="links"><span class="badge oa">무료로 읽기</span><a href="https://doi.org/10.3389/fpsyg.2023.1114816" target="_blank" rel="noopener">원문 읽기 →</a></p>
+  </article>
+
+  <!-- ========== 健康・メンタル ========== -->
+  <h2 id="health">건강과 멘탈</h2>
+  <p class="h2sub">경기 밖에서 주짓수는 마음과 몸에 무엇을 가져다줄까요?</p>
+
+  <article class="paper">
+    <p class="ja">PTSD 증상이 있는 군인과 퇴역 군인을 위한 주짓수 훈련</p>
+    <p class="en">Brazilian Jiu Jitsu Training for US Service Members and Veterans with Symptoms of PTSD</p>
+    <p class="meta"><b>Willing AE, et al.（2019）</b> ／ Military Medicine 184(11–12)</p>
+    <ul>
+      <li>미국 탬파의 남성 군인과 퇴역 군인이 <b>5개월간 총 40회</b>의 주짓수 프로그램에 참여했습니다.</li>
+      <li>PTSD 증상이 임상적으로 의미 있는 폭으로 줄었고, 우울, 불안, 음주량도 감소했습니다.</li>
+      <li>비교 그룹을 두지 않은 소규모 예비 연구이므로, 앞으로 본격적인 검증이 필요합니다.</li>
+    </ul>
+    <p class="links"><span class="badge pay">유료</span><a href="https://doi.org/10.1093/milmed/usz074" target="_blank" rel="noopener">원문 읽기 →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">12주간의 주짓수로 고령 남성의 일상 체력이 향상</p>
+    <p class="en">12 weeks of Brazilian jiu-jitsu training improves functional fitness in elderly men</p>
+    <p class="meta"><b>Queiroz JL, et al.（2016）</b> ／ Sport Sciences for Health 12</p>
+    <ul>
+      <li>고령 남성 62명을 주짓수 그룹(<b>주 2회, 90분, 12주간</b>)과 비교 그룹으로 나누었습니다.</li>
+      <li>주짓수 그룹은 일상에 필요한 체력 테스트 전 항목에서 향상되었습니다. 특히 <b>다리 근력과 지구력</b>의 향상이 컸고, 민첩성과 균형 감각도 좋아졌습니다.</li>
+      <li>저자는 주짓수를 고령자 건강 관리의 한 선택지로 제안하고 있습니다.</li>
+    </ul>
+    <p class="memo"><b>한마디</b>“이 나이에 시작해도 괜찮을까요?”라는 질문을 받았을 때 소개하고 싶은 논문입니다.</p>
+    <p class="links"><span class="badge pay">유료</span><a href="https://doi.org/10.1007/s11332-016-0287-8" target="_blank" rel="noopener">원문 읽기 →</a></p>
+  </article>
+
+  <article class="paper">
+    <p class="ja">벨트 색으로 본 주짓수 선수의 심리적 특징</p>
+    <p class="en">Rank-Based Psychological Characteristics in Brazilian Jiu-Jitsu Athletes: Mental Strength, Resilience, Grit, Self-Efficacy, Self-Control, Aggression, Life Satisfaction, and Mental Health</p>
+    <p class="meta"><b>de Lorenco-Lima L, et al.（2025）</b> ／ Journal of Functional Morphology and Kinesiology 10(2)</p>
+    <ul>
+      <li>18~60세, 화이트 벨트부터 블랙 벨트까지 <b>420명</b>이 심리 표준 설문에 응답했습니다.</li>
+      <li>화이트 벨트에 비해 블랙 벨트는 정신력, 회복력, 스스로 해낼 수 있다는 감각, 자제력, 생활 만족도가 높았고, 심리적 문제 선별 검사에서는 낮은 수치를 보였습니다.</li>
+      <li><b>공격성</b>은 벨트에 따른 차이가 없었습니다.</li>
+    </ul>
+    <p class="memo"><b>한마디</b>한 시점에서 비교한 조사이므로, “주짓수를 계속해서 강해진 것”인지 “원래 강한 사람이 계속한 것”인지까지는 이 연구만으로 말할 수 없습니다.</p>
+    <p class="links"><span class="badge oa">무료로 읽기</span><a href="https://doi.org/10.3390/jfmk10020100" target="_blank" rel="noopener">원문 읽기 →</a></p>
+  </article>
+
+  <!-- ========== 日本語 ========== -->
+  <h2 id="japanese">일본어 문헌</h2>
+  <p class="h2sub">주짓수를 정면으로 다룬 일본어 실증 연구(부상, 체력, 체중 감량 등)는 J-STAGE와 CiNii에서 찾아본 범위에서는 아직 발견되지 않았습니다.</p>
+
+  <article class="paper">
+    <p class="ja">브라질 격투기의 현재: 유도, 브라질리언 주짓수, 종합격투기</p>
+    <p class="meta"><b>히시다 요시후미, 나카지마 데쓰야, 호소야 요코(2022)</b> / 스포츠 인류학 연구 24</p>
+    <ul>
+      <li>브라질에서 격투기가 갖는 의미를 탐구하는 연구 프로젝트(일본 과학연구비 지원)의 현지 조사 보고입니다.</li>
+      <li>현재 브라질의 유도, 브라질리언 주짓수, 종합격투기의 모습을 다루며, 고도칸 유도가 마에다 미쓰요를 통해 그레이시 가문에 전해져 주짓수가 탄생한 흐름도 언급합니다.</li>
+    </ul>
+    <p class="links"><span class="badge kind">조사 보고</span><span class="badge oa">무료로 읽기</span><a href="https://doi.org/10.7192/santhropology.2022.24_41" target="_blank" rel="noopener">J-STAGE에서 읽기 →</a></p>
+  </article>
+
+  <div class="note">
+    <p><b>이 페이지에 대해</b></p>
+    <p>요약은 각 논문의 초록을 바탕으로 Jiu Labo 편집부가 일본어로 정리한 내용을 한국어로 옮긴 것입니다. 논문 제목의 번역도 편집부가 붙인 것으로, 공식 번역 제목이 아닙니다. 수치와 결론의 정확한 내용은 반드시 원문에서 확인해 주세요. “한마디”는 편집부의 감상입니다.</p>
+    <p>여기에 실린 내용은 의학적 조언이 아닙니다. 부상이나 몸 상태가 걱정될 때는 의사와 상담해 주세요.</p>
+    <p>추천하고 싶은 논문이나 일본어로 쓰인 주짓수 연구를 알고 계신 분은 꼭 알려 주세요. 수시로 추가하겠습니다.</p>
+  </div>
+
+  <footer>
+    2026년 9월 29일 작성<br>
+    <a href="/ko/">← jiujitsu.co.jp 홈으로</a>
+  <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+
+<a href="/ko/" style="position:fixed;right:14px;bottom:14px;z-index:99;background:#17140d;color:#e8c95e;font-size:11px;letter-spacing:.1em;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);font-family:sans-serif;">홈으로</a>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.toc .n{font-size:12px}.badge{font-size:12px}.toc a{padding-top:6.5px;padding-bottom:6.5px}a[href="/"][style*="position:fixed"]{font-size:13px!important;padding:12px 18px!important}}</style>
+</html>

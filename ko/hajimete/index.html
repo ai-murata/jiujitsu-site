@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H79CRFSZFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H79CRFSZFH');
+</script>
+
+<style id="i18n-fix">body{overflow-wrap:break-word}html:lang(ko) body{word-break:keep-all}@media (max-width:640px){table{max-width:100%}td,th{overflow-wrap:anywhere;min-width:0}}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ja" href="https://jiujitsu.co.jp/hajimete/">
+<link rel="alternate" hreflang="en" href="https://jiujitsu.co.jp/en/hajimete/">
+<link rel="alternate" hreflang="ko" href="https://jiujitsu.co.jp/ko/hajimete/">
+<link rel="alternate" hreflang="pt-BR" href="https://jiujitsu.co.jp/pt/hajimete/">
+<link rel="alternate" hreflang="x-default" href="https://jiujitsu.co.jp/hajimete/">
+<link rel="canonical" href="https://jiujitsu.co.jp/ko/hajimete/">
+<script src="/assets/langs.js" defer></script>
+<!-- i18n:end -->
+<title>첫 주짓수 대회 가이드</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #ffffff; --panel: #faf8f2; --line: #e7e1d1;
+    --gold: #a3801a; --gold-hi: #c9a227;
+    --ink: #17140d; --body-c: #4d4737; --faint: #948c74;
+    --warn: #a8432f; --warn-bg: #faeee9;
+    --mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+    --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--body-c); font-family: var(--gothic); line-height: 2; margin: 0; -webkit-font-smoothing: antialiased; font-size: 14.5px; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 20px 80px; }
+
+  header { text-align: center; padding: 64px 20px 36px; }
+  .brand { font-size: 11px; letter-spacing: .3em; color: var(--gold); font-weight: 700; }
+  h1 { font-family: var(--mincho); font-weight: 700; font-size: clamp(26px, 6vw, 38px); color: var(--ink); letter-spacing: .08em; line-height: 1.5; margin: 10px 0 8px; text-wrap: balance; }
+  .lede { font-size: 13px; color: var(--faint); margin: 0; }
+
+  .rank { display: flex; height: 4px; }
+  .rank span { flex: 1; }
+  .rank .w { background: #eceadf; } .rank .b { background: #274a7a; } .rank .p { background: #4d3070; }
+  .rank .br { background: #5a3c22; } .rank .k { background: #17140d; }
+
+  h2 { font-family: var(--mincho); font-weight: 700; font-size: 21px; color: var(--ink); letter-spacing: .08em; margin: 64px 0 6px; display: flex; align-items: center; gap: 12px; }
+  h2::before { content: "▼"; color: var(--gold); font-size: 14px; }
+  .h2sub { font-size: 12px; color: var(--faint); margin: 0 0 20px; letter-spacing: .06em; }
+
+  /* 流れタイムライン */
+  .flow { list-style: none; margin: 24px 0 0; padding: 0; position: relative; }
+  .flow::before { content: ""; position: absolute; left: 15px; top: 10px; bottom: 10px; width: 2px; background: var(--line); }
+  .flow li { position: relative; padding: 0 0 22px 48px; }
+  .flow li::before { content: ""; position: absolute; left: 8px; top: 7px; width: 16px; height: 16px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+  .flow li:last-child { padding-bottom: 0; }
+  .flow b { font-family: var(--mincho); font-weight: 700; font-size: 15.5px; color: var(--ink); letter-spacing: .04em; display: block; }
+  .flow .fnote { font-size: 13px; line-height: 1.9; }
+
+  /* 項目カード */
+  .tip { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold); padding: 18px 22px; margin: 14px 0; }
+  .tip b.t { font-family: var(--mincho); font-weight: 700; font-size: 15.5px; color: var(--ink); letter-spacing: .03em; display: block; margin-bottom: 4px; }
+  .tip p { margin: 0; font-size: 13.5px; }
+  .tip .imp { color: var(--warn); font-weight: 700; }
+  .tag { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: .12em; color: var(--warn); background: var(--warn-bg); border-radius: 3px; padding: 1px 8px; margin-left: 8px; vertical-align: 2px; }
+
+  /* マナー手順 */
+  .steps { counter-reset: s; list-style: none; margin: 20px 0 0; padding: 0; }
+  .steps li { counter-increment: s; position: relative; padding: 0 0 18px 46px; }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: 2px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-family: var(--mincho); font-weight: 700; font-size: 15px; color: var(--gold); border: 1.5px solid var(--gold); border-radius: 50%; }
+  .steps b { font-family: var(--mincho); font-weight: 700; color: var(--ink); }
+  .steps p { margin: 2px 0 0; font-size: 13.5px; line-height: 1.9; }
+
+  /* 良蔵メソッド */
+  .ryozo { background: #17140d; border: 1px solid #17140d; padding: 24px 26px 26px; margin: 28px 0; }
+  .ryozo .rlabel { font-size: 10.5px; letter-spacing: .3em; color: var(--gold-hi); font-weight: 700; margin: 0 0 12px; }
+  .ryozo .ritem { margin: 0 0 14px; }
+  .ryozo .ritem:last-child { margin-bottom: 0; }
+  .ryozo b { font-family: var(--mincho); font-weight: 700; font-size: 16px; color: #f3ecd8; letter-spacing: .04em; display: block; margin-bottom: 2px; }
+  .ryozo p { margin: 0; font-size: 13px; color: #b0a88f; line-height: 1.9; }
+
+  footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 22px; font-size: 12px; color: var(--faint); text-align: center; letter-spacing: .06em; line-height: 2; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+
+<div style="border-bottom:1px solid var(--line);background:#faf8f2;padding:10px 16px;text-align:center;font-size:12px;letter-spacing:.12em;">
+  <a href="/ko/tournament/" style="color:var(--gold);text-decoration:none;">대회 목록</a>
+</div>
+
+<header>
+  <p class="brand">YAWARA ／ SWEEP</p>
+  <h1>첫 주짓수 대회 가이드</h1>
+  <p class="lede">처음 출전하는 멤버에게 매번 알려 주던 내용을 전부 담았어요.</p>
+</header>
+
+<div class="rank" aria-hidden="true"><span class="w"></span><span class="b"></span><span class="p"></span><span class="br"></span><span class="k"></span></div>
+
+<div class="wrap">
+
+  <h2>대회의 대략적인 흐름</h2>
+  <ol class="flow">
+    <li><b>참가 신청 마감</b><span class="fnote">일찍 마감하는 대회도 있으니 주의하세요.</span></li>
+    <li><b>참가 변경 기간 (상대가 없는 사람만)</b><span class="fnote">마감 후 대체로 2일 이내에 '체급·카테고리 변경'이나 기권 중 하나를 골라요. 대회 측에서 연락이 올 테니 메일을 확인해 두세요.</span></li>
+    <li><b>대진표 발표</b><span class="fnote">대체로 시합 2~3일 전쯤 발표되는 경우가 많아요. 발표되면 꼭 직접 확인하세요.</span></li>
+    <li><b>도장 시합표 공유</b><span class="fnote">대진표가 발표되면 도장 멤버들의 경기 번호, 매트, 시간을 정리한 시합표가 대회용 그룹에 공유돼요. ※단, 공식 사이트의 대진표는 꼭 직접 확인하세요!</span></li>
+    <li><b>시합 당일</b></li>
+  </ol>
+
+  <h2>3주 전~1주 전쯤까지</h2>
+  <div class="tip">
+    <b class="t">도복이 대회 규정에 맞는지 확인<span class="tag">중요</span></b>
+    <p>도복 규정은 점점 엄격해지고 있어요. 도복 체크는 시합 20분 전쯤이라서, <span class="imp">불합격이면 사실상 시합에 나갈 수 없어요</span> (실제로 못 나간 사람이 있었어요…). 미리 인스트럭터에게 확인해 두세요. 기본적으로는 문제없겠지만 혹시 모르니까요.</p>
+  </div>
+  <div class="tip">
+    <b class="t">(감량이 필요한 사람은) 1주 전쯤부터 염분을 되도록 줄이기</b>
+    <p>물을 많이 마시면 대사가 올라가기 쉬워요.</p>
+  </div>
+  <div class="tip">
+    <b class="t">기초 체력이 떨어졌다고 느끼는 사람은…</b>
+    <p>1주 전쯤부터 훈련량을 조절하세요. 체중에 문제가 없다면 '쉰다!'는 느낌이어도 괜찮아요.</p>
+  </div>
+
+  <div class="ryozo">
+    <p class="rlabel">RYOZO'S METHOD ─ 세계 챔피언 무라타 료조의 가르침</p>
+    <div class="ritem">
+      <b>시합 전 '아무것도 안 하는' 기간은 나이로 정한다.</b>
+      <p>30대는 3일, 40대는 5일, 아무것도 하지 않아요. 아니면 땀만 살짝 낼 정도의 가벼운 라이트 스파링이나 드릴만 해요.</p>
+    </div>
+    <div class="ritem">
+      <b>염분 줄이기는 감량할 때만.</b>
+      <p>체중을 뺄 필요가 없다면 염분은 평소대로 먹어도 돼요.</p>
+    </div>
+  </div>
+
+  <h2>시합 전날까지</h2>
+  <div class="tip">
+    <b class="t">약 2일 전부터는 전력으로 훈련하지 않기</b>
+    <p>피로가 잘 풀리지 않아요. 부상도 조심하세요.</p>
+  </div>
+  <div class="tip">
+    <b class="t">전날에는 (되도록) 사우나 피하기</b>
+    <p>폐에 부담이 가서 숨이 쉽게 찰 수 있어요. 감량 중이라면 반신욕이 더 나아요.</p>
+  </div>
+  <div class="tip">
+    <b class="t">전날(과 당일)에는 탄수화물(당)로 체중 조절</b>
+    <p>단백질이나 식이섬유는 에너지로 쓰이지 않아요. <b>시합 전에는 현미보다 흰쌀밥을 추천해요</b>. 밀가루는 많이 먹지 않는 게 좋아요.</p>
+  </div>
+  <div class="tip">
+    <b class="t">식중독 주의<span class="tag">중요</span></b>
+    <p>날것(굴 같은 것)은 최악의 경우 시합에 못 나가게 될 수 있어요. 특히 전날에는 피하세요.</p>
+  </div>
+  <div class="tip">
+    <b class="t">다음 날 시합 시간을 한 번 더 확인</b>
+    <p>예전에 '17시인 줄 알았는데 10시였다…'는 일이 실제로 있었어요 (결국 불참 처리됐어요). 흔한 일은 아니겠지만 혹시 모르니까요.</p>
+  </div>
+
+  <div class="ryozo">
+    <p class="rlabel">RYOZO'S METHOD ─ 세계 챔피언 무라타 료조의 가르침</p>
+    <div class="ritem">
+      <b>도복은 2벌 챙겨 간다.</b>
+      <p>도복 체크에서 불합격이 나와도 여벌이 있으면 그 자리에서 갈아입고 시합에 나갈 수 있어요.</p>
+    </div>
+  </div>
+
+  <h2>당일</h2>
+  <div class="tip">
+    <b class="t">소화가 잘되는 음식 먹기</b>
+    <p>특히 1~2시간 전에는 위더 젤리 같은 에너지 젤리나 양갱처럼 바로 에너지로 바뀌는 것이 좋아요. 주먹밥이나 빵 같은 탄수화물은 소화에 3시간 이상 걸려요…</p>
+  </div>
+  <div class="tip">
+    <b class="t">늦어도 시합 시작 1.5~1시간 전에는 경기장 도착</b>
+    <p>경기장 분위기에 익숙해지면 긴장이 풀리기 쉬워요. 누군가 자리를 맡아 두었을 수도 있으니 도착하면 바로 대회용 LINE을 확인하세요. 경기장에는 대개 자유롭게 쓸 수 있는 체중계가 있으니 재 두면 안심이에요.</p>
+  </div>
+  <div class="tip">
+    <b class="t">몸풀기는 30분 전쯤, 살짝 땀이 날 정도로</b>
+    <p>평소 하던 기초 운동 같은 것으로요. 주특기는 상대에게 들킬 수도 있으니 하지 않아요 ㅋㅋ</p>
+  </div>
+  <div class="tip">
+    <b class="t">계체는 시합 10~20분 전쯤 호출되어 매트 옆에서 진행</b>
+    <p>계체를 통과하면 바로 도복 체크예요. 합격하면 그대로 이동해서 대기하게 되니까 <b>음료와 스마트폰 (사람에 따라 간식도) 챙겨 가세요</b>. 이기면 15분 간격 정도로 연달아 시합하게 되니 물은 넉넉하게 챙기는 게 좋아요.</p>
+  </div>
+  <div class="tip">
+    <b class="t">시합 수가 많을 때는 물뿐 아니라 포카리 같은 이온 음료도</b>
+    <p>챙겨 가면 에너지가 돼요. 연속 시합 사이의 보충용으로요.</p>
+  </div>
+  <div class="tip">
+    <b class="t">(유도 출신은 특히) 체중은 도복을 입은 채로 잰다<span class="tag">주의</span></b>
+    <p>당일에 알아차리고 급하게 사우나를 한 사람이 예전에 있었어요😅 도복 없이 재는 관습이 있는 유도 출신은 특히 조심하세요!</p>
+  </div>
+  <div class="tip">
+    <b class="t">(남성만) 래시가드는 입어도 되고 안 입어도 돼요</b>
+    <p></p>
+  </div>
+  <div class="tip">
+    <b class="t">“세컨드 부탁드립니다!”라고 도장 사람에게 말하기</b>
+    <p>적절한 사람(세컨드 양성 과정을 마쳤고 자기 시합이 없는 사람)을 배정해 줄 거예요. ※세컨드 허용 여부는 대회마다 다르니 그 대회의 규칙을 확인하세요.</p>
+  </div>
+  <div class="tip">
+    <b class="t">복기용으로 누군가에게 스마트폰을 맡기고 촬영 부탁하기</b>
+    <p>세컨드나 가까이에서 봐 주는 분께 부탁해 보세요. 나중에 대회 자체의 다시보기 영상이 올라오는 경우도 많지만 언제 올라올지 모르니까요.</p>
+  </div>
+
+  <h2>시합 진행과 매너</h2>
+  <ol class="steps">
+    <li><b>심판이 부를 때까지 대기</b><p>두 선수가 매트 옆에 모이고 타이머 담당의 준비가 끝나면, 심판이 두 손을 벌려 들어오라는 동작을 해요.</p></li>
+    <li><b>부르면 입장 인사</b><p>① 매트에 인사 → ② 심판에게 뛰어가기 → ③ 심판과 악수하며 인사 → ④ 상대 선수와도 악수하며 인사. 상대보다 먼저 인사하면 좋다고들 해요 (인상이 좋아져서일까요?)</p></li>
+    <li><b>“콤바치!”로 시합 시작</b><p>평소 스파링처럼 손을 맞대는 사람이 대부분이지만…이쪽이 손을 내밀어도 무시하고 달려드는 사람도 있으니 주의하세요 (콤바치 후의 인사는 규칙이 아니라 매너예요).</p></li>
+    <li><b>“파로우!”라고 하면 멈추기</b><p>잡은 손이나 발은 그 자세 그대로 일시 정지해요. '서로 그 자세 그대로 매트 중앙으로', '스탠딩부터' 같은 지시가 나와요.</p></li>
+    <li><b>시합이 끝나면</b><p>도복을 단정하게 고치면 이긴 쪽의 손이 올라가요. 그다음 ① 심판과 악수하며 인사 → ② 상대 선수와 악수 → ③ 상대 측 세컨드가 있으면 악수 → ④ 들어왔던 곳으로 돌아가 매트에 인사 → ⑤ 내 세컨드와 악수 → ⑥ (이겼다면) 타이머 담당에게 내 이름을 알려 주세요.</p></li>
+  </ol>
+
+  <footer>
+    원안: 노지 씨 / 가필·편집: 스가와라 씨, 구몬 씨 (2024/9/04 버전을 바탕으로 재구성)<br>
+    <a href="/ko/">← jiujitsu.co.jp 홈으로</a>
+  <br>© 2026 BUTTI ON LINE Inc.
+  </footer>
+</div>
+
+<a href="/ko/" style="position:fixed;right:14px;bottom:14px;z-index:99;background:#17140d;color:#e8c95e;font-size:11px;letter-spacing:.1em;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);font-family:sans-serif;">홈으로</a>
+<style id="sp-readable">@media (max-width:640px){.brand{font-size:12px}.tag{font-size:12px}.ryozo .rlabel{font-size:12px}a[href="/"][style*="position:fixed"]{font-size:13px!important;padding:12px 18px!important}}</style>
+</html>
