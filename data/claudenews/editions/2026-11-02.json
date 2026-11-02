@@ -1,0 +1,103 @@
+{
+ "date": "2026-11-02",
+ "generated_at": "2026-11-02T11:53:09+09:00",
+ "lead": "Claude の「Max 20x」プランが「Ultra」に名前を変え、月200ドルで5時間ごとの利用制限がなくなりました。次のモデル「Claude Mythos 5.5」の準備が進んでいるとも伝えられています。",
+ "items": [
+  {
+   "id": "6b7116e50274",
+   "region": "jp",
+   "category": "料金・プラン",
+   "title": "「Max 20x」が「Ultra」に、月200ドルで5時間ごとの制限を撤廃",
+   "summary": "Anthropic が、Claude の「Max 20x」プランの名前を「Ultra」に変えました。月200ドルで、5時間ごとの利用制限がなくなります。",
+   "point": "これまで5時間ごとの上限に悩んでいた Max 20x の人には、うれしい変更です。",
+   "source": "ITmedia",
+   "original_title": "Anthropic、「Claude」の「Max 20x」を「Ultra」に名称変更 月200ドルで5時間ごとの利用制限を撤廃",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBYQUVDenMySG9kdEZnQThkYUppc1FUaUFyYUhqMk4wZ3FoSlpIblNqRUZmcnlLSlo3M3pEVEp6ZkJfUE8ybEp2RHBJcnA2Z0dxdEFTV3ZaQmlBVHhsb0RDQ1g4RUZvNk05TlE?oc=5",
+   "published": "2026-11-01T22:00:23+00:00"
+  },
+  {
+   "id": "d149cb6bf7d8",
+   "region": "intl",
+   "category": "新モデル",
+   "title": "「Claude Mythos 5.5」の公開準備が進む",
+   "summary": "Anthropic が「Claude Mythos 5.5」を公開する準備をしていると TestingCatalog が伝えました。",
+   "point": "正式な発表はまだなので、続報を待ちましょう。",
+   "source": "TestingCatalog AI News",
+   "original_title": "Anthropic prepares to release Claude Mythos 5.5 model",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNczIyQkU5ZzFYU2RPU0dZODhTNzNFd3ZfNTV4eTlJYzR6akVTVmhUM21sbzFQQnNaOVZBd2RhUnlOZXA1UFJ0X0NUbnEwWnNjX3lzUFN5WDJueE44MkJodVZRRHlncHBrQ2E2cGl0bmQyMzhKRW1nb3lMaDRxUnNXYlA4LUw1RWlSbHNEZmxn?oc=5",
+   "published": "2026-11-01T20:49:32+00:00"
+  },
+  {
+   "id": "b90d197726ff",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "Claude が CarPlay の音声会話に対応、iPad などで2画面表示や複数アカウントも",
+   "summary": "Claude が Apple CarPlay での音声の会話に対応しました。iPad などでは画面を2つに分けて使える表示が入り、複数のアカウントの切り替えもできるようになりました。",
+   "point": "車の中でも、声で Claude に話しかけられるようになります。",
+   "source": "Mashdigi",
+   "original_title": "Anthropicの「Claude」がApple CarPlayの音声対話に対応。iPad/iPhone Duo向けに2画面分割UIを導入し、複数アカウント切り替えも解禁",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPTWUxZmc5Qk1adlJHem8wdjBRU3pGNkt6ZUxPb2tGSVBPVHl0YVNVZnhRTEVNdUlLQVNNMUt2RnRMdUt0UWZmdXZzQXFVR04xR3dnQUN2TTV6dk9WRjhPR0hGRmR2cFcwd21kV0NiOE95RVR3SC02VlNPSmd2Ti1KSFItRQ?oc=5",
+   "published": "2026-11-01T06:22:45+00:00"
+  },
+  {
+   "id": "beb6c4c4a854",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Managed Agents に「ドリーミング」や複数エージェントの連携",
+   "summary": "Claude Managed Agents に、「ドリーミング」「アウトカム」、複数のエージェントをまとめて動かす機能が加わったと、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "New in Claude Managed Agents: dreaming, outcomes, and multiagent orchestration",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE15Q0ZJYzhYZFg2REg2NGhiVDd3N0d2QkY4bTFJRzM0Qkp3enk5QzA1d2JtbTc0N3I5WV9UbTRrbXhuSFZ1QllfTDZXS1JEU3JOdXQxS2xSc1BBN0VlNDQwa0Zadno4enFtYjhZNHpuSTJEM2VfejRWWA?oc=5",
+   "published": "2026-11-02T00:06:22+00:00"
+  },
+  {
+   "id": "39605b64f395",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code、裏で動くエージェントの記録を定期的にモデルに送っていた",
+   "summary": "Claude Code が、バックグラウンドで動く各エージェントのやり取りの記録を、定期的にモデルに送っていることがわかったと GIGAZINE が伝えました。",
+   "point": "",
+   "source": "GIGAZINE",
+   "original_title": "Claude Codeは各バックグラウンドエージェントのトランスクリプトを定期的にモデルに送信していることが発覚",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQSUl4a1lqOEpGVUsxZFZGQ3Vsc3liVlpHcFMyVUU1cmNYRjJvVVZZX0lhUUtVNjRGWHh4OW1SMXBoNnUyTHNJdllmS083TEtKNFdZOHFvUGcwa05KRm9OdjdUSGZQVnBZLXExN1hmQkZRZnNaQ2pkUWZxZ0MwR0EtcDJpeUYxaWtpcWNTNQ?oc=5",
+   "published": "2026-11-01T22:00:00+00:00"
+  },
+  {
+   "id": "025870d9e5bd",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Cursor、改ざん版 Claude Code の件でパスワードなどの再設定を呼びかけ",
+   "summary": "悪意のある Claude Code の更新がマーケットプレイスで配られた件で、Cursor が利用者に、ログイン情報などの再設定を呼びかけています。",
+   "point": "当てはまる人は、パスワードやキーを新しくしておきましょう。",
+   "source": "CryptoSlate",
+   "original_title": "Cursor urges credential resets after malicious Claude Code marketplace update",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNbTNLV05ISzMwWlRkNUtHTWRCRF9sSjBMVG1lbkg0THY0ZU1vQXlHd2hYdk9CYml5cnZZVnRzR3N3Rkh5X2hhTng3MDd0UTMySVNaZzQ5aWdCaWtHYUJWeld0dUVRWmpOVnFXeVo3c0VONThDbDJwbC1rN3BsNFhPZnM0WGZWa3Z2bVhXNVZQRmQ4QVJTa3B1RGcyRzZmc1YzMkZFbw?oc=5",
+   "published": "2026-11-01T18:40:09+00:00"
+  },
+  {
+   "id": "384c42503f75",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "AI が書いた文章の「透かし」、11月3日から古い Claude にも",
+   "summary": "Anthropic が、AI が書いた文章につける「透かし」を、11月3日から古い Claude のバージョンにも広げます。",
+   "point": "",
+   "source": "Mashable",
+   "original_title": "Anthropic expands text watermarking to older Claude versions beginning November 3",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQUEM4THdHaktsdExGbnVyMWxVLWhuRmx4S3hYSEMwWFIxcjIydjA2TVl6bkZidU10QmYyWEZWYkNsM0NXdTBHc2pIY0tXU1ZiMTdYbDZvYVNUUDduTDB2eU1DRU0yVERyS3ppRFpHWjZ5OUFxdXU5ZTRCbk5hSG9UNkgxQTJmX1BKWlJkOXAtNA?oc=5",
+   "published": "2026-11-01T16:59:47+00:00"
+  },
+  {
+   "id": "dd2f5d71c6de",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "中国 DeepSeek、Claude Code に対抗する自律型 AI エージェントを公開",
+   "summary": "中国の DeepSeek が、Claude Code に対抗する自律型の AI エージェントを公開しました。",
+   "point": "",
+   "source": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+   "original_title": "中国DeepSeekが自律型AIエージェント公開、Claude Codeに対抗 執筆",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5tVFB6SDNiU214Y05Zb2t3bDh1MldaUVFFT09keUpwQmVROWxtek9tUFhpYkQyaWlvU3dIbnJBR0dzTEtOSWFnY3Bjd3d5UWgtdTRjQXh4SHV0em5tX3JJTG9RbjFjVERXSXc?oc=5",
+   "published": "2026-11-01T05:45:00+00:00"
+  }
+ ]
+}
