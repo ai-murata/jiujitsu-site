@@ -1,0 +1,115 @@
+{
+ "date": "2026-11-03",
+ "generated_at": "2026-11-03T12:55:15+09:00",
+ "lead": "OpenAI と Anthropic が、利用者の反発を受けて使用上限の締めつけを取り下げました。Anthropic は上場に合わせて日本でも最大約5,529億円の株式を募集すると伝えられています。新機能では、長く動くエージェント向けの「メッセージスレッド」が登場しました。",
+ "items": [
+  {
+   "id": "994b42561d0b",
+   "region": "jp",
+   "category": "料金・プラン",
+   "title": "OpenAI と Anthropic、使用上限の締めつけを撤回",
+   "summary": "OpenAI と Anthropic が、加入者からの反発を受けて、使用上限をきびしくする方針を取り下げたそうです。",
+   "point": "使用上限がきびしくなる心配は、ひとまず遠のきました。",
+   "source": "BigGo ファイナンス",
+   "original_title": "OpenAIとAnthropic、利用上限の制限強化策を撤回 加入者の反発受け",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5WY1dmM21jVE5VeXdvLWoyLU5PbHJmMjZ1SmxhelllUi1UcmxNbXItR2E0QTFIMVF6T3R3UDdZcmQ0aDJrZkx1SU8zU2RTV0xNaUhTX2ZGT01DTzl0SkUwNlRBUGFsdWowM1hJYTZaMm1ETV9Z?oc=5",
+   "published": "2026-11-02T21:25:00+00:00"
+  },
+  {
+   "id": "c1c6e0a96f7d",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "長く動くエージェントを速くする「メッセージスレッド」",
+   "summary": "長い時間動き続けるエージェントを速くするための「メッセージスレッド」が、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Make long-running agents faster with message threads",
+   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB4amUwYzV5MlRHWU5kT3gyLVJha1k0ai1zZ0NIMkY2azZZdVd5ZUV4X3EzQnNqSkx3NW1hZl9Tc3pmRWZGYXg3RGg0X1M1UHREQVdnZ3dYeXhLbmM4U281RkJIcw?oc=5",
+   "published": "2026-11-02T19:12:00+00:00"
+  },
+  {
+   "id": "60d2b03f431c",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude で「月間のふりかえり」が見られる",
+   "summary": "Claude で1か月の使い方をふりかえる「マンスリーリキャップ」の見方が、ヘルプセンターで案内されました。",
+   "point": "",
+   "source": "Claude Help Center",
+   "original_title": "See your monthly recap",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9aVWxsU3VIV25hUlNRVldCZzBtN2dhaVl5b21IUzdtTng2OEtxRTFudnkxS3hCbHRUQTVFaXByMjUxTnZaUzJOV2dQZy1pamF0LTZDR2U4WUhiNE9RVDN1c2pFSkxxdElDZFBVV21ZaDRRZzViS3lfU1h3?oc=5",
+   "published": "2026-11-02T17:39:23+00:00"
+  },
+  {
+   "id": "2a1e2ba6940b",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Desktop の Cowork でセキュリティ監視ソフトを動かせる",
+   "summary": "Claude Desktop の Claude Cowork の中で、EDR（パソコンの不審な動きを見張るセキュリティソフト）のセンサーを動かす方法が、ヘルプセンターで案内されました。",
+   "point": "",
+   "source": "Claude Help Center",
+   "original_title": "Run your endpoint detection and response (EDR) sensor in Claude Cowork on Claude Desktop",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOekNPUjdHbmVqRF9MTldmNEVhajFqblgzQ2FiZzZCTEVzZnlES0ZQN3oxelg1UWpxaW9xbHRuY2x4RmJFNmlJc0gtSWZTN2s4Z1FFNGVBTTlNRkQ3REQwdDZqRHZobi0yZnljOVZpODNRRmFVS1BmWUpaRlhULXRDZ2pZMTNkUGdiVk5jTF85UDlmUVlNX09ZX0RBa2tZSnQ5aktuNlMtbkQ3M3YwM19ZZnhRMWNvdllzMkJtRktqTVpEMjFSQnhEX21PdjVYdkk?oc=5",
+   "published": "2026-11-02T21:42:34+00:00"
+  },
+  {
+   "id": "9825254c3c9d",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "Anthropic、日本で最大約5,529億円の株式募集へ",
+   "summary": "Anthropic が、米ナスダックへの上場にあわせて、日本でも最大約5,529億円分の株式を募集すると伝えられています。",
+   "point": "",
+   "source": "Yahoo!ニュース",
+   "original_title": "アンソロピック、日本で最大約5529億円の株式募集へ。米ナスダック上場に伴い（あたらしい経済）",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9YRE1OZnYzczRJMTNJSUtEdDQxSGNLRHpTMm84WUV0b0s2dU1VcmE4ZklzVElLLXh3UU5QdWRHcDd5aFJDQXFSZWdWMTR3QjZrbzd5ejJiQVpvZ1k3OHRfU0JPanVkTVNHaXlxT1h1WjZnNjh0RXVtTV9UNTNlLW8?oc=5",
+   "published": "2026-11-02T08:16:49+00:00"
+  },
+  {
+   "id": "cbc5e81afe11",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "IPO 書類を修正、7〜9月の売上は約170億ドル",
+   "summary": "Anthropic が IPO の申請書を修正し、7〜9月の売上が約170億ドル、インフラの契約額が約8,954億ドルだと明らかにしました。",
+   "point": "",
+   "source": "ITmedia",
+   "original_title": "Anthropic、IPO申請書を修正 7～9月売上高は約170億ドル、インフラ契約額は約8954億ドル",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9BS2JRX2FaOVpRRlBDRVRDblJfNlAxWjlXNi1kZkQ5QzQtOXpZRklLLXd0SUdBTVBENlA4WUhCamZqY1QxRzc3RFVYYTR0MU0tVGM4VUd0eHBJaE0zMUQxOTFkMWQtNkt1X2c?oc=5",
+   "published": "2026-11-02T23:20:20+00:00"
+  },
+  {
+   "id": "5208d7236031",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "6つの組織との新薬づくり提携の進み具合を公表",
+   "summary": "Anthropic が、6つの組織と進めている新薬づくりの提携の進み具合を公表しました。自社でも、めずらしい病気の治療薬の開発を進めています。",
+   "point": "",
+   "source": "Ledge.ai",
+   "original_title": "Anthropic、6組織との創薬提携の進捗を公表 自社でも希少疾患の治療薬を開発",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE50ZWxWUVY1R1RxR2xrV2ZKY3ZLMmZXTjNEY3FzRzRhZU5CUThJS3pubERIV3F3RXpUOXFpNVlyTXZFRTVSclVYenBkVUdqUGJuYVJka18zdUpfcVRDTzRkaTJ6b0VHS3E3?oc=5",
+   "published": "2026-11-02T05:54:20+00:00"
+  },
+  {
+   "id": "3352d4b1dd00",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Anthropic「自分で自分を作る AI に、とても近づいている」",
+   "summary": "Anthropic が、AI が自分自身を改良していく能力（RSI）に、とても近いところまで来ていると警告したと TechCrunch が伝えました。",
+   "point": "",
+   "source": "TechCrunch",
+   "original_title": "Anthropic warns that it’s very close to RSI capability, aka self-building AI",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPa0VUSzBwdmlqRHY0N1duclMzOVBhVk5FbjllcHNiX0ludVpmX25neDhaWlFLUmx4R21mY20wNjVOVE1uZUdDajNzNDNHdGkwY3BvYVpMOFI5cmF4TWRDaUppTmJrTE5NaHJPbmdkWWJEWGJPNmNyVl9ZUE1Lb1U5WV9PckEzd3RMZzhVMW53cHBSMHh2Y2VDU2tnY3BoMFpZczdObkp1VEV4ZXNfWUE?oc=5",
+   "published": "2026-11-02T22:14:50+00:00"
+  },
+  {
+   "id": "0846045c755c",
+   "region": "intl",
+   "category": "Claude Code",
+   "title": "ゲームのクローン防止の新しい制限を確認、Opus 5.5 は解析作業も止めると報告",
+   "summary": "Anthropic が、ゲームのクローンを防ぐための Claude Code の新しい制限を認めました。利用者からは、Opus 5.5 がリバースエンジニアリング（中身の解析）の作業まで止めてしまうという報告も出ています。",
+   "point": "",
+   "source": "Tom's Hardware",
+   "original_title": "Anthropic confirms new Claude Code limits to prevent game cloning — users report Opus 5.5 is also actively blocking reverse engineering tasks",
+   "link": "https://news.google.com/rss/articles/CBMirwJBVV95cUxOQmtwU201Rm8zX2dFeGRGay0wY0F2UVZ2V0wydFFNVEU1Q1d1SzJlQmgwT0JhUnB3eHF2X3BmdGFQZ2dMajR4UHp1by1rUmlMZHBqd2Z1VkRwYlRhVmkxUG9GWE93X3JNd3dFbExob0VPcl9KN1czbFlJdXpqbTJxU1hCTTNSMWIxaEs4SHdoYVAwMlI2cEQ3dDlVVUF0bDdnV0RDOTBnQWpmUGJtSmZLOWQ5QUItTDhxWlN2ZEdhMTNuMGEwQ0gweDZvVWRLRWVZQ1BMeTNETzA2MTlwTnAxYXEyNTFFRFZUZTl1eDJMV0hCVExYRkFnazFKZjBybGRlQ2JWUG9BM2Y4U0MzOVF0NEJVRDV4RVNHNDBKczBRbk03di0zV0ppd1A2N3lCZ1k?oc=5",
+   "published": "2026-11-02T12:30:00+00:00"
+  }
+ ]
+}
