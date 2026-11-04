@@ -99,6 +99,13 @@
   .book b { display:block; margin-top:16px; font-family:var(--mincho); font-size:21px; color:var(--ink); letter-spacing:.05em; line-height:1.4; }
   .book small { display:block; color:var(--faint); font-size:13px; }
   .book em { display:block; margin-top:14px; padding:9px 0; text-align:center; font-style:normal; font-weight:700; font-size:14px; letter-spacing:.06em; color:#fff; background:var(--gold); }
+  .nexts { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+  .nx { display:flex; flex-direction:column; background:var(--panel); border:1px solid var(--line); border-top:3px solid var(--gold-hi); padding:22px 22px 20px; text-decoration:none; transition:border-color .15s,transform .15s; }
+  .nx:hover { border-color:var(--gold); transform:translateY(-3px); }
+  .nx .no { font-family:var(--mincho); font-weight:700; color:var(--gold-hi); font-size:17px; }
+  .nx h3 { font-family:var(--mincho); font-size:21px; line-height:1.45; color:var(--ink); letter-spacing:.03em; margin:2px 0 8px; font-weight:700; }
+  .nx p { font-size:14.5px; line-height:1.85; flex:1; }
+  .nx .go { display:block; margin-top:14px; padding-top:12px; border-top:1px solid var(--line); font-weight:700; font-size:14.5px; color:var(--gold); letter-spacing:.04em; }
   .chapters { list-style:none; display:grid; grid-template-columns:repeat(4,1fr); gap:0 28px; counter-reset:c; }
   .chapters li { counter-increment:c; display:flex; align-items:baseline; gap:12px; padding:13px 0; border-bottom:1px solid var(--line); font-family:var(--mincho); font-weight:600; color:var(--ink); letter-spacing:.14em; font-size:14px; }
   .chapters li::before { content:counter(c,decimal-leading-zero); color:var(--gold-hi); font-size:13px; letter-spacing:.04em; }
@@ -123,6 +130,7 @@
     .get svg { width:20px; height:20px; }
     .teachs { grid-template-columns:1fr; }
     .books, .chapters, .samples { grid-template-columns:1fr 1fr; }
+    .nexts { grid-template-columns:1fr; gap:12px; }
     .about { grid-template-columns:1fr; }
   }
   @media (max-width:640px) {
@@ -257,6 +265,23 @@
     <a class="book" href="yawara-sweep-textbook-pt.pdf" lang="pt">
       <img src="img/cover-pt.jpg" alt="Capa da edição em português" loading="lazy">
       <b>🇧🇷 Português</b><small>PDF 11MB, 58 páginas</small><em>Abrir PDF</em>
+    </a>
+  </div>
+
+  <h2 class="sec-label" id="next">NEXT</h2>
+  <p class="sec-head" data-l="ja">教科書の、その先へ。</p><p class="sec-head" data-l="ko">교재, 그다음으로.</p><p class="sec-head" data-l="en">Beyond the textbook.</p><p class="sec-head" data-l="pt">Além da apostila.</p>
+  <div class="nexts">
+    <a class="nx" href="https://jiuflow.com/" target="_blank" rel="noopener">
+      <span class="no">01</span>
+      <h3 data-l="ja">動画で学ぶ</h3><h3 data-l="ko">영상으로 배우기</h3><h3 data-l="en">Learn by video</h3><h3 data-l="pt">Aprenda em vídeo</h3>
+      <p data-l="ja">柔術を動画で体系的に学べるサービス、JiuFlow。無料で始められます。</p><p data-l="ko">주짓수를 영상으로 체계적으로 배울 수 있는 서비스 JiuFlow. 무료로 시작할 수 있습니다.</p><p data-l="en">JiuFlow is a service for learning jiu-jitsu step by step through video. Free to start.</p><p data-l="pt">JiuFlow é um serviço para aprender jiu-jitsu de forma organizada, em vídeo. Comece de graça.</p>
+      <span class="go"><span data-l="ja">JiuFlowを見る →</span><span data-l="ko">JiuFlow 보기 →</span><span data-l="en">Visit JiuFlow →</span><span data-l="pt">Conhecer o JiuFlow →</span></span>
+    </a>
+    <a class="nx" href="https://www.instagram.com/ryozomurata/" target="_blank" rel="noopener">
+      <span class="no">02</span>
+      <h3 data-l="ja">セミナーに呼ぶ</h3><h3 data-l="ko">세미나 초청</h3><h3 data-l="en">Host a seminar</h3><h3 data-l="pt">Organize um seminário</h3>
+      <p data-l="ja">村田良蔵のセミナーを、あなたの道場で。ご相談はInstagramのDMへ。</p><p data-l="ko">무라타 료조의 세미나를 여러분의 도장에서. 문의는 Instagram DM으로 보내 주세요.</p><p data-l="en">Bring a Ryozo Murata seminar to your gym. Send us a DM on Instagram.</p><p data-l="pt">Leve um seminário de Ryozo Murata para a sua academia. Fale conosco por DM no Instagram.</p>
+      <span class="go"><span data-l="ja">Instagramで相談する →</span><span data-l="ko">Instagram으로 문의하기 →</span><span data-l="en">Ask on Instagram →</span><span data-l="pt">Falar no Instagram →</span></span>
     </a>
   </div>
 
