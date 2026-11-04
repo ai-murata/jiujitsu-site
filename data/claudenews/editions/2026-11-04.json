@@ -1,0 +1,103 @@
+{
+ "date": "2026-11-04",
+ "generated_at": "2026-11-04T11:52:56+09:00",
+ "lead": "SBI 証券が、Anthropic の米国 IPO の購入申し込みを受け付ける予定です。Anthropic は、AI の答えが本当にそのモデルから出たものかを証明するしくみ「FlashProve」を公開しました。",
+ "items": [
+  {
+   "id": "0e005c492356",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "SBI 証券、Anthropic の米国 IPO の購入申し込みを受付へ",
+   "summary": "SBI 証券が、Anthropic の米国株式 IPO について、上場前に公開価格で買える購入申し込みを受け付ける予定だと発表しました。",
+   "point": "",
+   "source": "SBI証券",
+   "original_title": "SBI証券、米国株式IPO「アンソロピック」の購入申込を受付予定～米国IPO株式を上場前に公開価格で購入できるチャンス。SBIハイパー預金残高10万円以上で当選確率アップ～｜SBI証券",
+   "link": "https://news.google.com/rss/articles/CBMi_gJBVV95cUxQemVGYU96ODN0UmZWT29OcFl6VEdnZDNwVHJQcTdmQ3B6aVVPTU1STG9Rbm43NWlIWjNncFdaUXJDQVZqNEVUYkFpVlN0SlNsTjltSzhwRHNIX3hLblNFZDdVeFBPYVVLQVNSTWJZNEluNjFidGRPSGJjSmRHRjVhYk1HQ3Z4RVVTZmR4MlBJd0JLT3NPQzFvWGFvUVE3ekMwbURiN1ZuYnpibmVLV2NvZWdBRVhoSjNtclRTMDBRWnhFdkQ3eEI4SlFUZE5ROHd2X2JJRzNDUEQ3U3lfUlR0N0NnSGw4XzFQbFhDdDdST0pfSGdGYTROTkJUVkpicGNhQ0lEUkl6Y0M3Qkl3QkNNT0Zxdk5QNk9IMHU1YUt6SXNNSER0UWV1d1RyUXF1VkxkNHdYbFNLbV9SdGYwTEhTRTBzeWI0RzFMZ3FuelFMWUN0Nm1LTERIeXVyWVhTQmhkaE5QWGkxM2p3WkZUWVJyLUVSakV6UE10c0VyZzZR?oc=5",
+   "published": "2026-11-03T16:15:55+00:00"
+  },
+  {
+   "id": "09022b222d48",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "AI の答えが「本当にそのモデルから」と証明する「FlashProve」",
+   "summary": "Anthropic が、ある出力が特定の AI モデルで作られたことを証明できるしくみ「FlashProve」を開発しました。",
+   "point": "",
+   "source": "GIGAZINE",
+   "original_title": "「特定のAIモデルで出力が生成されたこと」を証明できる仕組み「FlashProve」をAnthropicが開発",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE04bks0VjdEeEppMVVxVGoxT0txMnI1VGhUV0lTMTJDd19EQXIwUFdTaVI0QlBlMW5QZV9vYUU5WEwwOENqQllwTmVnRTJHOWJhVnRQR1EzZC1LRndVa0hfUHFjSFpub2c?oc=5",
+   "published": "2026-11-04T02:07:00+00:00"
+  },
+  {
+   "id": "ef04f77ec33b",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Amazon Bedrock と Google Cloud 向けの「Claude アプリゲートウェイ」",
+   "summary": "Amazon Bedrock と Google Cloud で使える「Claude アプリゲートウェイ」が、Claude の公式サイトで発表されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Introducing the Claude apps gateway for Amazon Bedrock and Google Cloud",
+   "link": "https://news.google.com/rss/articles/CBMikARBVV95cUxOTDNzZFFXNXozOHJCSkZXNnlEcnYyM3J1QXRtTElPMXBRejcwM3hNc0k1R0hVQ1hmbVdnVGZnUjBuOWNyM3NEOGFHR09pWXF3S1hRbTB2TXpJMXRTcXYyRDBXOHZMVzFCWTZhX1JnX2Z2UkdsMG9QMXhIY2t6dTFCUUJHcXhieHEyNkhlWGpTQ0ZBeVcydnJuWjFQRkdIYk55cUJoY0J1dmxweG5OUUV6bThvUV8yazhPQURRVmUyU3hfN05mLTJvNlpmZXdRaWo0aFVfLVJZMFRtNU9ZMzJJcDZkYy1kYXpIZXZ0SEV4dkRSUFgtTFlXXzluMl9qQXJ3M0dtNzU5Vk1hZHdKSnZMUFVVcVJRTC1KT0xvaDdOLVNRa1BwR1NYb2EzN1JpNjdTMlllcDRNTUxjNFBOOUhIdzFQZXFHQVFWU0s3R3B0aHFXbUdkT3NEci1seDg4YnFNZjVwSG9Fak82X1hZUTRDMllIREtLN1hTWlJDWTMxRGxFR2RmR3RmOTlIdTJYVjMzMUFtRzRqSnI1ZjZDYTdtcThBY3JPQVRQZEtucE5lNmJIb1VaSEYwa0RUbGM2UHpOSUdWTEx1bEdxX0NqQnJpZzZWb21GeVdCNGljLTJnWXFHSGJJckhxRHBrTnBiV0ZwaDNVMVRnR1prM0l4UFVNc0U4UUpGQnpuaF9BSGlLVng?oc=5",
+   "published": "2026-11-03T01:51:38+00:00"
+  },
+  {
+   "id": "c0e9ca6455b8",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "組織のアプリを Claude に自動でつなぐ",
+   "summary": "会社などの組織で使っているアプリを、Claude に自動でつなぐ方法がヘルプセンターで案内されました。",
+   "point": "",
+   "source": "Claude Help Center",
+   "original_title": "Auto-connect your organization’s apps to Claude | Claude Help Center",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPd0F5OGtYVms4M1c2M1hQbUoyMVo3MloyQVJtQmlXclFnWnl4eEUwSDQ1ZDRCYTlqd05YXzVYck1RQV9jSXVQVlg2bnZmOWpjSUlMN254bjFVakJIbmFveFh2SE9BbkgwdXZpclhxUGtESnZtQWNXcXhtNE1jUjZIOWhqRTlHTjc1RlFrdFFKOEI5dDN1Vk9tYXdvUQ?oc=5",
+   "published": "2026-11-03T23:52:03+00:00"
+  },
+  {
+   "id": "4377e7a859a8",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code の動きを自分で変える「mod」でどこまでできる？",
+   "summary": "Claude Code の動作を自分で変えられる「mod」で何ができるのかを、ITmedia が紹介しました。機能が追加されるのを待たなくてもよくなります。",
+   "point": "",
+   "source": "ITmedia",
+   "original_title": "「フックではもう物足りない」 Claude Codeの動作を自分で変える「mod」でどこまでできる？：機能追加を待たなくていい",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBURG9NeldlaHliRmJQcTlZbXg5dkJqWGlxdjQ1Y0xUSlJhSUdqYjBESmVxREpoeWxuU3V1dmpZSFd5alM1STM5UzRhdmZiWXJPUnFabkNBM0puZGN4SFNfMHNlanFLcEtadmRaWUR6SzFHUQ?oc=5",
+   "published": "2026-11-03T22:45:00+00:00"
+  },
+  {
+   "id": "8321ad225f59",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "Claude Code のプロダクト責任者キャット・ウー氏が退任",
+   "summary": "Claude Code のプロダクト責任者を2年つとめたキャット・ウー（Cat Wu）氏が、退任しました。",
+   "point": "",
+   "source": "Unite.AI",
+   "original_title": "Cat Wu、Claude Codeのプロダクト責任者を2年務めた後に退任",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNDFHdk90dUx5VUVfUXF4Q1FkcERLOHRyaEwxRnBTcW5XeG1MYUxwZ2xPbm9hbFd5enJPcDQ0QkJvRl80TjJ1NHM4WmM3Y1pGS2I1ZWVGdXFuSTdYS2RNY3Q2TlYwMTBGTzhselMtUzhzSDFUblBQX2RfSUhvNC03UGlVcmc0NVY5NmVIWV9iZHY?oc=5",
+   "published": "2026-11-04T01:11:03+00:00"
+  },
+  {
+   "id": "2592912c26e9",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Athenahealth、患者の記録を Claude につなぐサーバーを公開",
+   "summary": "医療 IT 企業の Athenahealth が、患者の記録を Anthropic の Claude につなぐサーバーを公開しました。",
+   "point": "",
+   "source": "Healthcare IT News",
+   "original_title": "Athenahealth launches server to connect patient records to Anthropic's Claude",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPa2E4a1FVbFVvRVV5V3hMbVNINGZHQkdqT1J0Slk1ZVZuU0NXYzdCS0lFZUszOHlSeGhHT1RwckVtdHFTWHNaSldUMjVuc3JfWXRlV3IwRUlxR05SYk5WUF9KUXZ6eVRwRl8yYUtCUGdhc0NkXzVRb3FoRTUxQzJRdFN2T21BV0lWX1NLRXM0cy1YNE14ZDJsYkhNZ0FxNDVCeGZWejRWbEJNMVZI?oc=5",
+   "published": "2026-11-03T15:53:20+00:00"
+  },
+  {
+   "id": "ccc83ef7744c",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "OpenAI と Anthropic、中間選挙のニセ情報に「作戦室」で対応",
+   "summary": "OpenAI と Anthropic が、アメリカの中間選挙をめぐるニセ情報に対応するための「作戦室」を設けたと The New York Times が伝えました。",
+   "point": "",
+   "source": "The New York Times",
+   "original_title": "OpenAI and Anthropic Set Up ‘War Rooms’ to Fight Disinfo About Midterm Elections",
+   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOWEZ5UW1FNFkxcXk5Y2pzN1hqR3dPZWdRRm9PT0phR3Y1cVg1N1E2RDk1ZWFCM2tCUnhvbVBHRVI0X2tfNEh6aFVmd3lxSGVvQ2s4SzRqQUFPMXJuUG5Sb19VMkpud1dBVVQ2VVBSMnM2WnhPLWVBTXFUZTlKcEJXRC1CcHdoUFZNWU5j?oc=5",
+   "published": "2026-11-03T23:39:55+00:00"
+  }
+ ]
+}
