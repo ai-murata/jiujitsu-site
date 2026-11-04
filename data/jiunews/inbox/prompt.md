@@ -93,12 +93,12 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
 
 [
  {
-  "id": "d4dbcd59931a",
+  "id": "fd12362e31e4",
   "region": "jp",
-  "source": "eJudo",
-  "title": "【連載】見る専👀Ayaの場外ケアシステム #075「嘉重春樺、世界選手権2連覇の秘訣は柔術に!? ／王者PSGやはり強い！テディ・リネールの出場はいかに…／ベデルのハネムーンは日本！花嫁姿で東京観光」",
+  "source": "ゴング格闘技",
+  "title": "【PANCRASE】PFLから5年ぶりにPANCRASE参戦の菊入正行「嫁との付き合いから三年記念日の翌日にリリースの話が来て……」「日本でどれだけいいコンディションを作れる...",
   "snippet": "",
-  "published": "2026-11-01T23:55:18+00:00"
+  "published": "2026-11-03T04:03:00+00:00"
  },
  {
   "id": "198ae02f3447",
@@ -109,31 +109,15 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-11-03T00:45:00+00:00"
  },
  {
-  "id": "4d61c31c0607",
+  "id": "87a9e2564e59",
   "region": "jp",
-  "source": "Infoseek",
-  "title": "「あらゆる面で優位に立つ」――ルーカス・ガブリエル、ONEファイトナイト49でマゴメド・マゴメドフの無敗記録を止めることを目指す",
+  "source": "Vietnam.vn",
+  "title": "ベトナムのスポーツ界は、東南アジア競技大会の先を見据えている。",
   "snippet": "",
-  "published": "2026-11-02T07:03:10+00:00"
+  "published": "2026-11-03T00:55:33+00:00"
  },
  {
-  "id": "aad43b244bf0",
-  "region": "jp",
-  "source": "西日本新聞me",
-  "title": "陸上の全国大会に出場する（右から）宇佐美さん、磯部さん、宮崎さんと浜田さん - 北九州の小6の3人、陸上全国大会へ 「アスリートリンク」所属 「表彰台目指す」 - 写真・画像(1/1)",
-  "snippet": "",
-  "published": "2026-11-01T21:17:55+00:00"
- },
- {
-  "id": "64a0d27e88fb",
-  "region": "jp",
-  "source": "Infoseek",
-  "title": "11月6日開催の「ザ・インナー・サークル37」の全対戦カードが発表",
-  "snippet": "",
-  "published": "2026-11-01T20:23:31+00:00"
- },
- {
-  "id": "e352943786d8",
+  "id": "a6cf0700ea14",
   "region": "jp",
   "source": "Infoseek",
   "title": "「とんでもない夜になりそうだ」――タイ・ルオトロ、『インナー・サークル37』でクリスチャン・リーと対戦し、歴史を刻む準備は万端",
@@ -141,52 +125,108 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-11-02T23:37:32+00:00"
  },
  {
-  "id": "bdf1410a1fff",
-  "region": "jp",
-  "source": "ｄメニューニュース",
-  "title": "【ONE】山北渓人「SAMURAI 5」で長男誕生重なる運命の王座戦「獲らなきゃいけない」",
-  "snippet": "",
-  "published": "2026-11-02T06:57:00+00:00"
- },
- {
-  "id": "6697aa2eae56",
-  "region": "jp",
-  "source": "ｄメニューニュース",
-  "title": "【ONE】山北渓人「獲らなきゃいけない」 家族のために負けられない世界タイトル戦！「弱みを見せない」",
-  "snippet": "",
-  "published": "2026-11-02T08:06:00+00:00"
- },
- {
-  "id": "cab00e6035df",
+  "id": "881d9874106c",
   "region": "jp",
   "source": "Infoseek",
-  "title": "「団結して懸命に努力する」――クリスチャン・リーが、ハワイの次世代ファイターたちの道を切り拓く",
+  "title": "「2Rで決着」――無敗のマグダレナ・チャバン、ONEファイトナイト49でのビクトリア・ソウザ戦をストップ勝ちと予想",
   "snippet": "",
-  "published": "2026-11-02T07:15:57+00:00"
+  "published": "2026-11-03T02:01:02+00:00"
  },
  {
-  "id": "7eb588bb6059",
+  "id": "4893854b894b",
+  "region": "jp",
+  "source": "efight.jp",
+  "title": "車いすで首にコルセットを巻くツーウェイ。その横にはソン・ヤドン（＠kurabank）",
+  "snippet": "",
+  "published": "2026-11-03T09:17:30+00:00"
+ },
+ {
+  "id": "65c63e5d7fa3",
+  "region": "jp",
+  "source": "Howl.Link",
+  "title": "レターより 膝の音は問題あるの？ - SPINS of spinmaster | stand.fm",
+  "snippet": "",
+  "published": "2026-11-03T06:35:39+00:00"
+ },
+ {
+  "id": "de1aa40bd672",
+  "region": "jp",
+  "source": "DAZN",
+  "title": "コルビー・コビントン対ラウル・ロサスJr.をDAZNでライブ＆無料視聴する方法",
+  "snippet": "",
+  "published": "2026-11-03T11:11:15+00:00"
+ },
+ {
+  "id": "6d889d30d0e3",
+  "region": "jp",
+  "source": "DAZN",
+  "title": "ディロン・ダニス欠場でUFCスターがコルビー・コビントンの対戦相手に",
+  "snippet": "",
+  "published": "2026-11-03T10:23:57+00:00"
+ },
+ {
+  "id": "57e9c336c865",
   "region": "jp",
   "source": "Infoseek",
-  "title": "11月6日に『The Inner Circle 37』を視聴すべき、見逃せない3つの理由",
+  "title": "【ＤＤＴ】ザック・セイバーJr. 青木真也との一騎打ち制す「あれだけのグラップラーに勝てたのは重大な意味」",
   "snippet": "",
-  "published": "2026-11-02T09:09:30+00:00"
+  "published": "2026-11-03T10:42:32+00:00"
  },
  {
-  "id": "3bfa0a9b9700",
-  "region": "intl",
-  "source": "Black Belt Magazine",
-  "title": "Rolling in Rio: The Brazilian Jiu-Jitsu Experience",
+  "id": "d7334c47037d",
+  "region": "jp",
+  "source": "Infoseek",
+  "title": "『インナー・サークル 37』と『ONE ファイトナイト 49』を控えての3つの注目ポイント",
   "snippet": "",
-  "published": "2026-11-02T18:42:22+00:00"
+  "published": "2026-11-03T10:20:13+00:00"
  },
  {
-  "id": "248c1bdfad8a",
+  "id": "40d46edd5e20",
   "region": "intl",
-  "source": "WBIR",
-  "title": "Bearden middle schooler wins Pan-American Jiu-Jitsu title",
+  "source": "NBC 6 South Florida",
+  "title": "Person who assisted at Brazilian Jiu-Jitsu school in Coral Springs arrested, school says",
   "snippet": "",
-  "published": "2026-11-02T17:41:00+00:00"
+  "published": "2026-11-03T22:09:51+00:00"
+ },
+ {
+  "id": "030bfc9c3cfd",
+  "region": "intl",
+  "source": "UFC.com",
+  "title": "UFC BJJ 14: Tackett vs Wojcik Fight Card",
+  "snippet": "",
+  "published": "2026-11-03T20:45:00+00:00"
+ },
+ {
+  "id": "1508a3ac5fdd",
+  "region": "intl",
+  "source": "The Gabber Newspaper",
+  "title": "From Park to Gym: Coach Brings Jiu-Jitsu to Gulfport",
+  "snippet": "",
+  "published": "2026-11-03T21:49:50+00:00"
+ },
+ {
+  "id": "276def3d4718",
+  "region": "intl",
+  "source": "Statesman-Examiner",
+  "title": "More Than Fighting",
+  "snippet": "",
+  "published": "2026-11-03T16:34:19+00:00"
+ },
+ {
+  "id": "fb66026017b2",
+  "region": "intl",
+  "source": "Yahoo",
+  "title": "Jiu Jitsu Meets Hardcore: A Band Rocks the Mats!",
+  "snippet": "",
+  "published": "2026-11-03T18:00:00+00:00"
+ },
+ {
+  "id": "230beac8572c",
+  "region": "intl",
+  "source": "Revgear",
+  "title": "Meet Robson Gracie Jr: The Next Generation of Gracie Jiu-Jitsu",
+  "snippet": "",
+  "published": "2026-11-03T08:00:00+00:00"
  },
  {
   "id": "38e6f9527248",
@@ -197,6 +237,54 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-11-02T13:59:20+00:00"
  },
  {
+  "id": "1ef9a70ea258",
+  "region": "intl",
+  "source": "FloGrappling",
+  "title": "2026 CBJJ Brazilian Jiu-Jitsu Championship No-Gi - Videos",
+  "snippet": "",
+  "published": "2026-11-03T13:31:22+00:00"
+ },
+ {
+  "id": "4d81ef0df017",
+  "region": "intl",
+  "source": "DVIDS",
+  "title": "1st Battalion, 67th Armor Regiment combat medic earns gold medal at Fort Bliss BJJ Competition",
+  "snippet": "",
+  "published": "2026-11-02T23:11:00+00:00"
+ },
+ {
+  "id": "248c1bdfad8a",
+  "region": "intl",
+  "source": "WBIR",
+  "title": "Bearden middle schooler wins Pan-American Jiu-Jitsu title",
+  "snippet": "",
+  "published": "2026-11-02T17:41:00+00:00"
+ },
+ {
+  "id": "337a31142f59",
+  "region": "intl",
+  "source": "Trinidad Guardian",
+  "title": "Blackman wins gold at European Jiu-Jitsu Championships",
+  "snippet": "",
+  "published": "2026-11-03T16:54:40+00:00"
+ },
+ {
+  "id": "2962288bdec4",
+  "region": "intl",
+  "source": "boxingnews.com",
+  "title": "UFC BJJ 14: Tackett vs Wojcik — Full Card, Start Time & How to Watch",
+  "snippet": "",
+  "published": "2026-11-03T23:02:27+00:00"
+ },
+ {
+  "id": "5b95b0c3506e",
+  "region": "intl",
+  "source": "Азия-Плюс",
+  "title": "Tajikistan tops jiu-jitsu medal table in Tashkent with 35 golds",
+  "snippet": "",
+  "published": "2026-11-03T04:59:33+00:00"
+ },
+ {
   "id": "68eab525a0f4",
   "region": "intl",
   "source": "Nanaimo News Bulletin",
@@ -205,36 +293,52 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-11-02T13:51:03+00:00"
  },
  {
-  "id": "8a1bae089117",
+  "id": "094317dda2a4",
   "region": "intl",
-  "source": "The Straits Times",
-  "title": "Fencing, jiu-jitsu, chess among sports affected or scrapped at 2027 SEA Games",
+  "source": "Ipswich Star",
+  "title": "Ipswich boy, 11, wins European gold and now sets sights on world title",
   "snippet": "",
-  "published": "2026-11-02T10:45:00+00:00"
+  "published": "2026-11-03T04:30:00+00:00"
  },
  {
-  "id": "0b03cbd61795",
+  "id": "ba8e6b94387a",
   "region": "intl",
   "source": "FloGrappling",
-  "title": "Dierley De Almeida Rodrigues vs Marcio Celio Lima De Oliveira 2026 IBJJF European NoGi",
+  "title": "Breaking Down The Brackets For IBJJF's The Crown On November 8th",
   "snippet": "",
-  "published": "2026-11-01T20:41:16+00:00"
+  "published": "2026-11-03T17:27:42+00:00"
  },
  {
-  "id": "220ea25a8af1",
-  "region": "intl",
-  "source": "The Maine Campus",
-  "title": "UMSG discusses Patch Hall hot water outage, grants recognition to four clubs",
-  "snippet": "",
-  "published": "2026-11-02T07:04:59+00:00"
- },
- {
-  "id": "0a2a16bc33b8",
+  "id": "4eeca2d3c725",
   "region": "intl",
   "source": "Yahoo Sports",
-  "title": "Dillon Danis dips on grappling match with Colby Covington, Raul Rosas Jr. steps in on three days notice",
+  "title": "Cody Rhodes Admits He Almost Left WWE for MMA Before Brandi Rhodes Stepped In",
   "snippet": "",
-  "published": "2026-11-01T18:00:00+00:00"
+  "published": "2026-11-03T14:29:40+00:00"
+ },
+ {
+  "id": "e56373c87183",
+  "region": "intl",
+  "source": "City Lifestyle",
+  "title": "8 Things Holistic Moms Are Doing This Cold and Flu Season",
+  "snippet": "",
+  "published": "2026-11-03T20:37:44+00:00"
+ },
+ {
+  "id": "1a94c2523245",
+  "region": "intl",
+  "source": "FloGrappling",
+  "title": "Studio Chat With FloGrappling GM Ben Kovacs",
+  "snippet": "",
+  "published": "2026-11-03T01:26:13+00:00"
+ },
+ {
+  "id": "da37d7ba7abd",
+  "region": "intl",
+  "source": "Combat Press",
+  "title": "Grand Sumo: How to Watch the 2026 Kyushu Basho",
+  "snippet": "",
+  "published": "2026-11-03T20:59:00+00:00"
  },
  {
   "id": "804fc7b77eda",
@@ -245,20 +349,12 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-11-02T14:32:18+00:00"
  },
  {
-  "id": "3b292237820d",
+  "id": "20da638ff961",
   "region": "intl",
-  "source": "MMA Sucka",
-  "title": "Khabib Nurmagomedov Reveals His Father's Favorite Sport",
+  "source": "Derry Now",
+  "title": "Team Torres Derry prodigy Tyainon Cartin clinches major european title",
   "snippet": "",
-  "published": "2026-11-02T02:18:51+00:00"
- },
- {
-  "id": "793524251b4a",
-  "region": "intl",
-  "source": "Castanet Kamloops",
-  "title": "Become part of StrongHER community through kickboxing, self-defence",
-  "snippet": "",
-  "published": "2026-11-02T07:40:02+00:00"
+  "published": "2026-11-03T12:00:00+00:00"
  },
  {
   "id": "4592266e5fc1",
@@ -269,75 +365,43 @@ JSON 以外は書かないでください。`id` は候補の `id` をそのま�
   "published": "2026-11-02T21:18:00+00:00"
  },
  {
-  "id": "aef317ff8e30",
+  "id": "6d98a2958d14",
   "region": "intl",
-  "source": "Yahoo Sports",
-  "title": "James Gonzalez vs Jonathan Potts 2026 LIJJN Boo Jitsu Halloween Hangover",
+  "source": "Jits Magazine",
+  "title": "UFC BJJ 13 Full Results And Highlights",
   "snippet": "",
-  "published": "2026-11-02T00:21:19+00:00"
+  "published": "2026-11-03T12:44:28+00:00"
  },
  {
-  "id": "fa8c1703044c",
-  "region": "intl",
-  "source": "Gibraltar Chronicle",
-  "title": "Stevens win British Veteran Championships 2026 in Scotland",
-  "snippet": "",
-  "published": "2026-11-02T11:18:13+00:00"
- },
- {
-  "id": "d581b28b03b9",
+  "id": "1a49eae044ac",
   "region": "intl",
   "source": "BJJDOC",
-  "title": "BJJ Historian Disputes Helio Gracie Was A Fascist Despite Being A Part Of Integralist Movement",
+  "title": "John Danaher Brown Belt Says Jiu-Jitsu Is ‘An Intellectual Pursuit First,’ Calls Out Hobbyists Who Won’t Study 20 Minutes A Day",
   "snippet": "",
-  "published": "2026-11-02T08:19:02+00:00"
+  "published": "2026-11-03T13:18:45+00:00"
  },
  {
-  "id": "b250a88f0925",
-  "region": "intl",
-  "source": "FightBook MMA",
-  "title": "Chimaev and Masvidal Set for Submission-Only Match in Dubai",
-  "snippet": "",
-  "published": "2026-11-02T16:23:31+00:00"
- },
- {
-  "id": "dc7ab7562e5e",
-  "region": "intl",
-  "source": "BJJDOC",
-  "title": "ADCC Gold Medalist & UFC Veteran: \"Having The UFC On The White House Lawn Is Insulting To The Memory Of This Country\"",
-  "snippet": "",
-  "published": "2026-11-02T07:34:30+00:00"
- },
- {
-  "id": "71f67d620407",
-  "region": "intl",
-  "source": "MiddleEasy",
-  "title": "Khamzat Chimaev Faces Jorge Masvidal In December 4 ALF Grappling Main Event",
-  "snippet": "",
-  "published": "2026-11-02T20:42:50+00:00"
- },
- {
-  "id": "b8707741f2cf",
-  "region": "intl",
-  "source": "GhanaWeb",
-  "title": "Police Ladies thrash Immigration 4-0 to maintain perfect start to season",
-  "snippet": "",
-  "published": "2026-11-01T16:43:03+00:00"
- },
- {
-  "id": "da16283c2778",
+  "id": "10cf0300bd2a",
   "region": "intl",
   "source": "BJJEE",
-  "title": "Gui Mendes Shares What He’d Do Differently Starting BJJ Over From White Belt",
-  "snippet": "Brazilian Jiu-Jitsu world champion Gui Mendes says he would organize everything if he could begin again. In a recent video, he outlined a white belt plan built on structure, fundamentals and steady progress – as he sees disorganization as why many people walk away: If I could start Jiu-Jitsu over again, I would focus on organizing everything. It’s very hard to understand what you should prioritize and the things that are truly important. The biggest reason why people quit jiu-jitsu is because at some point it becomes overwhelming for them, especially in the beginning. If you focus on creating…",
-  "published": "2026-11-02T11:43:12+00:00"
+  "title": "Russia Bans Its Wrestling National Team Members From Competing In RAF",
+  "snippet": "Russia’s freestyle wrestling program has barred national team members from Real American Freestyle (RAF). Head coach Khadzhimurat Gatsalov announced that athletes who earn their spots at the Russian Championships will no longer be allowed to compete in the American promotion. The decision follows Russia’s showing at the World Championships in Astana, Kazakhstan, where the team won 14 medals, four of them gold. Gatsalov was unhappy with the preparation of three athletes who had fought in RAF – Ismail Khaniyev, Ibragim Kadiev and two-time Olympic champion Abdulrashid Sadulaev: Three guys, Khanie…",
+  "published": "2026-11-03T09:43:16+00:00"
  },
  {
-  "id": "3b0a6c0f9d2f",
+  "id": "05c5dddbe99c",
   "region": "intl",
   "source": "BJJEE",
-  "title": "Former Student Accuses BJJ Champion AJ Agazarm Of Grooming After September Arrest",
-  "snippet": "A former student has accused AJ Agazarm, a decorated Brazilian Jiu-Jitsu champion and MMA fighter, of grooming. The allegation follows his September arrest on suspicion of residential burglary in Ventura County, California. No charges have been filed. According to Ventura County Sheriff’s Office records , Agazarm was taken into custody on September 22, 2026, at 5:45 p.m. and booked into the main jail that evening. He posted $50,000 bail and was released the next day. He is the lead instructor at Agazarmy Atascadero in San Luis Obispo County. The arrest stems from claims by his 24-year-old ex-g…",
-  "published": "2026-11-02T07:56:04+00:00"
+  "title": "Robert Drysdale Calls UFC Event On White House Lawn “Insulting To The Memory Of This Country”",
+  "snippet": "ADCC gold medalist and UFC veteran Robert Drysdale has strongly criticized the recent UFC event held on the White House lawn. The Brazilian Jiu-Jitsu legend and historian spoke on The Mat Minute podcast and framed the issue as one of American values, not of MMA itself: Having the UFC on the White House lawn, I think it’s insulting to the memory of this country. Personally, I think if any of the founding fathers were alive, they would have been losing their mind. They’re turning on their graves watching that. I love the UFC. It’s done a lot for me. I love the sport, MMA. I just don’t think that…",
+  "published": "2026-11-03T09:25:52+00:00"
+ },
+ {
+  "id": "e757719ca743",
+  "region": "intl",
+  "source": "Jits Magazine",
+  "title": "Victor Hugo Opens Up About Potentially Retiring From ADCC",
+  "snippet": "Victor Hugo capped off his ADCC journey with four submissions in four matches, explaining that injuries, business commitments and impending fatherhood helped shape his decision to step away from the prestigious tournament. Hugo has achieved the ultimate goal in submission grappling. After years of competing against the world’s best, the Brazilian heavyweight captured his first ADCC World Championship title in September 2026, submitting Josh Saunders in the +99kg final . In the aftermath of that victory, Hugo revealed that he does not expect to return for another edition of the tournament, brin…",
+  "published": "2026-11-03T11:23:38+00:00"
  }
 ]
