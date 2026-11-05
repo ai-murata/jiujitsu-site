@@ -1,0 +1,103 @@
+{
+ "date": "2026-11-05",
+ "generated_at": "2026-11-05T11:54:09+09:00",
+ "lead": "Claude Marketplace に、セキュリティや仕事の効率化、クリエイティブ向けの新しいエージェントや製品が加わりました。Anthropic は初めてのライセンス契約を AP 通信と結び、研究では Claude が細菌の「ボールト」構造の謎に迫っています。",
+ "items": [
+  {
+   "id": "7b59f6402c31",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Marketplace に新しいエージェントと製品が登場",
+   "summary": "Claude Marketplace に、セキュリティ、仕事の効率化、クリエイティブな作業のための新しいエージェントや製品が加わったと、Claude の公式サイトで発表されました。",
+   "point": "Marketplace で選べるツールがまた増えました。気になる分野があればのぞいてみましょう。",
+   "source": "claude.com",
+   "original_title": "New agents and products for security, productivity, and creative work on Claude Marketplace",
+   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNDF6RGJCUTRNNFE5UENXYXdqcjhGWkRVZTlPdVJESkJxTC1FQVp3QzhVV0JsT0YwdFhPUWdHWHBkdUQzTGVMd3BKNmRvbmtscWw1dU9fVXRXMVRlYjNzOWl5SVR6VUZtM3ZnSzVwMDRvNlZmd3RJRTZjbjlxVWRVT1R5WHVXeWc?oc=5",
+   "published": "2026-11-04T20:11:35+00:00"
+  },
+  {
+   "id": "af9a8a7eb778",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Anthropic、初めてのライセンス契約を AP 通信と結ぶ",
+   "summary": "Anthropic が、選挙報道について、初めてとなるライセンス契約を AP 通信と結んだと ADWEEK が伝えました。",
+   "point": "",
+   "source": "ADWEEK",
+   "original_title": "Anthropic Strikes Its First Licensing Deal, With the AP, for Election Coverage",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5QWDRDT0pHemRFaFNQWnlJaUR2NU9VdjV1bmllSGMxR0NFWFJLMU9fUm1hU28yUzBZdURGOVFUQ1RscGptV3lDdmJGT1JySWtrUWVUNmdsRHQwdi0wWEhyLUFPZDFiOEZDV2hKaGNad3hxTTNw?oc=5",
+   "published": "2026-11-05T00:00:00+00:00"
+  },
+  {
+   "id": "5df7fc6e8af9",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code、キャッシュが切れる54分前に会話を自動要約",
+   "summary": "Claude Code は、キャッシュが切れる54分前に会話を自動でまとめるようになりました。ただし、20万トークン未満の会話は対象外です。",
+   "point": "",
+   "source": "shiritomo",
+   "original_title": "20万トークン未満は対象外――Claude Code、キャッシュ切れ54分前に会話を自動要約",
+   "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1xcmtUa2JEVGdFSHZDT3M3NDFkQW5xWjR4NklUUV93ZnFpRGJzTlpnS3M2QkdXalVmMjE0TDlqTkd0Zw?oc=5",
+   "published": "2026-11-04T08:36:54+00:00"
+  },
+  {
+   "id": "e3baa477611b",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code を相棒に、記者が1か月で2kg減量",
+   "summary": "日経クロステックの記者が、Claude Code を相棒にして1か月で2kgやせたそうです。個人向けのエージェントの可能性を伝えています。",
+   "point": "仕事だけでなく、健康づくりにも Claude Code を使えるという例です。",
+   "source": "日経クロステック",
+   "original_title": "Claude Codeを相棒に記者が月2kg減量、個人向けエージェントの可能性",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5Yc3ptZTUzY1hJTXpaa0d1ZW51bk9uM3IyU0l0U1h2QVdIeTQzSWVRcHhwdlkxajI5aHVkU3dIWGM4UGlTY1cyU2k1dUtaNF81YUp4WEVZZ28tRlY4dEpWdzJWZ3BraExoRURYag?oc=5",
+   "published": "2026-11-04T20:00:00+00:00"
+  },
+  {
+   "id": "4397e1644658",
+   "region": "intl",
+   "category": "Claude Code",
+   "title": "4年使ったパソコンを Claude Code で整理、30GB のいらないファイルを発見",
+   "summary": "4年使った Windows のノートパソコンを Claude Code に整理させたところ、いらないファイルが30GB 見つかったという体験記事です。",
+   "point": "",
+   "source": "XDA",
+   "original_title": "I let Claude Code debloat my 4-year-old Windows laptop, and it found 30 GB of junk I never needed",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNNk96OVhPQXZTX3lXWlhsb3pTaHZzSFo4TGpOZ09BblRfRk91YVpTOE9TQ21LSjZLVmlWSW5jSWxSeXlXYk1vSVFWX3J0TVhRRmVOZWRjU2VSa2w0cG9KdGtxY3JBRGRtY092WElJVkdWVWcwNU5GWTNwRV9KVXA5X195OHAwdzJGS0RxWVNXaHIyYlJUWHpfcW90RWhlS1l6Vkc2cGJNZ3Jna0ZkSmZ2dmxobVk3VGZBNmFkYThtOTUzRlZSMFNF?oc=5",
+   "published": "2026-11-05T00:01:00+00:00"
+  },
+  {
+   "id": "e2e27efb0d2a",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "Claude で細菌の「ボールト」粒子のなぞを調べる",
+   "summary": "Anthropic が、Claude を使って、細菌の中にある「ボールト」と呼ばれる粒子のしくみを調べた研究を紹介しました。",
+   "point": "",
+   "source": "Anthropic",
+   "original_title": "Investigating vault particles with Claude",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOd0V1dFM4a0hJdG5SOGZBMkpQbHRZN1JwV3M4SGZQLXg3Tm1qSzdWZHZxNzI0SzA2bVdMdXEwRmRUcXJRN2pEazBBbHZaTktrQzZBNF9IQ1NGM3FhVU9ISDZTVW1kNU1ndk1ORjBKenR2Mkh6Q0U0NVowN1ZTM0hGLVNR?oc=5",
+   "published": "2026-11-04T22:02:45+00:00"
+  },
+  {
+   "id": "c8e726c7ba1e",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "Revolut、Claude Code から中国製 AI に乗り換えてコストを10分の1に",
+   "summary": "Revolut が、Claude Code から中国製の AI に乗り換え、コストを10分の1に減らしたと伝えられています。",
+   "point": "",
+   "source": "Korben",
+   "original_title": "RevolutがClaude Codeを中国製AIに乗り換え、コストを10分の1に削減",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5fMFBFajY3N3k1T3lkamw1WVlfX3ZJelRTUGdwSklqdGhHREdHWl9qam5DVU42cklXV3p6eldtNjQ5a0ZkM0x1aWl1dTk2N2FHTDNfLThXU2ZyZEVKVlc1LUFva1VDTko3VU40aGhyY2FHZkprOEdwYm9seHI2aUE?oc=5",
+   "published": "2026-11-04T09:39:50+00:00"
+  },
+  {
+   "id": "4db192e7a60a",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Anthropic の主要なプロダクト責任者、OpenAI へ",
+   "summary": "Anthropic の主要なプロダクト責任者のひとりが、OpenAI に引き抜かれたと Business Insider が報じました。",
+   "point": "",
+   "source": "Business Insider",
+   "original_title": "A top Anthropic product leader has been poached by OpenAI",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVmtsUnhTLUhSSnp4Q09CcWhMcS1lSGhSOUZKdUtWYUJxeW9YdHBRUTV6WW9LNUZ2RlRVWl9tUG02dkRMSzdtMk5NbENYVVhfczJMQ1lkV012RnFiTXRNUFhGdktjakpRcGlKWDRvQzFsNEZ1cnJDcTg2UlZpQWZ4WGpHVWdPejdlQ0E2QjZtNXRVLWRqdXBB?oc=5",
+   "published": "2026-11-05T00:57:00+00:00"
+  }
+ ]
+}
