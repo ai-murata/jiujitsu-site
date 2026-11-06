@@ -1,0 +1,103 @@
+{
+ "date": "2026-11-06",
+ "generated_at": "2026-11-06T11:53:19+09:00",
+ "lead": "Claude に家計管理の新機能「Personal Finance」が加わり、銀行口座と連携できるようになりました（米国でベータ提供）。Claude Code ではサブエージェントの一部のコストが99%減り、ゲームの複製制限もゆるめられています。",
+ "items": [
+  {
+   "id": "ffbf582e232b",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "Claude に家計管理機能「Personal Finance」、銀行口座と連携",
+   "summary": "Anthropic が、Claude に家計管理の機能「Personal Finance」を加えました。銀行口座と連携でき、まずは米国でベータ版として提供されます。",
+   "point": "今のところ米国向けです。日本で使えるようになるかは、続報を待ちましょう。",
+   "source": "ITmedia",
+   "original_title": "Anthropic、「Claude」に家計管理機能「Personal Finance」 銀行口座と連携、米国でβ提供",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBFSTVfNzJTM1RFSmk5S3ZRbGxaMDBsVjhfek1TeGxtTzgtaE9KQTZfaVRXNV9oVFZDbVlkZ1kyTG42QThqbk1Tc0tsSl9tdGltWE00dDI1UWdKbmEySEo5cGNDNG5yUWREMWc?oc=5",
+   "published": "2026-11-05T23:49:28+00:00"
+  },
+  {
+   "id": "1bbc228c3775",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Design、ふだんの作業でもブランドに合ったデザインに",
+   "summary": "Claude Design が、日々の作業でもブランドのイメージに合ったデザインを保てるようになったと、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Claude Design now stays on brand for daily work",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQOWFwYWpfR2ptVWUyNXFnZlBuTnFHbUhVQVdBSVVpLVhSVHlYZFNmeW9Dc2pXWjBfbnM4bm04ZFVsYWllYVBrUmpIdllGNXN5VUROVDMteFlQM09YNk0ySVUxc0ZRZElGeGFCMWx0NGxOZ3o1Q3lGV2J3bTYza242a1Vfejhrd3Rhb0J2clBBbm1vYTdGbkYwSVhfcFlQbE9QYW1odU83RkFXZzQ?oc=5",
+   "published": "2026-11-06T01:12:44+00:00"
+  },
+  {
+   "id": "5d8a9f078000",
+   "region": "intl",
+   "category": "新機能・サービス",
+   "title": "Claude Enterprise、セキュリティ担当者が見て管理できる範囲が広がる",
+   "summary": "会社向けの Claude Enterprise で、セキュリティ担当者がより多くのことを見て、管理できるようになったと、Claude の公式サイトで発表されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "More visibility and control over Claude Enterprise for security teams",
+   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1pdzltcGVMUzY3am1FNVFoT1RDVEhoX0c2UFl0a0gxbnVsb1NRMWJkcWZYY2xWM3FqaVVkd0NMbGw2bWJ4eWd4NGRhUHF6T09LRndGdzJvRmFqWEJsWDlkU1J3ZXYxUklDRlE3ZE1JV09RVl9TQ3ZGWmJsUmI?oc=5",
+   "published": "2026-11-05T17:36:12+00:00"
+  },
+  {
+   "id": "1ba382072f91",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "Claude Code のサブエージェントが進化、一部のコストを99%カット",
+   "summary": "Claude Code のサブエージェント（手伝い役の AI）が改良され、一部のコストが99%減りました。",
+   "point": "使用量の減り方が気になっていた人には、うれしい改良です。",
+   "source": "Yahoo!ニュース",
+   "original_title": "Claude Codeのサブエージェントが進化。一部のコストを99%カット (ギズモード・ジャパン)",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOZ0MwMDlidG9OaW9JT050dDdtWC1ZNkEtWExsZjY3TmJwVDB0T3g0X1hRaF9qcHFuZkpfR0RhTS03cFJKS1FEdEpKU1FrTEtwbFBLZlZEd28zbktYVENicG42eGM2OGFlV0NvWW5JcnlqT1J0aUxVaWFtZ3M3bnF6N2JPSHBKaHdZNk85d25n?oc=5",
+   "published": "2026-11-05T12:32:05+00:00"
+  },
+  {
+   "id": "6d5b9ab8c7eb",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "ゲーム開発者の反発を受け、Claude Code の制限をゆるめる",
+   "summary": "Anthropic が、ゲーム開発者からの反発を受けて、Claude Code のゲーム複製の制限をゆるめました。",
+   "point": "",
+   "source": "BigGo ファイナンス",
+   "original_title": "アンソロピック、ゲーム開発者からの反発受けClaude Codeの制限を緩和",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1ENFk0YTVka0lxc0RpLXNqMHJOampUTkRUQXRSMDVWakF3NmZ4VjVMNE9xc282MGQ1aTZZcll4S1JoS0FXdk1aVUt0TFR6YWJQMEE4OU5xQlh2ZzlZdDRySnZ5YXcwZ3d3dDF5a0VELWU0c0JH?oc=5",
+   "published": "2026-11-05T19:29:12+00:00"
+  },
+  {
+   "id": "6ae737b300b9",
+   "region": "jp",
+   "category": "その他",
+   "title": "AI 活用を28%から80%へ、イタンジとミツモアの全社 AI 化",
+   "summary": "イタンジとミツモアが、現場が中心になって会社全体で AI を使う取り組みを進め、AI の活用を28%から80%に増やしたと日経クロストレンドが伝えました。",
+   "point": "",
+   "source": "日経クロストレンド",
+   "original_title": "AI活用28％から80％へ、現場主導の全社AI化 イタンジとミツモア",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5XOU1JZGZmaVBlTjJnN0FaQXZzaGdXOUpSTGo5a2VwSkQyYk9TVy1hRy00WTlNenJkRFJGOWI3cEpRNW1fS1pLX0R2QTRhMDA0VGlydl9wa1hyX1RPN2dFcVJpNFZEdw?oc=5",
+   "published": "2026-11-05T15:01:00+00:00"
+  },
+  {
+   "id": "505c5cbae584",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "AI の助けで、Anthropic のモデルの進歩がほぼ2倍の速さに",
+   "summary": "Anthropic のモデルは、AI の助けによって、ほぼ2倍の速さで性能が上がっているという調査結果が出たとロイターが伝えました。",
+   "point": "",
+   "source": "Reuters",
+   "original_title": "Anthropic's models improving nearly twice as fast with help from AI, study finds",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNMGdBZmd5QzZyU2xDSU9Jd1N3ZFZjMC1odkgzWjhFbkdNMUdyNG9nVzV4TTBXVUhYckhBc1pJWEMzU3UyYjlnbXlMZTFRYjRaXzJTbmVPZGRmR3BPMHE1X0pIb19kYUZFTzVWeTdQN0U0TmI1TDZqMkktLUJKNjdYQXVLWGNxSG5BRDJGS21kVTNXVll1Q1REc0xySHMwWlpzajdqa2tBVWNsWHMwQWVqbWFGY1pDWV9B?oc=5",
+   "published": "2026-11-05T20:07:43+00:00"
+  },
+  {
+   "id": "ec74522a7473",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "AI への反発が、Anthropic の上場時期をおびやかすおそれ",
+   "summary": "AI への反発の高まりが、Anthropic の IPO（株式上場）のタイミングに影響するかもしれないと、投資家候補が話しているとロイターが伝えました。",
+   "point": "",
+   "source": "Reuters",
+   "original_title": "EXCLUSIVE: AI backlash could threaten Anthropic IPO timing, potential investors say",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPNGVmWktzeU5zbmRiaDdiZ2pxbEJhRk94VGN2V1lxUmpTNTFFNjhLR0puTjROeHE4UENDYjQ3OEFNbHdralNNdVJ2ZThsMldHZFlrcDZ1U21BTS1aeHU1aGNUNWRnTHc2SU5DVUktREt0Q3hzUkNhN1VJNDZYR3JLdjhwZUlaQjZCSl9Oa1dfT0d2dUotaWhDMkgxU1RBdVJOSEMwMzJsd0M3TmIyTGZ2WFZpVQ?oc=5",
+   "published": "2026-11-05T23:41:00+00:00"
+  }
+ ]
+}
