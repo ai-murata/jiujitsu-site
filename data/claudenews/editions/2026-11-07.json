@@ -1,0 +1,115 @@
+{
+ "date": "2026-11-07",
+ "generated_at": "2026-11-07T11:53:12+09:00",
+ "lead": "Claude Code がユーザーのメールアドレスを外部サイトに勝手に送っていた問題が見つかりました。Anthropic の IPO は最短11月16日の上場が見込まれ、日本からの申し込み方法も紹介されています。",
+ "items": [
+  {
+   "id": "92a147e18eef",
+   "region": "jp",
+   "category": "研究・安全性",
+   "title": "Claude Code がメールアドレスを外部サイトに勝手に送信、約4か月前から報告も",
+   "summary": "Claude Code が、ユーザーのメールアドレスを外部のサイトに勝手に送ってしまう問題が見つかりました。約4か月前から報告されていたこともわかっています。",
+   "point": "Claude Code は、こまめに最新版に更新しておきましょう。",
+   "source": "GIGAZINE",
+   "original_title": "Claude Codeがユーザーのメールアドレスを外部サイトに勝手に送信する問題が発覚、約4カ月前から報告されていたことも判明",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5EdThHVHhRNlI2cnQ2eENOZFNoQ3dpcEhOemJfaDFrelVUbkZIVmV1dWJiQUlkWnNIZzI2OS10Rl9TbkxhdTh2dDN4TllkMXNlcmFqeGhmZ0g1U2ZXeUV6TEM2YzBEZ1Q5RTlQNw?oc=5",
+   "published": "2026-11-06T06:00:00+00:00"
+  },
+  {
+   "id": "405fbc3da820",
+   "region": "intl",
+   "category": "Claude Code",
+   "title": "Claude Code を Amazon Bedrock AgentCore のリモートセッションで",
+   "summary": "Claude Code を、セキュリティの管理をつけたまま、Amazon Bedrock AgentCore のリモートセッションに広げて使う方法を AWS が紹介しました。",
+   "point": "",
+   "source": "Amazon Web Services (AWS)",
+   "original_title": "Extend Claude Code to remote sessions on Amazon Bedrock AgentCore with security controls",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQcExNUkZTUklyc0x5Q2U5djV3R3VkYjF1OHFYWjk5Ulo2Uk9WMEI0WEVVYkxwREg1a29uRDdHRGhXMnRuVDE3NVhQemo2YmVaTTVNQzRhcGdpUHR0VlBmdG1JNGdSRGxQOHJ6UzZJLXdFV1Frb1hOeHd1bWpHbFZoNW52WUpkbnVGOURQOHFrSFVfZGpYWnhmWi1GNld3YXdNQm1tTWMtMm9aZC11TldXbkloV2lzQ1YzdTBVRzltdk1MbTlmLWJsZlhzb05nWW0z?oc=5",
+   "published": "2026-11-06T16:45:58+00:00"
+  },
+  {
+   "id": "5330c38c3cd0",
+   "region": "jp",
+   "category": "新機能・サービス",
+   "title": "「DomoAI MCP & CLI」開始、Claude Code から動画・画像・音声を生成",
+   "summary": "Codex や Claude Code から動画、画像、音声を作れる新しいサービス「DomoAI MCP & CLI」の提供が始まりました。",
+   "point": "",
+   "source": "ｄメニューニュース",
+   "original_title": "「DomoAI MCP & CLI」提供開始！CodexやClaude Codeから動画、画像、音声を生成できる新サービス（Saiga NAK）",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPQlhWQnE2Qm5kUFJGSXhzMk4tNnpNREZOWGozQzVCZG1IbnlPZXBWaWgwVFlmakFkSWFSOHRsTURSTWduWS1rOGxxaTNZRV91c00yOW1HYlBuV295eDczY2xETi1WZzJvYTZPTGp5NFptRDhvamJ4cnVYT2hIMm5lMURIYV9YRDJCZzRtRzlJMnRsQQ?oc=5",
+   "published": "2026-11-06T06:33:00+00:00"
+  },
+  {
+   "id": "76a0aed6b56e",
+   "region": "jp",
+   "category": "Claude Code",
+   "title": "東大と国立環境研、20年以上の大気モデルを Claude Code で移植、1.71倍速く",
+   "summary": "東京大学と国立環境研究所が、20年以上かけて開発されてきた大気のモデルを Claude Code で移しかえ、実行速度が1.71倍になりました。進みをおさえたのは、人のチェックと利用上限だったそうです。",
+   "point": "",
+   "source": "Ledge.ai",
+   "original_title": "東大・国立環境研、20年以上開発されてきた大気モデルをClaude Codeで移植 実行速度1.71倍、進行を制約したのは人間のレビューと利用上限",
+   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFByejBXZU1DcURwYms3VWRHT0hhMGh6YURfX2FaLVlOUDZmQk50ZTB1bW10TE8wdHpkeGJ6bV9uMm9lazVQUXRqamd1TkM2NE9fVkRvQU0zMS1ZQ0kxOUtYYTFvaw?oc=5",
+   "published": "2026-11-05T23:06:54+00:00"
+  },
+  {
+   "id": "1894b8f52bef",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "「Project EVE」、Claude がオンラインゲームをプレイ",
+   "summary": "Anthropic が、Claude に大人数で遊ぶオンラインゲーム（MMORPG）をプレイさせる「Project EVE」を紹介しました。",
+   "point": "",
+   "source": "Anthropic",
+   "original_title": "Project EVE: Claude plays MMORPGs",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4zQUNVYk03WEg1anJqMFdVd0hwa2E4MTNzTDdTQmM1Y2NQanplejhaRERoWGxNemgyNjNJREVwaEt6RFJiM2hfQjdBdkFRZ3ZZUFZHbm1yRWcwV0xUSmo5b29QZzd2Rmt3QUNfaUdLUXpQbEhpTFE?oc=5",
+   "published": "2026-11-06T20:52:05+00:00"
+  },
+  {
+   "id": "16ee10293b6a",
+   "region": "intl",
+   "category": "研究・安全性",
+   "title": "未公開の Anthropic モデル、量子コンピューターの大きな問いの解決に貢献",
+   "summary": "Anthropic のまだ公開されていないモデルが、量子コンピューターに関する大きな問いを解くのに役立ったと Business Insider が伝えました。",
+   "point": "",
+   "source": "Business Insider",
+   "original_title": "An unreleased Anthropic model just helped solve a major quantum-computing question",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeVV2MmJnQVdxRkgtcmdrS2JNeUNWOGZfOV9hdi1yVG1WTXAxd0RWSlpJN3lZSFRwOUxvS1BSVjY5eTJDdHJYZFRaY0U3aTNfTURBYUdUbGRBVzJadXJmMWZGdzZjV3c1RGlWb3dBT2RDZldOUGxWLTlQcDVQMGhxX3NhclJidXg4WkRVczFhRUtHWi1VZTItcDIyRnRIOFZadDNwd1l5SU9IVmt4dU94XzVtckhadw?oc=5",
+   "published": "2026-11-07T00:49:00+00:00"
+  },
+  {
+   "id": "29175732821a",
+   "region": "jp",
+   "category": "提携・会社",
+   "title": "Anthropic の IPO に日本から申し込む方法、最短11月16日上場",
+   "summary": "最短で11月16日に上場する見込みの Anthropic の IPO について、日本から申し込む方法や取り扱う証券会社をダイヤモンド・オンラインが紹介しました。",
+   "point": "",
+   "source": "ダイヤモンド・オンライン",
+   "original_title": "AI開発大手「Anthropic(アンソロピック)」のIPOに日本から申し込む方法を解説！ 最短11/16上場の“史上最大のIPO”を取り扱う証券会社や申込方法を紹介！",
+   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9Wenh2alFaTFM3MF9lR0x6eWFuc01DSFRmYURjcjVWRkhtazRCT3otU2NMTlVXRVpGLXI4UXZ0elNFTnhGUjVESlVPT1BzOHBrcnFn?oc=5",
+   "published": "2026-11-07T00:07:00+00:00"
+  },
+  {
+   "id": "ba6ecf12f264",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Anthropic の IPO、買い手側は評価額を1.1兆ドルまで低く見る",
+   "summary": "Anthropic の IPO で株を買う側は、会社の評価額を1.1兆ドルほどまで低く見ていると Bloomberg が伝えました。",
+   "point": "",
+   "source": "Bloomberg.com",
+   "original_title": "Anthropic IPO Buyers See Valuation as Low as $1.1 Trillion",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNSnFFOWdvbmtEcGNObXJldm1QTGRoeXRMbnQ1THZ6REh2bDE4V2U4VmNDbVdOWHRtNm9TaGdCbTBrZUotOWdNZWszbmNoSUpjWnlNN2NNZ1NUcUJPVWRKb2s2RTlPZ19hNGZoR28tSWllbWFzQ0FNTUdoYl9GODVmb1JSdElLd0l0dWFSTktsbFBqSW1YVFJ2SU90anhWZjNMT0RJaFJJWlpfTUVtaDduTw?oc=5",
+   "published": "2026-11-06T16:06:17+00:00"
+  },
+  {
+   "id": "c32ee430e0dc",
+   "region": "intl",
+   "category": "提携・会社",
+   "title": "Millennium と Anthropic、Claude で「デジタルのリスクアナリスト」を開発",
+   "summary": "Millennium と Anthropic が、Claude を使ってデジタルのリスクアナリストを作っていると、Claude の公式サイトで紹介されました。",
+   "point": "",
+   "source": "claude.com",
+   "original_title": "Millennium and Anthropic are building a digital risk analyst with Claude",
+   "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQVHphMGhsYV9NczlBZEY5Nm1VdC1QVmRKWHBkdmlaZGV0dlF3aFBEd3BMc0RaSmhqV2gxNW5ETHdTaFJmaS0yNUQwV0RmbEo1Y0VXYmxmSVRDdGNGaTdUSDNDYzhvNXU1SmpBcG83NFNkaXZHUzJMeHFDNWlBUFJaMksxTXhBWWpCd1BkNjZqc282cEFENGdjM2NDN0VnYTJPMmliYmlZX3FzZmxUa2JLTXUzaklfVzRwODl2bTFQYVVJR1RycHI0TzM4WXJOUjVTdU5SU3ktZFJoZHAxVExMUWlJcE9uMHNmTVduZmF1TFZ6cnF0M0k2Z1RraTBZUQ?oc=5",
+   "published": "2026-11-05T17:36:57+00:00"
+  }
+ ]
+}
